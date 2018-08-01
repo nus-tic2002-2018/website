@@ -1,6 +1,6 @@
-<span id="module">CS2103</span>
+<span id="module">TIC2002</span>
 
-<span id="module_pair">CS2103/T</span>
+<span id="module_pair">TIC2002</span>
 
 <span id="module_name">Software Engineering</span>
 
