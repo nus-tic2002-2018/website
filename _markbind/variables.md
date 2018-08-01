@@ -2,7 +2,7 @@
 
 <span id="module_pair">TIC2002</span>
 
-<span id="module_name">Software Engineering</span>
+<span id="module_name">Introduction to Software Engineering</span>
 
 <span id="semester">AY1718S2</span>
 
