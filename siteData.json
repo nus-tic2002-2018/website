@@ -59,7 +59,7 @@
         "why-im-not-allowed-to-use-my-favorite-toolframeworklanguage-etc": "Why I’m not allowed to use my favorite tool/framework/language etc.? \n          ",
         "why-so-many-submissions": "Why so many submissions? \n          ",
         "why-arent-we-allowed-to-build-a-new-product-from-scratch": "Why aren't we allowed to build a new product from scratch? \n          ",
-        "why-submission-requirements-differ-between-module-t-and-cs2101": "Why submission requirements differ between T and CS2101? \n          "
+        "why-submission-requirements-differ-between-tic2002-and-cs2101": "Why submission requirements differ between TIC2002 and CS2101? \n          "
       },
       "title": "Admin: C: Frequently Asked Questions",
       "footer": "footer.md",
@@ -136,7 +136,7 @@
     },
     {
       "headings": {
-        "cs2103t-software-engineering": "CS2103/T Software Engineering"
+        "tic2002-introduction-to-software-engineering": "TIC2002 Introduction to Software Engineering"
       },
       "title": "Admin: Module Overview",
       "footer": "footer.md",
@@ -189,7 +189,7 @@
     },
     {
       "headings": {
-        "cs2103t-software-engineering": "CS2103/T Software Engineering"
+        "tic2002-introduction-to-software-engineering": "TIC2002 Introduction to Software Engineering"
       },
       "title": "Admin: Module Overview",
       "footer": "footer.md",
@@ -254,7 +254,7 @@
         "deliverable-executable": "Deliverable: Executable",
         "deliverable-source-code": "Deliverable: Source code",
         "deliverable-user-guide-ug": "Deliverable: User Guide (UG)",
-        "deliverable-developer-guide-ug": "Deliverable: Developer Guide (UG)",
+        "deliverable-developer-guide-dg": "Deliverable: Developer Guide (DG)",
         "deliverable-product-website": "Deliverable: Product Website",
         "deliverable-project-portfolio-page-ppp": "Deliverable: Project Portfolio Page (PPP)",
         "deliverable-demo": "Deliverable: Demo",
@@ -604,9 +604,9 @@
     },
     {
       "headings": {
-        "software-engineering-for-self-directed-learners-cs2103t-edition-2018": "Software Engineering for Self-Directed Learners CS2103/T edition - 2018\n        \n      "
+        "software-engineering-for-self-directed-learners-tic2002-edition-2018": "Software Engineering for Self-Directed Learners TIC2002 edition - 2018\n        \n      "
       },
-      "title": "Software Engineering for Self-Directed Learners [CS2103/T Version]",
+      "title": "Software Engineering for Self-Directed Learners [TIC2002 Version]",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "src": "se-book-adapted/index.md"
