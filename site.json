@@ -1,5 +1,5 @@
 {
-  "baseUrl": "/website-base",
+  "baseUrl": "/website",
   "titlePrefix": "TIC2002 Website",
   "ignore": [
     "_site/*",
