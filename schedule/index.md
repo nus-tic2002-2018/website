@@ -27,10 +27,31 @@ head: scheduleHead.md
 
 
 {% set all_outcomes = [
-{week: "2"},
+{week: "1"},
   {name: "SE Intro"},
     {heading: "Can explain pros and cons of software engineering"},
       {location: ["softwareEngineering", "introduction", "prosAndCons"]},
+  {name: "Implementation"},
+    {heading: "Can explain Java"},
+      {location: ["cppToJava", "about"], omit_evidence: true},
+      {location: ["cppToJava", "javaWorld", "what"], omit_evidence: true},
+      {location: ["cppToJava", "javaWorld", "how"], omit_evidence: true},
+      {location: ["cppToJava", "javaWorld", "editions"], omit_evidence: true},
+    {heading: "Can do HelloWorld in Java"},
+      {location: ["cppToJava", "gettingStarted", "installation"], omit_evidence: true},
+      {location: ["cppToJava", "gettingStarted", "helloWorld"], omit_evidence: true},
+      {location: ["cppToJava", "gettingStarted", "compiling"], omit_evidence: true},
+      {location: ["cppToJava", "gettingStarted", "running"], omit_evidence: true},
+    {heading: "Can use data types in Java"},
+      {location: ["cppToJava", "dataTypes", "primitiveTypes"], omit_evidence: true},
+      {location: ["cppToJava", "dataTypes", "variables"], omit_evidence: true},
+      {location: ["cppToJava", "dataTypes", "operators"], omit_evidence: true},
+      {location: ["cppToJava", "dataTypes", "arrays"], omit_evidence: true},
+    {heading: "Can use basic control flow in Java"},
+      {location: ["cppToJava", "controlFlow", "branching"], omit_evidence: true},
+      {location: ["cppToJava", "controlFlow", "loops"], omit_evidence: true},
+      {location: ["cppToJava", "controlFlow", "methods"], omit_evidence: true},
+{week: "2"},
   {name: "Implementation"},
     {heading: "Can use basic features of an IDE"},
       {location: ["ides", "introduction", "what"]},
@@ -424,12 +445,7 @@ head: scheduleHead.md
 
 {% macro show_week_schedule(week_num, path="") %}
 {{ show_week_todos(week_num, path) }}
-
-{# omit outcomes if it is the first week #}
-{% if week_num != "1" %} 
-  {{ show_week_outcomes(week_num, path) }}
-{% endif %}
-
+{{ show_week_outcomes(week_num, path) }}
 {{ show_week_tutorial(week_num, path) }}
 {{ show_week_lecture(week_num, path) }}
 
