@@ -385,8 +385,6 @@ head: scheduleHead.md
     {heading: "Can work with a 2KLoC code base", priority: "1", file: "project.md#2kloc"},
 {week: "13"},
   {name: ":parking: Project"},
-    {heading: "Can acceptance-test a product", priority: "1", file: "project.md#v14"},
-    {heading: "Can evaluate a technical effort", priority: "1", file: "project.md#v14"},
     {heading: "Can demo a product", priority: "1", file: "project.md#v14"}
 ]%}
 
