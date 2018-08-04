@@ -441,7 +441,6 @@ head: scheduleHead.md
 {% macro show_week_schedule(week_num, path="") %}
 {{ show_week_outcomes(week_num, path) }}
 {{ show_week_tutorial(week_num, path) }}
-{{ show_week_lecture(week_num, path) }}
 
 {% endmacro %}
 
