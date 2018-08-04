@@ -439,7 +439,6 @@ head: scheduleHead.md
 
 
 {% macro show_week_schedule(week_num, path="") %}
-{{ show_week_todos(week_num, path) }}
 {{ show_week_outcomes(week_num, path) }}
 {{ show_week_tutorial(week_num, path) }}
 {{ show_week_lecture(week_num, path) }}
@@ -474,11 +473,6 @@ head: scheduleHead.md
 <div class="website-content" id="main">
 
 # Full Schedule of Module Activities
-
-<panel src="overview/index.md" header=":exclamation: **Info relevant to all weeks**"  />
-<panel src="../admin/tutorials.md#tutorialTimetable" header="**{{glyphicon_calendar}} Tutorial Timetable**" />
-
-<p/>
 
 {% for week in weeks %}
 {% set current_week_num = current_weeks[0] | int %}
