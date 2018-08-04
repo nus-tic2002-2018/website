@@ -18,7 +18,7 @@ head: adminHead.md
 
 <img src="{{baseUrl}}/images/growingPlant.png" width="700">
 
-_TIC2002 Introduction to Software Engineering_ contains roughly a 50-50 balance of theory and practice of SE. It mainly covers the knowledge and skills necessary to do small software projects as a first step towards preparing you to work in bigger SE projects, which will be done in later modules.
+_TIC2002 Introduction to Software Engineering_ contains roughly a **50-50 balance of theory and practice** of SE. It covers the knowledge/skills necessary to do small software projects, and as such, it is **a first step towards preparing you to work in bigger SE projects**, which will be done in later modules.
 </div>
 
 {{ dotted_line }}
@@ -34,7 +34,14 @@ _TIC2002 Introduction to Software Engineering_ contains roughly a 50-50 balance 
 # Instructors
 <div class="indented">
 
-![Damith]({{ baseUrl }}/admin/images/damith.png)<br>
+<div class="container">
+  <div class="row">
+    <div class="col-3">
+
+![Damith]({{ baseUrl }}/admin/images/damith.png)
+    </div>
+    <div class="col">
+
 **Damith Chatura RAJAPAKSE**<br>
 Associate Professor, NUS School of Computing<br>
 PhD, Software Engineering, NUS, 2002-2006<br>
@@ -43,6 +50,9 @@ BSc, Computer Science & Engineering, University of Moratuwa, 1996-2001<br>
 %%{{ fas_map_marker_alt }}%% COM2-02-57<br>
 %%{{ fas_phone_square }}%% 651 64359<br>
 %%{{ fas_home }}%% http://www.comp.nus.edu.sg/~damithch
+    </div>
+  </div>
+</div>
 
 </div>
 
@@ -54,7 +64,16 @@ BSc, Computer Science & Engineering, University of Moratuwa, 1996-2001<br>
 %%{{ far_clock }}%% Tuesdays 7.30-9.30pm<br>
 %%{{ fas_map_marker_alt }}%% SR10 (COM1-0210)<br>
 
-Lectures will not be webcast as the venue does not have a webcast facility.
+{{ far_frown }} **Lectures will not be webcast** as the venue does not have a webcast facility.
+
+**Lecture handouts will be uploaded to IVLE _before_ the lecture**, usually by midnight of the Sunday before the lecture.
+
+**Lecture slides are not suitable to be used as reference materials** as they have been <tooltip content="i.e., heavy use of graphics and animations">optimized for lecture delivery</tooltip> instead. Slides will be uploaded to IVLE _after_ the lecture, usually by Wednesday.
+
+<box>
+
+ :bulb: If handouts/slides are not in IVLE by the expected times, please feel free to ping the lecturer.
+</box>
 
 </div>
 
@@ -94,7 +113,7 @@ The project has 2 parts:
 * Part I : Enhance a 1 KLoC code base
 * Part II : Enhance a 2 KLoC code base
 
-## Part I
+## Project: part I
 
 Requirements: Take the code from [Addressbook-level1]({{module_org}}/addressbook-level1) and enhance it in some way.
 
@@ -102,7 +121,7 @@ To be done individually but you are encouraged to work in pairs or threes and he
 
 More details coming soon.
 
-## Part II
+## Project: part II
 
 Requirements: Take the code from [Addressbook-level2]({{module_org}}/addressbook-level2) and enhance it in some way.
 
@@ -118,6 +137,7 @@ More details coming soon.
 <div class="indented">
 
 * **Git** [Required] : For revision control
+* **GitHub** [Required] : For project hosting
 * **Intellij IDEA** [Recommended] : The IDE used for programming
 
 </div>
