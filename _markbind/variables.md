@@ -14,13 +14,13 @@
 
 <span id="team_IDs_page">https://docs.google.com/spreadsheets/d/e/2PACX-1vT-MyLw2vxPkkDN7Lfi9J0PIE2iC3TRPXuhXWMO4xTYu5JXmuCKJLluTlnmMrzpTOFihyacbKq4hBbY/pubhtml</span>
 
-<span id="ivle_files">https://ivle.nus.edu.sg/v1/File/Student/default.aspx?CourseID=3b6f07b7-fd7c-466c-9b0c-ced8cff6778f&WorkbinID=4cee3535-f9b6-43c1-8b88-816ed0a3795d&FolderID=3eb8a383-e710-43af-94dc-89cd9ba234ac</span>
+<span id="ivle_files">https://ivle.nus.edu.sg/v1/File/Student/default.aspx?CourseID=01d5ab7f-3c3d-4bd2-a3dd-0f8393b714a1&WorkbinID=a22b5fe9-a28b-43aa-9208-839089cc8f40&FolderID=befb78f1-f986-4442-a763-72b02c18b8bb</span>
 
-<span id="ivle_announcements">https://ivle.nus.edu.sg/v1/Announcement/default.aspx?CourseID=3b6f07b7-fd7c-466c-9b0c-ced8cff6778f</span>
+<span id="ivle_announcements">https://ivle.nus.edu.sg/v1/announcement/default.aspx?AnnID=71e71af2-6704-47c0-8c1b-48f84e80216f</span>
 
 <span id="bugs_link">{{ module_org | safe }}/website/issues</span>
 
-<span id="forum_link">{{ module_org | safe }}/forum/issues</span>
+<span id="forum_link">https://ivle.nus.edu.sg/v1/forum/forum.aspx?ForumID=3c3f5960-64ab-412b-b984-606c5412d711</span>
 
 <span id="admin_link"><span class="flat"><md>[Admin Info page]({{baseUrl}}/admin/index-flat.html)</md></span><span class="nested"><md>[Admin Info page]({{baseUrl}}/admin/index.html)</md></span></span>
 
