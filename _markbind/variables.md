@@ -4,7 +4,7 @@
 
 <span id="module_name">Introduction to Software Engineering</span>
 
-<span id="semester">AY1718S2</span>
+<span id="semester">2018</span>
 
 <span id="period">Aug '18</span>
 
