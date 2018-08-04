@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-122519234-1');
-</script>
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,7 +17,7 @@
     <link rel="icon" href="/website/favicon.ico">
 </head>
 <body>
-<div id="app" class="container-fluid">
+<div id="app">
     <div id="flex-body">
   <div id="site-nav">
     <ul style="list-style-type: none; margin-left:-1em">
@@ -66,9 +59,6 @@
             <li style="margin-top: 10px"><a href="/website/se-book-adapted/chapters/design.html">Software Design</a></li>
             <li style="margin-top: 10px"><a href="/website/se-book-adapted/chapters/designFundamentals.html">Design Fundamentals</a></li>
             <li style="margin-top: 10px"><a href="/website/se-book-adapted/chapters/modeling.html">Modeling</a></li>
-            <li style="margin-top: 10px"><a href="/website/se-book-adapted/chapters/architecture.html">Software Architecture</a></li>
-            <li style="margin-top: 10px"><a href="/website/se-book-adapted/chapters/designPatterns.html">Software Design Patterns</a></li>
-            <li style="margin-top: 10px"><a href="/website/se-book-adapted/chapters/designApproaches.html">Design Approaches</a></li>
           </ul>
         </div>
       </li>
@@ -80,9 +70,7 @@
             <li style="margin-top: 10px"><a href="/website/se-book-adapted/chapters/ides.html">IDEs</a></li>
             <li style="margin-top: 10px"><a href="/website/se-book-adapted/chapters/codeQuality.html">Code Quality</a></li>
             <li style="margin-top: 10px"><a href="/website/se-book-adapted/chapters/refactoring.html">Refactoring</a></li>
-            <li style="margin-top: 10px"><a href="/website/se-book-adapted/chapters/documentation.html">Documentation</a></li>
             <li style="margin-top: 10px"><a href="/website/se-book-adapted/chapters/errorHandling.html">Error Handling</a></li>
-            <li style="margin-top: 10px"><a href="/website/se-book-adapted/chapters/integration.html">Integration</a></li>
             <li style="margin-top: 10px"><a href="/website/se-book-adapted/chapters/reuse.html">Reuse</a></li>
           </ul>
         </div>
@@ -94,7 +82,6 @@
           <ul style="list-style-type: none; margin-left:-1em">
             <li style="margin-top: 10px"><a href="/website/se-book-adapted/chapters/qualityAssurance.html">Quality Assurance</a></li>
             <li style="margin-top: 10px"><a href="/website/se-book-adapted/chapters/testing.html">Testing</a></li>
-            <li style="margin-top: 10px"><a href="/website/se-book-adapted/chapters/testCaseDesign.html">Test Case Design</a></li>
           </ul>
         </div>
       </li>
@@ -105,8 +92,6 @@
           <ul style="list-style-type: none; margin-left:-1em">
             <li style="margin-top: 10px"><a href="/website/se-book-adapted/chapters/revisionControl.html">Revision Control</a></li>
             <li style="margin-top: 10px"><a href="/website/se-book-adapted/chapters/projectPlanning.html">Project Planning</a></li>
-            <li style="margin-top: 10px"><a href="/website/se-book-adapted/chapters/teamwork.html">Teamwork</a></li>
-            <li style="margin-top: 10px"><a href="/website/se-book-adapted/chapters/processModels.html">SDLC Process Models</a></li>
           </ul>
         </div>
       </li>
@@ -153,210 +138,202 @@
     </div>
   </div>
   <div id="page-content">
-    <link rel="stylesheet" href="/website/book/css/textbook.css">
-    <div class="website-content">
-      <div>
-        <navbar placement="top" type="inverse">
-          <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand">TIC2002 <small>Aug '18</small></a>
-          <dropdown text="Nested" class="nav-link">
-            <li><a href="/website/index.html" class="dropdown-item"> <span class="fas fa-check"></span> Nested (current format)</a></li>
-            <li><a href="/website/index-flat.html" class="dropdown-item">&nbsp;&nbsp;&nbsp;&nbsp;Flat</a></li>
-          </dropdown>
-          <li><a href="/website/index.html" class="nav-link"><span><strong>Schedule</strong></span></a></li>
-          <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
-          <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
-          <dropdown text="Links" class="nav-link">
-            <li><a href="https://github.com/nus-tic2002-AY1718S2/website/issues" target="_blank" class="dropdown-item"> <span class="fas fa-bug"></span> Report Bugs</a></li>
-            <li><a href="https://nus-tic2002-ay1718s2.slack.com" target="_blank" class="dropdown-item"><span class="fab fa-slack-hash"></span> Slack</a></li>
-            <li><a href="https://github.com/nus-tic2002-AY1718S2/forum/issues" target="_blank" class="dropdown-item"><span class="fas fa-comment"></span> Forum</a></li>
-            <li><a href="/website/admin/instructors.html" class="dropdown-item"><span class="fas fa-user-tie"></span> Instructors</a></li>
-            <li><a href="https://ivle.nus.edu.sg/v1/Announcement/default.aspx?CourseID=3b6f07b7-fd7c-466c-9b0c-ced8cff6778f" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span> IVLE Announcements</a></li>
-            <li><a href="https://ivle.nus.edu.sg/v1/File/Student/default.aspx?CourseID=3b6f07b7-fd7c-466c-9b0c-ced8cff6778f&WorkbinID=4cee3535-f9b6-43c1-8b88-816ed0a3795d&FolderID=3eb8a383-e710-43af-94dc-89cd9ba234ac" target="_blank" class="dropdown-item"><span class="fas fa-file-upload"></span> IVLE File Submissions</a></li>
-            <li><a href="/website/admin/tutorials.html" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Tutorial Schedule</a></li>
-            <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vT-MyLw2vxPkkDN7Lfi9J0PIE2iC3TRPXuhXWMO4xTYu5JXmuCKJLluTlnmMrzpTOFihyacbKq4hBbY/pubhtml" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Team IDs</a></li>
-            <li><a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html" target="_blank" class="dropdown-item"><span class="fas fa-code"></span> Java Coding Standard</a></li>
-            <li><a href="https://github.com/nus-tic2002-AY1718S2/samplerepo-things" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> samplerepo-things</a></li>
-            <li><a href="https://github.com/nus-tic2002-AY1718S2/addressbook-level1" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level1</a></li>
-            <li><a href="https://github.com/nus-tic2002-AY1718S2/addressbook-level2" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level2</a></li>
-            <li><a href="https://github.com/nus-tic2002-AY1718S2/addressbook-level3" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level3</a></li>
-            <li><a href="https://github.com/nus-tic2002-AY1718S2/addressbook-level4" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level4</a></li>
-            <li><a href="/website/admin/projectList.html" target="_blank" class="dropdown-item"><span class="fas fa-th-list"></span> Projects List</a></li>
-          </dropdown>
-          <li slot="right" class="nav-link">
-            <form class="navbar-form">
-              <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
-            </form>
-          </li>
-        </navbar>
-      </div>
-      <p><span class="dimmed"><strong><span></span></strong>
-        </span>
-      </p>
-      <div id="title">
+    <div id="content-wrapper">
+      <link rel="stylesheet" href="/website/book/css/textbook.css">
+      <div class="website-content">
         <div>
-          <h1 id="intellij-idea">Intellij IDEA</h1>
+          <navbar placement="top" type="inverse">
+            <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand">TIC2002 <small>(2018)</small></a>
+            <li><a href="/website/index.html" class="nav-link"><span><strong>Schedule</strong></span></a></li>
+            <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
+            <li><a href="/website/admin/index-tic2002.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+            <dropdown text="Links" class="nav-link">
+              <li><a href="https://github.com/nus-tic2002-2018/website/issues" target="_blank" class="dropdown-item"> <span class="fas fa-bug"></span> Report Bugs</a></li>
+              <li><a href="https://ivle.nus.edu.sg/v1/forum/forum.aspx?ForumID=3c3f5960-64ab-412b-b984-606c5412d711" target="_blank" class="dropdown-item"><span class="fas fa-comment"></span> Forum</a></li>
+              <li><a href="https://ivle.nus.edu.sg/v1/announcement/default.aspx?AnnID=71e71af2-6704-47c0-8c1b-48f84e80216f" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span> Announcements</a></li>
+              <li><a href="https://ivle.nus.edu.sg/v1/File/Student/default.aspx?CourseID=01d5ab7f-3c3d-4bd2-a3dd-0f8393b714a1&WorkbinID=a22b5fe9-a28b-43aa-9208-839089cc8f40&FolderID=befb78f1-f986-4442-a763-72b02c18b8bb" target="_blank" class="dropdown-item"><span class="fas fa-file-upload"></span> File Submissions</a></li>
+              <li><a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html" target="_blank" class="dropdown-item"><span class="fas fa-code"></span> Java Coding Standard</a></li>
+              <li><a href="https://github.com/nus-tic2002-2018/samplerepo-things" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> samplerepo-things</a></li>
+              <li><a href="https://github.com/nus-tic2002-2018/addressbook-level1" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level1</a></li>
+              <li><a href="https://github.com/nus-tic2002-2018/addressbook-level2" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level2</a></li>
+            </dropdown>
+            <li slot="right" class="nav-link">
+              <form class="navbar-form">
+                <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+              </form>
+            </li>
+          </navbar>
         </div>
-      </div>
-      <panel type="seamless" header="#### Project Setup" expanded="">
-        <div class="indented">
-          <span class="badge badge-light">
-  <span><span class="dimmed"><font color="Crimson"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-          <span
-            class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-            </span>
-            </span>
-            </span>
-            <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can setup a project in an IDE</span>
-            </span>
-            </span>
-            </span>
-            <p></p>
-            <div>
-              <h5 id="running-intellij-idea-for-the-first-time">Running Intellij IDEA for the First Time</h5>
-              <tabs>
-              
-                <tab header="<span class='far fa-file-alt'></span>">
-                  <ul>
-                    <li><a href="https://www.jetbrains.com/help/idea/creating-running-and-packaging-your-first-java-application.html">[Intellij Official Tutorial] <strong>Creating, Running and Packaging Your First Java Application</strong></a></li>
-                  </ul>
-                  <p>
-                    <hr>
-                  </p>
-                </tab>
-              
-                <tab header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span>">
-                  <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/c0efB_CKOYo" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-                  <p>A little bit more detailed explanation <span class="dimmed">(from CodeLaunch)</span> with some additional info at the end.</p>
-                  <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/S764o0mAXhg" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-                  <p>
-                    <hr>
-                  </p>
-                </tab>
-              </tabs>
-              <h5 id="importing-a-project-to-intellij-idea">Importing a Project to Intellij IDEA</h5>
-              <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/WIYTktB1bT4" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-            </div>
-            <div></div>
+        <p><span class="dimmed"><strong><span></span></strong>
+          </span>
+        </p>
+        <div id="title">
+          <div>
+            <h1 id="intellij-idea">Intellij IDEA</h1>
+          </div>
         </div>
-      </panel>
-      <panel type="seamless" header="#### Code Navigation" expanded="">
-        <div class="indented">
-          <span class="badge badge-light">
+        <panel type="seamless" header="#### Project Setup" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
   <span><span class="dimmed"><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-          <span
-            class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-            </span>
-            </span>
-            </span>
-            <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can navigate code effectively using IDE features</span>
-            </span>
-            </span>
-            </span>
-            <p></p>
-            <div>
-              <p>Some useful navigation shortcuts:</p>
-              <ol>
-                <li>Quickly locate a file by name.</li>
-                <li>Go to the definition of a method from where it is used.</li>
-                <li>Go back to the previous location.</li>
-                <li>View the documentation of a method from where the method is being used, without navigating to the method itself.</li>
-                <li>Find where a method/field is being used.</li>
-              </ol>
-              <panel header="Intellij IDEA Code Navigation (Basics)" alt="basics" expanded="">
-                <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/f885wy42IcM" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-              </panel>
-              <panel header="Intellij IDEA Code Navigation (Advanced)" alt="basics">
-                <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/IiHZPvmVICg" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-              </panel>
-            </div>
-            <div></div>
-        </div>
-      </panel>
-      <panel type="seamless" header="#### Productivity Shortcuts" expanded="">
-        <div class="indented">
-          <span class="badge badge-light">
-  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font>
-          <span
-            class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-            </span>
-            </span>
-            </span>
-            <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use some useful IDE productivity shortcuts</span>
-            </span>
-            </span>
-            </span>
-            <p></p>
-            <div>
-              <div v-closeable="" alt="video: Intellij shortcuts">
-                <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/KsVWdGOnHZU" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-                <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/EvXpgL2iho4" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-              </div>
-            </div>
-            <div></div>
-        </div>
-      </panel>
-      <panel type="seamless" header="#### Debugging: Basic" expanded="">
-        <div class="indented">
-          <span class="badge badge-light">
-  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font>
-          <span
-            class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-            </span>
-            </span>
-            </span>
-            <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can step through a program using a debugger</span>
-            </span>
-            </span>
-            </span>
-            <p></p>
-            <div>
-              <div v-closeable="" alt="video: debugging in Intellij">
-                <p>This video (from LaunchCode) gives a pretty good explanation of how to use the Intellij IDEA debugger.</p>
-                <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/1bCgzjatcr4" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-              </div>
-              <ul>
-                <li><a href="https://www.jetbrains.com/help/idea/debugger-basics.html">Intellij IDEA Documentation: Debugging Basics</a> - Can be used as a reference document when you want to recall how to use a debugging feature.</li>
-              </ul>
-            </div>
-            <div></div>
-        </div>
-      </panel>
-      <panel type="seamless" header="#### Refactoring" expanded="">
-        <div class="indented">
-          <span class="badge badge-light">
-  <span><span class="dimmed"><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-          <span
-            class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-            </span>
-            </span>
-            </span>
-            <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use automated refactoring features of the IDE</span>
-            </span>
-            </span>
-            </span>
-            <p></p>
-            <div>
-              <div v-closeable="" alt="Videos: Automated refactoring using IDE">
-                <p>This video explains how to automate the 'Extract parameter' refactoring using Intellij IDEA. Most other refactorings available works similarly. i.e. <code>select the code to refactor</code> → <code>find the refactoring in the context menu</code>                  or <code>use the keyboard shortcut</code>.</p>
-                <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/fg3Q5pt4E80" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-                <p>Here's another video explaining how to change a method signature as part of refactoring.</p>
-                <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/p6Tsw_3cXow" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-              </div>
+            <span
+              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </span>
+              </span>
+              </span>
+              <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can setup a project in an IDE</span>
+              </span>
+              </span>
+              </span>
               <p></p>
-              <ul>
-                <li><a href="https://www.jetbrains.com/help/idea/introduction-to-refactoring.html">Introduction to Refactoring (in Intellij IDEA)</a> : An article on refactorings available in Intellij IDEA.</li>
-              </ul>
-            </div>
-            <div></div>
-        </div>
-      </panel>
+              <div>
+                <h5 id="running-intellij-idea-for-the-first-time">Running Intellij IDEA for the First Time</h5>
+                <tabs>
+                
+                  <tab header="<span class='far fa-file-alt'></span>">
+                    <ul>
+                      <li><a href="https://www.jetbrains.com/help/idea/creating-running-and-packaging-your-first-java-application.html">[Intellij Official Tutorial] <strong>Creating, Running and Packaging Your First Java Application</strong></a></li>
+                    </ul>
+                    <p>
+                      <hr>
+                    </p>
+                  </tab>
+                
+                  <tab header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span>">
+                    <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/c0efB_CKOYo" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                    <p>A little bit more detailed explanation <span class="dimmed">(from CodeLaunch)</span> with some additional info at the end.</p>
+                    <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/S764o0mAXhg" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                    <p>
+                      <hr>
+                    </p>
+                  </tab>
+                </tabs>
+                <h5 id="importing-a-project-to-intellij-idea">Importing a Project to Intellij IDEA</h5>
+                <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/WIYTktB1bT4" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+              </div>
+              <div></div>
+          </div>
+        </panel>
+        <panel type="seamless" header="#### Code Navigation" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font>
+            <span
+              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </span>
+              </span>
+              </span>
+              <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can navigate code effectively using IDE features</span>
+              </span>
+              </span>
+              </span>
+              <p></p>
+              <div>
+                <p>Some useful navigation shortcuts:</p>
+                <ol>
+                  <li>Quickly locate a file by name.</li>
+                  <li>Go to the definition of a method from where it is used.</li>
+                  <li>Go back to the previous location.</li>
+                  <li>View the documentation of a method from where the method is being used, without navigating to the method itself.</li>
+                  <li>Find where a method/field is being used.</li>
+                </ol>
+                <panel header="Intellij IDEA Code Navigation (Basics)" alt="basics" expanded="">
+                  <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/f885wy42IcM" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                </panel>
+                <panel header="Intellij IDEA Code Navigation (Advanced)" alt="basics">
+                  <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/IiHZPvmVICg" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                </panel>
+              </div>
+              <div></div>
+          </div>
+        </panel>
+        <panel type="seamless" header="#### Productivity Shortcuts" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
+  <span><span class="dimmed"><font color="ForestGreen"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span
+              class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              </font>
+              </span>
+              </span>
+              </span>
+              <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use some useful IDE productivity shortcuts</span>
+              </span>
+              </span>
+              </span>
+              <p></p>
+              <div>
+                <div v-closeable="" alt="video: Intellij shortcuts">
+                  <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/KsVWdGOnHZU" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                  <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/EvXpgL2iho4" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                </div>
+              </div>
+              <div></div>
+          </div>
+        </panel>
+        <panel type="seamless" header="#### Debugging: Basic" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font>
+            <span
+              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </span>
+              </span>
+              </span>
+              <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can step through a program using a debugger</span>
+              </span>
+              </span>
+              </span>
+              <p></p>
+              <div>
+                <div v-closeable="" alt="video: debugging in Intellij">
+                  <p>This video (from LaunchCode) gives a pretty good explanation of how to use the Intellij IDEA debugger.</p>
+                  <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/1bCgzjatcr4" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                </div>
+                <ul>
+                  <li><a href="https://www.jetbrains.com/help/idea/debugger-basics.html">Intellij IDEA Documentation: Debugging Basics</a> - Can be used as a reference document when you want to recall how to use a debugging feature.</li>
+                </ul>
+              </div>
+              <div></div>
+          </div>
+        </panel>
+        <panel type="seamless" header="#### Refactoring" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font>
+            <span
+              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </span>
+              </span>
+              </span>
+              <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use automated refactoring features of the IDE</span>
+              </span>
+              </span>
+              </span>
+              <p></p>
+              <div>
+                <div v-closeable="" alt="Videos: Automated refactoring using IDE">
+                  <p>This video explains how to automate the 'Extract parameter' refactoring using Intellij IDEA. Most other refactorings available works similarly. i.e. <code>select the code to refactor</code> → <code>find the refactoring in the context menu</code>                    or <code>use the keyboard shortcut</code>.</p>
+                  <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/fg3Q5pt4E80" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                  <p>Here's another video explaining how to change a method signature as part of refactoring.</p>
+                  <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/p6Tsw_3cXow" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                </div>
+                <p></p>
+                <ul>
+                  <li><a href="https://www.jetbrains.com/help/idea/introduction-to-refactoring.html">Introduction to Refactoring (in Intellij IDEA)</a> : An article on refactorings available in Intellij IDEA.</li>
+                </ul>
+              </div>
+              <div></div>
+          </div>
+        </panel>
+      </div>
     </div>
   </div>
 </div>
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Wed, 01 Aug 2018 10:34:20 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sat, 04 Aug 2018 10:45:10 GMT</small></div>
 </footer>
 </div>
 </body>

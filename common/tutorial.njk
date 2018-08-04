@@ -127,7 +127,7 @@
 <br>
 
 <panel type="seamless" header="##### Evidence for weekly LOs %%(for reference)%%" >
-{{ show_week_schedule_main(week_num, entries, path_displacement) }}
+{{ show_week_schedule_main(week_num - 1, entries, path_displacement) }} {# week_num - 1 : tutorial covers previous week's lectures #}
 </panel>
 
 {% endmacro %}

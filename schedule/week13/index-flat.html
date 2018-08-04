@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-122519234-1');
-</script>
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,155 +18,158 @@
     <link rel="icon" href="/website/favicon.ico">
 </head>
 <body>
-<div id="app" class="container-fluid">
-    <div>
-  <navbar placement="top" type="inverse">
-    <a slot="brand" href="/website/index-flat.html" title="Home" class="navbar-brand">TIC2002 <small>Aug '18</small></a>
-    <dropdown text="Flat" class="nav-link">
-      <li><a href="/website/index-flat.html" class="dropdown-item"> <span class="fas fa-check"></span> Flat (current format)</a></li>
-      <li><a href="/website/index.html" class="dropdown-item">&nbsp;&nbsp;&nbsp;&nbsp;Nested</a></li>
-    </dropdown>
-    <li><a href="/website/index-flat.html" class="nav-link"><span><strong>Schedule</strong></span></a></li>
-    <li><a href="/website/se-book-adapted/index-flat.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
-    <li><a href="/website/admin/index-flat.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
-    <dropdown text="Links" class="nav-link">
-      <li><a href="https://github.com/nus-tic2002-AY1718S2/website/issues" target="_blank" class="dropdown-item"> <span class="fas fa-bug"></span> Report Bugs</a></li>
-      <li><a href="https://nus-tic2002-ay1718s2.slack.com" target="_blank" class="dropdown-item"><span class="fab fa-slack-hash"></span> Slack</a></li>
-      <li><a href="https://github.com/nus-tic2002-AY1718S2/forum/issues" target="_blank" class="dropdown-item"><span class="fas fa-comment"></span> Forum</a></li>
-      <li><a href="https://docs.google.com/document/d/e/2PACX-1vQNqBNRmqyfJO2NtmbJiunrHcWMf_N_9JxbPKMi1Q3UZY2RZt9EKeoowZn79CKfhFf0vMKeQNy3jEv5/pub?embed=true" target="_blank" class="dropdown-item"><span class="fas fa-user-tie"></span> Instructors</a></li>
-      <li><a href="https://ivle.nus.edu.sg/v1/Announcement/default.aspx?CourseID=3b6f07b7-fd7c-466c-9b0c-ced8cff6778f" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span> IVLE Announcements</a></li>
-      <li><a href="https://ivle.nus.edu.sg/v1/File/Student/default.aspx?CourseID=3b6f07b7-fd7c-466c-9b0c-ced8cff6778f&WorkbinID=4cee3535-f9b6-43c1-8b88-816ed0a3795d&FolderID=3eb8a383-e710-43af-94dc-89cd9ba234ac" target="_blank" class="dropdown-item"><span class="fas fa-file-upload"></span> IVLE File Submissions</a></li>
-      <li><a href="/website/admin/tutorials.html" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Tutorial Schedule</a></li>
-      <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vT-MyLw2vxPkkDN7Lfi9J0PIE2iC3TRPXuhXWMO4xTYu5JXmuCKJLluTlnmMrzpTOFihyacbKq4hBbY/pubhtml" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Team IDs</a></li>
-      <li><a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html" target="_blank" class="dropdown-item"><span class="fas fa-code"></span> Java Coding Standard</a></li>
-      <li><a href="https://github.com/nus-tic2002-AY1718S2/samplerepo-things" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> samplerepo-things</a></li>
-      <li><a href="https://github.com/nus-tic2002-AY1718S2/addressbook-level1" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level1</a></li>
-      <li><a href="https://github.com/nus-tic2002-AY1718S2/addressbook-level2" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level2</a></li>
-      <li><a href="https://github.com/nus-tic2002-AY1718S2/addressbook-level3" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level3</a></li>
-      <li><a href="https://github.com/nus-tic2002-AY1718S2/addressbook-level4" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level4</a></li>
-      <li><a href="/website/admin/projectList.html" target="_blank" class="dropdown-item"><span class="fas fa-th-list"></span> Projects List</a></li>
-    </dropdown>
-  </navbar>
-</div>
-<div class="website-content" id="main">
-  <h2 id="week-13-nov-12">Week 13 [Nov 12]</h2>
-  <div class="indented">
-    <h3 id="todo"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> Todo</h3>
+<div id="app">
+    <div id="content-wrapper">
+  <div>
+    <navbar placement="top" type="inverse">
+      <a slot="brand" href="/website/index-flat.html" title="Home" class="navbar-brand">TIC2002 <small>(2018)</small></a>
+      <dropdown text="Flat" class="nav-link">
+        <li><a href="/website/index-flat.html" class="dropdown-item"> <span class="fas fa-check"></span> Flat (current format)</a></li>
+        <li><a href="/website/index.html" class="dropdown-item">&nbsp;&nbsp;&nbsp;&nbsp;Nested</a></li>
+      </dropdown>
+      <li><a href="/website/index-flat.html" class="nav-link"><span><strong>Schedule</strong></span></a></li>
+      <li><a href="/website/se-book-adapted/index-flat.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
+      <li><a href="/website/admin/index-flat.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+      <dropdown text="Links" class="nav-link">
+        <li><a href="https://ivle.nus.edu.sg/v1/forum/forum.aspx?ForumID=3c3f5960-64ab-412b-b984-606c5412d711" target="_blank" class="dropdown-item"> <span class="fas fa-bug"></span> Report Bugs</a></li>
+        <li><a href="https://nus-tic2002-2018.slack.com" target="_blank" class="dropdown-item"><span class="fab fa-slack-hash"></span> Slack</a></li>
+        <li><a href="https://github.com/nus-tic2002-2018/website/issues" target="_blank" class="dropdown-item"><span class="fas fa-comment"></span> Forum</a></li>
+        <li><a href="https://docs.google.com/document/d/e/2PACX-1vQNqBNRmqyfJO2NtmbJiunrHcWMf_N_9JxbPKMi1Q3UZY2RZt9EKeoowZn79CKfhFf0vMKeQNy3jEv5/pub?embed=true" target="_blank" class="dropdown-item"><span class="fas fa-user-tie"></span> Instructors</a></li>
+        <li><a href="https://ivle.nus.edu.sg/v1/announcement/default.aspx?AnnID=71e71af2-6704-47c0-8c1b-48f84e80216f" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span> Announcements</a></li>
+        <li><a href="https://ivle.nus.edu.sg/v1/File/Student/default.aspx?CourseID=01d5ab7f-3c3d-4bd2-a3dd-0f8393b714a1&WorkbinID=a22b5fe9-a28b-43aa-9208-839089cc8f40&FolderID=befb78f1-f986-4442-a763-72b02c18b8bb" target="_blank" class="dropdown-item"><span class="fas fa-file-upload"></span> File Submissions</a></li>
+        <li><a href="/website/admin/tutorials.html" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Tutorial Schedule</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vT-MyLw2vxPkkDN7Lfi9J0PIE2iC3TRPXuhXWMO4xTYu5JXmuCKJLluTlnmMrzpTOFihyacbKq4hBbY/pubhtml" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Team IDs</a></li>
+        <li><a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html" target="_blank" class="dropdown-item"><span class="fas fa-code"></span> Java Coding Standard</a></li>
+        <li><a href="https://github.com/nus-tic2002-2018/samplerepo-things" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> samplerepo-things</a></li>
+        <li><a href="https://github.com/nus-tic2002-2018/addressbook-level1" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level1</a></li>
+        <li><a href="https://github.com/nus-tic2002-2018/addressbook-level2" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level2</a></li>
+        <li><a href="https://github.com/nus-tic2002-2018/addressbook-level3" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level3</a></li>
+        <li><a href="https://github.com/nus-tic2002-2018/addressbook-level4" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level4</a></li>
+        <li><a href="/website/admin/projectList.html" target="_blank" class="dropdown-item"><span class="fas fa-th-list"></span> Projects List</a></li>
+      </dropdown>
+    </navbar>
+  </div>
+  <div class="website-content" id="main">
+    <h2 id="week-13-nov-12">Week 13 [Nov 12]</h2>
     <div class="indented">
-      <div></div>
-      <p><span class="activity-desc">Admin info to read:<span></span></span>
-      </p>
+      <h3 id="todo"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> Todo</h3>
       <div class="indented">
-        <panel src="/website\admin\project-w13-v14._include_.html#main" type="dark" no-close="" expanded="" no-switch="" expandable="false" fragment="main">
-          <span slot="header" class="card-title"><span class="text-white"> Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Project: v1.4 [week 13] <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          <span
-            class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            </span>
-            </span>
-            </span>
-            </span>
-        </panel>
+        <div></div>
+        <p><span class="activity-desc">Admin info to read:<span></span></span>
+        </p>
+        <div class="indented">
+          <panel src="/website\admin\project-w13-v14._include_.html#main" type="dark" no-close="" expanded="" no-switch="" expandable="false" fragment="main">
+            <span slot="header" class="card-title"><span class="text-white"> Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Project: v1.4 [week 13] <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span
+              class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              </span>
+              </span>
+              </span>
+              </span>
+          </panel>
+          <p></p>
+        </div>
         <p></p>
       </div>
-      <p></p>
-    </div>
-    <h3 id="outcomes"><span class="fas fa-trophy"></span> Outcomes</h3>
-    <div class="indented">
-      <p><span class="activity-desc">🅿️ Project</span></p>
+      <h3 id="outcomes"><span class="fas fa-trophy"></span> Outcomes</h3>
       <div class="indented">
-        <panel no-close="" expanded="" no-switch="" expandable="false">
-          <span slot="header" class="card-title"><span><code>W13.1</code> <strong>Can acceptance-test a product</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-          </span>
-          </span>
-          <div>
-            <p>Covered by:</p>
-            <p>
-              <panel src="/website\admin\project-w13-v14._include_.html#main" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project → v1.4%%" fragment="main"></panel>
-            </p>
-          </div>
-        </panel>
-        <panel no-close="" expanded="" no-switch="" expandable="false">
-          <span slot="header" class="card-title"><span><code>W13.2</code> <strong>Can evaluate a technical effort</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-          </span>
-          </span>
-          <div>
-            <p>Covered by:</p>
-            <p>
-              <panel src="/website\admin\project-w13-v14._include_.html#main" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project → v1.4%%" fragment="main"></panel>
-            </p>
-          </div>
-        </panel>
-        <panel no-close="" expanded="" no-switch="" expandable="false">
-          <span slot="header" class="card-title"><span><code>W13.3</code> <strong>Can demo a product</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-          </span>
-          </span>
-          <div>
-            <p>Covered by:</p>
-            <p>
-              <panel src="/website\admin\project-w13-v14._include_.html#main" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project → v1.4%%" fragment="main"></panel>
-            </p>
-          </div>
-        </panel>
+        <p><span class="activity-desc">🅿️ Project</span></p>
+        <div class="indented">
+          <panel no-close="" expanded="" no-switch="" expandable="false">
+            <span slot="header" class="card-title"><span><code>W13.1</code> <strong>Can demo a product</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            <div>
+              <p>Covered by:</p>
+              <p>
+                <panel src="/website\admin\project-w13-v14._include_.html#main" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project → v1.4%%" fragment="main"></panel>
+              </p>
+            </div>
+          </panel>
+        </div>
+        <p></p>
       </div>
-      <p></p>
-    </div>
-    <h3 id="tutorial-13"><span class="fas fa-chalkboard-teacher"></span> Tutorial 13</h3>
-    <div class="indented">
-      <div>
-        <br>
-        <panel type="seamless" header="##### Evidence for weekly LOs %%(for reference)%%">
-          <panel type="seamless" expanded="">
-            <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W13.1</code></span></big> Can acceptance-test a product <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-            </span>
-            </span>
-            <div class="indented">
-              <div>
-                <p>Covered by:</p>
-                <p>
-                  <panel src="/website\admin\project-w13-v14._include_.html#main" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project → v1.4%%" fragment="main"></panel>
-                </p>
+      <h3 id="tutorial-13"><span class="fas fa-chalkboard-teacher"></span> Tutorial 13</h3>
+      <div class="indented">
+        <div>
+          <div></div>
+          <br>
+          <panel type="seamless" header="##### Evidence for weekly LOs %%(for reference)%%">
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W12.1</code></span></big> Can work with a 2KLoC code base <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+              </span>
+              </span>
+              <div class="indented">
+                <div>
+                  <tip-box type="important">
+                    This LO requires coordination and cooperation among team members. It also requires a few days to complete; we recommend that you start it early in the week rather than just before the tutorial day.
+                  </tip-box>
+                  <p>This LO can earn you 2 participation marks, 1 mark for the individual component and 1 for the team component. You can omit either one of them.</p>
+                  <p>💡 When working with existing code, a safe approach is to <strong>change the code in very small steps, each resulting in a verifiable change</strong> without breaking the app. For example, when adding a new <code>sort</code> command,
+                    the first few steps can be,</p>
+                  <ol>
+                    <li>Teach the app to accept a <code>sort</code> command but ignore it.</li>
+                    <li>Next, teach the app to direct the <code>sort</code> command to an existing command e.g. <code>sort</code> command simply invokes the <code>list</code> command internally.</li>
+                    <li>Add a <code>SortCommand</code> class but make it simply a copy of the the existing <code>ListCommand</code>. Direct the <code>sort</code> command to the new <code>SortCommand</code>.</li>
+                    <li>...</li>
+                  </ol>
+                  <p>💡 Note that you can reuse the code you write here in your final project, if applicable.</p>
+                  <h4 id="individual-component">Individual component:</h4>
+                  <p><strong>Requirements</strong>: Do an enhancement to [<a href="https://github.com/nus-tic2002-2018/addressbook-level2">AddressBook - Level2</a>] <span class="dimmed">e.g. add a new command</span>. It can be the same enhancement you did
+                    to AddressBook Level1 (at the 1KLoC milestone in week 3). The size of the enhancement does not matter but you must,</p>
+                  <ul>
+                    <li>update the User Guide</li>
+                    <li>update existing tests and add new tests if necessary, for both JUnit tests and I/O tests</li>
+                    <li>follow the coding standard</li>
+                    <li>follow the OOP style</li>
+                  </ul>
+                  <p>Optional but encouraged:</p>
+                  <ul>
+                    <li>Update the Developer Guide</li>
+                  </ul>
+                  <div>
+                    <p><strong>Submission</strong>:</p>
+                    <ul>
+                      <li>Options 1 (discouraged): Show the relevant code during the tutorial.</li>
+                      <li>Options 2 (preferred): Create a pull request by following the instructions below.</li>
+                    </ul>
+                    <p>
+                      <panel src="/website\admin\appendixE-gitHub._include_.html#tutorial-pr-instructions" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Appendix E: Using GitHub Project Hosting → Submitting Pull Requests as evidence of an LO%%"
+                        fragment="tutorial-pr-instructions"></panel>
+                    </p>
+                    <p>If you choose option 2, we recommend that you complete this week's <em>Project Management</em> LOs first; there are many ways to create PRs but we expect you to create PRs in a specific way, as specified in the LOs.</p>
+                  </div>
+                  <h4 id="team-component">Team component:</h4>
+                  <p>The team component is <mark>to be done by all members</mark>, including those who didn't do the individual component.</p>
+                  <ul>
+                    <li>
+                      <p>Review PRs created by team members in the <em>Individual Component</em> above <span class="dimmed">i.e. add review comments in the PR created against module repo</span>. You can either give suggestions to improve, or ask questions
+                        to understand, the code written by the team member.</p>
+                    </li>
+                    <li>
+                      <p><strong>Requirements</strong>: Try to ensure that each PR reviewed by <em>at least</em> one team member and each team member's PR is reviewed by at least one other team member.</p>
+                    </li>
+                    <li>
+                      <p><strong>Submission</strong>: Just update PR created in the individual component by adding comments/commits to it.</p>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
+            </panel>
           </panel>
-          <panel type="seamless" expanded="">
-            <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W13.2</code></span></big> Can evaluate a technical effort <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-            </span>
-            </span>
-            <div class="indented">
-              <div>
-                <p>Covered by:</p>
-                <p>
-                  <panel src="/website\admin\project-w13-v14._include_.html#main" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project → v1.4%%" fragment="main"></panel>
-                </p>
-              </div>
-            </div>
-          </panel>
-          <panel type="seamless" expanded="">
-            <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W13.3</code></span></big> Can demo a product <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-            </span>
-            </span>
-            <div class="indented">
-              <div>
-                <p>Covered by:</p>
-                <p>
-                  <panel src="/website\admin\project-w13-v14._include_.html#main" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project → v1.4%%" fragment="main"></panel>
-                </p>
-              </div>
-            </div>
-          </panel>
-        </panel>
+        </div>
       </div>
-    </div>
-    <h3 id="lecture-13"><span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span> Lecture 13</h3>
-    <div class="indented">
-      <div></div>
+      <h3 id="lecture-13"><span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span> Lecture 13</h3>
+      <div class="indented">
+        <div></div>
+      </div>
     </div>
   </div>
 </div>
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Wed, 01 Aug 2018 10:34:20 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sat, 04 Aug 2018 10:45:10 GMT</small></div>
 </footer>
 </div>
 </body>

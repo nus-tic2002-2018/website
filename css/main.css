@@ -15,3 +15,7 @@ mark {
 .important {
     color: #980000;
 }
+
+.full-mode {
+    display: none;
+}
