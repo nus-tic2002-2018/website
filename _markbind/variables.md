@@ -6,7 +6,7 @@
 
 <span id="semester">2018</span>
 
-<span id="period">Aug '18</span>
+<span id="period">(2018)</span>
 
 <span id="module_org">https://github.com/nus-{{ module | lower }}-{{ semester }}</span>
 
