@@ -29,7 +29,7 @@ Unless stated otherwise, the meaning of answer options are<br>
 **D.** Option not used<br>
 **E.** `False`
 
-Number of questions: 100
+Number of questions: 50
 
 <div class="full-mode">
 
@@ -84,7 +84,7 @@ Some questions have tags e.g., the question below has a tag  **`JAVA`**. These *
 **The paper is open-book**: you may bring any printed or written materials to the exam in hard copy format. 
 However, given the fast pace required by Part 1, you will not have time left to refer notes during that part of the exam. 
 
-:bulb: **Mark the OCR form as you go**, rather than planning to transfer your answers to the OCR form near the end. %%&nbsp;Reason: Given there are 100 questions, it will be hard to estimate how much time you need to mass-transfer all answers to OCR forms.%%
+:bulb: **Mark the OCR form as you go**, rather than planning to transfer your answers to the OCR form near the end. %%&nbsp;Reason: Given there are 50 questions, it will be hard to estimate how much time you need to mass-transfer all answers to OCR forms.%%
 
 :bulb: **Write the answer in the exam paper as well** as marking it in the OCR form. %%&nbsp;Reason: It will reduce the chance of missing a question. Furthermore, in case you missed a question, it will help you correct the OCR form quickly.%%
 
