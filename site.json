@@ -16,11 +16,7 @@
     {"glob": "index.md"},
     {"glob": "index-flat.md",
       "searchable": "no"},
-    {"src": "admin/index-flat.md",
-      "searchable": "no"
-    },
-    {"glob": "admin/*.md"},
-    {"glob": "admin/gradeBreakdown.md"},
+    {"glob": "admin/index-tic2002.md"},
     {"glob": "schedule/index.md",
       "searchable": "no"},
     {"glob": "schedule/summary.md",
