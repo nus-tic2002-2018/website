@@ -49,7 +49,7 @@ BSc, Computer Science & Engineering, University of Moratuwa, 1996-2001<br>
 %%{{ fas_envelope }}%% `damith`[at]`comp`[dot]`nus`[dot]`edu`[dot]`sg`<br>
 %%{{ fas_map_marker_alt }}%% COM2-02-57<br>
 %%{{ fas_phone_square }}%% 651 64359<br>
-%%{{ fas_home }}%% http://www.comp.nus.edu.sg/~damithch
+%%{{ fas_home }}%% https://www.comp.nus.edu.sg/~damithch
     </div>
   </div>
 </div>
