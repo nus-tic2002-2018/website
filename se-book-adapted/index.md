@@ -34,7 +34,7 @@ siteNav: se-book-adapted-sitenav.md
 
 <link rel="stylesheet" href="{{baseUrl}}/book/css/textbook.css">
 
-<include src="../common/header-book.md" />
+<include src="../common/header.md" />
 
 <div class="website-content" id="main">
 
