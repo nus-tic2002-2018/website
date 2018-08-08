@@ -5,6 +5,7 @@ To be able to do exercises such as this:
 <include src="../../book/cppToJava/gettingStarted/running/q-runHelloWorld.md" />
 
 </div>
+
 <div id="dataTypes_arrays">
 
 To be able to do exercises such as this:

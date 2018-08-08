@@ -41,7 +41,7 @@ head: scheduleHead.md
       {location: ["cppToJava", "gettingStarted", "installation"], omit_evidence: true},
       {location: ["cppToJava", "gettingStarted", "helloWorld"], omit_evidence: true},
       {location: ["cppToJava", "gettingStarted", "compiling"], omit_evidence: true},
-      {location: ["cppToJava", "gettingStarted", "running"], omit_evidence: true},
+      {location: ["cppToJava", "gettingStarted", "running"]},
     {heading: "Can use data types in Java"},
       {location: ["cppToJava", "dataTypes", "primitiveTypes"], omit_evidence: true},
       {location: ["cppToJava", "dataTypes", "variables"], omit_evidence: true},
