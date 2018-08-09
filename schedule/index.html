@@ -649,8 +649,43 @@
                           <li>NetBeans</li>
                         </ul>
                       </div>
-                      <div></div>
+                      <div>
+                        <div>
+                          <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                            <div>
+                              <div>
+                                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Run HelloWorld">
+                                  <question>
+                                    <ul>
+                                      <li>Install Java in your Computer, if you haven't done so already.</li>
+                                      <li>Write, compile and run a small Java program <span class="dimmed">(e.g., a HelloWorld program)</span> in your Computer. You can use any code editor to write the program but use the command prompt to compile and run
+                                        the program.</li>
+                                      <li>Modify the code and run the program again.</li>
+                                    </ul>
+                                  </question>
+                                </panel>
+                              </div>
+                            </div>
+                          </panel>
+                        </div>
+                      </div>
                     </div>
+                  </div>
+                </div>
+                <hr style="border-top: dashed 1px; border-color:grey">
+                <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
+                <div>
+                  <p>To be able to do exercises such as this:</p>
+                  <div>
+                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Run HelloWorld">
+                      <question>
+                        <ul>
+                          <li>Install Java in your Computer, if you haven't done so already.</li>
+                          <li>Write, compile and run a small Java program <span class="dimmed">(e.g., a HelloWorld program)</span> in your Computer. You can use any code editor to write the program but use the command prompt to compile and run the program.</li>
+                          <li>Modify the code and run the program again.</li>
+                        </ul>
+                      </question>
+                    </panel>
                   </div>
                 </div>
               </panel>
@@ -845,7 +880,16 @@ System.out.println(hour * <span class="hljs-number">60</span> + minute);
                         <pre class="hljs"><code>Number of minutes since midnight: 719
 </code></pre>
                         <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
-                          </span> When an expression has multiple operators, normal <strong>operator precedence</strong> rules apply.</p>
+                          </span> <strong>When an expression has multiple operators, normal <em>operator precedence</em> rules apply</strong>. Furthermore, you can use parentheses to specify a precise precedence.</p>
+                        <box>
+                          <p>Examples:</p>
+                          <ul>
+                            <li><code>4 * 5 - 1</code> <span class="fas fa-arrow-right"></span> <code>19</code> (<code>*</code> has higher precedence than <code>-</code>)</li>
+                            <li><code>4 * (5 - 1)</code> <span class="fas fa-arrow-right"></span> <code>16</code> (parentheses <code>(</code> <code>)</code> have higher precedence than <code>*</code>)
+                            </li>
+                          </ul>
+                        </box>
+
                         <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span class="fas fa-not-equal"></span></span>
                           </span> Java does not allow <em>operator overloading</em>.</p>
                         <blockquote>
@@ -1092,8 +1136,111 @@ System.out.println(names[<span class="hljs-number">0</span>][<span class="hljs-n
                             </div>
                           </panel>
                         </div>
+                        <div>
+                          <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                            <div>
+                              <div>
+                                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Compare names">
+                                  <question>
+                                    <p>Write a Java program that takes two command line arguments and prints <code>true</code> or <code>false</code> to indicate if the two arguments have the same value. Follow the sample output given below.</p>
+                                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WordComparator</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+      <span class="hljs-comment">// add your code here</span>
+  }
+}
+</code></pre>
+                                    <p>
+                                      <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java WordComparator adam eve</code> <span class="fas fa-arrow-down"></span></p>
+                                    <pre class="hljs"><code>Words given: adam, eve
+They are the same: false
+</code></pre>
+                                    <p>
+                                      <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java WordComparator eve eve</code> <span class="fas fa-arrow-down"></span></p>
+                                    <pre class="hljs"><code>Words given: eve, eve
+They are the same: true
+</code></pre>
+                                    <p>💡 Use the following technique to compare two <code>Strings</code>(i.e., don't use <code>==</code>). <span class="dimmed">Reason: to be covered in a later topic</span>.</p>
+                                    <pre><code class="hljs java">String x = <span class="hljs-string">"foo"</span>;
+<span class="hljs-keyword">boolean</span> isSame = x.equals(<span class="hljs-string">"bar"</span>) <span class="hljs-comment">// false</span>
+isSame = x.equals(<span class="hljs-string">"foo"</span>) <span class="hljs-comment">// true</span>
+</code></pre>
+                                    <div slot="hint">
+                                      <ul>
+                                        <li>The two command line arguments can be accessed inside the <code>main</code> method using <code>args[0]</code> and <code>args[1]</code>.</li>
+                                        <li>When using multiple operators in the same expression, you might need to use parentheses to specify operator precedence. e.g., <code>&quot;foo&quot; + x == y</code> vs <code>&quot;foo&quot; + (x == y)</code></li>
+                                      </ul>
+                                      <panel type="seamless" header="partial solution">
+                                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WordComparator</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+      String first = args[<span class="hljs-number">0</span>];
+      String second = args[<span class="hljs-number">1</span>];
+      System.out.println(<span class="hljs-string">"Words given: "</span> + first + <span class="hljs-string">", "</span> + second);
+      <span class="hljs-comment">// ...</span>
+  }
+}
+
+</code></pre>
+                                      </panel>
+                                    </div>
+                                  </question>
+                                </panel>
+                              </div>
+                            </div>
+                          </panel>
+                        </div>
                       </div>
                     </div>
+                  </div>
+                </div>
+                <hr style="border-top: dashed 1px; border-color:grey">
+                <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
+                <div>
+                  <p>To be able to do exercises such as this:</p>
+                  <div>
+                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Compare names">
+                      <question>
+                        <p>Write a Java program that takes two command line arguments and prints <code>true</code> or <code>false</code> to indicate if the two arguments have the same value. Follow the sample output given below.</p>
+                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WordComparator</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+      <span class="hljs-comment">// add your code here</span>
+  }
+}
+</code></pre>
+                        <p>
+                          <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java WordComparator adam eve</code> <span class="fas fa-arrow-down"></span></p>
+                        <pre class="hljs"><code>Words given: adam, eve
+They are the same: false
+</code></pre>
+                        <p>
+                          <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java WordComparator eve eve</code> <span class="fas fa-arrow-down"></span></p>
+                        <pre class="hljs"><code>Words given: eve, eve
+They are the same: true
+</code></pre>
+                        <p>💡 Use the following technique to compare two <code>Strings</code>(i.e., don't use <code>==</code>). <span class="dimmed">Reason: to be covered in a later topic</span>.</p>
+                        <pre><code class="hljs java">String x = <span class="hljs-string">"foo"</span>;
+<span class="hljs-keyword">boolean</span> isSame = x.equals(<span class="hljs-string">"bar"</span>) <span class="hljs-comment">// false</span>
+isSame = x.equals(<span class="hljs-string">"foo"</span>) <span class="hljs-comment">// true</span>
+</code></pre>
+                        <div slot="hint">
+                          <ul>
+                            <li>The two command line arguments can be accessed inside the <code>main</code> method using <code>args[0]</code> and <code>args[1]</code>.</li>
+                            <li>When using multiple operators in the same expression, you might need to use parentheses to specify operator precedence. e.g., <code>&quot;foo&quot; + x == y</code> vs <code>&quot;foo&quot; + (x == y)</code></li>
+                          </ul>
+                          <panel type="seamless" header="partial solution">
+                            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WordComparator</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+      String first = args[<span class="hljs-number">0</span>];
+      String second = args[<span class="hljs-number">1</span>];
+      System.out.println(<span class="hljs-string">"Words given: "</span> + first + <span class="hljs-string">", "</span> + second);
+      <span class="hljs-comment">// ...</span>
+  }
+}
+
+</code></pre>
+                          </panel>
+                        </div>
+                      </question>
+                    </panel>
                   </div>
                 </div>
               </panel>
@@ -1174,31 +1321,31 @@ System.out.println(names[<span class="hljs-number">0</span>][<span class="hljs-n
         String monthString;
         <span class="hljs-keyword">switch</span> (month) {
         <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:  monthString = <span class="hljs-string">"January"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:  monthString = <span class="hljs-string">"February"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">3</span>:  monthString = <span class="hljs-string">"March"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">4</span>:  monthString = <span class="hljs-string">"April"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">5</span>:  monthString = <span class="hljs-string">"May"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">6</span>:  monthString = <span class="hljs-string">"June"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">7</span>:  monthString = <span class="hljs-string">"July"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">8</span>:  monthString = <span class="hljs-string">"August"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">9</span>:  monthString = <span class="hljs-string">"September"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">10</span>: monthString = <span class="hljs-string">"October"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">11</span>: monthString = <span class="hljs-string">"November"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">12</span>: monthString = <span class="hljs-string">"December"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">default</span>: monthString = <span class="hljs-string">"Invalid month"</span>;
-                     <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         }
         System.out.println(monthString);
     }
@@ -1208,6 +1355,124 @@ System.out.println(names[<span class="hljs-number">0</span>][<span class="hljs-n
                         </div>
                       </div>
                       <div>
+                        <div>
+                          <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                            <div>
+                              <div>
+                                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Greeter">
+                                  <question>
+                                    <p>Write a Java program that takes several command line arguments that describe a person or a family | and prints out a greeting. The parameters can be one of two formats.</p>
+                                    <div class="table-responsive">
+                                      <table class="markbind-table table table-bordered table-striped">
+                                        <thead>
+                                          <tr>
+                                            <th>arguments format</th>
+                                            <th>explanation</th>
+                                            <th>expected output</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td><code>NAME GENDER</code></td>
+                                            <td>Indicates a single person. <code>GENDER</code> can be <code>M</code> or <code>F</code></td>
+                                            <td><code>Smith M</code> <span class="fas fa-arrow-right"></span> <code>Dear Mr. Smith</code><br> <code>Lee F</code> <span class="fas fa-arrow-right"></span> <code>Dear Mdm. Lee</code></td>
+                                          </tr>
+                                          <tr>
+                                            <td><code>NAME MULTIPLE_GENDERS</code></td>
+                                            <td>Indicates a family.</td>
+                                            <td><code>Tan M M F</code> <span class="fas fa-arrow-right"></span> <code>Dear Tan family</code></td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                    <p>Follow the sample output given below.</p>
+                                    <p>
+                                      <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java Greeter Smith M</code> <span class="fas fa-arrow-right"></span> <code>Dear Mr. Smith</code></p>
+                                    <p>
+                                      <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java Greeter Lee F</code> <span class="fas fa-arrow-right"></span> <code>Dear Mdm. Lee</code></p>
+                                    <p>
+                                      <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java Greeter Tan M M F</code> <span class="fas fa-arrow-right"></span> <code>Dear Tan family</code></p>
+                                    <p>You can assume that the input is always in the correct format <span class="dimmed">i.e., no need to handle invalid input cases</span>.</p>
+                                    <div slot="hint">
+                                      <p>Partial solution:</p>
+                                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Greeter</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        String first = args[<span class="hljs-number">0</span>];
+        String second = args[<span class="hljs-number">1</span>];
+        <span class="hljs-keyword">if</span> (args.length == <span class="hljs-number">2</span>) {
+            <span class="hljs-keyword">if</span> (second.equals(<span class="hljs-string">"M"</span>)) {
+                <span class="hljs-comment">// ...</span>
+            }
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-comment">// ...</span>
+        }
+    }
+}
+</code></pre>
+                                    </div>
+                                  </question>
+                                </panel>
+                              </div>
+                              <div>
+                                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Grade Helper">
+                                  <question>
+                                    <p>Write a Java program that takes a letter grade e.g., <code>A+</code> as a command line argument and prints the CAP value for that grade.</p>
+                                    <p>💡 Use a <code>switch</code> statement in your code.</p>
+                                    <div id="capConversion">
+                                      <div class="table-responsive">
+                                        <table class="markbind-table table table-bordered table-striped">
+                                          <thead>
+                                            <tr>
+                                              <th>A+</th>
+                                              <th>A</th>
+                                              <th>A-</th>
+                                              <th>B+</th>
+                                              <th>B</th>
+                                              <th>B-</th>
+                                              <th>C+</th>
+                                              <th>Else</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td>5.0</td>
+                                              <td>5.0</td>
+                                              <td>4.5</td>
+                                              <td>4.0</td>
+                                              <td>3.5</td>
+                                              <td>3.0</td>
+                                              <td>2.5</td>
+                                              <td>0</td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </div>
+                                    </div>
+                                    <p>Follow the sample output given below.</p>
+                                    <p>
+                                      <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java GradeHelper B</code> <span class="fas fa-arrow-right"></span> <code>CAP for grade B is 3.5</code></p>
+                                    <p>You can assume that the input is always in the correct format <span class="dimmed">i.e., no need to handle invalid input cases</span>.</p>
+                                    <div slot="hint">
+                                      <p>Partial solution:</p>
+                                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GradeHelper</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        String grade = args[<span class="hljs-number">0</span>];
+        <span class="hljs-keyword">double</span> cutoff = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">switch</span> (grade) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A+"</span>:
+            <span class="hljs-comment">// ...</span>
+        }
+        System.out.println(<span class="hljs-string">"CAP for grade "</span> + grade + <span class="hljs-string">" is "</span> + cutoff);
+    }
+}
+</code></pre>
+                                    </div>
+                                  </question>
+                                </panel>
+                              </div>
+                            </div>
+                          </panel>
+                        </div>
                         <div>
                           <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
                             <div>
@@ -1221,146 +1486,126 @@ System.out.println(names[<span class="hljs-number">0</span>][<span class="hljs-n
                     </div>
                   </div>
                 </div>
-              </panel>
-              <panel type="danger" expanded="" no-close="" epxandable="true">
-                <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W1.5b</code></span></big> <span><span class="fas fa-trophy"></span> Can use loops</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-                </span>
-                </span>
+                <hr style="border-top: dashed 1px; border-color:grey">
+                <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
                 <div>
-                  <div></div>
-                  <p></p>
-                  <p><span class="dimmed"><strong><span>C++ to Java → Control Flow →
-</span></strong>
-                    </span>
-                  </p>
-                  <div id="title-and-body">
-                    <div>
-                      <h4 id="loops">Loops</h4>
-                    </div>
-                    <div id="main">
-                      <div>
-                        <h5 id="while-loops"><code>while</code> loops</h5>
-                        <div class="indented">
-                          <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
-                            </span> Here is an example while loop:</p>
-                          <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">countdown</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
-    <span class="hljs-keyword">while</span> (n &gt; <span class="hljs-number">0</span>) {
-        System.out.println(n);
-        n = n - <span class="hljs-number">1</span>;
-    }
-    System.out.println(<span class="hljs-string">"Blastoff!"</span>);
-}
-</code></pre>
+                  <p>To be able to do exercises such as these:</p>
+                  <div>
+                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Greeter">
+                      <question>
+                        <p>Write a Java program that takes several command line arguments that describe a person or a family | and prints out a greeting. The parameters can be one of two formats.</p>
+                        <div class="table-responsive">
+                          <table class="markbind-table table table-bordered table-striped">
+                            <thead>
+                              <tr>
+                                <th>arguments format</th>
+                                <th>explanation</th>
+                                <th>expected output</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><code>NAME GENDER</code></td>
+                                <td>Indicates a single person. <code>GENDER</code> can be <code>M</code> or <code>F</code></td>
+                                <td><code>Smith M</code> <span class="fas fa-arrow-right"></span> <code>Dear Mr. Smith</code><br> <code>Lee F</code> <span class="fas fa-arrow-right"></span> <code>Dear Mdm. Lee</code></td>
+                              </tr>
+                              <tr>
+                                <td><code>NAME MULTIPLE_GENDERS</code></td>
+                                <td>Indicates a family.</td>
+                                <td><code>Tan M M F</code> <span class="fas fa-arrow-right"></span> <code>Dear Tan family</code></td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
-                        <h5 id="for-loops"><code>for</code> loops</h5>
-                        <div class="indented">
-                          <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
-                            </span> <code>for</code> loops have the form:</p>
-                          <pre class="hljs"><code>for (initializer; condition; update) {
-    statement(s);
-}
-</code></pre>
-                          <p>Here is an example:</p>
-                          <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTable</span><span class="hljs-params">(<span class="hljs-keyword">int</span> rows)</span> </span>{
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= rows; i = i + <span class="hljs-number">1</span>) {
-        printRow(i, rows);
-    }
-}
-</code></pre>
-                        </div>
-                        <h5 id="do-while-loops"><code>do-while</code> loops</h5>
-                        <div class="indented">
-                          <p>The <code>while</code> and <code>for</code> statements are <em>pretest</em> loops; that is, they test the condition first and at the beginning of each pass through the loop. Java also provides a <em>posttest</em> loop: the <code>do-while</code>                            statement. This type of loop is useful when you need to run the body of the loop at least once.</p>
-                          <p>Here is an example <span class="dimmed">(from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span>
-                            </small>)</span>:</p>
-                          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DoWhileDemo</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
-        <span class="hljs-keyword">int</span> count = <span class="hljs-number">1</span>;
-        <span class="hljs-keyword">do</span> {
-            System.out.println(<span class="hljs-string">"Count is: "</span> + count);
-            count++;
-        } <span class="hljs-keyword">while</span> (count &lt; <span class="hljs-number">11</span>);
-    }
-}
-</code></pre>
-                        </div>
-                        <h5 id="break-and-continue"><code>break</code> and <code>continue</code></h5>
-                        <div class="indented">
-                          <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
-                            </span> <strong>A <code>break</code> statement exits the current loop</strong>.</p>
-                          <p>Here is an example <span class="dimmed">(from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span>
-                            </small>)</span>:</p>
-                          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+                        <p>Follow the sample output given below.</p>
+                        <p>
+                          <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java Greeter Smith M</code> <span class="fas fa-arrow-right"></span> <code>Dear Mr. Smith</code></p>
+                        <p>
+                          <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java Greeter Lee F</code> <span class="fas fa-arrow-right"></span> <code>Dear Mdm. Lee</code></p>
+                        <p>
+                          <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java Greeter Tan M M F</code> <span class="fas fa-arrow-right"></span> <code>Dear Tan family</code></p>
+                        <p>You can assume that the input is always in the correct format <span class="dimmed">i.e., no need to handle invalid input cases</span>.</p>
+                        <div slot="hint">
+                          <p>Partial solution:</p>
+                          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Greeter</span> </span>{
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-        <span class="hljs-keyword">int</span>[] numbers = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] { <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">0</span> };
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; numbers.length; i++) {
-            <span class="hljs-keyword">if</span> (numbers[i] == <span class="hljs-number">0</span>) {
-                <span class="hljs-keyword">break</span>;
+        String first = args[<span class="hljs-number">0</span>];
+        String second = args[<span class="hljs-number">1</span>];
+        <span class="hljs-keyword">if</span> (args.length == <span class="hljs-number">2</span>) {
+            <span class="hljs-keyword">if</span> (second.equals(<span class="hljs-string">"M"</span>)) {
+                <span class="hljs-comment">// ...</span>
             }
-            System.out.print(numbers[i]);
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-comment">// ...</span>
         }
     }
 }
 </code></pre>
-                          <p><span class="fas fa-arrow-down"></span></p>
-                          <pre class="hljs"><code>123
-</code></pre>
-                          <p><small>[<a href="https://repl.it/@seedu/Demo-Break">Try the above code on Repl.com</a>]</small></p>
-                          <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
-                            </span> <strong>A <code>continue</code> statement skips the remainder of the current iteration</strong> and moves to the next iteration of the loop.</p>
-                          <p>Here is an example <span class="dimmed">(from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span>
-                            </small>)</span>:</p>
-                          <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-    <span class="hljs-keyword">int</span>[] numbers = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] { <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">0</span> };
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; numbers.length; i++) {
-        <span class="hljs-keyword">if</span> (numbers[i] == <span class="hljs-number">0</span>) {
-            <span class="hljs-keyword">continue</span>;
+                        </div>
+                      </question>
+                    </panel>
+                  </div>
+                  <div>
+                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Grade Helper">
+                      <question>
+                        <p>Write a Java program that takes a letter grade e.g., <code>A+</code> as a command line argument and prints the CAP value for that grade.</p>
+                        <p>💡 Use a <code>switch</code> statement in your code.</p>
+                        <div id="capConversion">
+                          <div class="table-responsive">
+                            <table class="markbind-table table table-bordered table-striped">
+                              <thead>
+                                <tr>
+                                  <th>A+</th>
+                                  <th>A</th>
+                                  <th>A-</th>
+                                  <th>B+</th>
+                                  <th>B</th>
+                                  <th>B-</th>
+                                  <th>C+</th>
+                                  <th>Else</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>5.0</td>
+                                  <td>5.0</td>
+                                  <td>4.5</td>
+                                  <td>4.0</td>
+                                  <td>3.5</td>
+                                  <td>3.0</td>
+                                  <td>2.5</td>
+                                  <td>0</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <p>Follow the sample output given below.</p>
+                        <p>
+                          <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java GradeHelper B</code> <span class="fas fa-arrow-right"></span> <code>CAP for grade B is 3.5</code></p>
+                        <p>You can assume that the input is always in the correct format <span class="dimmed">i.e., no need to handle invalid input cases</span>.</p>
+                        <div slot="hint">
+                          <p>Partial solution:</p>
+                          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GradeHelper</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        String grade = args[<span class="hljs-number">0</span>];
+        <span class="hljs-keyword">double</span> cutoff = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">switch</span> (grade) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A+"</span>:
+            <span class="hljs-comment">// ...</span>
         }
-        System.out.print(numbers[i]);
+        System.out.println(<span class="hljs-string">"CAP for grade "</span> + grade + <span class="hljs-string">" is "</span> + cutoff);
     }
 }
 </code></pre>
-                          <p><span class="fas fa-arrow-down"></span></p>
-                          <pre class="hljs"><code>12345
-</code></pre>
-                          <p><small>[<a href="https://repl.it/@seedu/Demo-Continue">Try the above code on Repl.com</a>]</small></p>
                         </div>
-                        <h5 id="enhanced-for-loops">Enhanced <code>for</code> loops</h5>
-                        <div class="indented">
-                          <p>Since traversing arrays is so common, Java provides an alternative for-loop syntax that makes the code more compact. For example, consider a for loop that displays the elements of an array on separate lines:</p>
-                          <pre><code class="hljs java"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; values.length; i++) {
-    <span class="hljs-keyword">int</span> value = values[i];
-    System.out.println(value);
-}
-</code></pre>
-                          <p>We could rewrite the loop like this:</p>
-                          <pre><code class="hljs java"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> value : values) {
-    System.out.println(value);
-}
-</code></pre>
-                          <p>This statement is called an <em>enhanced <code>for</code> loop</em>. You can read it as, “for each value in values”. Notice how the single line <code>for (int value : values)</code> replaces the first two lines of the standard
-                            <code>for</code> loop.</p>
-                        </div>
-                      </div>
-                      <div>
-                        <div>
-                          <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
-                            <div>
-                              <ul>
-                                <li>Oracle's tutorials on [<a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html"><code>while</code></a>][<a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/for.html"><code>for</code></a>][
-                                  <a
-                                    href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/branch.html"><code>break</code>/<code>continue</code></a>]</li>
-                              </ul>
-                            </div>
-                          </panel>
-                        </div>
-                      </div>
-                    </div>
+                      </question>
+                    </panel>
                   </div>
                 </div>
               </panel>
               <panel type="danger" expanded="" no-close="" epxandable="true">
-                <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W1.5c</code></span></big> <span><span class="fas fa-trophy"></span> Can use methods</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W1.5b</code></span></big> <span><span class="fas fa-trophy"></span> Can use methods</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
                 </span>
                 </span>
                 <div>
@@ -1457,13 +1702,11 @@ Polly likes crackers
                           <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
                             </span> <strong>Java methods can be <em>overloaded</em>.</strong> If two methods do the same thing, it is natural to give them the same name. Having more than one method with the same name is called overloading, and it is legal in
                             Java as long as each version takes different parameters.</p>
-                          <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">calculateArea</span>
-        <span class="hljs-params">(<span class="hljs-keyword">double</span> radius)</span> </span>{
+                          <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">calculateArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> radius)</span> </span>{
     <span class="hljs-comment">//...</span>
 }
 
-<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">calculateArea</span>
-        <span class="hljs-params">(<span class="hljs-keyword">double</span> height, <span class="hljs-keyword">double</span> width)</span> </span>{
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">calculateArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> height, <span class="hljs-keyword">double</span> width)</span> </span>{
     <span class="hljs-comment">//...</span>
 }
 </code></pre>
@@ -1491,8 +1734,531 @@ Polly likes crackers
                             </div>
                           </panel>
                         </div>
+                        <div>
+                          <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                            <div>
+                              <div>
+                                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> `getGradeCap` Method">
+                                  <question>
+                                    <p>Add the following method to the class given below.</p>
+                                    <ul>
+                                      <li><code>public static double getGradeCap(String grade)</code>: Returns the CAP value of the given <code>grade</code>. The mapping from grades to CAP is given below.</li>
+                                    </ul>
+                                    <div class="indented">
+                                      <div>
+                                        <div class="table-responsive">
+                                          <table class="markbind-table table table-bordered table-striped">
+                                            <thead>
+                                              <tr>
+                                                <th>A+</th>
+                                                <th>A</th>
+                                                <th>A-</th>
+                                                <th>B+</th>
+                                                <th>B</th>
+                                                <th>B-</th>
+                                                <th>C+</th>
+                                                <th>Else</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td>5.0</td>
+                                                <td>5.0</td>
+                                                <td>4.5</td>
+                                                <td>4.0</td>
+                                                <td>3.5</td>
+                                                <td>3.0</td>
+                                                <td>2.5</td>
+                                                <td>0</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-comment">// ADD YOUR CODE HERE</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        System.out.println(<span class="hljs-string">"A+: "</span> + getGradeCap(<span class="hljs-string">"A+"</span>));
+        System.out.println(<span class="hljs-string">"B : "</span> + getGradeCap(<span class="hljs-string">"B"</span>));
+    }
+}
+</code></pre>
+                                    <p><span class="fas fa-arrow-down"></span></p>
+                                    <pre class="hljs"><code>A+: 5.0
+B : 3.5
+</code></pre>
+                                    <div slot="hint">
+                                      <p>Partial solution:</p>
+                                      <pre><code class="hljs java">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getGradeCap</span><span class="hljs-params">(String grade)</span> </span>{
+        <span class="hljs-keyword">double</span> cap = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">switch</span> (grade) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A+"</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A"</span>:
+            cap = <span class="hljs-number">5.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A-"</span>:
+            cap = <span class="hljs-number">4.5</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B+"</span>:
+            cap = <span class="hljs-number">4.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B"</span>:
+            cap = <span class="hljs-number">3.5</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B-"</span>:
+            cap = <span class="hljs-number">3.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">default</span>:
+        }
+        <span class="hljs-keyword">return</span> cap;
+    }
+</code></pre>
+                                    </div>
+                                  </question>
+                                </panel>
+                              </div>
+                            </div>
+                          </panel>
+                        </div>
                       </div>
                     </div>
+                  </div>
+                </div>
+                <hr style="border-top: dashed 1px; border-color:grey">
+                <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
+                <div>
+                  <p>To be able to do exercises such as these:</p>
+                  <div>
+                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> `getGradeCap` Method">
+                      <question>
+                        <p>Add the following method to the class given below.</p>
+                        <ul>
+                          <li><code>public static double getGradeCap(String grade)</code>: Returns the CAP value of the given <code>grade</code>. The mapping from grades to CAP is given below.</li>
+                        </ul>
+                        <div class="indented">
+                          <div>
+                            <div class="table-responsive">
+                              <table class="markbind-table table table-bordered table-striped">
+                                <thead>
+                                  <tr>
+                                    <th>A+</th>
+                                    <th>A</th>
+                                    <th>A-</th>
+                                    <th>B+</th>
+                                    <th>B</th>
+                                    <th>B-</th>
+                                    <th>C+</th>
+                                    <th>Else</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>5.0</td>
+                                    <td>5.0</td>
+                                    <td>4.5</td>
+                                    <td>4.0</td>
+                                    <td>3.5</td>
+                                    <td>3.0</td>
+                                    <td>2.5</td>
+                                    <td>0</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-comment">// ADD YOUR CODE HERE</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        System.out.println(<span class="hljs-string">"A+: "</span> + getGradeCap(<span class="hljs-string">"A+"</span>));
+        System.out.println(<span class="hljs-string">"B : "</span> + getGradeCap(<span class="hljs-string">"B"</span>));
+    }
+}
+</code></pre>
+                        <p><span class="fas fa-arrow-down"></span></p>
+                        <pre class="hljs"><code>A+: 5.0
+B : 3.5
+</code></pre>
+                        <div slot="hint">
+                          <p>Partial solution:</p>
+                          <pre><code class="hljs java">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getGradeCap</span><span class="hljs-params">(String grade)</span> </span>{
+        <span class="hljs-keyword">double</span> cap = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">switch</span> (grade) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A+"</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A"</span>:
+            cap = <span class="hljs-number">5.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A-"</span>:
+            cap = <span class="hljs-number">4.5</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B+"</span>:
+            cap = <span class="hljs-number">4.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B"</span>:
+            cap = <span class="hljs-number">3.5</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B-"</span>:
+            cap = <span class="hljs-number">3.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">default</span>:
+        }
+        <span class="hljs-keyword">return</span> cap;
+    }
+</code></pre>
+                        </div>
+                      </question>
+                    </panel>
+                  </div>
+                </div>
+              </panel>
+              <panel type="danger" expanded="" no-close="" epxandable="true">
+                <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W1.5c</code></span></big> <span><span class="fas fa-trophy"></span> Can use loops</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                </span>
+                </span>
+                <div>
+                  <div></div>
+                  <p></p>
+                  <p><span class="dimmed"><strong><span>C++ to Java → Control Flow →
+</span></strong>
+                    </span>
+                  </p>
+                  <div id="title-and-body">
+                    <div>
+                      <h4 id="loops">Loops</h4>
+                    </div>
+                    <div id="main">
+                      <div>
+                        <h5 id="while-loops"><code>while</code> loops</h5>
+                        <div class="indented">
+                          <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
+                            </span> Here is an example while loop:</p>
+                          <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">countdown</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
+    <span class="hljs-keyword">while</span> (n &gt; <span class="hljs-number">0</span>) {
+        System.out.println(n);
+        n = n - <span class="hljs-number">1</span>;
+    }
+    System.out.println(<span class="hljs-string">"Blastoff!"</span>);
+}
+</code></pre>
+                        </div>
+                        <h5 id="for-loops"><code>for</code> loops</h5>
+                        <div class="indented">
+                          <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
+                            </span> <code>for</code> loops have the form:</p>
+                          <pre class="hljs"><code>for (initializer; condition; update) {
+    statement(s);
+}
+</code></pre>
+                          <p>Here is an example:</p>
+                          <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTable</span><span class="hljs-params">(<span class="hljs-keyword">int</span> rows)</span> </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= rows; i = i + <span class="hljs-number">1</span>) {
+        printRow(i, rows);
+    }
+}
+</code></pre>
+                        </div>
+                        <h5 id="do-while-loops"><code>do-while</code> loops</h5>
+                        <div class="indented">
+                          <p>The <code>while</code> and <code>for</code> statements are <em>pretest</em> loops; that is, they test the condition first and at the beginning of each pass through the loop. Java also provides a <em>posttest</em> loop: the <code>do-while</code>                            statement. This type of loop is useful when you need to run the body of the loop at least once.</p>
+                          <p>Here is an example <span class="dimmed">(from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span>
+                            </small>)</span>:</p>
+                          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DoWhileDemo</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
+        <span class="hljs-keyword">int</span> count = <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">do</span> {
+            System.out.println(<span class="hljs-string">"Count is: "</span> + count);
+            count++;
+        } <span class="hljs-keyword">while</span> (count &lt; <span class="hljs-number">11</span>);
+    }
+}
+</code></pre>
+                        </div>
+                        <h5 id="break-and-continue"><code>break</code> and <code>continue</code></h5>
+                        <div class="indented">
+                          <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
+                            </span> <strong>A <code>break</code> statement exits the current loop</strong>.</p>
+                          <p>Here is an example <span class="dimmed">(from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span>
+                            </small>)</span>:</p>
+                          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-keyword">int</span>[] numbers = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] { <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">0</span> };
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; numbers.length; i++) {
+            <span class="hljs-keyword">if</span> (numbers[i] == <span class="hljs-number">0</span>) {
+                <span class="hljs-keyword">break</span>;
+            }
+            System.out.print(numbers[i]);
+        }
+    }
+}
+</code></pre>
+                          <p><span class="fas fa-arrow-down"></span></p>
+                          <pre class="hljs"><code>123
+</code></pre>
+                          <p><small>[<a href="https://repl.it/@seedu/Demo-Break">Try the above code on Repl.it</a>]</small></p>
+                          <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
+                            </span> <strong>A <code>continue</code> statement skips the remainder of the current iteration</strong> and moves to the next iteration of the loop.</p>
+                          <p>Here is an example <span class="dimmed">(from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span>
+                            </small>)</span>:</p>
+                          <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+    <span class="hljs-keyword">int</span>[] numbers = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] { <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">0</span> };
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; numbers.length; i++) {
+        <span class="hljs-keyword">if</span> (numbers[i] == <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">continue</span>;
+        }
+        System.out.print(numbers[i]);
+    }
+}
+</code></pre>
+                          <p><span class="fas fa-arrow-down"></span></p>
+                          <pre class="hljs"><code>12345
+</code></pre>
+                          <p><small>[<a href="https://repl.it/@seedu/Demo-Continue">Try the above code on Repl.it</a>]</small></p>
+                        </div>
+                        <h5 id="enhanced-for-loops">Enhanced <code>for</code> loops</h5>
+                        <div class="indented">
+                          <p>Since traversing arrays is so common, Java provides an alternative for-loop syntax that makes the code more compact. For example, consider a for loop that displays the elements of an array on separate lines:</p>
+                          <pre><code class="hljs java"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; values.length; i++) {
+    <span class="hljs-keyword">int</span> value = values[i];
+    System.out.println(value);
+}
+</code></pre>
+                          <p>We could rewrite the loop like this:</p>
+                          <pre><code class="hljs java"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> value : values) {
+    System.out.println(value);
+}
+</code></pre>
+                          <p>This statement is called an <em>enhanced <code>for</code> loop</em>. You can read it as, “for each value in values”. Notice how the single line <code>for (int value : values)</code> replaces the first two lines of the standard
+                            <code>for</code> loop.</p>
+                        </div>
+                      </div>
+                      <div>
+                        <div>
+                          <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                            <div>
+                              <ul>
+                                <li>Oracle's tutorials on [<a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html"><code>while</code></a>][<a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/for.html"><code>for</code></a>][
+                                  <a
+                                    href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/branch.html"><code>break</code>/<code>continue</code></a>]</li>
+                              </ul>
+                            </div>
+                          </panel>
+                        </div>
+                        <div>
+                          <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                            <div>
+                              <div>
+                                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> `getMultipleGradeCaps` Method">
+                                  <question>
+                                    <p>Add the following method to the class given below.</p>
+                                    <ul>
+                                      <li><code>public static double[] getMultipleGradeCaps(String[] grades)</code>: Returns the CAP values of the given <code>grades</code>. e.g., if the input was the array <code>[&quot;A+&quot;, &quot;B&quot;]</code>, the
+                                        method returns <code>[5.0, 3.5]</code>. The mapping from grades to CAP is given below.</li>
+                                    </ul>
+                                    <div class="indented">
+                                      <div>
+                                        <div class="table-responsive">
+                                          <table class="markbind-table table table-bordered table-striped">
+                                            <thead>
+                                              <tr>
+                                                <th>A+</th>
+                                                <th>A</th>
+                                                <th>A-</th>
+                                                <th>B+</th>
+                                                <th>B</th>
+                                                <th>B-</th>
+                                                <th>C+</th>
+                                                <th>Else</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td>5.0</td>
+                                                <td>5.0</td>
+                                                <td>4.5</td>
+                                                <td>4.0</td>
+                                                <td>3.5</td>
+                                                <td>3.0</td>
+                                                <td>2.5</td>
+                                                <td>0</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-comment">// ADD YOUR CODE HERE</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getGradeCap</span><span class="hljs-params">(String grade)</span> </span>{
+        <span class="hljs-keyword">double</span> cap = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">switch</span> (grade) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A+"</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A"</span>:
+            cap = <span class="hljs-number">5.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A-"</span>:
+            cap = <span class="hljs-number">4.5</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B+"</span>:
+            cap = <span class="hljs-number">4.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B"</span>:
+            cap = <span class="hljs-number">3.5</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B-"</span>:
+            cap = <span class="hljs-number">3.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"C"</span>:
+            cap = <span class="hljs-number">2.5</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">default</span>:
+        }
+        <span class="hljs-keyword">return</span> cap;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        String[] grades = <span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"A+"</span>, <span class="hljs-string">"A"</span>, <span class="hljs-string">"A-"</span>};
+        <span class="hljs-keyword">double</span>[] caps = getMultipleGradeCaps(grades);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; grades.length; i++) {
+            System.out.println(grades[i] + <span class="hljs-string">":"</span> + caps[i]);
+        }
+    }
+}
+</code></pre>
+                                    <p><span class="fas fa-arrow-down"></span></p>
+                                    <pre class="hljs"><code>A+:5.0
+A:5.0
+A-:4.5
+</code></pre>
+                                    <div slot="hint">
+                                      <p>Partial solution:</p>
+                                      <pre><code class="hljs java">    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span>[] getMultipleGradeCaps(String[] grades) {
+        <span class="hljs-keyword">double</span>[] caps = <span class="hljs-keyword">new</span> <span class="hljs-keyword">double</span>[grades.length];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; grades.length; i++) {
+           <span class="hljs-comment">// ...</span>
+        }
+        <span class="hljs-keyword">return</span> caps;
+    }
+</code></pre>
+                                    </div>
+                                  </question>
+                                </panel>
+                              </div>
+                            </div>
+                          </panel>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr style="border-top: dashed 1px; border-color:grey">
+                <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
+                <div>
+                  <p>To be able to do exercises such as these:</p>
+                  <div>
+                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> `getMultipleGradeCaps` Method">
+                      <question>
+                        <p>Add the following method to the class given below.</p>
+                        <ul>
+                          <li><code>public static double[] getMultipleGradeCaps(String[] grades)</code>: Returns the CAP values of the given <code>grades</code>. e.g., if the input was the array <code>[&quot;A+&quot;, &quot;B&quot;]</code>, the method returns
+                            <code>[5.0, 3.5]</code>. The mapping from grades to CAP is given below.</li>
+                        </ul>
+                        <div class="indented">
+                          <div>
+                            <div class="table-responsive">
+                              <table class="markbind-table table table-bordered table-striped">
+                                <thead>
+                                  <tr>
+                                    <th>A+</th>
+                                    <th>A</th>
+                                    <th>A-</th>
+                                    <th>B+</th>
+                                    <th>B</th>
+                                    <th>B-</th>
+                                    <th>C+</th>
+                                    <th>Else</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>5.0</td>
+                                    <td>5.0</td>
+                                    <td>4.5</td>
+                                    <td>4.0</td>
+                                    <td>3.5</td>
+                                    <td>3.0</td>
+                                    <td>2.5</td>
+                                    <td>0</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-comment">// ADD YOUR CODE HERE</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getGradeCap</span><span class="hljs-params">(String grade)</span> </span>{
+        <span class="hljs-keyword">double</span> cap = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">switch</span> (grade) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A+"</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A"</span>:
+            cap = <span class="hljs-number">5.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A-"</span>:
+            cap = <span class="hljs-number">4.5</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B+"</span>:
+            cap = <span class="hljs-number">4.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B"</span>:
+            cap = <span class="hljs-number">3.5</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B-"</span>:
+            cap = <span class="hljs-number">3.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"C"</span>:
+            cap = <span class="hljs-number">2.5</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">default</span>:
+        }
+        <span class="hljs-keyword">return</span> cap;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        String[] grades = <span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"A+"</span>, <span class="hljs-string">"A"</span>, <span class="hljs-string">"A-"</span>};
+        <span class="hljs-keyword">double</span>[] caps = getMultipleGradeCaps(grades);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; grades.length; i++) {
+            System.out.println(grades[i] + <span class="hljs-string">":"</span> + caps[i]);
+        }
+    }
+}
+</code></pre>
+                        <p><span class="fas fa-arrow-down"></span></p>
+                        <pre class="hljs"><code>A+:5.0
+A:5.0
+A-:4.5
+</code></pre>
+                        <div slot="hint">
+                          <p>Partial solution:</p>
+                          <pre><code class="hljs java">    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span>[] getMultipleGradeCaps(String[] grades) {
+        <span class="hljs-keyword">double</span>[] caps = <span class="hljs-keyword">new</span> <span class="hljs-keyword">double</span>[grades.length];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; grades.length; i++) {
+           <span class="hljs-comment">// ...</span>
+        }
+        <span class="hljs-keyword">return</span> caps;
+    }
+</code></pre>
+                        </div>
+                      </question>
+                    </panel>
                   </div>
                 </div>
               </panel>
@@ -1508,7 +2274,9 @@ Polly likes crackers
         <span slot="header" class="card-title activity-type"><span class="fas fa-chalkboard-teacher"></span> Tutorial 2</span>
         <div class="indented">
           <div>
-            <div></div>
+            <div>
+              <p>For LOs from the 'C++ to Java' chapter, you can do the coding exercises in <a href="http://Repl.it">Repl.it</a>. The link to the exercises will be given to you in Lecture 1.</p>
+            </div>
             <br>
             <panel type="seamless" header="##### Evidence for weekly LOs %%(for reference)%%">
               <panel type="seamless" expanded="">
@@ -1743,6 +2511,1351 @@ Polly likes crackers
                   </div>
                 </div>
               </panel>
+              <panel type="seamless" expanded="">
+                <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W1.3d</code></span></big> <span><span class="fas fa-trophy"></span> Can run a simple Java program</span>
+                <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                </span>
+                </span>
+                <div class="indented">
+                  <panel minimized="">
+                    <span slot="header" class="card-title">Details of the LO</span>
+                    <div>
+                      <div></div>
+                      <p></p>
+                      <p><span class="dimmed"><strong><span>C++ to Java → Getting Started →
+</span></strong>
+                        </span>
+                      </p>
+                      <div id="title-and-body">
+                        <div>
+                          <h4 id="running-a-program-2">Running a Program</h4>
+                        </div>
+                        <div id="main">
+                          <div>
+                            <p>To run the HelloWorld program, in a command console, run the following command from the folder containing <code>HelloWorld.class</code> file.</p>
+                            <p>
+                              <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java HelloWorld</code></p>
+                            <p>Notes:</p>
+                            <ul>
+                              <li><code>java</code> in the command above refers to the Java interpreter installed in your computer.</li>
+                              <li>Similar to <code>javac</code>, your console should be able to find the java executable.</li>
+                            </ul>
+                            <p>When you run a Java program, you can encounter a
+                              <tooltip content="so-called because it does not appear until after the program has started running">run-time error</tooltip>. These errors are also called &quot;exceptions&quot; because they usually indicate that something exceptional (and bad) has happened. When a run-time error occurs, the interpreter displays an error
+                              message that explains what happened and where.</p>
+                            <tip-box>
+                              <p><span class="fas fa-cube"></span> For example, modify the HelloWorld code to include the following line, compile it again, and run it.</p>
+                              <pre><code class="hljs java">System.out.println(<span class="hljs-number">5</span>/<span class="hljs-number">0</span>);
+</code></pre>
+                              <p>You should get a message like this:</p>
+                              <pre><code class="hljs sh">Exception <span class="hljs-keyword">in</span> thread <span class="hljs-string">"main"</span> java.lang.ArithmeticException: / by zero
+    at Hello.main(Hello.java:5)
+</code></pre>
+                            </tip-box>
+                            <p><strong>Integrated Development Environments (IDEs)</strong> can automate the intermediate step of compiling. They usually have a <span style="color:green"><span class="fas fa-play-circle"></span></span> <em>Run</em> button
+                              which compiles the code first and then runs it.</p>
+                            <p>Example IDEs:</p>
+                            <ul>
+                              <li>Intellij IDEA</li>
+                              <li>Eclipse</li>
+                              <li>NetBeans</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <div>
+                              <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                                <div>
+                                  <div>
+                                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Run HelloWorld">
+                                      <question>
+                                        <ul>
+                                          <li>Install Java in your Computer, if you haven't done so already.</li>
+                                          <li>Write, compile and run a small Java program <span class="dimmed">(e.g., a HelloWorld program)</span> in your Computer. You can use any code editor to write the program but use the command prompt to compile and
+                                            run the program.</li>
+                                          <li>Modify the code and run the program again.</li>
+                                        </ul>
+                                      </question>
+                                    </panel>
+                                  </div>
+                                </div>
+                              </panel>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </panel><br><br>
+                  <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+                  </p>
+                  <div class="indented">
+                    <div>
+                      <p>To be able to do exercises such as this:</p>
+                      <div>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Run HelloWorld">
+                          <question>
+                            <ul>
+                              <li>Install Java in your Computer, if you haven't done so already.</li>
+                              <li>Write, compile and run a small Java program <span class="dimmed">(e.g., a HelloWorld program)</span> in your Computer. You can use any code editor to write the program but use the command prompt to compile and run the program.</li>
+                              <li>Modify the code and run the program again.</li>
+                            </ul>
+                          </question>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </panel>
+              <panel type="seamless" expanded="">
+                <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W1.4d</code></span></big> <span><span class="fas fa-trophy"></span> Can use arrays</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                </span>
+                </span>
+                <div class="indented">
+                  <panel minimized="">
+                    <span slot="header" class="card-title">Details of the LO</span>
+                    <div>
+                      <div></div>
+                      <p></p>
+                      <p><span class="dimmed"><strong><span>C++ to Java → Data Types →
+</span></strong>
+                        </span>
+                      </p>
+                      <div id="title-and-body">
+                        <div>
+                          <h4 id="arrays-2">Arrays</h4>
+                        </div>
+                        <div id="main">
+                          <div>
+                            <p>Arrays are indicated using square brackets (<code>[]</code>). To create the array itself, you have to use the <code>new</code> operator. Here are some example array declarations:</p>
+                            <pre><code class="hljs java"><span class="hljs-keyword">int</span>[] counts;
+counts = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">4</span>]; <span class="hljs-comment">// create an int array of size 4</span>
+
+<span class="hljs-keyword">int</span> size = <span class="hljs-number">5</span>;
+<span class="hljs-keyword">double</span>[] values;
+values = <span class="hljs-keyword">new</span> <span class="hljs-keyword">double</span>[size]; <span class="hljs-comment">//use a variable for the size</span>
+
+<span class="hljs-keyword">double</span>[] prices = <span class="hljs-keyword">new</span> <span class="hljs-keyword">double</span>[size]; <span class="hljs-comment">// declare and create at the same time</span>
+</code></pre>
+                            <blockquote>
+                              Alternatively, you can use the shortcut syntax to create and initialize an array:
+                              <pre><code class="hljs java"><span class="hljs-keyword">int</span>[] values = {<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>};
+
+<span class="hljs-keyword">int</span>[] anArray = {
+    <span class="hljs-number">100</span>, <span class="hljs-number">200</span>, <span class="hljs-number">300</span>,
+    <span class="hljs-number">400</span>, <span class="hljs-number">500</span>, <span class="hljs-number">600</span>,
+    <span class="hljs-number">700</span>, <span class="hljs-number">800</span>, <span class="hljs-number">900</span>, <span class="hljs-number">1000</span>
+};
+</code></pre>
+                              <p><small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small></p>
+                            </blockquote>
+                            <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
+                              </span> The <code>[]</code> operator selects elements from an array. Array elements
+                              <tooltip content="i.e., the index of the first element is 0, not 1">indices start from 0</tooltip>.</p>
+                            <pre><code class="hljs java"><span class="hljs-keyword">int</span>[] counts = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">4</span>];
+
+System.out.println(<span class="hljs-string">"The first element is "</span> + counts[<span class="hljs-number">0</span>]);
+
+counts[<span class="hljs-number">0</span>] = <span class="hljs-number">7</span>; <span class="hljs-comment">// set the element at index 0 to be 7</span>
+counts[<span class="hljs-number">1</span>] = counts[<span class="hljs-number">0</span>] * <span class="hljs-number">2</span>;
+counts[<span class="hljs-number">2</span>]++; <span class="hljs-comment">// increment value at index 2</span>
+</code></pre>
+                            <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span class="fas fa-not-equal"></span></span>
+                              </span> A Java array is aware of its size. A Java array prevents a programmer from indexing the array out of bounds. If the index is negative or not present in the array, the result is an error named <code>ArrayIndexOutOfBoundsException</code>.</p>
+                            <pre><code class="hljs java"><span class="hljs-keyword">int</span>[] scores = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">4</span>];
+System.out.println(scores.length) <span class="hljs-comment">// prints 4</span>
+scores[<span class="hljs-number">5</span>] = <span class="hljs-number">0</span>; <span class="hljs-comment">// causes an exception</span>
+</code></pre>
+                            <p><span class="fas fa-arrow-down"></span></p>
+                            <pre class="hljs"><code>4
+Exception in thread &quot;main&quot; java.lang.ArrayIndexOutOfBoundsException: 5
+	at Main.main(Main.java:6)
+</code></pre>
+                            <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
+                              </span> It is also possible to create arrays of more than one dimension:</p>
+                            <blockquote>
+                              <pre><code class="hljs java">String[][] names = {
+    {<span class="hljs-string">"Mr. "</span>, <span class="hljs-string">"Mrs. "</span>, <span class="hljs-string">"Ms. "</span>},
+    {<span class="hljs-string">"Smith"</span>, <span class="hljs-string">"Jones"</span>}
+};
+
+System.out.println(names[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>] + names[<span class="hljs-number">1</span>][<span class="hljs-number">0</span>]); <span class="hljs-comment">// Mr. Smith</span>
+System.out.println(names[<span class="hljs-number">0</span>][<span class="hljs-number">2</span>] + names[<span class="hljs-number">1</span>][<span class="hljs-number">1</span>]); <span class="hljs-comment">// Ms. Jones</span>
+</code></pre>
+                              <p><small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small></p>
+                            </blockquote>
+                            <h5 id="passing-arguments-to-a-program-2">Passing arguments to a program</h5>
+                            <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
+                              </span> The <code>args</code> parameter of the <code>main</code> method is an array of Strings containing command line arguments supplied (if any) when running the program.</p>
+                            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        System.out.println(args[<span class="hljs-number">0</span>]);
+    }
+}
+</code></pre>
+                            <p>You can run this program (after compiling it first) from the command line by typing:</p>
+                            <p>
+                              <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java Foo abc</code></p>
+                            <p><span class="fas fa-arrow-down"></span></p>
+                            <p><code>abc</code></p>
+                          </div>
+                          <div>
+                            <div>
+                              <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                                <div>
+                                  <ul>
+                                    <li><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html">Oracle's tutorial on Arrays</a></li>
+                                    <li><a href="https://www.tutorialspoint.com/java/java_arrays.htm">A tutorial on Arrays</a> <span class="dimmed">by <a href="http://tutorialspoint.com">tutorialspoint.com</a></span></li>
+                                    <li><a href="https://www.youtube.com/watch?v=L06uGnF4IpY"><span class="fab fa-youtube"></span> A video tutorial on Arrays</a> <span class="dimmed">by thenewboston</span></li>
+                                  </ul>
+                                </div>
+                              </panel>
+                            </div>
+                            <div>
+                              <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                                <div>
+                                  <div>
+                                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Compare names">
+                                      <question>
+                                        <p>Write a Java program that takes two command line arguments and prints <code>true</code> or <code>false</code> to indicate if the two arguments have the same value. Follow the sample output given below.</p>
+                                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WordComparator</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+      <span class="hljs-comment">// add your code here</span>
+  }
+}
+</code></pre>
+                                        <p>
+                                          <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java WordComparator adam eve</code> <span class="fas fa-arrow-down"></span></p>
+                                        <pre class="hljs"><code>Words given: adam, eve
+They are the same: false
+</code></pre>
+                                        <p>
+                                          <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java WordComparator eve eve</code> <span class="fas fa-arrow-down"></span></p>
+                                        <pre class="hljs"><code>Words given: eve, eve
+They are the same: true
+</code></pre>
+                                        <p>💡 Use the following technique to compare two <code>Strings</code>(i.e., don't use <code>==</code>). <span class="dimmed">Reason: to be covered in a later topic</span>.</p>
+                                        <pre><code class="hljs java">String x = <span class="hljs-string">"foo"</span>;
+<span class="hljs-keyword">boolean</span> isSame = x.equals(<span class="hljs-string">"bar"</span>) <span class="hljs-comment">// false</span>
+isSame = x.equals(<span class="hljs-string">"foo"</span>) <span class="hljs-comment">// true</span>
+</code></pre>
+                                        <div slot="hint">
+                                          <ul>
+                                            <li>The two command line arguments can be accessed inside the <code>main</code> method using <code>args[0]</code> and <code>args[1]</code>.</li>
+                                            <li>When using multiple operators in the same expression, you might need to use parentheses to specify operator precedence. e.g., <code>&quot;foo&quot; + x == y</code> vs <code>&quot;foo&quot; + (x == y)</code></li>
+                                          </ul>
+                                          <panel type="seamless" header="partial solution">
+                                            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WordComparator</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+      String first = args[<span class="hljs-number">0</span>];
+      String second = args[<span class="hljs-number">1</span>];
+      System.out.println(<span class="hljs-string">"Words given: "</span> + first + <span class="hljs-string">", "</span> + second);
+      <span class="hljs-comment">// ...</span>
+  }
+}
+
+</code></pre>
+                                          </panel>
+                                        </div>
+                                      </question>
+                                    </panel>
+                                  </div>
+                                </div>
+                              </panel>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </panel><br><br>
+                  <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+                  </p>
+                  <div class="indented">
+                    <div>
+                      <p>To be able to do exercises such as this:</p>
+                      <div>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Compare names">
+                          <question>
+                            <p>Write a Java program that takes two command line arguments and prints <code>true</code> or <code>false</code> to indicate if the two arguments have the same value. Follow the sample output given below.</p>
+                            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WordComparator</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+      <span class="hljs-comment">// add your code here</span>
+  }
+}
+</code></pre>
+                            <p>
+                              <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java WordComparator adam eve</code> <span class="fas fa-arrow-down"></span></p>
+                            <pre class="hljs"><code>Words given: adam, eve
+They are the same: false
+</code></pre>
+                            <p>
+                              <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java WordComparator eve eve</code> <span class="fas fa-arrow-down"></span></p>
+                            <pre class="hljs"><code>Words given: eve, eve
+They are the same: true
+</code></pre>
+                            <p>💡 Use the following technique to compare two <code>Strings</code>(i.e., don't use <code>==</code>). <span class="dimmed">Reason: to be covered in a later topic</span>.</p>
+                            <pre><code class="hljs java">String x = <span class="hljs-string">"foo"</span>;
+<span class="hljs-keyword">boolean</span> isSame = x.equals(<span class="hljs-string">"bar"</span>) <span class="hljs-comment">// false</span>
+isSame = x.equals(<span class="hljs-string">"foo"</span>) <span class="hljs-comment">// true</span>
+</code></pre>
+                            <div slot="hint">
+                              <ul>
+                                <li>The two command line arguments can be accessed inside the <code>main</code> method using <code>args[0]</code> and <code>args[1]</code>.</li>
+                                <li>When using multiple operators in the same expression, you might need to use parentheses to specify operator precedence. e.g., <code>&quot;foo&quot; + x == y</code> vs <code>&quot;foo&quot; + (x == y)</code></li>
+                              </ul>
+                              <panel type="seamless" header="partial solution">
+                                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WordComparator</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+      String first = args[<span class="hljs-number">0</span>];
+      String second = args[<span class="hljs-number">1</span>];
+      System.out.println(<span class="hljs-string">"Words given: "</span> + first + <span class="hljs-string">", "</span> + second);
+      <span class="hljs-comment">// ...</span>
+  }
+}
+
+</code></pre>
+                              </panel>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </panel>
+              <panel type="seamless" expanded="">
+                <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W1.5a</code></span></big> <span><span class="fas fa-trophy"></span> Can use branching</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                </span>
+                </span>
+                <div class="indented">
+                  <panel minimized="">
+                    <span slot="header" class="card-title">Details of the LO</span>
+                    <div>
+                      <div></div>
+                      <p></p>
+                      <p><span class="dimmed"><strong><span>C++ to Java → Control Flow →
+</span></strong>
+                        </span>
+                      </p>
+                      <div id="title-and-body">
+                        <div>
+                          <h4 id="branching-2">Branching</h4>
+                        </div>
+                        <div id="main">
+                          <div>
+                            <h5 id="if-else-statements-2"><code>if-else</code> statements</h5>
+                            <div class="indented">
+                              <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
+                                </span> Java supports the usual forms of <code>if</code> statements:</p>
+                              <pre><code class="hljs java"><span class="hljs-keyword">if</span> (x &gt; <span class="hljs-number">0</span>) {
+    System.out.println(<span class="hljs-string">"x is positive"</span>);
+}
+</code></pre>
+                              <pre><code class="hljs java"><span class="hljs-keyword">if</span> (x % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>) {
+    System.out.println(<span class="hljs-string">"x is even"</span>);
+} <span class="hljs-keyword">else</span> {
+    System.out.println(<span class="hljs-string">"x is odd"</span>);
+}
+</code></pre>
+                              <pre><code class="hljs java"><span class="hljs-keyword">if</span> (x &gt; <span class="hljs-number">0</span>) {
+    System.out.println(<span class="hljs-string">"x is positive"</span>);
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (x &lt; <span class="hljs-number">0</span>) {
+    System.out.println(<span class="hljs-string">"x is negative"</span>);
+} <span class="hljs-keyword">else</span> {
+    System.out.println(<span class="hljs-string">"x is zero"</span>);
+}
+</code></pre>
+                              <pre><code class="hljs java"><span class="hljs-keyword">if</span> (x == <span class="hljs-number">0</span>) {
+    System.out.println(<span class="hljs-string">"x is zero"</span>);
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">if</span> (x &gt; <span class="hljs-number">0</span>) {
+        System.out.println(<span class="hljs-string">"x is positive"</span>);
+    } <span class="hljs-keyword">else</span> {
+        System.out.println(<span class="hljs-string">"x is negative"</span>);
+    }
+}
+</code></pre>
+                              <p>The braces are optional (but recommended) for branches that have only one statement. So we <em>could have</em> written the previous example this way (
+                                <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
+                                  </span>
+                                </font>):</p>
+                              <pre><code class="hljs java"><span class="hljs-keyword">if</span> (x % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>)
+    System.out.println(<span class="hljs-string">"x is even"</span>);
+<span class="hljs-keyword">else</span>
+    System.out.println(<span class="hljs-string">"x is odd"</span>);
+</code></pre>
+                            </div>
+                            <h5 id="switch-statements-2"><code>switch</code> statements</h5>
+                            <div class="indented">
+                              <p>The <code>switch</code> statement can have a number of possible execution paths. A <code>switch</code> works with the <code>byte</code>, <code>short</code>, <code>char</code>, and <code>int</code> primitive data types. It
+                                also works with enums, <code>String</code>.</p>
+                              <p>Here is an example <span class="dimmed">(adapted from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span>
+                                </small>)</span>:</p>
+                              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SwitchDemo</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+
+        <span class="hljs-keyword">int</span> month = <span class="hljs-number">8</span>;
+        String monthString;
+        <span class="hljs-keyword">switch</span> (month) {
+        <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:  monthString = <span class="hljs-string">"January"</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:  monthString = <span class="hljs-string">"February"</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-number">3</span>:  monthString = <span class="hljs-string">"March"</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-number">4</span>:  monthString = <span class="hljs-string">"April"</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-number">5</span>:  monthString = <span class="hljs-string">"May"</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-number">6</span>:  monthString = <span class="hljs-string">"June"</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-number">7</span>:  monthString = <span class="hljs-string">"July"</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-number">8</span>:  monthString = <span class="hljs-string">"August"</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-number">9</span>:  monthString = <span class="hljs-string">"September"</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-number">10</span>: monthString = <span class="hljs-string">"October"</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-number">11</span>: monthString = <span class="hljs-string">"November"</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-number">12</span>: monthString = <span class="hljs-string">"December"</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">default</span>: monthString = <span class="hljs-string">"Invalid month"</span>;
+            <span class="hljs-keyword">break</span>;
+        }
+        System.out.println(monthString);
+    }
+}
+</code></pre>
+                              <p><span class="fas fa-arrow-right"></span> <code>August</code></p>
+                            </div>
+                          </div>
+                          <div>
+                            <div>
+                              <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                                <div>
+                                  <div>
+                                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Greeter">
+                                      <question>
+                                        <p>Write a Java program that takes several command line arguments that describe a person or a family | and prints out a greeting. The parameters can be one of two formats.</p>
+                                        <div class="table-responsive">
+                                          <table class="markbind-table table table-bordered table-striped">
+                                            <thead>
+                                              <tr>
+                                                <th>arguments format</th>
+                                                <th>explanation</th>
+                                                <th>expected output</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td><code>NAME GENDER</code></td>
+                                                <td>Indicates a single person. <code>GENDER</code> can be <code>M</code> or <code>F</code></td>
+                                                <td><code>Smith M</code> <span class="fas fa-arrow-right"></span> <code>Dear Mr. Smith</code><br> <code>Lee F</code> <span class="fas fa-arrow-right"></span> <code>Dear Mdm. Lee</code></td>
+                                              </tr>
+                                              <tr>
+                                                <td><code>NAME MULTIPLE_GENDERS</code></td>
+                                                <td>Indicates a family.</td>
+                                                <td><code>Tan M M F</code> <span class="fas fa-arrow-right"></span> <code>Dear Tan family</code></td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                        <p>Follow the sample output given below.</p>
+                                        <p>
+                                          <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java Greeter Smith M</code> <span class="fas fa-arrow-right"></span> <code>Dear Mr. Smith</code></p>
+                                        <p>
+                                          <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java Greeter Lee F</code> <span class="fas fa-arrow-right"></span> <code>Dear Mdm. Lee</code></p>
+                                        <p>
+                                          <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java Greeter Tan M M F</code> <span class="fas fa-arrow-right"></span> <code>Dear Tan family</code></p>
+                                        <p>You can assume that the input is always in the correct format <span class="dimmed">i.e., no need to handle invalid input cases</span>.</p>
+                                        <div slot="hint">
+                                          <p>Partial solution:</p>
+                                          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Greeter</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        String first = args[<span class="hljs-number">0</span>];
+        String second = args[<span class="hljs-number">1</span>];
+        <span class="hljs-keyword">if</span> (args.length == <span class="hljs-number">2</span>) {
+            <span class="hljs-keyword">if</span> (second.equals(<span class="hljs-string">"M"</span>)) {
+                <span class="hljs-comment">// ...</span>
+            }
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-comment">// ...</span>
+        }
+    }
+}
+</code></pre>
+                                        </div>
+                                      </question>
+                                    </panel>
+                                  </div>
+                                  <div>
+                                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Grade Helper">
+                                      <question>
+                                        <p>Write a Java program that takes a letter grade e.g., <code>A+</code> as a command line argument and prints the CAP value for that grade.</p>
+                                        <p>💡 Use a <code>switch</code> statement in your code.</p>
+                                        <div id="capConversion">
+                                          <div class="table-responsive">
+                                            <table class="markbind-table table table-bordered table-striped">
+                                              <thead>
+                                                <tr>
+                                                  <th>A+</th>
+                                                  <th>A</th>
+                                                  <th>A-</th>
+                                                  <th>B+</th>
+                                                  <th>B</th>
+                                                  <th>B-</th>
+                                                  <th>C+</th>
+                                                  <th>Else</th>
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr>
+                                                  <td>5.0</td>
+                                                  <td>5.0</td>
+                                                  <td>4.5</td>
+                                                  <td>4.0</td>
+                                                  <td>3.5</td>
+                                                  <td>3.0</td>
+                                                  <td>2.5</td>
+                                                  <td>0</td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </div>
+                                        </div>
+                                        <p>Follow the sample output given below.</p>
+                                        <p>
+                                          <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java GradeHelper B</code> <span class="fas fa-arrow-right"></span> <code>CAP for grade B is 3.5</code></p>
+                                        <p>You can assume that the input is always in the correct format <span class="dimmed">i.e., no need to handle invalid input cases</span>.</p>
+                                        <div slot="hint">
+                                          <p>Partial solution:</p>
+                                          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GradeHelper</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        String grade = args[<span class="hljs-number">0</span>];
+        <span class="hljs-keyword">double</span> cutoff = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">switch</span> (grade) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A+"</span>:
+            <span class="hljs-comment">// ...</span>
+        }
+        System.out.println(<span class="hljs-string">"CAP for grade "</span> + grade + <span class="hljs-string">" is "</span> + cutoff);
+    }
+}
+</code></pre>
+                                        </div>
+                                      </question>
+                                    </panel>
+                                  </div>
+                                </div>
+                              </panel>
+                            </div>
+                            <div>
+                              <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                                <div>
+                                  <ul>
+                                    <li>Oracle's tutorials on [<a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html"><code>if</code>-<code>else</code></a>][<a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html"><code>switch</code></a>]</li>
+                                  </ul>
+                                </div>
+                              </panel>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </panel><br><br>
+                  <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+                  </p>
+                  <div class="indented">
+                    <div>
+                      <p>To be able to do exercises such as these:</p>
+                      <div>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Greeter">
+                          <question>
+                            <p>Write a Java program that takes several command line arguments that describe a person or a family | and prints out a greeting. The parameters can be one of two formats.</p>
+                            <div class="table-responsive">
+                              <table class="markbind-table table table-bordered table-striped">
+                                <thead>
+                                  <tr>
+                                    <th>arguments format</th>
+                                    <th>explanation</th>
+                                    <th>expected output</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td><code>NAME GENDER</code></td>
+                                    <td>Indicates a single person. <code>GENDER</code> can be <code>M</code> or <code>F</code></td>
+                                    <td><code>Smith M</code> <span class="fas fa-arrow-right"></span> <code>Dear Mr. Smith</code><br> <code>Lee F</code> <span class="fas fa-arrow-right"></span> <code>Dear Mdm. Lee</code></td>
+                                  </tr>
+                                  <tr>
+                                    <td><code>NAME MULTIPLE_GENDERS</code></td>
+                                    <td>Indicates a family.</td>
+                                    <td><code>Tan M M F</code> <span class="fas fa-arrow-right"></span> <code>Dear Tan family</code></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <p>Follow the sample output given below.</p>
+                            <p>
+                              <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java Greeter Smith M</code> <span class="fas fa-arrow-right"></span> <code>Dear Mr. Smith</code></p>
+                            <p>
+                              <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java Greeter Lee F</code> <span class="fas fa-arrow-right"></span> <code>Dear Mdm. Lee</code></p>
+                            <p>
+                              <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java Greeter Tan M M F</code> <span class="fas fa-arrow-right"></span> <code>Dear Tan family</code></p>
+                            <p>You can assume that the input is always in the correct format <span class="dimmed">i.e., no need to handle invalid input cases</span>.</p>
+                            <div slot="hint">
+                              <p>Partial solution:</p>
+                              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Greeter</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        String first = args[<span class="hljs-number">0</span>];
+        String second = args[<span class="hljs-number">1</span>];
+        <span class="hljs-keyword">if</span> (args.length == <span class="hljs-number">2</span>) {
+            <span class="hljs-keyword">if</span> (second.equals(<span class="hljs-string">"M"</span>)) {
+                <span class="hljs-comment">// ...</span>
+            }
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-comment">// ...</span>
+        }
+    }
+}
+</code></pre>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
+                      <div>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Grade Helper">
+                          <question>
+                            <p>Write a Java program that takes a letter grade e.g., <code>A+</code> as a command line argument and prints the CAP value for that grade.</p>
+                            <p>💡 Use a <code>switch</code> statement in your code.</p>
+                            <div id="capConversion">
+                              <div class="table-responsive">
+                                <table class="markbind-table table table-bordered table-striped">
+                                  <thead>
+                                    <tr>
+                                      <th>A+</th>
+                                      <th>A</th>
+                                      <th>A-</th>
+                                      <th>B+</th>
+                                      <th>B</th>
+                                      <th>B-</th>
+                                      <th>C+</th>
+                                      <th>Else</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>5.0</td>
+                                      <td>5.0</td>
+                                      <td>4.5</td>
+                                      <td>4.0</td>
+                                      <td>3.5</td>
+                                      <td>3.0</td>
+                                      <td>2.5</td>
+                                      <td>0</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <p>Follow the sample output given below.</p>
+                            <p>
+                              <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java GradeHelper B</code> <span class="fas fa-arrow-right"></span> <code>CAP for grade B is 3.5</code></p>
+                            <p>You can assume that the input is always in the correct format <span class="dimmed">i.e., no need to handle invalid input cases</span>.</p>
+                            <div slot="hint">
+                              <p>Partial solution:</p>
+                              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GradeHelper</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        String grade = args[<span class="hljs-number">0</span>];
+        <span class="hljs-keyword">double</span> cutoff = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">switch</span> (grade) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A+"</span>:
+            <span class="hljs-comment">// ...</span>
+        }
+        System.out.println(<span class="hljs-string">"CAP for grade "</span> + grade + <span class="hljs-string">" is "</span> + cutoff);
+    }
+}
+</code></pre>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </panel>
+              <panel type="seamless" expanded="">
+                <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W1.5b</code></span></big> <span><span class="fas fa-trophy"></span> Can use methods</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                </span>
+                </span>
+                <div class="indented">
+                  <panel minimized="">
+                    <span slot="header" class="card-title">Details of the LO</span>
+                    <div>
+                      <div></div>
+                      <p></p>
+                      <p><span class="dimmed"><strong><span>C++ to Java → Control Flow →
+</span></strong>
+                        </span>
+                      </p>
+                      <div id="title-and-body">
+                        <div>
+                          <h4 id="methods-2">Methods</h4>
+                        </div>
+                        <div id="main">
+                          <div>
+                            <h5 id="defining-methods-2">Defining methods</h5>
+                            <div class="indented">
+                              <p>Here’s an example of adding more methods to a class:</p>
+                              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PrintTwice</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTwice</span><span class="hljs-params">(String s)</span> </span>{
+        System.out.println(s);
+        System.out.println(s);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        String sentence = “Polly likes crackers”
+        printTwice(sentence);
+
+    }
+}
+
+</code></pre>
+                              <p><span class="fas fa-arrow-down"></span></p>
+                              <pre class="hljs"><code>Polly likes crackers
+Polly likes crackers
+</code></pre>
+                              <p>By convention, method names should be named in the
+                                <trigger trigger="click" for="modal:javaMethods_camelCase"><em>camelCase</em></trigger> format.</p>
+                              <modal large="" title="Defintion: camelCase" id="modal:javaMethods_camelCase">
+                              
+                                <div>
+                                  <blockquote>
+                                    <pic src="https://upload.wikimedia.org/wikipedia/commons/e/ef/CamelCase.svg" width="200" alt="camelCase"></pic>
+                                    <p><em>CamelCase</em> is named after the &quot;humps&quot; of its capital letters, similar to the humps of a Bactrian camel. Camel case (stylized as <code>camelCase</code>) is the practice of writing compound words or
+                                      phrases such that each word or abbreviation in the middle of the phrase begins with a capital letter, with no intervening spaces or punctuation.</p>
+                                    <p><small><span class="dimmed">-- adapted from <a href="https://en.wikipedia.org/wiki/Camel_case">Wikipedia</a></span></small></p>
+                                  </blockquote>
+                                  <p>e.g., <code>createEmptyList</code>, <code>listOfIntegers</code>, <code>htmlText</code>, <code>dvdPlayer</code>. This book defines camelCase style as requiring the first letter to be lower case. If the first letter is
+                                    upper case instead e.g., <code>CreateEmptyList</code>, it is called <em>UpperCamelCase</em> or <em>PascalCase</em>.</p>
+                                </div>
+                              </modal>
+                              <p>Similar to the <code>main</code> method, the <code>printTwice</code> method is <code>public</code> <span class="dimmed">(i.e., it can be invoked from other classes)</span> <code>static</code> and <code>void</code>.</p>
+                              <h5 id="parameters-2">Parameters</h5>
+                              <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
+                                </span> <strong>A method can specify <em>parameters</em>.</strong> The <code>printTwice</code> method above specifies a parameter of <code>String</code> type. The <code>main</code> method passes the <em>argument</em> <code>&quot;Polly likes crackers&quot;</code>                                to that parameter.</p>
+                              <p><strong>The value provided as an argument must have the same type as the parameter.</strong> Sometimes Java can convert an argument from one type to another automatically. For example, if the method requires a <code>double</code>,
+                                you can invoke it with an <code>int</code> argument <code>5</code> and Java will automatically convert the argument to the equivalent value of type double <code>5.0</code>.</p>
+                              <p><strong>Because variables only exist inside the methods where they are defined, they are often called <em>local</em> variables.</strong> Parameters and other variables declared inside a method only exist inside their own
+                                methods. Inside <code>main</code>, there is no such thing as <code>s</code>. If you try to use it there, you’ll get a compiler error. Similarly, inside <code>printTwice</code> there is no such thing as <code>sentence</code>.
+                                That variable belongs to <code>main</code>.</p>
+                            </div>
+                            <h5 id="return-statements-2"><code>return</code> statements</h5>
+                            <div class="indented">
+                              <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
+                                </span> <strong>The <code>return</code> statement allows you to terminate a method before you reach the end of it</strong>:</p>
+                              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printLogarithm</span><span class="hljs-params">(<span class="hljs-keyword">double</span> x)</span> </span>{
+    <span class="hljs-keyword">if</span> (x &lt;= <span class="hljs-number">0.0</span>) {
+        System.out.println(<span class="hljs-string">"Error: x must be positive."</span>);
+        <span class="hljs-keyword">return</span>;
+    }
+    <span class="hljs-keyword">double</span> result = Math.log(x);
+    System.out.println(<span class="hljs-string">"The log of x is "</span> + result);
+}
+</code></pre>
+                              <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
+                                </span> <strong>It can be used to return a value from a method too</strong>:</p>
+                              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AreaCalculator</span></span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">calculateArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> radius)</span> </span>{
+        <span class="hljs-keyword">double</span> result = <span class="hljs-number">3.14</span> * radius * radius;
+        <span class="hljs-keyword">return</span> result;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-keyword">double</span> area = calculateArea(<span class="hljs-number">12.5</span>);
+        System.out.println(area);
+    }
+}
+</code></pre>
+                            </div>
+                            <h5 id="overloading-2">Overloading</h5>
+                            <div class="indented">
+                              <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
+                                </span> <strong>Java methods can be <em>overloaded</em>.</strong> If two methods do the same thing, it is natural to give them the same name. Having more than one method with the same name is called overloading, and it is legal
+                                in Java as long as each version takes different parameters.</p>
+                              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">calculateArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> radius)</span> </span>{
+    <span class="hljs-comment">//...</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">calculateArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> height, <span class="hljs-keyword">double</span> width)</span> </span>{
+    <span class="hljs-comment">//...</span>
+}
+</code></pre>
+                            </div>
+                            <h5 id="recursion-2">Recursion</h5>
+                            <div class="indented">
+                              <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
+                                </span> <strong>Methods can be <em>recursive</em>.</strong> Here is an example in which the <code>nLines</code> method calls itself recursively:</p>
+                              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">nLines</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
+    <span class="hljs-keyword">if</span> (n &gt; <span class="hljs-number">0</span>) {
+        System.out.println();
+        nLines(n - <span class="hljs-number">1</span>);
+    }
+}
+</code></pre>
+                            </div>
+                          </div>
+                          <div>
+                            <div>
+                              <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                                <div>
+                                  <ul>
+                                    <li>Oracle's tutorials on [<a href="https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html">methods</a>][<a href="https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html">parameters</a>]</li>
+                                  </ul>
+                                </div>
+                              </panel>
+                            </div>
+                            <div>
+                              <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                                <div>
+                                  <div>
+                                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> `getGradeCap` Method">
+                                      <question>
+                                        <p>Add the following method to the class given below.</p>
+                                        <ul>
+                                          <li><code>public static double getGradeCap(String grade)</code>: Returns the CAP value of the given <code>grade</code>. The mapping from grades to CAP is given below.</li>
+                                        </ul>
+                                        <div class="indented">
+                                          <div>
+                                            <div class="table-responsive">
+                                              <table class="markbind-table table table-bordered table-striped">
+                                                <thead>
+                                                  <tr>
+                                                    <th>A+</th>
+                                                    <th>A</th>
+                                                    <th>A-</th>
+                                                    <th>B+</th>
+                                                    <th>B</th>
+                                                    <th>B-</th>
+                                                    <th>C+</th>
+                                                    <th>Else</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td>5.0</td>
+                                                    <td>5.0</td>
+                                                    <td>4.5</td>
+                                                    <td>4.0</td>
+                                                    <td>3.5</td>
+                                                    <td>3.0</td>
+                                                    <td>2.5</td>
+                                                    <td>0</td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-comment">// ADD YOUR CODE HERE</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        System.out.println(<span class="hljs-string">"A+: "</span> + getGradeCap(<span class="hljs-string">"A+"</span>));
+        System.out.println(<span class="hljs-string">"B : "</span> + getGradeCap(<span class="hljs-string">"B"</span>));
+    }
+}
+</code></pre>
+                                        <p><span class="fas fa-arrow-down"></span></p>
+                                        <pre class="hljs"><code>A+: 5.0
+B : 3.5
+</code></pre>
+                                        <div slot="hint">
+                                          <p>Partial solution:</p>
+                                          <pre><code class="hljs java">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getGradeCap</span><span class="hljs-params">(String grade)</span> </span>{
+        <span class="hljs-keyword">double</span> cap = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">switch</span> (grade) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A+"</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A"</span>:
+            cap = <span class="hljs-number">5.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A-"</span>:
+            cap = <span class="hljs-number">4.5</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B+"</span>:
+            cap = <span class="hljs-number">4.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B"</span>:
+            cap = <span class="hljs-number">3.5</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B-"</span>:
+            cap = <span class="hljs-number">3.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">default</span>:
+        }
+        <span class="hljs-keyword">return</span> cap;
+    }
+</code></pre>
+                                        </div>
+                                      </question>
+                                    </panel>
+                                  </div>
+                                </div>
+                              </panel>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </panel><br><br>
+                  <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+                  </p>
+                  <div class="indented">
+                    <div>
+                      <p>To be able to do exercises such as these:</p>
+                      <div>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> `getGradeCap` Method">
+                          <question>
+                            <p>Add the following method to the class given below.</p>
+                            <ul>
+                              <li><code>public static double getGradeCap(String grade)</code>: Returns the CAP value of the given <code>grade</code>. The mapping from grades to CAP is given below.</li>
+                            </ul>
+                            <div class="indented">
+                              <div>
+                                <div class="table-responsive">
+                                  <table class="markbind-table table table-bordered table-striped">
+                                    <thead>
+                                      <tr>
+                                        <th>A+</th>
+                                        <th>A</th>
+                                        <th>A-</th>
+                                        <th>B+</th>
+                                        <th>B</th>
+                                        <th>B-</th>
+                                        <th>C+</th>
+                                        <th>Else</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>5.0</td>
+                                        <td>5.0</td>
+                                        <td>4.5</td>
+                                        <td>4.0</td>
+                                        <td>3.5</td>
+                                        <td>3.0</td>
+                                        <td>2.5</td>
+                                        <td>0</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-comment">// ADD YOUR CODE HERE</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        System.out.println(<span class="hljs-string">"A+: "</span> + getGradeCap(<span class="hljs-string">"A+"</span>));
+        System.out.println(<span class="hljs-string">"B : "</span> + getGradeCap(<span class="hljs-string">"B"</span>));
+    }
+}
+</code></pre>
+                            <p><span class="fas fa-arrow-down"></span></p>
+                            <pre class="hljs"><code>A+: 5.0
+B : 3.5
+</code></pre>
+                            <div slot="hint">
+                              <p>Partial solution:</p>
+                              <pre><code class="hljs java">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getGradeCap</span><span class="hljs-params">(String grade)</span> </span>{
+        <span class="hljs-keyword">double</span> cap = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">switch</span> (grade) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A+"</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A"</span>:
+            cap = <span class="hljs-number">5.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A-"</span>:
+            cap = <span class="hljs-number">4.5</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B+"</span>:
+            cap = <span class="hljs-number">4.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B"</span>:
+            cap = <span class="hljs-number">3.5</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B-"</span>:
+            cap = <span class="hljs-number">3.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">default</span>:
+        }
+        <span class="hljs-keyword">return</span> cap;
+    }
+</code></pre>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </panel>
+              <panel type="seamless" expanded="">
+                <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W1.5c</code></span></big> <span><span class="fas fa-trophy"></span> Can use loops</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                </span>
+                </span>
+                <div class="indented">
+                  <panel minimized="">
+                    <span slot="header" class="card-title">Details of the LO</span>
+                    <div>
+                      <div></div>
+                      <p></p>
+                      <p><span class="dimmed"><strong><span>C++ to Java → Control Flow →
+</span></strong>
+                        </span>
+                      </p>
+                      <div id="title-and-body">
+                        <div>
+                          <h4 id="loops-2">Loops</h4>
+                        </div>
+                        <div id="main">
+                          <div>
+                            <h5 id="while-loops-2"><code>while</code> loops</h5>
+                            <div class="indented">
+                              <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
+                                </span> Here is an example while loop:</p>
+                              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">countdown</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
+    <span class="hljs-keyword">while</span> (n &gt; <span class="hljs-number">0</span>) {
+        System.out.println(n);
+        n = n - <span class="hljs-number">1</span>;
+    }
+    System.out.println(<span class="hljs-string">"Blastoff!"</span>);
+}
+</code></pre>
+                            </div>
+                            <h5 id="for-loops-2"><code>for</code> loops</h5>
+                            <div class="indented">
+                              <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
+                                </span> <code>for</code> loops have the form:</p>
+                              <pre class="hljs"><code>for (initializer; condition; update) {
+    statement(s);
+}
+</code></pre>
+                              <p>Here is an example:</p>
+                              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTable</span><span class="hljs-params">(<span class="hljs-keyword">int</span> rows)</span> </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= rows; i = i + <span class="hljs-number">1</span>) {
+        printRow(i, rows);
+    }
+}
+</code></pre>
+                            </div>
+                            <h5 id="do-while-loops-2"><code>do-while</code> loops</h5>
+                            <div class="indented">
+                              <p>The <code>while</code> and <code>for</code> statements are <em>pretest</em> loops; that is, they test the condition first and at the beginning of each pass through the loop. Java also provides a <em>posttest</em> loop: the
+                                <code>do-while</code> statement. This type of loop is useful when you need to run the body of the loop at least once.</p>
+                              <p>Here is an example <span class="dimmed">(from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span>
+                                </small>)</span>:</p>
+                              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DoWhileDemo</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
+        <span class="hljs-keyword">int</span> count = <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">do</span> {
+            System.out.println(<span class="hljs-string">"Count is: "</span> + count);
+            count++;
+        } <span class="hljs-keyword">while</span> (count &lt; <span class="hljs-number">11</span>);
+    }
+}
+</code></pre>
+                            </div>
+                            <h5 id="break-and-continue-2"><code>break</code> and <code>continue</code></h5>
+                            <div class="indented">
+                              <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
+                                </span> <strong>A <code>break</code> statement exits the current loop</strong>.</p>
+                              <p>Here is an example <span class="dimmed">(from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span>
+                                </small>)</span>:</p>
+                              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-keyword">int</span>[] numbers = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] { <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">0</span> };
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; numbers.length; i++) {
+            <span class="hljs-keyword">if</span> (numbers[i] == <span class="hljs-number">0</span>) {
+                <span class="hljs-keyword">break</span>;
+            }
+            System.out.print(numbers[i]);
+        }
+    }
+}
+</code></pre>
+                              <p><span class="fas fa-arrow-down"></span></p>
+                              <pre class="hljs"><code>123
+</code></pre>
+                              <p><small>[<a href="https://repl.it/@seedu/Demo-Break">Try the above code on Repl.it</a>]</small></p>
+                              <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
+                                </span> <strong>A <code>continue</code> statement skips the remainder of the current iteration</strong> and moves to the next iteration of the loop.</p>
+                              <p>Here is an example <span class="dimmed">(from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span>
+                                </small>)</span>:</p>
+                              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+    <span class="hljs-keyword">int</span>[] numbers = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] { <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">0</span> };
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; numbers.length; i++) {
+        <span class="hljs-keyword">if</span> (numbers[i] == <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">continue</span>;
+        }
+        System.out.print(numbers[i]);
+    }
+}
+</code></pre>
+                              <p><span class="fas fa-arrow-down"></span></p>
+                              <pre class="hljs"><code>12345
+</code></pre>
+                              <p><small>[<a href="https://repl.it/@seedu/Demo-Continue">Try the above code on Repl.it</a>]</small></p>
+                            </div>
+                            <h5 id="enhanced-for-loops-2">Enhanced <code>for</code> loops</h5>
+                            <div class="indented">
+                              <p>Since traversing arrays is so common, Java provides an alternative for-loop syntax that makes the code more compact. For example, consider a for loop that displays the elements of an array on separate lines:</p>
+                              <pre><code class="hljs java"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; values.length; i++) {
+    <span class="hljs-keyword">int</span> value = values[i];
+    System.out.println(value);
+}
+</code></pre>
+                              <p>We could rewrite the loop like this:</p>
+                              <pre><code class="hljs java"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> value : values) {
+    System.out.println(value);
+}
+</code></pre>
+                              <p>This statement is called an <em>enhanced <code>for</code> loop</em>. You can read it as, “for each value in values”. Notice how the single line <code>for (int value : values)</code> replaces the first two lines of the standard
+                                <code>for</code> loop.</p>
+                            </div>
+                          </div>
+                          <div>
+                            <div>
+                              <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                                <div>
+                                  <ul>
+                                    <li>Oracle's tutorials on [<a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html"><code>while</code></a>][<a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/for.html"><code>for</code></a>][
+                                      <a
+                                        href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/branch.html"><code>break</code>/<code>continue</code></a>]</li>
+                                  </ul>
+                                </div>
+                              </panel>
+                            </div>
+                            <div>
+                              <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                                <div>
+                                  <div>
+                                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> `getMultipleGradeCaps` Method">
+                                      <question>
+                                        <p>Add the following method to the class given below.</p>
+                                        <ul>
+                                          <li><code>public static double[] getMultipleGradeCaps(String[] grades)</code>: Returns the CAP values of the given <code>grades</code>. e.g., if the input was the array <code>[&quot;A+&quot;, &quot;B&quot;]</code>,
+                                            the method returns <code>[5.0, 3.5]</code>. The mapping from grades to CAP is given below.</li>
+                                        </ul>
+                                        <div class="indented">
+                                          <div>
+                                            <div class="table-responsive">
+                                              <table class="markbind-table table table-bordered table-striped">
+                                                <thead>
+                                                  <tr>
+                                                    <th>A+</th>
+                                                    <th>A</th>
+                                                    <th>A-</th>
+                                                    <th>B+</th>
+                                                    <th>B</th>
+                                                    <th>B-</th>
+                                                    <th>C+</th>
+                                                    <th>Else</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td>5.0</td>
+                                                    <td>5.0</td>
+                                                    <td>4.5</td>
+                                                    <td>4.0</td>
+                                                    <td>3.5</td>
+                                                    <td>3.0</td>
+                                                    <td>2.5</td>
+                                                    <td>0</td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-comment">// ADD YOUR CODE HERE</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getGradeCap</span><span class="hljs-params">(String grade)</span> </span>{
+        <span class="hljs-keyword">double</span> cap = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">switch</span> (grade) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A+"</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A"</span>:
+            cap = <span class="hljs-number">5.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A-"</span>:
+            cap = <span class="hljs-number">4.5</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B+"</span>:
+            cap = <span class="hljs-number">4.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B"</span>:
+            cap = <span class="hljs-number">3.5</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B-"</span>:
+            cap = <span class="hljs-number">3.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"C"</span>:
+            cap = <span class="hljs-number">2.5</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">default</span>:
+        }
+        <span class="hljs-keyword">return</span> cap;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        String[] grades = <span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"A+"</span>, <span class="hljs-string">"A"</span>, <span class="hljs-string">"A-"</span>};
+        <span class="hljs-keyword">double</span>[] caps = getMultipleGradeCaps(grades);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; grades.length; i++) {
+            System.out.println(grades[i] + <span class="hljs-string">":"</span> + caps[i]);
+        }
+    }
+}
+</code></pre>
+                                        <p><span class="fas fa-arrow-down"></span></p>
+                                        <pre class="hljs"><code>A+:5.0
+A:5.0
+A-:4.5
+</code></pre>
+                                        <div slot="hint">
+                                          <p>Partial solution:</p>
+                                          <pre><code class="hljs java">    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span>[] getMultipleGradeCaps(String[] grades) {
+        <span class="hljs-keyword">double</span>[] caps = <span class="hljs-keyword">new</span> <span class="hljs-keyword">double</span>[grades.length];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; grades.length; i++) {
+           <span class="hljs-comment">// ...</span>
+        }
+        <span class="hljs-keyword">return</span> caps;
+    }
+</code></pre>
+                                        </div>
+                                      </question>
+                                    </panel>
+                                  </div>
+                                </div>
+                              </panel>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </panel><br><br>
+                  <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+                  </p>
+                  <div class="indented">
+                    <div>
+                      <p>To be able to do exercises such as these:</p>
+                      <div>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> `getMultipleGradeCaps` Method">
+                          <question>
+                            <p>Add the following method to the class given below.</p>
+                            <ul>
+                              <li><code>public static double[] getMultipleGradeCaps(String[] grades)</code>: Returns the CAP values of the given <code>grades</code>. e.g., if the input was the array <code>[&quot;A+&quot;, &quot;B&quot;]</code>, the method
+                                returns <code>[5.0, 3.5]</code>. The mapping from grades to CAP is given below.</li>
+                            </ul>
+                            <div class="indented">
+                              <div>
+                                <div class="table-responsive">
+                                  <table class="markbind-table table table-bordered table-striped">
+                                    <thead>
+                                      <tr>
+                                        <th>A+</th>
+                                        <th>A</th>
+                                        <th>A-</th>
+                                        <th>B+</th>
+                                        <th>B</th>
+                                        <th>B-</th>
+                                        <th>C+</th>
+                                        <th>Else</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>5.0</td>
+                                        <td>5.0</td>
+                                        <td>4.5</td>
+                                        <td>4.0</td>
+                                        <td>3.5</td>
+                                        <td>3.0</td>
+                                        <td>2.5</td>
+                                        <td>0</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-comment">// ADD YOUR CODE HERE</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getGradeCap</span><span class="hljs-params">(String grade)</span> </span>{
+        <span class="hljs-keyword">double</span> cap = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">switch</span> (grade) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A+"</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A"</span>:
+            cap = <span class="hljs-number">5.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A-"</span>:
+            cap = <span class="hljs-number">4.5</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B+"</span>:
+            cap = <span class="hljs-number">4.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B"</span>:
+            cap = <span class="hljs-number">3.5</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B-"</span>:
+            cap = <span class="hljs-number">3.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"C"</span>:
+            cap = <span class="hljs-number">2.5</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">default</span>:
+        }
+        <span class="hljs-keyword">return</span> cap;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        String[] grades = <span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"A+"</span>, <span class="hljs-string">"A"</span>, <span class="hljs-string">"A-"</span>};
+        <span class="hljs-keyword">double</span>[] caps = getMultipleGradeCaps(grades);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; grades.length; i++) {
+            System.out.println(grades[i] + <span class="hljs-string">":"</span> + caps[i]);
+        }
+    }
+}
+</code></pre>
+                            <p><span class="fas fa-arrow-down"></span></p>
+                            <pre class="hljs"><code>A+:5.0
+A:5.0
+A-:4.5
+</code></pre>
+                            <div slot="hint">
+                              <p>Partial solution:</p>
+                              <pre><code class="hljs java">    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span>[] getMultipleGradeCaps(String[] grades) {
+        <span class="hljs-keyword">double</span>[] caps = <span class="hljs-keyword">new</span> <span class="hljs-keyword">double</span>[grades.length];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; grades.length; i++) {
+           <span class="hljs-comment">// ...</span>
+        }
+        <span class="hljs-keyword">return</span> caps;
+    }
+</code></pre>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </panel>
             </panel>
           </div>
         </div>
@@ -1763,7 +3876,7 @@ Polly likes crackers
                 <div>
                   <div></div>
                   <p></p>
-                  <p><span class="dimmed"><strong><span>Design → Object Oriented Programming → Introduction →
+                  <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Introduction →
 </span></strong>
                     </span>
                   </p>
@@ -1880,7 +3993,7 @@ Polly likes crackers
                   <div>
                     <div></div>
                     <p></p>
-                    <p><span class="dimmed"><strong><span>Design → Object Oriented Programming → Objects →
+                    <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Objects →
 </span></strong>
                       </span>
                     </p>
@@ -2282,7 +4395,7 @@ Polly likes crackers
                   <div>
                     <div></div>
                     <p></p>
-                    <p><span class="dimmed"><strong><span>Design → Object Oriented Programming → Classes →
+                    <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Classes →
 </span></strong>
                       </span>
                     </p>
@@ -2427,7 +4540,7 @@ Polly likes crackers
                   <div>
                     <div></div>
                     <p></p>
-                    <p><span class="dimmed"><strong><span>Design → Object Oriented Programming → Objects →
+                    <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Objects →
 </span></strong>
                       </span>
                     </p>
@@ -2460,7 +4573,7 @@ Polly likes crackers
                   <div>
                     <div></div>
                     <p></p>
-                    <p><span class="dimmed"><strong><span>Design → Object Oriented Programming → Objects →
+                    <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Objects →
 </span></strong>
                       </span>
                     </p>
@@ -3498,7 +5611,7 @@ System.out.printf(<span class="hljs-string">"Hello %s, age %d\n"</span>, name, a
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Wed, 08 Aug 2018 11:40:28 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Thu, 09 Aug 2018 11:51:58 GMT</small></div>
 </footer>
 </div>
 </body>
