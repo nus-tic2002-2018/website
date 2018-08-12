@@ -1,2 +1,1 @@
-Note: We use `Tutorial 1` to mean `the tutorial in week 1`.<br>
-**No tutorial in week 1.**
+There is no tutorial in Week 1. Instead, we start the normal lecture at 6.30pm.
