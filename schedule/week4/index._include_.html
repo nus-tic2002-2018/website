@@ -6,11 +6,10 @@
       <br>
       <panel type="seamless" header="##### Evidence for weekly LOs %%(for reference)%%">
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W3.1c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain how substitutability operation
-          overriding, and dynamic binding relates to polymorphism</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W3.3d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain how substitutability operation
+          overriding, and dynamic binding relates to polymorphism</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
-            class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            </span>
+            class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
             </span>
             <div class="indented">
@@ -41,143 +40,8 @@
                           <li><strong>Dynamic binding</strong>: Calls to overridden methods are bound to the implementation of the actual object's class dynamically during the runtime. That is how the polymorphic code can call the method of the parent class
                             and yet execute the implementation of the child class.</li>
                         </ul>
-                        <h5 id="implementing-polymorphism"><big>Implementing polymorphism</big></h5>
-                        <p><strong>We can use inheritance to achieve polymorphism</strong>.</p>
-                        <tip-box>
-                          <p><span class="fas fa-cube"></span> Continuing with the example given in [
-                            <trigger trigger="click" for="modal:oopImpl-polymorphism"><span class="glyphicon glyphicon-education" aria-hidden="true"></span> OOP → Polymorphism → Introduction </trigger>], given below is the minimum code for <code>Staff</code>, <code>Admin</code>, and <code>Academic</code> classes
-                            that achieves the desired polymorphism.</p>
-                          <modal large="" title="" id="modal:oopImpl-polymorphism">
-                          
-                            <div>
-                              <div></div>
-                              <p></p>
-                              <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Polymorphism →
-</span></strong>
-                                </span>
-                              </p>
-                              <div id="title-and-body">
-                                <div>
-                                  <h4 id="what">What</h4>
-                                </div>
-                                <div id="main">
-                                  <div>
-                                    <tip-box type="primary">
-                                      <div>
-                                        <p><strong>Polymorphism</strong>:</p>
-                                        <blockquote>
-                                          <p>The ability of different objects to respond, each in its own way, to identical messages is called polymorphism. <sub>-- <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/">Object-Oriented Programming with Objective-C</a>, Apple</sub></p>
-                                        </blockquote>
-                                      </div>
-                                    </tip-box>
-                                    <p>Take the example of writing a payroll application for a university to facilitate payroll processing of university staff. Suppose an <code>adjustSalary(int)</code> operation adjusts the salaries of all staff members.
-                                      This operation will be executed whenever the university initiates a salary adjustment for its staff. However, the adjustment formula is different for different staff categories, say admin and academic. Here is one
-                                      possible way of designing the classes in the <code>Payroll</code> system.</p>
-                                    <p>Here is the implementation of the <code>adjustSalary(int)</code> operation.</p>
-                                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll1</span> </span>{
-    ArrayList&lt; Admin &gt; admins;
-    ArrayList&lt; Academic &gt; academics;
-    <span class="hljs-comment">// ...</span>
-
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{
-        <span class="hljs-keyword">for</span> (Admin ad: admins) {
-            ad.adjustSalary(byPercent);
-        }
-        <span class="hljs-keyword">for</span> (Academic ac: academics) {
-            ac.adjustSalary(byPercent);
-        }
-    }
-}
-</code></pre>
-                                    <p>Note how processing is similar for the two staff types. It is as if the type of staff members is irrelevant to how they are processed inside this operation! If that is the case, can the staff type be &quot;abstracted
-                                      away&quot; from this method? Here is such an implementation of <code>adjustSalary(int)</code>:</p>
-                                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll2</span> </span>{
-    ArrayList&lt; Staff &gt; staff;
-    <span class="hljs-comment">// ...</span>
-
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{
-        <span class="hljs-keyword">for</span> (Staff s: staff) {
-            s.adjustSalary(byPercent);
-        }
-    }
-}
-</code></pre>
-                                    <p>Notice the following:</p>
-                                    <ul>
-                                      <li>Only one data structure <code>ArrayList&lt; Staff &gt;</code>. It contains both <code>Admin</code> and <code>Academic</code> objects but treats them as <code>Staff</code> objects</li>
-                                      <li>Only one loop</li>
-                                      <li>Outcome of the <code>s.adjustSalary(byPercent)</code> method call depends on whether <code>s</code> is an <code>Academic</code> or <code>Admin</code> object</li>
-                                    </ul>
-                                    <p>The above code is better in several ways:</p>
-                                    <ul>
-                                      <li>It is shorter.</li>
-                                      <li>It is simpler.</li>
-                                      <li>It is more flexible (this code will remain the same even if more staff types are added).</li>
-                                    </ul>
-                                    <p>This does not mean we are getting rid of the <code>Academic</code> and <code>Admin</code> classes completely and replacing them with a more general class called <code>Staff</code>. Rather, this part of the code “treats”
-                                      both <code>Admin</code> and <code>Academic</code> objects as one type called <code>Staff</code>.</p>
-                                    <p>For example, <code>ArrayList</code> staff contains both <code>Admin</code> and <code>Academic</code> objects although it treats all of them as <code>Staff</code> objects. However, when the <code>adjustSalary(int)</code>                                      operation of these objects is called, the resulting salary adjustment will be different for <code>Admin</code> objects and <code>Academic</code> objects. Therefore, different types of objects are treated as a single
-                                      general type, but yet each type of object exhibits a different kind of behavior. This is called <em>polymorphism</em> (literally, it means “ability to take many forms”). In this example, an object that is perceived
-                                      as type <code>Staff</code> can be an <code>Admin</code> object or an <code>Academic</code> object.</p>
-                                  </div>
-                                  <div></div>
-                                </div>
-                              </div>
-                            </div>
-                          </modal>
-                          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Staff</span> </span>{
-    String name;
-    <span class="hljs-keyword">double</span> salary;
-
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> percent)</span> </span>{
-        <span class="hljs-comment">// do nothing</span>
-    }
-}
-
-<span class="hljs-comment">//------------------------------------------</span>
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Admin</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Staff</span> </span>{
-
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> percent)</span> </span>{
-        salary = salary * percent;
-    }
-}
-
-<span class="hljs-comment">//------------------------------------------</span>
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Academic</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Staff</span> </span>{
-
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> percent)</span> </span>{
-        salary = salary * percent * <span class="hljs-number">2</span>;
-    }
-}
-
-<span class="hljs-comment">//------------------------------------------</span>
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll</span> </span>{
-    ArrayList&lt; Staff &gt; staff;
-    <span class="hljs-comment">// ...</span>
-
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{
-        <span class="hljs-keyword">for</span> (Staff s: staff) {
-            s.adjustSalary(byPercent);
-        }
-    }
-}
-</code></pre>
-                        </tip-box>
                       </div>
                       <div>
-                        <div>
-                          <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
-                            <ul>
-                              <li><a href="https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html">Oracle’s Java Tutorials: Polymorphism</a></li>
-                              <li><a href="https://www.tutorialspoint.com/java/java_polymorphism.htm">Java - Polymorphism</a> -- a tutorial from <a href="http://tutorialspoint.com">tutorialspoint.com</a></li>
-                            </ul>
-                          </panel>
-                        </div>
                         <div>
                           <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
                             <div>
@@ -214,92 +78,6 @@
               </div>
             </div>
         </panel>
-        <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W3.3b</code></span></big> <span><span class="fas fa-trophy"></span> Can step through a program using a debugger</span>
-          <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-          </span>
-          </span>
-          <div class="indented">
-            <panel minimized="">
-              <span slot="header" class="card-title">Details of the LO</span>
-              <div>
-                <div></div>
-                <p></p>
-                <p><span class="dimmed"><strong><span>Tools → Intellij IDEA →
-</span></strong>
-                  </span>
-                </p>
-                <div id="title-and-body">
-                  <div>
-                    <h4 id="debugging-basic">Debugging: Basic</h4>
-                  </div>
-                  <div id="main">
-                    <div>
-                      <div v-closeable="" alt="video: debugging in Intellij">
-                        <p>This video (from LaunchCode) gives a pretty good explanation of how to use the Intellij IDEA debugger.</p>
-                        <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/1bCgzjatcr4" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-                      </div>
-                      <ul>
-                        <li><a href="https://www.jetbrains.com/help/idea/debugger-basics.html">Intellij IDEA Documentation: Debugging Basics</a> - Can be used as a reference document when you want to recall how to use a debugging feature.</li>
-                      </ul>
-                    </div>
-                    <div></div>
-                  </div>
-                </div>
-              </div>
-            </panel><br><br>
-            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
-            </p>
-            <div class="indented">
-              <div>
-                <p><strong>Submission</strong>: Demo debugging features of Intellij during the tutorial.</p>
-              </div>
-            </div>
-          </div>
-        </panel>
-        <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W3.3c</code></span></big> <span><span class="fas fa-trophy"></span> Can use some useful IDE productivity shortcuts</span>
-          <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          <span
-            class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            </span>
-            </span>
-            </span>
-            <div class="indented">
-              <panel minimized="">
-                <span slot="header" class="card-title">Details of the LO</span>
-                <div>
-                  <div></div>
-                  <p></p>
-                  <p><span class="dimmed"><strong><span>Tools → Intellij IDEA →
-</span></strong>
-                    </span>
-                  </p>
-                  <div id="title-and-body">
-                    <div>
-                      <h4 id="productivity-shortcuts">Productivity Shortcuts</h4>
-                    </div>
-                    <div id="main">
-                      <div>
-                        <div v-closeable="" alt="video: Intellij shortcuts">
-                          <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/KsVWdGOnHZU" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-                          <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/EvXpgL2iho4" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-                        </div>
-                      </div>
-                      <div></div>
-                    </div>
-                  </div>
-                </div>
-              </panel><br><br>
-              <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
-              </p>
-              <div class="indented">
-                <div>
-                  <p><strong>Submission</strong>: Demo some Intellij productivity shortcuts during the tutorial.</p>
-                </div>
-              </div>
-            </div>
-        </panel>
       </panel>
     </div>
   </div>
@@ -330,7 +108,7 @@
               </p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="what-2">What</h4>
+                  <h4 id="what">What</h4>
                 </div>
                 <div id="main">
                   <div>
@@ -357,7 +135,7 @@
             </p>
             <div id="title-and-body">
               <div>
-                <h4 id="what-3">What</h4>
+                <h4 id="what-2">What</h4>
               </div>
               <div id="main">
                 <div>
@@ -385,7 +163,7 @@
           </div>
         </panel>
         <panel type="warning" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.1c</code></span></big> <span><span class="fas fa-trophy"></span> Can do exception handling in code</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.1c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain how exception handling is done typically</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span>
             </span>
@@ -410,16 +188,6 @@
                     <p><strong>Exception objects can propagate up the function call hierarchy until it is dealt with.</strong> Usually, an exception thrown by a function is caught by the caller function. If the called function does not know how to deal with
                       the exception it caught, it can throw/raise the Exception object to its own caller. If none of the callers is prepared to deal with the exception, the exceptions can propagate through the
                       <tooltip content="the hieararchy of function calls">function call stack</tooltip> until it is received by the main function and thrown to the runtime, thus halting the system.</p>
-                    <tip-box>
-                      <div class="alt-java">
-                        <p><span class="fas fa-cube"></span> In the code given below, <code>processArray</code> can potentially throw an <code>InvalidInputException</code>. Because of that, <code>processInput</code> method invokes <code>processArray</code>                          method inside a <code>try{ }</code> block and has a <code>catch{ }</code> block to specify what to do if the exception is actually thrown.</p>
-                        <img src="/website/book/errorHandling/exceptions/how/images/processInput.png" width="400">
-                        <p></p>
-                      </div>
-                      <div class="alt-python">
-                        <p><span class="fas fa-cube"></span> In the code given below, <code>process_array</code> function can potentially raise a <code>ValueError</code> exception. Because of that, <code>process_input</code> function invokes <code>process_array</code>                          function inside a <code>try</code> clause and has a <code>except</code> clause to specify what to do if the exception is actually raised.</p>
-                        <img src="/website/book/errorHandling/exceptions/how/images/example-python.png" width="400"></div>
-                    </tip-box>
                     <p>Advantages of exception handling in this way:</p>
                     <ul>
                       <li>The ability to propagate error information through the call stack.</li>
@@ -427,13 +195,6 @@
                     </ul>
                   </div>
                   <div>
-                    <div>
-                      <panel header="<span class='fas fa-paperclip'></span> Resources" expandable="">
-                        <ul>
-                          <li><a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/">Java Exceptions Tutorial from Oracle</a></li>
-                        </ul>
-                      </panel>
-                    </div>
                     <div>
                       <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
                         <div>
@@ -458,27 +219,184 @@
                 </div>
               </div>
             </div>
-            <hr style="border-top: dashed 1px; border-color:grey">
-            <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
+        </panel>
+        <panel type="warning" expanded="" no-close="" epxandable="true">
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.1d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain Java Exceptions</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span
+            class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            </span>
+            </span>
+            </span>
+            </span>
             <div>
-              <p><strong>Acceptable</strong>: Some code you wrote that involves exception handling.</p>
-              <p><strong>Suggested</strong>: Do the exercise in [<a href="https://github.com/nus-tic2002-2018/addressbook-level2/blob/master/doc/LearningOutcomes.md#handle-exceptions-lo-exceptions">addressbook-level2: LO-Exceptions</a>].</p>
-              <div>
-                <p><strong>Submission</strong>:</p>
-                <ul>
-                  <li>Options 1 (discouraged): Show the relevant code during the tutorial.</li>
-                  <li>Options 2 (preferred): Create a pull request by following the instructions below.</li>
-                </ul>
-                <p>
-                  <panel src="/website\admin\appendixE-gitHub._include_.html#tutorial-pr-instructions" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Appendix E: Using GitHub Project Hosting → Submitting Pull Requests as evidence of an LO%%"
-                    fragment="tutorial-pr-instructions"></panel>
-                </p>
-                <p>If you choose option 2, we recommend that you complete this week's <em>Project Management</em> LOs first; there are many ways to create PRs but we expect you to create PRs in a specific way, as specified in the LOs.</p>
+              <div></div>
+              <p></p>
+              <p><span class="dimmed"><strong><span>C++ to Java → Exceptions →
+</span></strong>
+                </span>
+              </p>
+              <div id="title-and-body">
+                <div>
+                  <h4 id="what-are-exceptions">What are Exceptions?</h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
+                    <blockquote>
+                      <tip-box type="definition">
+                        <div>
+                          <p><strong>Exception</strong>:</p>
+                          <blockquote>
+                            <p>The term <em>exception</em> is shorthand for the phrase &quot;exceptional event.&quot; An <em>exception</em> is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions.
+                              –- Java Tutorial (Oracle Inc.)</p>
+                          </blockquote>
+                        </div>
+                      </tip-box>
+                      <p><strong>When an error occurs within a method, the method creates an <em>exception object</em> and hands it off to the runtime system.</strong> The exception object contains information about the error, including its type and the
+                        state of the program when the error occurred. Creating an exception object and handing it to the runtime system is called <em>throwing</em> an exception.</p>
+                      <p><strong>After a method throws an exception, the runtime system attempts to find something to handle it in the <tooltip content="the ordered list of methods that had been called to get to the method where the error occurred"><em>call stack</em></tooltip>.</strong>                        The runtime system searches the call stack for a method that contains a block of code that can handle the exception. This block of code is called an <em>exception handler</em>. The search begins with the method in which the error
+                        occurred and proceeds through the call stack in the reverse order in which the methods were called. When an appropriate handler is found, the runtime system passes the exception to the handler. An exception handler is considered
+                        appropriate if the type of the exception object thrown matches the type that can be handled by the handler.</p>
+                      <p><strong>The exception handler chosen is said to <em>catch</em> the exception.</strong> If the runtime system exhaustively searches all the methods on the call stack without finding an appropriate exception handler, the program terminates.</p>
+                      <p><strong>Java code must honor the <em>Catch or Specify</em> Requirement.</strong> This means that code that might throw certain exceptions must be enclosed by either of the following:</p>
+                      <ul>
+                        <li>A <code>try</code> statement that catches the exception. The <code>try</code> must provide a handler for the exception.</li>
+                        <li>A method that specifies that it can throw the exception. The method must provide a <code>throws</code> clause that lists the exception.</li>
+                      </ul>
+                      <p><strong>There are three basic categories of exceptions, only one of which is subject to the 'Catch or Specify' Requirement.</strong></p>
+                      <ul>
+                        <li><strong><em>Checked</em> exceptions</strong>: These are exceptional conditions that a well-written application should anticipate and recover from. For example, suppose an application prompts a user for an input file name, then
+                          opens the file by passing the name to the constructor for java.io.FileReader. Normally, the user provides the name of an existing, readable file, so the construction of the <code>FileReader</code> object succeeds, and the execution
+                          of the application proceeds normally. But sometimes the user supplies the name of a nonexistent file, and the constructor throws <code>java.io.FileNotFoundException</code>. A well-written program will catch this exception and
+                          notify the user of the mistake, possibly prompting for a corrected file name.
+                          <ul>
+                            <li><mark>Checked exceptions are subject to the Catch or Specify Requirement.</mark></li>
+                            <li>All exceptions are checked exceptions, except for <code>Error</code>, <code>RuntimeException</code>, and their subclasses.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <p></p>
+                      <ul>
+                        <li><strong>Errors</strong>: These are exceptional conditions that are external to the application, and that the application usually cannot anticipate or recover from. For example, suppose that an application successfully opens a file
+                          for input, but is unable to read the file because of a hardware or system malfunction. The unsuccessful read will throw <code>java.io.IOError</code>. An application might choose to catch this exception, in order to notify the
+                          user of the problem — but it also might make sense for the program to print a stack trace and exit.
+                          <ul>
+                            <li>Errors are not subject to the 'Catch or Specify' Requirement.</li>
+                            <li>Errors are those exceptions indicated by <code>Error</code> and its subclasses.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <p></p>
+                      <ul>
+                        <li><strong>Runtime exceptions</strong>: These are exceptional conditions that are internal to the application, and that the application usually cannot anticipate or recover from. These usually indicate programming bugs, such as logic
+                          errors or improper use of an API. For example, consider the application described previously that passes a file name to the constructor for FileReader. If a logic error causes a null to be passed to the constructor, the constructor
+                          will throw <code>NullPointerException</code>. The application can catch this exception, but it probably makes more sense to eliminate the bug that caused the exception to occur.
+                          <ul>
+                            <li>Runtime exceptions are not subject to the 'Catch or Specify' Requirement.</li>
+                            <li>Runtime exceptions are those indicated by <code>RuntimeException</code> and its subclasses.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <p><strong>Errors and runtime exceptions are collectively known as <em>unchecked</em> exceptions.</strong></p>
+                    </blockquote>
+                  </div>
+                  <div></div>
+                </div>
               </div>
             </div>
         </panel>
         <panel type="info" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.1d</code></span></big> <span><span class="fas fa-trophy"></span> Can avoid using exceptions to control normal workflow</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.1e</code></span></big> <span><span class="fas fa-trophy"></span> Can use Java Exceptions</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span
+            class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            <div>
+              <div></div>
+              <p></p>
+              <p><span class="dimmed"><strong><span>C++ to Java → Exceptions →
+</span></strong>
+                </span>
+              </p>
+              <div id="title-and-body">
+                <div>
+                  <h4 id="how-to-use-exceptions">How to Use Exceptions</h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <p><span class="fas fa-cube"></span> In the code given below, <code>processArray</code> can potentially throw an <code>InvalidInputException</code>. Because of that, <code>processInput</code> method invokes <code>processArray</code> method
+                      inside a <code>try{ }</code> block and has a <code>catch{ }</code> block to specify what to do if the exception is actually thrown.</p>
+                    <img src="/website/book/errorHandling/exceptions/how/images/processInput.png" width="400">
+                    <p></p>
+                    <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
+                    <blockquote>
+                      <p><strong>A program can catch exceptions by using a combination of the <code>try</code>, <code>catch</code>, and <code>finally</code> blocks.</strong> Here is an example:</p>
+                      <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeList</span><span class="hljs-params">()</span> </span>{
+    PrintWriter out = <span class="hljs-keyword">null</span>;
+
+    <span class="hljs-keyword">try</span> {
+        System.out.println(<span class="hljs-string">"Entering"</span> + <span class="hljs-string">" try statement"</span>);
+
+        out = <span class="hljs-keyword">new</span> PrintWriter(<span class="hljs-keyword">new</span> FileWriter(<span class="hljs-string">"OutFile.txt"</span>));
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; SIZE; i++) {
+            out.println(<span class="hljs-string">"Value at: "</span> + i + <span class="hljs-string">" = "</span> + list.get(i));
+        }
+    } <span class="hljs-keyword">catch</span> (IndexOutOfBoundsException e) {
+        System.err.println(<span class="hljs-string">"Caught IndexOutOfBoundsException: "</span> + e.getMessage());
+
+    } <span class="hljs-keyword">catch</span> (IOException e) {
+        System.err.println(<span class="hljs-string">"Caught IOException: "</span> +  e.getMessage());
+
+    } <span class="hljs-keyword">finally</span> {
+        <span class="hljs-keyword">if</span> (out != <span class="hljs-keyword">null</span>) {
+            System.out.println(<span class="hljs-string">"Closing PrintWriter"</span>);
+            out.close();
+        } <span class="hljs-keyword">else</span> {
+            System.out.println(<span class="hljs-string">"PrintWriter not open"</span>);
+        }
+    }
+}
+</code></pre>
+                      <ul>
+                        <li>
+                          <p>The <code>try</code> block identifies a block of code in which an exception can occur.</p>
+                        </li>
+                        <li>
+                          <p>The <code>catch</code> block identifies a block of code, known as an exception handler, that can handle a particular type of exception.</p>
+                        </li>
+                        <li>
+                          <p>The <code>finally</code> block identifies a block of code that is guaranteed to execute, and is the right place to close files, recover resources, and otherwise clean up after the code enclosed in the try block.</p>
+                        </li>
+                        <li>
+                          <p>The <code>try</code> statement should contain at least one <code>catch</code> block or a finally block and may have multiple <code>catch</code> blocks.</p>
+                        </li>
+                        <li>
+                          <p>The class of the exception object indicates the type of exception thrown. The exception object can contain further information about the error, including an error message.</p>
+                        </li>
+                      </ul>
+                      <p><strong>You can use the <code>throw</code> statement to throw an exception.</strong> The throw statement requires a single argument: a throwable object. Throwable objects are instances of any subclass of the <code>Throwable</code>                        class. Here's an example of a throw statement.</p>
+                      <pre><code class="hljs java"><span class="hljs-keyword">if</span> (size == <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> EmptyStackException();
+}
+</code></pre>
+                      <p><strong>If the a method doesn't catch the checked exceptions that can occur within it, it must specify that it can throw these exceptions</strong> using a <code>throws</code> clause. Here's an example.</p>
+                      <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeList</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> IOException, IndexOutOfBoundsException </span>{
+    PrintWriter out = <span class="hljs-keyword">new</span> PrintWriter(<span class="hljs-keyword">new</span> FileWriter(<span class="hljs-string">"OutFile.txt"</span>));
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; SIZE; i++) {
+        out.println(<span class="hljs-string">"Value at: "</span> + i + <span class="hljs-string">" = "</span> + list.get(i));
+    }
+    out.close();
+}
+</code></pre>
+                    </blockquote>
+                  </div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+        </panel>
+        <panel type="info" expanded="" no-close="" epxandable="true">
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.1f</code></span></big> <span><span class="fas fa-trophy"></span> Can avoid using exceptions to control normal workflow</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
@@ -505,7 +423,7 @@
         </panel>
       </panel>
       <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W4.2</code> <strong>Can use exceptions in Java</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <span slot="header" class="card-title"><span><code>W4.2</code> <strong>Can use Generics in Java</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
         <span
           class="glyphicon glyphicon-star" aria-hidden="true"></span>
           </span>
@@ -513,188 +431,7 @@
           </span>
           </span>
           <panel type="warning" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.2a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain Java Exceptions</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <span
-              class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              </span>
-              </span>
-              </span>
-              </span>
-              <div>
-                <div></div>
-                <p></p>
-                <p><span class="dimmed"><strong><span>C++ to Java → Exceptions →
-</span></strong>
-                  </span>
-                </p>
-                <div id="title-and-body">
-                  <div>
-                    <h4 id="what-are-exceptions">What are Exceptions?</h4>
-                  </div>
-                  <div id="main">
-                    <div>
-                      <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
-                      <blockquote>
-                        <tip-box type="definition">
-                          <div>
-                            <p><strong>Exception</strong>:</p>
-                            <blockquote>
-                              <p>The term <em>exception</em> is shorthand for the phrase &quot;exceptional event.&quot; An <em>exception</em> is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions.
-                                –- Java Tutorial (Oracle Inc.)</p>
-                            </blockquote>
-                          </div>
-                        </tip-box>
-                        <p><strong>When an error occurs within a method, the method creates an <em>exception object</em> and hands it off to the runtime system.</strong> The exception object contains information about the error, including its type and the
-                          state of the program when the error occurred. Creating an exception object and handing it to the runtime system is called <em>throwing</em> an exception.</p>
-                        <p><strong>After a method throws an exception, the runtime system attempts to find something to handle it in the <tooltip content="the ordered list of methods that had been called to get to the method where the error occurred"><em>call stack</em></tooltip>.</strong>                          The runtime system searches the call stack for a method that contains a block of code that can handle the exception. This block of code is called an <em>exception handler</em>. The search begins with the method in which the error
-                          occurred and proceeds through the call stack in the reverse order in which the methods were called. When an appropriate handler is found, the runtime system passes the exception to the handler. An exception handler is considered
-                          appropriate if the type of the exception object thrown matches the type that can be handled by the handler.</p>
-                        <p><strong>The exception handler chosen is said to <em>catch</em> the exception.</strong> If the runtime system exhaustively searches all the methods on the call stack without finding an appropriate exception handler, the program
-                          terminates.</p>
-                        <p><strong>Java code must honor the <em>Catch or Specify</em> Requirement.</strong> This means that code that might throw certain exceptions must be enclosed by either of the following:</p>
-                        <ul>
-                          <li>A <code>try</code> statement that catches the exception. The <code>try</code> must provide a handler for the exception.</li>
-                          <li>A method that specifies that it can throw the exception. The method must provide a <code>throws</code> clause that lists the exception.</li>
-                        </ul>
-                        <p><strong>There are three basic categories of exceptions, only one of which is subject to the 'Catch or Specify' Requirement.</strong></p>
-                        <ul>
-                          <li><strong><em>Checked</em> exceptions</strong>: These are exceptional conditions that a well-written application should anticipate and recover from. For example, suppose an application prompts a user for an input file name, then
-                            opens the file by passing the name to the constructor for java.io.FileReader. Normally, the user provides the name of an existing, readable file, so the construction of the <code>FileReader</code> object succeeds, and the execution
-                            of the application proceeds normally. But sometimes the user supplies the name of a nonexistent file, and the constructor throws <code>java.io.FileNotFoundException</code>. A well-written program will catch this exception and
-                            notify the user of the mistake, possibly prompting for a corrected file name.
-                            <ul>
-                              <li><mark>Checked exceptions are subject to the Catch or Specify Requirement.</mark></li>
-                              <li>All exceptions are checked exceptions, except for <code>Error</code>, <code>RuntimeException</code>, and their subclasses.</li>
-                            </ul>
-                          </li>
-                        </ul>
-                        <p></p>
-                        <ul>
-                          <li><strong>Errors</strong>: These are exceptional conditions that are external to the application, and that the application usually cannot anticipate or recover from. For example, suppose that an application successfully opens a
-                            file for input, but is unable to read the file because of a hardware or system malfunction. The unsuccessful read will throw <code>java.io.IOError</code>. An application might choose to catch this exception, in order to notify
-                            the user of the problem — but it also might make sense for the program to print a stack trace and exit.
-                            <ul>
-                              <li>Errors are not subject to the 'Catch or Specify' Requirement.</li>
-                              <li>Errors are those exceptions indicated by <code>Error</code> and its subclasses.</li>
-                            </ul>
-                          </li>
-                        </ul>
-                        <p></p>
-                        <ul>
-                          <li><strong>Runtime exceptions</strong>: These are exceptional conditions that are internal to the application, and that the application usually cannot anticipate or recover from. These usually indicate programming bugs, such as
-                            logic errors or improper use of an API. For example, consider the application described previously that passes a file name to the constructor for FileReader. If a logic error causes a null to be passed to the constructor, the
-                            constructor will throw <code>NullPointerException</code>. The application can catch this exception, but it probably makes more sense to eliminate the bug that caused the exception to occur.
-                            <ul>
-                              <li>Runtime exceptions are not subject to the 'Catch or Specify' Requirement.</li>
-                              <li>Runtime exceptions are those indicated by <code>RuntimeException</code> and its subclasses.</li>
-                            </ul>
-                          </li>
-                        </ul>
-                        <p><strong>Errors and runtime exceptions are collectively known as <em>unchecked</em> exceptions.</strong></p>
-                      </blockquote>
-                    </div>
-                    <div></div>
-                  </div>
-                </div>
-              </div>
-          </panel>
-          <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.2b</code></span></big> <span><span class="fas fa-trophy"></span> Can use Java Exceptions</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <span
-              class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-              </span>
-              </span>
-              <div>
-                <div></div>
-                <p></p>
-                <p><span class="dimmed"><strong><span>C++ to Java → Exceptions →
-</span></strong>
-                  </span>
-                </p>
-                <div id="title-and-body">
-                  <div>
-                    <h4 id="how-to-use-exceptions">How to Use Exceptions</h4>
-                  </div>
-                  <div id="main">
-                    <div>
-                      <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
-                      <blockquote>
-                        <p><strong>A program can catch exceptions by using a combination of the <code>try</code>, <code>catch</code>, and <code>finally</code> blocks.</strong> Here is an example:</p>
-                        <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeList</span><span class="hljs-params">()</span> </span>{
-    PrintWriter out = <span class="hljs-keyword">null</span>;
-
-    <span class="hljs-keyword">try</span> {
-        System.out.println(<span class="hljs-string">"Entering"</span> + <span class="hljs-string">" try statement"</span>);
-
-        out = <span class="hljs-keyword">new</span> PrintWriter(<span class="hljs-keyword">new</span> FileWriter(<span class="hljs-string">"OutFile.txt"</span>));
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; SIZE; i++) {
-            out.println(<span class="hljs-string">"Value at: "</span> + i + <span class="hljs-string">" = "</span> + list.get(i));
-        }
-    } <span class="hljs-keyword">catch</span> (IndexOutOfBoundsException e) {
-        System.err.println(<span class="hljs-string">"Caught IndexOutOfBoundsException: "</span> + e.getMessage());
-
-    } <span class="hljs-keyword">catch</span> (IOException e) {
-        System.err.println(<span class="hljs-string">"Caught IOException: "</span> +  e.getMessage());
-
-    } <span class="hljs-keyword">finally</span> {
-        <span class="hljs-keyword">if</span> (out != <span class="hljs-keyword">null</span>) {
-            System.out.println(<span class="hljs-string">"Closing PrintWriter"</span>);
-            out.close();
-        } <span class="hljs-keyword">else</span> {
-            System.out.println(<span class="hljs-string">"PrintWriter not open"</span>);
-        }
-    }
-}
-</code></pre>
-                        <ul>
-                          <li>
-                            <p>The <code>try</code> block identifies a block of code in which an exception can occur.</p>
-                          </li>
-                          <li>
-                            <p>The <code>catch</code> block identifies a block of code, known as an exception handler, that can handle a particular type of exception.</p>
-                          </li>
-                          <li>
-                            <p>The <code>finally</code> block identifies a block of code that is guaranteed to execute, and is the right place to close files, recover resources, and otherwise clean up after the code enclosed in the try block.</p>
-                          </li>
-                          <li>
-                            <p>The <code>try</code> statement should contain at least one <code>catch</code> block or a finally block and may have multiple <code>catch</code> blocks.</p>
-                          </li>
-                          <li>
-                            <p>The class of the exception object indicates the type of exception thrown. The exception object can contain further information about the error, including an error message.</p>
-                          </li>
-                        </ul>
-                        <p><strong>You can use the <code>throw</code> statement to throw an exception.</strong> The throw statement requires a single argument: a throwable object. Throwable objects are instances of any subclass of the <code>Throwable</code>                          class. Here's an example of a throw statement.</p>
-                        <pre><code class="hljs java"><span class="hljs-keyword">if</span> (size == <span class="hljs-number">0</span>) {
-    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> EmptyStackException();
-}
-</code></pre>
-                        <p><strong>If the a method doesn't catch the checked exceptions that can occur within it, it must specify that it can throw these exceptions</strong> using a <code>throws</code> clause. Here's an example.</p>
-                        <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeList</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> IOException, IndexOutOfBoundsException </span>{
-    PrintWriter out = <span class="hljs-keyword">new</span> PrintWriter(<span class="hljs-keyword">new</span> FileWriter(<span class="hljs-string">"OutFile.txt"</span>));
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; SIZE; i++) {
-        out.println(<span class="hljs-string">"Value at: "</span> + i + <span class="hljs-string">" = "</span> + list.get(i));
-    }
-    out.close();
-}
-</code></pre>
-                      </blockquote>
-                    </div>
-                    <div></div>
-                  </div>
-                </div>
-              </div>
-          </panel>
-      </panel>
-      <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W4.3</code> <strong>Can use Generics in Java</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-        <span
-          class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          </span>
-          </span>
-          </span>
-          </span>
-          <panel type="warning" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.3a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain Java Generics</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.2a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain Java Generics</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
               </span>
@@ -738,7 +475,7 @@
               </div>
           </panel>
           <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.3b</code></span></big> <span><span class="fas fa-trophy"></span> Can use Java Generics</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.2b</code></span></big> <span><span class="fas fa-trophy"></span> Can use Java Generics</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -834,7 +571,7 @@ Pair&lt;String, String&gt;  p2 = <span class="hljs-keyword">new</span> OrderedPa
           </panel>
       </panel>
       <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W4.4</code> <strong>Can use Collections in Java</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <span slot="header" class="card-title"><span><code>W4.3</code> <strong>Can use Collections in Java</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
         <span
           class="glyphicon glyphicon-star" aria-hidden="true"></span>
           </span>
@@ -842,7 +579,7 @@ Pair&lt;String, String&gt;  p2 = <span class="hljs-keyword">new</span> OrderedPa
           </span>
           </span>
           <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.4a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the Collections framework</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.3a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the Collections framework</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -906,16 +643,9 @@ Pair&lt;String, String&gt;  p2 = <span class="hljs-keyword">new</span> OrderedPa
                   </div>
                 </div>
               </div>
-              <hr style="border-top: dashed 1px; border-color:grey">
-              <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
-              <div>
-                <p><strong>Acceptable</strong>: Some code that you have written that uses some Java Collection classes.</p>
-                <p><strong>Suggested</strong>: Do the exercise given in <a href="https://github.com/nus-tic2002-2018/addressbook-level1/blob/master/docs/LearningOutcomes.adoc#use-collections-lo-collections">AddressBook - Level1 : LO-Collections</a></p>
-                <p><strong>Submission</strong>: Show your code to the tutor during the tutorial.</p>
-              </div>
           </panel>
           <panel type="warning" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.4b</code></span></big> <span><span class="fas fa-trophy"></span> Can use the ArrayList class</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.3b</code></span></big> <span><span class="fas fa-trophy"></span> Can use the ArrayList class</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
               </span>
@@ -1014,7 +744,7 @@ After clearing: []
               </div>
           </panel>
           <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.4c</code></span></big> <span><span class="fas fa-trophy"></span> Can use the HashMap class</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.3c</code></span></big> <span><span class="fas fa-trophy"></span> Can use the HashMap class</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -1117,13 +847,13 @@ Number of keys after clearing: 0
     <p><span class="activity-desc">Design</span></p>
     <div class="indented">
       <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W4.5</code> <strong>Can explain models</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
+        <span slot="header" class="card-title"><span><code>W4.4</code> <strong>Can explain models</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
           aria-hidden="true"></span></span>
         </span>
         </span>
         </span>
         <panel type="warning" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.5a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain models</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.4a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain models</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span>
             </span>
@@ -1139,7 +869,7 @@ Number of keys after clearing: 0
               </p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="what-4">What</h4>
+                  <h4 id="what-3">What</h4>
                 </div>
                 <div id="main">
                   <div>
@@ -1165,7 +895,7 @@ Number of keys after clearing: 0
                         </p>
                         <div id="title-and-body">
                           <div>
-                            <h4 id="what-5">What</h4>
+                            <h4 id="what-4">What</h4>
                           </div>
                           <div id="main">
                             <div>
@@ -1212,7 +942,7 @@ Number of keys after clearing: 0
             </div>
         </panel>
         <panel type="info" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.5b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain how models are used</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.4b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain how models are used</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
@@ -1359,24 +1089,10 @@ Number of keys after clearing: 0
                 </div>
               </div>
             </div>
-            <hr style="border-top: dashed 1px; border-color:grey">
-            <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
-            <div>
-              <div>
-                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain usage of models in a class project">
-                  <question>
-                    <p>Explain how models (e.g. UML diagrams) can be used in a class project.</p>
-                    <div slot="hint">
-                      <p>Can models be useful in evaluating the design quality of a software written by students?</p>
-                    </div>
-                  </question>
-                </panel>
-              </div>
-            </div>
         </panel>
       </panel>
       <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W4.6</code> <strong>Can explain basic object/class structures</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <span slot="header" class="card-title"><span><code>W4.5</code> <strong>Can explain basic object/class structures</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
         <span
           class="glyphicon glyphicon-star" aria-hidden="true"></span>
           </span>
@@ -1384,7 +1100,7 @@ Number of keys after clearing: 0
           </span>
           </span>
           <panel type="warning" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.6a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain structure modelling of OO solutions</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.5a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain structure modelling of OO solutions</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
               </span>
@@ -1450,7 +1166,7 @@ Number of keys after clearing: 0
               </div>
           </panel>
           <panel type="warning" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.6b</code></span></big> <span><span class="fas fa-trophy"></span> Can use basic-level class diagrams</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.5b</code></span></big> <span><span class="fas fa-trophy"></span> Can use basic-level class diagrams</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
               </span>
@@ -1543,22 +1259,9 @@ Number of keys after clearing: 0
                   </div>
                 </div>
               </div>
-              <hr style="border-top: dashed 1px; border-color:grey">
-              <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
-              <div>
-                <div>
-                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain Class Diagram">
-                    <question>
-                      <p>Explain the associations, navigabilities, and multiplicities in the class diagram below:</p>
-                      <img src="/website/book/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400">
-                      <p></p>
-                    </question>
-                  </panel>
-                </div>
-              </div>
           </panel>
           <panel type="warning" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.6c</code></span></big> <span><span class="fas fa-trophy"></span> Can distinguish between class diagrams and object diagrams</span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.5c</code></span></big> <span><span class="fas fa-trophy"></span> Can distinguish between class diagrams and object diagrams</span>
             <span
               class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>

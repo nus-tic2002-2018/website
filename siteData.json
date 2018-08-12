@@ -80,7 +80,7 @@
         "architectural-styles": "Architectural Styles",
         "software-architecture": "Software Architecture"
       },
-      "title": "Text Book Chapter : Software Architecture",
+      "title": "Textbook Chapter : Software Architecture",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -121,7 +121,7 @@
         "guideline-comment-minimally-but-sufficiently": "Guideline: Comment Minimally, but Sufficiently",
         "code-quality": "Code Quality"
       },
-      "title": "Text Book Chapter : Code Quality",
+      "title": "Textbook Chapter : Code Quality",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -208,7 +208,7 @@
         "collections": "Collections",
         "c-to-java": "C++ to Java"
       },
-      "title": "Text Book Chapter : C++ to Java",
+      "title": "Textbook Chapter : C++ to Java",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -220,7 +220,7 @@
         "introduction": "Introduction",
         "software-design": "Software Design"
       },
-      "title": "Text Book Chapter : Software Design",
+      "title": "Textbook Chapter : Software Design",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -233,7 +233,7 @@
         "agile-design": "Agile Design",
         "design-approaches": "Design Approaches"
       },
-      "title": "Text Book Chapter : Design Approaches",
+      "title": "Textbook Chapter : Design Approaches",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -245,7 +245,7 @@
         "abstraction": "Abstraction",
         "design-fundamentals": "Design Fundamentals"
       },
-      "title": "Text Book Chapter : Design Fundamentals",
+      "title": "Textbook Chapter : Design Fundamentals",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -272,7 +272,7 @@
         "more": "More",
         "software-design-patterns": "Software Design Patterns"
       },
-      "title": "Text Book Chapter : Software Design Patterns",
+      "title": "Textbook Chapter : Software Design Patterns",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -294,7 +294,7 @@
         "tools": "Tools",
         "documentation": "Documentation"
       },
-      "title": "Text Book Chapter : Documentation",
+      "title": "Textbook Chapter : Documentation",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -311,7 +311,7 @@
         "logging": "Logging",
         "error-handling": "Error Handling"
       },
-      "title": "Text Book Chapter : Error Handling",
+      "title": "Textbook Chapter : Error Handling",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -328,7 +328,7 @@
         "product-surveys": "Product Surveys",
         "gathering-requirements": "Gathering Requirements"
       },
-      "title": "Text Book Chapter : Gathering Requirements",
+      "title": "Textbook Chapter : Gathering Requirements",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -352,7 +352,7 @@
         "forking-workflow": "Forking Workflow",
         "git-and-github": "Git and Github"
       },
-      "title": "Text Book Chapter : Git and Github",
+      "title": "Textbook Chapter : Git and Github",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -365,7 +365,7 @@
         "debugging": "Debugging",
         "ides": "IDEs"
       },
-      "title": "Text Book Chapter : IDEs",
+      "title": "Textbook Chapter : IDEs",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -384,7 +384,7 @@
         "approaches-2": "Approaches",
         "integration": "Integration"
       },
-      "title": "Text Book Chapter : Integration",
+      "title": "Textbook Chapter : Integration",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -401,7 +401,7 @@
         "importing-a-project-to-intellij-idea": "Importing a Project to Intellij IDEA",
         "intellij-idea": "Intellij IDEA"
       },
-      "title": "Text Book Chapter : Intellij IDEA",
+      "title": "Textbook Chapter : Intellij IDEA",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -416,7 +416,7 @@
         "streams-basic": "Streams: Basic",
         "java": "Java"
       },
-      "title": "Text Book Chapter : Java",
+      "title": "Textbook Chapter : Java",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -428,7 +428,7 @@
         "junit-intermediate": "JUnit: Intermediate",
         "junit": "JUnit"
       },
-      "title": "Text Book Chapter : JUnit",
+      "title": "Textbook Chapter : JUnit",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -466,7 +466,7 @@
         "modeling-a-solution": "Modeling a Solution",
         "modeling": "Modeling"
       },
-      "title": "Text Book Chapter : Modeling",
+      "title": "Textbook Chapter : Modeling",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -481,8 +481,6 @@
         "objects": "Objects",
         "class-level-members": "Class Level Members",
         "enumerations": "Enumerations",
-        "implementing-classes": "Implementing Classes",
-        "implementing-class-level-members": "Implementing class-level members",
         "classes": "Classes",
         "navigability": "Navigability",
         "multiplicity": "Multiplicity",
@@ -503,21 +501,15 @@
         "abstract-classes": "Abstract Classes",
         "substitutability": "Substitutability",
         "dynamic-and-static-binding": "Dynamic and Static Binding",
-        "implementing-inheritance": "Implementing inheritance",
-        "implementing-overriding": "Implementing overriding",
-        "implementing-overloading-2": "Implementing overloading",
-        "implementing-interfaces": "Implementing interfaces",
-        "implementing-abstract-classes": "Implementing abstract classes",
         "inheritance": "Inheritance",
         "how": "How",
-        "implementing-polymorphism": "Implementing polymorphism",
         "polymorphism": "Polymorphism",
         "miscellaneous": "Miscellaneous",
         "review": "Review",
         "more": "More",
         "object-oriented-programming": "Object-Oriented Programming"
       },
-      "title": "Text Book Chapter : Object-Oriented Programming",
+      "title": "Textbook Chapter : Object-Oriented Programming",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -535,7 +527,7 @@
         "brooks-law": "Brooks' Law",
         "principles": "Principles"
       },
-      "title": "Text Book Chapter : Principles",
+      "title": "Textbook Chapter : Principles",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -558,7 +550,7 @@
         "summary": "Summary",
         "sdlc-process-models": "SDLC Process Models"
       },
-      "title": "Text Book Chapter : SDLC Process Models",
+      "title": "Textbook Chapter : SDLC Process Models",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -574,7 +566,7 @@
         "pert-charts": "PERT Charts",
         "project-planning": "Project Planning"
       },
-      "title": "Text Book Chapter : Project Planning",
+      "title": "Textbook Chapter : Project Planning",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -590,7 +582,7 @@
         "formal-verification": "Formal Verification",
         "quality-assurance": "Quality Assurance"
       },
-      "title": "Text Book Chapter : Quality Assurance",
+      "title": "Textbook Chapter : Quality Assurance",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -603,7 +595,7 @@
         "when": "When",
         "refactoring": "Refactoring"
       },
-      "title": "Text Book Chapter : Refactoring",
+      "title": "Textbook Chapter : Refactoring",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -617,7 +609,7 @@
         "quality-of-requirements": "Quality of Requirements",
         "requirements": "Requirements"
       },
-      "title": "Text Book Chapter : Requirements",
+      "title": "Textbook Chapter : Requirements",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -637,7 +629,7 @@
         "platforms": "Platforms",
         "reuse": "Reuse"
       },
-      "title": "Text Book Chapter : Reuse",
+      "title": "Textbook Chapter : Reuse",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -660,7 +652,7 @@
         "identifying-points-in-history": "Identifying Points in History",
         "revision-control": "Revision Control"
       },
-      "title": "Text Book Chapter : Revision Control",
+      "title": "Textbook Chapter : Revision Control",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -672,7 +664,7 @@
         "introduction": "Introduction",
         "software-engineering": "Software Engineering"
       },
-      "title": "Text Book Chapter : Software Engineering",
+      "title": "Textbook Chapter : Software Engineering",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -692,7 +684,7 @@
         "supplementary-requirements": "Supplementary Requirements",
         "specifying-requirements": "Specifying Requirements"
       },
-      "title": "Text Book Chapter : Specifying Requirements",
+      "title": "Textbook Chapter : Specifying Requirements",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -703,7 +695,7 @@
         "team-structures": "Team Structures",
         "teamwork": "Teamwork"
       },
-      "title": "Text Book Chapter : Teamwork",
+      "title": "Textbook Chapter : Teamwork",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -737,7 +729,7 @@
         "recap": "Recap",
         "test-case-design": "Test Case Design"
       },
-      "title": "Text Book Chapter : Test Case Design",
+      "title": "Textbook Chapter : Test Case Design",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -770,7 +762,7 @@
         "test-automation": "Test Automation",
         "testing": "Testing"
       },
-      "title": "Text Book Chapter : Testing",
+      "title": "Textbook Chapter : Testing",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
@@ -789,7 +781,7 @@
         "dependencies": "Dependencies",
         "associations-as-attributes": "Associations as Attributes",
         "enumerations": "Enumerations",
-        "class-level-members": "Class Level Members",
+        "class-level-members": "Class-Level Members",
         "association-classes": "Association Classes",
         "composition": "Composition",
         "aggregation": "Aggregation",
@@ -818,7 +810,7 @@
         "miscellaneous": "Miscellaneous",
         "uml": "UML"
       },
-      "title": "Text Book Chapter : UML",
+      "title": "Textbook Chapter : UML",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",

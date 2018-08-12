@@ -58,36 +58,237 @@
         <p><span class="activity-desc">Admin info to read:<span></span></span>
         </p>
         <div class="indented">
-          <panel src="/website\admin\project-w08-mid-v12._include_.html#main" type="dark" no-close="" expanded="" no-switch="" expandable="false" fragment="main">
+          <panel type="dark" no-close="" expanded="" no-switch="" expandable="false">
             <span slot="header" class="card-title"><span class="text-white"> Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Project: mid-v1.2 [week 8] <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
               </span>
+              <div>
+                <div id="title"></div>
+                <div id="body">
+                  <tip-box>
+                    <p>Overview: <span>adjust project schedule/rigor as needed, complete repo set up, start proper milestone management</span></p>
+                  </tip-box>
+                  <div id="product">
+                    <p><strong><big>Project Management:</big></strong></p>
+                    <ul>
+                      <li>
+                        <p><strong>Complete the repo set up.</strong></p>
+                        <ul>
+                          <li>Fix any errors in org/repo set up <span class="dimmed"> (e.g. wrong repo name)</span>.</li>
+                          <li>Set up <a href="https://nus-tic2002-2018.github.io/addressbook-level4/UsingTravis.html#enabling-auto-publishing-of-documentation">auto-publishing of docs</a> if you haven't done so already</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <p><strong>Adjust project rigor to suit your team's pace</strong>, as explained below. Note that you are free to do similar adjustments at any future time in the project.</p>
+                        <ul>
+                          <li>
+                            <p>Automated tests have benefits, but they can be a pain to write/maintain; GUI tests are especially hard to maintain because their behavior can sometimes depend on things such as the OS, resolution etc.</p>
+                            <p>It is OK to get rid of some of the troublesome tests and rely more on manual testing instead. The less automated test coverage you have, the higher the risk of regressions; but it may be an acceptable trade-off under the circumstances
+                              if tests are slowing you down too much. There is no direct penalty for removing GUI tests.</p>
+                            <p>Also note
+                              <trigger trigger="click" for="modal:v12-testingExpectations">our expectation on test code</trigger>.</p>
+                          </li>
+                          <li>
+                            <p>You can also reduce the rigor of checkstyle checks to expedite PR processing.</p>
+                          </li>
+                          <li>
+                            <p>Another thing you can do is to switch to a simpler workflow if the forking workflow is slowing you down.</p>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <modal title="Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project Asessement → Expectation on testing" id="modal:v12-testingExpectations">
+                    
+                      <div>
+                        <ul>
+                          <li>There is no requirement for a minimum coverage level. Note that in a production environment you are often required to have at least 90% of the code covered by tests. In this project, it can be less. The less coverage you have,
+                            the higher the risk of regression bugs, which will cost marks if not fixed before the final submission.</li>
+                          <li>You <mark>must write <em>some</em> tests</mark> so that we can evaluate your ability to write tests.</li>
+                          <li>How much of each type of testing should you do? We expect you to decide. You learned different types of testing and what they try to achieve. Based on that, you should decide how much of each type is required. Similarly, you
+                            can decide to what extent you want to automate tests, depending on the benefits and the effort required.</li>
+                          <li>Applying TDD is optional. If you plan to test something, it is better to apply TDD because TDD ensures that you write functional code in a testable way. If you do it the normal way, you often find that it is hard to test the
+                            functional code because the code has low testability.</li>
+                        </ul>
+                      </div>
+                    </modal>
+                    <ul>
+                      <li>
+                        <p><strong>Adjust project plan if necessary</strong>, as explained below. Note that you are free to do similar adjustments at any future time in the project.</p>
+                        <ul>
+                          <li>Now that you have a some idea about the code base, revisit the feature release plan and adjust it if necessary. The adjustment can be done using GitHub issue tracker.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <p><strong>Start proper milestone management</strong></p>
+                        <ul>
+                          <li>
+                            <font color="red"><big><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span></big></font> Starting from the upcoming milestone, <mark>there are additional requirements to follow</mark> regarding how you <strong>use GitHub to manage your milestones</strong>,
+                            as described in
+                            <trigger trigger="click" for="modal:v12-projectTracking">[Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Appendix E: GitHub: Project Schedule Tracking]</trigger>.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <p>As before, you are <em>recommended</em> (but not required) to <strong>follow the forking workflow</strong> when evolving the product.</p>
+                      </li>
+                    </ul>
+                    <modal large="" title="Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Appendix E: Github: Project Schedule Tracking" id="modal:v12-projectTracking">
+                    
+                      <div>
+                        <h2 id="project-schedule-tracking">Project Schedule Tracking</h2>
+                        <p>In general, use the issue tracker (Milestones, Issues, PRs, Tags, Releases, and Labels) for assigning, scheduling, and tracking <em>all</em> noteworthy project tasks, including user stories. Update the issue tracker regularly to
+                          reflect the current status of the project. You can also use GitHub's new <a href="https://www.youtube.com/watch?v=C6MGKHkNtxU">Projects feature</a> to manage the project, but keep it linked to the issue tracker as much as you
+                          can.</p>
+                        <h3 id="using-issues">Using Issues:</h3>
+                        <ul>
+                          <li>
+                            <p><strong>Record each of the user stories you plan to deliver as an issue in the issue tracker.</strong>
+                              <span class="dimmed">e.g.</span> <code>Title: As a user I can add a deadline</code><br>
+                              <code>Description: ... so that I can keep track of my deadlines</code></p>
+                          </li>
+                          <li>
+                            <p><strong>Assign the <code>type.*</code> and <code>priority.*</code> labels to those issues.</strong></p>
+                          </li>
+                          <li>
+                            <p><strong>When you start implementing a story, break it down to tasks.</strong> Define reasonable sized, standalone tasks. A task should be able to done by one person, in a few hours. <span class="dimmed">e.g.</span></p>
+                            <ul>
+                              <li><span class="dimmed">👍 Good: Update class diagram in the project manual for v1.4</span></li>
+                              <li><span class="dimmed">👎 Bad (reasons: not a one-person task, not small enough): Write the project manual</span></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <p><strong>Write a descriptive title for the issue.</strong> <span class="dimmed">e.g. Add support for the 'undo' command to the parser.</span></p>
+                          </li>
+                          <li>
+                            <p><strong>There is no need to break things into VERY small tasks.</strong> Keep them as big as possible, but they should be no bigger than what you are going to assign a single person to do within a week. <span class="dimmed">eg.,</span></p>
+                            <ul>
+                              <li><code>Implementing parser</code>  <span class="dimmed">: too big because it cannot be done by a single person in a week.</span></li>
+                              <li><code>Implementing parser support for adding of floating tasks</code> <span class="dimmed">: appropriate size.</span></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <p><strong>Do not track things taken for granted.</strong> <span class="dimmed">e.g., <code>push code to repo</code> should not be a task to track. In the example given under the previous point, it is taken for granted that the owner will also (a) test the code and (b) push to the repo when it is ready. Those two need not be tracked as separate tasks.</span></p>
+                          </li>
+                          <li>
+                            <p><strong>Omit redundant details.</strong> In some cases, the summary/title is enough to describe the task. In that case, no need to repeat it in the description. There is no need for well-crafted and detailed descriptions for
+                              tasks. A minimal description is enough. Similarly, labels such as <code>priority</code> can be omitted if you think they don't help you.</p>
+                          </li>
+                          <li>
+                            <p><strong>Assign tasks to team members using the <code>assignees</code> field.</strong> At any point, there should be some ongoing tasks and some pending tasks against each team member.</p>
+                          </li>
+                          <li>
+                            <p><strong>Optionally, you can use <code>status.ongoing</code> label to indicate issues currently ongoing.</strong></p>
+                          </li>
+                        </ul>
+                        <div id="using-milestones">
+                          <h3 id="using-milestones">Using Milestones:</h3>
+                          <ul>
+                            <li>
+                              <p>Use <a href="https://help.github.com/articles/about-milestones/">GitHub milestones</a> to indicate which issues are to be handled for which milestone by assigning issues to suitable milestones.</p>
+                            </li>
+                            <li>
+                              <p>Set the deadlines for milestones (in GitHub). Your internal milestones can be set earlier than the deadlines we have set, to give you a buffer.</p>
+                            </li>
+                            <li>
+                              <p>Note that you can change the milestone plan along the way as necessary.</p>
+                            </li>
+                          </ul>
+                          <p><strong>Wrapping up a Milestone</strong>:<br>
+                            <mark>Here are the conditions to satisfy for a milestone to be considered properly wrapped up</mark>:</p>
+                          <ul>
+                            <li>
+                              <p>A working product tagged with the correct tag (e.g. v1.2) is pushed to the main repo.</p>
+                            </li>
+                            <li>
+                              <p>All tests passing on Travis for the version tagged above.</p>
+                            </li>
+                            <li>
+                              <p>Milestone updated to match the product i.e. all issues completed and PRs merged for the milestone should be assigned to the milestone.<br>
+                                <img src="/website/admin/images/assigningIssuesToMilestones.png" width="700"></p>
+                            </li>
+                            <li>
+                              <p>Milestone closed. If there are incomplete issues or unmerged PRs in the milestone, move them to a future milestone.<br>
+                                <img src="/website/admin/images/closingMilestones.png" width="700"></p>
+                            </li>
+                            <li>
+                              <p>Optionally, issues for the next milestone are assigned to team members (this is not compulsory to do <em>before</em> the tutorial, but we recommend you to do it soon after the tutorial).</p>
+                            </li>
+                            <li>
+                              <p>Optionally, future milestones are revised based on what you experienced in the current milestone <span class="dimmed"> e.g. if you could not finish all issues assigned to the current milestone, it is a sign that you overestimated how much you can do in a week, which means you might want to reduce the issues assigned to future milestones to match that observation</span>.</p>
+                            </li>
+                            <li>
+                              <p>Doing a 'release' on GitHub is optional for v1.1 and v1.2 but compulsory from v1.3.</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </modal>
+                    <p><strong><big>Product:</big></strong></p>
+                    <ul>
+                      <li><strong>From v1.2 onwards each member is expected to contribute <tooltip content="the amount of code does not matter; even small contributions are acceptable">some</tooltip> code to each <tooltip content="v1.3, v1.4"> milestone</tooltip>, preferably each week; only merged code is considered as contributions</strong>                        <span class="dimmed"><popover content="The ability to deliver code incrementally is an important LO of this module because incremental delivery improves the _visibility_ of your work.">(Reason)</popover></span>. <br> If an enhancement
+                        is too big to complete in one milestone, try to deliver it in smaller incremental steps e.g. deliver a basic version of the enhancement first.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
           </panel>
           <p></p>
-          <panel src="/website\admin\appendixC-faq._include_.html#admin-faq-fromScratch" type="dark" no-close="" expanded="" no-switch="" expandable="false" fragment="admin-faq-fromScratch">
+          <panel type="dark" no-close="" expanded="" no-switch="" expandable="false">
             <span slot="header" class="card-title"><span class="text-white"> Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Appendix C (FAQs) → Why aren't we allowed to build a new product from scratch? <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
               </span>
+              <div>
+                <h3 id="why-arent-we-allowed-to-build-a-new-product-from-scratch">Why aren't we allowed to build a new product from scratch? <small><small><span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small>
+                </h3>
+                <div class="indented">
+                  <div>
+                    <p>There are many reasons. One of them is that most of you will be working with existing software in your first few years of the career while hardly any school projects train you to work with existing code bases. We decided to bite the
+                      bullet and use TIC2002 to train you to work in existing code bases.</p>
+                  </div>
+                </div>
+              </div>
           </panel>
           <p></p>
-          <panel src="/website\admin\appendixC-faq._include_.html#admin-faq-manySubmissions" type="dark" no-close="" expanded="" no-switch="" expandable="false" fragment="admin-faq-manySubmissions">
+          <panel type="dark" no-close="" expanded="" no-switch="" expandable="false">
             <span slot="header" class="card-title"><span class="text-white"> Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Appendix C (FAQs) → Why so many submissions? <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
               </span>
+              <div>
+                <h3 id="why-so-many-submissions">Why so many submissions? <small><small><span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small>
+                </h3>
+                <div class="indented">
+                  <div>
+                    <img src="/website/admin/images/frequent submissions.png" width="759" height="359">
+                    <p>The high number of submissions is not meant to increase workload but to spread it across the semester. Learning theory and applying them should be done in parallel to maximize the learning effect. That can happen only if we spread
+                      theory and 'application of theory' (i.e., project work) evenly across the semester.</p>
+                  </div>
+                </div>
+              </div>
           </panel>
           <p></p>
-          <panel src="/website\admin\appendixC-faq._include_.html#admin-faq-cs2101Differences" type="dark" no-close="" expanded="" no-switch="" expandable="false" fragment="admin-faq-cs2101Differences">
+          <panel type="dark" no-close="" expanded="" no-switch="" expandable="false">
             <span slot="header" class="card-title"><span class="text-white"> Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Appendix C (FAQs) → Why submission requirements differ between TIC2002 and CS2101? <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
               </span>
+              <div>
+                <h3 id="why-submission-requirements-differ-between-tic2002-and-cs2101">Why submission requirements differ between TIC2002 and CS2101? <small><small><span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small>
+                </h3>
+                <div class="indented">
+                  <div>
+                    <img src="/website/admin/images/Submission requirements differ.png" width="300">
+                    <p>They do, and they should.</p>
+                    <p>TIC2002T communication requirements are limited to a very narrow scope (i.e., communicate about the product to users and developers). CS2101 aims to teach you technical communication in a much wider context. While you may be able to
+                      reuse some of the stuff across the two modules, submissions are not intended to be exactly the same.</p>
+                  </div>
+                </div>
+              </div>
           </panel>
           <p></p>
         </div>
@@ -528,14 +729,14 @@
                       </div>
                       <div id="main">
                         <div>
-                          <div v-closeable="" alt="focus group photo">
+                          <div v-closeable="" alt="focus group photo" class="non-printable">
                             <p><img src="https://media.defense.gov/2012/Apr/11/2000162334/670/394/0/120403-F-PR861-011.JPG" width="400"><br>
                               <sub>[<a href="http://www.hanscom.af.mil/News/Article-Display/Article/380048/caring-for-people-forum-identifies-issues/">source</a>]</sub></p>
                           </div>
                           <p></p>
                           <p><strong>Focus groups are a kind of informal interview within an interactive group setting.</strong> A group of people (e.g. potential users, beta testers) are asked about their understanding of a specific issue, process, product,
                             advertisement, etc.</p>
-                          <panel type="seamless">
+                          <panel type="seamless" class="non-printable">
                             <span slot="header"><span><span class="dimmed"><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span>: How do focus groups work? - Hector Lanz <span class="badge badge-pill badge-secondary">tangential</span></span>
                             </span>
                             </span>
@@ -585,12 +786,12 @@
                                 <p></p>
                               </p>
                             </panel>
-                            <panel header="<span class='fas fa-cube'></span> A simple GUI prototype for the same Minesweeper, created using Powerpoint:" type="seamless">
+                            <panel header="<span class='fas fa-cube'></span> A simple GUI prototype for the same Minesweeper, created using Powerpoint:" type="seamless" expanded="">
                               <p><img src="/website/book/gatheringRequirements/prototyping/images/guiPrototypeMinesweeper.jpg" height="220">
                                 <p></p>
                               </p>
                             </panel>
-                            <panel header="<span class='fas fa-cube'></span> A prototype for a mobile app, created using the UI prototyping tool Balsmiq:" type="seamless">
+                            <panel header="<span class='fas fa-cube'></span> A prototype for a mobile app, created using the UI prototyping tool Balsmiq:" type="seamless" expanded="">
                               <img src="/website/book/gatheringRequirements/prototyping/images/balsamiqPrototypeGUI.jpg" height="450">
                               <p><span class="dimmed"><sup>[source: <a href="http://balsamiq.com/products/mockups">http://balsamiq.com/products/mockups</a>]</sup></span></p>
                             </panel>
@@ -734,16 +935,16 @@
                       <p></p>
                       <p><strong>We can write user stories on</strong> index cards or sticky notes, and arrange on walls or tables, to facilitate planning and discussion. Alternatively, we can use a software (e.g., <a href="https://help.github.com/articles/about-project-boards/">GitHub Project Boards</a>,
                         Trello, Google Docs, ...) to manage user stories digitally.</p>
-                      <panel header="%%User stories in use%%" expanded="">
+                      <panel header="%%User stories in use%%" class="non-printable" expanded="">
                         <panel header="With sticky notes" type="seamless" expanded="">
                           <img src="/website/book/specifyingRequirements/userStories/introduction/images/workingWithStories.jpg" height="400">
                           <p><span class="dimmed"><sup>[credit: <a href="https://www.flickr.com/photos/jakuza/2682466984/">https://www.flickr.com/photos/jakuza/2682466984/</a>]</sup></span></p>
                         </panel>
-                        <panel header="With paper" type="seamless">
+                        <panel header="With paper" type="seamless" expanded="">
                           <img src="/website/book/specifyingRequirements/userStories/introduction/images/userStoriesOnTable.jpg" height="400">
                           <p><span class="dimmed"><sup>[credit: <a href="https://www.flickr.com/photos/jakuza/with/2726048607/">https://www.flickr.com/photos/jakuza/with/2726048607/</a>]</sup></span></p>
                         </panel>
-                        <panel header="With software" type="seamless">
+                        <panel header="With software" type="seamless" expanded="">
                           <img src="/website/book/specifyingRequirements/userStories/introduction/images/userStoriesWithSoftware.png" height="400">
                           <p><span class="dimmed"><sup>[credit: <a href="https://commons.wikimedia.org/wiki/File:User_Story_Map_in_Action.png">https://commons.wikimedia.org/wiki/File:User_Story_Map_in_Action.png</a>]</sup></span></p>
                         </panel>
@@ -813,7 +1014,7 @@
               <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
               <div>
                 <p><strong>Acceptable</strong>: Using user stories in any past project.</p>
-                <p><strong>Suggested</strong>: Do the exercise in [<a href="https://github.com/nus-tic2002-2018/addressbook-level3/blob/master/doc/LearningOutcomes.md#utilize-user-stories-lo-userstories">Addressbook-Level3: LO-UesrStories</a>]</p>
+                <p><strong>Suggested</strong>: Do the exercise in [<a href="https://github.com/nus-tic2002-2018/addressbook-level3/blob/master/docs/LearningOutcomes.adoc#utilize-user-stories-code-lo-userstories-code">Addressbook-Level3: LO-UesrStories</a>]</p>
                 <div>
                   <p><strong>Submission</strong>: Create a PR against <a href="https://github.com/nus-tic2002-2018/addressbook-level3">Addressbook-Level3</a>. <mark>Remember to use team ID</mark> (e.g. <em>W09-2</em>) in your PR name.</p>
                   <p>
@@ -1699,7 +1900,7 @@
                   <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
                   <div>
                     <p><strong>Acceptable</strong>: Evidence of having used SRP in some project.</p>
-                    <p><strong>Suggested</strong>: Do the exercise in [<a href="https://github.com/nus-tic2002-2018/addressbook-level2/blob/master/doc/LearningOutcomes.md#follow-the-single-responsibility-principle-lo-srp">Addressbook-Level2: LO-SRP</a>]</p>
+                    <p><strong>Suggested</strong>: Do the exercise in [<a href="https://github.com/nus-tic2002-2018/addressbook-level2/blob/master/docs/LearningOutcomes.adoc#follow-the-single-responsibility-principle-code-lo-srp-code">Addressbook-Level2: LO-SRP</a>]</p>
                     <div>
                       <p><strong>Submission</strong>: Create a PR against <a href="https://github.com/nus-tic2002-2018/addressbook-level2">Addressbook-Level2</a>. <mark>Only clean PRs</mark> (i.e. free of unrelated code modifications) will be accepted.</p>
                       <p>
@@ -1766,9 +1967,9 @@
                                       <pre><code class="hljs java">Staff staff = <span class="hljs-keyword">new</span> AcademicStaff (); <span class="hljs-comment">// OK</span>
 </code></pre>
                                       <p>But the following code is not valid <span class="dimmed"> because <code>staff</code> is declared as a <code>Staff</code> type and therefore its value may or may not be of  type <code>AcademicStaff</code>, which is the type expected by variable <code>academicStaff</code>.</span></p>
-                                      <pre class="hljs"><code>Staff staff;
+                                      <pre><code class="hljs java">Staff staff;
 ...
-AcademicStaff academicStaff = staff; // Not OK
+AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
 </code></pre>
                                     </tip-box>
                                   </div>
@@ -2798,7 +2999,7 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
                       </div>
                       <div id="main">
                         <div>
-                          <div v-closeable="" alt="Junit tutorial video">
+                          <div v-closeable="" alt="Junit tutorial video" class="non-printable">
                             <p>JUnit 4 with IntelliJ: A quick introduction <sub>-- by DrBFraser</sub></p>
                             <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/Bld3644bIAo" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
                           </div>
@@ -2821,7 +3022,7 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
                   <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
                   <div>
                     <p><strong>Acceptable</strong>: Evidence of having written JUnit tests in some project.</p>
-                    <p><strong>Suggested</strong>: Do the exercise in [<a href="https://github.com/nus-tic2002-2018/addressbook-level2/blob/master/doc/LearningOutcomes.md#use-junit-to-implement-unit-tests-lo-junit">Addressbook-Level2: LO-JUnit</a>]</p>
+                    <p><strong>Suggested</strong>: Do the exercise in [<a href="https://github.com/nus-tic2002-2018/addressbook-level2/blob/master/docs/LearningOutcomes.adoc#use-junit-to-implement-unit-tests-code-lo-junit-code">Addressbook-Level2: LO-JUnit</a>]</p>
                     <div>
                       <p><strong>Submission</strong>: Create a PR against <a href="https://github.com/nus-tic2002-2018/addressbook-level2">Addressbook-Level2</a>. <mark>Only clean PRs</mark> (i.e. free of unrelated code modifications) will be accepted.</p>
                       <p>
@@ -3134,8 +3335,13 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
                               <table class="markbind-table table table-bordered table-striped">
                                 <thead>
                                   <tr>
-                                    <th>👎 Not good</th>
-                                    <th>👍 Better</th>
+                                    <th>
+                                      <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
+                                        </span>
+                                      </font>
+                                    </th>
+                                    <th><span class="text-success"><span class="fas fa-thumbs-up"></span> Better </span>
+                                    </th>
                                   </tr>
                                 </thead>
                                 <tbody>
@@ -4356,7 +4562,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                               </li>
                               <li>
                                 <p><a href="http://seleniumhq.org/"><strong>Selenium</strong></a> can be used to automate testing of Web application UIs<br></p>
-                                <panel type="seamless" header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span> demo video of autoamted testing of a Web application">
+                                <panel type="seamless" header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span> demo video of automated testing of a Web application" class="non-printable">
                                   <p>This video shows automated testing of the <a href="http://github.com/teammates/teammates">TEAMMATES</a> Web app using Selenium</p>
                                   <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/ihst69Zq1xM" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
                                 </panel>
@@ -4639,8 +4845,48 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                         </li>
                         <li>Enhanced AB1-AB3: 1 mark each</li>
                       </ul>
-                      <p><span class="flat"><span class="dimmed">Related: [<a href="/website/admin/index-flat.html#admin-peerEvaluations-anchor">Admin: Peer Evaluation</a>]</span></span>
-                        <panel src="/website\admin\peerEvaluations._include_.html#peerEvaluation-criteria" header="Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Peer Evaluations → Criteria" class="embedding" minimized="" fragment="peerEvaluation-criteria"></panel>
+                      <div class="flat">
+                        <div>
+                          <p><span class="dimmed">Relevant: [<trigger trigger="click" for="modal:participation-peerEvals">Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Peer Evaluations → Criteria</trigger> <span class="glyphicon glyphicon-star"
+                              aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>]</span>
+                          </p>
+                        </div>
+                      </div>
+                      <modal large="" title="Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Peer Evaluations → Criteria  <span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span>"
+                        id="modal:participation-peerEvals">
+                      
+                        <div>
+                          <p><big><strong>Peer evaluation criteria: professional conduct</strong></big></p>
+                          <ul>
+                            <li><strong>Professional Communication</strong> :
+                              <ul>
+                                <li>Communicates sufficiently and professionally. e.g. Does not use offensive language or excessive slang in project communications.</li>
+                                <li>Responds to communication from team members in a timely manner (e.g. within 24 hours).</li>
+                              </ul>
+                            </li>
+                            <li><strong>Punctuality</strong>: Does not cause others to waste time or slow down project progress by frequent tardiness.</li>
+                            <li><strong>Dependability</strong>: Promises what can be done, and delivers what was promised.</li>
+                            <li><strong>Effort</strong>: Puts in sufficient effort to, and tries their best to keep up with the module/project pace. Seeks help from others when necessary.</li>
+                            <li><strong>Quality</strong>: Does not deliver work products that seem to be below the student's competence level i.e. tries their best to make the work product as high quality as possible within her competency level.</li>
+                            <li><strong>Meticulousness</strong>:
+                              <ul>
+                                <li>Rarely overlooks submission requirements.</li>
+                                <li>Rarely misses compulsory module activities such as completing the TEAMMATES profile or peer review.</li>
+                              </ul>
+                            </li>
+                            <li><strong>Teamwork</strong>: How willing are you to act as part of a team, contribute to team-level tasks, adhere to team decisions, etc.</li>
+                          </ul>
+                          <p><big><strong>Peer evaluation criteria: competency</strong></big></p>
+                          <ul>
+                            <li><strong>Technical Competency</strong>: Able to gain competency in all the required tools and techniques.</li>
+                            <li><strong>Mentoring skills</strong>: Helps others when possible. Able to mentor others well.</li>
+                            <li><strong>Communication skills</strong>: Able to communicate (written and spoken) well. Takes initiative in discussions.</li>
+                          </ul>
+                        </div>
+                      </modal>
+                      <p>
+                        <panel src="/website\admin\peerEvaluations._include_.html#peerEvaluation-criteria" header="Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Peer Evaluations → Criteria  <span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span>"
+                          class="embedding" minimized="" fragment="peerEvaluation-criteria"></panel>
                       </p>
                     </div>
                   </modal>
@@ -4689,7 +4935,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Thu, 09 Aug 2018 11:51:58 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 12 Aug 2018 09:54:43 GMT</small></div>
 </footer>
 </div>
 </body>

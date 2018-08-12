@@ -58,13 +58,39 @@
         <p><span class="activity-desc">Admin info to read:<span></span></span>
         </p>
         <div class="indented">
-          <panel src="/website\admin\appendixB-policies._include_.html#policy-plagiarism" type="dark" no-close="" expanded="" no-switch="" expandable="false" fragment="policy-plagiarism">
+          <panel type="dark" no-close="" expanded="" no-switch="" expandable="false">
             <span slot="header" class="card-title"><span class="text-white"> Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Appendix B (Policies) → Policy on plagiarism <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
             </span>
+            <div>
+              <h3 id="policy-on-plagiarism">Policy on plagiarism <small><small><span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small>
+              </h3>
+              <div class="indented">
+                <div>
+                  <p><strong>We encourage sharing, but you should share with everyone in the class</strong>, not just a selected group. That is,</p>
+                  <ul>
+                    <li>You are not allowed to share individual assignments with classmates directly.</li>
+                    <li>You are not allowed to share project-related things with other teams directly.</li>
+                  </ul>
+                  <p><strong>You can even reuse each other's work</strong> subject to the 'reuse policy' given below.</p>
+                  <p>If you submit code (or adopt ideas) taken from elsewhere, you need to comply with our reuse policy.</p>
+                  <p>Detection:</p>
+                  <ul>
+                    <li>Detecting plagiarism in code is quite easy. You are not fooling anyone by reordering code or renaming methods/variables.</li>
+                    <li>As all your work is publicly visible on GitHub, sooner or later somebody will notice the plagiarism.</li>
+                  </ul>
+                  <p>Penalties:</p>
+                  <ul>
+                    <li>For submissions not affecting marks: We make a record of cases of plagiarism but we do not take further action. Such plagiarism does not disadvantage other students. Therefore, we prefer to spend all available resources on helping
+                      honest students to do better rather than to chase after dishonest students. If you think you gain something by plagiarizing, go ahead and do it. It's your choice and it's your loss.</li>
+                    <li>For the final project/exam: Any case of claiming others' work as yours will be reported to the university for disciplinary action.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </panel>
           <p></p>
-          <panel src="/website\admin\appendixB-policies._include_.html#policy-reuse" type="dark" no-close="" expanded="" no-switch="" expandable="false" fragment="policy-reuse">
+          <panel type="dark" no-close="" expanded="" no-switch="" expandable="false">
             <span slot="header" class="card-title"><span class="text-white"> Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Appendix B (Policies) → Policy on reuse <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
@@ -72,9 +98,332 @@
               </span>
               </span>
               </span>
+              <div>
+                <h3 id="policy-on-reuse">Policy on reuse <small><small><span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></small></small>
+                </h3>
+                <div class="indented">
+                  <div>
+                    <p><strong>Reuse is encouraged. However, note that reuse has its own costs</strong> (such as the learning curve, additional complexity, usage restrictions, and unknown bugs). Furthermore, you will not be given credit for work done by
+                      others. Rather, you will be given credit for using work done by others.</p>
+                    <ul>
+                      <li>You are allowed to reuse work from your classmates, subject to following conditions:
+                        <ul>
+                          <li>The work has been published by us or the authors.</li>
+                          <li>You clearly give credit to the original author(s).</li>
+                        </ul>
+                      </li>
+                      <li>You are allowed to reuse work from external sources, subject to following conditions:
+                        <ul>
+                          <li>The work comes from a source of 'good standing' (such as an established open source project). This means you cannot reuse code written by an outside 'friend'.</li>
+                          <li>You clearly give credit to the original author. Acknowledge use of third party resources clearly e.g. in the welcome message, splash screen (if any) or under the 'about' menu. If you are open about reuse, you are less likely
+                            to get into trouble if you unintentionally reused something copyrighted.</li>
+                          <li>You do not violate the license under which the work has been released. Please  <strong>do not use 3rd-party images/audio</strong> in your software unless they have been specifically released to be used freely. Just because you
+                            found it in the Internet does not mean it is free for reuse.</li>
+                          <li><mark>Always get permission from us before you reuse</mark> third-party libraries. Please post your 'request to use 3rd party library' in our GitHub forum. That way, the whole class get to see what libraries are being used by
+                            others.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <tip-box>
+                      <h4 id="giving-credit-for-reused-work">Giving credit for reused work</h4>
+                      <p>Given below are how to give credit for things you reuse from elsewhere. These requirements are specific to this module <span class="dimmed"> i.e., not applicable outside the module (outside the module you should follow the rules specified by your employer and the license of the reused work)</span></p>
+                      <p>If you <strong>used a third party library</strong>:</p>
+                      <ul>
+                        <li>Mention in the <code>README.adoc</code> (under the <em>Acknowledgements</em> section)</li>
+                        <li>mention in the
+                          <trigger trigger="click" for="modal:reusePolicy-ppp">Project Portfolio Page</trigger> if the library has a significant relevance to the features you implemented</li>
+                      </ul>
+                      <p>If you <strong>reused code snippets found on the Internet</strong> <span class="dimmed"> e.g. from StackOverflow answers</span> or<br>
+                        <strong>referred code in another software</strong> or<br>
+                        <strong>referred project code by current/past student</strong>:</p>
+                      <ul>
+                        <li>If you read the code to understand the approach and implemented it yourself, mention it as a comment<br>
+                          <span class="fas fa-cube"></span> Example:
+                          <pre><code class="hljs java"><span class="hljs-comment">//Solution below adapted from https://stackoverflow.com/a/16252290</span>
+{Your implmentation of the reused solution here ...}
+</code></pre>
+                        </li>
+                        <li>If you copy-pasted a non-trivial code block (possibly with minor modifications <span class="dimmed"> renaming, layout changes, changes to comments, etc.</span>), also mark the code block as reused code (using
+                          <trigger trigger="click"
+                            for="modal:reusePolicy-collateSyntax">Collate Tool Syntax</trigger>)<br> Format:
+                          <pre><code class="hljs java"><span class="hljs-comment">//@@author {yourGithubUsername}-reused</span>
+<span class="hljs-comment">//{Info about the source...}</span>
+
+{<span class="hljs-function">Reused <span class="hljs-title">code</span> <span class="hljs-params">(possibly with minor modifications)</span> here ...}
+
+<span class="hljs-comment">//@@author</span>
+</span></code></pre>
+                          <span class="fas fa-cube"></span> Example of reusing a code snippet (with minor modifications):
+                          <pre><code class="hljs java">persons = getList()
+<span class="hljs-comment">//@@author johndoe-reused</span>
+<span class="hljs-comment">//Reused from https://stackoverflow.com/a/34646172 with minor modifications</span>
+Collections.sort(persons, <span class="hljs-keyword">new</span> Comparator&lt;CustomData&gt;() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">compare</span><span class="hljs-params">(CustomData lhs, CustomData rhs)</span> </span>{
+        <span class="hljs-keyword">return</span> lhs.customInt &gt; rhs.customInt ? -<span class="hljs-number">1</span> : (lhs.customInt &lt; rhs.customInt) ? <span class="hljs-number">1</span> : <span class="hljs-number">0</span>;
+    }
+});
+<span class="hljs-comment">//@@author</span>
+<span class="hljs-keyword">return</span> persons;
+</code></pre>
+                        </li>
+                      </ul>
+                    </tip-box>
+                    <modal large="" title="Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project mid-v1.3 → Collate Tool" id="modal:reusePolicy-collateSyntax">
+                    
+                      <div>Collate is a tool for collating code written by different developers.
+                        <p>Steps to use Collate:</p>
+                        <ol>
+                          <li>Download <code>Collate-TUI.jar</code> from the <a href="https://github.com/se-edu/collate/releases">Collate Tool project</a></li>
+                          <li>Annotate your code to indicate who wrote which part of the code (instructions given below)</li>
+                          <li>Run the Collate tool to collate code written by each person into separate files (instructions given below)</li>
+                        </ol>
+                        <h4 id="annotating-code-to-indicate-authorship">Annotating code to indicate authorship</h4>
+                        <ul>
+                          <li>
+                            <p>Mark your code with a <code>//@@author {yourGithubUsername}</code>. Note the double <code>@</code>.<br> The <code>//@@author</code> tag should appear only at the beginning of the code you wrote. The code up to the next <code>//@@author</code>                              tag or the end of the file (whichever comes first) will be considered as was written by that author. Here is a sample code file:</p>
+                            <pre class="hljs"><code>//@@author johndoe
+method 1 ...
+method 2 ...
+//@@author sarahkhoo
+method 3 ...
+//@@author johndoe
+method 4 ...
+</code></pre>
+                          </li>
+                          <li>
+                            <p><strong>If you don't know who wrote the code segment below yours</strong>, you may put an empty <code>//@@author</code> (i.e. no GitHub username) to indicate the end of the code segment you wrote. The author of code below yours
+                              can add the GitHub username to the empty tag later. Here is a sample code with an empty <code>author</code> tag:</p>
+                            <pre class="hljs"><code>method 0 ...
+//@@author johndoe
+method 1 ...
+method 2 ...
+//@@author
+method 3 ...
+method 4 ...
+</code></pre>
+                          </li>
+                          <li>
+                            <p><strong>The author tag syntax varies based on file type</strong> e.g. for java, css, fxml. Use the corresponding comment syntax for non-Java files.<br> Here is an example code from an xml/fxml file.</p>
+                            <pre class="hljs"><code>&lt;!-- @@author sereneWong --&gt;
+&lt;textbox&gt;
+  &lt;label&gt;...&lt;/label&gt;
+  &lt;input&gt;...&lt;/input&gt;
+&lt;/textbox&gt;
+...
+</code></pre>
+                          </li>
+                          <li>
+                            <p><strong>Do not put the <code>//@@author</code> inside java header comments</strong> as only the content below that tag will be collated.<br> 👎
+                              <span class="fas fa-arrow-down"></span></p>
+                            <pre class="hljs"><code>/**
+  * Returns true if ...
+  * @@author johndoe
+  */
+</code></pre>
+                            <p>👍<span class="fas fa-arrow-down"></span></p>
+                            <pre class="hljs"><code>//@@author johndoe
+/**
+  * Returns true if ...
+  */
+</code></pre>
+                          </li>
+                        </ul>
+                        <h4 id="what-to-and-what-not-to-annotate">What to and what not to annotate</h4>
+                        <ul>
+                          <li>
+                            <p><strong>Annotate both functional and test code but not documentation files.</strong></p>
+                          </li>
+                          <li>
+                            <p><strong>Annotate only significant size code blocks that can be reviewed on its own</strong> <span class="dimmed"> e.g., a class, a sequence of methods, a  method.</span> <br> <strong>Claiming credit for code blocks smaller than a method is discouraged</strong>                              but allowed. If you do, do it sparingly and only claim meaningful blocks of code such as a block of statements, a loop, or an if-else statement%%.</p>
+                            <ul>
+                              <li>If an enhancement required you to do tiny changes in many places, there is no need to collate all those tiny changes; you can describe those changes in the Project Portfolio page instead.</li>
+                              <li>If a code block was touched by more than one person, either let the person who wrote most of it (e.g. more than 80%) take credit for the entire block, or leave it as 'unclaimed' (i.e., no author tags).</li>
+                              <li>Related to the above point, <mark>if you claim a code block as your own, more than 80% of the code in that block should have been written by yourself</mark>. For example, no more than 20% of it can be code you reused from
+                                somewhere.</li>
+                              <li>💡 GitHub has a <a href="https://help.github.com/articles/tracing-changes-in-a-file/"><em>blame</em> feature and a <em>history</em></a> feature that can help you determine who wrote a piece of code.</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <p><strong>Do not try to boost the length of your collated files using dubious means</strong> such as duplicating the same code in multiple places. In particular, do not copy-paste test cases to create redundant tests. Even repetitive
+                              code blocks within test methods should be extracted out as utility methods to reduce code duplication.<br> Individual members are responsible for making sure their own collated files contain the correct content.<br> If you
+                              notice a team member claiming credit for code that he/she did not write or use other questionable tactics, you can email us (after the final submission) to let us know.</p>
+                          </li>
+                          <li>
+                            <p><strong>If you wrote a significant amount of code that was not used in the final product</strong>,</p>
+                            <ul>
+                              <li>Create a folder called <code>{project root}/unused</code></li>
+                              <li>Move unused files (or copies of files containing unused code) to that folder</li>
+                              <li>use <code>//@@author {yourGithubUsername}-unused</code> to mark unused code in those files (note the suffix <code>unused</code>) e.g.
+                              </li>
+                            </ul>
+                            <pre class="hljs"><code>//@@author johndoe-unused
+method 1 ...
+method 2 ...
+</code></pre>
+                            <p>Please put a comment in the code to explain why it was not used.</p>
+                          </li>
+                          <li>
+                            <p><strong>If you reused code from elsewhere,</strong> mark such code as <code>//@@author {yourGithubUsername}-reused</code> (note the suffix <code>reused</code>) e.g.
+                            </p>
+                            <pre class="hljs"><code>//@@author johndoe-reused
+method 1 ...
+method 2 ...
+</code></pre>
+                          </li>
+                          <li>
+                            <p><strong>For code generated by the IDE/framework,</strong> it should not be annotated as your own.</p>
+                          </li>
+                          <li>
+                            <p><strong>Code you modified in minor ways</strong> e.g. adding a parameter. These can be left out of collated code but can be mentioned in the Project Portfolio page if you want to claim credit for them.</p>
+                          </li>
+                        </ul>
+                        <h4 id="collating-the-annotated-code">Collating the annotated code</h4>
+                        <p>You need to put the collated code in the following folders</p>
+                        <div class="table-responsive">
+                          <table class="markbind-table table table-bordered table-striped">
+                            <thead>
+                              <tr>
+                                <th>Code Type</th>
+                                <th>Folder</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>functional code</td>
+                                <td><code>collated/functional</code></td>
+                              </tr>
+                              <tr>
+                                <td>test code</td>
+                                <td><code>collated/test</code></td>
+                              </tr>
+                              <tr>
+                                <td>unused code</td>
+                                <td><code>collated/unused</code></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <p>Refer to <a href="https://github.com/se-edu/collate/blob/master/docs/User-Guide.md">Collate Tool's user guide</a> to find how to run the tool over the annotated code.</p>
+                        <p>Given below are DOS sample commands you can put in a batch file and run it to collate the code.</p>
+                        <pre class="hljs"><code>java -jar Collate-TUI.jar collate from src/main to collated/functional include java, fxml, css
+
+java -jar Collate-TUI.jar collate from src/test to collated/test include java
+
+java -jar Collate-TUI.jar collate from unused to collated/unused include java, fxml, css
+</code></pre>
+                        <p>The output should be something like the structure given below.</p>
+                        <pre class="hljs"><code>collated/
+    functional/
+        johndoe.md
+        sarahkhoo.md
+        ravikumar.md
+        ravikumarreused.md
+    test/
+        johndoe.md
+        sarahkhoo.md
+        ravikumar.md
+    unused/
+        johndoe.md
+</code></pre>
+                        <ul>
+                          <li>
+                            <p>After running the collate tool, you are recommended to look through the generated <strong>.md</strong> files to ensure all your code has been extracted correctly.</p>
+                          </li>
+                          <li>
+                            <p><mark>Push the *.md files created to a folder called /collated</mark> in your repo.</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </modal>
+                    <modal large="" title="Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project → Deliverables → Project Portfolio Page" id="modal:reusePolicy-ppp">
+                    
+                      <div>
+                        <p>At the end of the project each student is required to submit a <em>Project Portfolio Page</em>.</p>
+                        <ul>
+                          <li>
+                            <p><strong>Objective:</strong></p>
+                            <ul>
+                              <li>For you to use <span class="dimmed"> (e.g. in your resume)</span> as a well-documented data point of your SE experience</li>
+                              <li>For us to use as a data point to evaluate your,
+                                <ul>
+                                  <li>contributions to the project</li>
+                                  <li>your documentation skills</li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <p><strong>What to include:</strong></p>
+                            <ul>
+                              <li>Main things to include:
+                                <ul>
+                                  <li>links to collated code</li>
+                                  <li>features you implemented <span class="dimmed"> (include relevant extracts from the user guide and the developer guide)</span></li>
+                                  <li>features you propose to implement in future <span class="dimmed"> (include relevant extracts from the user guide and the developer guide if applicable)</span><br> Note: the purpose of allowing you to include <em>proposed</em>                                    features is to provide you more flexibility to show your documentation skills. <span class="dimmed"> e.g. you can bring in a proposed feature just to give you an opportunity to use a UML diagram type not used by the actual features.</span></li>
+                                  <li>other significant contributions to the project <span class="dimmed"> e.g. tweaks to existing features, setting up project tools</span></li>
+                                </ul>
+                              </li>
+                              <li>Other things you can include:
+                                <ul>
+                                  <li>Evidence of helping others <span class="dimmed"> e.g. responses you posted in our forum, bugs you reported in other team's products</span>,</li>
+                                  <li>Evidence of technical leadership <span class="dimmed"> e.g. offering features for others to reuse, evidence of those features being reused by others</span></li>
+                                </ul>
+                              </li>
+                              <li>If you plan to use the PPP in your Resume, you can also include your SE work outside of the module (will not be graded)</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <p><strong>Format</strong>:</p>
+                            <ul>
+                              <li>Page limit: If you have more content than the limit given below, shorten (or omit some content) so that you do not exceed the page limit. Having too much content in the PPP will be viewed unfavorably during grading. Note:
+                                the <mark>page limits given below are <em>after</em> converting to PDF format</mark>. The actual amount of content you require is actually less than what these numbers suggest because the HTML → PDF conversion adds a lot
+                                of spacing around content.
+                                <div class="table-responsive">
+                                  <table class="markbind-table table table-bordered table-striped">
+                                    <thead>
+                                      <tr>
+                                        <th>Content</th>
+                                        <th>Limit</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>Description in point form</td>
+                                        <td>0.5-1</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Extracts from the User Guide</td>
+                                        <td>1-3</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Extracts from the Developer Guide</td>
+                                        <td>3-6</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Total</td>
+                                        <td>5-10</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </li>
+                              <li><span class="fas fa-cube"></span> Follow the <a href="https://nus-tic2002-2018.github.io/addressbook-level4/team/johndoe.html">example in the AddressBook-Level4</a>.</li>
+                              <li>💡 You can use the <a href="http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#include-files">Asciidoc's <code>include</code> feature</a> to include sections from the developer guide or the user guide in your PPP.
+                                Follow the example in the <a href="https://nus-tic2002-2018.github.io/addressbook-level4/team/johndoe.html">sample</a>.</li>
+                              <li><mark>❗️ It is assumed that all contents in the PPP were written primarily by you.</mark> If any section is written by someone else <span class="dimmed"> e.g. someone else wrote described the feature in the User Guide but you implemented the feature</span>,
+                                clearly state that the section was written by someone else <span class="dimmed"> (e.g. <code>Start of Extract [from: User Guide] written by Jane Doe</code>)</span>. <span class="dimmed"> Reason: Your writing skills will be evaluated based on the PPP</span></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </modal>
+                  </div>
+                </div>
+              </div>
           </panel>
           <p></p>
-          <panel src="/website\admin\appendixB-policies._include_.html#policy-outsiderHelp" type="dark" no-close="" expanded="" no-switch="" expandable="false" fragment="policy-outsiderHelp">
+          <panel type="dark" no-close="" expanded="" no-switch="" expandable="false">
             <span slot="header" class="card-title"><span class="text-white"> Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Appendix B (Policies) → Policy on help from outsiders <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
@@ -82,9 +431,19 @@
               </span>
               </span>
               </span>
+              <div>
+                <h3 id="policy-on-help-from-outsiders">Policy on help from outsiders <small><small><span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></small></small>
+                </h3>
+                <div class="indented">
+                  <div>
+                    <p>In general, you are <strong>not allowed to involve outsiders</strong> in your project except your team members and the teaching team. However, It is OK to give your product to others for the purpose of getting voluntary user feedback.
+                      It is also OK to learn from others as long as they don't do your project work themselves.</p>
+                  </div>
+                </div>
+              </div>
           </panel>
           <p></p>
-          <panel src="/website\admin\exams._include_.html#main" type="dark" no-close="" expanded="" no-switch="" expandable="false" fragment="main">
+          <panel type="dark" no-close="" expanded="" no-switch="" expandable="false">
             <span slot="header" class="card-title"><span class="text-white"> Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Exams <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
@@ -92,22 +451,121 @@
               </span>
               </span>
               </span>
+              <div>
+                <p>There is no midterm.</p>
+                <p>The final exam has two parts:</p>
+                <ul>
+                  <li>Part 1: MCQ questions (1 hour, 20 marks)</li>
+                  <li>Part 2: Essay questions (1 hour, 20 marks)</li>
+                </ul>
+                <p>Both papers will be given to you at the start but you need to <strong>answer Part 1 first</strong> (i.e. MCQ paper). It will be <strong>collected 1 hour after the exam start time</strong> (even if arrived late for the exam). You are free
+                  to start part 2 early if you finish Part 1 early.</p>
+                <h2 id="final-exam-part-1-mcq">Final Exam: Part 1 (MCQ)</h2>
+                <p>Each MCQ question gives you a statement to evaluate.</p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> An example statement</p>
+                  <blockquote>
+                    <p>Testing is a Q&amp;A activity</p>
+                  </blockquote>
+                </tip-box>
+                <p>Unless stated otherwise, the meaning of answer options are<br>
+                  <strong>A.</strong> <code>True</code><br>
+                  <strong>B.</strong> Option not used<br>
+                  <strong>C.</strong> <code>Question unclear</code> (in this case, write down your doubt in the question paper)<br>
+                  <strong>D.</strong> Option not used<br>
+                  <strong>E.</strong> <code>False</code></p>
+                <p>Number of questions: 50</p>
+                <div class="full-mode">
+                  <p>Note that you have <strong>slightly more than ½ minute for each question</strong>, which means you need to go through the questions fairly quickly.</p>
+                </div>
+                <p>Given the fast pace required by the paper, to be fair to all students, <strong>you will not be allowed to clarify doubts about questions</strong> (in Part 1) by talking to invigilators.</p>
+                <ul>
+                  <li>If a question is not clear, you can choose option C and write your doubt in the exam paper, near the unclear question.</li>
+                  <li>If your doubt is justified (e.g. there is a typo in the question) or if many students found the question to be unclear, the examiner may decide to omit that question from grading.</li>
+                </ul>
+                <p><strong>Questions in Part 1 are confidential.</strong> You are not allowed to reveal Part 1 content to anyone after the exam. All pages of the assessment paper are to be returned at the end of the exam.</p>
+                <div class="full-mode">
+                  You will be given OCR forms to indicate your answers for Part 1. As each OCR form can accommodate only 50 answers, you will be given 2 OCR forms. **Indicate your student number in both OCR forms**.
+                </div>
+                <p>To save space, we use the following notation in MCQ question.
+                  <strong>[<ins>x</ins> | y | <ins>z</ins>] means ‘x and z, but not y’</strong></p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> SE is [boring | <ins>useful</ins> | <ins>fun</ins>] means <em>SE is not boring</em> AND <em>SE is useful</em> AND <em>SE is fun</em>.</p>
+                  <p><span class="fas fa-cube"></span> Consider the following statement:</p>
+                  <ul>
+                    <li>IDEs can help with [<ins>writing</ins> | debugging | <ins>testing</ins>] code.</li>
+                  </ul>
+                  <p>The correct response for it is <code>False</code> because IDEs can help with all three of the given options, not just writing and testing.</p>
+                </tip-box>
+                <p>Some questions will use <ins>underlines</ins> or <mark>highlighting</mark> to draw your attention to a specific part of the question. That is because those parts are highly relevant to the answer and we don’t want you to miss the relevance
+                  of that part.</p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> Consider the statement below:</p>
+                  <blockquote>
+                    <p>Technique ABC <ins>can</ins> be used to generate more test cases.</p>
+                  </blockquote>
+                  <p>The word <ins>can</ins> is underlined because the decision you need to make is whether the ABC <em>can or cannot</em> be used to generate more test cases; the decision is not whether ABC can be used to generate <em>more or better</em>                    test cases.</p>
+                </tip-box>
+                <p>Markers such as the one given below appears at left margin of the paper to <strong>indicate where the question corresponds to a new column in the OCR form</strong>. E.g. questions 11, 21, 31, etc. (a column has 10 questions). Such markers
+                  can help you to detect if you missed a question in the previous 10 questions. You can safely ignore those markers if you are not interested in making use of that additional hint.</p>
+                <p><img src="/website/admin/images/columnMarker.png"><br></p>
+                <p>Some questions have tags e.g., the question below has a tag <strong><code>JAVA</code></strong>. These <strong>tags provide additional context about the question</strong>. In the example below, the tag indicates that the code given in the
+                  question is Java code.</p>
+                <p><img src="/website/admin/images/contextTag.png"><br></p>
+                <p><strong>The paper is open-book</strong>: you may bring any printed or written materials to the exam in hard copy format. However, given the fast pace required by Part 1, you will not have time left to refer notes during that part of the
+                  exam.</p>
+                <p>💡 <strong>Mark the OCR form as you go</strong>, rather than planning to transfer your answers to the OCR form near the end. <span class="dimmed"> Reason: Given there are 50 questions, it will be hard to estimate how much time you need to mass-transfer all answers to OCR forms.</span></p>
+                <p>💡 <strong>Write the answer in the exam paper as well</strong> as marking it in the OCR form. <span class="dimmed"> Reason: It will reduce the chance of missing a question. Furthermore, in case you missed a question, it will help you correct the OCR form quickly.</span></p>
+                <p>💡 We have tried to <strong>avoid deliberately misleading/tricky questions</strong>. If a question seems to take a very long time to figure out, you are probably over-thinking it.</p>
+                <box type="success">
+                  <p>You will be given a practice exam paper to familiarize yourself with this slightly unusual exam format.
+                  </p>
+                </box>
+                <h2 id="final-exam-part-2-essay">Final Exam: Part 2 (Essay)</h2>
+                <p>Unlike in part 1, <strong>you can ask invigilators for clarifications</strong> if you found a question to be unclear in part 2.</p>
+                <p>Yes, <strong>you may use pencils</strong> when answering part 2.</p>
+                <div class="full-mode">
+                  <p>[<a href="http://www.comp.nus.edu.sg/~tic2002/AY1718S1/files/Practice%20Exam%20Paper%20-%20Part%202.pdf">Sample paper</a>] [
+                    <a href="http://www.comp.nus.edu.sg/~tic2002/AY1718S1/files/Practice%20Exam%20Paper%20-%20Part%202%20(answers).pdf">Answers to the sample paper</a>]</p>
+                </div>
+              </div>
           </panel>
           <p></p>
-          <panel src="/website\admin\appendixC-faq._include_.html#admin-faq-noLaptop" type="dark" no-close="" expanded="" no-switch="" expandable="false" fragment="admin-faq-noLaptop">
+          <panel type="dark" no-close="" expanded="" no-switch="" expandable="false">
             <span slot="header" class="card-title"><span class="text-white"> Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Appendix C (FAQs) → What if I don’t carry around a laptop? <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
               </span>
+              <div>
+                <h3 id="what-if-i-dont-carry-around-a-laptop">What if I don’t carry around a laptop? <small><small><span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small>
+                </h3>
+                <div class="indented">
+                  <div>
+                    <p>If you do not have a laptop or prefer not to bring the laptop, it is up to you to show your work to the tutor in some way (e.g. by connecting to your home PC remotely), <em>without</em> requiring extra time/effort from the tutor or
+                      team members.</p>
+                    <p><span class="dimmed">Reason: As you enjoy the benefits of not bring the laptop; you (not others) should bear the cost too.</span></p>
+                  </div>
+                </div>
+              </div>
           </panel>
           <p></p>
-          <panel src="/website\admin\appendixB-policies._include_.html#policy-publishingSubmissions" type="dark" no-close="" expanded="" no-switch="" expandable="false" fragment="policy-publishingSubmissions">
+          <panel type="dark" no-close="" expanded="" no-switch="" expandable="false">
             <span slot="header" class="card-title"><span class="text-white"> Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Appendix B (Policies) → Policy on publishing submissions <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
               </span>
+              <div>
+                <h3 id="policy-on-publishing-submissions">Policy on publishing submissions <small><small><span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small>
+                </h3>
+                <div class="indented">
+                  <div>
+                    <p>The source code are publicly available and are available for reuse by others without any restrictions. <br> Is publishing submissions unfair to the team? We don't think so. If you were the first to think of something your peers are
+                      willing to adopt later, that means you are already ahead of them and they are unlikely to earn more marks by adopting your ideas.</p>
+                  </div>
+                </div>
+              </div>
           </panel>
           <p></p>
         </div>
@@ -193,7 +651,7 @@
               </div>
             </panel>
             <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
-              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.1c</code></span></big> <span><span class="fas fa-trophy"></span> Can do exception handling in code</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.1c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain how exception handling is done typically</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
               <span
                 class="glyphicon glyphicon-star" aria-hidden="true"></span>
                 </span>
@@ -218,16 +676,6 @@
                         <p><strong>Exception objects can propagate up the function call hierarchy until it is dealt with.</strong> Usually, an exception thrown by a function is caught by the caller function. If the called function does not know how to deal
                           with the exception it caught, it can throw/raise the Exception object to its own caller. If none of the callers is prepared to deal with the exception, the exceptions can propagate through the
                           <tooltip content="the hieararchy of function calls">function call stack</tooltip> until it is received by the main function and thrown to the runtime, thus halting the system.</p>
-                        <tip-box>
-                          <div class="alt-java">
-                            <p><span class="fas fa-cube"></span> In the code given below, <code>processArray</code> can potentially throw an <code>InvalidInputException</code>. Because of that, <code>processInput</code> method invokes <code>processArray</code>                              method inside a <code>try{ }</code> block and has a <code>catch{ }</code> block to specify what to do if the exception is actually thrown.</p>
-                            <img src="/website/book/errorHandling/exceptions/how/images/processInput.png" width="400">
-                            <p></p>
-                          </div>
-                          <div class="alt-python">
-                            <p><span class="fas fa-cube"></span> In the code given below, <code>process_array</code> function can potentially raise a <code>ValueError</code> exception. Because of that, <code>process_input</code> function invokes <code>process_array</code>                              function inside a <code>try</code> clause and has a <code>except</code> clause to specify what to do if the exception is actually raised.</p>
-                            <img src="/website/book/errorHandling/exceptions/how/images/example-python.png" width="400"></div>
-                        </tip-box>
                         <p>Advantages of exception handling in this way:</p>
                         <ul>
                           <li>The ability to propagate error information through the call stack.</li>
@@ -235,13 +683,6 @@
                         </ul>
                       </div>
                       <div>
-                        <div>
-                          <panel header="<span class='fas fa-paperclip'></span> Resources" expandable="">
-                            <ul>
-                              <li><a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/">Java Exceptions Tutorial from Oracle</a></li>
-                            </ul>
-                          </panel>
-                        </div>
                         <div>
                           <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
                             <div>
@@ -266,27 +707,184 @@
                     </div>
                   </div>
                 </div>
-                <hr style="border-top: dashed 1px; border-color:grey">
-                <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
+            </panel>
+            <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
+              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.1d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain Java Exceptions</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              <span
+                class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                </span>
+                </span>
+                </span>
+                </span>
                 <div>
-                  <p><strong>Acceptable</strong>: Some code you wrote that involves exception handling.</p>
-                  <p><strong>Suggested</strong>: Do the exercise in [<a href="https://github.com/nus-tic2002-2018/addressbook-level2/blob/master/doc/LearningOutcomes.md#handle-exceptions-lo-exceptions">addressbook-level2: LO-Exceptions</a>].</p>
-                  <div>
-                    <p><strong>Submission</strong>:</p>
-                    <ul>
-                      <li>Options 1 (discouraged): Show the relevant code during the tutorial.</li>
-                      <li>Options 2 (preferred): Create a pull request by following the instructions below.</li>
-                    </ul>
-                    <p>
-                      <panel src="/website\admin\appendixE-gitHub._include_.html#tutorial-pr-instructions" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Appendix E: Using GitHub Project Hosting → Submitting Pull Requests as evidence of an LO%%"
-                        fragment="tutorial-pr-instructions"></panel>
-                    </p>
-                    <p>If you choose option 2, we recommend that you complete this week's <em>Project Management</em> LOs first; there are many ways to create PRs but we expect you to create PRs in a specific way, as specified in the LOs.</p>
+                  <div></div>
+                  <p></p>
+                  <p><span class="dimmed"><strong><span>C++ to Java → Exceptions →
+</span></strong>
+                    </span>
+                  </p>
+                  <div id="title-and-body">
+                    <div>
+                      <h4 id="what-are-exceptions">What are Exceptions?</h4>
+                    </div>
+                    <div id="main">
+                      <div>
+                        <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
+                        <blockquote>
+                          <tip-box type="definition">
+                            <div>
+                              <p><strong>Exception</strong>:</p>
+                              <blockquote>
+                                <p>The term <em>exception</em> is shorthand for the phrase &quot;exceptional event.&quot; An <em>exception</em> is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions.
+                                  –- Java Tutorial (Oracle Inc.)</p>
+                              </blockquote>
+                            </div>
+                          </tip-box>
+                          <p><strong>When an error occurs within a method, the method creates an <em>exception object</em> and hands it off to the runtime system.</strong> The exception object contains information about the error, including its type and
+                            the state of the program when the error occurred. Creating an exception object and handing it to the runtime system is called <em>throwing</em> an exception.</p>
+                          <p><strong>After a method throws an exception, the runtime system attempts to find something to handle it in the <tooltip content="the ordered list of methods that had been called to get to the method where the error occurred"><em>call stack</em></tooltip>.</strong>                            The runtime system searches the call stack for a method that contains a block of code that can handle the exception. This block of code is called an <em>exception handler</em>. The search begins with the method in which the
+                            error occurred and proceeds through the call stack in the reverse order in which the methods were called. When an appropriate handler is found, the runtime system passes the exception to the handler. An exception handler is
+                            considered appropriate if the type of the exception object thrown matches the type that can be handled by the handler.</p>
+                          <p><strong>The exception handler chosen is said to <em>catch</em> the exception.</strong> If the runtime system exhaustively searches all the methods on the call stack without finding an appropriate exception handler, the program
+                            terminates.</p>
+                          <p><strong>Java code must honor the <em>Catch or Specify</em> Requirement.</strong> This means that code that might throw certain exceptions must be enclosed by either of the following:</p>
+                          <ul>
+                            <li>A <code>try</code> statement that catches the exception. The <code>try</code> must provide a handler for the exception.</li>
+                            <li>A method that specifies that it can throw the exception. The method must provide a <code>throws</code> clause that lists the exception.</li>
+                          </ul>
+                          <p><strong>There are three basic categories of exceptions, only one of which is subject to the 'Catch or Specify' Requirement.</strong></p>
+                          <ul>
+                            <li><strong><em>Checked</em> exceptions</strong>: These are exceptional conditions that a well-written application should anticipate and recover from. For example, suppose an application prompts a user for an input file name, then
+                              opens the file by passing the name to the constructor for java.io.FileReader. Normally, the user provides the name of an existing, readable file, so the construction of the <code>FileReader</code> object succeeds, and the
+                              execution of the application proceeds normally. But sometimes the user supplies the name of a nonexistent file, and the constructor throws <code>java.io.FileNotFoundException</code>. A well-written program will catch this
+                              exception and notify the user of the mistake, possibly prompting for a corrected file name.
+                              <ul>
+                                <li><mark>Checked exceptions are subject to the Catch or Specify Requirement.</mark></li>
+                                <li>All exceptions are checked exceptions, except for <code>Error</code>, <code>RuntimeException</code>, and their subclasses.</li>
+                              </ul>
+                            </li>
+                          </ul>
+                          <p></p>
+                          <ul>
+                            <li><strong>Errors</strong>: These are exceptional conditions that are external to the application, and that the application usually cannot anticipate or recover from. For example, suppose that an application successfully opens
+                              a file for input, but is unable to read the file because of a hardware or system malfunction. The unsuccessful read will throw <code>java.io.IOError</code>. An application might choose to catch this exception, in order to
+                              notify the user of the problem — but it also might make sense for the program to print a stack trace and exit.
+                              <ul>
+                                <li>Errors are not subject to the 'Catch or Specify' Requirement.</li>
+                                <li>Errors are those exceptions indicated by <code>Error</code> and its subclasses.</li>
+                              </ul>
+                            </li>
+                          </ul>
+                          <p></p>
+                          <ul>
+                            <li><strong>Runtime exceptions</strong>: These are exceptional conditions that are internal to the application, and that the application usually cannot anticipate or recover from. These usually indicate programming bugs, such as
+                              logic errors or improper use of an API. For example, consider the application described previously that passes a file name to the constructor for FileReader. If a logic error causes a null to be passed to the constructor,
+                              the constructor will throw <code>NullPointerException</code>. The application can catch this exception, but it probably makes more sense to eliminate the bug that caused the exception to occur.
+                              <ul>
+                                <li>Runtime exceptions are not subject to the 'Catch or Specify' Requirement.</li>
+                                <li>Runtime exceptions are those indicated by <code>RuntimeException</code> and its subclasses.</li>
+                              </ul>
+                            </li>
+                          </ul>
+                          <p><strong>Errors and runtime exceptions are collectively known as <em>unchecked</em> exceptions.</strong></p>
+                        </blockquote>
+                      </div>
+                      <div></div>
+                    </div>
                   </div>
                 </div>
             </panel>
             <panel type="info" expanded="" no-close="" no-switch="" epxandable="false">
-              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.1d</code></span></big> <span><span class="fas fa-trophy"></span> Can avoid using exceptions to control normal workflow</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.1e</code></span></big> <span><span class="fas fa-trophy"></span> Can use Java Exceptions</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              <span
+                class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                </span>
+                </span>
+                <div>
+                  <div></div>
+                  <p></p>
+                  <p><span class="dimmed"><strong><span>C++ to Java → Exceptions →
+</span></strong>
+                    </span>
+                  </p>
+                  <div id="title-and-body">
+                    <div>
+                      <h4 id="how-to-use-exceptions">How to Use Exceptions</h4>
+                    </div>
+                    <div id="main">
+                      <div>
+                        <p><span class="fas fa-cube"></span> In the code given below, <code>processArray</code> can potentially throw an <code>InvalidInputException</code>. Because of that, <code>processInput</code> method invokes <code>processArray</code>                          method inside a <code>try{ }</code> block and has a <code>catch{ }</code> block to specify what to do if the exception is actually thrown.</p>
+                        <img src="/website/book/errorHandling/exceptions/how/images/processInput.png" width="400">
+                        <p></p>
+                        <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
+                        <blockquote>
+                          <p><strong>A program can catch exceptions by using a combination of the <code>try</code>, <code>catch</code>, and <code>finally</code> blocks.</strong> Here is an example:</p>
+                          <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeList</span><span class="hljs-params">()</span> </span>{
+    PrintWriter out = <span class="hljs-keyword">null</span>;
+
+    <span class="hljs-keyword">try</span> {
+        System.out.println(<span class="hljs-string">"Entering"</span> + <span class="hljs-string">" try statement"</span>);
+
+        out = <span class="hljs-keyword">new</span> PrintWriter(<span class="hljs-keyword">new</span> FileWriter(<span class="hljs-string">"OutFile.txt"</span>));
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; SIZE; i++) {
+            out.println(<span class="hljs-string">"Value at: "</span> + i + <span class="hljs-string">" = "</span> + list.get(i));
+        }
+    } <span class="hljs-keyword">catch</span> (IndexOutOfBoundsException e) {
+        System.err.println(<span class="hljs-string">"Caught IndexOutOfBoundsException: "</span> + e.getMessage());
+
+    } <span class="hljs-keyword">catch</span> (IOException e) {
+        System.err.println(<span class="hljs-string">"Caught IOException: "</span> +  e.getMessage());
+
+    } <span class="hljs-keyword">finally</span> {
+        <span class="hljs-keyword">if</span> (out != <span class="hljs-keyword">null</span>) {
+            System.out.println(<span class="hljs-string">"Closing PrintWriter"</span>);
+            out.close();
+        } <span class="hljs-keyword">else</span> {
+            System.out.println(<span class="hljs-string">"PrintWriter not open"</span>);
+        }
+    }
+}
+</code></pre>
+                          <ul>
+                            <li>
+                              <p>The <code>try</code> block identifies a block of code in which an exception can occur.</p>
+                            </li>
+                            <li>
+                              <p>The <code>catch</code> block identifies a block of code, known as an exception handler, that can handle a particular type of exception.</p>
+                            </li>
+                            <li>
+                              <p>The <code>finally</code> block identifies a block of code that is guaranteed to execute, and is the right place to close files, recover resources, and otherwise clean up after the code enclosed in the try block.</p>
+                            </li>
+                            <li>
+                              <p>The <code>try</code> statement should contain at least one <code>catch</code> block or a finally block and may have multiple <code>catch</code> blocks.</p>
+                            </li>
+                            <li>
+                              <p>The class of the exception object indicates the type of exception thrown. The exception object can contain further information about the error, including an error message.</p>
+                            </li>
+                          </ul>
+                          <p><strong>You can use the <code>throw</code> statement to throw an exception.</strong> The throw statement requires a single argument: a throwable object. Throwable objects are instances of any subclass of the <code>Throwable</code>                            class. Here's an example of a throw statement.</p>
+                          <pre><code class="hljs java"><span class="hljs-keyword">if</span> (size == <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> EmptyStackException();
+}
+</code></pre>
+                          <p><strong>If the a method doesn't catch the checked exceptions that can occur within it, it must specify that it can throw these exceptions</strong> using a <code>throws</code> clause. Here's an example.</p>
+                          <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeList</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> IOException, IndexOutOfBoundsException </span>{
+    PrintWriter out = <span class="hljs-keyword">new</span> PrintWriter(<span class="hljs-keyword">new</span> FileWriter(<span class="hljs-string">"OutFile.txt"</span>));
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; SIZE; i++) {
+        out.println(<span class="hljs-string">"Value at: "</span> + i + <span class="hljs-string">" = "</span> + list.get(i));
+    }
+    out.close();
+}
+</code></pre>
+                        </blockquote>
+                      </div>
+                      <div></div>
+                    </div>
+                  </div>
+                </div>
+            </panel>
+            <panel type="info" expanded="" no-close="" no-switch="" epxandable="false">
+              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.1f</code></span></big> <span><span class="fas fa-trophy"></span> Can avoid using exceptions to control normal workflow</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
               <span
                 class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
                 </span>
@@ -313,7 +911,7 @@
             </panel>
           </panel>
           <panel no-close="" expanded="" no-switch="" expandable="false">
-            <span slot="header" class="card-title"><span><code>W4.2</code> <strong>Can use exceptions in Java</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><code>W4.2</code> <strong>Can use Generics in Java</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
               </span>
@@ -321,188 +919,7 @@
               </span>
               </span>
               <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
-                <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.2a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain Java Exceptions</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                <span
-                  class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                  </span>
-                  </span>
-                  </span>
-                  </span>
-                  <div>
-                    <div></div>
-                    <p></p>
-                    <p><span class="dimmed"><strong><span>C++ to Java → Exceptions →
-</span></strong>
-                      </span>
-                    </p>
-                    <div id="title-and-body">
-                      <div>
-                        <h4 id="what-are-exceptions">What are Exceptions?</h4>
-                      </div>
-                      <div id="main">
-                        <div>
-                          <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
-                          <blockquote>
-                            <tip-box type="definition">
-                              <div>
-                                <p><strong>Exception</strong>:</p>
-                                <blockquote>
-                                  <p>The term <em>exception</em> is shorthand for the phrase &quot;exceptional event.&quot; An <em>exception</em> is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's
-                                    instructions. –- Java Tutorial (Oracle Inc.)</p>
-                                </blockquote>
-                              </div>
-                            </tip-box>
-                            <p><strong>When an error occurs within a method, the method creates an <em>exception object</em> and hands it off to the runtime system.</strong> The exception object contains information about the error, including its type and
-                              the state of the program when the error occurred. Creating an exception object and handing it to the runtime system is called <em>throwing</em> an exception.</p>
-                            <p><strong>After a method throws an exception, the runtime system attempts to find something to handle it in the <tooltip content="the ordered list of methods that had been called to get to the method where the error occurred"><em>call stack</em></tooltip>.</strong>                              The runtime system searches the call stack for a method that contains a block of code that can handle the exception. This block of code is called an <em>exception handler</em>. The search begins with the method in which the
-                              error occurred and proceeds through the call stack in the reverse order in which the methods were called. When an appropriate handler is found, the runtime system passes the exception to the handler. An exception handler
-                              is considered appropriate if the type of the exception object thrown matches the type that can be handled by the handler.</p>
-                            <p><strong>The exception handler chosen is said to <em>catch</em> the exception.</strong> If the runtime system exhaustively searches all the methods on the call stack without finding an appropriate exception handler, the program
-                              terminates.</p>
-                            <p><strong>Java code must honor the <em>Catch or Specify</em> Requirement.</strong> This means that code that might throw certain exceptions must be enclosed by either of the following:</p>
-                            <ul>
-                              <li>A <code>try</code> statement that catches the exception. The <code>try</code> must provide a handler for the exception.</li>
-                              <li>A method that specifies that it can throw the exception. The method must provide a <code>throws</code> clause that lists the exception.</li>
-                            </ul>
-                            <p><strong>There are three basic categories of exceptions, only one of which is subject to the 'Catch or Specify' Requirement.</strong></p>
-                            <ul>
-                              <li><strong><em>Checked</em> exceptions</strong>: These are exceptional conditions that a well-written application should anticipate and recover from. For example, suppose an application prompts a user for an input file name,
-                                then opens the file by passing the name to the constructor for java.io.FileReader. Normally, the user provides the name of an existing, readable file, so the construction of the <code>FileReader</code> object succeeds,
-                                and the execution of the application proceeds normally. But sometimes the user supplies the name of a nonexistent file, and the constructor throws <code>java.io.FileNotFoundException</code>. A well-written program will
-                                catch this exception and notify the user of the mistake, possibly prompting for a corrected file name.
-                                <ul>
-                                  <li><mark>Checked exceptions are subject to the Catch or Specify Requirement.</mark></li>
-                                  <li>All exceptions are checked exceptions, except for <code>Error</code>, <code>RuntimeException</code>, and their subclasses.</li>
-                                </ul>
-                              </li>
-                            </ul>
-                            <p></p>
-                            <ul>
-                              <li><strong>Errors</strong>: These are exceptional conditions that are external to the application, and that the application usually cannot anticipate or recover from. For example, suppose that an application successfully opens
-                                a file for input, but is unable to read the file because of a hardware or system malfunction. The unsuccessful read will throw <code>java.io.IOError</code>. An application might choose to catch this exception, in order
-                                to notify the user of the problem — but it also might make sense for the program to print a stack trace and exit.
-                                <ul>
-                                  <li>Errors are not subject to the 'Catch or Specify' Requirement.</li>
-                                  <li>Errors are those exceptions indicated by <code>Error</code> and its subclasses.</li>
-                                </ul>
-                              </li>
-                            </ul>
-                            <p></p>
-                            <ul>
-                              <li><strong>Runtime exceptions</strong>: These are exceptional conditions that are internal to the application, and that the application usually cannot anticipate or recover from. These usually indicate programming bugs, such
-                                as logic errors or improper use of an API. For example, consider the application described previously that passes a file name to the constructor for FileReader. If a logic error causes a null to be passed to the constructor,
-                                the constructor will throw <code>NullPointerException</code>. The application can catch this exception, but it probably makes more sense to eliminate the bug that caused the exception to occur.
-                                <ul>
-                                  <li>Runtime exceptions are not subject to the 'Catch or Specify' Requirement.</li>
-                                  <li>Runtime exceptions are those indicated by <code>RuntimeException</code> and its subclasses.</li>
-                                </ul>
-                              </li>
-                            </ul>
-                            <p><strong>Errors and runtime exceptions are collectively known as <em>unchecked</em> exceptions.</strong></p>
-                          </blockquote>
-                        </div>
-                        <div></div>
-                      </div>
-                    </div>
-                  </div>
-              </panel>
-              <panel type="info" expanded="" no-close="" no-switch="" epxandable="false">
-                <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.2b</code></span></big> <span><span class="fas fa-trophy"></span> Can use Java Exceptions</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                <span
-                  class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-                  </span>
-                  </span>
-                  <div>
-                    <div></div>
-                    <p></p>
-                    <p><span class="dimmed"><strong><span>C++ to Java → Exceptions →
-</span></strong>
-                      </span>
-                    </p>
-                    <div id="title-and-body">
-                      <div>
-                        <h4 id="how-to-use-exceptions">How to Use Exceptions</h4>
-                      </div>
-                      <div id="main">
-                        <div>
-                          <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
-                          <blockquote>
-                            <p><strong>A program can catch exceptions by using a combination of the <code>try</code>, <code>catch</code>, and <code>finally</code> blocks.</strong> Here is an example:</p>
-                            <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeList</span><span class="hljs-params">()</span> </span>{
-    PrintWriter out = <span class="hljs-keyword">null</span>;
-
-    <span class="hljs-keyword">try</span> {
-        System.out.println(<span class="hljs-string">"Entering"</span> + <span class="hljs-string">" try statement"</span>);
-
-        out = <span class="hljs-keyword">new</span> PrintWriter(<span class="hljs-keyword">new</span> FileWriter(<span class="hljs-string">"OutFile.txt"</span>));
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; SIZE; i++) {
-            out.println(<span class="hljs-string">"Value at: "</span> + i + <span class="hljs-string">" = "</span> + list.get(i));
-        }
-    } <span class="hljs-keyword">catch</span> (IndexOutOfBoundsException e) {
-        System.err.println(<span class="hljs-string">"Caught IndexOutOfBoundsException: "</span> + e.getMessage());
-
-    } <span class="hljs-keyword">catch</span> (IOException e) {
-        System.err.println(<span class="hljs-string">"Caught IOException: "</span> +  e.getMessage());
-
-    } <span class="hljs-keyword">finally</span> {
-        <span class="hljs-keyword">if</span> (out != <span class="hljs-keyword">null</span>) {
-            System.out.println(<span class="hljs-string">"Closing PrintWriter"</span>);
-            out.close();
-        } <span class="hljs-keyword">else</span> {
-            System.out.println(<span class="hljs-string">"PrintWriter not open"</span>);
-        }
-    }
-}
-</code></pre>
-                            <ul>
-                              <li>
-                                <p>The <code>try</code> block identifies a block of code in which an exception can occur.</p>
-                              </li>
-                              <li>
-                                <p>The <code>catch</code> block identifies a block of code, known as an exception handler, that can handle a particular type of exception.</p>
-                              </li>
-                              <li>
-                                <p>The <code>finally</code> block identifies a block of code that is guaranteed to execute, and is the right place to close files, recover resources, and otherwise clean up after the code enclosed in the try block.</p>
-                              </li>
-                              <li>
-                                <p>The <code>try</code> statement should contain at least one <code>catch</code> block or a finally block and may have multiple <code>catch</code> blocks.</p>
-                              </li>
-                              <li>
-                                <p>The class of the exception object indicates the type of exception thrown. The exception object can contain further information about the error, including an error message.</p>
-                              </li>
-                            </ul>
-                            <p><strong>You can use the <code>throw</code> statement to throw an exception.</strong> The throw statement requires a single argument: a throwable object. Throwable objects are instances of any subclass of the <code>Throwable</code>                              class. Here's an example of a throw statement.</p>
-                            <pre><code class="hljs java"><span class="hljs-keyword">if</span> (size == <span class="hljs-number">0</span>) {
-    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> EmptyStackException();
-}
-</code></pre>
-                            <p><strong>If the a method doesn't catch the checked exceptions that can occur within it, it must specify that it can throw these exceptions</strong> using a <code>throws</code> clause. Here's an example.</p>
-                            <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeList</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> IOException, IndexOutOfBoundsException </span>{
-    PrintWriter out = <span class="hljs-keyword">new</span> PrintWriter(<span class="hljs-keyword">new</span> FileWriter(<span class="hljs-string">"OutFile.txt"</span>));
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; SIZE; i++) {
-        out.println(<span class="hljs-string">"Value at: "</span> + i + <span class="hljs-string">" = "</span> + list.get(i));
-    }
-    out.close();
-}
-</code></pre>
-                          </blockquote>
-                        </div>
-                        <div></div>
-                      </div>
-                    </div>
-                  </div>
-              </panel>
-          </panel>
-          <panel no-close="" expanded="" no-switch="" expandable="false">
-            <span slot="header" class="card-title"><span><code>W4.3</code> <strong>Can use Generics in Java</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <span
-              class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              </span>
-              </span>
-              </span>
-              </span>
-              <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
-                <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.3a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain Java Generics</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.2a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain Java Generics</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                 <span
                   class="glyphicon glyphicon-star" aria-hidden="true"></span>
                   </span>
@@ -546,7 +963,7 @@
                   </div>
               </panel>
               <panel type="info" expanded="" no-close="" no-switch="" epxandable="false">
-                <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.3b</code></span></big> <span><span class="fas fa-trophy"></span> Can use Java Generics</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.2b</code></span></big> <span><span class="fas fa-trophy"></span> Can use Java Generics</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                 <span
                   class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
                   </span>
@@ -641,7 +1058,7 @@ Pair&lt;String, String&gt;  p2 = <span class="hljs-keyword">new</span> OrderedPa
               </panel>
           </panel>
           <panel no-close="" expanded="" no-switch="" expandable="false">
-            <span slot="header" class="card-title"><span><code>W4.4</code> <strong>Can use Collections in Java</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><code>W4.3</code> <strong>Can use Collections in Java</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
               </span>
@@ -649,7 +1066,7 @@ Pair&lt;String, String&gt;  p2 = <span class="hljs-keyword">new</span> OrderedPa
               </span>
               </span>
               <panel type="info" expanded="" no-close="" no-switch="" epxandable="false">
-                <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.4a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the Collections framework</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.3a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the Collections framework</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                 <span
                   class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
                   </span>
@@ -713,16 +1130,9 @@ Pair&lt;String, String&gt;  p2 = <span class="hljs-keyword">new</span> OrderedPa
                       </div>
                     </div>
                   </div>
-                  <hr style="border-top: dashed 1px; border-color:grey">
-                  <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
-                  <div>
-                    <p><strong>Acceptable</strong>: Some code that you have written that uses some Java Collection classes.</p>
-                    <p><strong>Suggested</strong>: Do the exercise given in <a href="https://github.com/nus-tic2002-2018/addressbook-level1/blob/master/docs/LearningOutcomes.adoc#use-collections-lo-collections">AddressBook - Level1 : LO-Collections</a></p>
-                    <p><strong>Submission</strong>: Show your code to the tutor during the tutorial.</p>
-                  </div>
               </panel>
               <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
-                <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.4b</code></span></big> <span><span class="fas fa-trophy"></span> Can use the ArrayList class</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.3b</code></span></big> <span><span class="fas fa-trophy"></span> Can use the ArrayList class</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                 <span
                   class="glyphicon glyphicon-star" aria-hidden="true"></span>
                   </span>
@@ -821,7 +1231,7 @@ After clearing: []
                   </div>
               </panel>
               <panel type="info" expanded="" no-close="" no-switch="" epxandable="false">
-                <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.4c</code></span></big> <span><span class="fas fa-trophy"></span> Can use the HashMap class</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.3c</code></span></big> <span><span class="fas fa-trophy"></span> Can use the HashMap class</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                 <span
                   class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
                   </span>
@@ -923,7 +1333,7 @@ Number of keys after clearing: 0
         <p><span class="activity-desc">Design</span></p>
         <div class="indented">
           <panel no-close="" expanded="" no-switch="" expandable="false">
-            <span slot="header" class="card-title"><span><code>W4.5</code> <strong>Can explain models</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><code>W4.4</code> <strong>Can explain models</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
               </span>
@@ -931,7 +1341,7 @@ Number of keys after clearing: 0
               </span>
               </span>
               <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
-                <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.5a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain models</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.4a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain models</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                 <span
                   class="glyphicon glyphicon-star" aria-hidden="true"></span>
                   </span>
@@ -1020,7 +1430,7 @@ Number of keys after clearing: 0
                   </div>
               </panel>
               <panel type="info" expanded="" no-close="" no-switch="" epxandable="false">
-                <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.5b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain how models are used</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.4b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain how models are used</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                 <span
                   class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
                   </span>
@@ -1167,24 +1577,10 @@ Number of keys after clearing: 0
                       </div>
                     </div>
                   </div>
-                  <hr style="border-top: dashed 1px; border-color:grey">
-                  <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
-                  <div>
-                    <div>
-                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain usage of models in a class project">
-                        <question>
-                          <p>Explain how models (e.g. UML diagrams) can be used in a class project.</p>
-                          <div slot="hint">
-                            <p>Can models be useful in evaluating the design quality of a software written by students?</p>
-                          </div>
-                        </question>
-                      </panel>
-                    </div>
-                  </div>
               </panel>
           </panel>
           <panel no-close="" expanded="" no-switch="" expandable="false">
-            <span slot="header" class="card-title"><span><code>W4.6</code> <strong>Can explain basic object/class structures</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><code>W4.5</code> <strong>Can explain basic object/class structures</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
               </span>
@@ -1192,7 +1588,7 @@ Number of keys after clearing: 0
               </span>
               </span>
               <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
-                <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.6a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain structure modelling of OO solutions</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.5a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain structure modelling of OO solutions</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                 <span
                   class="glyphicon glyphicon-star" aria-hidden="true"></span>
                   </span>
@@ -1258,7 +1654,7 @@ Number of keys after clearing: 0
                   </div>
               </panel>
               <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
-                <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.6b</code></span></big> <span><span class="fas fa-trophy"></span> Can use basic-level class diagrams</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.5b</code></span></big> <span><span class="fas fa-trophy"></span> Can use basic-level class diagrams</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                 <span
                   class="glyphicon glyphicon-star" aria-hidden="true"></span>
                   </span>
@@ -1351,22 +1747,9 @@ Number of keys after clearing: 0
                       </div>
                     </div>
                   </div>
-                  <hr style="border-top: dashed 1px; border-color:grey">
-                  <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
-                  <div>
-                    <div>
-                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain Class Diagram">
-                        <question>
-                          <p>Explain the associations, navigabilities, and multiplicities in the class diagram below:</p>
-                          <img src="/website/book/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400">
-                          <p></p>
-                        </question>
-                      </panel>
-                    </div>
-                  </div>
               </panel>
               <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
-                <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.6c</code></span></big> <span><span class="fas fa-trophy"></span> Can distinguish between class diagrams and object diagrams</span>
+                <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.5c</code></span></big> <span><span class="fas fa-trophy"></span> Can distinguish between class diagrams and object diagrams</span>
                 <span
                   class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
                   </span>
@@ -1444,11 +1827,10 @@ Number of keys after clearing: 0
           <br>
           <panel type="seamless" header="##### Evidence for weekly LOs %%(for reference)%%">
             <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W3.1c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain how substitutability operation
-              overriding, and dynamic binding relates to polymorphism</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W3.3d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain how substitutability operation
+              overriding, and dynamic binding relates to polymorphism</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
               <span
-                class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                </span>
+                class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
                 </span>
                 </span>
                 <div class="indented">
@@ -1480,142 +1862,8 @@ Number of keys after clearing: 0
                               <li><strong>Dynamic binding</strong>: Calls to overridden methods are bound to the implementation of the actual object's class dynamically during the runtime. That is how the polymorphic code can call the method of the parent
                                 class and yet execute the implementation of the child class.</li>
                             </ul>
-                            <h5 id="implementing-polymorphism"><big>Implementing polymorphism</big></h5>
-                            <p><strong>We can use inheritance to achieve polymorphism</strong>.</p>
-                            <tip-box>
-                              <p><span class="fas fa-cube"></span> Continuing with the example given in [
-                                <trigger trigger="click" for="modal:oopImpl-polymorphism"><span class="glyphicon glyphicon-education" aria-hidden="true"></span> OOP → Polymorphism → Introduction </trigger>], given below is the minimum code for <code>Staff</code>, <code>Admin</code>, and <code>Academic</code>                                classes that achieves the desired polymorphism.</p>
-                              <modal large="" title="" id="modal:oopImpl-polymorphism">
-                              
-                                <div>
-                                  <div></div>
-                                  <p></p>
-                                  <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Polymorphism →
-</span></strong>
-                                    </span>
-                                  </p>
-                                  <div id="title-and-body">
-                                    <div>
-                                      <h4 id="what-5">What</h4>
-                                    </div>
-                                    <div id="main">
-                                      <div>
-                                        <tip-box type="primary">
-                                          <div>
-                                            <p><strong>Polymorphism</strong>:</p>
-                                            <blockquote>
-                                              <p>The ability of different objects to respond, each in its own way, to identical messages is called polymorphism. <sub>-- <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/">Object-Oriented Programming with Objective-C</a>, Apple</sub></p>
-                                            </blockquote>
-                                          </div>
-                                        </tip-box>
-                                        <p>Take the example of writing a payroll application for a university to facilitate payroll processing of university staff. Suppose an <code>adjustSalary(int)</code> operation adjusts the salaries of all staff members.
-                                          This operation will be executed whenever the university initiates a salary adjustment for its staff. However, the adjustment formula is different for different staff categories, say admin and academic. Here is
-                                          one possible way of designing the classes in the <code>Payroll</code> system.</p>
-                                        <p>Here is the implementation of the <code>adjustSalary(int)</code> operation.</p>
-                                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll1</span> </span>{
-    ArrayList&lt; Admin &gt; admins;
-    ArrayList&lt; Academic &gt; academics;
-    <span class="hljs-comment">// ...</span>
-
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{
-        <span class="hljs-keyword">for</span> (Admin ad: admins) {
-            ad.adjustSalary(byPercent);
-        }
-        <span class="hljs-keyword">for</span> (Academic ac: academics) {
-            ac.adjustSalary(byPercent);
-        }
-    }
-}
-</code></pre>
-                                        <p>Note how processing is similar for the two staff types. It is as if the type of staff members is irrelevant to how they are processed inside this operation! If that is the case, can the staff type be &quot;abstracted
-                                          away&quot; from this method? Here is such an implementation of <code>adjustSalary(int)</code>:</p>
-                                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll2</span> </span>{
-    ArrayList&lt; Staff &gt; staff;
-    <span class="hljs-comment">// ...</span>
-
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{
-        <span class="hljs-keyword">for</span> (Staff s: staff) {
-            s.adjustSalary(byPercent);
-        }
-    }
-}
-</code></pre>
-                                        <p>Notice the following:</p>
-                                        <ul>
-                                          <li>Only one data structure <code>ArrayList&lt; Staff &gt;</code>. It contains both <code>Admin</code> and <code>Academic</code> objects but treats them as <code>Staff</code> objects</li>
-                                          <li>Only one loop</li>
-                                          <li>Outcome of the <code>s.adjustSalary(byPercent)</code> method call depends on whether <code>s</code> is an <code>Academic</code> or <code>Admin</code> object</li>
-                                        </ul>
-                                        <p>The above code is better in several ways:</p>
-                                        <ul>
-                                          <li>It is shorter.</li>
-                                          <li>It is simpler.</li>
-                                          <li>It is more flexible (this code will remain the same even if more staff types are added).</li>
-                                        </ul>
-                                        <p>This does not mean we are getting rid of the <code>Academic</code> and <code>Admin</code> classes completely and replacing them with a more general class called <code>Staff</code>. Rather, this part of the code
-                                          “treats” both <code>Admin</code> and <code>Academic</code> objects as one type called <code>Staff</code>.</p>
-                                        <p>For example, <code>ArrayList</code> staff contains both <code>Admin</code> and <code>Academic</code> objects although it treats all of them as <code>Staff</code> objects. However, when the <code>adjustSalary(int)</code>                                          operation of these objects is called, the resulting salary adjustment will be different for <code>Admin</code> objects and <code>Academic</code> objects. Therefore, different types of objects are treated as a
-                                          single general type, but yet each type of object exhibits a different kind of behavior. This is called <em>polymorphism</em> (literally, it means “ability to take many forms”). In this example, an object that
-                                          is perceived as type <code>Staff</code> can be an <code>Admin</code> object or an <code>Academic</code> object.</p>
-                                      </div>
-                                      <div></div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </modal>
-                              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Staff</span> </span>{
-    String name;
-    <span class="hljs-keyword">double</span> salary;
-
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> percent)</span> </span>{
-        <span class="hljs-comment">// do nothing</span>
-    }
-}
-
-<span class="hljs-comment">//------------------------------------------</span>
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Admin</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Staff</span> </span>{
-
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> percent)</span> </span>{
-        salary = salary * percent;
-    }
-}
-
-<span class="hljs-comment">//------------------------------------------</span>
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Academic</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Staff</span> </span>{
-
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> percent)</span> </span>{
-        salary = salary * percent * <span class="hljs-number">2</span>;
-    }
-}
-
-<span class="hljs-comment">//------------------------------------------</span>
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll</span> </span>{
-    ArrayList&lt; Staff &gt; staff;
-    <span class="hljs-comment">// ...</span>
-
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{
-        <span class="hljs-keyword">for</span> (Staff s: staff) {
-            s.adjustSalary(byPercent);
-        }
-    }
-}
-</code></pre>
-                            </tip-box>
                           </div>
                           <div>
-                            <div>
-                              <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
-                                <ul>
-                                  <li><a href="https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html">Oracle’s Java Tutorials: Polymorphism</a></li>
-                                  <li><a href="https://www.tutorialspoint.com/java/java_polymorphism.htm">Java - Polymorphism</a> -- a tutorial from <a href="http://tutorialspoint.com">tutorialspoint.com</a></li>
-                                </ul>
-                              </panel>
-                            </div>
                             <div>
                               <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
                                 <div>
@@ -1648,92 +1896,6 @@ Number of keys after clearing: 0
                   <div class="indented">
                     <div>
                       <p>Explain how substitutability operation overriding, and dynamic binding relates to polymorphism by taking a real example from the project.</p>
-                    </div>
-                  </div>
-                </div>
-            </panel>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W3.3b</code></span></big> <span><span class="fas fa-trophy"></span> Can step through a program using a debugger</span>
-              <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-              </span>
-              </span>
-              <div class="indented">
-                <panel minimized="">
-                  <span slot="header" class="card-title">Details of the LO</span>
-                  <div>
-                    <div></div>
-                    <p></p>
-                    <p><span class="dimmed"><strong><span>Tools → Intellij IDEA →
-</span></strong>
-                      </span>
-                    </p>
-                    <div id="title-and-body">
-                      <div>
-                        <h4 id="debugging-basic">Debugging: Basic</h4>
-                      </div>
-                      <div id="main">
-                        <div>
-                          <div v-closeable="" alt="video: debugging in Intellij">
-                            <p>This video (from LaunchCode) gives a pretty good explanation of how to use the Intellij IDEA debugger.</p>
-                            <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/1bCgzjatcr4" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-                          </div>
-                          <ul>
-                            <li><a href="https://www.jetbrains.com/help/idea/debugger-basics.html">Intellij IDEA Documentation: Debugging Basics</a> - Can be used as a reference document when you want to recall how to use a debugging feature.</li>
-                          </ul>
-                        </div>
-                        <div></div>
-                      </div>
-                    </div>
-                  </div>
-                </panel><br><br>
-                <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
-                </p>
-                <div class="indented">
-                  <div>
-                    <p><strong>Submission</strong>: Demo debugging features of Intellij during the tutorial.</p>
-                  </div>
-                </div>
-              </div>
-            </panel>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W3.3c</code></span></big> <span><span class="fas fa-trophy"></span> Can use some useful IDE productivity shortcuts</span>
-              <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              <span
-                class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                </span>
-                </span>
-                </span>
-                <div class="indented">
-                  <panel minimized="">
-                    <span slot="header" class="card-title">Details of the LO</span>
-                    <div>
-                      <div></div>
-                      <p></p>
-                      <p><span class="dimmed"><strong><span>Tools → Intellij IDEA →
-</span></strong>
-                        </span>
-                      </p>
-                      <div id="title-and-body">
-                        <div>
-                          <h4 id="productivity-shortcuts">Productivity Shortcuts</h4>
-                        </div>
-                        <div id="main">
-                          <div>
-                            <div v-closeable="" alt="video: Intellij shortcuts">
-                              <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/KsVWdGOnHZU" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-                              <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/EvXpgL2iho4" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-                            </div>
-                          </div>
-                          <div></div>
-                        </div>
-                      </div>
-                    </div>
-                  </panel><br><br>
-                  <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
-                  </p>
-                  <div class="indented">
-                    <div>
-                      <p><strong>Submission</strong>: Demo some Intellij productivity shortcuts during the tutorial.</p>
                     </div>
                   </div>
                 </div>
@@ -1783,7 +1945,7 @@ Enter command: exit
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Thu, 09 Aug 2018 11:51:58 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 12 Aug 2018 09:54:43 GMT</small></div>
 </footer>
 </div>
 </body>

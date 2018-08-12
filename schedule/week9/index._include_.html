@@ -49,16 +49,16 @@
                         <p></p>
                         <p><strong>We can write user stories on</strong> index cards or sticky notes, and arrange on walls or tables, to facilitate planning and discussion. Alternatively, we can use a software (e.g., <a href="https://help.github.com/articles/about-project-boards/">GitHub Project Boards</a>,
                           Trello, Google Docs, ...) to manage user stories digitally.</p>
-                        <panel header="%%User stories in use%%" expanded="">
+                        <panel header="%%User stories in use%%" class="non-printable" expanded="">
                           <panel header="With sticky notes" type="seamless" expanded="">
                             <img src="/website/book/specifyingRequirements/userStories/introduction/images/workingWithStories.jpg" height="400">
                             <p><span class="dimmed"><sup>[credit: <a href="https://www.flickr.com/photos/jakuza/2682466984/">https://www.flickr.com/photos/jakuza/2682466984/</a>]</sup></span></p>
                           </panel>
-                          <panel header="With paper" type="seamless">
+                          <panel header="With paper" type="seamless" expanded="">
                             <img src="/website/book/specifyingRequirements/userStories/introduction/images/userStoriesOnTable.jpg" height="400">
                             <p><span class="dimmed"><sup>[credit: <a href="https://www.flickr.com/photos/jakuza/with/2726048607/">https://www.flickr.com/photos/jakuza/with/2726048607/</a>]</sup></span></p>
                           </panel>
-                          <panel header="With software" type="seamless">
+                          <panel header="With software" type="seamless" expanded="">
                             <img src="/website/book/specifyingRequirements/userStories/introduction/images/userStoriesWithSoftware.png" height="400">
                             <p><span class="dimmed"><sup>[credit: <a href="https://commons.wikimedia.org/wiki/File:User_Story_Map_in_Action.png">https://commons.wikimedia.org/wiki/File:User_Story_Map_in_Action.png</a>]</sup></span></p>
                           </panel>
@@ -130,7 +130,7 @@
               <div class="indented">
                 <div>
                   <p><strong>Acceptable</strong>: Using user stories in any past project.</p>
-                  <p><strong>Suggested</strong>: Do the exercise in [<a href="https://github.com/nus-tic2002-2018/addressbook-level3/blob/master/doc/LearningOutcomes.md#utilize-user-stories-lo-userstories">Addressbook-Level3: LO-UesrStories</a>]</p>
+                  <p><strong>Suggested</strong>: Do the exercise in [<a href="https://github.com/nus-tic2002-2018/addressbook-level3/blob/master/docs/LearningOutcomes.adoc#utilize-user-stories-code-lo-userstories-code">Addressbook-Level3: LO-UesrStories</a>]</p>
                   <div>
                     <p><strong>Submission</strong>: Create a PR against <a href="https://github.com/nus-tic2002-2018/addressbook-level3">Addressbook-Level3</a>. <mark>Remember to use team ID</mark> (e.g. <em>W09-2</em>) in your PR name.</p>
                     <p>
@@ -575,7 +575,7 @@
             <div class="indented">
               <div>
                 <p><strong>Acceptable</strong>: Evidence of having used SRP in some project.</p>
-                <p><strong>Suggested</strong>: Do the exercise in [<a href="https://github.com/nus-tic2002-2018/addressbook-level2/blob/master/doc/LearningOutcomes.md#follow-the-single-responsibility-principle-lo-srp">Addressbook-Level2: LO-SRP</a>]</p>
+                <p><strong>Suggested</strong>: Do the exercise in [<a href="https://github.com/nus-tic2002-2018/addressbook-level2/blob/master/docs/LearningOutcomes.adoc#follow-the-single-responsibility-principle-code-lo-srp-code">Addressbook-Level2: LO-SRP</a>]</p>
                 <div>
                   <p><strong>Submission</strong>: Create a PR against <a href="https://github.com/nus-tic2002-2018/addressbook-level2">Addressbook-Level2</a>. <mark>Only clean PRs</mark> (i.e. free of unrelated code modifications) will be accepted.</p>
                   <p>
@@ -646,9 +646,9 @@
                                   <pre><code class="hljs java">Staff staff = <span class="hljs-keyword">new</span> AcademicStaff (); <span class="hljs-comment">// OK</span>
 </code></pre>
                                   <p>But the following code is not valid <span class="dimmed"> because <code>staff</code> is declared as a <code>Staff</code> type and therefore its value may or may not be of  type <code>AcademicStaff</code>, which is the type expected by variable <code>academicStaff</code>.</span></p>
-                                  <pre class="hljs"><code>Staff staff;
+                                  <pre><code class="hljs java">Staff staff;
 ...
-AcademicStaff academicStaff = staff; // Not OK
+AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
 </code></pre>
                                 </tip-box>
                               </div>
@@ -1245,7 +1245,7 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
                     </div>
                     <div id="main">
                       <div>
-                        <div v-closeable="" alt="Junit tutorial video">
+                        <div v-closeable="" alt="Junit tutorial video" class="non-printable">
                           <p>JUnit 4 with IntelliJ: A quick introduction <sub>-- by DrBFraser</sub></p>
                           <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/Bld3644bIAo" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
                         </div>
@@ -1270,7 +1270,7 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
               <div class="indented">
                 <div>
                   <p><strong>Acceptable</strong>: Evidence of having written JUnit tests in some project.</p>
-                  <p><strong>Suggested</strong>: Do the exercise in [<a href="https://github.com/nus-tic2002-2018/addressbook-level2/blob/master/doc/LearningOutcomes.md#use-junit-to-implement-unit-tests-lo-junit">Addressbook-Level2: LO-JUnit</a>]</p>
+                  <p><strong>Suggested</strong>: Do the exercise in [<a href="https://github.com/nus-tic2002-2018/addressbook-level2/blob/master/docs/LearningOutcomes.adoc#use-junit-to-implement-unit-tests-code-lo-junit-code">Addressbook-Level2: LO-JUnit</a>]</p>
                   <div>
                     <p><strong>Submission</strong>: Create a PR against <a href="https://github.com/nus-tic2002-2018/addressbook-level2">Addressbook-Level2</a>. <mark>Only clean PRs</mark> (i.e. free of unrelated code modifications) will be accepted.</p>
                     <p>
@@ -1595,8 +1595,13 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
                           <table class="markbind-table table table-bordered table-striped">
                             <thead>
                               <tr>
-                                <th>👎 Not good</th>
-                                <th>👍 Better</th>
+                                <th>
+                                  <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
+                                    </span>
+                                  </font>
+                                </th>
+                                <th><span class="text-success"><span class="fas fa-thumbs-up"></span> Better </span>
+                                </th>
                               </tr>
                             </thead>
                             <tbody>
@@ -2381,7 +2386,7 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
                   <div id="main">
                     <div>
                       <p><strong>Formal verification uses mathematical techniques to prove the correctness of a program.</strong></p>
-                      <panel type="seamless" header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span> An introduction to Formal Methods">
+                      <panel type="seamless" header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span> An introduction to Formal Methods" class="non-printable">
                         <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/89fKiaMxHrA" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
                         <p>by <a href="http://www.cs.utoronto.ca/~hehner/">Eric Hehner</a></p>
                         <p></p>
