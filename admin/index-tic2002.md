@@ -64,7 +64,7 @@ BSc, Computer Science & Engineering, University of Moratuwa, 1996-2001<br>
 %%{{ far_clock }}%% Tuesdays 7.30-9.30pm<br>
 %%{{ fas_map_marker_alt }}%% SR10 (COM1-0210)<br>
 
-{{ far_frown }} **Lectures will not be webcast** as the venue does not have a webcast facility.
+{{ far_frown }} **Lectures will not be webcast** as the venue does not have a webcast facility. ==Please bring your laptop to the lecture== as you will need to be using it for the most part of the lecture.
 
 **Lecture handouts will be uploaded to IVLE _before_ the lecture**, usually by midnight of the Sunday before the lecture.
 
