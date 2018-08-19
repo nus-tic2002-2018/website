@@ -167,6 +167,8 @@
         "passing-objects": "Passing Objects",
         "garbage-collection": "Garbage Collection",
         "packages": "packages",
+        "new-operator": "new operator",
+        "null-and-nullpointerexception": "null and NullPointerException",
         "java-objects": "Java Objects",
         "defining-classes": "Defining Classes",
         "getters-and-setters": "Getters and Setters",

@@ -1,0 +1,72 @@
+2018-08-08T14:24:32.937Z - info: Website generation started at 22:24:28
+2018-08-08T14:24:35.644Z - info: Building assets...
+2018-08-08T14:24:37.616Z - info: Assets built
+2018-08-08T14:24:37.617Z - info: Generating pages...
+2018-08-08T14:25:36.849Z - info: Pages built
+2018-08-08T14:25:36.937Z - info: Site data built
+2018-08-08T14:25:36.937Z - info: Website generation complete! Total build time: 68.199s
+2018-08-08T14:25:36.949Z - info: Generate Site durationMs=68211
+2018-08-08T14:25:36.969Z - info: Serving "C:\repos\nus-tic2002-2018\website\_site" at http://127.0.0.1:8080
+2018-08-08T14:25:36.969Z - info: Press CTRL+C to stop ...
+2018-08-08T14:46:41.167Z - info: Website generation started at 22:46:38
+2018-08-08T14:46:42.366Z - info: Building assets...
+2018-08-08T14:46:44.424Z - info: Assets built
+2018-08-08T14:46:44.424Z - info: Generating pages...
+2018-08-08T14:47:37.773Z - info: Pages built
+2018-08-08T14:47:37.858Z - info: Site data built
+2018-08-08T14:47:37.858Z - info: Website generation complete! Total build time: 59.478s
+2018-08-08T14:47:37.874Z - info: Generate Site durationMs=59494
+2018-08-08T14:47:37.895Z - info: Serving "C:\repos\nus-tic2002-2018\website\_site" at http://127.0.0.1:8080
+2018-08-08T14:47:37.895Z - info: Press CTRL+C to stop ...
+2018-08-08T14:54:37.155Z - info: [22:54:37] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\week2\tutorial-tic2002.md
+2018-08-08T14:54:38.160Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\schedule\week2\tutorial-tic2002.md
+2018-08-08T14:54:38.163Z - info: Rebuilding 5 pages
+2018-08-08T14:54:57.945Z - info: Pages rebuilt
+2018-08-08T14:54:57.956Z - info: Site data built
+2018-08-08T14:56:07.200Z - info: [22:56:07] Reload for file change: C:\repos\nus-tic2002-2018\website\book\cppToJava\collections\arrayListClass\text.md
+2018-08-08T14:56:07.215Z - info: [22:56:07] Reload for file change: C:\repos\nus-tic2002-2018\website\book\cppToJava\controlFlow\loops\text.md
+2018-08-08T14:56:07.233Z - info: [22:56:07] Reload for file change: C:\repos\nus-tic2002-2018\website\book\cppToJava\collections\hashMapClass\text.md
+2018-08-08T14:56:08.209Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\cppToJava\collections\arrayListClass\text.md,C:\repos\nus-tic2002-2018\website\book\cppToJava\controlFlow\loops\text.md,C:\repos\nus-tic2002-2018\website\book\cppToJava\collections\hashMapClass\text.md
+2018-08-08T14:56:08.213Z - info: Rebuilding 6 pages
+2018-08-08T14:56:26.180Z - info: Pages rebuilt
+2018-08-08T14:56:26.192Z - info: Site data built
+2018-08-08T14:59:23.936Z - info: [22:59:23] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\instructors.md
+2018-08-08T14:59:24.940Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\admin\instructors.md
+2018-08-08T14:59:24.940Z - info: Rebuilding 0 pages
+2018-08-08T14:59:24.940Z - info: Pages rebuilt
+2018-08-08T14:59:24.956Z - info: Site data built
+2018-08-08T15:03:56.655Z - info: [23:03:56] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\instructors.md
+2018-08-08T15:03:57.656Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\admin\instructors.md
+2018-08-08T15:03:57.656Z - info: Rebuilding 0 pages
+2018-08-08T15:03:57.657Z - info: Pages rebuilt
+2018-08-08T15:03:57.664Z - info: Site data built
+2018-08-08T15:05:10.969Z - info: [23:05:10] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\instructors.md
+2018-08-08T15:05:11.971Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\admin\instructors.md
+2018-08-08T15:05:11.972Z - info: Rebuilding 0 pages
+2018-08-08T15:05:11.973Z - info: Pages rebuilt
+2018-08-08T15:05:11.987Z - info: Site data built
+2018-08-08T15:05:55.860Z - info: [23:05:55] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\instructors.md
+2018-08-08T15:05:56.861Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\admin\instructors.md
+2018-08-08T15:05:56.862Z - info: Rebuilding 0 pages
+2018-08-08T15:05:56.863Z - info: Pages rebuilt
+2018-08-08T15:05:56.874Z - info: Site data built
+2018-08-08T15:07:07.094Z - info: [23:07:07] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\instructors.md
+2018-08-08T15:07:08.100Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\admin\instructors.md
+2018-08-08T15:07:08.101Z - info: Rebuilding 0 pages
+2018-08-08T15:07:08.101Z - info: Pages rebuilt
+2018-08-08T15:07:08.108Z - info: Site data built
+2018-08-08T15:08:00.277Z - info: [23:08:00] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\instructors.md
+2018-08-08T15:08:01.283Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\admin\instructors.md
+2018-08-08T15:08:01.284Z - info: Rebuilding 0 pages
+2018-08-08T15:08:01.285Z - info: Pages rebuilt
+2018-08-08T15:08:01.301Z - info: Site data built
+2018-08-08T15:08:33.253Z - info: [23:08:33] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\instructors.md
+2018-08-08T15:08:34.256Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\admin\instructors.md
+2018-08-08T15:08:34.257Z - info: Rebuilding 0 pages
+2018-08-08T15:08:34.257Z - info: Pages rebuilt
+2018-08-08T15:08:34.276Z - info: Site data built
+2018-08-08T15:10:26.567Z - info: [23:10:26] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\instructors.md
+2018-08-08T15:10:27.573Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\admin\instructors.md
+2018-08-08T15:10:27.574Z - info: Rebuilding 0 pages
+2018-08-08T15:10:27.575Z - info: Pages rebuilt
+2018-08-08T15:10:27.590Z - info: Site data built
