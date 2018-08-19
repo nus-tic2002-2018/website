@@ -1,38 +1,31 @@
 <div id="projectSetup">
 
-**Acceptable**: Any Java project set up in Intellij.
+Create a new project in Intellij and write some code in it. Run the code.
 
-**Suggested**: Do the exercise given in [AddressBook - Level1 : LO-IdeSetup]({{module_org}}/addressbook-level1/blob/master/docs/LearningOutcomes.adoc#set-up-a-project-in-an-ide-code-lo-idesetup-code)
-
-**Submission**: Demo the project setup during the tutorial.
 </div>
 
 
 <div id="codeNavigation">
 
-**Acceptable**: Use Intellij basic code navigation features to navigate the code of any java project.
+Add more code to your project in the IDE so that you have multiple files and multiple methods. Navigate through the code using IDE features e.g., jump from method call to the method definition.
 
-**Suggested**: Do the exercise given in [AddressBook - Level1 : LO-CodeNavigation]({{module_org}}/addressbook-level1/blob/master/docs/LearningOutcomes.adoc#navigate-code-efficiently-code-lo-codenavigation-code)
-
-**Submission**: Demo the relevant IDE features during the tutorial.
 </div>
 
 <div id="refactoring">
 
-**Acceptable**: Ability to do some automated refactoring in the IDE.
+Do some automated refactoring in the IDE.
 
-**Submission**: Demo during the tutorial.
 
 </div>
 
 <div id="debuggingBasic">
 
-**Submission**: Demo debugging features of Intellij during the tutorial.
+Use the basic debugging features (e.g., stop at breakpoint, step-over the statement, step-into a method being called) of the IDE.
 
 </div>
 
 <div id="productivityShortcuts">
 
-**Submission**: Demo some Intellij productivity shortcuts during the tutorial.
+Use some of the IDE productivity shortcuts.
 
 </div>
