@@ -5638,3 +5638,21 @@ Missing reference in C:\repos\nus-tic2002-2018\website\book\cppToJava\objects\us
 2018-08-19T11:06:24.438Z - info: Press CTRL+C to stop ...
 2018-08-19T11:16:01.863Z - info: Website generation started at 19:15:59
 2018-08-19T11:16:03.861Z - info: Building assets...
+2018-08-19T11:16:07.012Z - info: Assets built
+2018-08-19T11:16:07.013Z - info: Generating pages...
+2018-08-19T11:17:11.956Z - info: Pages built
+2018-08-19T11:17:12.037Z - info: Site data built
+2018-08-19T11:17:12.037Z - info: Website generation complete! Total build time: 72.434s
+2018-08-19T11:17:12.038Z - info: Build success!
+2018-08-19T11:17:12.038Z - info: Generate Site durationMs=72434
+2018-08-19T11:17:45.900Z - info: Deployed!
+2018-08-19T11:32:32.120Z - info: Website generation started at 19:32:29
+2018-08-19T11:32:35.660Z - info: Building assets...
+2018-08-19T11:32:41.024Z - info: Assets built
+2018-08-19T11:32:41.024Z - info: Generating pages...
+2018-08-19T11:33:43.969Z - info: Pages built
+2018-08-19T11:33:44.033Z - info: Site data built
+2018-08-19T11:33:44.033Z - info: Website generation complete! Total build time: 74.098s
+2018-08-19T11:33:44.045Z - info: Generate Site durationMs=74110
+2018-08-19T11:33:44.069Z - info: Serving "C:\repos\nus-tic2002-2018\website\_site" at http://127.0.0.1:8080
+2018-08-19T11:33:44.069Z - info: Press CTRL+C to stop ...
