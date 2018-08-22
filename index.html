@@ -324,8 +324,9 @@
                         <div id="main">
                           <div>
                             <p class="lead"><span>This book chapter <strong>assumes you are familiar with basic C++ programming</strong>. It provides a crash course to help you migrate from C++ to Java.</span></p>
-                            <p>This chapter <strong>borrows heavily from the excellent book <a href="http://greenteapress.com/wp/think-java/"><em>ThinkJava</em></a></strong> by Allen Downey and Chris Mayfield. As required by terms of reuse of that book,
-                              this chapter is released under <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a> and not under the MIT license as rest of this book.</p>
+                            <p>This chapter <strong>borrows heavily from the excellent book <a href="http://greenteapress.com/wp/think-java/"><em>ThinkJava</em></a></strong> by Allen Downey and Chris Mayfield. As required by the <em>terms of reuse</em> of
+                              that book, this chapter is released under the <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a> and not under the MIT license as the
+                              rest of this book.</p>
                             <p>Some conventions used in this chapter:</p>
                             <div class="indented">
                               <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
@@ -366,7 +367,7 @@
                             <blockquote>
                               <p>Java was <strong>conceived by James Gosling and his team at Sun Microsystems in 1991</strong>.</p>
                               <p>Java is directly <strong>related to both C and C++</strong>. Java inherits its syntax from C. Its object model is adapted from C++.
-                                <small>--<a href="http://www.oracle.com/events/global/en/java-outreach/resources/java-a-beginners-guide-1720064.pdf">Java: A Beinner’s Guide, by Oracle</a></small></p>
+                                <small>--<a href="http://www.oracle.com/events/global/en/java-outreach/resources/java-a-beginners-guide-1720064.pdf">Java: A Beginner’s Guide, by Oracle</a></small></p>
                             </blockquote>
                             <box>
                               <p><span class="fas fa-info-circle"></span> Fun fact: The language was initially called <em>Oak</em> after an oak tree that stood outside Gosling's office. Later the project went by the name <em>Green</em> and was finally renamed
@@ -4797,15 +4798,17 @@ A-:4.5
                         </div>
                         <div>
                           <div>
-                            <div>
-                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> create `Rectangle` objects">
-                                <question>
-                                  <p>Update the code below to create a new <code>Rectangle</code> object as described in the code comments, to produce the given output.</p>
-                                  <ul>
-                                    <li>The <code>Rectangle</code> class is found in the <code>java.awt</code> package.</li>
-                                    <li>The parameters you need to supply when creating new <code>Rectangle</code> objects are <code>(int x, int y, int width, int height)</code>.</li>
-                                  </ul>
-                                  <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+                            <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                              <div>
+                                <div>
+                                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> create `Rectangle` objects">
+                                    <question>
+                                      <p>Update the code below to create a new <code>Rectangle</code> object as described in the code comments, to produce the given output.</p>
+                                      <ul>
+                                        <li>The <code>Rectangle</code> class is found in the <code>java.awt</code> package.</li>
+                                        <li>The parameters you need to supply when creating new <code>Rectangle</code> objects are <code>(int x, int y, int width, int height)</code>.</li>
+                                      </ul>
+                                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
         Rectangle r;
 
@@ -4816,18 +4819,20 @@ A-:4.5
     }
 }
 </code></pre>
-                                  <p><span class="fas fa-arrow-down"></span></p>
-                                  <pre class="hljs"><code>java.awt.Rectangle[x=0,y=0,width=5,height=10]
+                                      <p><span class="fas fa-arrow-down"></span></p>
+                                      <pre class="hljs"><code>java.awt.Rectangle[x=0,y=0,width=5,height=10]
 </code></pre>
-                                  <div slot="hint">
-                                    <ul>
-                                      <li>Import the <code>java.awt.Rectangle</code> class</li>
-                                      <li>This is how you create the required object <code>new Rectangle(0, 0, 5, 10)</code></li>
-                                    </ul>
-                                  </div>
-                                </question>
-                              </panel>
-                            </div>
+                                      <div slot="hint">
+                                        <ul>
+                                          <li>Import the <code>java.awt.Rectangle</code> class</li>
+                                          <li>This is how you create the required object <code>new Rectangle(0, 0, 5, 10)</code></li>
+                                        </ul>
+                                      </div>
+                                    </question>
+                                  </panel>
+                                </div>
+                              </div>
+                            </panel>
                           </div>
                         </div>
                       </div>
@@ -4928,11 +4933,13 @@ System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);
                         </div>
                         <div>
                           <div>
-                            <div>
-                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> use `Rectangle` objects">
-                                <question>
-                                  <p>Update the code below as described in code comments, to produce the given output.</p>
-                                  <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.awt.Rectangle;
+                            <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                              <div>
+                                <div>
+                                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> use `Rectangle` objects">
+                                    <question>
+                                      <p>Update the code below as described in code comments, to produce the given output.</p>
+                                      <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.awt.Rectangle;
 
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
@@ -4953,20 +4960,22 @@ System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);
 
 }
 </code></pre>
-                                  <p><span class="fas fa-arrow-down"></span></p>
-                                  <pre class="hljs"><code>java.awt.Rectangle[x=0,y=0,width=4,height=6]
+                                      <p><span class="fas fa-arrow-down"></span></p>
+                                      <pre class="hljs"><code>java.awt.Rectangle[x=0,y=0,width=4,height=6]
 Area: 24
 java.awt.Rectangle[x=0,y=0,width=8,height=10]
 </code></pre>
-                                  <div slot="hint">
-                                    <ul>
-                                      <li>Area can be calculated as <code>r.width * r.height</code></li>
-                                      <li>Setting the size can be done as <code>r.setSize(8, 10)</code></li>
-                                    </ul>
-                                  </div>
-                                </question>
-                              </panel>
-                            </div>
+                                      <div slot="hint">
+                                        <ul>
+                                          <li>Area can be calculated as <code>r.width * r.height</code></li>
+                                          <li>Setting the size can be done as <code>r.setSize(8, 10)</code></li>
+                                        </ul>
+                                      </div>
+                                    </question>
+                                  </panel>
+                                </div>
+                              </div>
+                            </panel>
                           </div>
                         </div>
                       </div>
@@ -5140,17 +5149,19 @@ p3: 3, 2
                         </div>
                         <div>
                           <div>
-                            <div>
-                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> pass objects to `move` method">
-                                <question>
-                                  <p>Add a method <code>move(Point p, Rectangle r)</code> to the code below, to produce the given output. The behavior of the method is as follows:</p>
-                                  <ul>
-                                    <li>Returns a new <code>Point</code> object that has attributes <code>x</code> and <code>y</code> that match those of <code>r</code></li>
-                                    <li>Does not modify <code>p</code></li>
-                                    <li>Updates <code>r</code> so that its attributes <code>x</code> and <code>y</code> match those of <code>p</code></li>
-                                    <li>Returns <code>null</code> and does nothing if either <code>p</code> or <code>r</code> is null</li>
-                                  </ul>
-                                  <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.awt.Point;
+                            <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                              <div>
+                                <div>
+                                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> pass objects to `move` method">
+                                    <question>
+                                      <p>Add a method <code>move(Point p, Rectangle r)</code> to the code below, to produce the given output. The behavior of the method is as follows:</p>
+                                      <ul>
+                                        <li>Returns a new <code>Point</code> object that has attributes <code>x</code> and <code>y</code> that match those of <code>r</code></li>
+                                        <li>Does not modify <code>p</code></li>
+                                        <li>Updates <code>r</code> so that its attributes <code>x</code> and <code>y</code> match those of <code>p</code></li>
+                                        <li>Returns <code>null</code> and does nothing if either <code>p</code> or <code>r</code> is null</li>
+                                      </ul>
+                                      <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.awt.Point;
 <span class="hljs-keyword">import</span> java.awt.Rectangle;
 
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
@@ -5171,16 +5182,16 @@ p3: 3, 2
     }
 }
 </code></pre>
-                                  <p><span class="fas fa-arrow-down"></span></p>
-                                  <pre class="hljs"><code>arguments: java.awt.Point[x=0,y=0], java.awt.Rectangle[x=2,y=3,width=5,height=6]
+                                      <p><span class="fas fa-arrow-down"></span></p>
+                                      <pre class="hljs"><code>arguments: java.awt.Point[x=0,y=0], java.awt.Rectangle[x=2,y=3,width=5,height=6]
 argument point after method call: java.awt.Point[x=0,y=0]
 argument rectangle after method call: java.awt.Rectangle[x=0,y=0,width=5,height=6]
 returned point: java.awt.Point[x=2,y=3]
 null
 </code></pre>
-                                  <div slot="hint">
-                                    <p>Partial solution:</p>
-                                    <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Point <span class="hljs-title">move</span><span class="hljs-params">(Point p, Rectangle r)</span></span>{
+                                      <div slot="hint">
+                                        <p>Partial solution:</p>
+                                        <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Point <span class="hljs-title">move</span><span class="hljs-params">(Point p, Rectangle r)</span></span>{
     <span class="hljs-keyword">if</span> (p == <span class="hljs-keyword">null</span> || r == <span class="hljs-keyword">null</span>){
         <span class="hljs-comment">// ...</span>
     }
@@ -5190,10 +5201,12 @@ null
     <span class="hljs-keyword">return</span> newPoint;
 }
 </code></pre>
-                                  </div>
-                                </question>
-                              </panel>
-                            </div>
+                                      </div>
+                                    </question>
+                                  </panel>
+                                </div>
+                              </div>
+                            </panel>
                           </div>
                         </div>
                       </div>
@@ -5418,32 +5431,34 @@ System.out.println(t.secondsSinceMidnight() + <span class="hljs-string">" second
                         </div>
                         <div>
                           <div>
-                            <div>
-                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> define a `Circle` class">
-                                <question>
-                                  <p>Define a <code>Circle</code> class so that the code given below produces the given output. The nature of the class is a follows:</p>
-                                  <ul>
-                                    <li>Attributes(all <code>private</code>):
+                            <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                              <div>
+                                <div>
+                                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> define a `Circle` class">
+                                    <question>
+                                      <p>Define a <code>Circle</code> class so that the code given below produces the given output. The nature of the class is a follows:</p>
                                       <ul>
-                                        <li><strong><code>int x</code>, <code>int y</code></strong>: represents the location of the circle</li>
-                                        <li><strong><code>double radius</code></strong>: the radius of the circle</li>
+                                        <li>Attributes(all <code>private</code>):
+                                          <ul>
+                                            <li><strong><code>int x</code>, <code>int y</code></strong>: represents the location of the circle</li>
+                                            <li><strong><code>double radius</code></strong>: the radius of the circle</li>
+                                          </ul>
+                                        </li>
+                                        <li>Constructors:
+                                          <ul>
+                                            <li><strong><code>Circle()</code></strong>: initializes <code>x</code>, <code>y</code>, <code>radius</code> to 0</li>
+                                            <li><strong><code>Circle(int x, int y, double radius)</code></strong>: initializes the attributes to the given values</li>
+                                          </ul>
+                                        </li>
+                                        <li>Methods:
+                                          <ul>
+                                            <li><strong><code>getArea()</code></strong>: <code>int</code><br> Returns the area of the circle as an <code>int</code> value (not <code>double</code>). Calculated as 2xPIx(radius)<sup>2</sup><br> 💡 You can convert
+                                              to <code>double</code> to an <code>int</code> using <code>(int)</code> e.g., <code>x = (int)2.25</code> gives <code>x</code> the value <code>2</code>.<br> 💡 You can use <code>Math.PI</code> to get the value
+                                              of Pi<br> 💡 You can use <code>Math.pow()</code> to raise a number to a specific power e.g., <code>Math.pow(3, 2)</code> calculates 3<sup>2</sup></li>
+                                          </ul>
+                                        </li>
                                       </ul>
-                                    </li>
-                                    <li>Constructors:
-                                      <ul>
-                                        <li><strong><code>Circle()</code></strong>: initializes <code>x</code>, <code>y</code>, <code>radius</code> to 0</li>
-                                        <li><strong><code>Circle(int x, int y, double radius)</code></strong>: initializes the attributes to the given values</li>
-                                      </ul>
-                                    </li>
-                                    <li>Methods:
-                                      <ul>
-                                        <li><strong><code>getArea()</code></strong>: <code>int</code><br> Returns the area of the circle as an <code>int</code> value (not <code>double</code>). Calculated as 2xPIx(radius)<sup>2</sup><br> 💡 You can convert
-                                          to <code>double</code> to an <code>int</code> using <code>(int)</code> e.g., <code>x = (int)2.25</code> gives <code>x</code> the value <code>2</code>.<br> 💡 You can use <code>Math.PI</code> to get the value of
-                                          Pi<br> 💡 You can use <code>Math.pow()</code> to raise a number to a specific power e.g., <code>Math.pow(3, 2)</code> calculates 3<sup>2</sup></li>
-                                      </ul>
-                                    </li>
-                                  </ul>
-                                  <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+                                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
         Circle c = <span class="hljs-keyword">new</span> Circle();
 
@@ -5454,16 +5469,16 @@ System.out.println(t.secondsSinceMidnight() + <span class="hljs-string">" second
     }
 }
 </code></pre>
-                                  <p><span class="fas fa-arrow-down"></span></p>
-                                  <pre class="hljs"><code>0
+                                      <p><span class="fas fa-arrow-down"></span></p>
+                                      <pre class="hljs"><code>0
 78
 </code></pre>
-                                  <div slot="hint">
-                                    <ul>
-                                      <li>Put the <code>Circle</code> class in a file called <code>Circle.java</code></li>
-                                    </ul>
-                                    <p>Partial solution:</p>
-                                    <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> </span>{
+                                      <div slot="hint">
+                                        <ul>
+                                          <li>Put the <code>Circle</code> class in a file called <code>Circle.java</code></li>
+                                        </ul>
+                                        <p>Partial solution:</p>
+                                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> </span>{
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> x;
     <span class="hljs-comment">// ...</span>
 
@@ -5483,10 +5498,12 @@ System.out.println(t.secondsSinceMidnight() + <span class="hljs-string">" second
 
 }
 </code></pre>
-                                  </div>
-                                </question>
-                              </panel>
-                            </div>
+                                      </div>
+                                    </question>
+                                  </panel>
+                                </div>
+                              </div>
+                            </panel>
                           </div>
                         </div>
                       </div>
@@ -5612,11 +5629,13 @@ System.out.println(t.secondsSinceMidnight() + <span class="hljs-string">" second
                         </div>
                         <div>
                           <div>
-                            <div>
-                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> add getters/setters to the `Circle` class">
-                                <question>
-                                  <p>Consider the <code>Circle</code> class below:</p>
-                                  <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> </span>{
+                            <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                              <div>
+                                <div>
+                                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> add getters/setters to the `Circle` class">
+                                    <question>
+                                      <p>Consider the <code>Circle</code> class below:</p>
+                                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> </span>{
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> x;
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> y;
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">double</span> radius;
@@ -5638,12 +5657,12 @@ System.out.println(t.secondsSinceMidnight() + <span class="hljs-string">" second
 
 }
 </code></pre>
-                                  <p>Update it as follows so that code given below produces the given output.</p>
-                                  <ul>
-                                    <li>Add getter/setter methods for all three attributes</li>
-                                    <li>Update the setters and constructors such that if the radius supplied is negative, the code automatically set the radius to 0 instead.</li>
-                                  </ul>
-                                  <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+                                      <p>Update it as follows so that code given below produces the given output.</p>
+                                      <ul>
+                                        <li>Add getter/setter methods for all three attributes</li>
+                                        <li>Update the setters and constructors such that if the radius supplied is negative, the code automatically set the radius to 0 instead.</li>
+                                      </ul>
+                                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
         Circle c = <span class="hljs-keyword">new</span> Circle(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>, <span class="hljs-number">5</span>);
 
@@ -5663,17 +5682,17 @@ System.out.println(t.secondsSinceMidnight() + <span class="hljs-string">" second
     }
 }
 </code></pre>
-                                  <p><span class="fas fa-arrow-down"></span></p>
-                                  <pre class="hljs"><code>x      : 4
+                                      <p><span class="fas fa-arrow-down"></span></p>
+                                      <pre class="hljs"><code>x      : 4
 y      : 5
 radius : 6.0
 area   : 113
 radius : 0.0
 radius : 0.0
 </code></pre>
-                                  <div slot="hint">
-                                    <p>Partial solution:</p>
-                                    <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Circle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y, <span class="hljs-keyword">double</span> radius)</span></span>{
+                                      <div slot="hint">
+                                        <p>Partial solution:</p>
+                                        <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Circle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y, <span class="hljs-keyword">double</span> radius)</span></span>{
     setX(x);
     setY(y);
     setRadius(radius);
@@ -5683,10 +5702,12 @@ radius : 0.0
     <span class="hljs-keyword">this</span>.radius = Math.max(radius, <span class="hljs-number">0</span>);
 }
 </code></pre>
-                                  </div>
-                                </question>
-                              </panel>
-                            </div>
+                                      </div>
+                                    </question>
+                                  </panel>
+                                </div>
+                              </div>
+                            </panel>
                           </div>
                         </div>
                       </div>
@@ -5881,11 +5902,13 @@ radius : 0.0
                           </div>
                           <div>
                             <div>
-                              <div>
-                                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> add getMaxRadius to the `Circle` class">
-                                  <question>
-                                    <p>Consider the <code>Circle</code> class below:</p>
-                                    <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> </span>{
+                              <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                                <div>
+                                  <div>
+                                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> add getMaxRadius to the `Circle` class">
+                                      <question>
+                                        <p>Consider the <code>Circle</code> class below:</p>
+                                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> </span>{
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> x;
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> y;
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">double</span> radius;
@@ -5930,11 +5953,11 @@ radius : 0.0
     }
 }
 </code></pre>
-                                    <p>Update it as follows so that code given below produces the given output.</p>
-                                    <ul>
-                                      <li>Add a class-level <code>getMaxRadius</code> method that returns the maximum radius that has been used in all <code>Circle</code> objects created thus far.</li>
-                                    </ul>
-                                    <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+                                        <p>Update it as follows so that code given below produces the given output.</p>
+                                        <ul>
+                                          <li>Add a class-level <code>getMaxRadius</code> method that returns the maximum radius that has been used in all <code>Circle</code> objects created thus far.</li>
+                                        </ul>
+                                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
         Circle c = <span class="hljs-keyword">new</span> Circle();
         System.out.println(<span class="hljs-string">"max radius used so far : "</span> + Circle.getMaxRadius());
@@ -5947,26 +5970,28 @@ radius : 0.0
     }
 }
 </code></pre>
-                                    <p><span class="fas fa-arrow-down"></span></p>
-                                    <pre class="hljs"><code>max radius used so far : 0.0
+                                        <p><span class="fas fa-arrow-down"></span></p>
+                                        <pre class="hljs"><code>max radius used so far : 0.0
 max radius used so far : 10.0
 max radius used so far : 10.0
 max radius used so far : 12.0
 </code></pre>
-                                    <div slot="hint">
-                                      <p>You can use a <code>static</code> variable <code>maxRadius</code> to track the maximum value used for the <code>radius</code> attribute so far.</p>
-                                      <p>Partial solution:</p>
-                                      <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setRadius</span><span class="hljs-params">(<span class="hljs-keyword">double</span> radius)</span> </span>{
+                                        <div slot="hint">
+                                          <p>You can use a <code>static</code> variable <code>maxRadius</code> to track the maximum value used for the <code>radius</code> attribute so far.</p>
+                                          <p>Partial solution:</p>
+                                          <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setRadius</span><span class="hljs-params">(<span class="hljs-keyword">double</span> radius)</span> </span>{
     <span class="hljs-keyword">this</span>.radius = Math.max(radius, <span class="hljs-number">0</span>);
     <span class="hljs-keyword">if</span> (maxRadius &lt; <span class="hljs-keyword">this</span>.radius){
         <span class="hljs-comment">// ...</span>
     }
 }
 </code></pre>
-                                    </div>
-                                  </question>
-                                </panel>
-                              </div>
+                                        </div>
+                                      </question>
+                                    </panel>
+                                  </div>
+                                </div>
+                              </panel>
                             </div>
                           </div>
                         </div>
@@ -6118,68 +6143,84 @@ max radius used so far : 12.0
                       </div>
                       <div id="main">
                         <div>
-                          <p>String is a built-in Java class that you can use without importing</p>
-                          <box>
-                            <p>💡 Any class in the <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/package-summary.html"><code>java.lang</code></a> package can be used without importing.
+                          <p>String is a built-in Java class that you
+                            <trigger trigger="click" for="modal:stringClass-javaLang">can use without importing</trigger>. Given below are some useful String methods:</p>
+                          <modal id="modal:stringClass-javaLang" title=":bulb: `java.lang` classes can be used without importing" placement="top">
+                            <p>Any class in the <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/package-summary.html"><code>java.lang</code></a> package can be used without importing.
                             </p>
-                          </box>
-                          <p>Given below are some useful String methods:</p>
-                          <h5 id="find-the-character-at-a-specific-location">Find the character at a specific location</h5>
+                          </modal>
+                          <h5 id="find-characters-of-a-string">Find characters of a string</h5>
                           <div class="indented">
-                            <p>Strings provide a method named charAt, which extracts a character. It returns a char, a primitive type that stores an individual character (as opposed to strings of them).</p>
+                            <p>Strings provide a method named <code>charAt</code>, which extracts a character. It returns a <code>char</code>, a primitive type that stores an individual character (as opposed to strings of them).</p>
                             <pre><code class="hljs java">String fruit = <span class="hljs-string">"banana"</span>;
 <span class="hljs-keyword">char</span> letter = fruit.charAt(<span class="hljs-number">0</span>);
 </code></pre>
-                            <p>The argument 0 means that we want the letter at position 0. Like array indexes, string indexes start at 0, so the character assigned to letter is <code>b</code>.</p>
-                            <p>You can convert a string to an array of characters using the toCharArray method.</p>
+                            <p>The argument 0 means that we want the letter at position 0. Like array indexes, string indexes start at 0, so the character assigned to <code>letter</code> is <code>'b'</code>.</p>
+                            <p>You can convert a string to an array of characters using the <code>toCharArray</code> method.</p>
                             <pre><code class="hljs java"><span class="hljs-keyword">char</span>[] fruitChars = fruit.toCharArray()
 </code></pre>
                           </div>
                           <h5 id="change-a-string-to-upperlower-case">Change a string to upper/lower case</h5>
                           <div class="indented">
-                            <p>Strings provide methods, toUpperCase and toLowerCase, that convert from uppercase to lowercase and back. These methods are often a source of confusion, because it sounds like they modify strings. But neither these methods nor
-                              any others can change a string, because strings are immutable. When you invoke toUpperCase on a string, you get a new string object as a return value. For example:</p>
-                            <pre><code class="hljs java">String name = <span class="hljs-string">"Alan Turing"</span>;
+                            <p>Strings provide methods, <code>toUpperCase</code> and <code>toLowerCase</code>, that convert from uppercase to lowercase and back.</p>
+                            <box>
+                              <p><span class="fas fa-cube"></span> After these statements run, <code>upperName</code> refers to the string <code>&quot;ALAN TURING&quot;</code> but <code>name</code> still refers to <code>&quot;Alan Turing&quot;</code>.</p>
+                              <pre><code class="hljs java">String name = <span class="hljs-string">"Alan Turing"</span>;
 String upperName = name.toUpperCase();
+System.out.println(name);
+System.out.println(upperName);
 </code></pre>
-                            <p>After these statements run, upperName refers to the string &quot;ALAN TURING&quot;. But name still refers to &quot;Alan Turing&quot;. Another useful method is replace, which finds and replaces instances of one string within
-                              another. This example replaces &quot;Computer Science&quot; with &quot;CS&quot;:</p>
-                            <pre><code class="hljs java">String text = <span class="hljs-string">"Computer Science is fun!"</span>;
+                              <p><span class="fas fa-arrow-down"></span></p>
+                              <pre class="hljs"><code>Alan Turing
+ALAN TURING
+</code></pre>
+                            </box>
+                            <p>Note that <strong>a string method cannot change the string object on which the method is invoked, because strings are <tooltip content="once created, cannot be modified"><em>immutable</em></tooltip></strong>. For example, when
+                              you invoke <code>toUpperCase</code> on a string <code>&quot;abc&quot;</code>, you get a new string object <code>&quot;ABC&quot;</code> as the return value rather than the string <code>&quot;abc&quot;</code> being changed
+                              to <code>&quot;ABC&quot;</code>. As a result, for such string methods that <em>seemingly</em> modify the string but <em>actually</em> return a new string instead e.g., <code>toLowerCase</code>, <mark>invoking the method has no effect if you don’t assign the return value to a variable</mark>.</p>
+                            <pre><code class="hljs java">String s = <span class="hljs-string">"Ada"</span>;
+s.toUpperCase(); <span class="hljs-comment">// no effect</span>
+s = s.toUpperCase(); <span class="hljs-comment">// the correct way</span>
+</code></pre>
+                          </div>
+                          <h5 id="replacing-parts-of-a-string">Replacing parts of a string</h5>
+                          <div class="indented">
+                            <p>Another useful method is <code>replace</code>, which finds and replaces instances of one string within another.</p>
+                            <box>
+                              <p><span class="fas fa-cube"></span> This example replaces <code>&quot;Computer Science&quot;</code> with <code>&quot;CS&quot;</code>.</p>
+                              <pre><code class="hljs java">String text = <span class="hljs-string">"Computer Science is fun!"</span>;
 text = text.replace(<span class="hljs-string">"Computer Science"</span>, <span class="hljs-string">"CS"</span>);
+System.out.println(text);
 </code></pre>
-                            <p>This example demonstrates a common way to work with string methods. It invokes <code>text.replace</code>, which returns a reference to a new string, <code>&quot;CS is fun!&quot;</code>. Then it assigns the new string to text,
-                              replacing the old string. This assignment is important; if you don’t save the return value, invoking <code>text.replace</code> has no effect.</p>
+                              <p><span class="fas fa-arrow-down"></span></p>
+                              <pre class="hljs"><code>CS is fun!
+</code></pre>
+                            </box>
                           </div>
                           <h5 id="accessing-substrings">Accessing substrings</h5>
                           <div class="indented">
-                            <p>The substring method returns a new string that copies letters from an existing string, starting at the given index.</p>
+                            <p>The <code>substring</code> method returns a new string that copies letters from an existing string, starting at the given index.</p>
                             <ul>
-                              <li><code>fruit.substring(0)</code> <span class="fas fa-arrow-right"></span> <code>&quot;banana&quot;</code></li>
-                              <li><code>fruit.substring(2)</code> <span class="fas fa-arrow-right"></span> <code>&quot;nana&quot;</code></li>
-                              <li><code>fruit.substring(6)</code> <span class="fas fa-arrow-right"></span> <code>&quot;&quot;</code></li>
+                              <li><code>&quot;banana&quot;.substring(0)</code> <span class="fas fa-arrow-right"></span> <code>&quot;banana&quot;</code></li>
+                              <li><code>&quot;banana&quot;.substring(2)</code> <span class="fas fa-arrow-right"></span> <code>&quot;nana&quot;</code></li>
+                              <li><code>&quot;banana&quot;.substring(6)</code> <span class="fas fa-arrow-right"></span> <code>&quot;&quot;</code></li>
                             </ul>
-                            <p>The first example returns a copy of the entire string. The second example returns all but the first two characters. As the last example shows, substring returns the empty string if the argument is the length of the string.</p>
                             <p>If it’s invoked with two arguments, they are treated as a start and end index:</p>
                             <ul>
-                              <li><code>fruit.substring(0, 3)</code> <span class="fas fa-arrow-right"></span> <code>&quot;ban&quot;</code></li>
-                              <li><code>fruit.substring(2, 5)</code> <span class="fas fa-arrow-right"></span> <code>&quot;nan&quot;</code></li>
-                              <li><code>fruit.substring(6, 6)</code> <span class="fas fa-arrow-right"></span> <code>&quot;&quot;</code></li>
+                              <li><code>&quot;banana&quot;.substring(0, 3)</code> <span class="fas fa-arrow-right"></span> <code>&quot;ban&quot;</code></li>
+                              <li><code>&quot;banana&quot;.substring(2, 5)</code> <span class="fas fa-arrow-right"></span> <code>&quot;nan&quot;</code></li>
+                              <li><code>&quot;banana&quot;.substring(6, 6)</code> <span class="fas fa-arrow-right"></span> <code>&quot;&quot;</code></li>
                             </ul>
                           </div>
                           <h5 id="searching-within-strings">Searching within strings</h5>
                           <div class="indented">
-                            <p>The <code>indexOf</code> method searches for a character in a string.</p>
-                            <pre><code class="hljs java">String fruit = <span class="hljs-string">"banana"</span>;
-<span class="hljs-keyword">int</span> index = fruit.indexOf(<span class="hljs-string">'a'</span>);
-</code></pre>
-                            <p>This example finds the index of 'a' in the string. But the letter appears three times, so it’s not obvious what indexOf should do. According to the documentation, it returns the index of the first appearance.</p>
-                            <p>To find subsequent appearances, you can use another version of indexOf, which takes a second argument that indicates where in the string to start looking.</p>
-                            <pre><code class="hljs java"><span class="hljs-keyword">int</span> index = fruit.indexOf(<span class="hljs-string">'a'</span>, <span class="hljs-number">2</span>);
-</code></pre>
-                            <p>This code starts at index 2 (the first 'n') and finds the next 'a', which is at index 3. If the letter happens to appear at the starting index, the starting index is the answer. So <code>fruit.indexOf('a', 5)</code> returns
-                              <code>5</code>.</p>
-                            <p>If the character does not appear in the string, <code>indexOf</code> returns <code>-1</code>. Since indexes cannot be negative, this value indicates the character was not found. You can also use indexOf to search for a substring,
-                              not just a single character. For example, the expression <code>fruit.indexOf(&quot;nan&quot;)</code> returns <code>2</code>.</p>
+                            <p>The <code>indexOf</code> method searches for a single character (or a substring) in a string and returns the index of the first occurrence. The method returns <code>-1</code> if there are no occurrences.</p>
+                            <ul>
+                              <li><code>&quot;banana&quot;.indexOf('a')</code> <span class="fas fa-arrow-right"></span> <code>1</code></li>
+                              <li><code>&quot;banana&quot;.indexOf('a', 2)</code> <span class="fas fa-arrow-right"></span> <code>3</code> <span class="dimmed">searches for <code>'a'</code>, starting from position 2</span></li>
+                              <li><code>&quot;banana&quot;.indexOf('x')</code> <span class="fas fa-arrow-right"></span> <code>-1</code></li>
+                              <li><code>&quot;banana&quot;.indexOf(&quot;nan&quot;)</code> <span class="fas fa-arrow-right"></span> <code>2</code> <span class="dimmed">searches for the substring <code>&quot;nan&quot;</code></span></li>
+                            </ul>
                           </div>
                           <h5 id="comparing-strings">Comparing Strings</h5>
                           <div class="indented">
@@ -6191,14 +6232,31 @@ String name2 = <span class="hljs-string">"Ada Lovelace"</span>;
 }
 </code></pre>
                             <p>This code compiles and runs, and most of the time it gets the answer right. But it is not correct, and sometimes it gets the answer wrong. The problem is that the <code>==</code> operator checks whether the two variables refer
-                              to the same object (by comparing the references). If you give it two different strings that contain the same letters, it yields false. The right way to compare strings is with the equals method, like this:</p>
-                            <pre><code class="hljs java"><span class="hljs-keyword">if</span> (name1.equals(name2)) {
+                              to the same object (by comparing the references). If you give it two different strings that contain the same letters, it yields false. The right way to compare strings is with the <code>equals</code> method.</p>
+                            <box>
+                              <p><span class="fas fa-cube"></span> This example invokes <code>equals</code> on <code>name1</code> and passes <code>name2</code> as an argument. The <code>equals</code> method returns <code>true</code> if the strings contain
+                                the same characters; otherwise it returns <code>false</code>.</p>
+                              <pre><code class="hljs java"><span class="hljs-keyword">if</span> (name1.equals(name2)) {
     System.out.println(<span class="hljs-string">"The names are the same."</span>);
 }
 </code></pre>
-                            <p>This example invokes <code>equals</code> on <code>name1</code> and passes <code>name2</code> as an argument. The <code>equals</code> method returns <code>true</code> if the strings contain the same characters; otherwise it
-                              returns <code>false</code>.</p>
-                            <p>To check if two strings are similar irrespective of the differences in case, you can use the <code>equalsIgnoreCase</code> method.</p>
+                            </box>
+                            <p>If the strings differ, we can use <code>compareTo</code> to see which comes first in alphabetical order. The return value from <code>compareTo</code> is the difference between the first characters in the strings that differ.
+                              If the strings are equal, their difference is zero. If the first string (the one on which the method is invoked) comes first in the alphabet, the difference is negative. Otherwise, the difference is positive.</p>
+                            <box>
+                              <p><span class="fas fa-cube"></span> In this example, <code>compareTo</code> returns positive 8, because the second letter of &quot;Ada&quot; comes before the second letter of &quot;Alan&quot; by 8 letters.</p>
+                              <pre><code class="hljs java"><span class="hljs-keyword">int</span> diff = name1.compareTo(name2);
+<span class="hljs-keyword">if</span> (diff == <span class="hljs-number">0</span>) {
+    System.out.println(<span class="hljs-string">"The names are the same."</span>);
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (diff &lt; <span class="hljs-number">0</span>) {
+    System.out.println(<span class="hljs-string">"name1 comes before name2."</span>);
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (diff &gt; <span class="hljs-number">0</span>) {
+    System.out.println(<span class="hljs-string">"name2 comes before name1."</span>);
+}
+</code></pre>
+                            </box>
+                            <p>Both <code>equals</code> and <code>compareTo</code> are case-sensitive. The uppercase letters come before the lowercase letters, so <code>&quot;Ada&quot;</code> comes before <code>&quot;ada&quot;</code>. To check if two strings
+                              are similar irrespective of the differences in case, you can use the <code>equalsIgnoreCase</code> method.</p>
                             <pre><code class="hljs java">String s1 = <span class="hljs-string">"Apple"</span>;
 String s2 = <span class="hljs-string">"apple"</span>;
 System.out.println(s1.equals(s2)); <span class="hljs-comment">//false</span>
@@ -6210,25 +6268,14 @@ System.out.println(s1.equalsIgnoreCase(s2)); <span class="hljs-comment">//true</
                               <li><code>startsWith</code>: checks if one string has the other as a substring at the <em>beginning</em> e.g., <code>Apple</code> and <code>App</code></li>
                               <li><code>endsWith</code>: checks if one string has the other as a substring at the <em>end</em> e.g., <code>Crab</code> and <code>ab</code></li>
                             </ul>
-                            <p>If the strings differ, we can use <code>compareTo</code> to see which comes first in alphabetical order:</p>
-                            <pre><code class="hljs java"><span class="hljs-keyword">int</span> diff = name1.compareTo(name2);
-<span class="hljs-keyword">if</span> (diff == <span class="hljs-number">0</span>) {
-    System.out.println(<span class="hljs-string">"The names are the same."</span>);
-} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (diff &lt; <span class="hljs-number">0</span>) {
-    System.out.println(<span class="hljs-string">"name1 comes before name2."</span>);
-} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (diff &gt; <span class="hljs-number">0</span>) {
-    System.out.println(<span class="hljs-string">"name2 comes before name1."</span>);
-}
-</code></pre>
-                            <p>The return value from compareTo is the difference between the first characters in the strings that differ. If the strings are equal, their difference is zero. If the first string (the one on which the method is invoked) comes
-                              first in the alphabet, the difference is negative. Otherwise, the difference is positive.</p>
-                            <p>In the preceding code, compareTo returns positive 8, because the second letter of &quot;Ada&quot; comes before the second letter of &quot;Alan&quot; by 8 letters. Both equals and compareTo are case-sensitive. The uppercase
-                              letters come before the lowercase letters, so &quot;Ada&quot; comes before &quot;ada&quot;.</p>
                           </div>
                           <h5 id="string-formatting">String formatting</h5>
                           <div class="indented">
-                            <p>Sometimes programs need to create strings that are formatted a certain way, but not display them immediately, or ever. For example, the following method returns a time string in 12-hour format:</p>
-                            <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">timeString</span><span class="hljs-params">(<span class="hljs-keyword">int</span> hour, <span class="hljs-keyword">int</span> minute)</span> </span>{
+                            <p>Sometimes programs need to create strings that are formatted a certain way. <code>String.format</code> takes a format specifier followed by a sequence of values and returns a new string formatted as specified.</p>
+                            <box>
+                              <p><span class="fas fa-cube"></span> The following method returns a time string in 12-hour format. The format specifier <code>\%02d</code> means “two digit integer padded with zeros”, so <code>timeString(19, 5)</code> returns
+                                the string <code>&quot;07:05 PM&quot;</code>.</p>
+                              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">timeString</span><span class="hljs-params">(<span class="hljs-keyword">int</span> hour, <span class="hljs-keyword">int</span> minute)</span> </span>{
     String ampm;
     <span class="hljs-keyword">if</span> (hour &lt; <span class="hljs-number">12</span>) {
         ampm = <span class="hljs-string">"AM"</span>;
@@ -6239,14 +6286,23 @@ System.out.println(s1.equalsIgnoreCase(s2)); <span class="hljs-comment">//true</
         ampm = <span class="hljs-string">"PM"</span>;
         hour = hour - <span class="hljs-number">12</span>;
     }
-    <span class="hljs-keyword">return</span> String.format(<span class="hljs-string">"%02d:%02d %s"</span>, hour, minute, ampm);
+    <span class="hljs-keyword">return</span> String.format(<span class="hljs-string">"%02d:%02d %s"</span>, hour, minute, ampm); <span class="hljs-comment">// returns "07:05 PM"</span>
 }
 </code></pre>
-                            <p><code>String.format</code> takes the same arguments as <code>System.out.printf</code>: a format specifier followed by a sequence of values. The main difference is that <code>System.out.printf</code> displays the result on the
-                              screen; <code>String.format</code> creates a new string, but does not display anything. In this example, the format specifier <code>\%02d</code> means “two digit integer padded with zeros”, so <code>timeString(19, 5)</code>                              returns the string <code>&quot;07:05 PM&quot;</code>.</p>
+                            </box>
                           </div>
                         </div>
-                        <div></div>
+                        <div>
+                          <div>
+                            <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                              <div>
+                                <ul>
+                                  <li><a href="https://docs.oracle.com/javase/tutorial/essential/io/formatting.html">Oracle's tutorial on string formatting</a></li>
+                                </ul>
+                              </div>
+                            </panel>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -6270,24 +6326,26 @@ System.out.println(s1.equalsIgnoreCase(s2)); <span class="hljs-comment">//true</
                         </div>
                         <div id="main">
                           <div>
-                            <p>Primitive values (like <code>int</code>s, <code>double</code>s, and <code>char</code>s) do not provide methods. For example, you can’t call <code>equals</code> on an int:</p>
-                            <pre><code class="hljs java"><span class="hljs-keyword">int</span> i = <span class="hljs-number">5</span>;
+                            <p>Primitive values (like <code>int</code>, <code>double</code>, and <code>char</code>) do not provide methods.</p>
+                            <box>
+                              <p><span class="fas fa-cube"></span> For example, you can’t call <code>equals</code> on an <code>int</code>:</p>
+                              <pre><code class="hljs java"><span class="hljs-keyword">int</span> i = <span class="hljs-number">5</span>;
 System.out.println(i.equals(<span class="hljs-number">5</span>));  <span class="hljs-comment">// compiler error</span>
 </code></pre>
-                            <p>But <strong>for each primitive type, there is a corresponding class in the Java library, called a <em>wrapper class</em></strong>. The wrapper class for <code>char</code> is called <code>Character</code>; for int it’s called
-                              Integer. Other wrapper classes include Boolean, Long, and Double. They are in the java.lang package, so you can use them without importing them.</p>
-                            <p>Each wrapper class defines constants <code>MIN_VALUE</code> and <code>MAX_VALUE</code>. For example, <code>Integer.MIN_VALUE</code> is <code>-2147483648</code>, and <code>Integer.MAX_VALUE</code> is <code>2147483647</code>.
-                              Because these constants are available in wrapper classes, you don’t have to remember them, and you don’t have to include them in your programs.</p>
-                            <p><strong>Wrapper classes provide methods for converting strings to other types.</strong> For example, <code>Integer.parseInt</code> converts a string to (you guessed it) an integer:</p>
-                            <pre><code class="hljs java">String str = <span class="hljs-string">"12345"</span>;
-<span class="hljs-keyword">int</span> num = Integer.parseInt(str);
+                            </box>
+                            <p>But <strong>for each primitive type, there is a corresponding class in the Java library, called a <em>wrapper class</em></strong>. The wrapper class for <code>char</code> is called <code>Character</code>; for <code>int</code>                              it’s called <code>Integer</code>. Other wrapper classes include <code>Boolean</code>, <code>Long</code>, and <code>Double</code>. They are in the <code>java.lang</code> package, so you can use them without importing them.</p>
+                            <p>Each wrapper class defines constants <code>MIN_VALUE</code> and <code>MAX_VALUE</code>. Because these constants are available in wrapper classes, you don’t have to remember them, and you don’t have to include them in your programs.</p>
+                            <box>
+                              <p><span class="fas fa-cube"></span> Accessing max and min values for integers:</p>
+                              <pre><code class="hljs java">System.out.println(Integer.MIN_VALUE + <span class="hljs-string">" : "</span> + Integer.MAX_VALUE);
 </code></pre>
-                            <p>In this context, parse means something like “read and translate”.</p>
-                            <p>The other wrapper classes provide similar methods, like <code>Double.parseDouble</code> and <code>Boolean.parseBoolean</code>. They also provide <code>toString</code>, which returns a string representation of a value:</p>
-                            <pre><code class="hljs java"><span class="hljs-keyword">int</span> num = <span class="hljs-number">12345</span>;
-String str = Integer.toString(num);
-</code></pre>
-                            <p>The result is the string &quot;12345&quot;.</p>
+                              <p><span class="fas fa-arrow-right"></span> <code>-2147483648 : 2147483647</code></p>
+                            </box>
+                            <p><strong>Wrapper classes provide methods for converting strings to other types.</strong> In this context, parse means something like “read and translate”. <code>Integer.parseInt</code> converts a string to (you guessed it) an
+                              integer. The other wrapper classes provide similar methods, like <code>Double.parseDouble</code> and <code>Boolean.parseBoolean</code>.</p>
+                            <p><span class="fas fa-cube"></span> <code>Integer.parseInt(&quot;12345&quot;)</code> <span class="fas fa-arrow-right"></span> <code>1234</code></p>
+                            <p>Wrapper classes also provide <code>toString</code>, which returns a string representation of a value.</p>
+                            <p><span class="fas fa-cube"></span> <code>Integer.toString(12345)</code> <span class="fas fa-arrow-right"></span> <code>&quot;1234&quot;</code></p>
                           </div>
                           <div></div>
                         </div>
@@ -6313,16 +6371,23 @@ String str = Integer.toString(num);
                         </div>
                         <div id="main">
                           <div>
-                            <p>The Java library provides a utility class <code>java.util.Arrays</code> that provides methods for working with arrays. One of them, <code>toString</code>, returns a string representation of an array.</p>
-                            <pre><code class="hljs java"><span class="hljs-keyword">int</span>[] a = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]{<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>};
-System.out.println(Arrays.toString(a));
+                            <p><strong><a href="https://docs.oracle.com/javase/9/docs/api/java/util/Arrays.html"><code>java.util.Arrays</code></a> provides methods for working with arrays.</strong> One of them, <code>toString</code>, returns a string representation
+                              of an array. It also provides a <code>copyOf</code> that copies an array.</p>
+                            <box>
+                              <p><span class="fas fa-cube"></span> Using <code>Arrays.copyOf</code> and <code>Arrays.toString</code>:</p>
+                              <pre><code class="hljs java"><span class="hljs-keyword">int</span>[] a = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]{<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>};
+
+<span class="hljs-keyword">int</span>[] b = Arrays.copyOf(a, <span class="hljs-number">3</span>); <span class="hljs-comment">// copy first three elements</span>
+System.out.println(Arrays.toString(b));
+
+<span class="hljs-keyword">int</span>[] c = Arrays.copyOf(a, a.length); <span class="hljs-comment">// copy all elements</span>
+System.out.println(Arrays.toString(c));
 </code></pre>
-                            <p><span class="fas fa-arrow-right"></span> <code>[1, 2, 3, 4]</code></p>
-                            <p>It also provides a <code>copyOf</code> that copies an array.</p>
-                            <pre><code class="hljs java"><span class="hljs-keyword">double</span>[] b = Arrays.copyOf(a, <span class="hljs-number">3</span>);
-You can also use a.length with Arrays.copyOf:
-<span class="hljs-keyword">double</span>[] b = Arrays.copyOf(a, a.length);
+                              <p><span class="fas fa-arrow-down"></span></p>
+                              <pre class="hljs"><code>[1, 2, 3]
+[1, 2, 3, 4]
 </code></pre>
+                            </box>
                           </div>
                           <div></div>
                         </div>
@@ -6348,8 +6413,8 @@ You can also use a.length with Arrays.copyOf:
                         </div>
                         <div id="main">
                           <div>
-                            <p><code>Scanner</code> is a class that provides methods for inputting words, numbers, and other data.
-                              <code>Scanner</code> provides a method called nextLine that reads a line of input from the keyboard and returns a String. The following example reads two lines and repeats them back to the user:</p>
+                            <p><strong><code>Scanner</code> is a class that provides methods for inputting words, numbers, and other data.</strong> <code>Scanner</code> provides a method called <code>nextLine</code> that reads a line of input from the keyboard
+                              and returns a String. The following example reads two lines and repeats them back to the user:</p>
                             <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;
 
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Echo</span> </span>{
@@ -6368,8 +6433,10 @@ You can also use a.length with Arrays.copyOf:
     }
 }
 </code></pre>
-                            <p><code>Scanner</code> class normally reads inputs as strings but it can read in a specific type of input too. The code below uses the <code>nextInt</code> method of the <code>Scanner</code> class to read an input as an integer.</p>
-                            <pre><code class="hljs java">
+                            <p><code>Scanner</code> class normally reads inputs as strings but it can read in a specific type of input too.</p>
+                            <box>
+                              <p><span class="fas fa-cube"></span> The code below uses the <code>nextInt</code> method of the <code>Scanner</code> class to read an input as an integer.</p>
+                              <pre><code class="hljs java">
 Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);
 
 System.out.print(<span class="hljs-string">"What is your age? "</span>);
@@ -6379,6 +6446,8 @@ System.out.print(<span class="hljs-string">"What is your name? "</span>);
 String name = in.nextLine();
 System.out.printf(<span class="hljs-string">"Hello %s, age %d\n"</span>, name, age);
 </code></pre>
+                              <p>💡 Note the <a href="https://docs.oracle.com/javase/tutorial/java/data/numberformat.html">use of <code>printf</code> method for formatting the output</a>.</p>
+                            </box>
                           </div>
                           <div></div>
                         </div>
@@ -6605,7 +6674,7 @@ System.out.printf(<span class="hljs-string">"Hello %s, age %d\n"</span>, name, a
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Tue, 21 Aug 2018 14:45:20 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Wed, 22 Aug 2018 12:22:18 GMT</small></div>
 </footer>
 </div>
 </body>
