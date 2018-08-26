@@ -881,9 +881,9 @@
                 between <code>Man</code> and <code>Woman</code> for certain other things. A solution is to add the <code>Person</code> class as a super class (to contain the code common to men and woment) and let <code>Man</code> and <code>Woman</code>                inherit from <code>Person</code> class.</p>
             </tip-box>
             <p><strong>Inheritance implies the derived class can be considered as a <em>sub-type</em> of the base class (and the base class is a <em>super-type</em> of the derived class), resulting in an <em>is a</em> relationship.</strong></p>
-            <tip-box type="info">
-              <p>Inheritance does not necessarily mean a sub-type relationship exists. However, the two often go hand-in-hand. For simplicity, at this point let us assume inheritance implies a sub-type relationship.</p>
-            </tip-box>
+            <p><span class="dimmed"><span class="fas fa-info-circle"></span> Inheritance does not necessarily mean a sub-type relationship exists. However, the two often go hand-in-hand. For simplicity, at this point let us assume inheritance implies a sub-type
+              relationship.</span>
+            </p>
             <tip-box>
               <p><span class="fas fa-cube"></span> To continue the previous example,</p>
               <ul>
@@ -893,15 +893,16 @@
             </tip-box>
             <p><strong>Inheritance relationships through a chain of classes can result in inheritance <em>hierarchies</em> (aka inheritance <em>trees</em>).</strong></p>
             <tip-box>
-              <p><span class="fas fa-cube"></span> Two inheritance hierarchies/trees are given below. Note that <code>Parrot</code> <em>is a</em> <code>Bird</code> as well as it <em>is an</em> <code>Animal</code>. Note that the triangle points to the parent
-                class.</p>
+              <p><span class="fas fa-cube"></span> Two inheritance hierarchies/trees are given below. <span class="dimmed">Note that the triangle points to the parent class.</span> Observe how the <code>Parrot</code> <em>is a</em> <code>Bird</code> as well
+                as it <em>is an</em> <code>Animal</code>.</p>
               <img src="/website/book/oop/inheritance/what/images/inheritanceTreesExamples.png" width="500">
               <p></p>
             </tip-box>
             <p><strong><em>Multiple Inheritance</em> is when a class inherits <em>directly</em> from multiple classes.</strong> Multiple inheritance among classes is allowed in some languages (e.g., Python, C++) but not in other languages (e.g., Java, C#).</p>
             <tip-box>
-              <p><span class="fas fa-cube"></span> The <code>Honey</code> class inherits from the <code>Food</code> class <em>and</em> the <code>Medicine</code> class <span class="dimmed">because honey can be consumed as a food as well as a medicine (in some oriental medicine practices)</span>.</p>
-            </tip-box>
+              <p><span class="fas fa-cube"></span> The <code>Honey</code> class inherits from the <code>Food</code> class <em>and</em> the <code>Medicine</code> class <span class="dimmed">because honey can be consumed as a food as well as a medicine (in some oriental medicine practices)</span>.
+                Similarly, a <code>Car</code> is an <code>Vehicle</code>, an <code>Asset</code> and a <code>Liability</code>.</p>
+              <img src="/website/book/oop/inheritance/what/images/multipleInheritanceExamples.png" width="440"></tip-box>
           </div>
         </div>
       </div>
@@ -915,12 +916,35 @@
           <div>
             <p><strong>Method <em>overriding</em> is when a sub-class changes the behavior inherited from the parent class</strong> by re-implementing the method. Overridden methods have the same name, same type signature, and same return type.</p>
             <tip-box>
-              <p><span class="fas fa-cube"></span> In a case where <code>EvaluationReport</code> class inherits the <code>Report</code> class,</p>
-              <ul>
-                <li><code>Report#print()</code> method is overridden by <code>EvaluationReport#print()</code> method.</li>
-                <li><code>Report#write(String)</code> method is overridden by <code>EvaluationReport#write(String)</code> method.</li>
-                <li><code>Report#read():String</code> method is <strong>NOT</strong> overridden by <code>EvaluationReport#read(int):String</code> method. <span class="dimmed"> Reason: the two methods have different signatures; <code>EvaluationReport#read(int):String</code> <trigger trigger="click" for="modal:overriding-overloading"> <em>overloads</em></trigger> (rather than overrides) the <code>Report#read():String</code> method.</span></li>
-              </ul>
+              <p><span class="fas fa-cube"></span> Consider the following case of <code>EvaluationReport</code> class inheriting the <code>Report</code> class:</p>
+              <div class="table-responsive">
+                <table class="markbind-table table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th><code>Report</code> methods</th>
+                      <th><code>EvaluationReport</code> methods</th>
+                      <th>Overrides?</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>print()</code></td>
+                      <td><code>print()</code></td>
+                      <td>Yes</td>
+                    </tr>
+                    <tr>
+                      <td><code>write(String)</code></td>
+                      <td><code>write(String)</code></td>
+                      <td>Yes</td>
+                    </tr>
+                    <tr>
+                      <td><code>read():String</code></td>
+                      <td><code>read(int):String</code></td>
+                      <td>No. <span class="dimmed"> Reason: the two methods have different signatures; This is a case of <trigger trigger="click" for="modal:overriding-overloading"> <em>overloading</em></trigger> (rather than overriding).</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <modal title="**Overloading**" id="modal:overriding-overloading">
                 <div>
                   <div></div>
@@ -2928,11 +2952,9 @@ MAX_SIZE = <span class="hljs-number">10</span>
           <div>
             <p><strong>One essential way to improve code quality is to follow a consistent style. That is why software engineers follow a strict coding standard (aka <em>style guide</em>).</strong></p>
             <p><strong>The aim of a coding standard is to make the entire code base look like it was written by one person</strong>. A coding standard is usually specific to a programming language and specifies guidelines such as the location of opening
-              and closing braces, indentation styles and naming styles (e.g. whether to use Hungarian style, Pascal casing, Camel casing, etc.). It is important that the whole team/company use the same coding standard and that standard is not generally
-              inconsistent with typical industry practices. <span class="dimmed">If a company's coding standards is very different from what is used typically in the industry, new recruits will take longer to get used to the company's coding style.</span></p>
-            <tip-box type="tip">
-              <p>IDEs can help to enforce some parts of a coding standard e.g. indentation rules.</p>
-            </tip-box>
+              and closing braces, indentation styles and naming styles (e.g. whether to use <em>Hungarian style</em>, <em>Pascal casing</em>, <em>Camel casing</em>, etc.). It is important that the whole team/company use the same coding standard and that
+              standard is not generally inconsistent with typical industry practices. <span class="dimmed">If a company's coding standards is very different from what is used typically in the industry, new recruits will take longer to get used to the company's coding style.</span></p>
+            <p>💡 IDEs can help to enforce some parts of a coding standard e.g. indentation rules.</p>
           </div>
         </div>
       </div>
@@ -3338,12 +3360,10 @@ send()
                 </div>
               </div>
             </tip-box>
-            <tip-box>
-              <p>💡 Some IDEs have built in support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.</p>
-            </tip-box>
-            <tip-box type="important">
-              <p>Important: Refactoring, even if done with the aid of an IDE, may still result in regressions. Therefore, each small refactoring should be followed by regression testing.</p>
-            </tip-box>
+            <p>💡 Some IDEs have built in support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.</p>
+            <p>
+              <font color="red"><big><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span></big></font> Refactoring, even if done with the aid of an IDE, may still result in regressions. Therefore, each small refactoring should be followed by regression
+              testing.</p>
           </div>
         </div>
       </div>
@@ -4005,7 +4025,7 @@ send()
     </div>
     <div class="indented-less">
       <div class="indented-less">
-        <h4 id="what-31">What <span class="badge badge-light"><small><small><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty"
+        <h4 id="what-31">What <span class="badge badge-light"><small><small><font color="Crimson"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty"
             aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
           </small>
           </span>
@@ -4608,8 +4628,8 @@ String name = logic.getName(<span class="hljs-number">23</span>);
     </div>
     <div class="indented-less">
       <div class="indented-less">
-        <h4 id="what-41">What <span class="badge badge-light"><small><small><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty"
-            aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
+        <h4 id="what-41">What <span class="badge badge-light"><small><small><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
+            aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
           </small>
           </span>
         </h4>
@@ -4636,11 +4656,10 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         </div>
       </div>
       <div class="indented-less">
-        <h4 id="automated-testing-of-cli-apps">Automated Testing of CLI Apps <span class="badge badge-light"><small><small><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font>
-          <span
-            class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-            </small>
-            </span>
+        <h4 id="automated-testing-of-cli-apps">Automated Testing of CLI Apps <span class="badge badge-light"><small><small><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
+            aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
+          </small>
+          </span>
         </h4>
         <div class="indented-less">
           <div>
@@ -7439,7 +7458,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Wed, 22 Aug 2018 15:53:05 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 26 Aug 2018 09:28:07 GMT</small></div>
 </footer>
 </div>
 </body>

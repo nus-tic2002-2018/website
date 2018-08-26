@@ -31,10 +31,8 @@
         "tutorials": "Tutorials",
         "textbook": "Textbook",
         "programming-language": "Programming language",
-        "module-project": "Module project",
-        "project-part-i": "Project: part I",
-        "project-part-ii": "Project: part II",
-        "tools-used": "Tools used",
+        "project": "Project",
+        "tools": "Tools",
         "assessment": "Assessment",
         "exam": "Exam",
         "final-exam-part-1-mcq": "Final Exam: Part 1 (MCQ)",
@@ -43,6 +41,7 @@
       "title": "Admin Info",
       "footer": "footer.md",
       "head": "adminHead.md",
+      "siteNav": "adminSiteNav-tic2002.md",
       "src": "admin/index-tic2002.md"
     },
     {
@@ -188,6 +187,7 @@
         "accessing-substrings": "Accessing substrings",
         "searching-within-strings": "Searching within strings",
         "comparing-strings": "Comparing Strings",
+        "printing-special-characters-line-breaks-tabs": "Printing special characters (line breaks, tabs, ...)",
         "string-formatting": "String formatting",
         "some-useful-classes": "Some Useful Classes",
         "inheritance-basic": "Inheritance (Basic)",
