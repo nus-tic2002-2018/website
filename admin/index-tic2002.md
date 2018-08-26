@@ -109,23 +109,30 @@ This module uses Java. It assumes you are familiar with C++ basics and provides 
 # Module project
 <div class="indented">
 
-The project has 2 parts:
-* Part I : Enhance a 1 KLoC code base
-* Part II : Enhance a 2 KLoC code base
+<panel header="**Preparation - Week 3**" >
 
-## Project: part I
+<include src="../schedule/evidence/project.md#week3" />
 
-Requirements: Take the code from [Addressbook-level1]({{module_org}}/addressbook-level1) and enhance it in some way.
+</panel><p/>
 
-To be done individually but you are encouraged to work in pairs or threes and help each other.
+For the project you can choose one of these options:
 
-More details coming soon.
+* **Option 1:** Enhance the Task Manager app that you worked on during the preparation stage
+* **Option 2:** Take the code from [Addressbook-level2]({{module_org}}/addressbook-level2) and enhance it in some way.
+* **Option 3:** Propose your own project.
 
-## Project: part II
+Can be done individually or in a team of two/three members.
 
-Requirements: Take the code from [Addressbook-level2]({{module_org}}/addressbook-level2) and enhance it in some way.
+**Timeline**:
+* Week 1 - 6: Preparation stage i.e., building up your coding skills for the module project
+* Week 7 - 12: Project execution.
+* Project teams and direction should be finalized by week 7.
+* The submission deadline is Monday of week 13.
 
-Can be done individually or in a team of two/threes.
+**Deliverables**:
+* Source code of the working program
+* Project documentation: more info coming soon
+* Project demo: to be done during week 13 lecture session.
 
 More details coming soon.
 
