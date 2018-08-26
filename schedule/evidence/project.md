@@ -1,3 +1,11 @@
+<div id="week3">
+ Ensure that you are able to do this exercise based on your current Java knowledge. There is no need to do the exercise if you have prior programming experience and you are confident of being able to do it. But if you are new to programming, we highly recommend you to attempt this exercise and get help from the prof if you are unable to complete it.
+
+We recommend you to ==do this exercise on your own computer== rather than on repl.it.
+
+<include src="../../book/cppToJava/usefulClasses/scannerClass/q-taskManagerLevel1.md" />
+
+</div>
 <div id="1kloc">
 
 {{ icon_important_big_red }} This LO can earn you <trigger trigger="click" for="modal:project1kloc-participation">1 participation mark</trigger>. 
