@@ -2,6 +2,7 @@
 title: "Admin Info"
 footer: footer.md
 head: adminHead.md
+siteNav: adminSiteNav-tic2002.md
 </frontmatter>
 
 
@@ -106,7 +107,7 @@ This module uses Java. It assumes you are familiar with C++ basics and provides 
 
 {{ dotted_line }}
 
-# Module project
+# Project
 <div class="indented">
 
 <panel header="**Preparation - Week 3**" >
@@ -140,7 +141,7 @@ More details coming soon.
 
 {{ dotted_line }}
 
-# Tools used
+# Tools
 <div class="indented">
 
 * **Git** [Required] : For revision control
