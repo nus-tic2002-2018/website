@@ -82,7 +82,7 @@ head: scheduleHead.md
       {location: ["cppToJava", "usefulClasses", "wrapperClasses"]},
       {location: ["cppToJava", "usefulClasses", "arraysClass"]},
       {location: ["cppToJava", "usefulClasses", "scannerClass"]},
-    {heading: "Can write a small program from scratch", priority: "1", file: "cppToJava.md#taskManagerLevel1"},
+    {heading: ":parking: Project preparation: Can write a small program from scratch", priority: "1", file: "project.md#week3"},
     {heading: "Can use inheritance"},
       {location: ["oop", "inheritance", "what"], omit_evidence: true},
       {location: ["oop", "inheritance", "overloading"], omit_evidence: true},
