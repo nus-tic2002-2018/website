@@ -5760,13 +5760,63 @@ exit();
                                               </p>
                                               <p></p>
                                               <div>
-                                                <p>Some coding standards you can adopt:</p>
-                                                <ul>
-                                                  <li><a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html"><strong>Java</strong> coding standard -- by OSS-Generic</a></li>
-                                                  <li><a href="https://www.python.org/dev/peps/pep-0008/">PEP 8 <strong>Python</strong> Style Guide -- by Python.org</a></li>
-                                                </ul>
+                                                <div class="alt-java">
+                                                  <p>Learn <em>basic</em> guidelines of the <a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html"><strong>Java</strong> coding standard (by OSS-Generic)</a></p>
+                                                </div>
+                                                <div class="alt-python">
+                                                  <p>Sample coding standard: <a href="https://www.python.org/dev/peps/pep-0008/">PEP 8 <strong>Python</strong> Style Guide -- by Python.org</a></p>
+                                                </div>
                                               </div>
-                                              <div></div>
+                                              <div>
+                                                <div>
+                                                  <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                                                    <div>
+                                                      <div>
+                                                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Find basic coding standard violations">
+                                                          <question>
+                                                            <p>Consider the code given below:</p>
+                                                            <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.*;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String descriptionPrefix = <span class="hljs-string">"description: "</span>;
+    <span class="hljs-keyword">private</span> String description;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> important;
+    List&lt;String&gt; pastDescription = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(); <span class="hljs-comment">// a list of past descriptions</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String d)</span> </span>{
+      <span class="hljs-keyword">this</span>.description = d;
+      <span class="hljs-keyword">if</span> (!d.isEmpty())
+          <span class="hljs-keyword">this</span>.important = <span class="hljs-keyword">true</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getAsXML</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">"&lt;task&gt;"</span>+description+<span class="hljs-string">"&lt;/task&gt;"</span>; }
+
+    <span class="hljs-comment">/**
+     * Print the description as a string.
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printingDescription</span><span class="hljs-params">()</span></span>{ System.out.println(<span class="hljs-keyword">this</span>); }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> descriptionPrefix + description; }
+}
+</code></pre>
+                                                            <p>In what ways the code violate the <em>basic</em> guidelines (i.e., those marked with one ⭐️) of the OSS-Generic Java Coding Standard given <a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html">here</a>?</p>
+                                                            <div slot="hint">
+                                                              <p>Here are three:</p>
+                                                              <ul>
+                                                                <li><code>descriptionPrefix</code> is a constant and should be named <code>DESCRIPTION_PREFIX</code></li>
+                                                                <li>method name <code>printingDescription()</code> should be named as <code>printDescription()</code></li>
+                                                                <li>boolean variable <code>important</code> should be named to sound boolean e.g., <code>isImportant</code></li>
+                                                              </ul>
+                                                              <p>There are many more.</p>
+                                                            </div>
+                                                          </question>
+                                                        </panel>
+                                                      </div>
+                                                    </div>
+                                                  </panel>
+                                                </div>
+                                              </div>
                                             </div>
                                           </panel>
                                         </div>
@@ -5789,22 +5839,80 @@ exit();
                                                 <div>
                                                   <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
                                                     <div>
-                                                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Unsuitable variable name">
-                                                        <question>
-                                                          <p>According to the given Java coding standard, which one of these is not a good name?</p>
-                                                          <ul radio-group="1c05d" class="radio-list">
-                                                            <li class="radio-list-item"><label><input class="radio-list-input" name="1c05d" type="radio"> a. integer variable name: totalPeople</label></li>
-                                                            <li class="radio-list-item"><label><input class="radio-list-input" name="1c05d" type="radio"> b. boolean variable name: checkWeight</label></li>
-                                                            <li class="radio-list-item"><label><input class="radio-list-input" name="1c05d" type="radio"> c. method name (returns integer): getPeopleCount</label></li>
-                                                            <li class="radio-list-item"><label><input class="radio-list-input" name="1c05d" type="radio"> d. method name (returns boolean): isValidAddress</label></li>
-                                                            <li class="radio-list-item"><label><input class="radio-list-input" name="1c05d" type="radio"> e. String variable name: description</label></li>
-                                                          </ul>
-                                                          <div slot="answer">
-                                                            <p>b</p>
-                                                            <p>Explanation: checkWeight is an action. Naming variables as actions makes the code harder to follow. isWeightValid may be a better name.</p>
-                                                          </div>
-                                                        </question>
-                                                      </panel>
+                                                      <div>
+                                                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Unsuitable variable name">
+                                                          <question>
+                                                            <p>According to the given Java coding standard, which one of these is not a good name?</p>
+                                                            <ul radio-group="d008b" class="radio-list">
+                                                              <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> a. integer variable name: <code>totalPeople</code></label></li>
+                                                              <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> b. boolean variable name: <code>checkWeight</code></label></li>
+                                                              <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> c. method name (returns integer): <code>getPeopleCount</code></label></li>
+                                                              <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> d. method name (returns boolean): <code>isValidAddress</code></label></li>
+                                                              <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> e. String variable name: <code>description</code></label></li>
+                                                            </ul>
+                                                            <div slot="answer">
+                                                              <p>b</p>
+                                                              <p>Explanation: <code>checkWeight</code> is an action. Naming variables as actions makes the code harder to follow. <code>isWeightValid</code> may be a better name.</p>
+                                                            </div>
+                                                          </question>
+                                                        </panel>
+                                                      </div>
+                                                      <div>
+                                                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Find intermediate coding standard violations">
+                                                          <question>
+                                                            <p>Repeat the exercise in the panel below but also find violations of <em>intermediate</em> level guidelines.</p>
+                                                            <div>
+                                                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Find basic coding standard violations">
+                                                                <question>
+                                                                  <p>Consider the code given below:</p>
+                                                                  <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.*;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String descriptionPrefix = <span class="hljs-string">"description: "</span>;
+    <span class="hljs-keyword">private</span> String description;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> important;
+    List&lt;String&gt; pastDescription = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(); <span class="hljs-comment">// a list of past descriptions</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String d)</span> </span>{
+      <span class="hljs-keyword">this</span>.description = d;
+      <span class="hljs-keyword">if</span> (!d.isEmpty())
+          <span class="hljs-keyword">this</span>.important = <span class="hljs-keyword">true</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getAsXML</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">"&lt;task&gt;"</span>+description+<span class="hljs-string">"&lt;/task&gt;"</span>; }
+
+    <span class="hljs-comment">/**
+     * Print the description as a string.
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printingDescription</span><span class="hljs-params">()</span></span>{ System.out.println(<span class="hljs-keyword">this</span>); }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> descriptionPrefix + description; }
+}
+</code></pre>
+                                                                  <p>In what ways the code violate the <em>basic</em> guidelines (i.e., those marked with one ⭐️) of the OSS-Generic Java Coding Standard given <a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html">here</a>?</p>
+                                                                  <div slot="hint">
+                                                                    <p>Here are three:</p>
+                                                                    <ul>
+                                                                      <li><code>descriptionPrefix</code> is a constant and should be named <code>DESCRIPTION_PREFIX</code></li>
+                                                                      <li>method name <code>printingDescription()</code> should be named as <code>printDescription()</code></li>
+                                                                      <li>boolean variable <code>important</code> should be named to sound boolean e.g., <code>isImportant</code></li>
+                                                                    </ul>
+                                                                    <p>There are many more.</p>
+                                                                  </div>
+                                                                </question>
+                                                              </panel>
+                                                            </div>
+                                                            <div slot="hint">
+                                                              <p>Here's one you are more likely to miss:</p>
+                                                              <ul>
+                                                                <li><code>* Print the description as a string.</code> → <code>* Prints the description as a string.</code></li>
+                                                              </ul>
+                                                              <p>There are more.</p>
+                                                            </div>
+                                                          </question>
+                                                        </panel>
+                                                      </div>
                                                     </div>
                                                   </panel>
                                                 </div>
@@ -8134,13 +8242,63 @@ exit();
                                                 </p>
                                                 <p></p>
                                                 <div>
-                                                  <p>Some coding standards you can adopt:</p>
-                                                  <ul>
-                                                    <li><a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html"><strong>Java</strong> coding standard -- by OSS-Generic</a></li>
-                                                    <li><a href="https://www.python.org/dev/peps/pep-0008/">PEP 8 <strong>Python</strong> Style Guide -- by Python.org</a></li>
-                                                  </ul>
+                                                  <div class="alt-java">
+                                                    <p>Learn <em>basic</em> guidelines of the <a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html"><strong>Java</strong> coding standard (by OSS-Generic)</a></p>
+                                                  </div>
+                                                  <div class="alt-python">
+                                                    <p>Sample coding standard: <a href="https://www.python.org/dev/peps/pep-0008/">PEP 8 <strong>Python</strong> Style Guide -- by Python.org</a></p>
+                                                  </div>
                                                 </div>
-                                                <div></div>
+                                                <div>
+                                                  <div>
+                                                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                                                      <div>
+                                                        <div>
+                                                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Find basic coding standard violations">
+                                                            <question>
+                                                              <p>Consider the code given below:</p>
+                                                              <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.*;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String descriptionPrefix = <span class="hljs-string">"description: "</span>;
+    <span class="hljs-keyword">private</span> String description;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> important;
+    List&lt;String&gt; pastDescription = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(); <span class="hljs-comment">// a list of past descriptions</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String d)</span> </span>{
+      <span class="hljs-keyword">this</span>.description = d;
+      <span class="hljs-keyword">if</span> (!d.isEmpty())
+          <span class="hljs-keyword">this</span>.important = <span class="hljs-keyword">true</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getAsXML</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">"&lt;task&gt;"</span>+description+<span class="hljs-string">"&lt;/task&gt;"</span>; }
+
+    <span class="hljs-comment">/**
+     * Print the description as a string.
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printingDescription</span><span class="hljs-params">()</span></span>{ System.out.println(<span class="hljs-keyword">this</span>); }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> descriptionPrefix + description; }
+}
+</code></pre>
+                                                              <p>In what ways the code violate the <em>basic</em> guidelines (i.e., those marked with one ⭐️) of the OSS-Generic Java Coding Standard given <a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html">here</a>?</p>
+                                                              <div slot="hint">
+                                                                <p>Here are three:</p>
+                                                                <ul>
+                                                                  <li><code>descriptionPrefix</code> is a constant and should be named <code>DESCRIPTION_PREFIX</code></li>
+                                                                  <li>method name <code>printingDescription()</code> should be named as <code>printDescription()</code></li>
+                                                                  <li>boolean variable <code>important</code> should be named to sound boolean e.g., <code>isImportant</code></li>
+                                                                </ul>
+                                                                <p>There are many more.</p>
+                                                              </div>
+                                                            </question>
+                                                          </panel>
+                                                        </div>
+                                                      </div>
+                                                    </panel>
+                                                  </div>
+                                                </div>
                                               </div>
                                             </panel>
                                           </div>
@@ -8163,22 +8321,80 @@ exit();
                                                   <div>
                                                     <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
                                                       <div>
-                                                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Unsuitable variable name">
-                                                          <question>
-                                                            <p>According to the given Java coding standard, which one of these is not a good name?</p>
-                                                            <ul radio-group="1c05d" class="radio-list">
-                                                              <li class="radio-list-item"><label><input class="radio-list-input" name="1c05d" type="radio"> a. integer variable name: totalPeople</label></li>
-                                                              <li class="radio-list-item"><label><input class="radio-list-input" name="1c05d" type="radio"> b. boolean variable name: checkWeight</label></li>
-                                                              <li class="radio-list-item"><label><input class="radio-list-input" name="1c05d" type="radio"> c. method name (returns integer): getPeopleCount</label></li>
-                                                              <li class="radio-list-item"><label><input class="radio-list-input" name="1c05d" type="radio"> d. method name (returns boolean): isValidAddress</label></li>
-                                                              <li class="radio-list-item"><label><input class="radio-list-input" name="1c05d" type="radio"> e. String variable name: description</label></li>
-                                                            </ul>
-                                                            <div slot="answer">
-                                                              <p>b</p>
-                                                              <p>Explanation: checkWeight is an action. Naming variables as actions makes the code harder to follow. isWeightValid may be a better name.</p>
-                                                            </div>
-                                                          </question>
-                                                        </panel>
+                                                        <div>
+                                                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Unsuitable variable name">
+                                                            <question>
+                                                              <p>According to the given Java coding standard, which one of these is not a good name?</p>
+                                                              <ul radio-group="d008b" class="radio-list">
+                                                                <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> a. integer variable name: <code>totalPeople</code></label></li>
+                                                                <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> b. boolean variable name: <code>checkWeight</code></label></li>
+                                                                <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> c. method name (returns integer): <code>getPeopleCount</code></label></li>
+                                                                <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> d. method name (returns boolean): <code>isValidAddress</code></label></li>
+                                                                <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> e. String variable name: <code>description</code></label></li>
+                                                              </ul>
+                                                              <div slot="answer">
+                                                                <p>b</p>
+                                                                <p>Explanation: <code>checkWeight</code> is an action. Naming variables as actions makes the code harder to follow. <code>isWeightValid</code> may be a better name.</p>
+                                                              </div>
+                                                            </question>
+                                                          </panel>
+                                                        </div>
+                                                        <div>
+                                                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Find intermediate coding standard violations">
+                                                            <question>
+                                                              <p>Repeat the exercise in the panel below but also find violations of <em>intermediate</em> level guidelines.</p>
+                                                              <div>
+                                                                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Find basic coding standard violations">
+                                                                  <question>
+                                                                    <p>Consider the code given below:</p>
+                                                                    <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.*;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String descriptionPrefix = <span class="hljs-string">"description: "</span>;
+    <span class="hljs-keyword">private</span> String description;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> important;
+    List&lt;String&gt; pastDescription = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(); <span class="hljs-comment">// a list of past descriptions</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String d)</span> </span>{
+      <span class="hljs-keyword">this</span>.description = d;
+      <span class="hljs-keyword">if</span> (!d.isEmpty())
+          <span class="hljs-keyword">this</span>.important = <span class="hljs-keyword">true</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getAsXML</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">"&lt;task&gt;"</span>+description+<span class="hljs-string">"&lt;/task&gt;"</span>; }
+
+    <span class="hljs-comment">/**
+     * Print the description as a string.
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printingDescription</span><span class="hljs-params">()</span></span>{ System.out.println(<span class="hljs-keyword">this</span>); }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> descriptionPrefix + description; }
+}
+</code></pre>
+                                                                    <p>In what ways the code violate the <em>basic</em> guidelines (i.e., those marked with one ⭐️) of the OSS-Generic Java Coding Standard given <a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html">here</a>?</p>
+                                                                    <div slot="hint">
+                                                                      <p>Here are three:</p>
+                                                                      <ul>
+                                                                        <li><code>descriptionPrefix</code> is a constant and should be named <code>DESCRIPTION_PREFIX</code></li>
+                                                                        <li>method name <code>printingDescription()</code> should be named as <code>printDescription()</code></li>
+                                                                        <li>boolean variable <code>important</code> should be named to sound boolean e.g., <code>isImportant</code></li>
+                                                                      </ul>
+                                                                      <p>There are many more.</p>
+                                                                    </div>
+                                                                  </question>
+                                                                </panel>
+                                                              </div>
+                                                              <div slot="hint">
+                                                                <p>Here's one you are more likely to miss:</p>
+                                                                <ul>
+                                                                  <li><code>* Print the description as a string.</code> → <code>* Prints the description as a string.</code></li>
+                                                                </ul>
+                                                                <p>There are more.</p>
+                                                              </div>
+                                                            </question>
+                                                          </panel>
+                                                        </div>
                                                       </div>
                                                     </panel>
                                                   </div>
@@ -11137,7 +11353,7 @@ Bye!
                               other classes derive from some of those classes, and so on, forming a hierarchy of classes.</p>
                             <p><strong>The keyword <code>extends</code> indicates one class inheriting from another.</strong></p>
                             <box>
-                              <p><span class="fas fa-cube"></span> Here is the sample code for a possible implementation of a <code>Bicycle class</code> and a <code>MountainBike</code> class that is a subclass of the <code>Bicycle</code>:</p>
+                              <p><span class="fas fa-cube"></span> Here is the sample code for a possible implementation of a <code>Bicycle</code> class and a <code>MountainBike</code> class that is a subclass of the <code>Bicycle</code>:</p>
                               <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bicycle</span> </span>{
 
     <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> gear;
@@ -11210,10 +11426,10 @@ Bye!
                               <pre class="hljs"><code>Printed in Superclass.
 Printed in Subclass
 </code></pre>
-                              <p>Within <code>Subclass</code>, the simple name <code>printMethod()</code> refers to the one declared in <code>Subclass</code>, which overrides the one in <code>Superclass</code>. So, to refer to <code>printMethod()</code>                                inherited from <code>Superclass</code>, <code>Subclass</code> must use a qualified name, using super as shown. Compiling and executing <code>Subclass</code> prints the following:</p>
+                              <p>Within <code>Subclass</code>, the simple name <code>printMethod()</code> refers to the one declared in <code>Subclass</code>, which overrides the one in <code>Superclass</code>. So, to refer to <code>printMethod()</code>                                inherited from <code>Superclass</code>, <code>Subclass</code> must use a qualified name, using <code>super</code> as shown. Compiling and executing <code>Subclass</code> prints the following:</p>
                             </box>
                             <h5 id="subclass-constructors">Subclass Constructors</h5>
-                            <p><strong>A subclass constructor can invoke the superclass constructor.</strong> Invocation of a superclass constructor must be the first line in the subclass constructor. The syntax for calling a superclass constructor is <code>super();</code>                              or <code>super(parameter list);</code> With <code>super()</code>, the superclass no-argument constructor is called. With <code>super(parameter list)</code>, the superclass constructor with a matching parameter list is called.</p>
+                            <p><strong>A subclass constructor can invoke the superclass constructor.</strong> Invocation of a superclass constructor must be the first line in the subclass constructor. The syntax for calling a superclass constructor is <code>super()</code>                              <span class="dimmed">(which invokes the no-argument constructor of the superclass)</span> or <code>super(parameter list)</code> <span class="dimmed">(to invoke the superclass constructor with a matching parameter list)</span>.</p>
                             <box>
                               <p><span class="fas fa-cube"></span> The following example illustrates how to use the <code>super</code> keyword to invoke a superclass's constructor. Recall from the <code>Bicycle</code> example that <code>MountainBike</code>                                is a subclass of <code>Bicycle</code>. Here is the <code>MountainBike</code> (subclass) constructor that calls the superclass constructor and then adds initialization code of its own:</p>
                               <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MountainBike</span><span class="hljs-params">(<span class="hljs-keyword">int</span> startHeight, <span class="hljs-keyword">int</span> startSpeed, <span class="hljs-keyword">int</span> startGear)</span> </span>{
@@ -11229,18 +11445,18 @@ Printed in Subclass
                             <p>There are two levels of access control:</p>
                             <ol>
                               <li>
-                                <p><strong>At the class level—<code>public</code>, or <em>package-private</em> (no explicit modifier)</strong>:<br></p>
+                                <p>**At the class level—<code>public</code>:</p>
                                 <ul>
-                                  <li><code>public</code>: the class is visible to all classes everywhere</li>
-                                  <li>no modifier (the default, also known as <em>package-private</em>): it is visible only within its own package (packages are named groups of related classes)<br><br></li>
+                                  <li><strong><code>public</code></strong>: the class is visible to all classes everywhere</li>
+                                  <li><strong>no modifier (the default, also known as <em>package-private</em>)</strong>: it is visible only within its own package<br><br></li>
                                 </ul>
                               </li>
                               <li>
-                                <p><strong>At the member level—<code>public</code>, <code>private</code>, <code>protected</code>, or <em>package-private</em> (no explicit modifier)</strong>:<br> At this level, you can also use the <code>public</code> modifier
-                                  or no modifier (<em>package-private</em>) just as with top-level classes, and with the same meaning. In addition, you can use <code>private</code> and <code>protected</code>.</p>
+                                <p><strong>At the member level—<code>public</code>, <code>private</code>, <code>protected</code>, or <em>package-private</em> (no explicit modifier)</strong>:<br></p>
                                 <ul>
-                                  <li><code>private</code>: the member can only be accessed in its own class</li>
-                                  <li><code>protected</code>: the member can only be accessed within its own package (as with package-private) and, in addition, by a subclass of its class in another package</li>
+                                  <li><strong><code>public</code></strong> or <strong>no modifier (<em>package-private</em>)</strong>: same meaning as when used with top-level classes</li>
+                                  <li><strong><code>private</code></strong>: the member can only be accessed in its own class</li>
+                                  <li><strong><code>protected</code></strong>: the member can only be accessed within its own package (as with package-private) and, in addition, by a subclass of its class in another package</li>
                                 </ul>
                               </li>
                             </ol>
@@ -11331,7 +11547,7 @@ Printed in Subclass
                                       <p>Background: Suppose we are creating a software to manage various tasks a person has to do. Two types of such tasks are,</p>
                                       <ul>
                                         <li><em>Todos</em>: i.e., things that needs to be done some day <span class="dimmed">e.g., 'Read the book Lord of the Rings'</span></li>
-                                        <li><em>Deadlines</em>: i.e., things to be done by a specific date/time <span class="dimmed">e.g., Read the text book by Nov 25th</span></li>
+                                        <li><em>Deadlines</em>: i.e., things to be done by a specific date/time <span class="dimmed">e.g., 'Read the text book by Nov 25th'</span></li>
                                       </ul>
                                       <p>The <code>Task</code> class is given below:</p>
                                       <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
@@ -11429,7 +11645,7 @@ Postponed to Nov 18th
                           <p>Background: Suppose we are creating a software to manage various tasks a person has to do. Two types of such tasks are,</p>
                           <ul>
                             <li><em>Todos</em>: i.e., things that needs to be done some day <span class="dimmed">e.g., 'Read the book Lord of the Rings'</span></li>
-                            <li><em>Deadlines</em>: i.e., things to be done by a specific date/time <span class="dimmed">e.g., Read the text book by Nov 25th</span></li>
+                            <li><em>Deadlines</em>: i.e., things to be done by a specific date/time <span class="dimmed">e.g., 'Read the text book by Nov 25th'</span></li>
                           </ul>
                           <p>The <code>Task</code> class is given below:</p>
                           <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
@@ -11555,7 +11771,7 @@ Postponed to Nov 18th
 </code></pre>
                               <p><span class="fas fa-arrow-right"></span> <code>Time@80cc7c0</code> <span class="dimmed">(the address part can vary)</span></p>
                             </box>
-                            <p><strong>You can override the <code>toString</code> method in your classes</strong> to provide more meaningful string representation of the objects of that class.</p>
+                            <p><strong>You can override the <code>toString</code> method in your classes</strong> to provide a more meaningful string representation of the objects of that class.</p>
                             <box>
                               <p><span class="fas fa-cube"></span> Here's an example of overriding the <code>toString</code> method of the <code>Time</code> class:</p>
                               <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Time</span></span>{
@@ -11577,7 +11793,7 @@ Postponed to Nov 18th
                           </div>
                           <h5 id="the-equals-method">The <code>equals</code> method</h5>
                           <div class="indented">
-                            <p><strong>There two ways to check whether values are equal: the <code>==</code> operator and the <code>equals</code> method. With objects you can use either one, but they are not the same.</strong></p>
+                            <p><strong>There are two ways to check whether values are equal: the <code>==</code> operator and the <code>equals</code> method. With objects you can use either one, but they are not the same.</strong></p>
                             <ul>
                               <li>The <code>==</code> operator checks whether objects are identical; that is, whether they are the same object.</li>
                               <li>The <code>equals</code> method checks whether they are equivalent; that is, whether they have the same value.</li>
@@ -12342,9 +12558,7 @@ Invalid command format: add
                   <hr style="border-top: dashed 1px; border-color:grey">
                   <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
                   <div>
-                    <p><strong>Acceptable</strong>: Any project where you use the I/O redirection method to test a CLI.</p>
-                    <p><strong>Suggested</strong>: Do the exercise given in <a href="https://github.com/nus-tic2002-2018/addressbook-level1/blob/master/docs/LearningOutcomes.adoc#automate-cli-testing-code-lo-automatedclitesting-code">AddressBook - Level1 : LO-AutomatedCliTesting</a></p>
-                    <p><strong>Submission</strong>: Demo the test during the tutorial.</p>
+                    <p>Use this technique to test any program you have written.</p>
                   </div>
               </panel>
             </panel>
@@ -14595,7 +14809,7 @@ max radius used so far : 12.0
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 26 Aug 2018 09:28:07 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Mon, 27 Aug 2018 15:01:26 GMT</small></div>
 </footer>
 </div>
 </body>
