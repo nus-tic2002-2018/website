@@ -34,3 +34,28 @@
 2018-08-27T14:55:22.094Z - info: Rebuilding 12 pages
 2018-08-27T15:01:20.749Z - info: Website generation started at 23:01:18
 2018-08-27T15:01:23.179Z - info: Building assets...
+2018-08-27T15:01:26.265Z - info: Assets built
+2018-08-27T15:01:26.266Z - info: Generating pages...
+2018-08-27T15:02:22.888Z - info: Pages built
+2018-08-27T15:02:22.966Z - info: Site data built
+2018-08-27T15:02:22.966Z - info: Website generation complete! Total build time: 64.651s
+2018-08-27T15:02:22.967Z - info: Build success!
+2018-08-27T15:02:22.967Z - info: Generate Site durationMs=64652
+2018-08-27T15:02:58.073Z - info: Deployed!
+2018-08-27T15:10:40.655Z - info: Website generation started at 23:10:38
+2018-08-27T15:10:42.639Z - info: Building assets...
+2018-08-27T15:10:45.324Z - info: Assets built
+2018-08-27T15:10:45.325Z - info: Generating pages...
+2018-08-27T15:11:41.779Z - info: Pages built
+2018-08-27T15:11:41.855Z - info: Site data built
+2018-08-27T15:11:41.855Z - info: Website generation complete! Total build time: 63.265s
+2018-08-27T15:11:41.869Z - info: Generate Site durationMs=63279
+2018-08-27T15:11:41.891Z - info: Serving "C:\repos\nus-tic2002-2018\website\_site" at http://127.0.0.1:8080
+2018-08-27T15:11:41.891Z - info: Press CTRL+C to stop ...
+2018-08-27T15:14:04.948Z - info: [23:14:04] Reload for file change: C:\repos\nus-tic2002-2018\website\book\cppToJava\inheritance\basic\text.md
+2018-08-27T15:14:05.960Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\cppToJava\inheritance\basic\text.md
+2018-08-27T15:14:05.976Z - info: Rebuilding 9 pages
+2018-08-27T15:14:37.610Z - info: Pages rebuilt
+2018-08-27T15:14:37.634Z - info: Site data built
+2018-08-27T15:29:05.337Z - info: Website generation started at 23:29:02
+2018-08-27T15:29:08.680Z - info: Building assets...
