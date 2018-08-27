@@ -10,11 +10,8 @@
 
 <div id="testAutomation_testingTextUis">
 
-**Acceptable**: Any project where you use the I/O redirection method to test a CLI.
+Use this technique to test any program you have written.
 
-**Suggested**: Do the exercise given in [AddressBook - Level1 : LO-AutomatedCliTesting]({{module_org}}/addressbook-level1/blob/master/docs/LearningOutcomes.adoc#automate-cli-testing-code-lo-automatedclitesting-code)
-
-**Submission**: Demo the test during the tutorial.
 </div>
 
 
