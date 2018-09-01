@@ -321,7 +321,7 @@
                     <div id="main">
                       <div>
                         <p><strong><mark><em>Branching</em></mark> is the process of evolving multiple versions of the software in parallel.</strong> For example, one team member can create a new branch and add an experimental feature to it while the rest
-                          of the team keeps working on another branch. Branches can be given names e.g. <code>master</code> <code>release</code> <code>dev</code>.</p>
+                          of the team keeps working on another branch. Branches can be given names e.g. <code>master</code>, <code>release</code>, <code>dev</code>.</p>
                         <p><strong>A branch can be <mark><em>merged</em></mark> into another branch.</strong> Merging usually result in a new commit that represents the changes done in the branch being merged.</p>
                         <pic src="/website/book/revisionControl/branching/images/diagram.png" height="180">
                           <strong>Branching and merging</strong></pic>
@@ -447,7 +447,7 @@ git checkout feature1
                           </tab>
                         </tabs>
                         <p><strong>2. Create some commits in the new branch.</strong> <span class="dimmed">Just commit as per normal. Commits you add while on a certain branch will become part of that branch.</span></p>
-                        <p><strong>3. Switch to <code>master</code> branch.</strong> Note how the changes you did in the <code>feature1</code> branch are no longer in the working directory.</p>
+                        <p><strong>3. Switch to the <code>master</code> branch.</strong> Note how the changes you did in the <code>feature1</code> branch are no longer in the working directory.</p>
                         <tabs>
                           <tab header="SourceTree">
                             <div>
@@ -1523,20 +1523,20 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                   <div id="main">
                     <div>
                       <p><strong>A <em>software requirement</em> specifies a need to be fulfilled by the software product.</strong></p>
-                      <p>A software project may be,</p>
+                      <p><strong>A software project may be,</strong></p>
                       <ul>
-                        <li>a <em>brown-field</em> project i.e., develop a product to replace/update an existing software product</li>
-                        <li>a <em>green-field</em> project i.e., develop a totally new system with no precedent</li>
+                        <li><strong>a <em>brown-field</em> project</strong> i.e., develop a product to replace/update an existing software product</li>
+                        <li><strong>a <em>green-field</em> project</strong> i.e., develop a totally new system with no precedent</li>
                       </ul>
                       <p>In either case, requirements need to be gathered, analyzed, specified, and managed.</p>
                       <p><strong>Requirements come from <em>stakeholders</em>.</strong></p>
-                      <tip-box type="info">
+                      <tip-box type="definition">
                         <div>
                           <p><strong>Stakeholder</strong>: A party that is potentially affected by the software project. e.g. users, sponsors, developers, interest groups, government agencies, etc.</p>
                         </div>
                       </tip-box>
-                      <p>Identifying requirements is often not easy. For example, stakeholders may not be aware of their precise needs, may not know how to communicate their requirements correctly, may not be willing to spend effort in identifying requirements,
-                        etc.</p>
+                      <p><strong>Identifying requirements is often not easy.</strong> For example, stakeholders may not be aware of their precise needs, may not know how to communicate their requirements correctly, may not be willing to spend effort in identifying
+                        requirements, etc.</p>
                     </div>
                     <div></div>
                   </div>
@@ -1592,7 +1592,11 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                           </ul>
                         </panel>
                       </tip-box>
-                      <p>We should spend extra effort in digging NFRs out as early as possible because <strong>NFRs are easier to miss</strong> <span class="dimmed"> e.g., stakeholders tend to think of functional requirements first</span> and sometimes <strong>they are critical to the success of the software.</strong>                        <span class="dimmed"> E.g. A web application that is too slow or that has low security is unlikely to succeed even if it has all the right functionality.</span></p>
+                      <p>We may have to spend an extra effort in digging NFRs out as early as possible because,</p>
+                      <ol>
+                        <li><strong>NFRs are easier to miss</strong> <span class="dimmed"> e.g., stakeholders tend to think of functional requirements first</span></li>
+                        <li>sometimes <strong>NFRs are critical to the success of the software.</strong> <span class="dimmed"> E.g. A web application that is too slow or that has low security is unlikely to succeed even if it has all the right functionality.</span></li>
+                      </ol>
                     </div>
                     <div>
                       <div>
@@ -1889,7 +1893,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                   </div>
                   <div id="main">
                     <div>
-                      <p><strong>Interviewing stakeholders and <trigger for="pop:interviews-domainExpert">domain experts</trigger> can give us useful information that project requirements.</strong></p>
+                      <p><strong>Interviewing stakeholders and <trigger for="pop:interviews-domainExpert">domain experts</trigger> can produce useful information that project requirements.</strong></p>
                       <popover id="pop:interviews-domainExpert" title="" placement="top">
                       
                         <div slot="content">
@@ -2024,7 +2028,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                 </div>
                 <div id="main">
                   <div>
-                    <p><strong>A normal textual description (i.e. <em>prose</em>) can be used to describe requirements.</strong> Prose is especially useful when describing abstract ideas such as the vision of a product.</p>
+                    <p><strong>A textual description (i.e. <em>prose</em>) can be used to describe requirements.</strong> Prose is especially useful when describing abstract ideas such as the vision of a product.</p>
                     <tip-box>
                       <p><span class="fas fa-cube"></span> The product vision of the <a href="https://github.com/TEAMMATES/teammates">TEAMMATES Project</a> given below is described using prose.</p>
                       <blockquote>
@@ -2032,7 +2036,8 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                           a training tool for Software Engineering students who want to learn SE skills in the context of <strong>a non-trivial real software product</strong>.</p>
                       </blockquote>
                     </tip-box>
-                    <p>❗️ Avoid using lengthy prose to describe requirements; they can be hard to follow.</p>
+                    <p>
+                      <font color="red"><big><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span></big></font> Avoid using lengthy prose to describe requirements; they can be hard to follow.</p>
                   </div>
                   <div></div>
                 </div>
@@ -2121,9 +2126,9 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                   <tip-box>
                     <p><span class="fas fa-cube"></span> Examples (from a <em>Learning Management System</em>):</p>
                     <ol>
-                      <li>As a student, I can download files uploaded by lecturers, so that I can get my own copy of the files</li>
-                      <li>As a lecturer, I can create discussion forums, so that students can discuss things online</li>
-                      <li>As a tutor, I can print attendance sheets, so that I can take attendance during the class</li>
+                      <li><span class="dimmed">As a</span> student, <span class="dimmed">I can</span> download files uploaded by lecturers, <span class="dimmed">so that</span> I can get my own copy of the files</li>
+                      <li><span class="dimmed">As a</span> lecturer, <span class="dimmed">I can</span> create discussion forums, <span class="dimmed">so that</span> students can discuss things online</li>
+                      <li><span class="dimmed">As a</span> tutor, <span class="dimmed">I can</span> print attendance sheets, <span class="dimmed">so that</span> I can take attendance during the class</li>
                     </ol>
                   </tip-box>
                   <p></p>
@@ -2243,15 +2248,15 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                     <tip-box>
                       <p>As a user, I can login to the system <s>so that I can access my data</s></p>
                     </tip-box>
-                    <p>❗️ It is recommended to confirm there is a concrete benefit even if you omit it from the user story. If not, we could end up adding features that have no real benefit.</p>
-                    <p>We can add more characteristics to the <code>{user role}</code> to provide more context to the user story.</p>
+                    <p>💡 It is recommended to confirm there is a concrete benefit even if you omit it from the user story. If not, you could end up adding features that have no real benefit.</p>
+                    <p>You can add more characteristics to the <code>{user role}</code> to provide more context to the user story.</p>
                     <tip-box>
                       <ul>
                         <li>As a <mark>forgetful</mark> user, I can view a password hint, so that I can recall my password.</li>
                         <li>As an <mark>expert</mark> user, I can tweak the underlying formatting tags of the document, so that I can format the document exactly as I need.</li>
                       </ul>
                     </tip-box>
-                    <p><strong>We can write user stories at various levels</strong>. High-level user stories, called <mark><em>epics</em></mark> (or <em>themes</em>) cover bigger functionality. We can then break down these epics to multiple user stories
+                    <p><strong>You can write user stories at various levels</strong>. High-level user stories, called <mark><em>epics</em></mark> (or <em>themes</em>) cover bigger functionality. You can then break down these epics to multiple user stories
                       of normal size.</p>
                     <tip-box>
                       <p>[Epic] As a lecturer, I can monitor student participation levels</p>
@@ -2261,7 +2266,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                         <li>As a lecturer, I can view file download statistics of each student so that I can identify the students who do not download lecture materials</li>
                       </ul>
                     </tip-box>
-                    <p><strong>We can add <em>conditions of satisfaction</em> to a user story</strong> to specify things that need to be true for the user story implementation to be accepted as ‘done’.</p>
+                    <p><strong>You can add <em>conditions of satisfaction</em> to a user story</strong> to specify things that need to be true for the user story implementation to be accepted as ‘done’.</p>
                     <tip-box>
                       <ul>
                         <li><em>As a</em> lecturer, <em>I can</em> view the forum post count of each student <em>so that</em> I can identify the activity level of students in the forum.</li>
@@ -2388,7 +2393,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                       </div>
                     </tip-box>
                     <div id="usageTips">
-                      <p>Given their lightweight nature, <strong>user stories are quite handy for recording requirements during early requirements gathering</strong>.</p>
+                      <p>Given their lightweight nature, <strong>user stories are quite handy for recording requirements during early stages of requirements gathering</strong>.</p>
                       <tip-box>
                         <p>💡 Here are some tips for using user stories for early stages of requirement gathering:</p>
                         <ul>
@@ -2514,7 +2519,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                   </tip-box>
                   <p><strong>A use case describes an <em>interaction between the user and the system</em> for a <em>specific functionality</em> of the system.</strong></p>
                   <tip-box>
-                    <panel header="<span class='fas fa-cube'></span> Example 1: ‘check account balance’ use case for an ATM" type="seamless" expanded="">
+                    <panel header="<span class='fas fa-cube'></span> Example 1: 'check account balance' use case for an ATM" type="seamless" expanded="">
                       <ul>
                         <li>System:
                           <popover effect="fade" placement="right" content="Automated Teller Machine">
@@ -2560,7 +2565,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                     </div>
                   </modal>
                   <p></p>
-                  <img src="/website/book/specifyingRequirements/useCases/introduction/images/ticketMachine.png" height="250">
+                  <img src="/website/book/specifyingRequirements/useCases/introduction/images/ticketMachine.png" width="300">
                   <p></p>
                   <p><strong>Use cases capture the <em>functional requirements</em> of a system.</strong></p>
                 </div>
@@ -2631,7 +2636,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                   <div>
                     <p><strong>A <em>supplementary requirements</em> section can be used to capture <em>requirements that do not fit elsewhere</em></strong>. Typically, this is where most
                       <trigger trigger="click" for="modal:supplementary-nfr">Non Functional Requirements</trigger> will be listed.</p>
-                    <modal large="" title="" id="modal:supplementary-nfr">
+                    <modal large="" title="%%Textbook »%%" id="modal:supplementary-nfr">
                     
                       <div>
                         <div></div>
@@ -2676,8 +2681,11 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                                   </ul>
                                 </panel>
                               </tip-box>
-                              <p>We should spend extra effort in digging NFRs out as early as possible because <strong>NFRs are easier to miss</strong> <span class="dimmed"> e.g., stakeholders tend to think of functional requirements first</span> and sometimes
-                                <strong>they are critical to the success of the software.</strong> <span class="dimmed"> E.g. A web application that is too slow or that has low security is unlikely to succeed even if it has all the right functionality.</span></p>
+                              <p>We may have to spend an extra effort in digging NFRs out as early as possible because,</p>
+                              <ol>
+                                <li><strong>NFRs are easier to miss</strong> <span class="dimmed"> e.g., stakeholders tend to think of functional requirements first</span></li>
+                                <li>sometimes <strong>NFRs are critical to the success of the software.</strong> <span class="dimmed"> E.g. A web application that is too slow or that has low security is unlikely to succeed even if it has all the right functionality.</span></li>
+                              </ol>
                             </div>
                             <div>
                               <div>
