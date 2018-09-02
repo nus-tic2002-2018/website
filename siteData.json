@@ -197,7 +197,7 @@
         "interfaces": "Interfaces",
         "accessing-superclass-members": "Accessing Superclass Members",
         "subclass-constructors": "Subclass Constructors",
-        "access-modifiers": "Access Modifiers",
+        "access-modifiers-simplified": "Access Modifiers (simplified)",
         "the-tostring-method": "The toString method",
         "the-equals-method": "The equals method",
         "inheritance": "Inheritance",
@@ -211,6 +211,9 @@
         "the-arraylist-class": "The ArrayList Class",
         "the-hashmap-class": "The HashMap Class",
         "collections": "Collections",
+        "access-modifiers": "Access Modifiers",
+        "constants": "Constants",
+        "miscellaneous-topics": "Miscellaneous Topics",
         "c-to-java": "C++ to Java"
       },
       "title": "Textbook Chapter : C++ to Java",

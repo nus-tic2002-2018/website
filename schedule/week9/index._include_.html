@@ -6,7 +6,367 @@
       <br>
       <panel type="seamless" header="##### Evidence for weekly LOs %%(for reference)%%">
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W8.3c</code></span></big> <span><span class="fas fa-trophy"></span> Can write simple user stories</span>
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W8.1a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain branching</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span
+            class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            </span>
+            </span>
+            </span>
+            </span>
+            <div class="indented">
+              <panel minimized="">
+                <span slot="header" class="card-title">Details of the LO</span>
+                <div>
+                  <div></div>
+                  <p></p>
+                  <p><span class="dimmed"><strong><span>Project Management → Revision Control →
+</span></strong>
+                    </span>
+                  </p>
+                  <div id="title-and-body">
+                    <div>
+                      <h4 id="branching">Branching</h4>
+                    </div>
+                    <div id="main">
+                      <div>
+                        <p><strong><mark><em>Branching</em></mark> is the process of evolving multiple versions of the software in parallel.</strong> For example, one team member can create a new branch and add an experimental feature to it while the rest
+                          of the team keeps working on another branch. Branches can be given names e.g. <code>master</code>, <code>release</code>, <code>dev</code>.</p>
+                        <p><strong>A branch can be <mark><em>merged</em></mark> into another branch.</strong> Merging usually result in a new commit that represents the changes done in the branch being merged.</p>
+                        <pic src="/website/book/revisionControl/branching/images/diagram.png" height="180">
+                          <strong>Branching and merging</strong></pic>
+                        <p><strong><mark><em>Merge conflicts</em></mark> happen when you try to merge two branches that had changed the same part of the code</strong> and the RCS software cannot decide which changes to keep. In those cases we have to ‘resolve’
+                          those conflicts manually.</p>
+                      </div>
+                      <div>
+                        <div>
+                          <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> What is branching?">
+                                <question has-input="true">
+                                  <p>In the context of RCS, what is the <em>branching</em>? What is the need for branching?.</p>
+                                </question>
+                              </panel>
+                            </div>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> What is merging?">
+                                <question has-input="true">
+                                  <p>In the context of RCS, what is the <em>merging</em> branches? How can it lead to <em>merge conflicts</em>?.</p>
+                                </question>
+                              </panel>
+                            </div>
+                          </panel>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </panel><br><br>
+              <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+              </p>
+              <div class="indented">
+                <div>
+                  <div>
+                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> What is branching?">
+                      <question has-input="true">
+                        <p>In the context of RCS, what is the <em>branching</em>? What is the need for branching?.</p>
+                      </question>
+                    </panel>
+                  </div>
+                  <div>
+                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> What is merging?">
+                      <question has-input="true">
+                        <p>In the context of RCS, what is the <em>merging</em> branches? How can it lead to <em>merge conflicts</em>?.</p>
+                      </question>
+                    </panel>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W8.1b</code></span></big> <span><span class="fas fa-trophy"></span> Can use Git branching</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span
+            class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            <div class="indented">
+              <panel minimized="">
+                <span slot="header" class="card-title">Details of the LO</span>
+                <div>
+                  <div>
+                    <p>
+                      <panel src="/website\book\revisionControl\branching\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%Project Management → Revision Control → Branching%%"></panel>
+                    </p>
+                  </div>
+                  <p></p>
+                  <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+</span></strong>
+                    </span>
+                  </p>
+                  <div id="title-and-body">
+                    <div>
+                      <h4 id="branch">Branch</h4>
+                    </div>
+                    <div id="main">
+                      <div>
+                        <p><strong>0. Observe that you are normally in the branch called <code>master</code>.</strong> For this, you can take any repo you have on your computer (e.g. a clone of the <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a>).</p>
+                        <tabs>
+                          <tab header="SourceTree">
+                            <div>
+                              <img src="/website/book/gitAndGithub/branch/images/onMasterBranch.png" height="120">
+                              <p></p>
+                            </div>
+                            <hr>
+                          </tab>
+                          <tab header="CLI">
+                            <div>
+                              <pre class="hljs"><code>git status
+</code></pre>
+                              <p><span class="fas fa-arrow-down"></span></p>
+                              <pre class="hljs"><code>on branch master
+</code></pre>
+                            </div>
+                            <hr>
+                          </tab>
+                        </tabs>
+                        <p><strong>1. Start a branch named <code>feature1</code> and switch to the new branch.</strong></p>
+                        <tabs>
+                          <tab header="SourceTree">
+                            <div>
+                              <p>Click on the <code>Branch</code> button on the main menu. In the next dialog, enter the branch name and click <code>Create Branch</code></p>
+                              <img src="/website/book/gitAndGithub/branch/images/sourcetree_1.png" height="150">
+                              <p></p>
+                              <p>Note how the <code>feature1</code> is indicated as the current branch.</p>
+                              <img src="/website/book/gitAndGithub/branch/images/sourcetree_2.png" height="150">
+                              <p></p>
+                            </div>
+                            <hr>
+                          </tab>
+                          <tab header="CLI">
+                            <div>
+                              <p>You can use the <code>branch</code> command to create a new branch and the <code>checkout</code> command to switch to a specific branch.</p>
+                              <pre class="hljs"><code>git branch feature1
+git checkout feature1
+</code></pre>
+                              <p>One-step shortcut to create a branch and switch to it at the same time:</p>
+                              <pre class="hljs"><code>git checkout –b feature1
+</code></pre>
+                            </div>
+                            <hr>
+                          </tab>
+                        </tabs>
+                        <p><strong>2. Create some commits in the new branch.</strong> <span class="dimmed">Just commit as per normal. Commits you add while on a certain branch will become part of that branch.</span></p>
+                        <p><strong>3. Switch to the <code>master</code> branch.</strong> Note how the changes you did in the <code>feature1</code> branch are no longer in the working directory.</p>
+                        <tabs>
+                          <tab header="SourceTree">
+                            <div>
+                              <p>Double-click the <code>master</code> branch</p>
+                              <img src="/website/book/gitAndGithub/branch/images/sourcetree_3.png" height="150">
+                              <p></p>
+                            </div>
+                            <hr>
+                          </tab>
+                          <tab header="CLI">
+                            <div>
+                              <pre class="hljs"><code>git checkout master
+</code></pre>
+                            </div>
+                            <hr>
+                          </tab>
+                        </tabs>
+                        <p><strong>4. Add a commit to the master branch.</strong> Let’s imagine it’s a bug fix.</p>
+                        <img src="/website/book/gitAndGithub/branch/images/sourcetree_4.png" height="100">
+                        <p></p>
+                        <p><strong>5. Switch back to the <code>feature1</code> branch</strong> <span class="dimmed">(similar to step 3)</span>.</p>
+                        <p><strong>6. Merge the <code>master</code> branch to the <code>feature1</code> branch</strong>, giving an end-result like the below. Also note how Git has created a <em>merge commit</em>.</p>
+                        <img src="/website/book/gitAndGithub/branch/images/sourcetree_5.png" height="120">
+                        <p></p>
+                        <tabs>
+                          <tab header="SourceTree">
+                            <div>
+                              <p>Right-click on the <code>master</code> branch and choose <code>merge master into the current branch</code>. Click <code>OK</code> in the next dialog.</p>
+                            </div>
+                            <hr>
+                          </tab>
+                          <tab header="CLI">
+                            <div>
+                              <pre class="hljs"><code>git merge master
+</code></pre>
+                            </div>
+                            <hr>
+                          </tab>
+                        </tabs>
+                        <p>Observe how the changes you did in the <code>master</code> branch (i.e. the imaginary bug fix) is now available even when you are in the <code>feature1</code> branch.</p>
+                        <p><strong>7. Add another commit to the <code>feature1</code> branch.</strong></p>
+                        <p><strong>8. Switch to the <code>master</code> branch and add one more commit.</strong></p>
+                        <p><strong>9. Merge <code>feature1</code> to the master branch</strong>, giving and end-result like this:</p>
+                        <img src="/website/book/gitAndGithub/branch/images/sourcetree_6.png" height="150">
+                        <p></p>
+                        <tabs>
+                          <tab header="SourceTree">
+                            <p>Right-click on the <code>feature1</code> branch and choose <code>Merge...</code>.</p>
+                            <hr>
+                          </tab>
+                          <tab header="CLI">
+                            <pre class="hljs"><code>git merge feature1
+</code></pre>
+                            <hr>
+                          </tab>
+                        </tabs>
+                        <p><strong>10. Create a new branch called <code>add-countries</code>, switch to it, and add some commits to it</strong> <span class="dimmed">(similar to steps 1-2 above)</span>. You should have something like this now:</p>
+                        <img src="/website/book/gitAndGithub/branch/images/addCountriesBranchBeforeMerging.png" height="80">
+                        <p></p>
+                        <p><strong>11. Go back to the <code>master</code> branch and merge the <code>add-countries</code> branch onto the <code>master</code> branch</strong> <span class="dimmed">(similar to steps 8-9 above)</span>. While you might expect
+                          to see something like the below,</p>
+                        <img src="/website/book/gitAndGithub/branch/images/addCountriesBranchNoFastForward.png" height="100">
+                        <p></p>
+                        <p>... you are likely to see something like this instead:</p>
+                        <img src="/website/book/gitAndGithub/branch/images/addCountriesBranchAfterMerging.png" height="80">
+                        <p></p>
+                        <p>That is because <strong>Git does a <mark><em>fast forward</em> merge</mark> if possible</strong>. Seeing that the <code>master</code> branch has not changed since you started the <code>add-countries</code> branch, Git has decided
+                          it is simpler to just put the commits of the <code>add-countries</code> branch in front of the <code>master</code> branch, without going into the trouble of creating an extra merge commit.</p>
+                        <p><strong>It is possible to force Git to create a merge commit even if fast forwarding is possible.</strong></p>
+                        <tabs>
+                          <tab header="SourceTree">
+                            <div>
+                              <p>Tick the box shown below when you merge a branch:</p>
+                              <img src="/website/book/gitAndGithub/branch/images/mergeBranchDialog.png" height="150">
+                              <p></p>
+                            </div>
+                            <hr>
+                          </tab>
+                          <tab header="CLI">
+                            <div>
+                              <p>Use the <code>--no-ff</code> switch (short for <em>no fast forward</em>):</p>
+                              <pre class="hljs"><code>git merge --no-ff add-countries
+</code></pre>
+                            </div>
+                            <hr>
+                          </tab>
+                        </tabs>
+                      </div>
+                      <div></div>
+                    </div>
+                  </div>
+                </div>
+              </panel><br><br>
+              <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+              </p>
+              <div class="indented">
+                <div>
+                  <p><strong>Acceptable</strong>: Git branches you have created in any repo.</p>
+                  <p><strong>Suggested</strong>: Results of following the steps in the LO.</p>
+                  <p><strong>Submission</strong>: Show your branches during the tutorial.</p>
+                </div>
+              </div>
+            </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W8.1c</code></span></big> <span><span class="fas fa-trophy"></span> Can create PRs on GitHub</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span
+            class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            <div class="indented">
+              <panel minimized="">
+                <span slot="header" class="card-title">Details of the LO</span>
+                <div>
+                  <div>
+                    <p>
+                      <panel src="/website\book\gitAndGithub\branch\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%Tools → Git & GitHub → Branching%%"></panel>
+                    </p>
+                  </div>
+                  <p></p>
+                  <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+</span></strong>
+                    </span>
+                  </p>
+                  <div id="title-and-body">
+                    <div>
+                      <h4 id="create-prs">Create PRs</h4>
+                    </div>
+                    <div id="main">
+                      <div>
+                        <p><strong>1. Fork the <a href="https://github.com/se-edu/samplerepo-pr-practice">samplerepo-pr-practice</a> onto your GitHub account. Clone it onto your computer.</strong></p>
+                        <p><strong>2. Create a branch named <code>add-intro</code> in your clone. Add a couple of commits</strong> which adds/modifies an <em>Introduction</em> section to the <code>README.md</code>. Example:</p>
+                        <pre><code class="hljs md">
+<span class="hljs-section"># Introduction</span>
+Creating Pull Requsts (PRs) is needed when using RCS in a multi-person projects.
+This repo can be used to practice creating PRs.
+
+</code></pre>
+                        <p><strong>3. Push the <code>add-intro</code> branch to your fork.</strong></p>
+                        <tabs>
+                          <tab header="SourceTree">
+                            <img src="/website/book/gitAndGithub/createPRs/images/pushBranchToFork.png" height="300">
+                            <p></p>
+                            <hr>
+                          </tab>
+                          <tab header="CLI">
+                            <pre class="hljs"><code>git push origin add-intro
+</code></pre>
+                            <hr>
+                          </tab>
+                        </tabs>
+                        <p><strong>4. Create a Pull Request from the <code>add-intro</code> branch in your fork to the <code>master</code> branch of the same fork</strong> (i.e. <code>your-user-name/samplerepo-pr-practice</code>, not <code>se-edu/samplerepo-pr-practice</code>),
+                          as described below.</p>
+                        <p>4a. Go to the GitHub page of your fork (i.e. <code>https://github.com/{your_username}/samplerepo-pr-practice</code>), click on the <code>Pull Requests</code> tab, and then click on <code>New Pull Request</code> button.</p>
+                        <img src="/website/book/gitAndGithub/createPRs/images/createPrButton.png" width="800">
+                        <p></p>
+                        <p>4b. Select <code>base fork</code> and <code>head fork</code> as follows:</p>
+                        <ul>
+                          <li><code>base fork</code>: your own fork (i.e. <code>{your user name}/samplerepo-pr-practice</code>, <mark>NOT <code>se-edu/samplerepo-pr-practice</code></mark>)</li>
+                          <li><code>head fork</code>: your own fork.</li>
+                        </ul>
+                        <img src="/website/book/gitAndGithub/createPRs/images/selectBase.png" width="800">
+                        <p></p>
+                        <tip-box type="info">
+                          <p>The <em>base fork</em> is where changes should be applied. The <em>head fork</em> contains the changes you would like to be applied.</p>
+                        </tip-box>
+                        <p>4c. (1) Set the base branch to <code>master</code> and head branch to <code>add-intro</code>, (2) confirm the <em>diff</em> contains the changes you propose to merge in this PR <span class="dimmed">(i.e. confirm that you did not accidentally include extra commits in the branch)</span>,
+                          and (3) click the <code>Create pull request</code> button.</p>
+                        <img src="/website/book/gitAndGithub/createPRs/images/checkDiff.png" width="800">
+                        <p></p>
+                        <p>4d. (1) Set PR name, (2) set PR description, and (3) Click the <code>Create pull request</code> button.</p>
+                        <img src="/website/book/gitAndGithub/createPRs/images/setPrName.png" width="600">
+                        <p></p>
+                        <tip-box type="important">
+                          <p>A common newbie mistake when creating branch-based PRs is to mix commits of one PR with another. To learn how to avoid that mistake, you are encouraged to continue and create another PR as explained below.
+                          </p>
+                        </tip-box>
+                        <p><strong>5. In your local repo, create a new branch <code>add-summary</code></strong> off the <code>master</code> branch.</p>
+                        <tip-box type="warning">
+                          <p>When creating the new branch, it is very important that you switch back to the <code>master</code> branch first. If not, the new branch will be created off the current branch <code>add-intro</code>. And that is how you end up
+                            having commits of the first PR in the second PR as well.</p>
+                        </tip-box>
+                        <p><strong>6. Add a commit in the <code>add-summary</code> branch</strong> that adds a <em>Summary</em> section to the <code>README.md</code>, in exactly the same place you added the <em>Introduction</em> section earlier.</p>
+                        <img src="/website/book/gitAndGithub/createPRs/images/addSummaryBranch.png" width="400">
+                        <p></p>
+                        <p><strong>7. Push the <code>add-summary</code> to your fork and create a new PR</strong> similar to before.</p>
+                        <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                          <ul>
+                            <li><a href="https://help.github.com/articles/creating-a-pull-request/">GitHub's own documentation on creating a PR</a></li>
+                          </ul>
+                        </panel>
+                      </div>
+                      <div></div>
+                    </div>
+                  </div>
+                </div>
+              </panel><br><br>
+              <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+              </p>
+              <div class="indented">
+                <div>
+                  <p><strong>Acceptable</strong>: PRs created in any repo.</p>
+                  <p><strong>Suggested</strong>: PRs created by following the steps in the LO.</p>
+                  <p><strong>Submission</strong>: Show your PRs during the tutorial.</p>
+                </div>
+              </div>
+            </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W8.4c</code></span></big> <span><span class="fas fa-trophy"></span> Can write simple user stories</span>
           <span
             class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
@@ -143,7 +503,7 @@
             </div>
         </panel>
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W8.3e</code></span></big> <span><span class="fas fa-trophy"></span> Can use user stories to manage requirements
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W8.4e</code></span></big> <span><span class="fas fa-trophy"></span> Can use user stories to manage requirements
           of project</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
@@ -289,7 +649,7 @@
           </div>
         </panel>
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W8.4c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain separation of concerns principle</span>
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W8.5c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain separation of concerns principle</span>
           <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
@@ -524,7 +884,7 @@
           </div>
         </panel>
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W8.4d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain single responsibility principle</span>
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W8.5d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain single responsibility principle</span>
           <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
@@ -588,7 +948,7 @@
           </div>
         </panel>
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W8.4e</code></span></big> <span><span class="fas fa-trophy"></span> Can explain Liskov Substitution Principle</span>
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W8.5e</code></span></big> <span><span class="fas fa-trophy"></span> Can explain Liskov Substitution Principle</span>
           <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
@@ -742,7 +1102,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
           </div>
         </panel>
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W8.4f</code></span></big> <span><span class="fas fa-trophy"></span> Can explain open-closed principle (OCP)</span>
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W8.5f</code></span></big> <span><span class="fas fa-trophy"></span> Can explain open-closed principle (OCP)</span>
           <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span>
@@ -824,7 +1184,7 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
             </div>
         </panel>
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W8.4g</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the Law of Demeter</span>
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W8.5g</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the Law of Demeter</span>
           <span
             class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
@@ -959,7 +1319,7 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
             </div>
         </panel>
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W8.5f</code></span></big> <span><span class="fas fa-trophy"></span> Can draw basic sequence diagrams</span>
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W8.6f</code></span></big> <span><span class="fas fa-trophy"></span> Can draw basic sequence diagrams</span>
           <span
             class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
@@ -1113,171 +1473,6 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
                     </panel>
                   </div>
                   <p><strong>Submission</strong>: Show during tutorial.</p>
-                </div>
-              </div>
-            </div>
-        </panel>
-        <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W8.6b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the need for early developer testing</span>
-          <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-          </span>
-          </span>
-          <div class="indented">
-            <panel minimized="">
-              <span slot="header" class="card-title">Details of the LO</span>
-              <div>
-                <div></div>
-                <p></p>
-                <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Developer Testing →
-</span></strong>
-                  </span>
-                </p>
-                <div id="title-and-body">
-                  <div>
-                    <h4 id="why">Why</h4>
-                  </div>
-                  <div id="main">
-                    <div>
-                      <p><strong>Delaying testing until the full product is complete has a number of disadvantages:</strong></p>
-                      <ul>
-                        <li><strong>Locating the cause of such a test case failure is difficult due to a large search space;</strong> in a large system, the search space could be millions of lines of code, written by hundreds of developers! The failure may
-                          also be due to multiple inter-related bugs.</li>
-                        <li><strong>Fixing a bug found during such testing could result in major rework</strong>, especially if the bug originated during the design or during requirements specification <span class="dimmed">i.e. a faulty design or faulty requirements</span>.</li>
-                        <li><strong>One bug might 'hide' other bugs</strong>, which could emerge only after the first bug is fixed.</li>
-                        <li><strong>The delivery may have to be delayed</strong> if too many bugs were found during testing.</li>
-                      </ul>
-                      <p><strong>Therefore, it is better to do early testing</strong>, as hinted by the popular rule of thumb given below, also illustrated by the graph below it.</p>
-                      <blockquote>
-                        <p>The earlier a bug is found, the easier and cheaper to have it fixed.</p>
-                      </blockquote>
-                      <img src="/website/book/testing/testingTypes/developerTesting/why/images/diagram.png" height="180">
-                      <p></p>
-                      <p>Such early testing of partially developed software is usually, and by necessity, done by the developers themselves i.e. developer testing.</p>
-                    </div>
-                    <div>
-                      <div>
-                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-                          <div>
-                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> implications of developers testing their own code">
-                              <question has-input="true">
-                                <p>Discuss pros and cons of developers testing their own code.</p>
-                                <div slot="answer">
-                                  <p>Pros:</p>
-                                  <ul>
-                                    <li>Can be done early (the earlier we find a bug, the cheaper it is to fix).</li>
-                                    <li>Can be done at lower levels, for examples, at operation and class level (testers usually test the system at UI level).</li>
-                                    <li>It is possible to do more thorough testing because developers know the expected external behavior as well as the internal structure of the component.</li>
-                                    <li>It forces developers to take responsibility for their own work (they cannot claim that &quot;testing is the job of the testers&quot;).</li>
-                                  </ul>
-                                  <p>Cons:</p>
-                                  <ul>
-                                    <li>A developer may unconsciously test only situations that he knows to work (i.e. test it too 'gently').</li>
-                                    <li>A developer may be blind to his own mistakes (if he did not consider a certain combination of input while writing code, it is possible for him to miss it again during testing).</li>
-                                    <li>A developer may have misunderstood what the SUT is supposed to do in the first place.</li>
-                                    <li>A developer may lack the testing expertise.</li>
-                                  </ul>
-                                </div>
-                              </question>
-                            </panel>
-                          </div>
-                          <div>
-                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Cost of bug fixing over time">
-                              <question>
-                                <p>The cost of fixing a bug goes down as we reach the product release.</p>
-                                <ul radio-group="37242" class="radio-list">
-                                  <li class="radio-list-item"><label><input class="radio-list-input" name="37242" type="radio"> True</label></li>
-                                  <li class="radio-list-item"><label><input class="radio-list-input" name="37242" type="radio"> False</label></li>
-                                </ul>
-                                <div slot="answer">
-                                  <p>False. The cost goes up over time.</p>
-                                </div>
-                              </question>
-                            </panel>
-                          </div>
-                          <div>
-                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Why early testing?">
-                              <question has-input="true">
-                                <p>Explain why early testing by developers is important.</p>
-                              </question>
-                            </panel>
-                          </div>
-                        </panel>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </panel><br><br>
-            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
-            </p>
-            <div class="indented">
-              <div>
-                <div>
-                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Why early testing?">
-                    <question has-input="true">
-                      <p>Explain why early testing by developers is important.</p>
-                    </question>
-                  </panel>
-                </div>
-              </div>
-            </div>
-          </div>
-        </panel>
-        <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W8.6e</code></span></big> <span><span class="fas fa-trophy"></span> Can use simple JUnit tests</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          <span
-            class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-            </span>
-            </span>
-            <div class="indented">
-              <panel minimized="">
-                <span slot="header" class="card-title">Details of the LO</span>
-                <div>
-                  <div></div>
-                  <p></p>
-                  <p><span class="dimmed"><strong><span>Tools → JUnit →
-</span></strong>
-                    </span>
-                  </p>
-                  <div id="title-and-body">
-                    <div>
-                      <h4 id="junit-basic">JUnit: Basic</h4>
-                    </div>
-                    <div id="main">
-                      <div>
-                        <div v-closeable="" alt="Junit tutorial video" class="non-printable">
-                          <p>JUnit 4 with IntelliJ: A quick introduction <sub>-- by DrBFraser</sub></p>
-                          <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/Bld3644bIAo" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-                        </div>
-                      </div>
-                      <div>
-                        <div>
-                          <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
-                            <ul>
-                              <li><a href="http://junit.sourceforge.net/doc/cookbook/cookbook.htm">JUnit cookbook</a> - a short tutorial from JUnit creators</li>
-                              <li><a href="http://www.vogella.com/articles/JUnit/article.html">JUnit tutorial</a> - a more detailed tutorial from a developer Lars Vogel</li>
-                              <li>How to test private methods in Java? [ <a href="http://stackoverflow.com/questions/34571/whats-the-proper-way-to-test-a-class-with-private-methods-using-junit">short answer</a> ] [ <a href="http://www.artima.com/suiterunner/private.html">long answer</a>                                ]</li>
-                            </ul>
-                          </panel>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </panel><br><br>
-              <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
-              </p>
-              <div class="indented">
-                <div>
-                  <p><strong>Acceptable</strong>: Evidence of having written JUnit tests in some project.</p>
-                  <p><strong>Suggested</strong>: Do the exercise in [<a href="https://github.com/nus-tic2002-2018/addressbook-level2/blob/master/docs/LearningOutcomes.adoc#use-junit-to-implement-unit-tests-code-lo-junit-code">Addressbook-Level2: LO-JUnit</a>]</p>
-                  <div>
-                    <p><strong>Submission</strong>: Create a PR against <a href="https://github.com/nus-tic2002-2018/addressbook-level2">Addressbook-Level2</a>. <mark>Only clean PRs</mark> (i.e. free of unrelated code modifications) will be accepted.</p>
-                    <p>
-                      <panel src="/website\admin\appendixE-gitHub._include_.html#tutorial-pr-instructions" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Appendix E: Using GitHub Project Hosting → Submitting Pull Requests as evidence of an LO%%"
-                        fragment="tutorial-pr-instructions"></panel>
-                    </p>
-                  </div>
                 </div>
               </div>
             </div>

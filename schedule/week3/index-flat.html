@@ -6612,100 +6612,26 @@ Printed in Subclass
                         </box>
                         <p>Note: If a constructor does not explicitly invoke a superclass constructor, the Java compiler automatically inserts a call to the no-argument constructor of the superclass. If the superclass does not have a no-argument constructor,
                           you will get a compile-time error. <code>Object</code> does have such a constructor, so if <code>Object</code> is the only superclass, there is no problem.</p>
-                        <h5 id="access-modifiers">Access Modifiers</h5>
-                        <p><strong>Access level modifiers determine whether other classes can use a particular field or invoke a particular method.</strong></p>
+                        <h5 id="access-modifiers-simplified">Access Modifiers (simplified)</h5>
+                        <p><strong>Access level modifiers determine whether other classes can use a particular field or invoke a particular method.</strong> Given below is a simplified version of Java access modifiers, <mark>assuming you have not yet started placing your classes in different packages</mark>                          i.e., all classes are places in the root level. A full explanation of access modifiers is given in a later topic.</p>
                         <p>There are two levels of access control:</p>
                         <ol>
                           <li>
                             <p><strong>At the class level</strong>:</p>
                             <ul>
-                              <li><strong><code>public</code></strong>: the class is visible to all classes everywhere</li>
-                              <li><strong>no modifier (the default, also known as <em>package-private</em>)</strong>: it is visible only within its own package<br><br></li>
+                              <li><strong><code>public</code></strong>: the class is visible to all other classes</li>
+                              <li><strong>no modifier</strong>: same as <code>public</code><br><br></li>
                             </ul>
                           </li>
                           <li>
                             <p><strong>At the member level</strong>:</p>
                             <ul>
-                              <li><strong><code>public</code></strong> or <strong>no modifier (<em>package-private</em>)</strong>: same meaning as when used with top-level classes</li>
+                              <li><strong><code>public</code></strong> : the class is visible to all other classes</li>
+                              <li><strong>no modifier</strong>: same as <code>public</code></li>
+                              <li><strong><code>protected</code></strong>: same as <code>public</code></li>
                               <li><strong><code>private</code></strong>: the member can only be accessed in its own class</li>
-                              <li><strong><code>protected</code></strong>: the member can only be accessed within its own package (as with package-private) and, in addition, by a subclass of its class in another package</li>
                             </ul>
                           </li>
-                        </ol>
-                        <p>The following table shows the access to members permitted by each modifier.</p>
-                        <div class="indented">
-                          <div class="table-responsive">
-                            <table class="markbind-table table table-bordered table-striped">
-                              <thead>
-                                <tr>
-                                  <th>Modifier</th>
-                                  <th>
-                                    <tooltip content="whether the class itself has access to the member defined by the access level">Class</tooltip>
-                                  </th>
-                                  <th>
-                                    <tooltip content="whether classes in the same package as the class (regardless of their parentage) have access to the member">Package</tooltip>
-                                  </th>
-                                  <th>
-                                    <tooltip content="whether subclasses of the class declared outside this package have access to the member">Subclass</tooltip>
-                                  </th>
-                                  <th>
-                                    <tooltip content="whether all classes have access to the member">World</tooltip>
-                                  </th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td><code>public</code></td>
-                                  <td><span style="color:green"><span class="fas fa-check"></span></span>
-                                  </td>
-                                  <td><span style="color:green"><span class="fas fa-check"></span></span>
-                                  </td>
-                                  <td><span style="color:green"><span class="fas fa-check"></span></span>
-                                  </td>
-                                  <td><span style="color:green"><span class="fas fa-check"></span></span>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td><code>protected</code></td>
-                                  <td><span style="color:green"><span class="fas fa-check"></span></span>
-                                  </td>
-                                  <td><span style="color:green"><span class="fas fa-check"></span></span>
-                                  </td>
-                                  <td><span style="color:green"><span class="fas fa-check"></span></span>
-                                  </td>
-                                  <td><span style="color:red"><span class="fas fa-times"></span></span>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>no modifier</td>
-                                  <td><span style="color:green"><span class="fas fa-check"></span></span>
-                                  </td>
-                                  <td><span style="color:green"><span class="fas fa-check"></span></span>
-                                  </td>
-                                  <td><span style="color:red"><span class="fas fa-times"></span></span>
-                                  </td>
-                                  <td><span style="color:red"><span class="fas fa-times"></span></span>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td><code>private</code></td>
-                                  <td><span style="color:green"><span class="fas fa-check"></span></span>
-                                  </td>
-                                  <td><span style="color:red"><span class="fas fa-times"></span></span>
-                                  </td>
-                                  <td><span style="color:red"><span class="fas fa-times"></span></span>
-                                  </td>
-                                  <td><span style="color:red"><span class="fas fa-times"></span></span>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                        <p>Access levels affect you in two ways:</p>
-                        <ol>
-                          <li>When you use classes that come from another source, such as the classes in the Java platform, access levels determine which members of those classes your own classes can use.</li>
-                          <li>When you write a class, you need to decide what access level every member variable and every method in your class should have.</li>
                         </ol>
                       </div>
                     </div>
@@ -9948,7 +9874,7 @@ max radius used so far : 12.0
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sat, 01 Sep 2018 11:54:19 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:31:36 GMT</small></div>
 </footer>
 </div>
 </body>

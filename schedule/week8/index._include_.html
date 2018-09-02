@@ -6,7 +6,1003 @@
       <br>
       <panel type="seamless" header="##### Evidence for weekly LOs %%(for reference)%%">
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.1b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the need for following a standard</span>
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.1a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain revision control</span>
+          <span
+            class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            </span>
+            <div class="indented">
+              <panel minimized="">
+                <span slot="header" class="card-title">Details of the LO</span>
+                <div>
+                  <div></div>
+                  <p></p>
+                  <p><span class="dimmed"><strong><span>Project Management → Revision Control →
+</span></strong>
+                    </span>
+                  </p>
+                  <div id="title-and-body">
+                    <div>
+                      <h4 id="what">What</h4>
+                    </div>
+                    <div id="main">
+                      <div>
+                        <p><strong><em>Revision Control Software (RCS)</em> are the software tools that automate the process of <em>Revision Control</em> i.e. managing revisions of software artifacts.</strong></p>
+                        <p>Revision control is also known as <em>Version Control Software (VCS)</em>, and a few other names. Here, we use the terms <em>revision</em> and <em>version</em> interchangeably.</p>
+                        <tabs>
+                          <tab header="<span class='far fa-file-alt'></span>">
+                            <blockquote>
+                              <p><em>Revision control</em> is the process of managing multiple versions of a piece of information. In its simplest form, this is something that many people do by hand: every time you modify a file, save it under a new name
+                                that contains a number, each one higher than the number of the preceding version.</p>
+                              <p>Manually managing multiple versions of even a single file is an error-prone task, though, so software tools to help automate this process have long been available. The earliest automated revision control tools were intended
+                                to help a single user to manage revisions of a single file. Over the past few decades, the scope of revision control tools has expanded greatly; they now manage multiple files, and help multiple people to work together.
+                                The best modern revision control tools have no problem coping with thousands of people working together on projects that consist of hundreds of thousands of files.</p>
+                              <p>There are a number of reasons why you or your team might want to use an automated revision control tool for a project. It will track the history and evolution of your project, so you don't have to. For every change, you'll
+                                have a log of who made it; why they made it; when they made it; and what the change was.</p>
+                              <p>When you're working with other people, <strong>revision control software makes it easier for you to collaborate</strong>. For example, when people more or less simultaneously make potentially incompatible changes, the software
+                                will help you to identify and resolve those conflicts.</p>
+                              <p><strong>It can help you to recover from mistakes</strong>. If you make a change that later turns out to be an error, you can revert to an earlier version of one or more files. In fact, a really good revision control tool
+                                will even help you to efficiently figure out exactly when a problem was introduced.</p>
+                              <p><strong>It will help you to work simultaneously on, and manage the drift between, multiple versions of your project.</strong> Most of these reasons are equally valid, at least in theory, whether you're working on a project
+                                by yourself, or with a hundred other people.</p>
+                              <p>-- [adapted from
+                                <trigger for="pop:bryan-mercurial-guide">bryan-mercurial-guide</trigger>]</p>
+                            </blockquote>
+                            <hr>
+                          </tab>
+                          <tab header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span>">
+                            <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/M-O8ZNW9icQ" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                            <hr>
+                          </tab>
+                        </tabs>
+                        <popover id="pop:bryan-mercurial-guide" title="bryan-mercurial-guide <span class='glyphicon glyphicon-eye-open' aria-hidden='true'></span>" placement="right">
+                          <div slot="content">
+                            <div>
+                              <p><a href="http://hgbook.red-bean.com/">Mercurial: The Definitive Guide</a> by Bryan O'Sullivan retrieved on 2012/07/11</p>
+                            </div>
+                          </div>
+                        </popover>
+                      </div>
+                      <div>
+                        <div>
+                          <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> What does RCS stand for?">
+                                <question has-input="true">
+                                  <div slot="answer">
+                                    <p>Revision Control Software</p>
+                                  </div>
+                                </question>
+                              </panel>
+                            </div>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> What is a Revision?">
+                                <question has-input="true">
+                                  <p>In the context of RCS, what is a <em>Revision</em>? Give an example.</p>
+                                  <div slot="answer">
+                                    <p>Versions of a piece of information. For example, take a file containing program code. If you modify the code and save the file, you have a new version of that file.</p>
+                                  </div>
+                                </question>
+                              </panel>
+                            </div>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which of these is not considered a benefit of a typical RCS?">
+                                <question>
+                                  <ul class="task-list">
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Help a single user manage revisions of a single file</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Help a developer recover from a incorrect modification to a code file</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Makes it easier for a group of developers to collaborate on a project</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Manage the drift between multiple versions of your project</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. Detect when multiple developers make incompatible changes to the same file</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> f. All of them are benefits of RCS</li>
+                                  </ul>
+                                  <div slot="answer">
+                                    <p>f</p>
+                                  </div>
+                                </question>
+                              </panel>
+                            </div>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain RCS in a team project context">
+                                <question has-input="true">
+                                  <p>Suppose You are doing a team project with Tom, Dick, and Harry but those three have not even heard the term RCS. How do you explain RCS to them as briefly as possible, using the project as an example?</p>
+                                </question>
+                              </panel>
+                            </div>
+                          </panel>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </panel><br><br>
+              <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+              </p>
+              <div class="indented">
+                <div>
+                  <p>Be able to answer questions such as these:</p>
+                  <div>
+                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain RCS in a team project context">
+                      <question has-input="true">
+                        <p>Suppose You are doing a team project with Tom, Dick, and Harry but those three have not even heard the term RCS. How do you explain RCS to them as briefly as possible, using the project as an example?</p>
+                      </question>
+                    </panel>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.1b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain repositories</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          </span>
+          </span>
+          <div class="indented">
+            <panel minimized="">
+              <span slot="header" class="card-title">Details of the LO</span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Project Management → Revision Control →
+</span></strong>
+                  </span>
+                </p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="repositories">Repositories</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <tip-box type="definition">
+                        <div>
+                          <p><strong>Repository</strong> (<em>repo</em> for short): The database of the history of a directory being tracked by an RCS software (e.g. Git).</p>
+                        </div>
+                      </tip-box>
+                      <tabs>
+                        <tab header="<span class='far fa-file-alt'></span>">
+                          <p>Suppose you want to apply revision control on files in a directory called <code>ProjectFoo</code>. In that case you need to set up a <em>repo</em> (short for repository) in <code>ProjectFoo</code> directory, which is referred
+                            to as the <em>working directory</em> of the repo. The repository is the database where the meta-data about the revision history are stored. For example, Git uses a hidden folder named <code>.git</code> inside the working directory.</p>
+                          <p>You can have multiple repos in your computer, each repo revision-controlling files of a different working directly, for examples, files of different projects.</p>
+                          <hr>
+                        </tab>
+                        <tab header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span>">
+                          <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/mLnxwlCEIb8" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                          <hr>
+                        </tab>
+                      </tabs>
+                    </div>
+                    <div>
+                      <div>
+                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> What is a repo?">
+                              <question has-input="true">
+                                <p>In the context of RCS, what is a <em>repo</em>?</p>
+                              </question>
+                            </panel>
+                          </div>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </panel><br><br>
+            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+            </p>
+            <div class="indented">
+              <div>
+                <p>Be able to answer questions such as these:</p>
+                <div>
+                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> What is a repo?">
+                    <question has-input="true">
+                      <p>In the context of RCS, what is a <em>repo</em>?</p>
+                    </question>
+                  </panel>
+                </div>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.1c</code></span></big> <span><span class="fas fa-trophy"></span> Can create a local Git repo</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          </span>
+          </span>
+          <div class="indented">
+            <panel minimized="">
+              <span slot="header" class="card-title">Details of the LO</span>
+              <div>
+                <div>
+                  <p>
+                    <panel src="/website\book\revisionControl\repositories\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%Project Management → Revision Control → Repositories%%"></panel>
+                  </p>
+                </div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+</span></strong>
+                  </span>
+                </p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="init">Init</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <panel header="%%<span class='fas fa-paperclip'></span> Git Overview%%" class="non-printable">
+                        <p>Soon you are going to take your first step in using Git. If you would like to see a quick overview of the full Git landscape before jumping in, watch the video below.</p>
+                        <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/v40b3ExbM0c" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                        <p></p>
+                      </panel>
+                      <p></p>
+                      <p>Install <a href="https://www.sourcetreeapp.com/">SourceTree</a> which is Git + a GUI for Git.</p>
+                      <p>Suppose you want to create a repository in an empty directory <code>things</code></p>
+                      <tabs>
+                        <tab header="SourceTree">
+                          <div>
+                            <p>Windows: Click <code>File</code> → <code>Clone/New…</code>. Click on <code>Create</code> button.<br> Mac: <code>New...</code> → <code>Create New Repository</code>.</p>
+                            <p>Enter the location of the directory (Windows version shown below) and click <code>Create</code>.</p>
+                            <img src="/website/book/gitAndGithub/init/images/sourcetree_1.png" height="220">
+                            <p></p>
+                            <p>Go to the <code>things</code> folder and observe how a hidden folder <code>.git</code> has been created.</p>
+                            <p>Note: If you are on Windows, you might have to <a href="https://www.howtogeek.com/howto/windows-vista/show-hidden-files-and-folders-in-windows-vista/">configure Windows Explorer to show hidden files</a>.</p>
+                          </div>
+                          <hr>
+                        </tab>
+                        <tab header="CLI">
+                          <div>
+                            <p>Open a Git Bash Terminal.</p>
+                            <p>If you installed SourceTree, you can click the <code>Terminal</code> button to open a GitBash terminal.</p>
+                            <img src="/website/book/gitAndGithub/init/images/cli_1.png" height="100">
+                            <p></p>
+                            <p>Navigate to the <code>things</code> directory.</p>
+                            <p>Use the command <code>git init</code> which should initialize the repo.</p>
+                            <pre class="hljs"><code>$ git init
+Initialized empty Git repository in c:/repos/things/.git/
+</code></pre>
+                            <p>You can use the command <code>ls -a</code> to view all files, which should show the <code>.git</code> directory that was created by the previous command.</p>
+                            <pre class="hljs"><code>$ ls -a
+.  ..  .git
+</code></pre>
+                            <p>You can also use the <code>git status</code> command to check the status of the newly-created repo. It should respond with something like the bellow</p>
+                            <pre class="hljs"><code>git status
+</code></pre>
+                            <p><span class="fas fa-arrow-down"></span></p>
+                            <pre class="hljs"><code># On branch master
+#
+# Initial commit
+#
+nothing to commit (create/copy files and use &quot;git add&quot; to track)
+</code></pre>
+                          </div>
+                          <hr>
+                        </tab>
+                      </tabs>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </panel><br><br>
+            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+            </p>
+            <div class="indented">
+              <div>
+                <p>Have a local repo that you created.</p>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.1d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain saving history</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          </span>
+          </span>
+          <div class="indented">
+            <panel minimized="">
+              <span slot="header" class="card-title">Details of the LO</span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Project Management → Revision Control →
+</span></strong>
+                  </span>
+                </p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="saving-history">Saving History</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <h5 id="tracking-and-ignoring">Tracking and Ignoring</h5>
+                      <p><strong>In a repo, we can specify which files to track and which files to <mark>ignore</mark>.</strong> Some files such as temporary log files created during the build/test process should not be revision-controlled.</p>
+                      <h5 id="staging-and-committing">Staging and Committing</h5>
+                      <tabs>
+                      
+                        <tab header="<span class='far fa-file-alt'></span>">
+                          <p><strong><mark><em>Committing</em></mark> saves a snapshot of the current state of the tracked files in the revision control history. Such a snapshot is also called a <em>commit</em> (i.e. the noun).</strong></p>
+                          <p><strong>When ready to commit, we first <mark><em>stage</em></mark> the specific changes we want to commit.</strong> This intermediate step allows us to commit only some changes while saving other changes for a later commit.</p>
+                          <p>
+                            <hr>
+                          </p>
+                        </tab>
+                      
+                        <tab header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span>">
+                          <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/7exFDGHgQcw" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                          <p>
+                            <hr>
+                          </p>
+                        </tab>
+                      </tabs>
+                      <h5 id="identifying-points-in-history">Identifying Points in History</h5>
+                      <p><strong>Each commit in a repo is a recorded point in the history of the project that is uniquely identified by an auto-generated <mark>hash</mark></strong> e.g. <code>a16043703f28e5b3dab95915f5c5e5bf4fdc5fc1</code>.</p>
+                      <p><strong>We can <mark>tag</mark> a specific commit with a more easily identifiable name</strong> e.g. <code>v1.0.2</code></p>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </panel><br><br>
+            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+            </p>
+            <div class="indented">
+              <div>
+                <p>Have a local repo that has commits you created.</p>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.1f</code></span></big> <span><span class="fas fa-trophy"></span> Can set Git to ignore files</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span
+            class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            </span>
+            </span>
+            </span>
+            </span>
+            <div class="indented">
+              <panel minimized="">
+                <span slot="header" class="card-title">Details of the LO</span>
+                <div>
+                  <div>
+                    <p>
+                      <panel src="/website\book\revisionControl\savingHistory\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Revision Control: Saving History"></panel>
+                    </p>
+                  </div>
+                  <p></p>
+                  <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+</span></strong>
+                    </span>
+                  </p>
+                  <div id="title-and-body">
+                    <div>
+                      <h4 id="ignore">Ignore</h4>
+                    </div>
+                    <div id="main">
+                      <div>
+                        <p>Add a file names <code>temp.txt</code> to the <code>things</code> repo you created. Suppose we don’t want this file to be revision controlled by Git. Let’s instruct Git to ignore <code>temp.txt</code></p>
+                        <tabs>
+                          <tab header="SourceTree">
+                            <div>
+                              <p>The file should be currently listed under <code>Unstaged files</code>. Right-click it and choose <code>Ignore…</code>. Choose <code>Ignore exact filename(s)</code> and click <code>OK</code>.</p>
+                              <p>Observe that a file named <code>.gitignore</code> has been created in the working directory root and has the following line in it.</p>
+                              <pre class="hljs"><code>temp.txt
+</code></pre>
+                            </div>
+                            <hr>
+                          </tab>
+                          <tab header="CLI">
+                            <div>
+                              <p>Create a file named <code>.gitignore</code> in the working directory root and add the following line in it.</p>
+                              <pre class="hljs"><code>temp.txt
+</code></pre>
+                            </div>
+                            <hr>
+                          </tab>
+                        </tabs>
+                        <p>The <code>.gitignore</code> file tells Git which files to ignore when tracking revision history. That file itself can be either revision controlled or ignored.</p>
+                        <ul>
+                          <li>To version control it (the more common choice – which allows you to track how the <code>.gitignore</code> file changed over time), simply commit it as you would commit any other file.</li>
+                          <li>To ignore it, follow the same steps we followed above when we set Git to ignore the <code>temp.txt</code> file.</li>
+                        </ul>
+                      </div>
+                      <div></div>
+                    </div>
+                  </div>
+                </div>
+              </panel><br><br>
+              <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+              </p>
+              <div class="indented">
+                <div>
+                  <p>Have a local repo that has git-ignored files.</p>
+                </div>
+              </div>
+            </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.2b</code></span></big> <span><span class="fas fa-trophy"></span> Can clone a remote repo</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          </span>
+          </span>
+          <div class="indented">
+            <panel minimized="">
+              <span slot="header" class="card-title">Details of the LO</span>
+              <div>
+                <div>
+                  <p>
+                    <panel src="/website\book\revisionControl\remoteRepositories\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%Project Management → Revision Control → Remote Respositories%%"></panel>
+                  </p>
+                </div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+</span></strong>
+                  </span>
+                </p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="clone">Clone</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p>Clone the sample repo <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a> to your computer.</p>
+                      <tip-box type="error">
+                        <p>Note that the URL of the Github project is different form the URL you need to clone a repo in that Github project. e.g.
+                        </p>
+                        <p>Github project URL: <code>https://github.com/se-edu/samplerepo-things</code> <br> Git repo URL: <code>https://github.com/se-edu/samplerepo-things.git</code> (note the <code>.git</code> at the end)</p>
+                      </tip-box>
+                      <tabs>
+                        <tab header="SourceTree">
+                          <div>
+                            <p><code>File</code> → <code>Clone / New…</code> and provide the URL of the repo and the destination directory.</p>
+                          </div>
+                          <hr>
+                        </tab>
+                        <tab header="CLI">
+                          <div>
+                            <p>You can use the <code>clone</code> command to clone a repo.</p>
+                            <p>Follow instructions given <a href="https://help.github.com/articles/cloning-a-repository/">here</a>.</p>
+                          </div>
+                          <hr>
+                        </tab>
+                      </tabs>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </panel><br><br>
+            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+            </p>
+            <div class="indented">
+              <div>
+                <p><strong>Acceptable</strong>: Any remote repo cloned to your Computer.</p>
+                <p><strong>Suggested</strong>: A clone of the <a href="https://github.com/nus-tic2002-2018/samplerepo-things">samplerepo-things</a> in your Computer.</p>
+                <p><strong>Submission</strong>: Show the clone to the tutor during the tutorial.</p>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.2c</code></span></big> <span><span class="fas fa-trophy"></span> Can pull changes from a repo</span>
+          <span
+            class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            <div class="indented">
+              <panel minimized="">
+                <span slot="header" class="card-title">Details of the LO</span>
+                <div>
+                  <div>
+                    <p>
+                      <panel src="/website\book\gitAndGithub\clone\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%Tools → Git & GitHub → Clone%%"></panel>
+                    </p>
+                  </div>
+                  <p></p>
+                  <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+</span></strong>
+                    </span>
+                  </p>
+                  <div id="title-and-body">
+                    <div>
+                      <h4 id="pull">Pull</h4>
+                    </div>
+                    <div id="main">
+                      <div>
+                        <p>Clone the sample repo as explained in
+                          <trigger for="modal:clone-repository" trigger="click">[Textbook <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Tools → Git &amp; GitHub → Clone]</trigger>.</p>
+                        <p>Delete the last two commits to simulate cloning the repo 2 commits ago.</p>
+                        <modal title="**Clone Repository**" id="modal:clone-repository">
+                          <div>
+                            <panel type="seamless" expanded="">
+                              <span slot="header" class="card-title"><div>
+<h4 id="clone-2">Clone</h4></div></span>
+                              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can clone a remote repo</span>
+                                </span>
+                                </span>
+                                </span>
+                                <p></p>
+                              </p>
+                              <p></p>
+                              <div>
+                                <p>Clone the sample repo <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a> to your computer.</p>
+                                <tip-box type="error">
+                                  <p>Note that the URL of the Github project is different form the URL you need to clone a repo in that Github project. e.g.
+                                  </p>
+                                  <p>Github project URL: <code>https://github.com/se-edu/samplerepo-things</code> <br> Git repo URL: <code>https://github.com/se-edu/samplerepo-things.git</code> (note the <code>.git</code> at the end)</p>
+                                </tip-box>
+                                <tabs>
+                                  <tab header="SourceTree">
+                                    <div>
+                                      <p><code>File</code> → <code>Clone / New…</code> and provide the URL of the repo and the destination directory.</p>
+                                    </div>
+                                    <hr>
+                                  </tab>
+                                  <tab header="CLI">
+                                    <div>
+                                      <p>You can use the <code>clone</code> command to clone a repo.</p>
+                                      <p>Follow instructions given <a href="https://help.github.com/articles/cloning-a-repository/">here</a>.</p>
+                                    </div>
+                                    <hr>
+                                  </tab>
+                                </tabs>
+                              </div>
+                              <div></div>
+                            </panel>
+                          </div>
+                        </modal>
+                        <tabs>
+                          <tab header="SourceTree">
+                            <div>
+                              <p>Right-click the target commit (i.e. the commit that is 2 commits behind the tip) and choose <code>Reset current branch to this commit</code>.</p>
+                              <img src="/website/book/gitAndGithub/pull/images/rightClickOnTargetCommit.png" height="100">
+                              <p></p>
+                              <p>Choose the <code>Hard - …</code> option and click <code>OK</code>.</p>
+                              <img src="/website/book/gitAndGithub/pull/images/sourcetree_1.png" height="120">
+                              <p></p>
+                              <p>This is what you will see.</p>
+                              <img src="/website/book/gitAndGithub/pull/images/sourcetree_2.png" height="150">
+                              <p></p>
+                              <p>Note the following (cross refer the screenshot above):</p>
+                              <p>Arrow marked as <code>a</code>: The local repo is now at this commit, marked by the <code>master</code> label.<br> Arrow marked as <code>b</code>: <code>origin/master</code> label shows what is the latest commit in the <code>master</code>                                branch in the remote repo.</p>
+                            </div>
+                            <hr>
+                          </tab>
+                          <tab header="CLI">
+                            <div>
+                              <p>Use the <code>reset</code> command to delete commits at the tip of the revision history.</p>
+                              <pre class="hljs"><code>git reset --hard HEAD~2
+</code></pre>
+                            </div>
+                            <hr>
+                          </tab>
+                        </tabs>
+                        <p>Now, your local repo state is exactly how it would be if you had cloned the repo 2 commits ago, as if somebody has added two more commits to the remote repo since you cloned it. To get those commits to your local repo (i.e. to
+                          sync your local repo with upstream repo) you can do a pull.</p>
+                        <tabs>
+                          <tab header="SourceTree">
+                            <div>
+                              <p>Click the <code>Pull</code> button in the main menu, choose <code>origin</code> and <code>master</code> in the next dialog, and click <code>OK</code>.</p>
+                              <img src="/website/book/gitAndGithub/pull/images/sourcetree_3.png" height="160">
+                              <p></p>
+                              <p>Now you should see something like this where <code>master</code> and <code>origin/master</code> are both pointing the same commit.</p>
+                              <img src="/website/book/gitAndGithub/pull/images/sourcetree_4.png" height="100">
+                              <p></p>
+                            </div>
+                            <hr>
+                          </tab>
+                          <tab header="CLI">
+                            <div>
+                              <p><code>git pull origin</code></p>
+                            </div>
+                            <hr>
+                          </tab>
+                        </tabs>
+                      </div>
+                      <div></div>
+                    </div>
+                  </div>
+                </div>
+              </panel><br><br>
+              <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+              </p>
+              <div class="indented">
+                <div>
+                  <p><strong>Acceptable</strong>: Any evidence of pulling from a remote Git repo.</p>
+                  <p><strong>Suggested</strong>: Follow the steps in the LO details.</p>
+                  <p><strong>Submission</strong>: Demo a pull operation to the tutor.</p>
+                </div>
+              </div>
+            </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.2d</code></span></big> <span><span class="fas fa-trophy"></span> Can push to a remote repo</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span
+            class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            <div class="indented">
+              <panel minimized="">
+                <span slot="header" class="card-title">Details of the LO</span>
+                <div>
+                  <div>
+                    <p>
+                      <panel src="/website\book\gitAndGithub\pull\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%Tools → Git & GitHub → Pull%%"></panel>
+                    </p>
+                  </div>
+                  <p></p>
+                  <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+</span></strong>
+                    </span>
+                  </p>
+                  <div id="title-and-body">
+                    <div>
+                      <h4 id="push">Push</h4>
+                    </div>
+                    <div id="main">
+                      <div>
+                        <ol>
+                          <li>
+                            <p>Fork the <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a> to your GitHub account:</p>
+                            <panel type="seamless" header="%%How to fork a repo?%%">
+                              <p>Navigate to the on GitHub and click on the <img src="/website/book/gitAndGithub/push/images/fork.png" height="30"> button on the top-right corner.</p>
+                              <p></p>
+                            </panel>
+                            <p></p>
+                          </li>
+                          <li>
+                            <p>Clone the fork (not the original) to your computer.</p>
+                          </li>
+                          <li>
+                            <p>Create some commits in your repo.</p>
+                          </li>
+                          <li>
+                            <p>Push the new commits to your fork on GitHub</p>
+                          </li>
+                        </ol>
+                        <tabs>
+                          <tab header="SourceTree">
+                            <div>
+                              <p>Click the <code>Push</code> button on the main menu, ensure the settings are as follows in the next dialog, and click the <code>Push</code> button on the dialog.</p>
+                              <img src="/website/book/gitAndGithub/push/images/sourcetree_1.png" height="150">
+                              <p></p>
+                            </div>
+                            <hr>
+                          </tab>
+                          <tab header="CLI">
+                            <div>
+                              <p>Use the command <code>git push origin master</code>. Enter Github username and password when prompted.</p>
+                            </div>
+                            <hr>
+                          </tab>
+                        </tabs>
+                      </div>
+                      <div></div>
+                    </div>
+                  </div>
+                </div>
+              </panel><br><br>
+              <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+              </p>
+              <div class="indented">
+                <div>
+                  <p><strong>Acceptable</strong>: Any evidence of pushing to a remote Git repo.</p>
+                  <p><strong>Suggested</strong>: Follow the steps in the LO details.</p>
+                  <p><strong>Submission</strong>: Show pushed commits in the remote repo.</p>
+                </div>
+              </div>
+            </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.3b</code></span></big> <span><span class="fas fa-trophy"></span> Can load a specific version of a Git repo</span>
+          <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          </span>
+          </span>
+          </span>
+          <div class="indented">
+            <panel minimized="">
+              <span slot="header" class="card-title">Details of the LO</span>
+              <div>
+                <div>
+                  <p>
+                    <panel src="/website\book\revisionControl\usingHistory\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%Project Management → Revision Control → Using History%%"></panel>
+                  </p>
+                </div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+</span></strong>
+                  </span>
+                </p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="checkout">Checkout</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p>Git can show you what changed in each commit.</p>
+                      <tabs>
+                        <tab header="SourceTree">
+                          <div>
+                            <p>To see which files changed in a commit, click on the commit. To see what changed in a specific file in that commit, click on the file name.</p>
+                            <img src="/website/book/gitAndGithub/checkout/images/sourcetree_1.png" height="220">
+                            <p></p>
+                          </div>
+                          <hr>
+                        </tab>
+                        <tab header="CLI">
+                          <div>
+                            <pre><code class="hljs sh">git show &lt; part-of-commit-hash &gt;
+</code></pre>
+                            <p>Example:</p>
+                            <pre class="hljs"><code>git show 251b4cf
+</code></pre>
+                            <p><span class="fas fa-arrow-down"></span></p>
+                            <pre><code class="hljs diff">commit 5bc0e30635a754908dbdd3d2d833756cc4b52ef3
+Author: … &lt; … &gt;
+Date:   Sat Jul 8 16:50:27 2017 +0800
+
+    fruits.txt: replace banana with berries
+
+diff --git a/fruits.txt b/fruits.txt
+index 15b57f7..17f4528 100644
+<span class="hljs-comment">--- a/fruits.txt</span>
+<span class="hljs-comment">+++ b/fruits.txt</span>
+<span class="hljs-meta">@@ -1,3 +1,3 @@</span>
+ apples
+<span class="hljs-deletion">-bananas</span>
+<span class="hljs-addition">+berries</span>
+ cherries
+</code></pre>
+                          </div>
+                          <hr>
+                        </tab>
+                      </tabs>
+                      <p>Git can also show you the difference between two points in the history of the repo.</p>
+                      <tabs>
+                        <tab header="SourceTree">
+                          <div>
+                            <p>Select the two points you want to compare using <kbd>Ctrl</kbd>+<code>Click</code>.</p>
+                            <img src="/website/book/gitAndGithub/checkout/images/sourcetree_2.png" height="200">
+                            <p></p>
+                            <p>The same method can be used to compare the current state of the working directory (which might have uncommitted changes) to a point in the history.</p>
+                            <img src="/website/book/gitAndGithub/checkout/images/sourcetree_3.png" height="100">
+                            <p></p>
+                          </div>
+                          <hr>
+                        </tab>
+                        <tab header="CLI">
+                          <div>
+                            <p>The <code>diff</code> command can be used to view the differences between two points of the history.</p>
+                            <ul>
+                              <li><code>git diff</code> : shows the changes (uncommitted) since the last commit</li>
+                              <li><code>git diff 0023cdd..fcd6199</code>: shows the changes between the points indicated by by commit hashes</li>
+                              <li><code>git diff v1.0..HEAD</code>: shows changes that happened from the commit tagged as <code>v1.0</code> to the most recent commit.</li>
+                            </ul>
+                            <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                              <ul>
+                                <li><a href="https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/diffs">Git-Tower Tutorial: Inspecting Changes with Diffs</a></li>
+                                <li><a href="https://stackoverflow.com/questions/8640838/how-do-i-navigate-in-the-results-of-diff">How to view the next page of a <code>git</code> command result</a></li>
+                              </ul>
+                            </panel>
+                          </div>
+                          <hr>
+                        </tab>
+                      </tabs>
+                      <p>Git can load a specific version of the history to the working directory. Note that if you have uncommitted changes in the working directory, you need to
+                        <trigger trigger="click" for="modal:checkout-stash">stash</trigger> them first to prevent them from being overwritten.</p>
+                      <modal large="" title="%%Extract%%" id="modal:checkout-stash">
+                      
+                        <div>
+                          <div></div>
+                          <p></p>
+                          <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+</span></strong>
+                            </span>
+                          </p>
+                          <div id="title-and-body">
+                            <div>
+                              <h4 id="stash">Stash</h4>
+                            </div>
+                            <div id="main">
+                              <div>
+                                <p><strong>You can use the git's <mark><em>stash</em></mark> feature to temporarily shelve (or stash) changes you've made to your working copy</strong> so that you can work on something else, and then come back and re-apply
+                                  the stashed changes later on. <sub>-- adapted from <a href="https://www.atlassian.com/git/tutorials/git-stash">this</a></sub></p>
+                                <tabs>
+                                
+                                  <tab header="Source Tree">
+                                    <p>Follow <a href="https://confluence.atlassian.com/sourcetreekb/stash-a-file-with-sourcetree-785332122.html">this article from SourceTree creators</a>. <span class="dimmed">Note the GUI shown in the article is slightly outdated but you should be able to map it to the current GUI.</span></p>
+                                    <p>
+                                      <hr>
+                                    </p>
+                                  </tab>
+                                
+                                  <tab header="CLI">
+                                    <p>Follow <a href="https://www.atlassian.com/git/tutorials/git-stash">this article from Atlassian</a>.</p>
+                                    <p>
+                                      <hr>
+                                    </p>
+                                  </tab>
+                                </tabs>
+                              </div>
+                              <div></div>
+                            </div>
+                          </div>
+                        </div>
+                      </modal>
+                      <tabs>
+                        <tab header="SourceTree">
+                          <div>
+                            <p>Double-click the commit you want to load to the working directory, or right-click on that commit and choose <code>Checkout...</code>.</p>
+                            <p>Click <code>OK</code> to the warning about ‘detached HEAD’ (similar to below).</p>
+                            <img src="/website/book/gitAndGithub/checkout/images/warning.png" height="140">
+                            <p></p>
+                            <p>The specified version is now loaded to the working folder, as indicated by the <code>HEAD</code> label. <code>HEAD</code> is a reference to the currently checked out commit.</p>
+                            <img src="/website/book/gitAndGithub/checkout/images/sourcetree_4.png" height="100">
+                            <p></p>
+                            <p>If you checkout a commit that come before the commit in which you added the <code>.gitignore</code> file, Git will now show ignored fiels as ‘unstaged modifications’ because at that stage Git hasn’t been told to ignore those
+                              files.</p>
+                            <img src="/website/book/gitAndGithub/checkout/images/sourcetree_5.png" height="260">
+                            <p></p>
+                            <p>To go back to the latest commit, double-click it.</p>
+                          </div>
+                          <hr>
+                        </tab>
+                        <tab header="CLI">
+                          <div>
+                            <p>Use the <code>checkout &lt;commit-identifier&gt;</code> command to change the working directory to the state it was in at a specific past commit.</p>
+                            <ul>
+                              <li><code>git checkout v1.0</code>: loads the state as at commit tagged <code>v1.0</code></li>
+                              <li><code>git checkout 0023cdd</code>: loads the state as at commit with the hash <code>0023cdd</code></li>
+                              <li><code>git checkout HEAD~2</code>: loads the state that is 2 commits behind the most recent commit</li>
+                            </ul>
+                            <p>For now, you can ignore the warning about ‘detached HEAD’.</p>
+                            <p>Use the <code>checkout &lt;branch-name&gt;</code> to go back to the most recent commit of the current branch (the default branch in git is named <code>master</code>)</p>
+                            <ul>
+                              <li><code>git checkout master</code></li>
+                            </ul>
+                          </div>
+                          <hr>
+                        </tab>
+                      </tabs>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </panel><br><br>
+            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+            </p>
+            <div class="indented">
+              <div>
+                <p><strong>Acceptable</strong>: Show how to traverse history using any local repo.</p>
+                <p><strong>Suggested</strong>: Show how to traverse history using the steps given in the LO above.</p>
+                <p><strong>Submission</strong>: Demo during the tutorial.</p>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.3c</code></span></big> <span><span class="fas fa-trophy"></span> Can tag commits using Git</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span
+            class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            <div class="indented">
+              <panel minimized="">
+                <span slot="header" class="card-title">Details of the LO</span>
+                <div>
+                  <div>
+                    <p>
+                      <panel src="/website\book\revisionControl\savingHistory\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%Project Management → Revision Control → Saving History%%"></panel>
+                    </p>
+                  </div>
+                  <p></p>
+                  <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+</span></strong>
+                    </span>
+                  </p>
+                  <div id="title-and-body">
+                    <div>
+                      <h4 id="tag">Tag</h4>
+                    </div>
+                    <div id="main">
+                      <div>
+                        <p>Let's tag a commit in a local repo you have (e.g. the <code>sampelrepo-things</code> repo)</p>
+                        <tabs>
+                          <tab header="SourceTree">
+                            <div>
+                              <p>Right-click on the commit (in the graphical revision graph) you want to tag and choose <code>Tag…</code></p>
+                              <p>Specify the tag name e.g. <code>v1.0</code> and click <code>Add Tag</code>.</p>
+                              <p>The added tag will appear in the revision graph view.</p>
+                              <img src="/website/book/gitAndGithub/tag/images/sourcetree_1.png" height="70">
+                              <p></p>
+                            </div>
+                            <hr>
+                          </tab>
+                          <tab header="CLI">
+                            <div>
+                              <p>To add a tag to the current commit as <code>v1.0</code>,</p>
+                              <pre class="hljs"><code>git tag –a v1.0
+</code></pre>
+                              <p>To view tags</p>
+                              <pre class="hljs"><code>git tag
+</code></pre>
+                              <p>To learn how to add a tag to a past commit, go to the <a href="https://git-scm.com/book/en/v2/Git-Basics-Tagging">‘Git Basics – Tagging’ page of the git-scm book</a> and refer the ‘Tagging Later’ section.</p>
+                            </div>
+                            <hr>
+                          </tab>
+                        </tabs>
+                      </div>
+                      <div></div>
+                    </div>
+                  </div>
+                </div>
+              </panel><br><br>
+              <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+              </p>
+              <div class="indented">
+                <div>
+                  <p><strong>Acceptable</strong>: Any commit you tagged in any repo.</p>
+                  <p><strong>Suggested</strong>: Follow steps in the LO.</p>
+                  <p><strong>Submission</strong>: Show the tagged commit to the tutor during the tutorial.</p>
+                </div>
+              </div>
+            </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.3d</code></span></big> <span><span class="fas fa-trophy"></span> Can use Git to stash files</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span
+            class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            <div class="indented">
+              <panel minimized="">
+                <span slot="header" class="card-title">Details of the LO</span>
+                <div>
+                  <div></div>
+                  <p></p>
+                  <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+</span></strong>
+                    </span>
+                  </p>
+                  <div id="title-and-body">
+                    <div>
+                      <h4 id="stash-2">Stash</h4>
+                    </div>
+                    <div id="main">
+                      <div>
+                        <p><strong>You can use the git's <mark><em>stash</em></mark> feature to temporarily shelve (or stash) changes you've made to your working copy</strong> so that you can work on something else, and then come back and re-apply the stashed
+                          changes later on. <sub>-- adapted from <a href="https://www.atlassian.com/git/tutorials/git-stash">this</a></sub></p>
+                        <tabs>
+                        
+                          <tab header="Source Tree">
+                            <p>Follow <a href="https://confluence.atlassian.com/sourcetreekb/stash-a-file-with-sourcetree-785332122.html">this article from SourceTree creators</a>. <span class="dimmed">Note the GUI shown in the article is slightly outdated but you should be able to map it to the current GUI.</span></p>
+                            <p>
+                              <hr>
+                            </p>
+                          </tab>
+                        
+                          <tab header="CLI">
+                            <p>Follow <a href="https://www.atlassian.com/git/tutorials/git-stash">this article from Atlassian</a>.</p>
+                            <p>
+                              <hr>
+                            </p>
+                          </tab>
+                        </tabs>
+                      </div>
+                      <div></div>
+                    </div>
+                  </div>
+                </div>
+              </panel><br><br>
+              <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+              </p>
+              <div class="indented">
+                <div>
+                  <p><strong>Submission</strong>: Demo stashing.</p>
+                </div>
+              </div>
+            </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.4b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the need for following a standard</span>
           <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
@@ -82,7 +1078,7 @@
           </div>
         </panel>
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.1c</code></span></big> <span><span class="fas fa-trophy"></span> Can follow simple mechanical style rules</span>
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.4c</code></span></big> <span><span class="fas fa-trophy"></span> Can follow simple mechanical style rules</span>
           <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
@@ -176,7 +1172,7 @@
           </div>
         </panel>
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.1d</code></span></big> <span><span class="fas fa-trophy"></span> Can follow intermediate style rules</span>
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.4d</code></span></big> <span><span class="fas fa-trophy"></span> Can follow intermediate style rules</span>
           <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span>
@@ -297,367 +1293,7 @@
             </div>
         </panel>
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.5a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain branching</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          <span
-            class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            </span>
-            </span>
-            </span>
-            </span>
-            <div class="indented">
-              <panel minimized="">
-                <span slot="header" class="card-title">Details of the LO</span>
-                <div>
-                  <div></div>
-                  <p></p>
-                  <p><span class="dimmed"><strong><span>Project Management → Revision Control →
-</span></strong>
-                    </span>
-                  </p>
-                  <div id="title-and-body">
-                    <div>
-                      <h4 id="branching">Branching</h4>
-                    </div>
-                    <div id="main">
-                      <div>
-                        <p><strong><mark><em>Branching</em></mark> is the process of evolving multiple versions of the software in parallel.</strong> For example, one team member can create a new branch and add an experimental feature to it while the rest
-                          of the team keeps working on another branch. Branches can be given names e.g. <code>master</code>, <code>release</code>, <code>dev</code>.</p>
-                        <p><strong>A branch can be <mark><em>merged</em></mark> into another branch.</strong> Merging usually result in a new commit that represents the changes done in the branch being merged.</p>
-                        <pic src="/website/book/revisionControl/branching/images/diagram.png" height="180">
-                          <strong>Branching and merging</strong></pic>
-                        <p><strong><mark><em>Merge conflicts</em></mark> happen when you try to merge two branches that had changed the same part of the code</strong> and the RCS software cannot decide which changes to keep. In those cases we have to ‘resolve’
-                          those conflicts manually.</p>
-                      </div>
-                      <div>
-                        <div>
-                          <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-                            <div>
-                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> What is branching?">
-                                <question has-input="true">
-                                  <p>In the context of RCS, what is the <em>branching</em>? What is the need for branching?.</p>
-                                </question>
-                              </panel>
-                            </div>
-                            <div>
-                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> What is merging?">
-                                <question has-input="true">
-                                  <p>In the context of RCS, what is the <em>merging</em> branches? How can it lead to <em>merge conflicts</em>?.</p>
-                                </question>
-                              </panel>
-                            </div>
-                          </panel>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </panel><br><br>
-              <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
-              </p>
-              <div class="indented">
-                <div>
-                  <div>
-                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> What is branching?">
-                      <question has-input="true">
-                        <p>In the context of RCS, what is the <em>branching</em>? What is the need for branching?.</p>
-                      </question>
-                    </panel>
-                  </div>
-                  <div>
-                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> What is merging?">
-                      <question has-input="true">
-                        <p>In the context of RCS, what is the <em>merging</em> branches? How can it lead to <em>merge conflicts</em>?.</p>
-                      </question>
-                    </panel>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </panel>
-        <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.5b</code></span></big> <span><span class="fas fa-trophy"></span> Can use Git branching</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          <span
-            class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-            </span>
-            </span>
-            <div class="indented">
-              <panel minimized="">
-                <span slot="header" class="card-title">Details of the LO</span>
-                <div>
-                  <div>
-                    <p>
-                      <panel src="/website\book\revisionControl\branching\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%Project Management → Revision Control → Branching%%"></panel>
-                    </p>
-                  </div>
-                  <p></p>
-                  <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
-</span></strong>
-                    </span>
-                  </p>
-                  <div id="title-and-body">
-                    <div>
-                      <h4 id="branch">Branch</h4>
-                    </div>
-                    <div id="main">
-                      <div>
-                        <p><strong>0. Observe that you are normally in the branch called <code>master</code>.</strong> For this, you can take any repo you have on your computer (e.g. a clone of the <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a>).</p>
-                        <tabs>
-                          <tab header="SourceTree">
-                            <div>
-                              <img src="/website/book/gitAndGithub/branch/images/onMasterBranch.png" height="120">
-                              <p></p>
-                            </div>
-                            <hr>
-                          </tab>
-                          <tab header="CLI">
-                            <div>
-                              <pre class="hljs"><code>git status
-</code></pre>
-                              <p><span class="fas fa-arrow-down"></span></p>
-                              <pre class="hljs"><code>on branch master
-</code></pre>
-                            </div>
-                            <hr>
-                          </tab>
-                        </tabs>
-                        <p><strong>1. Start a branch named <code>feature1</code> and switch to the new branch.</strong></p>
-                        <tabs>
-                          <tab header="SourceTree">
-                            <div>
-                              <p>Click on the <code>Branch</code> button on the main menu. In the next dialog, enter the branch name and click <code>Create Branch</code></p>
-                              <img src="/website/book/gitAndGithub/branch/images/sourcetree_1.png" height="150">
-                              <p></p>
-                              <p>Note how the <code>feature1</code> is indicated as the current branch.</p>
-                              <img src="/website/book/gitAndGithub/branch/images/sourcetree_2.png" height="150">
-                              <p></p>
-                            </div>
-                            <hr>
-                          </tab>
-                          <tab header="CLI">
-                            <div>
-                              <p>You can use the <code>branch</code> command to create a new branch and the <code>checkout</code> command to switch to a specific branch.</p>
-                              <pre class="hljs"><code>git branch feature1
-git checkout feature1
-</code></pre>
-                              <p>One-step shortcut to create a branch and switch to it at the same time:</p>
-                              <pre class="hljs"><code>git checkout –b feature1
-</code></pre>
-                            </div>
-                            <hr>
-                          </tab>
-                        </tabs>
-                        <p><strong>2. Create some commits in the new branch.</strong> <span class="dimmed">Just commit as per normal. Commits you add while on a certain branch will become part of that branch.</span></p>
-                        <p><strong>3. Switch to the <code>master</code> branch.</strong> Note how the changes you did in the <code>feature1</code> branch are no longer in the working directory.</p>
-                        <tabs>
-                          <tab header="SourceTree">
-                            <div>
-                              <p>Double-click the <code>master</code> branch</p>
-                              <img src="/website/book/gitAndGithub/branch/images/sourcetree_3.png" height="150">
-                              <p></p>
-                            </div>
-                            <hr>
-                          </tab>
-                          <tab header="CLI">
-                            <div>
-                              <pre class="hljs"><code>git checkout master
-</code></pre>
-                            </div>
-                            <hr>
-                          </tab>
-                        </tabs>
-                        <p><strong>4. Add a commit to the master branch.</strong> Let’s imagine it’s a bug fix.</p>
-                        <img src="/website/book/gitAndGithub/branch/images/sourcetree_4.png" height="100">
-                        <p></p>
-                        <p><strong>5. Switch back to the <code>feature1</code> branch</strong> <span class="dimmed">(similar to step 3)</span>.</p>
-                        <p><strong>6. Merge the <code>master</code> branch to the <code>feature1</code> branch</strong>, giving an end-result like the below. Also note how Git has created a <em>merge commit</em>.</p>
-                        <img src="/website/book/gitAndGithub/branch/images/sourcetree_5.png" height="120">
-                        <p></p>
-                        <tabs>
-                          <tab header="SourceTree">
-                            <div>
-                              <p>Right-click on the <code>master</code> branch and choose <code>merge master into the current branch</code>. Click <code>OK</code> in the next dialog.</p>
-                            </div>
-                            <hr>
-                          </tab>
-                          <tab header="CLI">
-                            <div>
-                              <pre class="hljs"><code>git merge master
-</code></pre>
-                            </div>
-                            <hr>
-                          </tab>
-                        </tabs>
-                        <p>Observe how the changes you did in the <code>master</code> branch (i.e. the imaginary bug fix) is now available even when you are in the <code>feature1</code> branch.</p>
-                        <p><strong>7. Add another commit to the <code>feature1</code> branch.</strong></p>
-                        <p><strong>8. Switch to the <code>master</code> branch and add one more commit.</strong></p>
-                        <p><strong>9. Merge <code>feature1</code> to the master branch</strong>, giving and end-result like this:</p>
-                        <img src="/website/book/gitAndGithub/branch/images/sourcetree_6.png" height="150">
-                        <p></p>
-                        <tabs>
-                          <tab header="SourceTree">
-                            <p>Right-click on the <code>feature1</code> branch and choose <code>Merge...</code>.</p>
-                            <hr>
-                          </tab>
-                          <tab header="CLI">
-                            <pre class="hljs"><code>git merge feature1
-</code></pre>
-                            <hr>
-                          </tab>
-                        </tabs>
-                        <p><strong>10. Create a new branch called <code>add-countries</code>, switch to it, and add some commits to it</strong> <span class="dimmed">(similar to steps 1-2 above)</span>. You should have something like this now:</p>
-                        <img src="/website/book/gitAndGithub/branch/images/addCountriesBranchBeforeMerging.png" height="80">
-                        <p></p>
-                        <p><strong>11. Go back to the <code>master</code> branch and merge the <code>add-countries</code> branch onto the <code>master</code> branch</strong> <span class="dimmed">(similar to steps 8-9 above)</span>. While you might expect
-                          to see something like the below,</p>
-                        <img src="/website/book/gitAndGithub/branch/images/addCountriesBranchNoFastForward.png" height="100">
-                        <p></p>
-                        <p>... you are likely to see something like this instead:</p>
-                        <img src="/website/book/gitAndGithub/branch/images/addCountriesBranchAfterMerging.png" height="80">
-                        <p></p>
-                        <p>That is because <strong>Git does a <mark><em>fast forward</em> merge</mark> if possible</strong>. Seeing that the <code>master</code> branch has not changed since you started the <code>add-countries</code> branch, Git has decided
-                          it is simpler to just put the commits of the <code>add-countries</code> branch in front of the <code>master</code> branch, without going into the trouble of creating an extra merge commit.</p>
-                        <p><strong>It is possible to force Git to create a merge commit even if fast forwarding is possible.</strong></p>
-                        <tabs>
-                          <tab header="SourceTree">
-                            <div>
-                              <p>Tick the box shown below when you merge a branch:</p>
-                              <img src="/website/book/gitAndGithub/branch/images/mergeBranchDialog.png" height="150">
-                              <p></p>
-                            </div>
-                            <hr>
-                          </tab>
-                          <tab header="CLI">
-                            <div>
-                              <p>Use the <code>--no-ff</code> switch (short for <em>no fast forward</em>):</p>
-                              <pre class="hljs"><code>git merge --no-ff add-countries
-</code></pre>
-                            </div>
-                            <hr>
-                          </tab>
-                        </tabs>
-                      </div>
-                      <div></div>
-                    </div>
-                  </div>
-                </div>
-              </panel><br><br>
-              <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
-              </p>
-              <div class="indented">
-                <div>
-                  <p><strong>Acceptable</strong>: Git branches you have created in any repo.</p>
-                  <p><strong>Suggested</strong>: Results of following the steps in the LO.</p>
-                  <p><strong>Submission</strong>: Show your branches during the tutorial.</p>
-                </div>
-              </div>
-            </div>
-        </panel>
-        <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.5c</code></span></big> <span><span class="fas fa-trophy"></span> Can create PRs on GitHub</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          <span
-            class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-            </span>
-            </span>
-            <div class="indented">
-              <panel minimized="">
-                <span slot="header" class="card-title">Details of the LO</span>
-                <div>
-                  <div>
-                    <p>
-                      <panel src="/website\book\gitAndGithub\branch\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%Tools → Git & GitHub → Branching%%"></panel>
-                    </p>
-                  </div>
-                  <p></p>
-                  <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
-</span></strong>
-                    </span>
-                  </p>
-                  <div id="title-and-body">
-                    <div>
-                      <h4 id="create-prs">Create PRs</h4>
-                    </div>
-                    <div id="main">
-                      <div>
-                        <p><strong>1. Fork the <a href="https://github.com/se-edu/samplerepo-pr-practice">samplerepo-pr-practice</a> onto your GitHub account. Clone it onto your computer.</strong></p>
-                        <p><strong>2. Create a branch named <code>add-intro</code> in your clone. Add a couple of commits</strong> which adds/modifies an <em>Introduction</em> section to the <code>README.md</code>. Example:</p>
-                        <pre><code class="hljs md">
-<span class="hljs-section"># Introduction</span>
-Creating Pull Requsts (PRs) is needed when using RCS in a multi-person projects.
-This repo can be used to practice creating PRs.
-
-</code></pre>
-                        <p><strong>3. Push the <code>add-intro</code> branch to your fork.</strong></p>
-                        <tabs>
-                          <tab header="SourceTree">
-                            <img src="/website/book/gitAndGithub/createPRs/images/pushBranchToFork.png" height="300">
-                            <p></p>
-                            <hr>
-                          </tab>
-                          <tab header="CLI">
-                            <pre class="hljs"><code>git push origin add-intro
-</code></pre>
-                            <hr>
-                          </tab>
-                        </tabs>
-                        <p><strong>4. Create a Pull Request from the <code>add-intro</code> branch in your fork to the <code>master</code> branch of the same fork</strong> (i.e. <code>your-user-name/samplerepo-pr-practice</code>, not <code>se-edu/samplerepo-pr-practice</code>),
-                          as described below.</p>
-                        <p>4a. Go to the GitHub page of your fork (i.e. <code>https://github.com/{your_username}/samplerepo-pr-practice</code>), click on the <code>Pull Requests</code> tab, and then click on <code>New Pull Request</code> button.</p>
-                        <img src="/website/book/gitAndGithub/createPRs/images/createPrButton.png" width="800">
-                        <p></p>
-                        <p>4b. Select <code>base fork</code> and <code>head fork</code> as follows:</p>
-                        <ul>
-                          <li><code>base fork</code>: your own fork (i.e. <code>{your user name}/samplerepo-pr-practice</code>, <mark>NOT <code>se-edu/samplerepo-pr-practice</code></mark>)</li>
-                          <li><code>head fork</code>: your own fork.</li>
-                        </ul>
-                        <img src="/website/book/gitAndGithub/createPRs/images/selectBase.png" width="800">
-                        <p></p>
-                        <tip-box type="info">
-                          <p>The <em>base fork</em> is where changes should be applied. The <em>head fork</em> contains the changes you would like to be applied.</p>
-                        </tip-box>
-                        <p>4c. (1) Set the base branch to <code>master</code> and head branch to <code>add-intro</code>, (2) confirm the <em>diff</em> contains the changes you propose to merge in this PR <span class="dimmed">(i.e. confirm that you did not accidentally include extra commits in the branch)</span>,
-                          and (3) click the <code>Create pull request</code> button.</p>
-                        <img src="/website/book/gitAndGithub/createPRs/images/checkDiff.png" width="800">
-                        <p></p>
-                        <p>4d. (1) Set PR name, (2) set PR description, and (3) Click the <code>Create pull request</code> button.</p>
-                        <img src="/website/book/gitAndGithub/createPRs/images/setPrName.png" width="600">
-                        <p></p>
-                        <tip-box type="important">
-                          <p>A common newbie mistake when creating branch-based PRs is to mix commits of one PR with another. To learn how to avoid that mistake, you are encouraged to continue and create another PR as explained below.
-                          </p>
-                        </tip-box>
-                        <p><strong>5. In your local repo, create a new branch <code>add-summary</code></strong> off the <code>master</code> branch.</p>
-                        <tip-box type="warning">
-                          <p>When creating the new branch, it is very important that you switch back to the <code>master</code> branch first. If not, the new branch will be created off the current branch <code>add-intro</code>. And that is how you end up
-                            having commits of the first PR in the second PR as well.</p>
-                        </tip-box>
-                        <p><strong>6. Add a commit in the <code>add-summary</code> branch</strong> that adds a <em>Summary</em> section to the <code>README.md</code>, in exactly the same place you added the <em>Introduction</em> section earlier.</p>
-                        <img src="/website/book/gitAndGithub/createPRs/images/addSummaryBranch.png" width="400">
-                        <p></p>
-                        <p><strong>7. Push the <code>add-summary</code> to your fork and create a new PR</strong> similar to before.</p>
-                        <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
-                          <ul>
-                            <li><a href="https://help.github.com/articles/creating-a-pull-request/">GitHub's own documentation on creating a PR</a></li>
-                          </ul>
-                        </panel>
-                      </div>
-                      <div></div>
-                    </div>
-                  </div>
-                </div>
-              </panel><br><br>
-              <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
-              </p>
-              <div class="indented">
-                <div>
-                  <p><strong>Acceptable</strong>: PRs created in any repo.</p>
-                  <p><strong>Suggested</strong>: PRs created by following the steps in the LO.</p>
-                  <p><strong>Submission</strong>: Show your PRs during the tutorial.</p>
-                </div>
-              </div>
-            </div>
-        </panel>
-        <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.6a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain unit testing</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.8a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain unit testing</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
           <div class="indented">
@@ -672,7 +1308,7 @@ This repo can be used to practice creating PRs.
                 </p>
                 <div id="title-and-body">
                   <div>
-                    <h4 id="what">What</h4>
+                    <h4 id="what-2">What</h4>
                   </div>
                   <div id="main">
                     <div>
@@ -765,7 +1401,7 @@ This repo can be used to practice creating PRs.
           </div>
         </panel>
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.6b</code></span></big> <span><span class="fas fa-trophy"></span> Can use stubs to isolate an SUT from its dependencies</span>
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.8b</code></span></big> <span><span class="fas fa-trophy"></span> Can use stubs to isolate an SUT from its dependencies</span>
           <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
@@ -912,7 +1548,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
           </div>
         </panel>
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.6c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain integration testing</span>
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.8c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain integration testing</span>
           <span
             class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
@@ -934,7 +1570,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                   </p>
                   <div id="title-and-body">
                     <div>
-                      <h4 id="what-2">What</h4>
+                      <h4 id="what-3">What</h4>
                     </div>
                     <div id="main">
                       <div>
@@ -960,7 +1596,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
             </div>
         </panel>
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.6d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain integration testing</span>
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.8d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain integration testing</span>
           <span
             class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
@@ -1019,7 +1655,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
             </div>
         </panel>
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.6e</code></span></big> <span><span class="fas fa-trophy"></span> Can explain system testing</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.8e</code></span></big> <span><span class="fas fa-trophy"></span> Can explain system testing</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span>
             </span>
@@ -1038,7 +1674,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                   </p>
                   <div id="title-and-body">
                     <div>
-                      <h4 id="what-3">What</h4>
+                      <h4 id="what-4">What</h4>
                     </div>
                     <div id="main">
                       <div>
@@ -1079,7 +1715,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
             </div>
         </panel>
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.6f</code></span></big> <span><span class="fas fa-trophy"></span> Can explain automated GUI testing</span>
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.8f</code></span></big> <span><span class="fas fa-trophy"></span> Can explain automated GUI testing</span>
           <span
             class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
@@ -1167,7 +1803,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
             </div>
         </panel>
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.6g</code></span></big> <span><span class="fas fa-trophy"></span> Can explain acceptance testing</span>
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.8g</code></span></big> <span><span class="fas fa-trophy"></span> Can explain acceptance testing</span>
           <span
             class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
@@ -1185,7 +1821,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                   </p>
                   <div id="title-and-body">
                     <div>
-                      <h4 id="what-4">What</h4>
+                      <h4 id="what-5">What</h4>
                     </div>
                     <div id="main">
                       <div>
@@ -1208,7 +1844,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
             </div>
         </panel>
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.6h</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the differences between system
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.8h</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the differences between system
           testing and acceptance testing</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
             aria-hidden="true"></span></span>
           </span>
@@ -1336,7 +1972,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
           </div>
         </panel>
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.6i</code></span></big> <span><span class="fas fa-trophy"></span> Can explain alpha and beta testing</span>
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.8i</code></span></big> <span><span class="fas fa-trophy"></span> Can explain alpha and beta testing</span>
           <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
@@ -1352,7 +1988,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                 </p>
                 <div id="title-and-body">
                   <div>
-                    <h4 id="what-5">What</h4>
+                    <h4 id="what-6">What</h4>
                   </div>
                   <div id="main">
                     <div>
@@ -1374,116 +2010,6 @@ String name = logic.getName(<span class="hljs-number">23</span>);
             </div>
           </div>
         </panel>
-        <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.7</code></span></big> Can work with a 1KLoC code base <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-          </span>
-          </span>
-          <div class="indented">
-            <div>
-              <p>
-                <font color="red"><big><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span></big></font> This LO can earn you
-                <trigger trigger="click" for="modal:project1kloc-participation">1 participation mark</trigger>.</p>
-              <modal large="" title="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Participation Marks%%" id="modal:project1kloc-participation">
-              
-                <div>
-                  <p>10 marks allocated for participation can be earned in the following ways (there are ~28 available marks to choose from):</p>
-                  <ul>
-                    <li>
-                      <tooltip content="No `Below Average`/`Poor` ratings">Good peer ratings</tooltip>
-                      <ul>
-                        <li>Criteria for professional conduct (1 mark for each criterion, max 7)</li>
-                        <li>Competency criteria (2 marks for each, max 6)</li>
-                      </ul>
-                    </li>
-                    <li>In-lecture quizzes
-                      <ul>
-                        <li>In-lecture quizzes (0.5 each, max 5 marks)</li>
-                        <li>Post-lecture quizzes (0.5 each, max 5 marks)</li>
-                      </ul>
-                    </li>
-                    <li>Module admin tasks done <em>on time</em> and <em>as instructed</em>
-                      <ul>
-                        <li>Peer evaluations (1 marks each)</li>
-                        <li>Pre-module survey (0.5 marks)</li>
-                      </ul>
-                    </li>
-                    <li>Enhanced AB1-AB3: 1 mark each</li>
-                  </ul>
-                  <div class="flat">
-                    <div>
-                      <p><span class="dimmed">Relevant: [<trigger trigger="click" for="modal:participation-peerEvals">Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Peer Evaluations → Criteria</trigger> <span class="glyphicon glyphicon-star"
-                          aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>]</span>
-                      </p>
-                    </div>
-                  </div>
-                  <modal large="" title="Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Peer Evaluations → Criteria  <span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span>"
-                    id="modal:participation-peerEvals">
-                  
-                    <div>
-                      <p><big><strong>Peer evaluation criteria: professional conduct</strong></big></p>
-                      <ul>
-                        <li><strong>Professional Communication</strong> :
-                          <ul>
-                            <li>Communicates sufficiently and professionally. e.g. Does not use offensive language or excessive slang in project communications.</li>
-                            <li>Responds to communication from team members in a timely manner (e.g. within 24 hours).</li>
-                          </ul>
-                        </li>
-                        <li><strong>Punctuality</strong>: Does not cause others to waste time or slow down project progress by frequent tardiness.</li>
-                        <li><strong>Dependability</strong>: Promises what can be done, and delivers what was promised.</li>
-                        <li><strong>Effort</strong>: Puts in sufficient effort to, and tries their best to keep up with the module/project pace. Seeks help from others when necessary.</li>
-                        <li><strong>Quality</strong>: Does not deliver work products that seem to be below the student's competence level i.e. tries their best to make the work product as high quality as possible within her competency level.</li>
-                        <li><strong>Meticulousness</strong>:
-                          <ul>
-                            <li>Rarely overlooks submission requirements.</li>
-                            <li>Rarely misses compulsory module activities such as pre-module survey.</li>
-                          </ul>
-                        </li>
-                        <li><strong>Teamwork</strong>: How willing are you to act as part of a team, contribute to team-level tasks, adhere to team decisions, etc.</li>
-                      </ul>
-                      <p><big><strong>Peer evaluation criteria: competency</strong></big></p>
-                      <ul>
-                        <li><strong>Technical Competency</strong>: Able to gain competency in all the required tools and techniques.</li>
-                        <li><strong>Mentoring skills</strong>: Helps others when possible. Able to mentor others well.</li>
-                        <li><strong>Communication skills</strong>: Able to communicate (written and spoken) well. Takes initiative in discussions.</li>
-                      </ul>
-                    </div>
-                  </modal>
-                  <p>
-                    <panel src="/website\admin\peerEvaluations._include_.html#peerEvaluation-criteria" header="Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Peer Evaluations → Criteria  <span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span>"
-                      class="embedding" minimized="" fragment="peerEvaluation-criteria"></panel>
-                  </p>
-                </div>
-              </modal>
-              <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
-              </p>
-              <p>Do an enhancement to [<a href="https://github.com/nus-tic2002-2018/addressbook-level1">AddressBook - Level1</a>] <span class="dimmed">e.g. add a new command</span></p>
-              <ul>
-                <li>
-                  <p>The size of the enhancement does not matter.</p>
-                </li>
-                <li>
-                  <p>Step 1: Fork address <a href="https://github.com/nus-tic2002-2018/addressbook-level1">AddressBook - Level1</a> to your GitHub account.</p>
-                </li>
-                <li>
-                  <p>Step 2: Change the code in small steps and commit after each significant change. You may commit to the <code>master</code> branch.</p>
-                  <ul>
-                    <li>Try to stay within the procedural (not OOP) style of the code base. <span class="dimmed">Reason: in this LO, we try to stretch ourselves to the limits of the procedural approach</span>.</li>
-                    <li>Update all relevant tests. Ensure all tests pass.</li>
-                    <li>[Optional] Update all relevant documentation.</li>
-                    <li>[Optional] Try to follow <a href="/website/admin/programmingLanguages.html#java-coding-standard">our coding standard</a> in your new code.</li>
-                  </ul>
-                </li>
-                <li>
-                  <p>Step 3: push the updated AB1 code to your fork</p>
-                  <tip-box type="tip">
-                    <p>Note that you can reuse the code you write here in your final project, if applicable.</p>
-                  </tip-box>
-                </li>
-              </ul>
-              <p><strong>Submission</strong>: No special submission required. Our scripts will check your fork automatically.</p>
-            </div>
-          </div>
-        </panel>
       </panel>
     </div>
   </div>
@@ -1491,10 +2017,10 @@ String name = logic.getName(<span class="hljs-number">23</span>);
 <panel type="seamless" popup-url="/website/schedule/week8/outcomes.html" expanded="" no-close="">
   <span slot="header" class="card-title activity-type"><span class="fas fa-trophy"></span> Outcomes</span>
   <div class="indented">
-    <p><span class="activity-desc">Requirements</span></p>
+    <p><span class="activity-desc">Revision Control</span></p>
     <div class="indented">
       <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W8.1</code> <strong>Can explain requirements</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <span slot="header" class="card-title"><span><code>W8.1</code> <strong>Can create PRs on GitHub</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
         <span
           class="glyphicon glyphicon-star" aria-hidden="true"></span>
           </span>
@@ -1502,7 +2028,359 @@ String name = logic.getName(<span class="hljs-number">23</span>);
           </span>
           </span>
           <panel type="warning" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.1a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain requirements</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.1a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain branching</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span
+              class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              </span>
+              </span>
+              </span>
+              </span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Project Management → Revision Control →
+</span></strong>
+                  </span>
+                </p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="branching">Branching</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p><strong><mark><em>Branching</em></mark> is the process of evolving multiple versions of the software in parallel.</strong> For example, one team member can create a new branch and add an experimental feature to it while the rest
+                        of the team keeps working on another branch. Branches can be given names e.g. <code>master</code>, <code>release</code>, <code>dev</code>.</p>
+                      <p><strong>A branch can be <mark><em>merged</em></mark> into another branch.</strong> Merging usually result in a new commit that represents the changes done in the branch being merged.</p>
+                      <pic src="/website/book/revisionControl/branching/images/diagram.png" height="180">
+                        <strong>Branching and merging</strong></pic>
+                      <p><strong><mark><em>Merge conflicts</em></mark> happen when you try to merge two branches that had changed the same part of the code</strong> and the RCS software cannot decide which changes to keep. In those cases we have to ‘resolve’
+                        those conflicts manually.</p>
+                    </div>
+                    <div>
+                      <div>
+                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> What is branching?">
+                              <question has-input="true">
+                                <p>In the context of RCS, what is the <em>branching</em>? What is the need for branching?.</p>
+                              </question>
+                            </panel>
+                          </div>
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> What is merging?">
+                              <question has-input="true">
+                                <p>In the context of RCS, what is the <em>merging</em> branches? How can it lead to <em>merge conflicts</em>?.</p>
+                              </question>
+                            </panel>
+                          </div>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr style="border-top: dashed 1px; border-color:grey">
+              <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
+              <div>
+                <div>
+                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> What is branching?">
+                    <question has-input="true">
+                      <p>In the context of RCS, what is the <em>branching</em>? What is the need for branching?.</p>
+                    </question>
+                  </panel>
+                </div>
+                <div>
+                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> What is merging?">
+                    <question has-input="true">
+                      <p>In the context of RCS, what is the <em>merging</em> branches? How can it lead to <em>merge conflicts</em>?.</p>
+                    </question>
+                  </panel>
+                </div>
+              </div>
+          </panel>
+          <panel type="info" expanded="" no-close="" epxandable="true">
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.1b</code></span></big> <span><span class="fas fa-trophy"></span> Can use Git branching</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span
+              class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+              </span>
+              </span>
+              <div>
+                <div>
+                  <p>
+                    <panel src="/website\book\revisionControl\branching\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%Project Management → Revision Control → Branching%%"></panel>
+                  </p>
+                </div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+</span></strong>
+                  </span>
+                </p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="branch">Branch</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p><strong>0. Observe that you are normally in the branch called <code>master</code>.</strong> For this, you can take any repo you have on your computer (e.g. a clone of the <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a>).</p>
+                      <tabs>
+                        <tab header="SourceTree">
+                          <div>
+                            <img src="/website/book/gitAndGithub/branch/images/onMasterBranch.png" height="120">
+                            <p></p>
+                          </div>
+                          <hr>
+                        </tab>
+                        <tab header="CLI">
+                          <div>
+                            <pre class="hljs"><code>git status
+</code></pre>
+                            <p><span class="fas fa-arrow-down"></span></p>
+                            <pre class="hljs"><code>on branch master
+</code></pre>
+                          </div>
+                          <hr>
+                        </tab>
+                      </tabs>
+                      <p><strong>1. Start a branch named <code>feature1</code> and switch to the new branch.</strong></p>
+                      <tabs>
+                        <tab header="SourceTree">
+                          <div>
+                            <p>Click on the <code>Branch</code> button on the main menu. In the next dialog, enter the branch name and click <code>Create Branch</code></p>
+                            <img src="/website/book/gitAndGithub/branch/images/sourcetree_1.png" height="150">
+                            <p></p>
+                            <p>Note how the <code>feature1</code> is indicated as the current branch.</p>
+                            <img src="/website/book/gitAndGithub/branch/images/sourcetree_2.png" height="150">
+                            <p></p>
+                          </div>
+                          <hr>
+                        </tab>
+                        <tab header="CLI">
+                          <div>
+                            <p>You can use the <code>branch</code> command to create a new branch and the <code>checkout</code> command to switch to a specific branch.</p>
+                            <pre class="hljs"><code>git branch feature1
+git checkout feature1
+</code></pre>
+                            <p>One-step shortcut to create a branch and switch to it at the same time:</p>
+                            <pre class="hljs"><code>git checkout –b feature1
+</code></pre>
+                          </div>
+                          <hr>
+                        </tab>
+                      </tabs>
+                      <p><strong>2. Create some commits in the new branch.</strong> <span class="dimmed">Just commit as per normal. Commits you add while on a certain branch will become part of that branch.</span></p>
+                      <p><strong>3. Switch to the <code>master</code> branch.</strong> Note how the changes you did in the <code>feature1</code> branch are no longer in the working directory.</p>
+                      <tabs>
+                        <tab header="SourceTree">
+                          <div>
+                            <p>Double-click the <code>master</code> branch</p>
+                            <img src="/website/book/gitAndGithub/branch/images/sourcetree_3.png" height="150">
+                            <p></p>
+                          </div>
+                          <hr>
+                        </tab>
+                        <tab header="CLI">
+                          <div>
+                            <pre class="hljs"><code>git checkout master
+</code></pre>
+                          </div>
+                          <hr>
+                        </tab>
+                      </tabs>
+                      <p><strong>4. Add a commit to the master branch.</strong> Let’s imagine it’s a bug fix.</p>
+                      <img src="/website/book/gitAndGithub/branch/images/sourcetree_4.png" height="100">
+                      <p></p>
+                      <p><strong>5. Switch back to the <code>feature1</code> branch</strong> <span class="dimmed">(similar to step 3)</span>.</p>
+                      <p><strong>6. Merge the <code>master</code> branch to the <code>feature1</code> branch</strong>, giving an end-result like the below. Also note how Git has created a <em>merge commit</em>.</p>
+                      <img src="/website/book/gitAndGithub/branch/images/sourcetree_5.png" height="120">
+                      <p></p>
+                      <tabs>
+                        <tab header="SourceTree">
+                          <div>
+                            <p>Right-click on the <code>master</code> branch and choose <code>merge master into the current branch</code>. Click <code>OK</code> in the next dialog.</p>
+                          </div>
+                          <hr>
+                        </tab>
+                        <tab header="CLI">
+                          <div>
+                            <pre class="hljs"><code>git merge master
+</code></pre>
+                          </div>
+                          <hr>
+                        </tab>
+                      </tabs>
+                      <p>Observe how the changes you did in the <code>master</code> branch (i.e. the imaginary bug fix) is now available even when you are in the <code>feature1</code> branch.</p>
+                      <p><strong>7. Add another commit to the <code>feature1</code> branch.</strong></p>
+                      <p><strong>8. Switch to the <code>master</code> branch and add one more commit.</strong></p>
+                      <p><strong>9. Merge <code>feature1</code> to the master branch</strong>, giving and end-result like this:</p>
+                      <img src="/website/book/gitAndGithub/branch/images/sourcetree_6.png" height="150">
+                      <p></p>
+                      <tabs>
+                        <tab header="SourceTree">
+                          <p>Right-click on the <code>feature1</code> branch and choose <code>Merge...</code>.</p>
+                          <hr>
+                        </tab>
+                        <tab header="CLI">
+                          <pre class="hljs"><code>git merge feature1
+</code></pre>
+                          <hr>
+                        </tab>
+                      </tabs>
+                      <p><strong>10. Create a new branch called <code>add-countries</code>, switch to it, and add some commits to it</strong> <span class="dimmed">(similar to steps 1-2 above)</span>. You should have something like this now:</p>
+                      <img src="/website/book/gitAndGithub/branch/images/addCountriesBranchBeforeMerging.png" height="80">
+                      <p></p>
+                      <p><strong>11. Go back to the <code>master</code> branch and merge the <code>add-countries</code> branch onto the <code>master</code> branch</strong> <span class="dimmed">(similar to steps 8-9 above)</span>. While you might expect to
+                        see something like the below,</p>
+                      <img src="/website/book/gitAndGithub/branch/images/addCountriesBranchNoFastForward.png" height="100">
+                      <p></p>
+                      <p>... you are likely to see something like this instead:</p>
+                      <img src="/website/book/gitAndGithub/branch/images/addCountriesBranchAfterMerging.png" height="80">
+                      <p></p>
+                      <p>That is because <strong>Git does a <mark><em>fast forward</em> merge</mark> if possible</strong>. Seeing that the <code>master</code> branch has not changed since you started the <code>add-countries</code> branch, Git has decided
+                        it is simpler to just put the commits of the <code>add-countries</code> branch in front of the <code>master</code> branch, without going into the trouble of creating an extra merge commit.</p>
+                      <p><strong>It is possible to force Git to create a merge commit even if fast forwarding is possible.</strong></p>
+                      <tabs>
+                        <tab header="SourceTree">
+                          <div>
+                            <p>Tick the box shown below when you merge a branch:</p>
+                            <img src="/website/book/gitAndGithub/branch/images/mergeBranchDialog.png" height="150">
+                            <p></p>
+                          </div>
+                          <hr>
+                        </tab>
+                        <tab header="CLI">
+                          <div>
+                            <p>Use the <code>--no-ff</code> switch (short for <em>no fast forward</em>):</p>
+                            <pre class="hljs"><code>git merge --no-ff add-countries
+</code></pre>
+                          </div>
+                          <hr>
+                        </tab>
+                      </tabs>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+              <hr style="border-top: dashed 1px; border-color:grey">
+              <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
+              <div>
+                <p><strong>Acceptable</strong>: Git branches you have created in any repo.</p>
+                <p><strong>Suggested</strong>: Results of following the steps in the LO.</p>
+                <p><strong>Submission</strong>: Show your branches during the tutorial.</p>
+              </div>
+          </panel>
+          <panel type="success" expanded="" no-close="" epxandable="true">
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.1c</code></span></big> <span><span class="fas fa-trophy"></span> Can create PRs on GitHub</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span
+              class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+              </span>
+              </span>
+              <div>
+                <div>
+                  <p>
+                    <panel src="/website\book\gitAndGithub\branch\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%Tools → Git & GitHub → Branching%%"></panel>
+                  </p>
+                </div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+</span></strong>
+                  </span>
+                </p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="create-prs">Create PRs</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p><strong>1. Fork the <a href="https://github.com/se-edu/samplerepo-pr-practice">samplerepo-pr-practice</a> onto your GitHub account. Clone it onto your computer.</strong></p>
+                      <p><strong>2. Create a branch named <code>add-intro</code> in your clone. Add a couple of commits</strong> which adds/modifies an <em>Introduction</em> section to the <code>README.md</code>. Example:</p>
+                      <pre><code class="hljs md">
+<span class="hljs-section"># Introduction</span>
+Creating Pull Requsts (PRs) is needed when using RCS in a multi-person projects.
+This repo can be used to practice creating PRs.
+
+</code></pre>
+                      <p><strong>3. Push the <code>add-intro</code> branch to your fork.</strong></p>
+                      <tabs>
+                        <tab header="SourceTree">
+                          <img src="/website/book/gitAndGithub/createPRs/images/pushBranchToFork.png" height="300">
+                          <p></p>
+                          <hr>
+                        </tab>
+                        <tab header="CLI">
+                          <pre class="hljs"><code>git push origin add-intro
+</code></pre>
+                          <hr>
+                        </tab>
+                      </tabs>
+                      <p><strong>4. Create a Pull Request from the <code>add-intro</code> branch in your fork to the <code>master</code> branch of the same fork</strong> (i.e. <code>your-user-name/samplerepo-pr-practice</code>, not <code>se-edu/samplerepo-pr-practice</code>),
+                        as described below.</p>
+                      <p>4a. Go to the GitHub page of your fork (i.e. <code>https://github.com/{your_username}/samplerepo-pr-practice</code>), click on the <code>Pull Requests</code> tab, and then click on <code>New Pull Request</code> button.</p>
+                      <img src="/website/book/gitAndGithub/createPRs/images/createPrButton.png" width="800">
+                      <p></p>
+                      <p>4b. Select <code>base fork</code> and <code>head fork</code> as follows:</p>
+                      <ul>
+                        <li><code>base fork</code>: your own fork (i.e. <code>{your user name}/samplerepo-pr-practice</code>, <mark>NOT <code>se-edu/samplerepo-pr-practice</code></mark>)</li>
+                        <li><code>head fork</code>: your own fork.</li>
+                      </ul>
+                      <img src="/website/book/gitAndGithub/createPRs/images/selectBase.png" width="800">
+                      <p></p>
+                      <tip-box type="info">
+                        <p>The <em>base fork</em> is where changes should be applied. The <em>head fork</em> contains the changes you would like to be applied.</p>
+                      </tip-box>
+                      <p>4c. (1) Set the base branch to <code>master</code> and head branch to <code>add-intro</code>, (2) confirm the <em>diff</em> contains the changes you propose to merge in this PR <span class="dimmed">(i.e. confirm that you did not accidentally include extra commits in the branch)</span>,
+                        and (3) click the <code>Create pull request</code> button.</p>
+                      <img src="/website/book/gitAndGithub/createPRs/images/checkDiff.png" width="800">
+                      <p></p>
+                      <p>4d. (1) Set PR name, (2) set PR description, and (3) Click the <code>Create pull request</code> button.</p>
+                      <img src="/website/book/gitAndGithub/createPRs/images/setPrName.png" width="600">
+                      <p></p>
+                      <tip-box type="important">
+                        <p>A common newbie mistake when creating branch-based PRs is to mix commits of one PR with another. To learn how to avoid that mistake, you are encouraged to continue and create another PR as explained below.
+                        </p>
+                      </tip-box>
+                      <p><strong>5. In your local repo, create a new branch <code>add-summary</code></strong> off the <code>master</code> branch.</p>
+                      <tip-box type="warning">
+                        <p>When creating the new branch, it is very important that you switch back to the <code>master</code> branch first. If not, the new branch will be created off the current branch <code>add-intro</code>. And that is how you end up having
+                          commits of the first PR in the second PR as well.</p>
+                      </tip-box>
+                      <p><strong>6. Add a commit in the <code>add-summary</code> branch</strong> that adds a <em>Summary</em> section to the <code>README.md</code>, in exactly the same place you added the <em>Introduction</em> section earlier.</p>
+                      <img src="/website/book/gitAndGithub/createPRs/images/addSummaryBranch.png" width="400">
+                      <p></p>
+                      <p><strong>7. Push the <code>add-summary</code> to your fork and create a new PR</strong> similar to before.</p>
+                      <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                        <ul>
+                          <li><a href="https://help.github.com/articles/creating-a-pull-request/">GitHub's own documentation on creating a PR</a></li>
+                        </ul>
+                      </panel>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+              <hr style="border-top: dashed 1px; border-color:grey">
+              <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
+              <div>
+                <p><strong>Acceptable</strong>: PRs created in any repo.</p>
+                <p><strong>Suggested</strong>: PRs created by following the steps in the LO.</p>
+                <p><strong>Submission</strong>: Show your PRs during the tutorial.</p>
+              </div>
+          </panel>
+      </panel>
+    </div>
+    <p></p>
+    <p><span class="activity-desc">Requirements</span></p>
+    <div class="indented">
+      <panel no-close="" expandable="true">
+        <span slot="header" class="card-title"><span><code>W8.2</code> <strong>Can explain requirements</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <span
+          class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          </span>
+          </span>
+          </span>
+          </span>
+          <panel type="warning" expanded="" no-close="" epxandable="true">
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.2a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain requirements</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
               </span>
@@ -1544,7 +2422,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
           </panel>
           <panel type="success" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.1b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain non-functional requirements</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.2b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain non-functional requirements</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -1630,7 +2508,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
           </panel>
           <panel type="success" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.1c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain prioritizing requirements</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.2c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain prioritizing requirements</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -1678,7 +2556,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
           </panel>
           <panel type="success" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.1d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain quality of requirements</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.2d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain quality of requirements</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -1733,13 +2611,13 @@ String name = logic.getName(<span class="hljs-number">23</span>);
           </panel>
       </panel>
       <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W8.2</code> <strong>Can explain some techniques for gathering requirements</strong> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <span slot="header" class="card-title"><span><code>W8.3</code> <strong>Can explain some techniques for gathering requirements</strong> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
         <span
           class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
           <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.2a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain brainstorming</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.3a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain brainstorming</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -1792,7 +2670,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
           </panel>
           <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.2b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain product surveys</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.3b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain product surveys</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -1822,7 +2700,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
           </panel>
           <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.2c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain observation</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.3c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain observation</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -1849,7 +2727,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
           </panel>
           <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.2d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain user surveys</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.3d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain user surveys</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -1875,7 +2753,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
           </panel>
           <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.2e</code></span></big> <span><span class="fas fa-trophy"></span> Can explain interviews</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.3e</code></span></big> <span><span class="fas fa-trophy"></span> Can explain interviews</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -1909,7 +2787,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
           </panel>
           <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.2f</code></span></big> <span><span class="fas fa-trophy"></span> Can explain focus groups</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.3f</code></span></big> <span><span class="fas fa-trophy"></span> Can explain focus groups</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -1947,7 +2825,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
           </panel>
           <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.2g</code></span></big> <span><span class="fas fa-trophy"></span> Can explain prototyping</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.3g</code></span></big> <span><span class="fas fa-trophy"></span> Can explain prototyping</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -2004,13 +2882,13 @@ String name = logic.getName(<span class="hljs-number">23</span>);
           </panel>
       </panel>
       <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W8.3</code> <strong>Can use some techniques for specifying requirements</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+        <span slot="header" class="card-title"><span><code>W8.4</code> <strong>Can use some techniques for specifying requirements</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
         </span>
         </span>
         <br>
         <p><span class="dimmed"><strong>Prose</strong></span></p>
         <panel type="info" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.3a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain prose</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.4a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain prose</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
@@ -2024,7 +2902,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="what-6">What</h4>
+                  <h4 id="what-7">What</h4>
                 </div>
                 <div id="main">
                   <div>
@@ -2047,7 +2925,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         <br>
         <p><span class="dimmed"><strong>Feature Lists</strong></span></p>
         <panel type="warning" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.3b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain feature list</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.4b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain feature list</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span>
             </span>
@@ -2063,7 +2941,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="what-7">What</h4>
+                  <h4 id="what-8">What</h4>
                 </div>
                 <div id="main">
                   <div>
@@ -2096,7 +2974,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         <br>
         <p><span class="dimmed"><strong>User Stories</strong></span></p>
         <panel type="danger" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.3c</code></span></big> <span><span class="fas fa-trophy"></span> Can write simple user stories</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.4c</code></span></big> <span><span class="fas fa-trophy"></span> Can write simple user stories</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
           <div>
@@ -2224,7 +3102,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
           </div>
         </panel>
         <panel type="warning" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.3d</code></span></big> <span><span class="fas fa-trophy"></span> Can write more detailed user stories</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.4d</code></span></big> <span><span class="fas fa-trophy"></span> Can write more detailed user stories</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span>
             </span>
@@ -2343,7 +3221,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
             </div>
         </panel>
         <panel type="warning" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.3e</code></span></big> <span><span class="fas fa-trophy"></span> Can use user stories to manage requirements of project</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.4e</code></span></big> <span><span class="fas fa-trophy"></span> Can use user stories to manage requirements of project</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span>
             </span>
@@ -2486,7 +3364,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         <br>
         <p><span class="dimmed"><strong>Use Cases</strong></span></p>
         <panel type="danger" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.3f</code></span></big> <span><span class="fas fa-trophy"></span> Can explain use cases</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.4f</code></span></big> <span><span class="fas fa-trophy"></span> Can explain use cases</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
           <div>
@@ -2577,7 +3455,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         <br>
         <p><span class="dimmed"><strong>Glossary</strong></span></p>
         <panel type="info" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.3g</code></span></big> <span><span class="fas fa-trophy"></span> Can explain glossary</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.4g</code></span></big> <span><span class="fas fa-trophy"></span> Can explain glossary</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
@@ -2591,7 +3469,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="what-8">What</h4>
+                  <h4 id="what-9">What</h4>
                 </div>
                 <div id="main">
                   <div>
@@ -2616,7 +3494,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         <br>
         <p><span class="dimmed"><strong>Supplementary Requirements</strong></span></p>
         <panel type="info" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.3h</code></span></big> <span><span class="fas fa-trophy"></span> Can explain supplementary requirements</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.4h</code></span></big> <span><span class="fas fa-trophy"></span> Can explain supplementary requirements</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
@@ -2630,7 +3508,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="what-9">What</h4>
+                  <h4 id="what-10">What</h4>
                 </div>
                 <div id="main">
                   <div>
@@ -2730,7 +3608,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
     <p><span class="activity-desc">Design</span></p>
     <div class="indented">
       <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W8.4</code> <strong>Can use basic software design principles</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <span slot="header" class="card-title"><span><code>W8.5</code> <strong>Can use basic software design principles</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
         <span
           class="glyphicon glyphicon-star" aria-hidden="true"></span>
           </span>
@@ -2740,7 +3618,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
           <br>
           <p><span class="dimmed"><strong>Abstraction</strong></span></p>
           <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.4a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain what is software design</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.5a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain what is software design</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -2754,7 +3632,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                 </p>
                 <div id="title-and-body">
                   <div>
-                    <h4 id="what-10">What</h4>
+                    <h4 id="what-11">What</h4>
                   </div>
                   <div id="main">
                     <div>
@@ -2774,7 +3652,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
           </panel>
           <panel type="warning" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.4b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain abstraction</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.5b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain abstraction</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
               </span>
@@ -2790,7 +3668,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                 </p>
                 <div id="title-and-body">
                   <div>
-                    <h4 id="what-11">What</h4>
+                    <h4 id="what-12">What</h4>
                   </div>
                   <div id="main">
                     <div>
@@ -2825,7 +3703,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
           <br>
           <p><span class="dimmed"><strong>Can explain SE principles</strong></span></p>
           <panel type="warning" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.4c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain separation of concerns principle</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.5c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain separation of concerns principle</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
               </span>
@@ -2879,7 +3757,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                           </p>
                           <div id="title-and-body">
                             <div>
-                              <h4 id="what-12">What</h4>
+                              <h4 id="what-13">What</h4>
                             </div>
                             <div id="main">
                               <div>
@@ -2908,7 +3786,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                           </p>
                           <div id="title-and-body">
                             <div>
-                              <h4 id="what-13">What</h4>
+                              <h4 id="what-14">What</h4>
                             </div>
                             <div id="main">
                               <div>
@@ -3002,7 +3880,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                           </p>
                           <div id="title-and-body">
                             <div>
-                              <h4 id="what-14">What</h4>
+                              <h4 id="what-15">What</h4>
                             </div>
                             <div id="main">
                               <div>
@@ -3055,7 +3933,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
           </panel>
           <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.4d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain single responsibility principle</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.5d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain single responsibility principle</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -3113,7 +3991,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
           </panel>
           <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.4e</code></span></big> <span><span class="fas fa-trophy"></span> Can explain Liskov Substitution Principle</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.5e</code></span></big> <span><span class="fas fa-trophy"></span> Can explain Liskov Substitution Principle</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -3261,7 +4139,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
               </div>
           </panel>
           <panel type="success" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.4f</code></span></big> <span><span class="fas fa-trophy"></span> Can explain open-closed principle (OCP)</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.5f</code></span></big> <span><span class="fas fa-trophy"></span> Can explain open-closed principle (OCP)</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -3334,7 +4212,7 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
               </div>
           </panel>
           <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.4g</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the Law of Demeter</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.5g</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the Law of Demeter</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -3462,7 +4340,7 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
               </div>
           </panel>
           <panel type="success" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.4h</code></span></big> <span><span class="fas fa-trophy"></span> Can explain YAGNI principle</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.5h</code></span></big> <span><span class="fas fa-trophy"></span> Can explain YAGNI principle</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -3502,7 +4380,7 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
               </div>
           </panel>
           <panel type="success" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.4i</code></span></big> <span><span class="fas fa-trophy"></span> Can explain DRY principle</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.5i</code></span></big> <span><span class="fas fa-trophy"></span> Can explain DRY principle</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -3537,7 +4415,7 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
               </div>
           </panel>
           <panel type="success" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.4j</code></span></big> <span><span class="fas fa-trophy"></span> Can explain Brooks' law</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.5j</code></span></big> <span><span class="fas fa-trophy"></span> Can explain Brooks' law</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -3601,11 +4479,11 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
           </panel>
       </panel>
       <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W8.5</code> <strong>Can interpret basic sequence diagrams</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+        <span slot="header" class="card-title"><span><code>W8.6</code> <strong>Can interpret basic sequence diagrams</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
         </span>
         </span>
         <panel type="danger" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.5a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain/identify sequence diagrams</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.6a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain/identify sequence diagrams</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
           <div>
@@ -3636,7 +4514,7 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
           </div>
         </panel>
         <panel type="danger" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.5b</code></span></big> <span><span class="fas fa-trophy"></span> Can interpret sequence diagrams with basic notation</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.6b</code></span></big> <span><span class="fas fa-trophy"></span> Can interpret sequence diagrams with basic notation</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
           <div>
@@ -3678,7 +4556,7 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
           </div>
         </panel>
         <panel type="warning" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.5c</code></span></big> <span><span class="fas fa-trophy"></span> Can interpret sequence diagrams with loops</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.6c</code></span></big> <span><span class="fas fa-trophy"></span> Can interpret sequence diagrams with loops</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span>
             </span>
@@ -3713,7 +4591,7 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
             </div>
         </panel>
         <panel type="warning" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.5d</code></span></big> <span><span class="fas fa-trophy"></span> Can interpret sequence diagrams with object creation</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.6d</code></span></big> <span><span class="fas fa-trophy"></span> Can interpret sequence diagrams with object creation</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span>
             </span>
@@ -3752,7 +4630,7 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
             </div>
         </panel>
         <panel type="info" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.5e</code></span></big> <span><span class="fas fa-trophy"></span> Can interpret sequence diagrams with minimal notation</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.6e</code></span></big> <span><span class="fas fa-trophy"></span> Can interpret sequence diagrams with minimal notation</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
@@ -3785,7 +4663,7 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
             </div>
         </panel>
         <panel type="warning" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.5f</code></span></big> <span><span class="fas fa-trophy"></span> Can draw basic sequence diagrams</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.6f</code></span></big> <span><span class="fas fa-trophy"></span> Can draw basic sequence diagrams</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span>
             </span>
@@ -3937,303 +4815,6 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
               <p><strong>Submission</strong>: Show during tutorial.</p>
             </div>
         </panel>
-      </panel>
-    </div>
-    <p></p>
-    <p><span class="activity-desc">Quality Assurance</span></p>
-    <div class="indented">
-      <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W8.6</code> <strong>Can use simple JUnit tests</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-        <span
-          class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          </span>
-          </span>
-          </span>
-          </span>
-          <panel type="warning" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.6a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain developer testing</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <span
-              class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              </span>
-              </span>
-              </span>
-              </span>
-              <div>
-                <div></div>
-                <p></p>
-                <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Developer Testing →
-</span></strong>
-                  </span>
-                </p>
-                <div id="title-and-body">
-                  <div>
-                    <h4 id="what-15">What</h4>
-                  </div>
-                  <div id="main">
-                    <div>
-                      <p><strong><em>Developer testing</em> is the testing done by the developers themselves</strong> as opposed to professional testers or end-users.</p>
-                    </div>
-                    <div></div>
-                  </div>
-                </div>
-              </div>
-          </panel>
-          <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.6b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the need for early developer testing</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <span
-              class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-              </span>
-              </span>
-              <div>
-                <div></div>
-                <p></p>
-                <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Developer Testing →
-</span></strong>
-                  </span>
-                </p>
-                <div id="title-and-body">
-                  <div>
-                    <h4 id="why">Why</h4>
-                  </div>
-                  <div id="main">
-                    <div>
-                      <p><strong>Delaying testing until the full product is complete has a number of disadvantages:</strong></p>
-                      <ul>
-                        <li><strong>Locating the cause of such a test case failure is difficult due to a large search space;</strong> in a large system, the search space could be millions of lines of code, written by hundreds of developers! The failure may
-                          also be due to multiple inter-related bugs.</li>
-                        <li><strong>Fixing a bug found during such testing could result in major rework</strong>, especially if the bug originated during the design or during requirements specification <span class="dimmed">i.e. a faulty design or faulty requirements</span>.</li>
-                        <li><strong>One bug might 'hide' other bugs</strong>, which could emerge only after the first bug is fixed.</li>
-                        <li><strong>The delivery may have to be delayed</strong> if too many bugs were found during testing.</li>
-                      </ul>
-                      <p><strong>Therefore, it is better to do early testing</strong>, as hinted by the popular rule of thumb given below, also illustrated by the graph below it.</p>
-                      <blockquote>
-                        <p>The earlier a bug is found, the easier and cheaper to have it fixed.</p>
-                      </blockquote>
-                      <img src="/website/book/testing/testingTypes/developerTesting/why/images/diagram.png" height="180">
-                      <p></p>
-                      <p>Such early testing of partially developed software is usually, and by necessity, done by the developers themselves i.e. developer testing.</p>
-                    </div>
-                    <div>
-                      <div>
-                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-                          <div>
-                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> implications of developers testing their own code">
-                              <question has-input="true">
-                                <p>Discuss pros and cons of developers testing their own code.</p>
-                                <div slot="answer">
-                                  <p>Pros:</p>
-                                  <ul>
-                                    <li>Can be done early (the earlier we find a bug, the cheaper it is to fix).</li>
-                                    <li>Can be done at lower levels, for examples, at operation and class level (testers usually test the system at UI level).</li>
-                                    <li>It is possible to do more thorough testing because developers know the expected external behavior as well as the internal structure of the component.</li>
-                                    <li>It forces developers to take responsibility for their own work (they cannot claim that &quot;testing is the job of the testers&quot;).</li>
-                                  </ul>
-                                  <p>Cons:</p>
-                                  <ul>
-                                    <li>A developer may unconsciously test only situations that he knows to work (i.e. test it too 'gently').</li>
-                                    <li>A developer may be blind to his own mistakes (if he did not consider a certain combination of input while writing code, it is possible for him to miss it again during testing).</li>
-                                    <li>A developer may have misunderstood what the SUT is supposed to do in the first place.</li>
-                                    <li>A developer may lack the testing expertise.</li>
-                                  </ul>
-                                </div>
-                              </question>
-                            </panel>
-                          </div>
-                          <div>
-                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Cost of bug fixing over time">
-                              <question>
-                                <p>The cost of fixing a bug goes down as we reach the product release.</p>
-                                <ul radio-group="37242" class="radio-list">
-                                  <li class="radio-list-item"><label><input class="radio-list-input" name="37242" type="radio"> True</label></li>
-                                  <li class="radio-list-item"><label><input class="radio-list-input" name="37242" type="radio"> False</label></li>
-                                </ul>
-                                <div slot="answer">
-                                  <p>False. The cost goes up over time.</p>
-                                </div>
-                              </question>
-                            </panel>
-                          </div>
-                          <div>
-                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Why early testing?">
-                              <question has-input="true">
-                                <p>Explain why early testing by developers is important.</p>
-                              </question>
-                            </panel>
-                          </div>
-                        </panel>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <hr style="border-top: dashed 1px; border-color:grey">
-              <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
-              <div>
-                <div>
-                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Why early testing?">
-                    <question has-input="true">
-                      <p>Explain why early testing by developers is important.</p>
-                    </question>
-                  </panel>
-                </div>
-              </div>
-          </panel>
-          <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.6c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain test drivers</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <span
-              class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-              </span>
-              </span>
-              <div>
-                <div></div>
-                <p></p>
-                <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Test Automation →
-</span></strong>
-                  </span>
-                </p>
-                <div id="title-and-body">
-                  <div>
-                    <h4 id="test-automation-using-test-drivers">Test Automation Using Test Drivers</h4>
-                  </div>
-                  <div id="main">
-                    <div>
-                      <p><strong>A test driver is the code that ‘drives’ the <tooltip content="Software Under Test">SUT</tooltip> for the purpose of testing</strong> i.e. invoking the SUT with test inputs and verifying the behavior is as expected.</p>
-                      <tip-box>
-                        <p><span class="fas fa-cube"></span> <code>PayrollTest</code> ‘drives’ the <code>PayRoll</code> class by sending it test inputs and verifies if the output is as expected.</p>
-                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PayrollTestDriver</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>{
-
-        <span class="hljs-comment">//test setup</span>
-        Payroll p = <span class="hljs-keyword">new</span> Payroll();
-
-        <span class="hljs-comment">//test case 1</span>
-        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>, <span class="hljs-string">"E002"</span>});
-        <span class="hljs-comment">// automatically verify the response</span>
-        <span class="hljs-keyword">if</span> (p.totalSalary() != <span class="hljs-number">6400</span>) {
-            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Error(<span class="hljs-string">"case 1 failed "</span>);
-        }
-
-        <span class="hljs-comment">//test case 2</span>
-        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>});
-        <span class="hljs-keyword">if</span> (p.totalSalary() != <span class="hljs-number">2300</span>) {
-            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Error(<span class="hljs-string">"case 2 failed "</span>);
-        }
-
-        <span class="hljs-comment">//more tests...</span>
-
-        System.out.println(<span class="hljs-string">"All tests passed"</span>);
-    }
-}
-</code></pre>
-                      </tip-box>
-                    </div>
-                    <div></div>
-                  </div>
-                </div>
-              </div>
-          </panel>
-          <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.6d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain test automation tools</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <span
-              class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-              </span>
-              </span>
-              <div>
-                <div></div>
-                <p></p>
-                <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Test Automation →
-</span></strong>
-                  </span>
-                </p>
-                <div id="title-and-body">
-                  <div>
-                    <h4 id="test-automation-tools">Test Automation Tools</h4>
-                  </div>
-                  <div id="main">
-                    <div>
-                      <p><strong>JUnit is a tool for automated testing of Java programs.</strong> Similar tools are available for other languages.</p>
-                      <tip-box>
-                        <p><span class="fas fa-cube"></span> This an automated test for a <code>Payroll</code> class, written using JUnit libraries.</p>
-                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PayrollTestJUnit</span> </span>{
-
-    <span class="hljs-meta">@Test</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">testTotalSalary</span><span class="hljs-params">()</span></span>{
-        Payroll p = <span class="hljs-keyword">new</span> Payroll();
-
-        <span class="hljs-comment">//test case 1</span>
-        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>, <span class="hljs-string">"E002"</span>});
-        assertEquals(p.totalSalary(), <span class="hljs-number">6400</span>);
-
-        <span class="hljs-comment">//test case 2</span>
-        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>});
-        assertEquals(p.totalSalary(), <span class="hljs-number">2300</span>);
-
-        <span class="hljs-comment">//more tests...</span>
-    }
-}
-</code></pre>
-                      </tip-box>
-                      <p>Most modern IDEs has integrated support for testing tools. The figure below shows the JUnit output when running some JUnit tests using the Eclipse IDE.</p>
-                      <img src="/website/book/testing/testAutomation/tools/images/junit.png" height="190">
-                      <p></p>
-                    </div>
-                    <div></div>
-                  </div>
-                </div>
-              </div>
-          </panel>
-          <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W8.6e</code></span></big> <span><span class="fas fa-trophy"></span> Can use simple JUnit tests</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <span
-              class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-              </span>
-              </span>
-              <div>
-                <div></div>
-                <p></p>
-                <p><span class="dimmed"><strong><span>Tools → JUnit →
-</span></strong>
-                  </span>
-                </p>
-                <div id="title-and-body">
-                  <div>
-                    <h4 id="junit-basic">JUnit: Basic</h4>
-                  </div>
-                  <div id="main">
-                    <div>
-                      <div v-closeable="" alt="Junit tutorial video" class="non-printable">
-                        <p>JUnit 4 with IntelliJ: A quick introduction <sub>-- by DrBFraser</sub></p>
-                        <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/Bld3644bIAo" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-                      </div>
-                    </div>
-                    <div>
-                      <div>
-                        <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
-                          <ul>
-                            <li><a href="http://junit.sourceforge.net/doc/cookbook/cookbook.htm">JUnit cookbook</a> - a short tutorial from JUnit creators</li>
-                            <li><a href="http://www.vogella.com/articles/JUnit/article.html">JUnit tutorial</a> - a more detailed tutorial from a developer Lars Vogel</li>
-                            <li>How to test private methods in Java? [ <a href="http://stackoverflow.com/questions/34571/whats-the-proper-way-to-test-a-class-with-private-methods-using-junit">short answer</a> ] [ <a href="http://www.artima.com/suiterunner/private.html">long answer</a>                              ]</li>
-                          </ul>
-                        </panel>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <hr style="border-top: dashed 1px; border-color:grey">
-              <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
-              <div>
-                <p><strong>Acceptable</strong>: Evidence of having written JUnit tests in some project.</p>
-                <p><strong>Suggested</strong>: Do the exercise in [<a href="https://github.com/nus-tic2002-2018/addressbook-level2/blob/master/docs/LearningOutcomes.adoc#use-junit-to-implement-unit-tests-code-lo-junit-code">Addressbook-Level2: LO-JUnit</a>]</p>
-                <div>
-                  <p><strong>Submission</strong>: Create a PR against <a href="https://github.com/nus-tic2002-2018/addressbook-level2">Addressbook-Level2</a>. <mark>Only clean PRs</mark> (i.e. free of unrelated code modifications) will be accepted.</p>
-                  <p>
-                    <panel src="/website\admin\appendixE-gitHub._include_.html#tutorial-pr-instructions" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Appendix E: Using GitHub Project Hosting → Submitting Pull Requests as evidence of an LO%%"
-                      fragment="tutorial-pr-instructions"></panel>
-                  </p>
-                </div>
-              </div>
-          </panel>
       </panel>
     </div>
     <p></p>
