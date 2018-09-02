@@ -28,6 +28,6 @@ Give more examples of association classes, preferably related to your project.
 
 <div id="polymorphism_how">
 
-Explain how substitutability operation overriding, and dynamic binding relates to polymorphism by taking a real example from the project.
+Explain how substitutability operation overriding, and dynamic binding relates to polymorphism using a new example (i.e., without using examples given in the textbook).
 
 </div>
