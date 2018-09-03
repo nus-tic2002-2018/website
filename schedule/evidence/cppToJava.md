@@ -106,6 +106,24 @@ To be able to do exercises such as these:
 <include src="../../book/cppToJava/inheritance/objectClass/q-overrideToStringMethod.md" />
 </div>
 
+<div id="inheritance_polymorphism">
+To be able to do exercises such as these:
+
+<include src="../../book/cppToJava/inheritance/polymorphism/q-printShapeArea.md" />
+</div>
+
+<div id="inheritance_abstractClassesAndMethods">
+To be able to do exercises such as these:
+
+<include src="../../book/cppToJava/inheritance/abstractClassesAndMethods/q-printAreaWithAbstractShape.md" />
+</div>
+
+<div id="inheritance_interfaces">
+To be able to do exercises such as these:
+
+<include src="../../book/cppToJava/inheritance/interfaces/q-printPrintableItems.md" />
+</div>
+
 <div id="collections_what">
 
 **Acceptable**: Some code that you have written that uses some Java Collection classes.

@@ -6,6 +6,12 @@ We recommend you to ==do this exercise on your own computer== rather than on rep
 <include src="../../book/cppToJava/usefulClasses/scannerClass/q-taskManagerLevel1.md" />
 
 </div>
+<div id="week4">
+Enhance your TaskManager program as explained in the exercise below:
+
+<include src="../../book/cppToJava/inheritance/polymorphism/q-taskManagerLevel2.md" />
+
+</div>
 <div id="1kloc">
 
 {{ icon_important_big_red }} This LO can earn you <trigger trigger="click" for="modal:project1kloc-participation">1 participation mark</trigger>. 
