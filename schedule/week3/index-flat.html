@@ -5757,15 +5757,16 @@ System.out.println(Arrays.toString(words));
                             </div>
                             <div>
                               <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> TaskManager Level 1">
-                                <question>
-                                  <p>This is a good time to put together some of the topics you have learned so far to create something useful. In this exercise you will write a small <code>TaskManager</code> program that can store a list of tasks.</p>
-                                  <ul>
-                                    <li>It is a
-                                      <tooltip content="Command Line Interface i.e., no Graphical User Interface">CLI</tooltip> program.</li>
-                                    <li>In this version, the task list is not saved to the disk <span class="dimmed">i.e., the task list does not persist between multiple runs of the program</span></li>
-                                  </ul>
-                                  <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
-                                  <pre class="hljs"><code>Welcome to TaskManager-Level1!
+                                <div id="body">
+                                  <question>
+                                    <p>This is a good time to put together some of the topics you have learned so far to create something useful. In this exercise you will write a small <code>TaskManager</code> program that can store a list of tasks.</p>
+                                    <ul>
+                                      <li>It is a
+                                        <tooltip content="Command Line Interface i.e., no Graphical User Interface">CLI</tooltip> program.</li>
+                                      <li>In this version, the task list is not saved to the disk <span class="dimmed">i.e., the task list does not persist between multiple runs of the program</span></li>
+                                    </ul>
+                                    <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
+                                    <pre class="hljs"><code>Welcome to TaskManager-Level1!
 Your task? add submit report
 Tasks in the list: 1
 Your task? add return library book
@@ -5788,29 +5789,29 @@ Your task? print
 Your task? exit
 Bye!
 </code></pre>
-                                  <p>Summary of behavior:</p>
-                                  <ul>
-                                    <li>Task Manager prompts for user input with the message <code>Your task?</code></li>
-                                    <li><strong><code>add</code></strong> <code>task description</code>: adds the <code>task description</code> to the task list</li>
-                                    <li><strong><code>print</code></strong>: prints the tasks added so far</li>
-                                    <li><strong><code>exit</code></strong> or empty input: terminates the program</li>
-                                  </ul>
-                                  <p>If you are new to programming, we recommend you to build the program in small steps, as follows:</p>
-                                  <ol>
-                                    <li>Write a program that reads any user input, prints it back to the user, and exits.</li>
-                                    <li>Update the program to do the above in a loop until user types <code>exit</code>.</li>
-                                    <li>Add greetings printed at the start and the end.</li>
-                                    <li>If the first word is not <code>add</code> or <code>exit</code>, print an error message. Suggestion: use a <code>switch</code> statement to choose between multiple actions.</li>
-                                    <li>Create a <code>Task</code> class to represent tasks and add an <code>Task[]</code> to store tasks.</li>
-                                    <li>If the first word of the user input is <code>add</code>, add the whole line (no need to omit the first word) to the task list.</li>
-                                    <li>Update the code in the previous step to omit the word <code>add</code> from the task description.</li>
-                                    <li>Add support for the <code>print</code> command.</li>
-                                    <li>Add support for terminating if the user input is empty</li>
-                                    <li>and so on ...</li>
-                                  </ol>
-                                  <div slot="hint">
-                                    <panel type="seamless" header="Partial solution">
-                                      <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;
+                                    <p>Summary of behavior:</p>
+                                    <ul>
+                                      <li>Task Manager prompts for user input with the message <code>Your task?</code></li>
+                                      <li><strong><code>add</code></strong> <code>task description</code>: adds the <code>task description</code> to the task list</li>
+                                      <li><strong><code>print</code></strong>: prints the tasks added so far</li>
+                                      <li><strong><code>exit</code></strong> or empty input: terminates the program</li>
+                                    </ul>
+                                    <p>If you are new to programming, we recommend you to build the program in small steps, as follows:</p>
+                                    <ol>
+                                      <li>Write a program that reads any user input, prints it back to the user, and exits.</li>
+                                      <li>Update the program to do the above in a loop until user types <code>exit</code>.</li>
+                                      <li>Add greetings printed at the start and the end.</li>
+                                      <li>If the first word is not <code>add</code> or <code>exit</code>, print an error message. Suggestion: use a <code>switch</code> statement to choose between multiple actions.</li>
+                                      <li>Create a <code>Task</code> class to represent tasks and add an <code>Task[]</code> to store tasks.</li>
+                                      <li>If the first word of the user input is <code>add</code>, add the whole line (no need to omit the first word) to the task list.</li>
+                                      <li>Update the code in the previous step to omit the word <code>add</code> from the task description.</li>
+                                      <li>Add support for the <code>print</code> command.</li>
+                                      <li>Add support for terminating if the user input is empty</li>
+                                      <li>and so on ...</li>
+                                    </ol>
+                                    <div slot="hint">
+                                      <panel type="seamless" header="Partial solution">
+                                        <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;
 
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
     <span class="hljs-keyword">static</span> Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);
@@ -5853,9 +5854,10 @@ Bye!
 }
 
 </code></pre>
-                                    </panel>
-                                  </div>
-                                </question>
+                                      </panel>
+                                    </div>
+                                  </question>
+                                </div>
                               </panel>
                             </div>
                           </div>
@@ -5958,15 +5960,16 @@ System.out.println(Arrays.toString(words));
                 </div>
                 <div>
                   <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> TaskManager Level 1">
-                    <question>
-                      <p>This is a good time to put together some of the topics you have learned so far to create something useful. In this exercise you will write a small <code>TaskManager</code> program that can store a list of tasks.</p>
-                      <ul>
-                        <li>It is a
-                          <tooltip content="Command Line Interface i.e., no Graphical User Interface">CLI</tooltip> program.</li>
-                        <li>In this version, the task list is not saved to the disk <span class="dimmed">i.e., the task list does not persist between multiple runs of the program</span></li>
-                      </ul>
-                      <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
-                      <pre class="hljs"><code>Welcome to TaskManager-Level1!
+                    <div id="body">
+                      <question>
+                        <p>This is a good time to put together some of the topics you have learned so far to create something useful. In this exercise you will write a small <code>TaskManager</code> program that can store a list of tasks.</p>
+                        <ul>
+                          <li>It is a
+                            <tooltip content="Command Line Interface i.e., no Graphical User Interface">CLI</tooltip> program.</li>
+                          <li>In this version, the task list is not saved to the disk <span class="dimmed">i.e., the task list does not persist between multiple runs of the program</span></li>
+                        </ul>
+                        <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
+                        <pre class="hljs"><code>Welcome to TaskManager-Level1!
 Your task? add submit report
 Tasks in the list: 1
 Your task? add return library book
@@ -5989,29 +5992,29 @@ Your task? print
 Your task? exit
 Bye!
 </code></pre>
-                      <p>Summary of behavior:</p>
-                      <ul>
-                        <li>Task Manager prompts for user input with the message <code>Your task?</code></li>
-                        <li><strong><code>add</code></strong> <code>task description</code>: adds the <code>task description</code> to the task list</li>
-                        <li><strong><code>print</code></strong>: prints the tasks added so far</li>
-                        <li><strong><code>exit</code></strong> or empty input: terminates the program</li>
-                      </ul>
-                      <p>If you are new to programming, we recommend you to build the program in small steps, as follows:</p>
-                      <ol>
-                        <li>Write a program that reads any user input, prints it back to the user, and exits.</li>
-                        <li>Update the program to do the above in a loop until user types <code>exit</code>.</li>
-                        <li>Add greetings printed at the start and the end.</li>
-                        <li>If the first word is not <code>add</code> or <code>exit</code>, print an error message. Suggestion: use a <code>switch</code> statement to choose between multiple actions.</li>
-                        <li>Create a <code>Task</code> class to represent tasks and add an <code>Task[]</code> to store tasks.</li>
-                        <li>If the first word of the user input is <code>add</code>, add the whole line (no need to omit the first word) to the task list.</li>
-                        <li>Update the code in the previous step to omit the word <code>add</code> from the task description.</li>
-                        <li>Add support for the <code>print</code> command.</li>
-                        <li>Add support for terminating if the user input is empty</li>
-                        <li>and so on ...</li>
-                      </ol>
-                      <div slot="hint">
-                        <panel type="seamless" header="Partial solution">
-                          <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;
+                        <p>Summary of behavior:</p>
+                        <ul>
+                          <li>Task Manager prompts for user input with the message <code>Your task?</code></li>
+                          <li><strong><code>add</code></strong> <code>task description</code>: adds the <code>task description</code> to the task list</li>
+                          <li><strong><code>print</code></strong>: prints the tasks added so far</li>
+                          <li><strong><code>exit</code></strong> or empty input: terminates the program</li>
+                        </ul>
+                        <p>If you are new to programming, we recommend you to build the program in small steps, as follows:</p>
+                        <ol>
+                          <li>Write a program that reads any user input, prints it back to the user, and exits.</li>
+                          <li>Update the program to do the above in a loop until user types <code>exit</code>.</li>
+                          <li>Add greetings printed at the start and the end.</li>
+                          <li>If the first word is not <code>add</code> or <code>exit</code>, print an error message. Suggestion: use a <code>switch</code> statement to choose between multiple actions.</li>
+                          <li>Create a <code>Task</code> class to represent tasks and add an <code>Task[]</code> to store tasks.</li>
+                          <li>If the first word of the user input is <code>add</code>, add the whole line (no need to omit the first word) to the task list.</li>
+                          <li>Update the code in the previous step to omit the word <code>add</code> from the task description.</li>
+                          <li>Add support for the <code>print</code> command.</li>
+                          <li>Add support for terminating if the user input is empty</li>
+                          <li>and so on ...</li>
+                        </ol>
+                        <div slot="hint">
+                          <panel type="seamless" header="Partial solution">
+                            <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;
 
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
     <span class="hljs-keyword">static</span> Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);
@@ -6054,9 +6057,10 @@ Bye!
 }
 
 </code></pre>
-                        </panel>
-                      </div>
-                    </question>
+                          </panel>
+                        </div>
+                      </question>
+                    </div>
                   </panel>
                 </div>
               </div>
@@ -6072,15 +6076,16 @@ Bye!
             <p>We recommend you to <mark>do this exercise on your own computer</mark> rather than on <a href="http://repl.it">repl.it</a>.</p>
             <div>
               <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> TaskManager Level 1">
-                <question>
-                  <p>This is a good time to put together some of the topics you have learned so far to create something useful. In this exercise you will write a small <code>TaskManager</code> program that can store a list of tasks.</p>
-                  <ul>
-                    <li>It is a
-                      <tooltip content="Command Line Interface i.e., no Graphical User Interface">CLI</tooltip> program.</li>
-                    <li>In this version, the task list is not saved to the disk <span class="dimmed">i.e., the task list does not persist between multiple runs of the program</span></li>
-                  </ul>
-                  <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
-                  <pre class="hljs"><code>Welcome to TaskManager-Level1!
+                <div id="body">
+                  <question>
+                    <p>This is a good time to put together some of the topics you have learned so far to create something useful. In this exercise you will write a small <code>TaskManager</code> program that can store a list of tasks.</p>
+                    <ul>
+                      <li>It is a
+                        <tooltip content="Command Line Interface i.e., no Graphical User Interface">CLI</tooltip> program.</li>
+                      <li>In this version, the task list is not saved to the disk <span class="dimmed">i.e., the task list does not persist between multiple runs of the program</span></li>
+                    </ul>
+                    <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
+                    <pre class="hljs"><code>Welcome to TaskManager-Level1!
 Your task? add submit report
 Tasks in the list: 1
 Your task? add return library book
@@ -6103,29 +6108,29 @@ Your task? print
 Your task? exit
 Bye!
 </code></pre>
-                  <p>Summary of behavior:</p>
-                  <ul>
-                    <li>Task Manager prompts for user input with the message <code>Your task?</code></li>
-                    <li><strong><code>add</code></strong> <code>task description</code>: adds the <code>task description</code> to the task list</li>
-                    <li><strong><code>print</code></strong>: prints the tasks added so far</li>
-                    <li><strong><code>exit</code></strong> or empty input: terminates the program</li>
-                  </ul>
-                  <p>If you are new to programming, we recommend you to build the program in small steps, as follows:</p>
-                  <ol>
-                    <li>Write a program that reads any user input, prints it back to the user, and exits.</li>
-                    <li>Update the program to do the above in a loop until user types <code>exit</code>.</li>
-                    <li>Add greetings printed at the start and the end.</li>
-                    <li>If the first word is not <code>add</code> or <code>exit</code>, print an error message. Suggestion: use a <code>switch</code> statement to choose between multiple actions.</li>
-                    <li>Create a <code>Task</code> class to represent tasks and add an <code>Task[]</code> to store tasks.</li>
-                    <li>If the first word of the user input is <code>add</code>, add the whole line (no need to omit the first word) to the task list.</li>
-                    <li>Update the code in the previous step to omit the word <code>add</code> from the task description.</li>
-                    <li>Add support for the <code>print</code> command.</li>
-                    <li>Add support for terminating if the user input is empty</li>
-                    <li>and so on ...</li>
-                  </ol>
-                  <div slot="hint">
-                    <panel type="seamless" header="Partial solution">
-                      <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;
+                    <p>Summary of behavior:</p>
+                    <ul>
+                      <li>Task Manager prompts for user input with the message <code>Your task?</code></li>
+                      <li><strong><code>add</code></strong> <code>task description</code>: adds the <code>task description</code> to the task list</li>
+                      <li><strong><code>print</code></strong>: prints the tasks added so far</li>
+                      <li><strong><code>exit</code></strong> or empty input: terminates the program</li>
+                    </ul>
+                    <p>If you are new to programming, we recommend you to build the program in small steps, as follows:</p>
+                    <ol>
+                      <li>Write a program that reads any user input, prints it back to the user, and exits.</li>
+                      <li>Update the program to do the above in a loop until user types <code>exit</code>.</li>
+                      <li>Add greetings printed at the start and the end.</li>
+                      <li>If the first word is not <code>add</code> or <code>exit</code>, print an error message. Suggestion: use a <code>switch</code> statement to choose between multiple actions.</li>
+                      <li>Create a <code>Task</code> class to represent tasks and add an <code>Task[]</code> to store tasks.</li>
+                      <li>If the first word of the user input is <code>add</code>, add the whole line (no need to omit the first word) to the task list.</li>
+                      <li>Update the code in the previous step to omit the word <code>add</code> from the task description.</li>
+                      <li>Add support for the <code>print</code> command.</li>
+                      <li>Add support for terminating if the user input is empty</li>
+                      <li>and so on ...</li>
+                    </ol>
+                    <div slot="hint">
+                      <panel type="seamless" header="Partial solution">
+                        <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;
 
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
     <span class="hljs-keyword">static</span> Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);
@@ -6168,9 +6173,10 @@ Bye!
 }
 
 </code></pre>
-                    </panel>
-                  </div>
-                </question>
+                      </panel>
+                    </div>
+                  </question>
+                </div>
               </panel>
             </div>
           </div>
@@ -9874,7 +9880,7 @@ max radius used so far : 12.0
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:31:36 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Mon, 03 Sep 2018 15:50:10 GMT</small></div>
 </footer>
 </div>
 </body>

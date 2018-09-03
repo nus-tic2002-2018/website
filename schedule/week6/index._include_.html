@@ -926,14 +926,14 @@ send()
                     <p>Java does not directly support constants. The convention is to use a <code>static</code> <code>final</code> variable where a constant is needed. The <code>static</code> modifier causes the variable to be available without instantiating
                       an object. The <code>final</code> modifier causes the variable to be unchangeable. Java constants are normally declared in ALL CAPS separated by underscores.</p>
                     <box>
-                      <p><span class="fas fa-cube"></span> Here is an example of a constant named <code>MAX_BALANCE</code>.</p>
+                      <p><span class="fas fa-cube"></span> Here is an example of a constant named <code>MAX_BALANCE</code> which can be accessed as <code>Account.MAX_BALANCE</code>.</p>
                       <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span></span>{
 
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> MAX_BALANCE = <span class="hljs-number">1000000.0</span>;
+  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> MAX_BALANCE = <span class="hljs-number">1000000.0</span>;
 
 }
-
 </code></pre>
+                      <p><span class="fas fa-cube"></span> <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/Math.html#PI"><code>Math.PI</code></a> is an example constant that comes with Java.</p>
                     </box>
                   </div>
                   <div></div>
