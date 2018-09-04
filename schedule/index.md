@@ -121,7 +121,7 @@ head: scheduleHead.md
       {location: ["errorHandling", "exceptions", "what"], omit_evidence: true},
       {location: ["errorHandling", "exceptions", "how"], omit_evidence: true},
       {location: ["cppToJava", "exceptions", "what"], omit_evidence: true},
-      {location: ["cppToJava", "exceptions", "how"], omit_evidence: true},
+      {location: ["cppToJava", "exceptions", "how"]},
       {location: ["errorHandling", "exceptions", "when"], omit_evidence: true},
 {week: "5"},
   {name: "Java"},

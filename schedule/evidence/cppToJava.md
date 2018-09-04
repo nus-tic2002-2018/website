@@ -124,6 +124,12 @@ To be able to do exercises such as these:
 <include src="../../book/cppToJava/inheritance/interfaces/q-printPrintableItems.md" />
 </div>
 
+<div id="exceptions_how">
+To be able to do exercises such as these:
+
+<include src="../../book/cppToJava/exceptions/how/q-parseRectangleDescriptor.md" />
+</div>
+
 <div id="collections_what">
 
 **Acceptable**: Some code that you have written that uses some Java Collection classes.
