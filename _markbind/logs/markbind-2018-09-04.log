@@ -122,3 +122,26 @@
 2018-09-04T04:07:57.920Z - info: Press CTRL+C to stop ...
 2018-09-04T04:17:21.262Z - info: Website generation started at 12:17:20
 2018-09-04T04:17:23.705Z - info: Building assets...
+2018-09-04T04:17:28.480Z - info: Assets built
+2018-09-04T04:17:28.481Z - info: Generating pages...
+2018-09-04T04:18:35.663Z - info: Pages built
+2018-09-04T04:18:35.818Z - info: Site data built
+2018-09-04T04:18:35.818Z - info: Website generation complete! Total build time: 75.759s
+2018-09-04T04:18:35.818Z - info: Build success!
+2018-09-04T04:18:35.818Z - info: Generate Site durationMs=75759
+2018-09-04T04:19:44.489Z - info: Deployed!
+2018-09-04T05:10:10.718Z - info: Website generation started at 13:10:04
+2018-09-04T05:10:33.987Z - info: Building assets...
+2018-09-04T05:10:46.419Z - info: Assets built
+2018-09-04T05:10:46.419Z - info: Generating pages...
+2018-09-04T05:12:09.331Z - info: Pages built
+2018-09-04T05:12:09.962Z - info: Site data built
+2018-09-04T05:12:09.962Z - info: Website generation complete! Total build time: 125.762s
+2018-09-04T05:12:09.993Z - info: Generate Site durationMs=125793
+2018-09-04T05:12:11.319Z - info: Serving "C:\repos\nus-tic2002-2018\website\_site" at http://127.0.0.1:8080
+2018-09-04T05:12:11.319Z - info: Press CTRL+C to stop ...
+2018-09-04T05:14:03.317Z - info: [13:14:03] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\evidence\intellij.md
+2018-09-04T05:14:04.321Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\schedule\evidence\intellij.md
+2018-09-04T05:14:04.326Z - info: Rebuilding 10 pages
+2018-09-04T05:17:51.823Z - info: Website generation started at 13:17:50
+2018-09-04T05:17:54.179Z - info: Building assets...
