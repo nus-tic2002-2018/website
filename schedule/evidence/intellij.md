@@ -13,7 +13,7 @@ Add more code to your project in the IDE so that you have multiple files and mul
 
 <div id="refactoring">
 
-Do some automated refactoring in the IDE.
+Have done some automated refactoring in the IDE.
 
 
 </div>
