@@ -1,0 +1,124 @@
+2018-09-04T02:39:14.231Z - info: Website generation started at 10:39:08
+2018-09-04T02:39:47.835Z - info: Building assets...
+2018-09-04T02:40:02.850Z - info: Assets built
+2018-09-04T02:40:02.850Z - info: Generating pages...
+2018-09-04T02:41:15.876Z - info: Pages built
+2018-09-04T02:41:16.698Z - info: Site data built
+2018-09-04T02:41:16.698Z - info: Website generation complete! Total build time: 128.544s
+2018-09-04T02:41:16.730Z - info: Generate Site durationMs=128576
+2018-09-04T02:41:17.303Z - info: Serving "C:\repos\nus-tic2002-2018\website\_site" at http://127.0.0.1:8080
+2018-09-04T02:41:17.303Z - info: Press CTRL+C to stop ...
+2018-09-04T02:56:13.201Z - info: [10:56:13] Reload for file change: C:\repos\nus-tic2002-2018\website\book\cppToJava\exceptions\how\text.md
+2018-09-04T02:56:14.204Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\cppToJava\exceptions\how\text.md
+2018-09-04T02:56:14.209Z - info: Rebuilding 8 pages
+2018-09-04T02:56:45.426Z - info: Pages rebuilt
+2018-09-04T02:56:45.440Z - info: Site data built
+2018-09-04T03:01:32.516Z - info: [11:01:32] Reload for file add: C:\repos\nus-tic2002-2018\website\book\cppToJava\exceptions\how\exercises.md
+2018-09-04T03:01:33.518Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\cppToJava\exceptions\how\exercises.md
+2018-09-04T03:01:33.518Z - info: Rebuilding 0 pages
+2018-09-04T03:01:33.518Z - info: Pages rebuilt
+2018-09-04T03:01:33.526Z - info: Site data built
+2018-09-04T03:02:18.484Z - info: [11:02:18] Reload for file add: C:\repos\nus-tic2002-2018\website\book\cppToJava\exceptions\how\q-parseRectangleDescriptor.md
+2018-09-04T03:02:19.484Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\cppToJava\exceptions\how\q-parseRectangleDescriptor.md
+2018-09-04T03:02:19.484Z - info: Rebuilding 0 pages
+2018-09-04T03:02:19.485Z - info: Pages rebuilt
+2018-09-04T03:02:19.500Z - info: Site data built
+2018-09-04T03:02:56.923Z - info: [11:02:56] Reload for file change: C:\repos\nus-tic2002-2018\website\book\cppToJava\exceptions\how\exercises.md
+2018-09-04T03:02:56.931Z - info: [11:02:56] Reload for file change: C:\repos\nus-tic2002-2018\website\book\cppToJava\exceptions\how\text.md
+2018-09-04T03:02:57.926Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\cppToJava\exceptions\how\exercises.md,C:\repos\nus-tic2002-2018\website\book\cppToJava\exceptions\how\text.md
+2018-09-04T03:02:57.930Z - info: Rebuilding 8 pages
+2018-09-04T03:03:24.750Z - info: Pages rebuilt
+2018-09-04T03:03:24.767Z - info: Site data built
+2018-09-04T03:06:43.076Z - info: [11:06:43] Reload for file change: C:\repos\nus-tic2002-2018\website\book\cppToJava\exceptions\how\q-parseRectangleDescriptor.md
+2018-09-04T03:06:44.088Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\cppToJava\exceptions\how\q-parseRectangleDescriptor.md
+2018-09-04T03:06:44.088Z - info: Rebuilding 7 pages
+2018-09-04T03:07:12.575Z - info: Pages rebuilt
+2018-09-04T03:07:12.586Z - info: Site data built
+2018-09-04T03:07:21.016Z - info: [11:07:21] Reload for file change: C:\repos\nus-tic2002-2018\website\book\cppToJava\exceptions\how\q-parseRectangleDescriptor.md
+2018-09-04T03:07:22.032Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\cppToJava\exceptions\how\q-parseRectangleDescriptor.md
+2018-09-04T03:07:22.032Z - info: Rebuilding 7 pages
+2018-09-04T03:07:50.142Z - info: Pages rebuilt
+2018-09-04T03:07:50.154Z - info: Site data built
+2018-09-04T03:15:49.937Z - info: [11:15:49] Reload for file change: C:\repos\nus-tic2002-2018\website\book\cppToJava\exceptions\how\q-parseRectangleDescriptor.md
+2018-09-04T03:15:50.950Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\cppToJava\exceptions\how\q-parseRectangleDescriptor.md
+2018-09-04T03:15:50.952Z - info: Rebuilding 7 pages
+2018-09-04T03:16:18.196Z - info: Pages rebuilt
+2018-09-04T03:16:18.212Z - info: Site data built
+2018-09-04T03:17:21.906Z - info: [11:17:21] Reload for file change: C:\repos\nus-tic2002-2018\website\book\cppToJava\exceptions\how\q-parseRectangleDescriptor.md
+2018-09-04T03:17:22.916Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\cppToJava\exceptions\how\q-parseRectangleDescriptor.md
+2018-09-04T03:17:22.919Z - info: Rebuilding 7 pages
+2018-09-04T03:17:49.967Z - info: Pages rebuilt
+2018-09-04T03:17:49.979Z - info: Site data built
+2018-09-04T03:24:22.448Z - info: [11:24:22] Reload for file change: C:\repos\nus-tic2002-2018\website\book\cppToJava\exceptions\how\q-parseRectangleDescriptor.md
+2018-09-04T03:24:23.460Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\cppToJava\exceptions\how\q-parseRectangleDescriptor.md
+2018-09-04T03:24:23.462Z - info: Rebuilding 7 pages
+2018-09-04T03:24:50.476Z - info: Pages rebuilt
+2018-09-04T03:24:50.496Z - info: Site data built
+2018-09-04T03:27:51.534Z - info: [11:27:51] Reload for file change: C:\repos\nus-tic2002-2018\website\book\cppToJava\exceptions\how\q-parseRectangleDescriptor.md
+2018-09-04T03:27:52.551Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\cppToJava\exceptions\how\q-parseRectangleDescriptor.md
+2018-09-04T03:27:52.551Z - info: Rebuilding 7 pages
+2018-09-04T03:28:04.077Z - info: [11:28:04] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\index.md
+2018-09-04T03:28:04.077Z - info: [11:28:04] Reload for file change: C:\repos\nus-tic2002-2018\website\common\header.md
+2018-09-04T03:28:04.077Z - info: [11:28:04] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\evidence\oop.md
+2018-09-04T03:28:04.077Z - info: [11:28:04] Reload for file change: C:\repos\nus-tic2002-2018\website\book\cppToJava\usefulClasses\scannerClass\q-taskManagerLevel1.md
+2018-09-04T03:28:04.077Z - info: [11:28:04] Reload for file change: C:\repos\nus-tic2002-2018\website\book\cppToJava\inheritance\polymorphism\text.md
+2018-09-04T03:28:04.077Z - info: [11:28:04] Reload for file change: C:\repos\nus-tic2002-2018\website\book\cppToJava\inheritance\abstractClassesAndMethods\exercises.md
+2018-09-04T03:28:04.077Z - info: [11:28:04] Reload for file change: C:\repos\nus-tic2002-2018\website\book\cppToJava\inheritance\interfaces\text.md
+2018-09-04T03:28:04.092Z - info: [11:28:04] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\exams.md
+2018-09-04T03:28:04.092Z - info: [11:28:04] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\evidence\cppToJava.md
+2018-09-04T03:28:04.092Z - info: [11:28:04] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\evidence\intellij.md
+2018-09-04T03:28:04.092Z - info: [11:28:04] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\evidence\project.md
+2018-09-04T03:28:04.092Z - info: [11:28:04] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\evidence\testing.md
+2018-09-04T03:28:04.092Z - info: [11:28:04] Reload for file change: C:\repos\nus-tic2002-2018\website\book\cppToJava\inheritance\polymorphism\exercises.md
+2018-09-04T03:28:04.092Z - info: [11:28:04] Reload for file change: C:\repos\nus-tic2002-2018\website\book\cppToJava\inheritance\polymorphism\q-printShapeArea.md
+2018-09-04T03:28:04.092Z - info: [11:28:04] Reload for file change: C:\repos\nus-tic2002-2018\website\book\cppToJava\inheritance\polymorphism\q-taskManagerLevel2.md
+2018-09-04T03:28:04.092Z - info: [11:28:04] Reload for file change: C:\repos\nus-tic2002-2018\website\book\cppToJava\inheritance\abstractClassesAndMethods\q-printAreaWithAbstractShape.md
+2018-09-04T03:28:04.092Z - info: [11:28:04] Reload for file change: C:\repos\nus-tic2002-2018\website\book\cppToJava\inheritance\interfaces\exercises.md
+2018-09-04T03:28:04.092Z - info: [11:28:04] Reload for file change: C:\repos\nus-tic2002-2018\website\book\cppToJava\inheritance\interfaces\q-printPrintableItems.md
+2018-09-04T03:28:05.551Z - info: [11:28:05] Reload for file change: C:\repos\nus-tic2002-2018\website\_markbind\head\scheduleHead.md
+2018-09-04T03:28:09.955Z - info: [11:28:09] Reload for file change: C:\repos\nus-tic2002-2018\website\_markbind\head\bookHead.md
+2018-09-04T03:28:16.751Z - info: [11:28:16] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\week1\index.md
+2018-09-04T03:28:16.954Z - info: [11:28:16] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\week2\tutorial-tic2002.md
+2018-09-04T03:28:16.955Z - info: [11:28:16] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\week1\tutorial.md
+2018-09-04T03:28:16.975Z - info: [11:28:16] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\usingThisWebsite.md
+2018-09-04T03:28:16.979Z - info: [11:28:16] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\moduleExpectations.md
+2018-09-04T03:28:20.737Z - info: Pages rebuilt
+2018-09-04T03:28:20.749Z - info: Site data built
+2018-09-04T03:28:20.839Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\schedule\index.md,C:\repos\nus-tic2002-2018\website\common\header.md,C:\repos\nus-tic2002-2018\website\schedule\evidence\oop.md,C:\repos\nus-tic2002-2018\website\book\cppToJava\usefulClasses\scannerClass\q-taskManagerLevel1.md,C:\repos\nus-tic2002-2018\website\book\cppToJava\inheritance\polymorphism\text.md,C:\repos\nus-tic2002-2018\website\book\cppToJava\inheritance\abstractClassesAndMethods\exercises.md,C:\repos\nus-tic2002-2018\website\book\cppToJava\inheritance\interfaces\text.md,C:\repos\nus-tic2002-2018\website\admin\exams.md,C:\repos\nus-tic2002-2018\website\schedule\evidence\cppToJava.md,C:\repos\nus-tic2002-2018\website\schedule\evidence\intellij.md,C:\repos\nus-tic2002-2018\website\schedule\evidence\project.md,C:\repos\nus-tic2002-2018\website\schedule\evidence\testing.md,C:\repos\nus-tic2002-2018\website\book\cppToJava\inheritance\polymorphism\exercises.md,C:\repos\nus-tic2002-2018\website\book\cppToJava\inheritance\polymorphism\q-printShapeArea.md,C:\repos\nus-tic2002-2018\website\book\cppToJava\inheritance\polymorphism\q-taskManagerLevel2.md,C:\repos\nus-tic2002-2018\website\book\cppToJava\inheritance\abstractClassesAndMethods\q-printAreaWithAbstractShape.md,C:\repos\nus-tic2002-2018\website\book\cppToJava\inheritance\interfaces\exercises.md,C:\repos\nus-tic2002-2018\website\book\cppToJava\inheritance\interfaces\q-printPrintableItems.md,C:\repos\nus-tic2002-2018\website\_markbind\head\scheduleHead.md,C:\repos\nus-tic2002-2018\website\_markbind\head\bookHead.md,C:\repos\nus-tic2002-2018\website\schedule\week1\index.md,C:\repos\nus-tic2002-2018\website\schedule\week2\tutorial-tic2002.md,C:\repos\nus-tic2002-2018\website\schedule\week1\tutorial.md,C:\repos\nus-tic2002-2018\website\admin\usingThisWebsite.md,C:\repos\nus-tic2002-2018\website\admin\moduleExpectations.md
+2018-09-04T03:28:20.849Z - info: Rebuilding 66 pages
+2018-09-04T03:28:52.283Z - info: [11:28:52] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\index-tic2002.md
+2018-09-04T03:28:52.283Z - info: [11:28:52] Reload for file change: C:\repos\nus-tic2002-2018\website\se-book-adapted\index.md
+2018-09-04T03:28:52.705Z - info: [11:28:52] Reload for file change: C:\repos\nus-tic2002-2018\website\_markbind\navigation\adminSiteNav-tic2002.md
+2018-09-04T03:29:03.924Z - info: [11:29:03] Reload for file change: C:\repos\nus-tic2002-2018\website\_markbind\head\adminHead.md
+2018-09-04T03:29:15.696Z - info: Pages rebuilt
+2018-09-04T03:29:15.714Z - info: Site data built
+2018-09-04T03:29:15.885Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\admin\index-tic2002.md,C:\repos\nus-tic2002-2018\website\se-book-adapted\index.md,C:\repos\nus-tic2002-2018\website\_markbind\navigation\adminSiteNav-tic2002.md,C:\repos\nus-tic2002-2018\website\_markbind\head\adminHead.md
+2018-09-04T03:29:15.885Z - info: Rebuilding 2 pages
+2018-09-04T03:29:16.310Z - info: Pages rebuilt
+2018-09-04T03:29:16.318Z - info: Site data built
+2018-09-04T03:33:57.815Z - info: [11:33:57] Reload for file change: C:\repos\nus-tic2002-2018\website\book\cppToJava\exceptions\how\q-parseRectangleDescriptor.md
+2018-09-04T03:33:58.834Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\cppToJava\exceptions\how\q-parseRectangleDescriptor.md
+2018-09-04T03:33:58.834Z - info: Rebuilding 7 pages
+2018-09-04T03:34:28.001Z - info: Pages rebuilt
+2018-09-04T03:34:28.040Z - info: Site data built
+2018-09-04T03:34:56.518Z - info: [11:34:56] Reload for file change: C:\repos\nus-tic2002-2018\website\book\cppToJava\exceptions\how\q-parseRectangleDescriptor.md
+2018-09-04T03:34:57.520Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\cppToJava\exceptions\how\q-parseRectangleDescriptor.md
+2018-09-04T03:34:57.521Z - info: Rebuilding 7 pages
+2018-09-04T03:35:24.912Z - info: Pages rebuilt
+2018-09-04T03:35:24.924Z - info: Site data built
+2018-09-04T04:05:45.544Z - info: [12:05:45] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\evidence\cppToJava.md
+2018-09-04T04:05:45.575Z - info: [12:05:45] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\index.md
+2018-09-04T04:05:46.565Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\schedule\evidence\cppToJava.md,C:\repos\nus-tic2002-2018\website\schedule\index.md
+2018-09-04T04:05:46.565Z - info: Rebuilding 11 pages
+2018-09-04T04:06:23.056Z - info: Website generation started at 12:06:21
+2018-09-04T04:06:34.973Z - info: Building assets...
+2018-09-04T04:06:49.436Z - info: Assets built
+2018-09-04T04:06:49.436Z - info: Generating pages...
+2018-09-04T04:07:56.842Z - info: Pages built
+2018-09-04T04:07:57.466Z - info: Site data built
+2018-09-04T04:07:57.467Z - info: Website generation complete! Total build time: 96.271s
+2018-09-04T04:07:57.477Z - info: Generate Site durationMs=96281
+2018-09-04T04:07:57.920Z - info: Serving "C:\repos\nus-tic2002-2018\website\_site" at http://127.0.0.1:8080
+2018-09-04T04:07:57.920Z - info: Press CTRL+C to stop ...
+2018-09-04T04:17:21.262Z - info: Website generation started at 12:17:20
+2018-09-04T04:17:23.705Z - info: Building assets...
