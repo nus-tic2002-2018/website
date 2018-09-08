@@ -2,6 +2,18 @@
   <include src="../../book/modeling/introduction/how/q-essay-explainModelsInClassProject.md" />
 </div>
 
+<div id="modelingStructures_classDiagramsBasic">
+
+<include src="../../book/modeling/modelingStructures/classDiagramsBasic/q-essay-explainClassDiagram.md" />
+
+</div>
+
+<div id="modelingStructures_objectDiagrams">
+
+<include src="../../book/uml/classDiagrams/combine/basic/q-essay-objectDiagramsForClassDiagram.md" />
+
+</div>
+
 
 <div id="modelingStructures_classDiagramsBasic">
 
