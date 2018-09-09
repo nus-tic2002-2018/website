@@ -1640,3 +1640,69 @@ Missing reference in C:\repos\nus-tic2002-2018\website\book\cppToJava\exceptions
 2018-09-09T12:01:02.911Z - info: Site data built
 2018-09-09T12:07:09.363Z - info: Website generation started at 20:07:02
 2018-09-09T12:07:48.651Z - info: Building assets...
+2018-09-09T12:08:02.280Z - info: Assets built
+2018-09-09T12:08:02.281Z - info: Generating pages...
+2018-09-09T12:09:06.369Z - info: Pages built
+2018-09-09T12:09:07.075Z - info: Site data built
+2018-09-09T12:09:07.075Z - info: Website generation complete! Total build time: 124.371s
+2018-09-09T12:09:07.075Z - info: Build success!
+2018-09-09T12:09:07.076Z - info: Generate Site durationMs=124372
+2018-09-09T12:10:27.859Z - info: Deployed!
+2018-09-09T12:15:56.936Z - info: Website generation started at 20:15:54
+2018-09-09T12:15:59.728Z - info: Building assets...
+2018-09-09T12:16:03.384Z - info: Assets built
+2018-09-09T12:16:03.385Z - info: Generating pages...
+2018-09-09T12:17:04.124Z - info: Pages built
+2018-09-09T12:17:04.326Z - info: Site data built
+2018-09-09T12:17:04.327Z - info: Website generation complete! Total build time: 69.777s
+2018-09-09T12:17:04.335Z - info: Generate Site durationMs=69786
+2018-09-09T12:17:04.943Z - info: Serving "C:\repos\nus-tic2002-2018\website\_site" at http://127.0.0.1:8080
+2018-09-09T12:17:04.943Z - info: Press CTRL+C to stop ...
+2018-09-09T12:19:34.964Z - info: [20:19:34] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\index.md
+2018-09-09T12:19:35.971Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\schedule\index.md
+2018-09-09T12:19:35.974Z - info: Rebuilding 2 pages
+2018-09-09T12:19:49.711Z - info: Pages rebuilt
+2018-09-09T12:19:49.721Z - info: Site data built
+2018-09-09T12:23:12.971Z - info: Website generation started at 20:23:10
+2018-09-09T12:23:15.467Z - info: Building assets...
+2018-09-09T12:23:18.881Z - info: Assets built
+2018-09-09T12:23:18.881Z - info: Generating pages...
+2018-09-09T12:24:18.572Z - info: Pages built
+2018-09-09T12:24:18.790Z - info: Site data built
+2018-09-09T12:24:18.790Z - info: Website generation complete! Total build time: 67.963s
+2018-09-09T12:24:18.798Z - info: Generate Site durationMs=67971
+2018-09-09T12:24:19.158Z - info: Serving "C:\repos\nus-tic2002-2018\website\_site" at http://127.0.0.1:8080
+2018-09-09T12:24:19.159Z - info: Press CTRL+C to stop ...
+2018-09-09T12:26:42.757Z - info: [20:26:42] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\index.md
+2018-09-09T12:26:43.762Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\schedule\index.md
+2018-09-09T12:26:43.765Z - info: Rebuilding 2 pages
+2018-09-09T12:27:04.992Z - info: Website generation started at 20:27:01
+2018-09-09T12:27:07.471Z - info: Building assets...
+2018-09-09T12:27:11.073Z - info: Assets built
+2018-09-09T12:27:11.074Z - info: Generating pages...
+2018-09-09T12:28:12.576Z - info: Pages built
+2018-09-09T12:28:12.736Z - info: Site data built
+2018-09-09T12:28:12.736Z - info: Website generation complete! Total build time: 70.936s
+2018-09-09T12:28:12.745Z - info: Generate Site durationMs=70945
+2018-09-09T12:28:13.078Z - info: Serving "C:\repos\nus-tic2002-2018\website\_site" at http://127.0.0.1:8080
+2018-09-09T12:28:13.078Z - info: Press CTRL+C to stop ...
+2018-09-09T12:29:29.196Z - info: [20:29:29] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\evidence\cppToJava.md
+2018-09-09T12:29:30.202Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\schedule\evidence\cppToJava.md
+2018-09-09T12:29:30.208Z - info: Rebuilding 12 pages
+2018-09-09T12:29:50.358Z - info: Website generation started at 20:29:48
+2018-09-09T12:29:52.785Z - info: Building assets...
+2018-09-09T12:29:56.207Z - info: Assets built
+2018-09-09T12:29:56.208Z - info: Generating pages...
+2018-09-09T12:30:56.280Z - info: Pages built
+2018-09-09T12:30:56.447Z - info: Site data built
+2018-09-09T12:30:56.447Z - info: Website generation complete! Total build time: 68.275s
+2018-09-09T12:30:56.456Z - info: Generate Site durationMs=68283
+2018-09-09T12:30:56.787Z - info: Serving "C:\repos\nus-tic2002-2018\website\_site" at http://127.0.0.1:8080
+2018-09-09T12:30:56.787Z - info: Press CTRL+C to stop ...
+2018-09-09T12:30:57.633Z - info: [20:30:57] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\evidence\cppToJava.md
+2018-09-09T12:30:58.877Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\schedule\evidence\cppToJava.md
+2018-09-09T12:30:58.879Z - info: Rebuilding 12 pages
+2018-09-09T12:31:28.928Z - info: Pages rebuilt
+2018-09-09T12:31:28.971Z - info: Site data built
+2018-09-09T12:33:56.640Z - info: Website generation started at 20:33:53
+2018-09-09T12:33:59.047Z - info: Building assets...

@@ -6067,126 +6067,11 @@ Bye!
           </panel>
         </panel>
         <panel no-close="" expanded="" no-switch="" expandable="false">
-          <span slot="header" class="card-title"><span><code>W3.2</code> <strong>🅿️ Project preparation: Can write a small program from scratch</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-          </span>
-          </span>
-          <div>
-            <p>Ensure that you are able to do this exercise based on your current Java knowledge. There is no need to do the exercise if you have prior programming experience and you are confident of being able to do it. But if you are new to programming,
-              we highly recommend you to attempt this exercise and get help from the prof if you are unable to complete it.</p>
-            <p>We recommend you to <mark>do this exercise on your own computer</mark> rather than on <a href="http://repl.it">repl.it</a>.</p>
-            <div>
-              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> TaskManager Level 1">
-                <div id="body">
-                  <question>
-                    <p>This is a good time to put together some of the topics you have learned so far to create something useful. In this exercise you will write a small <code>TaskManager</code> program that can store a list of tasks.</p>
-                    <ul>
-                      <li>It is a
-                        <tooltip content="Command Line Interface i.e., no Graphical User Interface">CLI</tooltip> program.</li>
-                      <li>In this version, the task list is not saved to the disk <span class="dimmed">i.e., the task list does not persist between multiple runs of the program</span></li>
-                    </ul>
-                    <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
-                    <pre class="hljs"><code>Welcome to TaskManager-Level1!
-Your task? add submit report
-Tasks in the list: 1
-Your task? add return library book
-Tasks in the list: 2
-Your task? add remind boss about meeting
-Tasks in the list: 3
-Your task? xyz
-Unknown command! please try again
-Your task? print
-[1] submit report
-[2] return library book
-[3] remind boss about meeting
-Your task? add set up meeting with boss
-Tasks in the list: 4
-Your task? print
-[1] submit report
-[2] return library book
-[3] remind boss about meeting
-[4] set up meeting with boss
-Your task? exit
-Bye!
-</code></pre>
-                    <p>Summary of behavior:</p>
-                    <ul>
-                      <li>Task Manager prompts for user input with the message <code>Your task?</code></li>
-                      <li><strong><code>add</code></strong> <code>task description</code>: adds the <code>task description</code> to the task list</li>
-                      <li><strong><code>print</code></strong>: prints the tasks added so far</li>
-                      <li><strong><code>exit</code></strong> or empty input: terminates the program</li>
-                    </ul>
-                    <p>If you are new to programming, we recommend you to build the program in small steps, as follows:</p>
-                    <ol>
-                      <li>Write a program that reads any user input, prints it back to the user, and exits.</li>
-                      <li>Update the program to do the above in a loop until user types <code>exit</code>.</li>
-                      <li>Add greetings printed at the start and the end.</li>
-                      <li>If the first word is not <code>add</code> or <code>exit</code>, print an error message. Suggestion: use a <code>switch</code> statement to choose between multiple actions.</li>
-                      <li>Create a <code>Task</code> class to represent tasks and add an <code>Task[]</code> to store tasks.</li>
-                      <li>If the first word of the user input is <code>add</code>, add the whole line (no need to omit the first word) to the task list.</li>
-                      <li>Update the code in the previous step to omit the word <code>add</code> from the task description.</li>
-                      <li>Add support for the <code>print</code> command.</li>
-                      <li>Add support for terminating if the user input is empty</li>
-                      <li>and so on ...</li>
-                    </ol>
-                    <div slot="hint">
-                      <panel type="seamless" header="Partial solution">
-                        <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;
-
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
-    <span class="hljs-keyword">static</span> Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);
-    <span class="hljs-keyword">static</span> Task[] tasks = <span class="hljs-keyword">new</span> Task[<span class="hljs-number">100</span>];
-    <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;  <span class="hljs-comment">// to keep track of number of tasks in the list</span>
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-        printWelcome();
-        String line;
-        <span class="hljs-keyword">boolean</span> isExit = <span class="hljs-keyword">false</span>;
-        <span class="hljs-keyword">while</span> (!isExit) {
-            line = getInput();
-            String command = line.split(<span class="hljs-string">" "</span>)[<span class="hljs-number">0</span>]; <span class="hljs-comment">//extract the first word of the user input</span>
-            <span class="hljs-keyword">switch</span> (command) {
-                <span class="hljs-keyword">case</span> <span class="hljs-string">"exit"</span>:
-                <span class="hljs-keyword">case</span> <span class="hljs-string">""</span>: <span class="hljs-comment">// exit if user input is empty</span>
-                    isExit = <span class="hljs-keyword">true</span>;
-                    <span class="hljs-keyword">break</span>;
-                <span class="hljs-keyword">case</span> <span class="hljs-string">"add"</span>:
-                    <span class="hljs-comment">// todo: add code here</span>
-                <span class="hljs-keyword">default</span>:
-                    printError();
-            }
-        }
-        exit();
-
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printWelcome</span><span class="hljs-params">()</span> </span>{
-        System.out.println(<span class="hljs-string">"Welcome to TaskManager-Level1!"</span>);
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTasks</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; count; i++) {
-            System.out.println(<span class="hljs-string">"["</span> + (i + <span class="hljs-number">1</span>) + <span class="hljs-string">"] "</span> + tasks[i].getDescription());
-        }
-    }
-
-    <span class="hljs-comment">// todo: add missing methods</span>
-}
-
-</code></pre>
-                      </panel>
-                    </div>
-                  </question>
-                </div>
-              </panel>
-            </div>
-          </div>
-        </panel>
-        <panel no-close="" expanded="" no-switch="" expandable="false">
-          <span slot="header" class="card-title"><span><code>W3.3</code> <strong>Can use inheritance</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          <span slot="header" class="card-title"><span><code>W3.2</code> <strong>Can use inheritance</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
           <panel type="danger" expanded="" no-close="" no-switch="" epxandable="false">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.3a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the meaning of inheritance</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.2a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the meaning of inheritance</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
             </span>
             <div>
@@ -6270,7 +6155,7 @@ Bye!
             </div>
           </panel>
           <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.3b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain method overloading</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.2b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain method overloading</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
               </span>
@@ -6340,7 +6225,7 @@ Bye!
               </div>
           </panel>
           <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.3c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain method overriding</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.2c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain method overriding</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
               </span>
@@ -6492,7 +6377,7 @@ Bye!
               </div>
           </panel>
           <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.3d</code></span></big> <span><span class="fas fa-trophy"></span> Can use basic inheritance</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.2d</code></span></big> <span><span class="fas fa-trophy"></span> Can use basic inheritance</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
               </span>
@@ -6833,7 +6718,7 @@ Postponed to Nov 18th
               </div>
           </panel>
           <panel type="info" expanded="" no-close="" no-switch="" epxandable="false">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.3e</code></span></big> <span><span class="fas fa-trophy"></span> Can use Object class</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.2e</code></span></big> <span><span class="fas fa-trophy"></span> Can use Object class</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -7206,12 +7091,12 @@ do by: Postponed to Nov 18th
       <p><span class="activity-desc">IDEs</span></p>
       <div class="indented">
         <panel no-close="" expanded="" no-switch="" expandable="false">
-          <span slot="header" class="card-title"><span><code>W3.4</code> <strong>Can use intermediate level features of an IDE</strong> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
+          <span slot="header" class="card-title"><span><code>W3.3</code> <strong>Can use intermediate level features of an IDE</strong> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
             aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
           <panel type="info" expanded="" no-close="" no-switch="" epxandable="false">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.4a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain debugging</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.3a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain debugging</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -7268,7 +7153,7 @@ do by: Postponed to Nov 18th
               </div>
           </panel>
           <panel type="info" expanded="" no-close="" no-switch="" epxandable="false">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.4b</code></span></big> <span><span class="fas fa-trophy"></span> Can step through a program using a debugger</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.3b</code></span></big> <span><span class="fas fa-trophy"></span> Can step through a program using a debugger</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -7300,7 +7185,7 @@ do by: Postponed to Nov 18th
               </div>
           </panel>
           <panel type="success" expanded="" no-close="" no-switch="" epxandable="false">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.4c</code></span></big> <span><span class="fas fa-trophy"></span> Can use some useful IDE productivity shortcuts</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.3c</code></span></big> <span><span class="fas fa-trophy"></span> Can use some useful IDE productivity shortcuts</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -7334,11 +7219,11 @@ do by: Postponed to Nov 18th
       <p><span class="activity-desc">Testing</span></p>
       <div class="indented">
         <panel no-close="" expanded="" no-switch="" expandable="false">
-          <span slot="header" class="card-title"><span><code>W3.5</code> <strong>Can automate simple regression testing of text UIs</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          <span slot="header" class="card-title"><span><code>W3.4</code> <strong>Can automate simple regression testing of text UIs</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
           <panel type="danger" expanded="" no-close="" no-switch="" epxandable="false">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.5a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain testing</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.4a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain testing</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
             </span>
             <div>
@@ -7438,7 +7323,7 @@ do by: Postponed to Nov 18th
             </div>
           </panel>
           <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.5b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain regression testing</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.4b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain regression testing</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
               </span>
@@ -7507,7 +7392,7 @@ do by: Postponed to Nov 18th
               </div>
           </panel>
           <panel type="info" expanded="" no-close="" no-switch="" epxandable="false">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.5c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain test automation</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.4c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain test automation</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -7559,7 +7444,7 @@ do by: Postponed to Nov 18th
               </div>
           </panel>
           <panel type="info" expanded="" no-close="" no-switch="" epxandable="false">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.5d</code></span></big> <span><span class="fas fa-trophy"></span> Can semi-automate testing of CLIs</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.4d</code></span></big> <span><span class="fas fa-trophy"></span> Can semi-automate testing of CLIs</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -7665,6 +7550,125 @@ Invalid command format: add
                 <p>Use this technique to test any program you have written.</p>
               </div>
           </panel>
+        </panel>
+      </div>
+      <p></p>
+      <p><span class="activity-desc">🅿️ Project</span></p>
+      <div class="indented">
+        <panel no-close="" expanded="" no-switch="" expandable="false">
+          <span slot="header" class="card-title"><span><code>W3.5</code> <strong>Project preparation: Can write a small program from scratch</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          </span>
+          </span>
+          <div>
+            <p>Ensure that you are able to do this exercise based on your current Java knowledge. There is no need to do the exercise if you have prior programming experience and you are confident of being able to do it. But if you are new to programming,
+              we highly recommend you to attempt this exercise and get help from the prof if you are unable to complete it.</p>
+            <p>We recommend you to <mark>do this exercise on your own computer</mark> rather than on <a href="http://repl.it">repl.it</a>.</p>
+            <div>
+              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> TaskManager Level 1">
+                <div id="body">
+                  <question>
+                    <p>This is a good time to put together some of the topics you have learned so far to create something useful. In this exercise you will write a small <code>TaskManager</code> program that can store a list of tasks.</p>
+                    <ul>
+                      <li>It is a
+                        <tooltip content="Command Line Interface i.e., no Graphical User Interface">CLI</tooltip> program.</li>
+                      <li>In this version, the task list is not saved to the disk <span class="dimmed">i.e., the task list does not persist between multiple runs of the program</span></li>
+                    </ul>
+                    <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
+                    <pre class="hljs"><code>Welcome to TaskManager-Level1!
+Your task? add submit report
+Tasks in the list: 1
+Your task? add return library book
+Tasks in the list: 2
+Your task? add remind boss about meeting
+Tasks in the list: 3
+Your task? xyz
+Unknown command! please try again
+Your task? print
+[1] submit report
+[2] return library book
+[3] remind boss about meeting
+Your task? add set up meeting with boss
+Tasks in the list: 4
+Your task? print
+[1] submit report
+[2] return library book
+[3] remind boss about meeting
+[4] set up meeting with boss
+Your task? exit
+Bye!
+</code></pre>
+                    <p>Summary of behavior:</p>
+                    <ul>
+                      <li>Task Manager prompts for user input with the message <code>Your task?</code></li>
+                      <li><strong><code>add</code></strong> <code>task description</code>: adds the <code>task description</code> to the task list</li>
+                      <li><strong><code>print</code></strong>: prints the tasks added so far</li>
+                      <li><strong><code>exit</code></strong> or empty input: terminates the program</li>
+                    </ul>
+                    <p>If you are new to programming, we recommend you to build the program in small steps, as follows:</p>
+                    <ol>
+                      <li>Write a program that reads any user input, prints it back to the user, and exits.</li>
+                      <li>Update the program to do the above in a loop until user types <code>exit</code>.</li>
+                      <li>Add greetings printed at the start and the end.</li>
+                      <li>If the first word is not <code>add</code> or <code>exit</code>, print an error message. Suggestion: use a <code>switch</code> statement to choose between multiple actions.</li>
+                      <li>Create a <code>Task</code> class to represent tasks and add an <code>Task[]</code> to store tasks.</li>
+                      <li>If the first word of the user input is <code>add</code>, add the whole line (no need to omit the first word) to the task list.</li>
+                      <li>Update the code in the previous step to omit the word <code>add</code> from the task description.</li>
+                      <li>Add support for the <code>print</code> command.</li>
+                      <li>Add support for terminating if the user input is empty</li>
+                      <li>and so on ...</li>
+                    </ol>
+                    <div slot="hint">
+                      <panel type="seamless" header="Partial solution">
+                        <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">static</span> Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);
+    <span class="hljs-keyword">static</span> Task[] tasks = <span class="hljs-keyword">new</span> Task[<span class="hljs-number">100</span>];
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;  <span class="hljs-comment">// to keep track of number of tasks in the list</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        printWelcome();
+        String line;
+        <span class="hljs-keyword">boolean</span> isExit = <span class="hljs-keyword">false</span>;
+        <span class="hljs-keyword">while</span> (!isExit) {
+            line = getInput();
+            String command = line.split(<span class="hljs-string">" "</span>)[<span class="hljs-number">0</span>]; <span class="hljs-comment">//extract the first word of the user input</span>
+            <span class="hljs-keyword">switch</span> (command) {
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"exit"</span>:
+                <span class="hljs-keyword">case</span> <span class="hljs-string">""</span>: <span class="hljs-comment">// exit if user input is empty</span>
+                    isExit = <span class="hljs-keyword">true</span>;
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"add"</span>:
+                    <span class="hljs-comment">// todo: add code here</span>
+                <span class="hljs-keyword">default</span>:
+                    printError();
+            }
+        }
+        exit();
+
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printWelcome</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">"Welcome to TaskManager-Level1!"</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTasks</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; count; i++) {
+            System.out.println(<span class="hljs-string">"["</span> + (i + <span class="hljs-number">1</span>) + <span class="hljs-string">"] "</span> + tasks[i].getDescription());
+        }
+    }
+
+    <span class="hljs-comment">// todo: add missing methods</span>
+}
+
+</code></pre>
+                      </panel>
+                    </div>
+                  </question>
+                </div>
+              </panel>
+            </div>
+          </div>
         </panel>
       </div>
       <p></p>
@@ -9913,7 +9917,7 @@ max radius used so far : 12.0
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 09 Sep 2018 12:08:02 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 09 Sep 2018 12:34:02 GMT</small></div>
 </footer>
 </div>
 </body>

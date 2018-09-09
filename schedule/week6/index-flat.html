@@ -1322,6 +1322,909 @@
           <br>
           <panel type="seamless" header="##### Evidence for weekly LOs %%(for reference)%%">
             <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W5.2b</code></span></big> <span><span class="fas fa-trophy"></span> Can use the ArrayList class</span>
+              <span
+                class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                </span>
+                </span>
+                </span>
+                <div class="indented">
+                  <panel minimized="">
+                    <span slot="header" class="card-title">Details of the LO</span>
+                    <div>
+                      <div></div>
+                      <p></p>
+                      <p><span class="dimmed"><strong><span>C++ to Java → Collections →
+</span></strong>
+                        </span>
+                      </p>
+                      <div id="title-and-body">
+                        <div>
+                          <h4 id="the-arraylist-class">The <code>ArrayList</code> Class</h4>
+                        </div>
+                        <div id="main">
+                          <div>
+                            <p>The <code>ArrayList</code> class is a resizable-array implementation of the <code>List</code> interface. Unlike a normal <code>array</code>, an <code>ArrayList</code> can grow in size as you add more items to it. The example
+                              below illustrate some of the useful methods of the <code>ArrayList</code> class using an <code>ArrayList</code> of <code>String</code> objects.</p>
+                            <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.ArrayList;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayListDemo</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String args[])</span> </span>{
+        ArrayList&lt;String&gt; items = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+
+        System.out.println(<span class="hljs-string">"Before adding any items:"</span> + items);
+
+        items.add(<span class="hljs-string">"Apple"</span>);
+        items.add(<span class="hljs-string">"Box"</span>);
+        items.add(<span class="hljs-string">"Cup"</span>);
+        items.add(<span class="hljs-string">"Dart"</span>);
+        print(<span class="hljs-string">"After adding four items: "</span> + items);
+
+        items.remove(<span class="hljs-string">"Box"</span>); <span class="hljs-comment">// remove item "Box"</span>
+        print(<span class="hljs-string">"After removing Box: "</span> + items);
+
+        items.add(<span class="hljs-number">1</span>, <span class="hljs-string">"Banana"</span>); <span class="hljs-comment">// add "Banana" at index 1</span>
+        print(<span class="hljs-string">"After adding Banana: "</span> + items);
+
+        items.add(<span class="hljs-string">"Egg"</span>); <span class="hljs-comment">// add "Egg", will be added to the end</span>
+        items.add(<span class="hljs-string">"Cup"</span>); <span class="hljs-comment">// add another "Cup"</span>
+        print(<span class="hljs-string">"After adding Egg: "</span> + items);
+
+        print(<span class="hljs-string">"Number of items: "</span> + items.size());
+
+        print(<span class="hljs-string">"Index of Cup: "</span> + items.indexOf(<span class="hljs-string">"Cup"</span>));
+        print(<span class="hljs-string">"Index of Zebra: "</span> + items.indexOf(<span class="hljs-string">"Zebra"</span>));
+
+        print(<span class="hljs-string">"Item at index 3 is: "</span> + items.get(<span class="hljs-number">2</span>));
+
+        print(<span class="hljs-string">"Do we have a Box?: "</span> + items.contains(<span class="hljs-string">"Box"</span>));
+        print(<span class="hljs-string">"Do we have an Apple?: "</span> + items.contains(<span class="hljs-string">"Apple"</span>));
+
+        items.clear();
+        print(<span class="hljs-string">"After clearing: "</span> + items);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">(String text)</span> </span>{
+        System.out.println(text);
+    }
+}
+</code></pre>
+                            <p><span class="fas fa-arrow-down"></span></p>
+                            <pre class="hljs"><code>Before adding any items:[]
+After adding four items: [Apple, Box, Cup, Dart]
+After removing Box: [Apple, Cup, Dart]
+After adding Banana: [Apple, Banana, Cup, Dart]
+After adding Egg: [Apple, Banana, Cup, Dart, Egg, Cup]
+Number of items: 6
+Index of Cup: 2
+Index of Zebra: -1
+Item at index 3 is: Cup
+Do we have a Box?: false
+Do we have an Apple?: true
+After clearing: []
+</code></pre>
+                            <p><small>[<a href="https://repl.it/@seedu/Demo-ArrayList">Try the above code on Repl.it</a>]</small></p>
+                          </div>
+                          <div>
+                            <div>
+                              <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                                <div>
+                                  <ul>
+                                    <li><a href="https://docs.oracle.com/javase/9/docs/api/java/util/ArrayList.html"><code>ArrayList</code> API</a></li>
+                                    <li><a href="https://beginnersbook.com/2013/12/java-arraylist/">A tutorial on ArrayLists</a> from <a href="http://beginnersbook.com">beginnersbook.com</a></li>
+                                  </ul>
+                                </div>
+                              </panel>
+                            </div>
+                            <div>
+                              <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                                <div>
+                                  <div>
+                                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Numbers list">
+                                      <question>
+                                        <p>Add the missing methods to the class given below so that it produces the output given.</p>
+                                        <p>💡 Use an <code>ArrayList</code> to store the numbers.</p>
+                                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add your methods here</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        System.out.println(<span class="hljs-string">"Adding numbers to the list"</span>);
+        addNumber(<span class="hljs-number">3</span>);
+        addNumber(<span class="hljs-number">8</span>);
+        addNumber(<span class="hljs-number">24</span>);
+        System.out.println(<span class="hljs-string">"The total is: "</span> + getTotal());
+        System.out.println(<span class="hljs-string">"8 in the list : "</span> + isFound(<span class="hljs-number">8</span>) );
+        System.out.println(<span class="hljs-string">"5 in the list : "</span> + isFound(<span class="hljs-number">5</span>) );
+        removeNumber(<span class="hljs-number">8</span>);
+        System.out.println(<span class="hljs-string">"The total is: "</span> + getTotal());
+    }
+
+}
+</code></pre>
+                                        <p><span class="fas fa-arrow-down"></span></p>
+                                        <pre class="hljs"><code>Adding numbers to the list
+[3]
+[3, 8]
+[3, 8, 24]
+The total is: 35
+8 in the list : true
+5 in the list : false
+[3, 24]
+The total is: 27
+</code></pre>
+                                        <div slot="hint">
+                                          <p>Partial solution:</p>
+                                          <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.ArrayList;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> ArrayList&lt;Integer&gt; numbers = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addNumber</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span> </span>{
+        numbers.add(Integer.valueOf(i));
+        System.out.println(numbers);
+    }
+
+    <span class="hljs-comment">// ...</span>
+
+}
+</code></pre>
+                                        </div>
+                                      </question>
+                                    </panel>
+                                  </div>
+                                  <div>
+                                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> TaskManager Level 4">
+                                      <question>
+                                        <div id="body">
+                                          <panel header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TaskManager Level3 (for reference)%%">
+                                            <div>
+                                              <panel header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TaskManager Level2 (for reference)%%">
+                                                <div>
+                                                  <panel header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TaskManager Level1 (for reference)%%">
+                                                    <div>
+                                                      <question>
+                                                        <p>This is a good time to put together some of the topics you have learned so far to create something useful. In this exercise you will write a small <code>TaskManager</code> program that can store
+                                                          a list of tasks.</p>
+                                                        <ul>
+                                                          <li>It is a
+                                                            <tooltip content="Command Line Interface i.e., no Graphical User Interface">CLI</tooltip> program.</li>
+                                                          <li>In this version, the task list is not saved to the disk <span class="dimmed">i.e., the task list does not persist between multiple runs of the program</span></li>
+                                                        </ul>
+                                                        <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
+                                                        <pre class="hljs"><code>Welcome to TaskManager-Level1!
+Your task? add submit report
+Tasks in the list: 1
+Your task? add return library book
+Tasks in the list: 2
+Your task? add remind boss about meeting
+Tasks in the list: 3
+Your task? xyz
+Unknown command! please try again
+Your task? print
+[1] submit report
+[2] return library book
+[3] remind boss about meeting
+Your task? add set up meeting with boss
+Tasks in the list: 4
+Your task? print
+[1] submit report
+[2] return library book
+[3] remind boss about meeting
+[4] set up meeting with boss
+Your task? exit
+Bye!
+</code></pre>
+                                                        <p>Summary of behavior:</p>
+                                                        <ul>
+                                                          <li>Task Manager prompts for user input with the message <code>Your task?</code></li>
+                                                          <li><strong><code>add</code></strong> <code>task description</code>: adds the <code>task description</code> to the task list</li>
+                                                          <li><strong><code>print</code></strong>: prints the tasks added so far</li>
+                                                          <li><strong><code>exit</code></strong> or empty input: terminates the program</li>
+                                                        </ul>
+                                                        <p>If you are new to programming, we recommend you to build the program in small steps, as follows:</p>
+                                                        <ol>
+                                                          <li>Write a program that reads any user input, prints it back to the user, and exits.</li>
+                                                          <li>Update the program to do the above in a loop until user types <code>exit</code>.</li>
+                                                          <li>Add greetings printed at the start and the end.</li>
+                                                          <li>If the first word is not <code>add</code> or <code>exit</code>, print an error message. Suggestion: use a <code>switch</code> statement to choose between multiple actions.</li>
+                                                          <li>Create a <code>Task</code> class to represent tasks and add an <code>Task[]</code> to store tasks.</li>
+                                                          <li>If the first word of the user input is <code>add</code>, add the whole line (no need to omit the first word) to the task list.</li>
+                                                          <li>Update the code in the previous step to omit the word <code>add</code> from the task description.</li>
+                                                          <li>Add support for the <code>print</code> command.</li>
+                                                          <li>Add support for terminating if the user input is empty</li>
+                                                          <li>and so on ...</li>
+                                                        </ol>
+                                                        <div slot="hint">
+                                                          <panel type="seamless" header="Partial solution">
+                                                            <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">static</span> Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);
+    <span class="hljs-keyword">static</span> Task[] tasks = <span class="hljs-keyword">new</span> Task[<span class="hljs-number">100</span>];
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;  <span class="hljs-comment">// to keep track of number of tasks in the list</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        printWelcome();
+        String line;
+        <span class="hljs-keyword">boolean</span> isExit = <span class="hljs-keyword">false</span>;
+        <span class="hljs-keyword">while</span> (!isExit) {
+            line = getInput();
+            String command = line.split(<span class="hljs-string">" "</span>)[<span class="hljs-number">0</span>]; <span class="hljs-comment">//extract the first word of the user input</span>
+            <span class="hljs-keyword">switch</span> (command) {
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"exit"</span>:
+                <span class="hljs-keyword">case</span> <span class="hljs-string">""</span>: <span class="hljs-comment">// exit if user input is empty</span>
+                    isExit = <span class="hljs-keyword">true</span>;
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"add"</span>:
+                    <span class="hljs-comment">// todo: add code here</span>
+                <span class="hljs-keyword">default</span>:
+                    printError();
+            }
+        }
+        exit();
+
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printWelcome</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">"Welcome to TaskManager-Level1!"</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTasks</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; count; i++) {
+            System.out.println(<span class="hljs-string">"["</span> + (i + <span class="hljs-number">1</span>) + <span class="hljs-string">"] "</span> + tasks[i].getDescription());
+        }
+    }
+
+    <span class="hljs-comment">// todo: add missing methods</span>
+}
+
+</code></pre>
+                                                          </panel>
+                                                        </div>
+                                                      </question>
+                                                    </div>
+                                                  </panel>
+                                                  <p>This exercise continues from the <code>TaskManager Level1</code> exercise quoted above.</p>
+                                                  <p>Enhance your TaskManager program in the following ways.</p>
+                                                  <p><strong>A. Add support for two types of tasks:</strong></p>
+                                                  <ul>
+                                                    <li>ToDo : a task to do someday</li>
+                                                    <li>Deadline: a task to be done by a specific deadline</li>
+                                                  </ul>
+                                                  <p>Both types keeps an internal flag to indicate if the task is done. The flag is initially set to <code>false</code>.</p>
+                                                  <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
+                                                  <box>
+                                                    <div class="text-monospace">
+                                                      <p>Welcome to TaskManager-Level2!
+                                                        <br>Your task? <code>todo submit report</code>
+                                                        <br>Tasks in the list: 1
+                                                        <br>Your task? <code>deadline write report /by this Friday 4pm</code>
+                                                        <br>Tasks in the list: 2
+                                                        <br>Your task? <code>todo read textbook</code>
+                                                        <br>Tasks in the list: 3
+                                                        <br>Your task? <code>deadline return textbook /by Sunday</code>
+                                                        <br>Tasks in the list: 4
+                                                        <br>Your task? <code>print</code>
+                                                        <br>Tasks:
+                                                        <br>[1] description: submit report
+                                                        <br>    is done? No
+                                                        <br>[2] description: write report
+                                                        <br>    is done? No
+                                                        <br>do by: this Friday 4pm
+                                                        <br>[3] description: read textbook
+                                                        <br>    is done? No
+                                                        <br>[4] description: return textbook
+                                                        <br>    is done? No
+                                                        <br>    do by: Sunday
+                                                        <br>Your task? <code>exit</code>
+                                                        <br>Bye!</p>
+                                                    </div>
+                                                  </box>
+                                                  <p>Changes to the behavior:</p>
+                                                  <ul>
+                                                    <li><s><strong><code>add</code></strong> <code>task description</code>: adds the <code>task description</code> to the task list</s></li>
+                                                    <li><strong><code>todo</code></strong> <code>task description</code>: adds to the task list a todo task with the given <code>task description</code></li>
+                                                    <li><strong><code>deadline</code></strong> <code>task description /by deadline description</code>: adds to the task list a deadline task with the given <code>task description</code> and with the <code>deadline description</code></li>
+                                                  </ul>
+                                                  <p>Suggestion:</p>
+                                                  <ul>
+                                                    <li>Make the <code>Todo</code> class inherit from <code>Task</code> class, and make <code>Deadline</code> task inherit from <code>Todo</code> class.</li>
+                                                    <li>Use polymorphism to store both types of tasks in an array of <code>Task</code> type and use one loop to print both types of tasks.</li>
+                                                  </ul>
+                                                  <p><strong>B. Add support for <trigger trigger="click" for="modal:taskManagerLevel2-testingClis">semi-automated regression testing using input/output redirection</trigger></strong>.</p>
+                                                  <modal large="" title="Textbook »" id="modal:taskManagerLevel2-testingClis">
+                                                  
+                                                    <div>
+                                                      <div></div>
+                                                      <p></p>
+                                                      <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Test Automation →
+</span></strong>
+                                                        </span>
+                                                      </p>
+                                                      <div id="title-and-body">
+                                                        <div>
+                                                          <h4 id="automated-testing-of-cli-apps">Automated Testing of CLI Apps</h4>
+                                                        </div>
+                                                        <div id="main">
+                                                          <div>
+                                                            <p><strong>A simple way to semi-automate testing of a CLI(Command Line Interface) app is by using input/output re-direction.</strong></p>
+                                                            <ul>
+                                                              <li>First, we feed the app with a sequence of test inputs that is stored in a file while redirecting the output to another file.</li>
+                                                              <li>Next, we compare the actual output file with another file containing the expected output.</li>
+                                                            </ul>
+                                                            <p>Let us assume we are testing a CLI app called <code>AddressBook</code>. Here are the detailed steps:</p>
+                                                            <ol>
+                                                              <li>
+                                                                <p>Store the test input in the text file <code>input.txt</code>.</p>
+                                                                <panel header="%%<span class='fas fa-cube'></span> Example `input.txt`%%" type="seamless">
+                                                                  <pre class="hljs"><code>add Valid Name p/12345 valid@email.butNoPrefix
+add Valid Name 12345 e/valid@email.butPhonePrefixMissing
+</code></pre>
+                                                                </panel>
+                                                              </li>
+                                                              <li>
+                                                                <p>Store the output we expect from the SUT in another text file <code>expected.txt</code>.</p>
+                                                                <panel header="%%<span class='fas fa-cube'></span> Example `expected.txt`%%" type="seamless">
+                                                                  <pre class="hljs"><code>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]
+Invalid command format: add 
+
+Command: || [add Valid Name 12345 e/valid@email.butPhonePrefixMissing]
+Invalid command format: add 
+</code></pre>
+                                                                </panel>
+                                                              </li>
+                                                              <li>
+                                                                <p>Run the program as given below, which will redirect the text in <code>input.txt</code> as the input to <code>AddressBook</code> and similarly, will redirect the output of AddressBook to a
+                                                                  text file <code>output.txt</code>. <span class="dimmed">Note that this does not require any code changes to <code>AddressBook</code>.</span></p>
+                                                                <pre><code class="hljs sh">java AddressBook &lt; input.txt &gt; output.txt
+</code></pre>
+                                                                <ul>
+                                                                  <li>
+                                                                    <p>💡 The way to run a CLI program differs based on the language.<br> e.g., In Python, assuming the code is in <code>AddressBook.py</code> file, use the command<br>
+                                                                      <code>python AddressBook.py &lt; input.txt &gt; output.txt</code></p>
+                                                                  </li>
+                                                                  <li>
+                                                                    <p>💡 If you are using Windows, use a normal command window to run the app, not a Power Shell window.</p>
+                                                                  </li>
+                                                                </ul>
+                                                                <panel header="" minimized="">
+                                                                  <span slot="header" class="card-title"><span>More on the <code>&gt;</code> operator and the <code>&lt;</code> operator. <span class="badge badge-pill badge-secondary">tangential</span></span>
+                                                                  </span>
+                                                                  <p>A CLI program takes input from the keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using
+                                                                    <code>&lt;</code> and <code>&gt;</code> operators. For example, if you run <code>AddressBook</code> in a command window, the output will be shown in the console, but if you run it like
+                                                                    this,</p>
+                                                                  <pre><code class="hljs sh">java AddressBook &gt; output.txt 
+</code></pre>
+                                                                  <p>the Operating System then creates a file <code>output.txt</code> and stores the output in that file instead of displaying it in the console. No file I/O coding is required. Similarly, adding
+                                                                    <code>&lt; input.txt</code> (or any other filename) makes the OS redirect the contents of the file as input to the program, as if the user typed the content of the file one line at a
+                                                                    time.</p>
+                                                                  <tip-box>
+                                                                    <p><span class="fas fa-paperclip"></span> Resources:</p>
+                                                                    <ul>
+                                                                      <li><a href="http://technet.microsoft.com/en-us/library/bb490982.aspx">Using command redirection operators in Windows</a></li>
+                                                                    </ul>
+                                                                  </tip-box>
+                                                                  <p></p>
+                                                                </panel>
+                                                                <p></p>
+                                                              </li>
+                                                              <li>
+                                                                <p>Next, we compare <code>output.txt</code> with the <code>expected.txt</code>. This can be done using a utility such as Windows <code>FC</code> (i.e. File Compare) command, Unix <code>diff</code>                                                                  command, or a GUI tool such as <em>WinMerge</em>.</p>
+                                                                <pre class="hljs"><code>FC output.txt expected.txt
+</code></pre>
+                                                              </li>
+                                                            </ol>
+                                                            <p>Note that the above technique is only suitable when testing CLI apps, and only if the exact output can be predetermined. <span class="dimmed">If the output varies from one run to the other (e.g. it contains a time stamp), this technique will not work. In those cases we need more sophisticated ways of automating tests.</span></p>
+                                                            <div>
+                                                              <popover id="pop:cli" placement="top">
+                                                                <div slot="content">
+                                                                  <div>
+                                                                    <p><strong>CLI App</strong>: An application that has a <em>Command Line Interface</em>. i.e. user interacts with the app by typing in commands.</p>
+                                                                  </div>
+                                                                </div>
+                                                              </popover>
+                                                            </div>
+                                                          </div>
+                                                          <div></div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </modal>
+                                                  <panel type="seamless" header="Partial solution">
+                                                    <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">static</span> Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);
+    <span class="hljs-keyword">static</span> Task[] tasks = <span class="hljs-keyword">new</span> Task[<span class="hljs-number">100</span>];
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> taskCount = <span class="hljs-number">0</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        printWelcome();
+        String line;
+
+        <span class="hljs-keyword">boolean</span> isExit = <span class="hljs-keyword">false</span>;
+        <span class="hljs-keyword">while</span> (!isExit) {
+            line = getInput();
+            String command = line.split(<span class="hljs-string">" "</span>)[<span class="hljs-number">0</span>];
+            <span class="hljs-keyword">switch</span> (command) {
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"exit"</span>:
+                <span class="hljs-keyword">case</span> <span class="hljs-string">""</span>:
+                    isExit = <span class="hljs-keyword">true</span>;
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"todo"</span>:
+                    addTodo(line);
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"deadline"</span>:
+                    addDeadline(line);
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"print"</span>:
+                    printTasks();
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">default</span>:
+                    printError();
+            }
+        }
+        exit();
+
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addTodo</span><span class="hljs-params">(String line)</span> </span>{
+        tasks[taskCount] = <span class="hljs-keyword">new</span> Todo(line.substring(<span class="hljs-string">"todo"</span>.length()).trim());
+        taskCount++;
+        System.out.println(<span class="hljs-string">"Tasks in the list: "</span> + taskCount);
+    }
+
+  <span class="hljs-comment">// ...</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTasks</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">"Tasks:"</span>);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; taskCount; i++) {
+            System.out.println(<span class="hljs-string">"["</span> + (i + <span class="hljs-number">1</span>) + <span class="hljs-string">"] "</span> + tasks[i]);
+        }
+    }
+}
+</code></pre>
+                                                  </panel>
+                                                </div>
+                                              </panel>
+                                              <p>This exercise continues from the <code>TaskManager Level2</code> exercise quoted above.</p>
+                                              <p>Enhance the TaskManager to print an error message if a command is missing parts. Use exceptions so that error detection and printing of error message happen at different places of code and the error information
+                                                is passed between the two places using an Exception object.</p>
+                                              <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
+                                              <box>
+                                                <div class="text-monospace">
+                                                  <p>Welcome to TaskManager-Level3!
+                                                    <br>Your task? todo
+                                                    <br><mark>Error: Empty description for TODO</mark>
+                                                    <br>Your task? todo read book
+                                                    <br>Tasks in the list: 1
+                                                    <br>Your task? print
+                                                    <br>Tasks:
+                                                    <br>[1] description: read book
+                                                    <br> is done? No
+                                                    <br>Your task?</p>
+                                                </div>
+                                              </box>
+                                              <p>Suggested approach:</p>
+                                              <ul>
+                                                <li>Create a <code>TaskManagerException</code> class that inherits the <code>Exception</code> class. Override the constructor that takes a <code>String</code> parameter so that you can specify the error information
+                                                  when you create a <code>TaskManagerException</code> object.</li>
+                                                <li>Throw a new <code>TaskManagerException</code> object when you detect some necessary information is missing in the command.</li>
+                                                <li>Catch that exception somewhere else and print the message inside the exception object.</li>
+                                              </ul>
+                                              <panel type="seamless" header="Partial solution">
+                                                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TaskManagerException</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Exception</span></span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">TaskManagerException</span><span class="hljs-params">(String message)</span> </span>{
+        <span class="hljs-keyword">super</span>(message);
+    }
+}
+</code></pre>
+                                                <pre><code class="hljs java">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">// ...</span>
+        <span class="hljs-keyword">while</span> (!isExit) {
+            <span class="hljs-keyword">try</span> {
+                line = getInput();
+                String command = line.split(<span class="hljs-string">" "</span>)[<span class="hljs-number">0</span>];
+                <span class="hljs-keyword">switch</span> (command) {
+                    <span class="hljs-keyword">case</span> <span class="hljs-string">"todo"</span>:
+                        addTodo(line);
+                        <span class="hljs-keyword">break</span>;
+                    <span class="hljs-comment">// ...</span>
+                }
+            } <span class="hljs-keyword">catch</span> (TaskManagerException e) {
+                printError(e.getMessage());
+            }
+        }
+        <span class="hljs-comment">// ...</span>
+
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addTodo</span><span class="hljs-params">(String line)</span> <span class="hljs-keyword">throws</span> TaskManagerException </span>{
+        String description = line.substring(<span class="hljs-string">"todo"</span>.length()).trim();
+        <span class="hljs-keyword">if</span> (description.isEmpty()){
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> TaskManagerException(<span class="hljs-string">"Empty description for TODO"</span>);
+        }
+        <span class="hljs-comment">// ...</span>
+    }
+</code></pre>
+                                              </panel>
+                                            </div>
+                                          </panel>
+                                          <p>This exercise continues from the <code>TaskManager Level3</code> exercise quoted above.</p>
+                                          <p>Enhance the TaskManager in the following ways:</p>
+                                          <ol>
+                                            <li>Use a suitable Collection class to store tasks, instead of using an array.</li>
+                                            <li>Introduce a <code>done n</code> command to mark the task at index <code>n</code> as done.</li>
+                                          </ol>
+                                          <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
+                                          <box>
+                                            <div class="text-monospace">
+                                              <p>Welcome to TaskManager-Level4!
+                                                <br>Your task? todo read book
+                                                <br>Tasks in the list: 1
+                                                <br>Your task? deadline return book /by Friday
+                                                <br>Tasks in the list: 2
+                                                <br>Your task? print
+                                                <br>Tasks:
+                                                <br>[1] description: read book
+                                                <br> is done? No
+                                                <br>[2] description: return book
+                                                <br> is done? No
+                                                <br> do by: Friday
+                                                <br>Your task? <mark>done 1</mark>
+                                                <br>Tasks in the list: 2
+                                                <br>Your task? print
+                                                <br>Tasks:
+                                                <br>[1] description: read book
+                                                <br> is done? <mark>Yes</mark>
+                                                <br>[2] description: return book
+                                                <br> is done? No
+                                                <br> do by: Friday
+                                                <br>Your task?</p>
+                                            </div>
+                                          </box>
+                                          <p>Suggestions:</p>
+                                          <ul>
+                                            <li>Move the <code>isDone</code> variable to the <code>Task</code> class and provide a <code>setDone(boolean)</code> method.</li>
+                                          </ul>
+                                          <panel type="seamless" header="Partial solution">
+                                            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
+    <span class="hljs-keyword">protected</span> String description;
+    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">boolean</span> isDone;
+
+    <span class="hljs-comment">// ...</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setDone</span><span class="hljs-params">(<span class="hljs-keyword">boolean</span> isDone)</span></span>{
+        <span class="hljs-keyword">this</span>.isDone = isDone;
+    }
+}
+</code></pre>
+                                            <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.List;
+<span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">static</span> Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);
+    <span class="hljs-keyword">static</span> List&lt;Task&gt; tasks = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">// ...</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addTodo</span><span class="hljs-params">(String line)</span> <span class="hljs-keyword">throws</span> TaskManagerException </span>{
+        <span class="hljs-comment">//...</span>
+        tasks.add(<span class="hljs-keyword">new</span> Todo(description));
+        <span class="hljs-comment">//...</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">markAsDone</span><span class="hljs-params">(String line)</span> </span>{
+        <span class="hljs-keyword">int</span> index = Integer.parseInt(line.substring(<span class="hljs-string">"done"</span>.length()).trim());
+        tasks.get(index - <span class="hljs-number">1</span>).setDone(<span class="hljs-keyword">true</span>);
+        System.out.println(<span class="hljs-string">"Tasks in the list: "</span> + tasks.size());
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTasks</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// ...</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; tasks.size(); i++) {
+            System.out.println(<span class="hljs-string">"["</span> + (i + <span class="hljs-number">1</span>) + <span class="hljs-string">"] "</span> + tasks.get(i));
+        }
+    }
+}
+</code></pre>
+                                          </panel>
+                                        </div>
+                                      </question>
+                                    </panel>
+                                  </div>
+                                </div>
+                              </panel>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </panel><br><br>
+                  <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+                  </p>
+                  <div class="indented">
+                    <div>
+                      <p>To be able to do exercises such as these:</p>
+                      <div>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Numbers list">
+                          <question>
+                            <p>Add the missing methods to the class given below so that it produces the output given.</p>
+                            <p>💡 Use an <code>ArrayList</code> to store the numbers.</p>
+                            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add your methods here</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        System.out.println(<span class="hljs-string">"Adding numbers to the list"</span>);
+        addNumber(<span class="hljs-number">3</span>);
+        addNumber(<span class="hljs-number">8</span>);
+        addNumber(<span class="hljs-number">24</span>);
+        System.out.println(<span class="hljs-string">"The total is: "</span> + getTotal());
+        System.out.println(<span class="hljs-string">"8 in the list : "</span> + isFound(<span class="hljs-number">8</span>) );
+        System.out.println(<span class="hljs-string">"5 in the list : "</span> + isFound(<span class="hljs-number">5</span>) );
+        removeNumber(<span class="hljs-number">8</span>);
+        System.out.println(<span class="hljs-string">"The total is: "</span> + getTotal());
+    }
+
+}
+</code></pre>
+                            <p><span class="fas fa-arrow-down"></span></p>
+                            <pre class="hljs"><code>Adding numbers to the list
+[3]
+[3, 8]
+[3, 8, 24]
+The total is: 35
+8 in the list : true
+5 in the list : false
+[3, 24]
+The total is: 27
+</code></pre>
+                            <div slot="hint">
+                              <p>Partial solution:</p>
+                              <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.ArrayList;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> ArrayList&lt;Integer&gt; numbers = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addNumber</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span> </span>{
+        numbers.add(Integer.valueOf(i));
+        System.out.println(numbers);
+    }
+
+    <span class="hljs-comment">// ...</span>
+
+}
+</code></pre>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </panel>
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W5.2c</code></span></big> <span><span class="fas fa-trophy"></span> Can use the HashMap class</span>
+              <span
+                class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                </span>
+                </span>
+                <div class="indented">
+                  <panel minimized="">
+                    <span slot="header" class="card-title">Details of the LO</span>
+                    <div>
+                      <div></div>
+                      <p></p>
+                      <p><span class="dimmed"><strong><span>C++ to Java → Collections →
+</span></strong>
+                        </span>
+                      </p>
+                      <div id="title-and-body">
+                        <div>
+                          <h4 id="the-hashmap-class">The <code>HashMap</code> Class</h4>
+                        </div>
+                        <div id="main">
+                          <div>
+                            <p><code>HashMap</code> is an implementation of the <code>Map</code> interface. It allows you to store a collection of <em>key-value pairs</em>. The example below illustrates how to use a <code>HashMap&lt;String, Point&gt;</code>                              to maintain a list of coordinates and their identifiers e.g., the identifier <code>x1</code> is used to identify the point <code>0,0</code> where <code>x1</code> is the <em>key</em> and <code>0,0</code> is the <em>value</em>.</p>
+                            <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.awt.Point;
+<span class="hljs-keyword">import</span> java.util.HashMap;
+<span class="hljs-keyword">import</span> java.util.Map;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HashMapDemo</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        HashMap&lt;String, Point&gt; points = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+
+        <span class="hljs-comment">// put the key-value pairs in the HashMap</span>
+        points.put(<span class="hljs-string">"x1"</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>));
+        points.put(<span class="hljs-string">"x2"</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>, <span class="hljs-number">5</span>));
+        points.put(<span class="hljs-string">"x3"</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">5</span>, <span class="hljs-number">5</span>));
+        points.put(<span class="hljs-string">"x4"</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">5</span>, <span class="hljs-number">0</span>));
+
+        <span class="hljs-comment">// retrieve a value for a key using the get method</span>
+        print(<span class="hljs-string">"Coordinates of x1: "</span> + pointAsString(points.get(<span class="hljs-string">"x1"</span>)));
+
+        <span class="hljs-comment">// check if a key or a value exists</span>
+        print(<span class="hljs-string">"Key x1 exists? "</span> + points.containsKey(<span class="hljs-string">"x1"</span>));
+        print(<span class="hljs-string">"Key x1 exists? "</span> + points.containsKey(<span class="hljs-string">"y1"</span>));
+        print(<span class="hljs-string">"Value (0,0) exists? "</span> + points.containsValue(<span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)));
+        print(<span class="hljs-string">"Value (1,2) exists? "</span> + points.containsValue(<span class="hljs-keyword">new</span> Point(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)));
+
+        <span class="hljs-comment">// update the value of a key to a new value</span>
+        points.put(<span class="hljs-string">"x1"</span>, <span class="hljs-keyword">new</span> Point(-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>));
+
+        <span class="hljs-comment">// iterate over the entries</span>
+        <span class="hljs-keyword">for</span> (Map.Entry&lt;String, Point&gt; entry : points.entrySet()) {
+            print(entry.getKey() + <span class="hljs-string">" = "</span> + pointAsString(entry.getValue()));
+        }
+
+        print(<span class="hljs-string">"Number of keys: "</span> + points.size());
+        points.clear();
+        print(<span class="hljs-string">"Number of keys after clearing: "</span> + points.size());
+
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">pointAsString</span><span class="hljs-params">(Point p)</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"["</span> + p.x + <span class="hljs-string">","</span> + p.y + <span class="hljs-string">"]"</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">(String s)</span> </span>{
+        System.out.println(s);
+    }
+}
+</code></pre>
+                            <p><span class="fas fa-arrow-down"></span></p>
+                            <pre class="hljs"><code>Coordinates of x1: [0,0]
+Key x1 exists? true
+Key x1 exists? false
+Value (0,0) exists? true
+Value (1,2) exists? false
+x1 = [-1,-1]
+x2 = [0,5]
+x3 = [5,5]
+x4 = [5,0]
+Number of keys: 4
+Number of keys after clearing: 0
+</code></pre>
+                            <p><small>[<a href="https://repl.it/@seedu/Demo-HashMap">Try the above code on Repl.it</a>]</small></p>
+                          </div>
+                          <div>
+                            <div>
+                              <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                                <div>
+                                  <div>
+                                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Weekly roster">
+                                      <question>
+                                        <p>The class given below keeps track of how many people signup to attend an event on each day of the week. Add the missing methods so that it produces the output given.</p>
+                                        <p>💡 Use an <code>HashMap</code> to store the number of entries for each day.</p>
+                                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> HashMap&lt;String, Integer&gt; roster = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+
+    <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add your methods here</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        addToRoster(<span class="hljs-string">"Monday"</span>); <span class="hljs-comment">// i.e., one person signed up for Monday</span>
+        addToRoster(<span class="hljs-string">"Wednesday"</span>); <span class="hljs-comment">// i.e., one person signed up for Wednesday</span>
+        addToRoster(<span class="hljs-string">"Wednesday"</span>); <span class="hljs-comment">// i.e., another person signed up for Wednesday</span>
+        addToRoster(<span class="hljs-string">"Friday"</span>);
+        addToRoster(<span class="hljs-string">"Monday"</span>);
+        printRoster();
+    }
+
+}
+</code></pre>
+                                        <p><span class="fas fa-arrow-down"></span></p>
+                                        <pre class="hljs"><code>Monday =&gt; 2
+Friday =&gt; 1
+Wednesday =&gt; 2
+</code></pre>
+                                        <div slot="hint">
+                                          <p>Partial solution:</p>
+                                          <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.HashMap;
+<span class="hljs-keyword">import</span> java.util.Map;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> HashMap&lt;String, Integer&gt; roster = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addToRoster</span><span class="hljs-params">(String day)</span> </span>{
+        <span class="hljs-keyword">if</span> (roster.containsKey(day)){
+            Integer newValue = Integer.valueOf(roster.get(day).intValue() + <span class="hljs-number">1</span>);
+            roster.put(day, newValue);
+        } <span class="hljs-keyword">else</span> {
+            roster.put(day, Integer.valueOf(<span class="hljs-number">1</span>));
+        }
+    }
+
+    <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+                                        </div>
+                                      </question>
+                                    </panel>
+                                  </div>
+                                </div>
+                              </panel>
+                            </div>
+                            <div>
+                              <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                                <div>
+                                  <ul>
+                                    <li><a href="https://docs.oracle.com/javase/9/docs/api/java/util/HashMap.html"><code>HashMap</code> API</a></li>
+                                    <li><a href="https://www.journaldev.com/11560/java-hashmap">A tutorial on HashMaps</a> from <a href="http://journaldev.com">journaldev.com</a></li>
+                                  </ul>
+                                </div>
+                              </panel>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </panel><br><br>
+                  <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+                  </p>
+                  <div class="indented">
+                    <div>
+                      <p>To be able to do exercises such as these:</p>
+                      <div>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Weekly roster">
+                          <question>
+                            <p>The class given below keeps track of how many people signup to attend an event on each day of the week. Add the missing methods so that it produces the output given.</p>
+                            <p>💡 Use an <code>HashMap</code> to store the number of entries for each day.</p>
+                            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> HashMap&lt;String, Integer&gt; roster = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+
+    <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add your methods here</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        addToRoster(<span class="hljs-string">"Monday"</span>); <span class="hljs-comment">// i.e., one person signed up for Monday</span>
+        addToRoster(<span class="hljs-string">"Wednesday"</span>); <span class="hljs-comment">// i.e., one person signed up for Wednesday</span>
+        addToRoster(<span class="hljs-string">"Wednesday"</span>); <span class="hljs-comment">// i.e., another person signed up for Wednesday</span>
+        addToRoster(<span class="hljs-string">"Friday"</span>);
+        addToRoster(<span class="hljs-string">"Monday"</span>);
+        printRoster();
+    }
+
+}
+</code></pre>
+                            <p><span class="fas fa-arrow-down"></span></p>
+                            <pre class="hljs"><code>Monday =&gt; 2
+Friday =&gt; 1
+Wednesday =&gt; 2
+</code></pre>
+                            <div slot="hint">
+                              <p>Partial solution:</p>
+                              <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.HashMap;
+<span class="hljs-keyword">import</span> java.util.Map;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> HashMap&lt;String, Integer&gt; roster = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addToRoster</span><span class="hljs-params">(String day)</span> </span>{
+        <span class="hljs-keyword">if</span> (roster.containsKey(day)){
+            Integer newValue = Integer.valueOf(roster.get(day).intValue() + <span class="hljs-number">1</span>);
+            roster.put(day, newValue);
+        } <span class="hljs-keyword">else</span> {
+            roster.put(day, Integer.valueOf(<span class="hljs-number">1</span>));
+        }
+    }
+
+    <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </panel>
+            <panel type="seamless" expanded="">
               <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W5.3b</code></span></big> <span><span class="fas fa-trophy"></span> Can use basic-level class diagrams</span>
               <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -1526,6 +2429,852 @@
                   </div>
                 </div>
             </panel>
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W5.4</code></span></big> Project preparation: Can use exceptions and collections in a small project
+              <span
+                class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                </span>
+                </span>
+                <div class="indented">
+                  <div>
+                    <p>Enhance your TaskManager program as explained in the exercise below:</p>
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> TaskManager Level 3">
+                        <question>
+                          <div id="body">
+                            <panel header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TaskManager Level2 (for reference)%%">
+                              <div>
+                                <panel header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TaskManager Level1 (for reference)%%">
+                                  <div>
+                                    <question>
+                                      <p>This is a good time to put together some of the topics you have learned so far to create something useful. In this exercise you will write a small <code>TaskManager</code> program that can store a list of tasks.</p>
+                                      <ul>
+                                        <li>It is a
+                                          <tooltip content="Command Line Interface i.e., no Graphical User Interface">CLI</tooltip> program.</li>
+                                        <li>In this version, the task list is not saved to the disk <span class="dimmed">i.e., the task list does not persist between multiple runs of the program</span></li>
+                                      </ul>
+                                      <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
+                                      <pre class="hljs"><code>Welcome to TaskManager-Level1!
+Your task? add submit report
+Tasks in the list: 1
+Your task? add return library book
+Tasks in the list: 2
+Your task? add remind boss about meeting
+Tasks in the list: 3
+Your task? xyz
+Unknown command! please try again
+Your task? print
+[1] submit report
+[2] return library book
+[3] remind boss about meeting
+Your task? add set up meeting with boss
+Tasks in the list: 4
+Your task? print
+[1] submit report
+[2] return library book
+[3] remind boss about meeting
+[4] set up meeting with boss
+Your task? exit
+Bye!
+</code></pre>
+                                      <p>Summary of behavior:</p>
+                                      <ul>
+                                        <li>Task Manager prompts for user input with the message <code>Your task?</code></li>
+                                        <li><strong><code>add</code></strong> <code>task description</code>: adds the <code>task description</code> to the task list</li>
+                                        <li><strong><code>print</code></strong>: prints the tasks added so far</li>
+                                        <li><strong><code>exit</code></strong> or empty input: terminates the program</li>
+                                      </ul>
+                                      <p>If you are new to programming, we recommend you to build the program in small steps, as follows:</p>
+                                      <ol>
+                                        <li>Write a program that reads any user input, prints it back to the user, and exits.</li>
+                                        <li>Update the program to do the above in a loop until user types <code>exit</code>.</li>
+                                        <li>Add greetings printed at the start and the end.</li>
+                                        <li>If the first word is not <code>add</code> or <code>exit</code>, print an error message. Suggestion: use a <code>switch</code> statement to choose between multiple actions.</li>
+                                        <li>Create a <code>Task</code> class to represent tasks and add an <code>Task[]</code> to store tasks.</li>
+                                        <li>If the first word of the user input is <code>add</code>, add the whole line (no need to omit the first word) to the task list.</li>
+                                        <li>Update the code in the previous step to omit the word <code>add</code> from the task description.</li>
+                                        <li>Add support for the <code>print</code> command.</li>
+                                        <li>Add support for terminating if the user input is empty</li>
+                                        <li>and so on ...</li>
+                                      </ol>
+                                      <div slot="hint">
+                                        <panel type="seamless" header="Partial solution">
+                                          <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">static</span> Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);
+    <span class="hljs-keyword">static</span> Task[] tasks = <span class="hljs-keyword">new</span> Task[<span class="hljs-number">100</span>];
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;  <span class="hljs-comment">// to keep track of number of tasks in the list</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        printWelcome();
+        String line;
+        <span class="hljs-keyword">boolean</span> isExit = <span class="hljs-keyword">false</span>;
+        <span class="hljs-keyword">while</span> (!isExit) {
+            line = getInput();
+            String command = line.split(<span class="hljs-string">" "</span>)[<span class="hljs-number">0</span>]; <span class="hljs-comment">//extract the first word of the user input</span>
+            <span class="hljs-keyword">switch</span> (command) {
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"exit"</span>:
+                <span class="hljs-keyword">case</span> <span class="hljs-string">""</span>: <span class="hljs-comment">// exit if user input is empty</span>
+                    isExit = <span class="hljs-keyword">true</span>;
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"add"</span>:
+                    <span class="hljs-comment">// todo: add code here</span>
+                <span class="hljs-keyword">default</span>:
+                    printError();
+            }
+        }
+        exit();
+
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printWelcome</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">"Welcome to TaskManager-Level1!"</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTasks</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; count; i++) {
+            System.out.println(<span class="hljs-string">"["</span> + (i + <span class="hljs-number">1</span>) + <span class="hljs-string">"] "</span> + tasks[i].getDescription());
+        }
+    }
+
+    <span class="hljs-comment">// todo: add missing methods</span>
+}
+
+</code></pre>
+                                        </panel>
+                                      </div>
+                                    </question>
+                                  </div>
+                                </panel>
+                                <p>This exercise continues from the <code>TaskManager Level1</code> exercise quoted above.</p>
+                                <p>Enhance your TaskManager program in the following ways.</p>
+                                <p><strong>A. Add support for two types of tasks:</strong></p>
+                                <ul>
+                                  <li>ToDo : a task to do someday</li>
+                                  <li>Deadline: a task to be done by a specific deadline</li>
+                                </ul>
+                                <p>Both types keeps an internal flag to indicate if the task is done. The flag is initially set to <code>false</code>.</p>
+                                <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
+                                <box>
+                                  <div class="text-monospace">
+                                    <p>Welcome to TaskManager-Level2!
+                                      <br>Your task? <code>todo submit report</code>
+                                      <br>Tasks in the list: 1
+                                      <br>Your task? <code>deadline write report /by this Friday 4pm</code>
+                                      <br>Tasks in the list: 2
+                                      <br>Your task? <code>todo read textbook</code>
+                                      <br>Tasks in the list: 3
+                                      <br>Your task? <code>deadline return textbook /by Sunday</code>
+                                      <br>Tasks in the list: 4
+                                      <br>Your task? <code>print</code>
+                                      <br>Tasks:
+                                      <br>[1] description: submit report
+                                      <br>    is done? No
+                                      <br>[2] description: write report
+                                      <br>    is done? No
+                                      <br>do by: this Friday 4pm
+                                      <br>[3] description: read textbook
+                                      <br>    is done? No
+                                      <br>[4] description: return textbook
+                                      <br>    is done? No
+                                      <br>    do by: Sunday
+                                      <br>Your task? <code>exit</code>
+                                      <br>Bye!</p>
+                                  </div>
+                                </box>
+                                <p>Changes to the behavior:</p>
+                                <ul>
+                                  <li><s><strong><code>add</code></strong> <code>task description</code>: adds the <code>task description</code> to the task list</s></li>
+                                  <li><strong><code>todo</code></strong> <code>task description</code>: adds to the task list a todo task with the given <code>task description</code></li>
+                                  <li><strong><code>deadline</code></strong> <code>task description /by deadline description</code>: adds to the task list a deadline task with the given <code>task description</code> and with the <code>deadline description</code></li>
+                                </ul>
+                                <p>Suggestion:</p>
+                                <ul>
+                                  <li>Make the <code>Todo</code> class inherit from <code>Task</code> class, and make <code>Deadline</code> task inherit from <code>Todo</code> class.</li>
+                                  <li>Use polymorphism to store both types of tasks in an array of <code>Task</code> type and use one loop to print both types of tasks.</li>
+                                </ul>
+                                <p><strong>B. Add support for <trigger trigger="click" for="modal:taskManagerLevel2-testingClis">semi-automated regression testing using input/output redirection</trigger></strong>.</p>
+                                <modal large="" title="Textbook »" id="modal:taskManagerLevel2-testingClis">
+                                
+                                  <div>
+                                    <div></div>
+                                    <p></p>
+                                    <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Test Automation →
+</span></strong>
+                                      </span>
+                                    </p>
+                                    <div id="title-and-body">
+                                      <div>
+                                        <h4 id="automated-testing-of-cli-apps-2">Automated Testing of CLI Apps</h4>
+                                      </div>
+                                      <div id="main">
+                                        <div>
+                                          <p><strong>A simple way to semi-automate testing of a CLI(Command Line Interface) app is by using input/output re-direction.</strong></p>
+                                          <ul>
+                                            <li>First, we feed the app with a sequence of test inputs that is stored in a file while redirecting the output to another file.</li>
+                                            <li>Next, we compare the actual output file with another file containing the expected output.</li>
+                                          </ul>
+                                          <p>Let us assume we are testing a CLI app called <code>AddressBook</code>. Here are the detailed steps:</p>
+                                          <ol>
+                                            <li>
+                                              <p>Store the test input in the text file <code>input.txt</code>.</p>
+                                              <panel header="%%<span class='fas fa-cube'></span> Example `input.txt`%%" type="seamless">
+                                                <pre class="hljs"><code>add Valid Name p/12345 valid@email.butNoPrefix
+add Valid Name 12345 e/valid@email.butPhonePrefixMissing
+</code></pre>
+                                              </panel>
+                                            </li>
+                                            <li>
+                                              <p>Store the output we expect from the SUT in another text file <code>expected.txt</code>.</p>
+                                              <panel header="%%<span class='fas fa-cube'></span> Example `expected.txt`%%" type="seamless">
+                                                <pre class="hljs"><code>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]
+Invalid command format: add 
+
+Command: || [add Valid Name 12345 e/valid@email.butPhonePrefixMissing]
+Invalid command format: add 
+</code></pre>
+                                              </panel>
+                                            </li>
+                                            <li>
+                                              <p>Run the program as given below, which will redirect the text in <code>input.txt</code> as the input to <code>AddressBook</code> and similarly, will redirect the output of AddressBook to a text file <code>output.txt</code>.
+                                                <span class="dimmed">Note that this does not require any code changes to <code>AddressBook</code>.</span></p>
+                                              <pre><code class="hljs sh">java AddressBook &lt; input.txt &gt; output.txt
+</code></pre>
+                                              <ul>
+                                                <li>
+                                                  <p>💡 The way to run a CLI program differs based on the language.<br> e.g., In Python, assuming the code is in <code>AddressBook.py</code> file, use the command<br>
+                                                    <code>python AddressBook.py &lt; input.txt &gt; output.txt</code></p>
+                                                </li>
+                                                <li>
+                                                  <p>💡 If you are using Windows, use a normal command window to run the app, not a Power Shell window.</p>
+                                                </li>
+                                              </ul>
+                                              <panel header="" minimized="">
+                                                <span slot="header" class="card-title"><span>More on the <code>&gt;</code> operator and the <code>&lt;</code> operator. <span class="badge badge-pill badge-secondary">tangential</span></span>
+                                                </span>
+                                                <p>A CLI program takes input from the keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using <code>&lt;</code>                                                  and <code>&gt;</code> operators. For example, if you run <code>AddressBook</code> in a command window, the output will be shown in the console, but if you run it like this,</p>
+                                                <pre><code class="hljs sh">java AddressBook &gt; output.txt 
+</code></pre>
+                                                <p>the Operating System then creates a file <code>output.txt</code> and stores the output in that file instead of displaying it in the console. No file I/O coding is required. Similarly, adding <code>&lt; input.txt</code>                                                  (or any other filename) makes the OS redirect the contents of the file as input to the program, as if the user typed the content of the file one line at a time.</p>
+                                                <tip-box>
+                                                  <p><span class="fas fa-paperclip"></span> Resources:</p>
+                                                  <ul>
+                                                    <li><a href="http://technet.microsoft.com/en-us/library/bb490982.aspx">Using command redirection operators in Windows</a></li>
+                                                  </ul>
+                                                </tip-box>
+                                                <p></p>
+                                              </panel>
+                                              <p></p>
+                                            </li>
+                                            <li>
+                                              <p>Next, we compare <code>output.txt</code> with the <code>expected.txt</code>. This can be done using a utility such as Windows <code>FC</code> (i.e. File Compare) command, Unix <code>diff</code> command, or
+                                                a GUI tool such as <em>WinMerge</em>.</p>
+                                              <pre class="hljs"><code>FC output.txt expected.txt
+</code></pre>
+                                            </li>
+                                          </ol>
+                                          <p>Note that the above technique is only suitable when testing CLI apps, and only if the exact output can be predetermined. <span class="dimmed">If the output varies from one run to the other (e.g. it contains a time stamp), this technique will not work. In those cases we need more sophisticated ways of automating tests.</span></p>
+                                          <div>
+                                            <popover id="pop:cli" placement="top">
+                                              <div slot="content">
+                                                <div>
+                                                  <p><strong>CLI App</strong>: An application that has a <em>Command Line Interface</em>. i.e. user interacts with the app by typing in commands.</p>
+                                                </div>
+                                              </div>
+                                            </popover>
+                                          </div>
+                                        </div>
+                                        <div></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </modal>
+                                <panel type="seamless" header="Partial solution">
+                                  <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">static</span> Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);
+    <span class="hljs-keyword">static</span> Task[] tasks = <span class="hljs-keyword">new</span> Task[<span class="hljs-number">100</span>];
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> taskCount = <span class="hljs-number">0</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        printWelcome();
+        String line;
+
+        <span class="hljs-keyword">boolean</span> isExit = <span class="hljs-keyword">false</span>;
+        <span class="hljs-keyword">while</span> (!isExit) {
+            line = getInput();
+            String command = line.split(<span class="hljs-string">" "</span>)[<span class="hljs-number">0</span>];
+            <span class="hljs-keyword">switch</span> (command) {
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"exit"</span>:
+                <span class="hljs-keyword">case</span> <span class="hljs-string">""</span>:
+                    isExit = <span class="hljs-keyword">true</span>;
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"todo"</span>:
+                    addTodo(line);
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"deadline"</span>:
+                    addDeadline(line);
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"print"</span>:
+                    printTasks();
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">default</span>:
+                    printError();
+            }
+        }
+        exit();
+
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addTodo</span><span class="hljs-params">(String line)</span> </span>{
+        tasks[taskCount] = <span class="hljs-keyword">new</span> Todo(line.substring(<span class="hljs-string">"todo"</span>.length()).trim());
+        taskCount++;
+        System.out.println(<span class="hljs-string">"Tasks in the list: "</span> + taskCount);
+    }
+
+  <span class="hljs-comment">// ...</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTasks</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">"Tasks:"</span>);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; taskCount; i++) {
+            System.out.println(<span class="hljs-string">"["</span> + (i + <span class="hljs-number">1</span>) + <span class="hljs-string">"] "</span> + tasks[i]);
+        }
+    }
+}
+</code></pre>
+                                </panel>
+                              </div>
+                            </panel>
+                            <p>This exercise continues from the <code>TaskManager Level2</code> exercise quoted above.</p>
+                            <p>Enhance the TaskManager to print an error message if a command is missing parts. Use exceptions so that error detection and printing of error message happen at different places of code and the error information is passed between
+                              the two places using an Exception object.</p>
+                            <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
+                            <box>
+                              <div class="text-monospace">
+                                <p>Welcome to TaskManager-Level3!
+                                  <br>Your task? todo
+                                  <br><mark>Error: Empty description for TODO</mark>
+                                  <br>Your task? todo read book
+                                  <br>Tasks in the list: 1
+                                  <br>Your task? print
+                                  <br>Tasks:
+                                  <br>[1] description: read book
+                                  <br> is done? No
+                                  <br>Your task?</p>
+                              </div>
+                            </box>
+                            <p>Suggested approach:</p>
+                            <ul>
+                              <li>Create a <code>TaskManagerException</code> class that inherits the <code>Exception</code> class. Override the constructor that takes a <code>String</code> parameter so that you can specify the error information when you create
+                                a <code>TaskManagerException</code> object.</li>
+                              <li>Throw a new <code>TaskManagerException</code> object when you detect some necessary information is missing in the command.</li>
+                              <li>Catch that exception somewhere else and print the message inside the exception object.</li>
+                            </ul>
+                            <panel type="seamless" header="Partial solution">
+                              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TaskManagerException</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Exception</span></span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">TaskManagerException</span><span class="hljs-params">(String message)</span> </span>{
+        <span class="hljs-keyword">super</span>(message);
+    }
+}
+</code></pre>
+                              <pre><code class="hljs java">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">// ...</span>
+        <span class="hljs-keyword">while</span> (!isExit) {
+            <span class="hljs-keyword">try</span> {
+                line = getInput();
+                String command = line.split(<span class="hljs-string">" "</span>)[<span class="hljs-number">0</span>];
+                <span class="hljs-keyword">switch</span> (command) {
+                    <span class="hljs-keyword">case</span> <span class="hljs-string">"todo"</span>:
+                        addTodo(line);
+                        <span class="hljs-keyword">break</span>;
+                    <span class="hljs-comment">// ...</span>
+                }
+            } <span class="hljs-keyword">catch</span> (TaskManagerException e) {
+                printError(e.getMessage());
+            }
+        }
+        <span class="hljs-comment">// ...</span>
+
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addTodo</span><span class="hljs-params">(String line)</span> <span class="hljs-keyword">throws</span> TaskManagerException </span>{
+        String description = line.substring(<span class="hljs-string">"todo"</span>.length()).trim();
+        <span class="hljs-keyword">if</span> (description.isEmpty()){
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> TaskManagerException(<span class="hljs-string">"Empty description for TODO"</span>);
+        }
+        <span class="hljs-comment">// ...</span>
+    }
+</code></pre>
+                            </panel>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> TaskManager Level 4">
+                        <question>
+                          <div id="body">
+                            <panel header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TaskManager Level3 (for reference)%%">
+                              <div>
+                                <panel header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TaskManager Level2 (for reference)%%">
+                                  <div>
+                                    <panel header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TaskManager Level1 (for reference)%%">
+                                      <div>
+                                        <question>
+                                          <p>This is a good time to put together some of the topics you have learned so far to create something useful. In this exercise you will write a small <code>TaskManager</code> program that can store a list of tasks.</p>
+                                          <ul>
+                                            <li>It is a
+                                              <tooltip content="Command Line Interface i.e., no Graphical User Interface">CLI</tooltip> program.</li>
+                                            <li>In this version, the task list is not saved to the disk <span class="dimmed">i.e., the task list does not persist between multiple runs of the program</span></li>
+                                          </ul>
+                                          <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
+                                          <pre class="hljs"><code>Welcome to TaskManager-Level1!
+Your task? add submit report
+Tasks in the list: 1
+Your task? add return library book
+Tasks in the list: 2
+Your task? add remind boss about meeting
+Tasks in the list: 3
+Your task? xyz
+Unknown command! please try again
+Your task? print
+[1] submit report
+[2] return library book
+[3] remind boss about meeting
+Your task? add set up meeting with boss
+Tasks in the list: 4
+Your task? print
+[1] submit report
+[2] return library book
+[3] remind boss about meeting
+[4] set up meeting with boss
+Your task? exit
+Bye!
+</code></pre>
+                                          <p>Summary of behavior:</p>
+                                          <ul>
+                                            <li>Task Manager prompts for user input with the message <code>Your task?</code></li>
+                                            <li><strong><code>add</code></strong> <code>task description</code>: adds the <code>task description</code> to the task list</li>
+                                            <li><strong><code>print</code></strong>: prints the tasks added so far</li>
+                                            <li><strong><code>exit</code></strong> or empty input: terminates the program</li>
+                                          </ul>
+                                          <p>If you are new to programming, we recommend you to build the program in small steps, as follows:</p>
+                                          <ol>
+                                            <li>Write a program that reads any user input, prints it back to the user, and exits.</li>
+                                            <li>Update the program to do the above in a loop until user types <code>exit</code>.</li>
+                                            <li>Add greetings printed at the start and the end.</li>
+                                            <li>If the first word is not <code>add</code> or <code>exit</code>, print an error message. Suggestion: use a <code>switch</code> statement to choose between multiple actions.</li>
+                                            <li>Create a <code>Task</code> class to represent tasks and add an <code>Task[]</code> to store tasks.</li>
+                                            <li>If the first word of the user input is <code>add</code>, add the whole line (no need to omit the first word) to the task list.</li>
+                                            <li>Update the code in the previous step to omit the word <code>add</code> from the task description.</li>
+                                            <li>Add support for the <code>print</code> command.</li>
+                                            <li>Add support for terminating if the user input is empty</li>
+                                            <li>and so on ...</li>
+                                          </ol>
+                                          <div slot="hint">
+                                            <panel type="seamless" header="Partial solution">
+                                              <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">static</span> Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);
+    <span class="hljs-keyword">static</span> Task[] tasks = <span class="hljs-keyword">new</span> Task[<span class="hljs-number">100</span>];
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;  <span class="hljs-comment">// to keep track of number of tasks in the list</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        printWelcome();
+        String line;
+        <span class="hljs-keyword">boolean</span> isExit = <span class="hljs-keyword">false</span>;
+        <span class="hljs-keyword">while</span> (!isExit) {
+            line = getInput();
+            String command = line.split(<span class="hljs-string">" "</span>)[<span class="hljs-number">0</span>]; <span class="hljs-comment">//extract the first word of the user input</span>
+            <span class="hljs-keyword">switch</span> (command) {
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"exit"</span>:
+                <span class="hljs-keyword">case</span> <span class="hljs-string">""</span>: <span class="hljs-comment">// exit if user input is empty</span>
+                    isExit = <span class="hljs-keyword">true</span>;
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"add"</span>:
+                    <span class="hljs-comment">// todo: add code here</span>
+                <span class="hljs-keyword">default</span>:
+                    printError();
+            }
+        }
+        exit();
+
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printWelcome</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">"Welcome to TaskManager-Level1!"</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTasks</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; count; i++) {
+            System.out.println(<span class="hljs-string">"["</span> + (i + <span class="hljs-number">1</span>) + <span class="hljs-string">"] "</span> + tasks[i].getDescription());
+        }
+    }
+
+    <span class="hljs-comment">// todo: add missing methods</span>
+}
+
+</code></pre>
+                                            </panel>
+                                          </div>
+                                        </question>
+                                      </div>
+                                    </panel>
+                                    <p>This exercise continues from the <code>TaskManager Level1</code> exercise quoted above.</p>
+                                    <p>Enhance your TaskManager program in the following ways.</p>
+                                    <p><strong>A. Add support for two types of tasks:</strong></p>
+                                    <ul>
+                                      <li>ToDo : a task to do someday</li>
+                                      <li>Deadline: a task to be done by a specific deadline</li>
+                                    </ul>
+                                    <p>Both types keeps an internal flag to indicate if the task is done. The flag is initially set to <code>false</code>.</p>
+                                    <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
+                                    <box>
+                                      <div class="text-monospace">
+                                        <p>Welcome to TaskManager-Level2!
+                                          <br>Your task? <code>todo submit report</code>
+                                          <br>Tasks in the list: 1
+                                          <br>Your task? <code>deadline write report /by this Friday 4pm</code>
+                                          <br>Tasks in the list: 2
+                                          <br>Your task? <code>todo read textbook</code>
+                                          <br>Tasks in the list: 3
+                                          <br>Your task? <code>deadline return textbook /by Sunday</code>
+                                          <br>Tasks in the list: 4
+                                          <br>Your task? <code>print</code>
+                                          <br>Tasks:
+                                          <br>[1] description: submit report
+                                          <br>    is done? No
+                                          <br>[2] description: write report
+                                          <br>    is done? No
+                                          <br>do by: this Friday 4pm
+                                          <br>[3] description: read textbook
+                                          <br>    is done? No
+                                          <br>[4] description: return textbook
+                                          <br>    is done? No
+                                          <br>    do by: Sunday
+                                          <br>Your task? <code>exit</code>
+                                          <br>Bye!</p>
+                                      </div>
+                                    </box>
+                                    <p>Changes to the behavior:</p>
+                                    <ul>
+                                      <li><s><strong><code>add</code></strong> <code>task description</code>: adds the <code>task description</code> to the task list</s></li>
+                                      <li><strong><code>todo</code></strong> <code>task description</code>: adds to the task list a todo task with the given <code>task description</code></li>
+                                      <li><strong><code>deadline</code></strong> <code>task description /by deadline description</code>: adds to the task list a deadline task with the given <code>task description</code> and with the <code>deadline description</code></li>
+                                    </ul>
+                                    <p>Suggestion:</p>
+                                    <ul>
+                                      <li>Make the <code>Todo</code> class inherit from <code>Task</code> class, and make <code>Deadline</code> task inherit from <code>Todo</code> class.</li>
+                                      <li>Use polymorphism to store both types of tasks in an array of <code>Task</code> type and use one loop to print both types of tasks.</li>
+                                    </ul>
+                                    <p><strong>B. Add support for <trigger trigger="click" for="modal:taskManagerLevel2-testingClis">semi-automated regression testing using input/output redirection</trigger></strong>.</p>
+                                    <modal large="" title="Textbook »" id="modal:taskManagerLevel2-testingClis">
+                                    
+                                      <div>
+                                        <div></div>
+                                        <p></p>
+                                        <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Test Automation →
+</span></strong>
+                                          </span>
+                                        </p>
+                                        <div id="title-and-body">
+                                          <div>
+                                            <h4 id="automated-testing-of-cli-apps-3">Automated Testing of CLI Apps</h4>
+                                          </div>
+                                          <div id="main">
+                                            <div>
+                                              <p><strong>A simple way to semi-automate testing of a CLI(Command Line Interface) app is by using input/output re-direction.</strong></p>
+                                              <ul>
+                                                <li>First, we feed the app with a sequence of test inputs that is stored in a file while redirecting the output to another file.</li>
+                                                <li>Next, we compare the actual output file with another file containing the expected output.</li>
+                                              </ul>
+                                              <p>Let us assume we are testing a CLI app called <code>AddressBook</code>. Here are the detailed steps:</p>
+                                              <ol>
+                                                <li>
+                                                  <p>Store the test input in the text file <code>input.txt</code>.</p>
+                                                  <panel header="%%<span class='fas fa-cube'></span> Example `input.txt`%%" type="seamless">
+                                                    <pre class="hljs"><code>add Valid Name p/12345 valid@email.butNoPrefix
+add Valid Name 12345 e/valid@email.butPhonePrefixMissing
+</code></pre>
+                                                  </panel>
+                                                </li>
+                                                <li>
+                                                  <p>Store the output we expect from the SUT in another text file <code>expected.txt</code>.</p>
+                                                  <panel header="%%<span class='fas fa-cube'></span> Example `expected.txt`%%" type="seamless">
+                                                    <pre class="hljs"><code>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]
+Invalid command format: add 
+
+Command: || [add Valid Name 12345 e/valid@email.butPhonePrefixMissing]
+Invalid command format: add 
+</code></pre>
+                                                  </panel>
+                                                </li>
+                                                <li>
+                                                  <p>Run the program as given below, which will redirect the text in <code>input.txt</code> as the input to <code>AddressBook</code> and similarly, will redirect the output of AddressBook to a text file <code>output.txt</code>.
+                                                    <span class="dimmed">Note that this does not require any code changes to <code>AddressBook</code>.</span></p>
+                                                  <pre><code class="hljs sh">java AddressBook &lt; input.txt &gt; output.txt
+</code></pre>
+                                                  <ul>
+                                                    <li>
+                                                      <p>💡 The way to run a CLI program differs based on the language.<br> e.g., In Python, assuming the code is in <code>AddressBook.py</code> file, use the command<br>
+                                                        <code>python AddressBook.py &lt; input.txt &gt; output.txt</code></p>
+                                                    </li>
+                                                    <li>
+                                                      <p>💡 If you are using Windows, use a normal command window to run the app, not a Power Shell window.</p>
+                                                    </li>
+                                                  </ul>
+                                                  <panel header="" minimized="">
+                                                    <span slot="header" class="card-title"><span>More on the <code>&gt;</code> operator and the <code>&lt;</code> operator. <span class="badge badge-pill badge-secondary">tangential</span></span>
+                                                    </span>
+                                                    <p>A CLI program takes input from the keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using <code>&lt;</code>                                                      and <code>&gt;</code> operators. For example, if you run <code>AddressBook</code> in a command window, the output will be shown in the console, but if you run it like this,</p>
+                                                    <pre><code class="hljs sh">java AddressBook &gt; output.txt 
+</code></pre>
+                                                    <p>the Operating System then creates a file <code>output.txt</code> and stores the output in that file instead of displaying it in the console. No file I/O coding is required. Similarly, adding <code>&lt; input.txt</code>                                                      (or any other filename) makes the OS redirect the contents of the file as input to the program, as if the user typed the content of the file one line at a time.</p>
+                                                    <tip-box>
+                                                      <p><span class="fas fa-paperclip"></span> Resources:</p>
+                                                      <ul>
+                                                        <li><a href="http://technet.microsoft.com/en-us/library/bb490982.aspx">Using command redirection operators in Windows</a></li>
+                                                      </ul>
+                                                    </tip-box>
+                                                    <p></p>
+                                                  </panel>
+                                                  <p></p>
+                                                </li>
+                                                <li>
+                                                  <p>Next, we compare <code>output.txt</code> with the <code>expected.txt</code>. This can be done using a utility such as Windows <code>FC</code> (i.e. File Compare) command, Unix <code>diff</code> command,
+                                                    or a GUI tool such as <em>WinMerge</em>.</p>
+                                                  <pre class="hljs"><code>FC output.txt expected.txt
+</code></pre>
+                                                </li>
+                                              </ol>
+                                              <p>Note that the above technique is only suitable when testing CLI apps, and only if the exact output can be predetermined. <span class="dimmed">If the output varies from one run to the other (e.g. it contains a time stamp), this technique will not work. In those cases we need more sophisticated ways of automating tests.</span></p>
+                                              <div>
+                                                <popover id="pop:cli" placement="top">
+                                                  <div slot="content">
+                                                    <div>
+                                                      <p><strong>CLI App</strong>: An application that has a <em>Command Line Interface</em>. i.e. user interacts with the app by typing in commands.</p>
+                                                    </div>
+                                                  </div>
+                                                </popover>
+                                              </div>
+                                            </div>
+                                            <div></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </modal>
+                                    <panel type="seamless" header="Partial solution">
+                                      <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">static</span> Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);
+    <span class="hljs-keyword">static</span> Task[] tasks = <span class="hljs-keyword">new</span> Task[<span class="hljs-number">100</span>];
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> taskCount = <span class="hljs-number">0</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        printWelcome();
+        String line;
+
+        <span class="hljs-keyword">boolean</span> isExit = <span class="hljs-keyword">false</span>;
+        <span class="hljs-keyword">while</span> (!isExit) {
+            line = getInput();
+            String command = line.split(<span class="hljs-string">" "</span>)[<span class="hljs-number">0</span>];
+            <span class="hljs-keyword">switch</span> (command) {
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"exit"</span>:
+                <span class="hljs-keyword">case</span> <span class="hljs-string">""</span>:
+                    isExit = <span class="hljs-keyword">true</span>;
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"todo"</span>:
+                    addTodo(line);
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"deadline"</span>:
+                    addDeadline(line);
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"print"</span>:
+                    printTasks();
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">default</span>:
+                    printError();
+            }
+        }
+        exit();
+
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addTodo</span><span class="hljs-params">(String line)</span> </span>{
+        tasks[taskCount] = <span class="hljs-keyword">new</span> Todo(line.substring(<span class="hljs-string">"todo"</span>.length()).trim());
+        taskCount++;
+        System.out.println(<span class="hljs-string">"Tasks in the list: "</span> + taskCount);
+    }
+
+  <span class="hljs-comment">// ...</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTasks</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">"Tasks:"</span>);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; taskCount; i++) {
+            System.out.println(<span class="hljs-string">"["</span> + (i + <span class="hljs-number">1</span>) + <span class="hljs-string">"] "</span> + tasks[i]);
+        }
+    }
+}
+</code></pre>
+                                    </panel>
+                                  </div>
+                                </panel>
+                                <p>This exercise continues from the <code>TaskManager Level2</code> exercise quoted above.</p>
+                                <p>Enhance the TaskManager to print an error message if a command is missing parts. Use exceptions so that error detection and printing of error message happen at different places of code and the error information is passed
+                                  between the two places using an Exception object.</p>
+                                <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
+                                <box>
+                                  <div class="text-monospace">
+                                    <p>Welcome to TaskManager-Level3!
+                                      <br>Your task? todo
+                                      <br><mark>Error: Empty description for TODO</mark>
+                                      <br>Your task? todo read book
+                                      <br>Tasks in the list: 1
+                                      <br>Your task? print
+                                      <br>Tasks:
+                                      <br>[1] description: read book
+                                      <br> is done? No
+                                      <br>Your task?</p>
+                                  </div>
+                                </box>
+                                <p>Suggested approach:</p>
+                                <ul>
+                                  <li>Create a <code>TaskManagerException</code> class that inherits the <code>Exception</code> class. Override the constructor that takes a <code>String</code> parameter so that you can specify the error information when you
+                                    create a <code>TaskManagerException</code> object.</li>
+                                  <li>Throw a new <code>TaskManagerException</code> object when you detect some necessary information is missing in the command.</li>
+                                  <li>Catch that exception somewhere else and print the message inside the exception object.</li>
+                                </ul>
+                                <panel type="seamless" header="Partial solution">
+                                  <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TaskManagerException</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Exception</span></span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">TaskManagerException</span><span class="hljs-params">(String message)</span> </span>{
+        <span class="hljs-keyword">super</span>(message);
+    }
+}
+</code></pre>
+                                  <pre><code class="hljs java">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">// ...</span>
+        <span class="hljs-keyword">while</span> (!isExit) {
+            <span class="hljs-keyword">try</span> {
+                line = getInput();
+                String command = line.split(<span class="hljs-string">" "</span>)[<span class="hljs-number">0</span>];
+                <span class="hljs-keyword">switch</span> (command) {
+                    <span class="hljs-keyword">case</span> <span class="hljs-string">"todo"</span>:
+                        addTodo(line);
+                        <span class="hljs-keyword">break</span>;
+                    <span class="hljs-comment">// ...</span>
+                }
+            } <span class="hljs-keyword">catch</span> (TaskManagerException e) {
+                printError(e.getMessage());
+            }
+        }
+        <span class="hljs-comment">// ...</span>
+
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addTodo</span><span class="hljs-params">(String line)</span> <span class="hljs-keyword">throws</span> TaskManagerException </span>{
+        String description = line.substring(<span class="hljs-string">"todo"</span>.length()).trim();
+        <span class="hljs-keyword">if</span> (description.isEmpty()){
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> TaskManagerException(<span class="hljs-string">"Empty description for TODO"</span>);
+        }
+        <span class="hljs-comment">// ...</span>
+    }
+</code></pre>
+                                </panel>
+                              </div>
+                            </panel>
+                            <p>This exercise continues from the <code>TaskManager Level3</code> exercise quoted above.</p>
+                            <p>Enhance the TaskManager in the following ways:</p>
+                            <ol>
+                              <li>Use a suitable Collection class to store tasks, instead of using an array.</li>
+                              <li>Introduce a <code>done n</code> command to mark the task at index <code>n</code> as done.</li>
+                            </ol>
+                            <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
+                            <box>
+                              <div class="text-monospace">
+                                <p>Welcome to TaskManager-Level4!
+                                  <br>Your task? todo read book
+                                  <br>Tasks in the list: 1
+                                  <br>Your task? deadline return book /by Friday
+                                  <br>Tasks in the list: 2
+                                  <br>Your task? print
+                                  <br>Tasks:
+                                  <br>[1] description: read book
+                                  <br> is done? No
+                                  <br>[2] description: return book
+                                  <br> is done? No
+                                  <br> do by: Friday
+                                  <br>Your task? <mark>done 1</mark>
+                                  <br>Tasks in the list: 2
+                                  <br>Your task? print
+                                  <br>Tasks:
+                                  <br>[1] description: read book
+                                  <br> is done? <mark>Yes</mark>
+                                  <br>[2] description: return book
+                                  <br> is done? No
+                                  <br> do by: Friday
+                                  <br>Your task?</p>
+                              </div>
+                            </box>
+                            <p>Suggestions:</p>
+                            <ul>
+                              <li>Move the <code>isDone</code> variable to the <code>Task</code> class and provide a <code>setDone(boolean)</code> method.</li>
+                            </ul>
+                            <panel type="seamless" header="Partial solution">
+                              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
+    <span class="hljs-keyword">protected</span> String description;
+    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">boolean</span> isDone;
+
+    <span class="hljs-comment">// ...</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setDone</span><span class="hljs-params">(<span class="hljs-keyword">boolean</span> isDone)</span></span>{
+        <span class="hljs-keyword">this</span>.isDone = isDone;
+    }
+}
+</code></pre>
+                              <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.List;
+<span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">static</span> Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);
+    <span class="hljs-keyword">static</span> List&lt;Task&gt; tasks = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">// ...</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addTodo</span><span class="hljs-params">(String line)</span> <span class="hljs-keyword">throws</span> TaskManagerException </span>{
+        <span class="hljs-comment">//...</span>
+        tasks.add(<span class="hljs-keyword">new</span> Todo(description));
+        <span class="hljs-comment">//...</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">markAsDone</span><span class="hljs-params">(String line)</span> </span>{
+        <span class="hljs-keyword">int</span> index = Integer.parseInt(line.substring(<span class="hljs-string">"done"</span>.length()).trim());
+        tasks.get(index - <span class="hljs-number">1</span>).setDone(<span class="hljs-keyword">true</span>);
+        System.out.println(<span class="hljs-string">"Tasks in the list: "</span> + tasks.size());
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTasks</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// ...</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; tasks.size(); i++) {
+            System.out.println(<span class="hljs-string">"["</span> + (i + <span class="hljs-number">1</span>) + <span class="hljs-string">"] "</span> + tasks.get(i));
+        }
+    }
+}
+</code></pre>
+                            </panel>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                  </div>
+                </div>
+            </panel>
           </panel>
         </div>
       </div>
@@ -1561,7 +3310,7 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 09 Sep 2018 12:08:02 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 09 Sep 2018 12:34:02 GMT</small></div>
 </footer>
 </div>
 </body>
