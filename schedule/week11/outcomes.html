@@ -227,17 +227,15 @@ This repo can be used to practice creating PRs.
 git pull origin master
 </code></pre>
                       <p>Observe how the <code>add-intro</code> branch is now merged to the <code>master</code> branch in your local repo as well.</p>
-                      <p><strong>5. De-conflict the <code>add-summary</code> PR.</strong> Note that GitHub page for the <code>add-summary</code> PR is now showing a conflict <span class="dimmed">(when you scroll to the bottom of that page, you should see a message <code>This branch has conflicts that must be resolved</code>)</span>.
+                      <p><strong>5. De-conflict the <code>add-summary</code> PR</strong>
+                        <trigger trigger="click" for="modal:managePrs-createPrs">that you created earlier</trigger>. Note that GitHub page for the <code>add-summary</code> PR is now showing a conflict <span class="dimmed">(when you scroll to the bottom of that page, you should see a message <code>This branch has conflicts that must be resolved</code>)</span>.
                         You can resolve it locally and update the PR accordingly, as explained below.</p>
                       <p>5a. Switch to the <code>add-summary</code> branch. To make that branch up-to-date with the <code>master</code> branch, merge the <code>master</code> branch to it, which will surface the merge conflict. Resolve it and complete the
                         merge.</p>
                       <p>5b. Push the updated <code>add-summary</code> branch to the fork. That will remove the 'merge conflicts' warning in the GitHub page of the PR.</p>
                       <p><strong>6. Merge the <code>add-summary</code> PR</strong> using the GitHub interface, similar to how you merged the previous PR.</p>
-                      <tip-box type="info">
-                        <p>Note that you could have merged the <code>add-summary</code> branch to the <code>master</code> branch locally before pushing it to GitHub. In that case, the PR will be merged on GitHub automatically to reflect that the branch has
-                          been merged already.
-                        </p>
-                      </tip-box>
+                      <p><span class="fas fa-info-circle"></span> Note that you could have merged the <code>add-summary</code> branch to the <code>master</code> branch locally before pushing it to GitHub. In that case, the PR will be merged on GitHub automatically
+                        to reflect that the branch has been merged already.</p>
                     </div>
                     <div></div>
                   </div>
@@ -407,12 +405,14 @@ git pull origin master
                       <p><strong>RCS can be done in two ways: the <em>centralized</em> way and the <em>distributed</em> way.</strong></p>
                       <p><strong>Centralized RCS (CRCS for short)uses a central remote repo that is shared by the team.</strong> Team members download (‘pull’) and upload (‘push’) changes between their own local repositories and the central repository. Older
                         RCS tools such as CVS and SVN support only this model. Note that these older RCS do not support the notion of a local repo either. Instead, they force users to do all the versioning with the remote repo.</p>
-                      <pic src="/website/book/revisionControl/drcsVsCrcs/images/crcsDiagram.png" height="180">
-                        <strong>The centralized RCS approach without any local repos (e.g., CVS, SVN)</strong></pic>
+                      <pic src="/website/book/revisionControl/drcsVsCrcs/images/crcsDiagram.png" width="300">
+                        <p><em>The centralized RCS approach without any local repos (e.g., CVS, SVN)</em></p>
+                      </pic>
                       <p><strong>Distributed RCS (DRCS for short, also known as Decentralized RCS) allows multiple remote repos</strong> and pulling and pushing can be done among them in arbitrary ways. The workflow can vary differently from team to team.
                         For example, every team member can have his/her own remote repository in addition to their own local repository, as shown in the diagram below. Git and Mercurial are some prominent RCS tools that support the distributed approach.</p>
-                      <pic src="/website/book/revisionControl/drcsVsCrcs/images/drcsDiagram.png" height="240">
-                        <strong>The decentralized RCS approach</strong></pic>
+                      <pic src="/website/book/revisionControl/drcsVsCrcs/images/drcsDiagram.png" width="300">
+                        <p><em>The decentralized RCS approach</em></p>
+                      </pic>
                     </div>
                     <div></div>
                   </div>
@@ -442,8 +442,8 @@ git pull origin master
                   </div>
                   <div id="main">
                     <div>
-                      <p><strong><em>Feature branch</em> workflow is similar to forking workflow except there are no forks or PRs.</strong> Everyone is pushing/pulling from the same remote repo. The phrase <em>feature branch</em> is used because each new
-                        feature (or bug fix, or any other modification) is done in a separate branch.</p>
+                      <p><strong><em>Feature branch</em> workflow is similar to forking workflow except there are no forks.</strong> Everyone is pushing/pulling from the same remote repo. The phrase <em>feature branch</em> is used because each new feature
+                        (or bug fix, or any other modification) is done in a separate branch and merged to <code>master</code> branch when ready.</p>
                       <img src="/website/book/revisionControl/featureBranchFlow/images/diagram.png" height="330">
                       <p></p>
                     </div>
@@ -483,7 +483,7 @@ git pull origin master
                   </div>
                   <div id="main">
                     <div>
-                      <p><strong>The <em>centralized workflow</em> is similar to the feature branch workflow except all changes are done in the master branch.</strong></p>
+                      <p><strong>The <em>centralized workflow</em> is similar to the feature branch workflow except all changes are done in the <code>master</code> branch.</strong></p>
                     </div>
                     <div>
                       <div>
@@ -504,12 +504,259 @@ git pull origin master
       <p><span class="activity-desc">Design</span></p>
       <div class="indented">
         <panel no-close="" expandable="true">
-          <span slot="header" class="card-title"><span><code>W11.3</code> <strong>Can explain some UML models</strong> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
+          <span slot="header" class="card-title"><span><code>W11.3</code> <strong>Can explain models</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span
+            class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            </span>
+            </span>
+            </span>
+            </span>
+            <panel type="warning" expanded="" no-close="" epxandable="true">
+              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.3a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain models</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              <span
+                class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                </span>
+                </span>
+                </span>
+                </span>
+                <div>
+                  <div></div>
+                  <p></p>
+                  <p><span class="dimmed"><strong><span>Design → Modelling → Introduction →
+</span></strong>
+                    </span>
+                  </p>
+                  <div id="title-and-body">
+                    <div>
+                      <h4 id="what">What</h4>
+                    </div>
+                    <div id="main">
+                      <div>
+                        <p><strong>A <em>model</em> is a representation of something else.</strong></p>
+                        <tip-box>
+                          <p><span class="fas fa-cube"></span> A
+                            <trigger trigger="click" for="modal:modellingIntro-classDiagram">class diagram</trigger> is a model that represents a software design.</p>
+                        </tip-box>
+                        <modal large="" title="Class diagrams" id="modal:modellingIntro-classDiagram">
+                          <p>A <em>class diagram</em> is a diagram drawn using the UML modelling notation.<br>
+                            <span class="fas fa-cube"></span> An example class diagram:<br></p>
+                          <img src="/website/book/uml/classDiagrams/introduction/what/images/classDiagramExample1.png" width="600"></modal>
+                        <p><strong>A <em>model</em> provides a simpler view of a complex entity because a model captures only a selected aspect.</strong> This omission of some aspects implies models are
+                          <trigger trigger="click" for="modal:modellingIntro-abstraction">abstractions</trigger>.</p>
+                        <modal large="" title="%%Textbook <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span>%%" id="modal:modellingIntro-abstraction">
+                        
+                          <div>
+                            <div></div>
+                            <p></p>
+                            <p><span class="dimmed"><strong><span>Design → Design Fundamentals → Abstraction →
+</span></strong>
+                              </span>
+                            </p>
+                            <div id="title-and-body">
+                              <div>
+                                <h4 id="what-2">What</h4>
+                              </div>
+                              <div id="main">
+                                <div>
+                                  <tip-box type="definition">
+                                    <div>
+                                      <p><strong>Abstraction</strong> is a technique for dealing with complexity. It works by establishing a level of complexity (or an aspect) we are interested in, and suppressing the more complex details below that level
+                                        (or irrelevant to that aspect).</p>
+                                    </div>
+                                  </tip-box>
+                                  <p>Most programs are written to solve complex problems involving large amounts of intricate details. It is impossible to deal with all these details at the same time. The guiding principle of abstraction stipulates that
+                                    we capture only details that are relevant to the current perspective or the task at hand.</p>
+                                  <p><strong>Ignoring lower level data items and thinking in terms of bigger entities is called <em>data abstraction</em>.</strong></p>
+                                  <tip-box>
+                                    <p><span class="fas fa-cube"></span> Within a certain software component, we might deal with a <em>user</em> data type, while ignoring the details contained in the user data item such as <em>name</em>, and <em>date of birth</em>.
+                                      These details have been ‘abstracted away’ as they do not affect the task of that software component.</p>
+                                  </tip-box>
+                                  <p><strong><em>Control abstraction</em> abstracts away details of the actual control flow to focus on tasks at a simplified level.</strong></p>
+                                  <tip-box>
+                                    <p><span class="fas fa-cube"></span> <code>print(“Hello”)</code> is an abstraction of the actual output mechanism within the computer.</p>
+                                  </tip-box>
+                                  <p><strong>Abstraction can be applied repeatedly to obtain progressively <em>higher levels of abstractions</em>.</strong></p>
+                                  <tip-box>
+                                    <p><span class="fas fa-cube"></span> An example of different levels of data abstraction: a <code>File</code> is a data item that is at a higher level than an array and an array is at a higher level than a bit.</p>
+                                    <p><span class="fas fa-cube"></span> An example of different levels of control abstraction: <code>execute(Game)</code> is at a higher level than <code>print(Char)</code> which is at a higher than an Assembly language instruction
+                                      <code>MOV</code>.</p>
+                                  </tip-box>
+                                </div>
+                                <div></div>
+                              </div>
+                            </div>
+                          </div>
+                        </modal>
+                        <tip-box>
+                          <p><span class="fas fa-cube"></span> A class diagram captures the structure of the software design but not the behavior.</p>
+                        </tip-box>
+                        <p><strong>Multiple models of the same entity may be needed to capture it fully.</strong></p>
+                        <tip-box>
+                          <p><span class="fas fa-cube"></span> In addition to a class diagram (or even multiple class diagrams), a number of other diagrams may be needed to capture various interesting aspects of the software.</p>
+                        </tip-box>
+                      </div>
+                      <div></div>
+                    </div>
+                  </div>
+                </div>
+            </panel>
+            <panel type="info" expanded="" no-close="" epxandable="true">
+              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.3b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain how models are used</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              <span
+                class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                </span>
+                </span>
+                <div>
+                  <div></div>
+                  <p></p>
+                  <p><span class="dimmed"><strong><span>Design → Modelling → Introduction →
+</span></strong>
+                    </span>
+                  </p>
+                  <div id="title-and-body">
+                    <div>
+                      <h4 id="how">How</h4>
+                    </div>
+                    <div id="main">
+                      <div>
+                        <p><strong>In software development, models are useful in several ways:</strong></p>
+                        <p>a) <strong>To analyze a complex entity related to software development.</strong></p>
+                        <tip-box>
+                          <p><span class="fas fa-cube"></span> Some examples of using models for analysis:</p>
+                          <ol>
+                            <li>Models of the problem domain (i.e. the environment in which the software is expected to solve a problem) can be built to aid the understanding of the problem to be solved.</li>
+                            <li>When planning a software solution, models can be created to figure out how the solution is to be built. An architecture diagram is such a model.</li>
+                          </ol>
+                        </tip-box>
+                        <p>b) <strong>To communicate information among stakeholders.</strong> Models can be used as a visual aid in discussions and documentations.</p>
+                        <tip-box>
+                          <p><span class="fas fa-cube"></span> Some examples of using models to communicate:</p>
+                          <ol>
+                            <li>We can use an
+                              <trigger trigger="click" for="modal:modelingIntro-archiDiagrams">architecture diagram</trigger> to explain the high-level design of the software to developers.</li>
+                            <li>A business analyst can use a use case diagram to explain to the customer the functionality of the system.</li>
+                            <li>A class diagram can be reverse-engineered from code so as to help explain the design of a component to a new developer.</li>
+                          </ol>
+                        </tip-box>
+                        <modal large="" title="Architecture Diagrams" id="modal:modelingIntro-archiDiagrams">
+                          <p>An <em>architecture diagram</em> depicts the high-level design of a software.</p>
+                          <div>
+                            <tip-box>
+                              <p><span class="fas fa-cube"></span> Some example architecture diagrams:</p>
+                              <tabs>
+                              
+                                <tab header="TEAMMATES">
+                                  <p><img src="https://github.com/TEAMMATES/teammates/raw/master/docs/images/highlevelArchitecture.png" width="700"><br></p>
+                                  <p>
+                                    <hr>
+                                  </p>
+                                </tab>
+                              
+                                <tab header="se-edu/addressbook-level4">
+                                  <p><img src="https://se-edu.github.io/addressbook-level4/images/Architecture.png" width="700"><br></p>
+                                  <p>
+                                    <hr>
+                                  </p>
+                                </tab>
+                              
+                                <tab header="Example 1">
+                                  <p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Accelerator_Architecture.png" width="700"><br>
+                                    <sub><a href="https://commons.wikimedia.org/wiki/File:Accelerator_Architecture.png">source: https://commons.wikimedia.org</a></sub></p>
+                                  <p>
+                                    <hr>
+                                  </p>
+                                </tab>
+                              
+                                <tab header="Example 2">
+                                  <p><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Firefox_OS_Architecture_diagram.png" width="700"><br>
+                                    <sub><a href="https://upload.wikimedia.org/wikipedia/commons/b/b8/Firefox_OS_Architecture_diagram.png">source: https://commons.wikimedia.org</a></sub></p>
+                                  <p>
+                                    <hr>
+                                  </p>
+                                </tab>
+                              
+                                <tab header="Example 3">
+                                  <p><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/SOA_Metamodel.svg" width="700"><br>
+                                    <sub><a href="https://upload.wikimedia.org/wikipedia/commons/0/06/SOA_Metamodel.svg">source: https://commons.wikimedia.org</a></sub></p>
+                                  <p>
+                                    <hr>
+                                  </p>
+                                </tab>
+                              </tabs>
+                            </tip-box>
+                          </div>
+                        </modal>
+                        <p>c) <strong>As a blueprint for creating software.</strong> Models can be used as instructions for building software.</p>
+                        <tip-box>
+                          <p><span class="fas fa-cube"></span> Some examples of using models to as blueprints:</p>
+                          <ol>
+                            <li>A senior developer draws a class diagram to propose a design for an OOP software and passes it to a junior programmer to implement.</li>
+                            <li>A software tool allows users to draw UML models using its interface and the tool automatically generates the code based on the model.</li>
+                          </ol>
+                        </tip-box>
+                        <tip-box>
+
+                          <panel type="seamless">
+                            <span slot="header" class="card-title">Model Driven Development <span class="badge badge-pill badge-secondary">tangential</span></span>
+                            <p><strong><em>Model-driven development (MDD)</em>, also called <em>Model-driven engineering</em>, is an approach to software development that strives to exploit models as blueprints.</strong> MDD uses models as primary engineering
+                              artifacts when developing software. That is, the system is first created in the form of models. After that, the models are converted to code using code-generation techniques (usually, automated or semi-automated, but can
+                              even involve manual translation from model to code). MDD requires the use of a very expressive modeling notation (graphical or otherwise), often specific to a given problem domain. It also requires sophisticated tools to
+                              generate code from models and maintain the link between models and the code. One advantage of MDD is that the same model can be used to create software for different platforms and different languages. MDD has a lot of promise,
+                              but it is still an emerging technology</p>
+                            <p>Further reading:</p>
+                            <ul>
+                              <li><a href="https://martinfowler.com/bliki/ModelDrivenSoftwareDevelopment.html">Martin Fowler's view on MDD</a> - TLDR: he is sceptical</li>
+                              <li><a href="http://www.theenterprisearchitect.eu/blog/2009/03/31/5-types-of-model-driven-software-development/">5 types of Model Driven Software Development</a> - A more optimistic view, although an old article</li>
+                            </ul>
+                          </panel>
+                        </tip-box>
+                      </div>
+                      <div>
+                        <div>
+                          <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Statements about models">
+                                <question>
+                                  <p>Choose the correct statements about models.</p>
+                                  <ul class="task-list">
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Models are abstractions.</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Models can be used for communication.</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Models can be used for analysis of a problem.</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Generating models from code is useless.</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. Models can be used as blueprints for generating code.</li>
+                                  </ul>
+                                  <div slot="answer">
+                                    <p>(a) (b) (c) (e)</p>
+                                    <p>Explanation: Models generated from code can be used for understanding, analysing, and communicating about the code.</p>
+                                  </div>
+                                </question>
+                              </panel>
+                            </div>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain usage of models in a class project">
+                                <question>
+                                  <p>Explain how models (e.g. UML diagrams) can be used in a class project.</p>
+                                  <div slot="hint">
+                                    <p>Can models be useful in evaluating the design quality of a software written by students?</p>
+                                  </div>
+                                </question>
+                              </panel>
+                            </div>
+                          </panel>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </panel>
+        </panel>
+        <panel no-close="" expandable="true">
+          <span slot="header" class="card-title"><span><code>W11.4</code> <strong>Can explain some UML models</strong> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
             aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
           <panel type="success" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.3a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain object oriented domain models</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.4a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain object oriented domain models</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -594,7 +841,7 @@ git pull origin master
               </div>
           </panel>
           <panel type="success" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.3b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain deployment diagrams</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.4b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain deployment diagrams</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -626,7 +873,7 @@ git pull origin master
               </div>
           </panel>
           <panel type="success" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.3c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain component diagrams</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.4c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain component diagrams</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -657,7 +904,7 @@ git pull origin master
               </div>
           </panel>
           <panel type="success" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.3d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain package diagrams</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.4d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain package diagrams</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -688,7 +935,7 @@ git pull origin master
               </div>
           </panel>
           <panel type="success" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.3e</code></span></big> <span><span class="fas fa-trophy"></span> Can explain composite structure diagrams</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.4e</code></span></big> <span><span class="fas fa-trophy"></span> Can explain composite structure diagrams</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -720,7 +967,7 @@ git pull origin master
               </div>
           </panel>
           <panel type="success" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.3f</code></span></big> <span><span class="fas fa-trophy"></span> Can explain timing diagrams</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.4f</code></span></big> <span><span class="fas fa-trophy"></span> Can explain timing diagrams</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -752,7 +999,7 @@ git pull origin master
               </div>
           </panel>
           <panel type="success" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.3g</code></span></big> <span><span class="fas fa-trophy"></span> Can explain interaction overview diagrams</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.4g</code></span></big> <span><span class="fas fa-trophy"></span> Can explain interaction overview diagrams</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -784,7 +1031,7 @@ git pull origin master
               </div>
           </panel>
           <panel type="success" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.3h</code></span></big> <span><span class="fas fa-trophy"></span> Can explain communication diagrams</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.4h</code></span></big> <span><span class="fas fa-trophy"></span> Can explain communication diagrams</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -816,7 +1063,7 @@ git pull origin master
               </div>
           </panel>
           <panel type="success" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.3i</code></span></big> <span><span class="fas fa-trophy"></span> Can explain state machine diagrams</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.4i</code></span></big> <span><span class="fas fa-trophy"></span> Can explain state machine diagrams</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -873,7 +1120,7 @@ git pull origin master
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Wed, 05 Sep 2018 01:49:55 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 09 Sep 2018 12:08:02 GMT</small></div>
 </footer>
 </div>
 </body>

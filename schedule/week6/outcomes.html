@@ -57,7 +57,7 @@
                       <tip-box>
                         <p><span class="fas fa-cube"></span> The ‘sub-folder’ association between <code>Folder</code> objects is a composition type association. That means if the <code>Folder</code> object <code>foo</code> is a sub folder of <code>Folder</code>                          object <code>bar</code>, <code>bar</code> cannot be a sub-folder of <code>foo</code>.</p>
                       </tip-box>
-                      <h5 id="implementing-composition"><big>Implementing composition</big></h5>
+                      <h5 id="implementing-composition">Implementing composition</h5>
                       <p><strong>Composition too is implemented using a normal variable.</strong> If correctly implemented, the ‘part’ object will be deleted when the ‘whole’ object is deleted. Ideally, the ‘part’ object may not even be visible to clients
                         of the ‘whole’ object.</p>
                       <tip-box>
@@ -124,7 +124,7 @@
                       <tip-box>
                         <p><span class="fas fa-cube"></span> <code>SportsClub</code> acts as a <em>container</em> for <code>Person</code> objects. <code>Person</code> objects can survive without a <code>SportsClub</code> object.</p>
                       </tip-box>
-                      <h5 id="implementing-aggregation"><strong>Implementing aggregation</strong></h5>
+                      <h5 id="implementing-aggregation">Implementing aggregation</h5>
                       <p>Implementation is similar to that of composition except the <em>containee</em> object can exist even after the <em>container</em> object is deleted.</p>
                       <tip-box>
                         <p><span class="fas fa-cube"></span> In the code below, there is an aggregation association between the <code>Team</code> class and the <code>Person</code> in that a <code>Team</code> contains <code>Person</code> a object who is the
@@ -198,7 +198,7 @@
                         <p><span class="fas fa-cube"></span> A <code>Man</code> class and a <code>Woman</code> class is linked with a ‘married to’ association and there is a need to store the date of marriage. However, that data is related to the association
                           rather than specifically owned by either the <code>Man</code> object or the <code>Woman</code> object. In such situations, an additional association class can be introduced, e.g. a <code>Marriage</code> class, to store such information.</p>
                       </tip-box>
-                      <h5 id="implementing-association-classes"><big>Implementing association classes</big></h5>
+                      <h5 id="implementing-association-classes">Implementing association classes</h5>
                       <p>There is no special way to implement an association class. It can be implemented as a normal class that has variables to represent the endpoint of the association it represents.</p>
                       <tip-box>
                         <p><span class="fas fa-cube"></span> In the code below, the <code>Transaction</code> class is an association class that represent a transaction between a <code>Person</code> who is the seller and another <code>Person</code> who is
@@ -834,12 +834,7 @@
               <div>
                 <div>
                   <p>
-                    <panel src="/website\book\oop\inheritance\what\unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Design → OOP → Inheritance → What%%"></panel>
-                    <panel src="/website\book\oop\classes\classLevelMembers\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%OOP → Classes → Class-Level Members%%"></panel>
-                    <panel src="/website\book\oop\classes\enumerations\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%OOP → Classes → Enumerations%%"></panel>
-                    <panel src="/website\book\uml\classDiagrams\dependencies\what\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%UML → Class Diagrams → Dependencies%%"></panel>
-                    <panel src="/website\book\oop\associations\composition\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%OOP → Associations → Composition%%"></panel>
-                    <panel src="/website\book\oop\associations\aggregation\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%OOP → Associations → Aggregation%%"></panel>
+                    <panel src="/website\book\modeling\modelingStructures\classDiagramsBasic\unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Design → Modeling → Class Diagrams (Basic)%%"></panel>
                   </p>
                 </div>
                 <p></p>
@@ -853,17 +848,61 @@
                   </div>
                   <div id="main">
                     <div>
-                      <p><strong>Compositions and Aggregations are stronger forms of associations while Dependencies are a weaker form of associations. Inheritance is another strong type of association between classes.</strong></p>
-                      <p>
-                        <panel src="/website\book\uml\classDiagrams\composition\what\unit-inElsewhere-asFlat._include_.html#title-and-body" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Composition → What"
-                          alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Composition" minimized="" fragment="title-and-body"></panel>
-                        <panel src="/website\book\uml\classDiagrams\aggregation\what\unit-inElsewhere-asFlat._include_.html#title-and-body" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Aggregation → What" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Aggregation"
-                          minimized="" fragment="title-and-body"></panel>
-                        <panel src="/website\book\uml\classDiagrams\dependencies\what\unit-inElsewhere-asFlat._include_.html#title-and-body" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Dependencies → What" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Dependencies"
-                          minimized="" fragment="title-and-body"></panel>
-                        <panel src="/website\book\uml\classDiagrams\classInheritance\what\unit-inElsewhere-asFlat._include_.html#title-and-body" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Inheritance → What" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Inheritance"
-                          minimized="" fragment="title-and-body"></panel>
-                      </p>
+                      <p><strong>A class diagram can also show different types of associations: inheritance, compositions, aggregations, dependencies.</strong></p>
+                      <div class="indented">
+                        <h5 id="modeling-inheritance">Modeling inheritance</h5>
+                        <p>
+                          <panel type="seamless" src="/website\book\oop\inheritance\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Inheritance → What" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Inheritance"
+                            fragment="main"></panel>
+                          <panel type="seamless" src="/website\book\uml\classDiagrams\classInheritance\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Inheritance → What"
+                            alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Inheritance" fragment="main"></panel>
+                        </p>
+                        <h5 id="modeling-composition">Modeling composition</h5>
+                        <p>
+                          <panel type="seamless" src="/website\book\oop\associations\composition\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Associations → Composition"
+                            alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Composition" fragment="main"></panel>
+                          <panel type="seamless" src="/website\book\uml\classDiagrams\composition\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Composition → What"
+                            alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Composition" fragment="main"></panel>
+                        </p>
+                        <h5 id="modeling-aggregation">Modeling aggregation</h5>
+                        <p>
+                          <panel type="seamless" src="/website\book\oop\associations\aggregation\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Associations → Aggregation"
+                            alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Aggregation" fragment="main"></panel>
+                          <panel type="seamless" src="/website\book\uml\classDiagrams\aggregation\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Aggregation → What"
+                            alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Aggregation" fragment="main"></panel>
+                        </p>
+                        <h5 id="modeling-dependencies">Modeling dependencies</h5>
+                        <p>
+                          <panel type="seamless" src="/website\book\oop\associations\dependencies\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Associations → Dependencies"
+                            alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Dependencies" fragment="main"></panel>
+                          <panel type="seamless" src="/website\book\uml\classDiagrams\dependencies\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Dependencies → What"
+                            alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Dependencies" fragment="main"></panel>
+                        </p>
+                      </div>
+                      <p><strong>A class diagram can also show different types of class-like entities:</strong></p>
+                      <div class="indented">
+                        <h5 id="modeling-enumerations">Modeling enumerations</h5>
+                        <p>
+                          <panel type="seamless" src="/website\book\oop\classes\enumerations\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Classes → Enumerations"
+                            alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Enumerations" fragment="main"></panel>
+                          <panel type="seamless" src="/website\book\uml\classDiagrams\enumerations\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Enumerations → What"
+                            alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Enumerations" fragment="main"></panel>
+                        </p>
+                        <h5 id="modeling-abstract-classes">Modeling abstract classes</h5>
+                        <p>
+                          <panel type="seamless" src="/website\book\oop\inheritance\abstractClasses\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Inheritance → Abstract Classes"
+                            alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/AbstractClasses" fragment="main"></panel>
+                          <panel type="seamless" src="/website\book\uml\classDiagrams\abstractClasses\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Abstract Classes → What"
+                            alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/AbstractClasses" fragment="main"></panel>
+                        </p>
+                        <h5 id="modeling-interfaces">Modeling interfaces</h5>
+                        <p>
+                          <panel type="seamless" src="/website\book\oop\inheritance\interfaces\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Inheritance → Interfaces"
+                            alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Interfaces" fragment="main"></panel>
+                          <panel type="seamless" src="/website\book\uml\classDiagrams\interfaces\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Interfaces → What" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Interfaces"
+                            fragment="main"></panel>
+                        </p>
+                      </div>
                     </div>
                     <div></div>
                   </div>
@@ -1176,7 +1215,7 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Wed, 05 Sep 2018 01:49:55 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 09 Sep 2018 12:08:02 GMT</small></div>
 </footer>
 </div>
 </body>

@@ -515,7 +515,7 @@
             <tip-box>
               <p><span class="fas fa-cube"></span> In our example, as some <code>Course</code> objects can have associations with some <code>Student</code> objects, we can view it as an association between the <code>Course</code> class and the <code>Student</code>                class.</p>
             </tip-box>
-            <h5 id="implementing-associations"><big>Implementing associations</big></h5>
+            <h5 id="implementing-associations">Implementing associations</h5>
             <p><strong>We use instance level variables to implement associations.</strong></p>
           </div>
         </div>
@@ -545,7 +545,7 @@
               <p><span class="fas fa-cube"></span> The navigability of the association between <code>Course</code> objects and <code>Student</code> objects tells you how many <code>Course</code> objects can be associated with one <code>Student</code> object
                 and vice versa.</p>
             </tip-box>
-            <h5 id="implementing-multiplicity"><big>Implementing multiplicity</big></h5>
+            <h5 id="implementing-multiplicity">Implementing multiplicity</h5>
             <p><strong>A normal instance-level variable gives us a <code>0..1</code> multiplicity</strong> (also called <em>optional associations</em>) because a variable can hold a reference to a single object or <code>null</code>.</p>
             <tip-box>
               <p><span class="fas fa-cube"></span> In the code below, the <code>Logic</code> class has a variable that can hold <code>0..1</code> <span class="dimmed">i.e., zero or one</span> <code>Minefield</code> objects.</p>
@@ -696,7 +696,7 @@
             <tip-box>
               <p><span class="fas fa-cube"></span> A <code>Course</code> object can have a dependency on a <code>Registrar</code> object to obtain the maximum number of students it can support.</p>
             </tip-box>
-            <h5 id="implementing-dependencies"><big>Implementing dependencies</big></h5>
+            <h5 id="implementing-dependencies">Implementing dependencies</h5>
             <p>Dependencies result from interactions between objects that do not result in a long-term link between the said objects.</p>
             <tip-box>
               <p><span class="fas fa-cube"></span> In the code below, <code>Foo</code> has a dependency on <code>Bar</code> but it is not an association because it is only a
@@ -764,7 +764,7 @@
               <p><span class="fas fa-cube"></span> The ‘sub-folder’ association between <code>Folder</code> objects is a composition type association. That means if the <code>Folder</code> object <code>foo</code> is a sub folder of <code>Folder</code> object
                 <code>bar</code>, <code>bar</code> cannot be a sub-folder of <code>foo</code>.</p>
             </tip-box>
-            <h5 id="implementing-composition"><big>Implementing composition</big></h5>
+            <h5 id="implementing-composition">Implementing composition</h5>
             <p><strong>Composition too is implemented using a normal variable.</strong> If correctly implemented, the ‘part’ object will be deleted when the ‘whole’ object is deleted. Ideally, the ‘part’ object may not even be visible to clients of the ‘whole’
               object.</p>
             <tip-box>
@@ -811,7 +811,7 @@
             <tip-box>
               <p><span class="fas fa-cube"></span> <code>SportsClub</code> acts as a <em>container</em> for <code>Person</code> objects. <code>Person</code> objects can survive without a <code>SportsClub</code> object.</p>
             </tip-box>
-            <h5 id="implementing-aggregation"><strong>Implementing aggregation</strong></h5>
+            <h5 id="implementing-aggregation">Implementing aggregation</h5>
             <p>Implementation is similar to that of composition except the <em>containee</em> object can exist even after the <em>container</em> object is deleted.</p>
             <tip-box>
               <p><span class="fas fa-cube"></span> In the code below, there is an aggregation association between the <code>Team</code> class and the <code>Person</code> in that a <code>Team</code> contains <code>Person</code> a object who is the leader
@@ -2253,14 +2253,23 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
         </h4>
         <div class="indented-less">
           <div>
-            <p><strong>Classes form the basis of class diagrams. <em>Associations</em> among objects/classes play an important role in an OO solution.</strong></p>
+            <p>
+              <panel type="seamless" src="/website\book\uml\classDiagrams\introduction\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Class Diagrams → Introduction → What"
+                alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/ClassDiagrams" fragment="main"></panel>
+            </p>
+            <p><strong>Classes form the basis of class diagrams.</strong></p>
             <p>
               <panel type="seamless" src="/website\book\uml\classDiagrams\classes\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Class Diagrams → Classes → What"
                 alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Classes" fragment="main"></panel>
               <panel type="seamless" src="/website\book\uml\classDiagrams\classLevelMembers\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Class Diagrams → Class-Level Members → What"
                 alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Class-Level Members" fragment="main"></panel>
+            </p>
+            <p><strong><em>Associations</em> are the main connections among the classes in a class diagram.</strong></p>
+            <p>
+              <panel type="seamless" src="/website\book\oop\associations\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Associations → What"
+                alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Associations" fragment="main"></panel>
               <panel type="seamless" src="/website\book\uml\classDiagrams\associations\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Class Diagrams → Associations → What"
-                alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Associations" fragment="main"></panel>
+                alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Associations" fragment="main"></panel>
             </p>
             <p>The most basic class diagram is a bunch of classes with some solid lines among them to represent associations, such as this one.</p>
             <tip-box>
@@ -2274,10 +2283,14 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
                 alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Labels" fragment="main"></panel>
               <panel type="seamless" src="/website\book\uml\classDiagrams\associations\roles\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Class Diagrams → Associations → Roles"
                 alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Roles" fragment="main"></panel>
+              <panel type="seamless" src="/website\book\oop\associations\multiplicity\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Associations → Multiplicity"
+                alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Multiplicity" fragment="main"></panel>
               <panel type="seamless" src="/website\book\uml\classDiagrams\associations\multiplicity\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Class Diagrams → Associations → Multiplicity"
-                alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Multiplicity" fragment="main"></panel>
+                alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Multiplicity" fragment="main"></panel>
+              <panel type="seamless" src="/website\book\oop\associations\navigability\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Associations → Navigability"
+                alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Navigability" fragment="main"></panel>
               <panel type="seamless" src="/website\book\uml\classDiagrams\associations\navigability\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Class Diagrams → Associations → Navigability"
-                alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Navigability" fragment="main"></panel>
+                alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Navigability" fragment="main"></panel>
             </p>
             <tip-box>
               <p><span class="fas fa-cube"></span> Here is the same class diagram shown earlier but with some additional information included:</p>
@@ -2310,17 +2323,61 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
         </h4>
         <div class="indented-less">
           <div>
-            <p><strong>Compositions and Aggregations are stronger forms of associations while Dependencies are a weaker form of associations. Inheritance is another strong type of association between classes.</strong></p>
-            <p>
-              <panel src="/website\book\uml\classDiagrams\composition\what\unit-inElsewhere-asFlat._include_.html#title-and-body" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Composition → What"
-                alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Composition" minimized="" fragment="title-and-body"></panel>
-              <panel src="/website\book\uml\classDiagrams\aggregation\what\unit-inElsewhere-asFlat._include_.html#title-and-body" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Aggregation → What" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Aggregation"
-                minimized="" fragment="title-and-body"></panel>
-              <panel src="/website\book\uml\classDiagrams\dependencies\what\unit-inElsewhere-asFlat._include_.html#title-and-body" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Dependencies → What" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Dependencies"
-                minimized="" fragment="title-and-body"></panel>
-              <panel src="/website\book\uml\classDiagrams\classInheritance\what\unit-inElsewhere-asFlat._include_.html#title-and-body" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Inheritance → What" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Inheritance"
-                minimized="" fragment="title-and-body"></panel>
-            </p>
+            <p><strong>A class diagram can also show different types of associations: inheritance, compositions, aggregations, dependencies.</strong></p>
+            <div class="indented">
+              <h5 id="modeling-inheritance">Modeling inheritance</h5>
+              <p>
+                <panel type="seamless" src="/website\book\oop\inheritance\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Inheritance → What" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Inheritance"
+                  fragment="main"></panel>
+                <panel type="seamless" src="/website\book\uml\classDiagrams\classInheritance\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Inheritance → What"
+                  alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Inheritance" fragment="main"></panel>
+              </p>
+              <h5 id="modeling-composition">Modeling composition</h5>
+              <p>
+                <panel type="seamless" src="/website\book\oop\associations\composition\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Associations → Composition" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Composition"
+                  fragment="main"></panel>
+                <panel type="seamless" src="/website\book\uml\classDiagrams\composition\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Composition → What"
+                  alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Composition" fragment="main"></panel>
+              </p>
+              <h5 id="modeling-aggregation">Modeling aggregation</h5>
+              <p>
+                <panel type="seamless" src="/website\book\oop\associations\aggregation\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Associations → Aggregation" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Aggregation"
+                  fragment="main"></panel>
+                <panel type="seamless" src="/website\book\uml\classDiagrams\aggregation\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Aggregation → What"
+                  alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Aggregation" fragment="main"></panel>
+              </p>
+              <h5 id="modeling-dependencies">Modeling dependencies</h5>
+              <p>
+                <panel type="seamless" src="/website\book\oop\associations\dependencies\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Associations → Dependencies"
+                  alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Dependencies" fragment="main"></panel>
+                <panel type="seamless" src="/website\book\uml\classDiagrams\dependencies\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Dependencies → What"
+                  alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Dependencies" fragment="main"></panel>
+              </p>
+            </div>
+            <p><strong>A class diagram can also show different types of class-like entities:</strong></p>
+            <div class="indented">
+              <h5 id="modeling-enumerations">Modeling enumerations</h5>
+              <p>
+                <panel type="seamless" src="/website\book\oop\classes\enumerations\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Classes → Enumerations" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Enumerations"
+                  fragment="main"></panel>
+                <panel type="seamless" src="/website\book\uml\classDiagrams\enumerations\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Enumerations → What"
+                  alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Enumerations" fragment="main"></panel>
+              </p>
+              <h5 id="modeling-abstract-classes">Modeling abstract classes</h5>
+              <p>
+                <panel type="seamless" src="/website\book\oop\inheritance\abstractClasses\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Inheritance → Abstract Classes"
+                  alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/AbstractClasses" fragment="main"></panel>
+                <panel type="seamless" src="/website\book\uml\classDiagrams\abstractClasses\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Abstract Classes → What"
+                  alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/AbstractClasses" fragment="main"></panel>
+              </p>
+              <h5 id="modeling-interfaces">Modeling interfaces</h5>
+              <p>
+                <panel type="seamless" src="/website\book\oop\inheritance\interfaces\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Inheritance → Interfaces" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Interfaces"
+                  fragment="main"></panel>
+                <panel type="seamless" src="/website\book\uml\classDiagrams\interfaces\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Interfaces → What" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Interfaces"
+                  fragment="main"></panel>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -2332,17 +2389,16 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
         </h4>
         <div class="indented-less">
           <div>
-            <p><strong>An object diagrams shows the object structure (i.e., objects and their associations) at a specific time.</strong></p>
-            <div>
-              <p><strong>An object diagram shows an object structure at a given point of time.</strong></p>
-              <tip-box>
-                <img src="/website/book/oop/associations/what/images/completeStructure.png" height="120"></tip-box>
-            </div>
             <p>
-              <panel src="/website\book\uml\objectDiagrams\objects\unit-inElsewhere-asFlat._include_.html#title-and-body" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Object Diagrams → Objects" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Objects"
-                minimized="" fragment="title-and-body"></panel>
-              <panel src="/website\book\uml\objectDiagrams\associations\unit-inElsewhere-asFlat._include_.html#title-and-body" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Object Diagrams → Associations → What" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Associations"
-                minimized="" fragment="title-and-body"></panel>
+              <panel type="seamless" src="/website\book\uml\objectDiagrams\introduction\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Object Diagrams → Introduction"
+                alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Object Diagrams" fragment="main"></panel>
+            </p>
+            <p><strong>Object diagrams can be used to complement class diagrams.</strong> For example, you can use object diagrams to model different object structures that can result from a design represented by a given class diagram.</p>
+            <p>
+              <panel type="seamless" src="/website\book\uml\objectDiagrams\objects\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Object Diagrams → Objects" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OD/Objects"
+                fragment="main"></panel>
+              <panel type="seamless" src="/website\book\uml\objectDiagrams\associations\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Object Diagrams → Associations" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OD/Associations"
+                fragment="main"></panel>
             </p>
           </div>
         </div>
@@ -3659,7 +3715,7 @@ send()
           <div>
             <p><strong>An <em>Application Programming Interface (API)</em> specifies the interface through which other programs can interact with a software component.</strong> It is a contract between the component and its clients.</p>
             <tip-box>
-              <p><span class="fas fa-cube"></span> A class has an API (e.g., <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html">API of the Java <code>String</code> class</a>, <a href="https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str">API of the Python <code>str</code> class</a>)
+              <p><span class="fas fa-cube"></span> A class has an API (e.g., <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/String.html">API of the Java <code>String</code> class</a>, <a href="https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str">API of the Python <code>str</code> class</a>)
                 which is a collection of public methods that you can invoke to make use of the class.</p>
               <p><span class="fas fa-cube"></span> The <a href="https://developer.github.com/v3/">GitHub API</a> is a collection of Web request formats GitHub server accepts and the corresponding responses. We can write a program that interacts with GitHub
                 through that API.</p>
@@ -5805,10 +5861,10 @@ Invalid command format: add
               <img src="/website/book/uml/classDiagrams/aggregation/what/images/clubPerson.png" height="85">
               <p></p>
             </tip-box>
-            <tip-box type="tip">
+            <box>
               <p><strong>Aggregation vs Composition</strong></p>
-              <p>The distinction between composition (◆) and aggregation (◇) is rather blurred. Martin Fowler’s famous book <em>UML Distilled</em> advocates omitting the aggregation symbol altogether because using it adds more confusion than clarity.</p>
-            </tip-box>
+              <p>💡 The distinction between composition (◆) and aggregation (◇) is rather blurred. Martin Fowler’s famous book <em>UML Distilled</em> advocates omitting the aggregation symbol altogether because using it adds more confusion than clarity.</p>
+            </box>
           </div>
         </div>
       </div>
@@ -6113,8 +6169,9 @@ Invalid command format: add
         <div class="indented-less">
           <div>
             <p><strong>An object diagram shows an object structure at a given point of time.</strong></p>
-            <tip-box>
-              <img src="/website/book/oop/associations/what/images/completeStructure.png" height="120"></tip-box>
+            <box>
+              <p><span class="fas fa-cube"></span> An example object diagram:</p>
+              <img src="/website/book/modeling/modelingStructures/ooStructures/images/objectDiagram.png" height="120"></box>
           </div>
         </div>
       </div>
@@ -7446,7 +7503,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Wed, 05 Sep 2018 01:49:55 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 09 Sep 2018 12:08:02 GMT</small></div>
 </footer>
 </div>
 </body>
