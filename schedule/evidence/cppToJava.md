@@ -130,11 +130,14 @@ To be able to do exercises such as these:
 <include src="../../book/cppToJava/exceptions/how/q-parseRectangleDescriptor.md" />
 </div>
 
-<div id="collections_what">
+<div id="collections_arrayListClass">
+To be able to do exercises such as these:
 
-**Acceptable**: Some code that you have written that uses some Java Collection classes.
+<include src="../../book/cppToJava/collections/arrayListClass/q-numbersList.md" />
+</div>
 
-**Suggested**: Do the exercise given in [AddressBook - Level1 : LO-Collections]({{module_org}}/addressbook-level1/blob/master/docs/LearningOutcomes.adoc#use-collections-code-lo-collections-code)
+<div id="collections_hashMapClass">
+To be able to do exercises such as these:
 
-**Submission**: Show your code to the tutor during the tutorial.
+<include src="../../book/cppToJava/collections/hashMapClass/q-weeklyRoster.md" />
 </div>

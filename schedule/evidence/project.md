@@ -12,6 +12,13 @@ Enhance your TaskManager program as explained in the exercise below:
 <include src="../../book/cppToJava/inheritance/polymorphism/q-taskManagerLevel2.md" />
 
 </div>
+<div id="week5">
+Enhance your TaskManager program as explained in the exercise below:
+
+<include src="../../book/cppToJava/exceptions/how/q-taskManagerLevel3.md" />
+<include src="../../book/cppToJava/collections/arrayListClass/q-taskManagerLevel4.md" />
+
+</div>
 <div id="1kloc">
 
 {{ icon_important_big_red }} This LO can earn you <trigger trigger="click" for="modal:project1kloc-participation">1 participation mark</trigger>. 
