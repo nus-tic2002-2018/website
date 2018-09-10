@@ -139,6 +139,8 @@ head: scheduleHead.md
       {location: ["cppToJava", "collections", "what"], omit_evidence: true},
       {location: ["cppToJava", "collections", "arrayListClass"]},
       {location: ["cppToJava", "collections", "hashMapClass"]},
+    {heading: "Can use casting in Java"},
+      {location: ["cppToJava", "misc", "casting"], omit_evidence: true},
   {name: "Design"},
     {heading: "Can explain basic object/class structures"},
       {location: ["modeling", "modelingStructures", "ooStructures"], omit_evidence: true},
