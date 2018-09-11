@@ -1,0 +1,37 @@
+2018-09-11T02:55:21.494Z - info: Website generation started at 10:55:10
+2018-09-11T02:56:16.303Z - info: Building assets...
+2018-09-11T02:56:29.620Z - info: Assets built
+2018-09-11T02:56:29.620Z - info: Generating pages...
+2018-09-11T02:57:50.853Z - info: Pages built
+2018-09-11T02:57:51.482Z - info: Site data built
+2018-09-11T02:57:51.482Z - info: Website generation complete! Total build time: 161.01s
+2018-09-11T02:57:51.491Z - info: Generate Site durationMs=161019
+2018-09-11T02:57:51.973Z - info: Serving "C:\repos\nus-tic2002-2018\website\_site" at http://127.0.0.1:8080
+2018-09-11T02:57:51.973Z - info: Press CTRL+C to stop ...
+2018-09-11T02:58:37.945Z - info: [10:58:37] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\index.md
+2018-09-11T02:58:38.961Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\schedule\index.md
+2018-09-11T02:58:38.961Z - info: Rebuilding 2 pages
+2018-09-11T02:58:51.397Z - info: Pages rebuilt
+2018-09-11T02:58:51.406Z - info: Site data built
+2018-09-11T03:01:09.462Z - info: Website generation started at 11:01:07
+2018-09-11T03:01:11.879Z - info: Building assets...
+2018-09-11T03:01:15.819Z - info: Assets built
+2018-09-11T03:01:15.820Z - info: Generating pages...
+2018-09-11T03:02:15.183Z - info: Pages built
+2018-09-11T03:02:15.367Z - info: Site data built
+2018-09-11T03:02:15.368Z - info: Website generation complete! Total build time: 67.921s
+2018-09-11T03:02:15.376Z - info: Generate Site durationMs=67929
+2018-09-11T03:02:15.722Z - info: Serving "C:\repos\nus-tic2002-2018\website\_site" at http://127.0.0.1:8080
+2018-09-11T03:02:15.722Z - info: Press CTRL+C to stop ...
+2018-09-11T03:04:27.720Z - info: [11:04:27] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\index.md
+2018-09-11T03:04:28.739Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\schedule\index.md
+2018-09-11T03:04:28.739Z - info: Rebuilding 2 pages
+2018-09-11T03:04:43.299Z - info: Pages rebuilt
+2018-09-11T03:04:43.314Z - info: Site data built
+2018-09-11T03:05:22.965Z - info: [11:05:22] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\index.md
+2018-09-11T03:05:23.966Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\schedule\index.md
+2018-09-11T03:05:23.968Z - info: Rebuilding 2 pages
+2018-09-11T03:05:37.001Z - info: Pages rebuilt
+2018-09-11T03:05:37.012Z - info: Site data built
+2018-09-11T07:42:21.683Z - info: Website generation started at 15:42:13
+2018-09-11T07:42:46.822Z - info: Building assets...
