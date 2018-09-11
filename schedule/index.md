@@ -23,7 +23,7 @@ head: scheduleHead.md
 ] %}
 
 
-{% set current_weeks = ["4"] %}
+{% set current_weeks = ["5"] %}
 
 
 {% set all_outcomes = [
@@ -132,6 +132,8 @@ head: scheduleHead.md
     {heading: "Project preparation: Can use basic inheritance in a small project", priority: "1", file: "project.md#week4"},
 {week: "5"},
   {name: "Java"},
+    {heading: "Can use casting in Java"},
+      {location: ["cppToJava", "misc", "casting"], omit_evidence: true},
     {heading: "Can use Generics in Java"},
       {location: ["cppToJava", "generics", "what"], omit_evidence: true},
       {location: ["cppToJava", "generics", "how"], omit_evidence: true},
@@ -139,10 +141,8 @@ head: scheduleHead.md
       {location: ["cppToJava", "collections", "what"], omit_evidence: true},
       {location: ["cppToJava", "collections", "arrayListClass"]},
       {location: ["cppToJava", "collections", "hashMapClass"]},
-    {heading: "Can use casting in Java"},
-      {location: ["cppToJava", "misc", "casting"], omit_evidence: true},
   {name: "Design"},
-    {heading: "Can explain basic object/class structures"},
+    {heading: "Can use basic object/class structures"},
       {location: ["modeling", "modelingStructures", "ooStructures"], omit_evidence: true},
       {location: ["modeling", "modelingStructures", "classDiagramsBasic"]},
       {location: ["modeling", "modelingStructures", "objectDiagrams"]},
