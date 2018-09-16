@@ -155,8 +155,104 @@ Day[] holidays = <span class="hljs-keyword">new</span> Day[]{Day.SATURDAY, Day.S
                         </box>
                         <p>Note that while enumerations are usually a simple set of fixed values, <strong>Java enumerations can have behaviors too</strong>, as explained in <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html">this tutorial from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small></a></p>
                       </div>
-                      <div></div>
+                      <div>
+                        <div>
+                          <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                            <div>
+                              <div>
+                                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> show priority color">
+                                  <question>
+                                    <p>Define an enumeration named <code>Priority</code>. Add the missing <code>describe</code> method to the code below so that it produces the output given.</p>
+                                    <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-comment">// Add your method here</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        describe(<span class="hljs-string">"Red"</span>, Priority.HIGH);
+        describe(<span class="hljs-string">"Orange"</span>, Priority.MEDIUM);
+        describe(<span class="hljs-string">"Blue"</span>, Priority.MEDIUM);
+        describe(<span class="hljs-string">"Green"</span>, Priority.LOW);
+    }
+}
+</code></pre>
+                                    <p><span class="fas fa-arrow-down"></span></p>
+                                    <pre class="hljs"><code>Red indicates high priority
+Orange indicates medium priority
+Blue indicates medium priority
+Green indicates low priority
+</code></pre>
+                                    <div slot="hint">
+                                      <p>Use a <code>switch</code> statement to select between possible values for <code>Priority</code>.</p>
+                                      <pre><code class="hljs java">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">describe</span><span class="hljs-params">(String color, Priority p)</span> </span>{
+        <span class="hljs-keyword">switch</span> (p) {
+            <span class="hljs-keyword">case</span> LOW:
+                System.out.println(color + <span class="hljs-string">" indicates low priority"</span>);
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-comment">// ...</span>
+        }
+    }
+</code></pre>
+                                      <p>Code for the enumeration is given below:</p>
+                                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Priority {
+    HIGH, MEDIUM, LOW
+}
+</code></pre>
+                                    </div>
+                                  </question>
+                                </panel>
+                              </div>
+                            </div>
+                          </panel>
+                        </div>
+                      </div>
                     </div>
+                  </div>
+                </div>
+                <hr style="border-top: dashed 1px; border-color:grey">
+                <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
+                <div>
+                  <p>The ability to do exercises such as,</p>
+                  <div>
+                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> show priority color">
+                      <question>
+                        <p>Define an enumeration named <code>Priority</code>. Add the missing <code>describe</code> method to the code below so that it produces the output given.</p>
+                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-comment">// Add your method here</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        describe(<span class="hljs-string">"Red"</span>, Priority.HIGH);
+        describe(<span class="hljs-string">"Orange"</span>, Priority.MEDIUM);
+        describe(<span class="hljs-string">"Blue"</span>, Priority.MEDIUM);
+        describe(<span class="hljs-string">"Green"</span>, Priority.LOW);
+    }
+}
+</code></pre>
+                        <p><span class="fas fa-arrow-down"></span></p>
+                        <pre class="hljs"><code>Red indicates high priority
+Orange indicates medium priority
+Blue indicates medium priority
+Green indicates low priority
+</code></pre>
+                        <div slot="hint">
+                          <p>Use a <code>switch</code> statement to select between possible values for <code>Priority</code>.</p>
+                          <pre><code class="hljs java">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">describe</span><span class="hljs-params">(String color, Priority p)</span> </span>{
+        <span class="hljs-keyword">switch</span> (p) {
+            <span class="hljs-keyword">case</span> LOW:
+                System.out.println(color + <span class="hljs-string">" indicates low priority"</span>);
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-comment">// ...</span>
+        }
+    }
+</code></pre>
+                          <p>Code for the enumeration is given below:</p>
+                          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Priority {
+    HIGH, MEDIUM, LOW
+}
+</code></pre>
+                        </div>
+                      </question>
+                    </panel>
                   </div>
                 </div>
             </panel>
@@ -816,6 +912,11 @@ T | 1 | join sports club
                     </div>
                   </div>
                 </div>
+              </div>
+              <hr style="border-top: dashed 1px; border-color:grey">
+              <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
+              <div>
+                <p>Any code that you have written to read from and write to files.</p>
               </div>
           </panel>
         </panel>
@@ -1537,7 +1638,7 @@ T | 1 | join sports club
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 16 Sep 2018 12:06:20 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 16 Sep 2018 15:31:54 GMT</small></div>
 </footer>
 </div>
 </body>

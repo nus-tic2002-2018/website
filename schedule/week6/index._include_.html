@@ -982,32 +982,60 @@ Wednesday =&gt; 2
                       <div>
                         <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
                           <div>
-                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which association notations are shown?">
-                              <question>
-                                <p>Which association notatations are shown in this diagram?</p>
-                                <img src="/website/book/modeling/modelingStructures/classDiagramsIntermediate/images/professorStudent.png" height="100">
-                                <p></p>
-                                <ul class="task-list">
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. association labels</li>
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. association roles</li>
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. association multiplicity</li>
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. class names</li>
-                                </ul>
-                                <div slot="answer">
-                                  <p>(a) (b) (c) (d)</p>
-                                  <p>Explanation: '1’ is a <em>multiplicity</em>, ‘mentored by’ is a <em>label</em>, and ‘mentor’ is a <em>role</em>.</p>
-                                </div>
-                              </question>
-                            </panel>
-                          </div>
-                          <div>
-                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain Class Diagram">
-                              <question>
-                                <p>Explain the associations, navigabilities, and multiplicities in the class diagram below:</p>
-                                <img src="/website/book/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400">
-                                <p></p>
-                              </question>
-                            </panel>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which association notations are shown?">
+                                <question>
+                                  <p>Which association notatations are shown in this diagram?</p>
+                                  <img src="/website/book/modeling/modelingStructures/classDiagramsIntermediate/images/professorStudent.png" height="100">
+                                  <p></p>
+                                  <ul class="task-list">
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. association labels</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. association roles</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. association multiplicity</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. class names</li>
+                                  </ul>
+                                  <div slot="answer">
+                                    <p>(a) (b) (c) (d)</p>
+                                    <p>Explanation: '1’ is a <em>multiplicity</em>, ‘mentored by’ is a <em>label</em>, and ‘mentor’ is a <em>role</em>.</p>
+                                  </div>
+                                </question>
+                              </panel>
+                            </div>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain Class Diagram">
+                                <question>
+                                  <p>Explain the associations, navigabilities, and multiplicities in the class diagram below:</p>
+                                  <img src="/website/book/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400">
+                                  <p></p>
+                                </question>
+                              </panel>
+                            </div>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Draw Class Diagram for Box etc.">
+                                <question>
+                                  <p>Draw a class diagram for the code below. Show the attributes, methods, associations, navigabilities, and multiplicities in the class diagram below:</p>
+                                  <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span> </span>{
+    <span class="hljs-keyword">private</span> Item[] parts = <span class="hljs-keyword">new</span> Item[<span class="hljs-number">10</span>];
+    <span class="hljs-keyword">private</span> Item spareItem;
+    <span class="hljs-keyword">private</span> Lid lid; <span class="hljs-comment">// lid of this box</span>
+    <span class="hljs-keyword">private</span> Box outerBox;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">open</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//...</span>
+    }
+}
+</code></pre>
+                                  <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Item</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> totalItems;
+}
+</code></pre>
+                                  <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Lid</span> </span>{
+    Box box; <span class="hljs-comment">// the box for which this is the lid</span>
+}
+</code></pre>
+                                </question>
+                              </panel>
+                            </div>
                           </div>
                         </panel>
                       </div>
@@ -1026,6 +1054,32 @@ Wednesday =&gt; 2
                       <p>Explain the associations, navigabilities, and multiplicities in the class diagram below:</p>
                       <img src="/website/book/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400">
                       <p></p>
+                    </question>
+                  </panel>
+                </div>
+                <div>
+                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Draw Class Diagram for Box etc.">
+                    <question>
+                      <p>Draw a class diagram for the code below. Show the attributes, methods, associations, navigabilities, and multiplicities in the class diagram below:</p>
+                      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span> </span>{
+    <span class="hljs-keyword">private</span> Item[] parts = <span class="hljs-keyword">new</span> Item[<span class="hljs-number">10</span>];
+    <span class="hljs-keyword">private</span> Item spareItem;
+    <span class="hljs-keyword">private</span> Lid lid; <span class="hljs-comment">// lid of this box</span>
+    <span class="hljs-keyword">private</span> Box outerBox;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">open</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//...</span>
+    }
+}
+</code></pre>
+                      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Item</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> totalItems;
+}
+</code></pre>
+                      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Lid</span> </span>{
+    Box box; <span class="hljs-comment">// the box for which this is the lid</span>
+}
+</code></pre>
                     </question>
                   </panel>
                 </div>
@@ -1068,7 +1122,48 @@ Wednesday =&gt; 2
                             fragment="main"></panel>
                         </p>
                       </div>
-                      <div></div>
+                      <div>
+                        <div>
+                          <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                            <div>
+                              <div>
+                                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Draw Class Diagram for Box etc.">
+                                  <question>
+                                    <p>This question is based on the following question from another topic:</p>
+                                    <div>
+                                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Draw Class Diagram for Box etc.">
+                                        <question>
+                                          <p>Draw a class diagram for the code below. Show the attributes, methods, associations, navigabilities, and multiplicities in the class diagram below:</p>
+                                          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span> </span>{
+    <span class="hljs-keyword">private</span> Item[] parts = <span class="hljs-keyword">new</span> Item[<span class="hljs-number">10</span>];
+    <span class="hljs-keyword">private</span> Item spareItem;
+    <span class="hljs-keyword">private</span> Lid lid; <span class="hljs-comment">// lid of this box</span>
+    <span class="hljs-keyword">private</span> Box outerBox;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">open</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//...</span>
+    }
+}
+</code></pre>
+                                          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Item</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> totalItems;
+}
+</code></pre>
+                                          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Lid</span> </span>{
+    Box box; <span class="hljs-comment">// the box for which this is the lid</span>
+}
+</code></pre>
+                                        </question>
+                                      </panel>
+                                    </div>
+                                    <p>Draw an object diagram to match the code. Include objects of all three classes in your object diagram.</p>
+                                  </question>
+                                </panel>
+                              </div>
+                            </div>
+                          </panel>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1105,6 +1200,40 @@ Wednesday =&gt; 2
                         <div slot="hint">
                           <p>After step 2, the diagram should be like this:</p>
                           <img src="/website/book/uml/classDiagrams/combine/basic/images/objectDiagramsForClassDiagramHint.png" width="600"></div>
+                      </question>
+                    </panel>
+                  </div>
+                  <div>
+                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Draw Class Diagram for Box etc.">
+                      <question>
+                        <p>This question is based on the following question from another topic:</p>
+                        <div>
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Draw Class Diagram for Box etc.">
+                            <question>
+                              <p>Draw a class diagram for the code below. Show the attributes, methods, associations, navigabilities, and multiplicities in the class diagram below:</p>
+                              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span> </span>{
+    <span class="hljs-keyword">private</span> Item[] parts = <span class="hljs-keyword">new</span> Item[<span class="hljs-number">10</span>];
+    <span class="hljs-keyword">private</span> Item spareItem;
+    <span class="hljs-keyword">private</span> Lid lid; <span class="hljs-comment">// lid of this box</span>
+    <span class="hljs-keyword">private</span> Box outerBox;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">open</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//...</span>
+    }
+}
+</code></pre>
+                              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Item</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> totalItems;
+}
+</code></pre>
+                              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Lid</span> </span>{
+    Box box; <span class="hljs-comment">// the box for which this is the lid</span>
+}
+</code></pre>
+                            </question>
+                          </panel>
+                        </div>
+                        <p>Draw an object diagram to match the code. Include objects of all three classes in your object diagram.</p>
                       </question>
                     </panel>
                   </div>
@@ -2096,8 +2225,104 @@ Day[] holidays = <span class="hljs-keyword">new</span> Day[]{Day.SATURDAY, Day.S
                       </box>
                       <p>Note that while enumerations are usually a simple set of fixed values, <strong>Java enumerations can have behaviors too</strong>, as explained in <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html">this tutorial from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small></a></p>
                     </div>
-                    <div></div>
+                    <div>
+                      <div>
+                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                          <div>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> show priority color">
+                                <question>
+                                  <p>Define an enumeration named <code>Priority</code>. Add the missing <code>describe</code> method to the code below so that it produces the output given.</p>
+                                  <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-comment">// Add your method here</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        describe(<span class="hljs-string">"Red"</span>, Priority.HIGH);
+        describe(<span class="hljs-string">"Orange"</span>, Priority.MEDIUM);
+        describe(<span class="hljs-string">"Blue"</span>, Priority.MEDIUM);
+        describe(<span class="hljs-string">"Green"</span>, Priority.LOW);
+    }
+}
+</code></pre>
+                                  <p><span class="fas fa-arrow-down"></span></p>
+                                  <pre class="hljs"><code>Red indicates high priority
+Orange indicates medium priority
+Blue indicates medium priority
+Green indicates low priority
+</code></pre>
+                                  <div slot="hint">
+                                    <p>Use a <code>switch</code> statement to select between possible values for <code>Priority</code>.</p>
+                                    <pre><code class="hljs java">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">describe</span><span class="hljs-params">(String color, Priority p)</span> </span>{
+        <span class="hljs-keyword">switch</span> (p) {
+            <span class="hljs-keyword">case</span> LOW:
+                System.out.println(color + <span class="hljs-string">" indicates low priority"</span>);
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-comment">// ...</span>
+        }
+    }
+</code></pre>
+                                    <p>Code for the enumeration is given below:</p>
+                                    <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Priority {
+    HIGH, MEDIUM, LOW
+}
+</code></pre>
+                                  </div>
+                                </question>
+                              </panel>
+                            </div>
+                          </div>
+                        </panel>
+                      </div>
+                    </div>
                   </div>
+                </div>
+              </div>
+              <hr style="border-top: dashed 1px; border-color:grey">
+              <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
+              <div>
+                <p>The ability to do exercises such as,</p>
+                <div>
+                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> show priority color">
+                    <question>
+                      <p>Define an enumeration named <code>Priority</code>. Add the missing <code>describe</code> method to the code below so that it produces the output given.</p>
+                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-comment">// Add your method here</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        describe(<span class="hljs-string">"Red"</span>, Priority.HIGH);
+        describe(<span class="hljs-string">"Orange"</span>, Priority.MEDIUM);
+        describe(<span class="hljs-string">"Blue"</span>, Priority.MEDIUM);
+        describe(<span class="hljs-string">"Green"</span>, Priority.LOW);
+    }
+}
+</code></pre>
+                      <p><span class="fas fa-arrow-down"></span></p>
+                      <pre class="hljs"><code>Red indicates high priority
+Orange indicates medium priority
+Blue indicates medium priority
+Green indicates low priority
+</code></pre>
+                      <div slot="hint">
+                        <p>Use a <code>switch</code> statement to select between possible values for <code>Priority</code>.</p>
+                        <pre><code class="hljs java">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">describe</span><span class="hljs-params">(String color, Priority p)</span> </span>{
+        <span class="hljs-keyword">switch</span> (p) {
+            <span class="hljs-keyword">case</span> LOW:
+                System.out.println(color + <span class="hljs-string">" indicates low priority"</span>);
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-comment">// ...</span>
+        }
+    }
+</code></pre>
+                        <p>Code for the enumeration is given below:</p>
+                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Priority {
+    HIGH, MEDIUM, LOW
+}
+</code></pre>
+                      </div>
+                    </question>
+                  </panel>
                 </div>
               </div>
           </panel>
@@ -2756,6 +2981,11 @@ T | 1 | join sports club
                   </div>
                 </div>
               </div>
+            </div>
+            <hr style="border-top: dashed 1px; border-color:grey">
+            <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
+            <div>
+              <p>Any code that you have written to read from and write to files.</p>
             </div>
         </panel>
       </panel>
