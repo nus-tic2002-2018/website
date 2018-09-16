@@ -2785,10 +2785,28 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
                     <div>
                       <p><strong>A UML sequence diagram <em>captures the interactions between multiple objects for a given scenario.</em></strong></p>
                       <tip-box>
-                        <p><span class="fas fa-cube"></span> Some exmaple sequence diagrams:</p>
-                        <img src="/website/book/uml/sequenceDiagrams/introduction/images/textLogic.png" height="300">
-                        <p></p>
-                        <img src="/website/book/uml/sequenceDiagrams/introduction/images/logicMinefield.png" height="300">
+                        <p><span class="fas fa-cube"></span> Consider the code below.</p>
+                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Machine</span> </span>{
+
+    <span class="hljs-function">Unit <span class="hljs-title">producePrototype</span><span class="hljs-params">()</span> </span>{
+        Unit prototype = <span class="hljs-keyword">new</span> Unit();
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) {
+            prototype.stressTest();
+        }
+        <span class="hljs-keyword">return</span> prototype;
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Unit</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">stressTest</span><span class="hljs-params">()</span> </span>{
+
+    }
+}
+
+</code></pre>
+                        <p>Here is the sequence diagram to model the interactions for the method call <code>producePrototype()</code> on a <code>Machine</code> object.</p>
+                        <img src="/website/book/uml/sequenceDiagrams/introduction/images/Machine.png" width="450">
                         <p></p>
                       </tip-box>
                     </div>
@@ -2827,11 +2845,13 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
                       </tip-box>
                       <p>The <code>:TextUi</code> in the above example denotes <em>an unnamed instance of the class TextUi</em>. If there were two instances of <code>TextUi</code> in the diagram, they can be distinguished by naming them e.g. <code>TextUi1:TextUi</code>                        and <code>TextUi2:TextUi</code>.</p>
                       <p><strong>Arrows representing method calls should be solid arrows while those representing method returns should be dashed arrows</strong>.</p>
-                      <p>Note that unlike in Object Diagrams, the <strong>class/object name is not underlined in sequence diagrams</strong>.</p>
+                      <p>Note that unlike in object diagrams, the <strong>class/object name is not underlined in sequence diagrams</strong>.</p>
                       <tip-box>
-                        <p>❌ <strong>[Common notation error] Activation bar too long:</strong> The activation bar of a method cannot start before the method call arrives and a method cannot remain active after the method had returned. <span class="dimmed"> In the two sequence diagrams below, the one on the left commits this error because the activation bar starts <em>before</em> the method <code>Foo#xyz()</code> is called and remains active <em>after</em> the method returns.</span></p>
+                        <p><span style="color:red"><span class="fas fa-times"></span></span> <strong>[Common notation error] Activation bar too long:</strong> The activation bar of a method cannot start before the method call arrives and a method cannot
+                          remain active after the method had returned. <span class="dimmed"> In the two sequence diagrams below, the one on the left commits this error because the activation bar starts <em>before</em> the method <code>Foo#xyz()</code> is called and remains active <em>after</em> the method returns.</span></p>
                         <img src="/website/book/uml/sequenceDiagrams/basic/images/commonError-activationBarTooLong.png" height="120">
-                        <p>❌ <strong>[Common notation error] Broken activation bar:</strong> The activation bar should remain unbroken from the point the method is called until the method returns. <span class="dimmed"> In the two sequence diagrams below, the one on the left commits this error because the activation bar for the method <code>Foo#abc()</code> is not contiguous, but appears as two pieces instead.</span></p>
+                        <p><span style="color:red"><span class="fas fa-times"></span></span> <strong>[Common notation error] Broken activation bar:</strong> The activation bar should remain unbroken from the point the method is called until the method returns.
+                          <span class="dimmed"> In the two sequence diagrams below, the one on the left commits this error because the activation bar for the method <code>Foo#abc()</code> is not contiguous, but appears as two pieces instead.</span></p>
                         <img src="/website/book/uml/sequenceDiagrams/basic/images/commonError-brokenActivationBar.png" height="120"></tip-box>
                     </div>
                     <div></div>
@@ -2955,14 +2975,7 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
                 </span>
                 </span>
                 <div>
-                  <div>
-                    <p>
-                      <panel src="/website\book\uml\sequenceDiagrams\basic\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%UML → Sequence Diagrams → Basic%%"></panel>
-                      <panel src="/website\book\uml\sequenceDiagrams\loops\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%UML → Sequence Diagrams → Loops%%"></panel>
-                      <panel src="/website\book\uml\sequenceDiagrams\objectCreation\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%UML → Sequence Diagrams → Object Creation%%"></panel>
-                      <panel src="/website\book\uml\sequenceDiagrams\minimalNotation\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%UML → Sequence Diagrams → Minimal Notation%%"></panel>
-                    </p>
-                  </div>
+                  <div></div>
                   <p></p>
                   <p><span class="dimmed"><strong><span>Design → Modelling → Modelling Behaviors
 </span></strong>
@@ -2974,32 +2987,24 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
                     </div>
                     <div id="main">
                       <div>
-                        <p><strong>Sequence diagrams model interactions between entities for a given scenario.</strong></p>
-                        <tip-box>
-                          <p><span class="fas fa-cube"></span> Consider the code below.</p>
-                          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Machine</span> </span>{
-
-    <span class="hljs-function">Unit <span class="hljs-title">producePrototype</span><span class="hljs-params">()</span> </span>{
-        Unit prototype = <span class="hljs-keyword">new</span> Unit();
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) {
-            prototype.stressTest();
-        }
-        <span class="hljs-keyword">return</span> prototype;
-    }
-}
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Unit</span> </span>{
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">stressTest</span><span class="hljs-params">()</span> </span>{
-
-    }
-}
-
-</code></pre>
-                          <p>Here is the sequence diagram to model the interactions for the method call <code>prouducePrototype()</code> on a <code>Machine</code> object.</p>
-                          <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsBasic/images/Machine.png" width="450">
-                          <p></p>
-                        </tip-box>
+                        <p>
+                          <panel type="seamless" src="/website\book\uml\sequenceDiagrams\introduction\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Introduction"
+                            alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SequenceDiagrams" fragment="main"></panel>
+                        </p>
+                        <p>
+                          <panel type="seamless" src="/website\book\uml\sequenceDiagrams\basic\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Basic Notation"
+                            alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Basic" fragment="main"></panel>
+                        </p>
+                        <p>
+                          <panel type="seamless" src="/website\book\uml\sequenceDiagrams\loops\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Loops"
+                            alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Loops" fragment="main"></panel>
+                          <panel type="seamless" src="/website\book\uml\sequenceDiagrams\objectCreation\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Object Creation"
+                            alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Creation" fragment="main"></panel>
+                        </p>
+                        <p>
+                          <panel type="seamless" src="/website\book\uml\sequenceDiagrams\minimalNotation\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Minimal Notation"
+                            alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Minimal" fragment="main"></panel>
+                        </p>
                       </div>
                       <div>
                         <div>
@@ -3046,7 +3051,7 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
                               <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Find notation errors in sequence diagram">
                                 <question>
                                   <p>Find notation mistakes in the sequence diagram below:</p>
-                                  <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsBasic/images/notationMistakes.png" width="700"></question>
+                                  <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsBasic/images/notationMistakes.png" width="500"></question>
                               </panel>
                             </div>
                           </panel>
@@ -3657,7 +3662,8 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
                                   <p><strong>It will help you to work simultaneously on, and manage the drift between, multiple versions of your project.</strong> Most of these reasons are equally valid, at least in theory, whether you're working on a project
                                     by yourself, or with a hundred other people.</p>
                                   <p>-- [adapted from
-                                    <trigger for="pop:bryan-mercurial-guide">bryan-mercurial-guide</trigger>]</p>
+                                    <trigger trigger="click" for="modal:rcsWhat-bryanMercurialGuide">bryan-mercurial-guide</trigger>
+                                  </p>
                                 </blockquote>
                                 <hr>
                               </tab>
@@ -3666,13 +3672,12 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
                                 <hr>
                               </tab>
                             </tabs>
-                            <popover id="pop:bryan-mercurial-guide" title="bryan-mercurial-guide <span class='glyphicon glyphicon-eye-open' aria-hidden='true'></span>" placement="right">
-                              <div slot="content">
-                                <div>
-                                  <p><a href="http://hgbook.red-bean.com/">Mercurial: The Definitive Guide</a> by Bryan O'Sullivan retrieved on 2012/07/11</p>
-                                </div>
+                            <modal large="" title="Reference » Mercurial: The Definitive Guide" id="modal:rcsWhat-bryanMercurialGuide">
+                            
+                              <div>
+                                <p><a href="http://hgbook.red-bean.com/">Mercurial: The Definitive Guide</a> by Bryan O'Sullivan retrieved on 2012/07/11</p>
                               </div>
-                            </popover>
+                            </modal>
                           </div>
                           <div>
                             <div>
@@ -4619,7 +4624,139 @@ index 15b57f7..17f4528 100644
                 </div>
             </panel>
             <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.4b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the need for following a standard</span>
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.6a</code></span></big> <span><span class="fas fa-trophy"></span> Can use Java varargs feature</span>
+              <span
+                class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                </span>
+                </span>
+                <div class="indented">
+                  <panel minimized="">
+                    <span slot="header" class="card-title">Details of the LO</span>
+                    <div>
+                      <div></div>
+                      <p></p>
+                      <p><span class="dimmed"><strong><span>Tools → Java →
+</span></strong>
+                        </span>
+                      </p>
+                      <div id="title-and-body">
+                        <div>
+                          <h4 id="varargs">Varargs</h4>
+                        </div>
+                        <div id="main">
+                          <div>
+                            <p><span class="fas fa-paperclip"></span> Resources:</p>
+                            <ul>
+                              <li><a href="http://docs.oracle.com/javase/1.5.0/docs/guide/language/varargs.html">Java Varargs feature (from Oracle.com)</a></li>
+                              <li><a href="https://www.javatpoint.com/varargs">Java Varargs tutorial (for javaTpoint.com)</a></li>
+                            </ul>
+                          </div>
+                          <div></div>
+                        </div>
+                      </div>
+                    </div>
+                  </panel><br><br>
+                  <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+                  </p>
+                  <div class="indented">
+                    <div>
+                      <p><strong>Acceptable</strong>: Some code that you have written that uses the varargs feature.</p>
+                      <p><strong>Suggested</strong>: Do the exercise given in <a href="https://github.com/nus-tic2002-2018/addressbook-level1/blob/master/docs/LearningOutcomes.adoc#use-varargs-code-lo-varargs-code">AddressBook - Level1 : LO-Varargs</a></p>
+                      <p><strong>Submission</strong>: Show your code to the tutor during the tutorial.</p>
+                    </div>
+                  </div>
+                </div>
+            </panel>
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.7a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the meaning of association
+              classes</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              <span
+                class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                </span>
+                </span>
+                </span>
+                <div class="indented">
+                  <panel minimized="">
+                    <span slot="header" class="card-title">Details of the LO</span>
+                    <div>
+                      <div></div>
+                      <p></p>
+                      <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Associations →
+</span></strong>
+                        </span>
+                      </p>
+                      <div id="title-and-body">
+                        <div>
+                          <h4 id="association-classes">Association Classes</h4>
+                        </div>
+                        <div id="main">
+                          <div>
+                            <p><strong>An <em>association class</em> represents additional information about an association.</strong> It is a normal class but plays a special role from a design point of view.</p>
+                            <tip-box>
+                              <p><span class="fas fa-cube"></span> A <code>Man</code> class and a <code>Woman</code> class is linked with a ‘married to’ association and there is a need to store the date of marriage. However, that data is related to the association
+                                rather than specifically owned by either the <code>Man</code> object or the <code>Woman</code> object. In such situations, an additional association class can be introduced, e.g. a <code>Marriage</code> class, to store
+                                such information.</p>
+                            </tip-box>
+                            <h5 id="implementing-association-classes">Implementing association classes</h5>
+                            <p>There is no special way to implement an association class. It can be implemented as a normal class that has variables to represent the endpoint of the association it represents.</p>
+                            <tip-box>
+                              <p><span class="fas fa-cube"></span> In the code below, the <code>Transaction</code> class is an association class that represent a transaction between a <code>Person</code> who is the seller and another <code>Person</code>                                who is the buyer.</p>
+                              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Transaction</span></span>{
+    
+    <span class="hljs-comment">//all fields are compulsory</span>
+    Person seller;
+    Person buyer;
+    Date date;
+    String receiptNumber;
+    
+    Marriage (Person seller, Person buyer, Date date, String receiptNumber){
+        <span class="hljs-comment">//set fields</span>
+    }
+}
+</code></pre>
+                            </tip-box>
+                          </div>
+                          <div>
+                            <div>
+                              <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                                <div>
+                                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which are suitable as an Association Class?">
+                                    <question>
+                                      <p>Which one of these is the suitable as an Association Class?</p>
+                                      <img src="/website/book/oop/associations/associationClasses/images/exerciseDiagram.png" width="500">
+                                      <p></p>
+                                      <ul class="task-list">
+                                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a</li>
+                                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b</li>
+                                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c</li>
+                                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d</li>
+                                      </ul>
+                                      <div slot="answer">
+                                        <p>(a)(b)<s>(c)</s>(d)</p>
+                                        <p>Explanation: Mileage is a property of the car, and not specifically about the association between the Driver and the Car. If Mileage was defined as the total number of miles that car was driven by that driver, then
+                                          it would be suitable as an association class.</p>
+                                      </div>
+                                    </question>
+                                  </panel>
+                                </div>
+                              </panel>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </panel><br><br>
+                  <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+                  </p>
+                  <div class="indented">
+                    <div>
+                      <p>Give more examples of association classes, preferably related to your project.</p>
+                    </div>
+                  </div>
+                </div>
+            </panel>
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.8b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the need for following a standard</span>
               <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
               </span>
@@ -4695,7 +4832,7 @@ index 15b57f7..17f4528 100644
               </div>
             </panel>
             <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.4c</code></span></big> <span><span class="fas fa-trophy"></span> Can follow simple mechanical style rules</span>
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.8c</code></span></big> <span><span class="fas fa-trophy"></span> Can follow simple mechanical style rules</span>
               <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
               </span>
@@ -4789,7 +4926,7 @@ index 15b57f7..17f4528 100644
               </div>
             </panel>
             <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.4d</code></span></big> <span><span class="fas fa-trophy"></span> Can follow intermediate style rules</span>
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.8d</code></span></big> <span><span class="fas fa-trophy"></span> Can follow intermediate style rules</span>
               <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
               <span
                 class="glyphicon glyphicon-star" aria-hidden="true"></span>
@@ -4910,7 +5047,172 @@ index 15b57f7..17f4528 100644
                 </div>
             </panel>
             <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.8a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain unit testing</span>
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.12b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the need for early developer
+              testing</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+              </span>
+              </span>
+              <div class="indented">
+                <panel minimized="">
+                  <span slot="header" class="card-title">Details of the LO</span>
+                  <div>
+                    <div></div>
+                    <p></p>
+                    <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Developer Testing →
+</span></strong>
+                      </span>
+                    </p>
+                    <div id="title-and-body">
+                      <div>
+                        <h4 id="why">Why</h4>
+                      </div>
+                      <div id="main">
+                        <div>
+                          <p><strong>Delaying testing until the full product is complete has a number of disadvantages:</strong></p>
+                          <ul>
+                            <li><strong>Locating the cause of such a test case failure is difficult due to a large search space;</strong> in a large system, the search space could be millions of lines of code, written by hundreds of developers! The failure
+                              may also be due to multiple inter-related bugs.</li>
+                            <li><strong>Fixing a bug found during such testing could result in major rework</strong>, especially if the bug originated during the design or during requirements specification <span class="dimmed">i.e. a faulty design or faulty requirements</span>.</li>
+                            <li><strong>One bug might 'hide' other bugs</strong>, which could emerge only after the first bug is fixed.</li>
+                            <li><strong>The delivery may have to be delayed</strong> if too many bugs were found during testing.</li>
+                          </ul>
+                          <p><strong>Therefore, it is better to do early testing</strong>, as hinted by the popular rule of thumb given below, also illustrated by the graph below it.</p>
+                          <blockquote>
+                            <p>The earlier a bug is found, the easier and cheaper to have it fixed.</p>
+                          </blockquote>
+                          <img src="/website/book/testing/testingTypes/developerTesting/why/images/diagram.png" height="180">
+                          <p></p>
+                          <p>Such early testing of partially developed software is usually, and by necessity, done by the developers themselves i.e. developer testing.</p>
+                        </div>
+                        <div>
+                          <div>
+                            <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                              <div>
+                                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> implications of developers testing their own code">
+                                  <question has-input="true">
+                                    <p>Discuss pros and cons of developers testing their own code.</p>
+                                    <div slot="answer">
+                                      <p>Pros:</p>
+                                      <ul>
+                                        <li>Can be done early (the earlier we find a bug, the cheaper it is to fix).</li>
+                                        <li>Can be done at lower levels, for examples, at operation and class level (testers usually test the system at UI level).</li>
+                                        <li>It is possible to do more thorough testing because developers know the expected external behavior as well as the internal structure of the component.</li>
+                                        <li>It forces developers to take responsibility for their own work (they cannot claim that &quot;testing is the job of the testers&quot;).</li>
+                                      </ul>
+                                      <p>Cons:</p>
+                                      <ul>
+                                        <li>A developer may unconsciously test only situations that he knows to work (i.e. test it too 'gently').</li>
+                                        <li>A developer may be blind to his own mistakes (if he did not consider a certain combination of input while writing code, it is possible for him to miss it again during testing).</li>
+                                        <li>A developer may have misunderstood what the SUT is supposed to do in the first place.</li>
+                                        <li>A developer may lack the testing expertise.</li>
+                                      </ul>
+                                    </div>
+                                  </question>
+                                </panel>
+                              </div>
+                              <div>
+                                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Cost of bug fixing over time">
+                                  <question>
+                                    <p>The cost of fixing a bug goes down as we reach the product release.</p>
+                                    <ul radio-group="37242" class="radio-list">
+                                      <li class="radio-list-item"><label><input class="radio-list-input" name="37242" type="radio"> True</label></li>
+                                      <li class="radio-list-item"><label><input class="radio-list-input" name="37242" type="radio"> False</label></li>
+                                    </ul>
+                                    <div slot="answer">
+                                      <p>False. The cost goes up over time.</p>
+                                    </div>
+                                  </question>
+                                </panel>
+                              </div>
+                              <div>
+                                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Why early testing?">
+                                  <question has-input="true">
+                                    <p>Explain why early testing by developers is important.</p>
+                                  </question>
+                                </panel>
+                              </div>
+                            </panel>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </panel><br><br>
+                <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+                </p>
+                <div class="indented">
+                  <div>
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Why early testing?">
+                        <question has-input="true">
+                          <p>Explain why early testing by developers is important.</p>
+                        </question>
+                      </panel>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </panel>
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.12e</code></span></big> <span><span class="fas fa-trophy"></span> Can use simple JUnit tests</span>
+              <span
+                class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                </span>
+                </span>
+                <div class="indented">
+                  <panel minimized="">
+                    <span slot="header" class="card-title">Details of the LO</span>
+                    <div>
+                      <div></div>
+                      <p></p>
+                      <p><span class="dimmed"><strong><span>Tools → JUnit →
+</span></strong>
+                        </span>
+                      </p>
+                      <div id="title-and-body">
+                        <div>
+                          <h4 id="junit-basic">JUnit: Basic</h4>
+                        </div>
+                        <div id="main">
+                          <div>
+                            <div v-closeable="" alt="Junit tutorial video" class="non-printable">
+                              <p>JUnit 4 with IntelliJ: A quick introduction <sub>-- by DrBFraser</sub></p>
+                              <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/Bld3644bIAo" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                            </div>
+                          </div>
+                          <div>
+                            <div>
+                              <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                                <ul>
+                                  <li><a href="http://junit.sourceforge.net/doc/cookbook/cookbook.htm">JUnit cookbook</a> - a short tutorial from JUnit creators</li>
+                                  <li><a href="http://www.vogella.com/articles/JUnit/article.html">JUnit tutorial</a> - a more detailed tutorial from a developer Lars Vogel</li>
+                                  <li>How to test private methods in Java? [ <a href="http://stackoverflow.com/questions/34571/whats-the-proper-way-to-test-a-class-with-private-methods-using-junit">short answer</a> ] [ <a href="http://www.artima.com/suiterunner/private.html">long answer</a>                                    ]</li>
+                                </ul>
+                              </panel>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </panel><br><br>
+                  <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+                  </p>
+                  <div class="indented">
+                    <div>
+                      <p><strong>Acceptable</strong>: Evidence of having written JUnit tests in some project.</p>
+                      <p><strong>Suggested</strong>: Do the exercise in [<a href="https://github.com/nus-tic2002-2018/addressbook-level2/blob/master/docs/LearningOutcomes.adoc#use-junit-to-implement-unit-tests-code-lo-junit-code">Addressbook-Level2: LO-JUnit</a>]</p>
+                      <div>
+                        <p><strong>Submission</strong>: Create a PR against <a href="https://github.com/nus-tic2002-2018/addressbook-level2">Addressbook-Level2</a>. <mark>Only clean PRs</mark> (i.e. free of unrelated code modifications) will be accepted.</p>
+                        <p>
+                          <panel src="/website\admin\appendixE-gitHub._include_.html#tutorial-pr-instructions" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Appendix E: Using GitHub Project Hosting → Submitting Pull Requests as evidence of an LO%%"
+                            fragment="tutorial-pr-instructions"></panel>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </panel>
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.13a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain unit testing</span>
               <span
                 class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
                 </span>
@@ -5020,8 +5322,8 @@ index 15b57f7..17f4528 100644
                 </div>
             </panel>
             <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.8b</code></span></big> <span><span class="fas fa-trophy"></span> Can use stubs to isolate an SUT from its
-              dependencies</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.13b</code></span></big> <span><span class="fas fa-trophy"></span> Can use stubs to isolate an SUT from
+              its dependencies</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
               </span>
               <div class="indented">
@@ -5168,7 +5470,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
             </panel>
             <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.8c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain integration testing</span>
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.13c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain integration testing</span>
               <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
               </span>
@@ -5215,7 +5517,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
             </panel>
             <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.8d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain integration testing</span>
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.13d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain integration testing</span>
               <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
               </span>
@@ -5273,7 +5575,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
             </panel>
             <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.8e</code></span></big> <span><span class="fas fa-trophy"></span> Can explain system testing</span>
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.13e</code></span></big> <span><span class="fas fa-trophy"></span> Can explain system testing</span>
               <span
                 class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
                 </span>
@@ -5333,7 +5635,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                 </div>
             </panel>
             <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.8f</code></span></big> <span><span class="fas fa-trophy"></span> Can explain automated GUI testing</span>
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.13f</code></span></big> <span><span class="fas fa-trophy"></span> Can explain automated GUI testing</span>
               <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
               </span>
@@ -5420,7 +5722,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
             </panel>
             <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.8g</code></span></big> <span><span class="fas fa-trophy"></span> Can explain acceptance testing</span>
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.13g</code></span></big> <span><span class="fas fa-trophy"></span> Can explain acceptance testing</span>
               <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
               </span>
@@ -5460,7 +5762,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
             </panel>
             <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.8h</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the differences between system
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.13h</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the differences between system
               testing and acceptance testing</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
                 aria-hidden="true"></span></span>
               </span>
@@ -5588,7 +5890,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
             </panel>
             <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.8i</code></span></big> <span><span class="fas fa-trophy"></span> Can explain alpha and beta testing</span>
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.13i</code></span></big> <span><span class="fas fa-trophy"></span> Can explain alpha and beta testing</span>
               <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
               </span>
@@ -5641,7 +5943,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Tue, 11 Sep 2018 07:43:02 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 16 Sep 2018 03:27:02 GMT</small></div>
 </footer>
 </div>
 </body>

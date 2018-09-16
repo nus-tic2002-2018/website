@@ -1,0 +1,147 @@
+2018-09-16T01:52:39.198Z - info: Website generation started at 09:52:35
+2018-09-16T01:52:47.052Z - info: Building assets...
+2018-09-16T01:52:52.109Z - info: Assets built
+2018-09-16T01:52:52.109Z - info: Generating pages...
+2018-09-16T01:53:06.166Z - error:  Error: No such file: C:\repos\nus-tic2002-2018\website\book\oop\classes\enumerations\q-essay-defineWeekDays.md
+Missing reference in C:\repos\nus-tic2002-2018\website\schedule\evidence\oop.md
+    at Parser._preprocess (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:136:21)
+    at element.children.element.children.map.e (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:230:57)
+    at Array.map (<anonymous>)
+    at Parser._preprocess (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:230:43)
+    at element.children.element.children.map.e (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:57)
+    at Array.map (<anonymous>)
+    at Parser._preprocess (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:43)
+    at element.children.element.children.map.e (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:57)
+    at Array.map (<anonymous>)
+    at Parser._preprocess (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:43)
+    at element.children.element.children.map.e (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:57)
+    at Array.map (<anonymous>)
+    at Parser._preprocess (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:43)
+    at element.children.element.children.map.e (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:57)
+    at Array.map (<anonymous>)
+    at Parser._preprocess (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:43)
+2018-09-16T01:53:06.413Z - error:  Error: No such file: C:\repos\nus-tic2002-2018\website\book\oop\classes\enumerations\q-essay-defineWeekDays.md
+Missing reference in C:\repos\nus-tic2002-2018\website\schedule\evidence\oop.md
+    at Parser._preprocess (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:136:21)
+    at element.children.element.children.map.e (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:230:57)
+    at Array.map (<anonymous>)
+    at Parser._preprocess (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:230:43)
+    at element.children.element.children.map.e (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:57)
+    at Array.map (<anonymous>)
+    at Parser._preprocess (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:43)
+    at element.children.element.children.map.e (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:57)
+    at Array.map (<anonymous>)
+    at Parser._preprocess (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:43)
+    at element.children.element.children.map.e (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:57)
+    at Array.map (<anonymous>)
+    at Parser._preprocess (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:43)
+    at element.children.element.children.map.e (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:57)
+    at Array.map (<anonymous>)
+    at Parser._preprocess (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:43)
+2018-09-16T01:53:10.831Z - error:  Error: No such file: C:\repos\nus-tic2002-2018\website\book\oop\classes\enumerations\q-essay-defineWeekDays.md
+Missing reference in C:\repos\nus-tic2002-2018\website\schedule\evidence\oop.md
+    at Parser._preprocess (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:136:21)
+    at element.children.element.children.map.e (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:230:57)
+    at Array.map (<anonymous>)
+    at Parser._preprocess (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:230:43)
+    at element.children.element.children.map.e (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:57)
+    at Array.map (<anonymous>)
+    at Parser._preprocess (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:43)
+    at element.children.element.children.map.e (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:57)
+    at Array.map (<anonymous>)
+    at Parser._preprocess (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:43)
+    at element.children.element.children.map.e (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:57)
+    at Array.map (<anonymous>)
+    at Parser._preprocess (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:43)
+    at element.children.element.children.map.e (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:57)
+    at Array.map (<anonymous>)
+    at Parser._preprocess (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:43)
+2018-09-16T01:53:37.185Z - error:  Error: No such file: C:\repos\nus-tic2002-2018\website\book\oop\classes\enumerations\q-essay-defineWeekDays.md
+Missing reference in C:\repos\nus-tic2002-2018\website\schedule\evidence\oop.md
+    at Parser._preprocess (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:136:21)
+    at element.children.element.children.map.e (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:230:57)
+    at Array.map (<anonymous>)
+    at Parser._preprocess (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:230:43)
+    at element.children.element.children.map.e (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:57)
+    at Array.map (<anonymous>)
+    at Parser._preprocess (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:43)
+    at element.children.element.children.map.e (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:57)
+    at Array.map (<anonymous>)
+    at Parser._preprocess (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:43)
+    at element.children.element.children.map.e (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:57)
+    at Array.map (<anonymous>)
+    at Parser._preprocess (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:43)
+    at element.children.element.children.map.e (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:57)
+    at Array.map (<anonymous>)
+    at Parser._preprocess (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:245:43)
+2018-09-16T02:23:57.228Z - info: Website generation started at 10:23:55
+2018-09-16T02:24:01.326Z - info: Building assets...
+2018-09-16T02:24:04.385Z - info: Assets built
+2018-09-16T02:24:04.385Z - info: Generating pages...
+2018-09-16T02:25:03.035Z - info: Pages built
+2018-09-16T02:25:03.131Z - info: Site data built
+2018-09-16T02:25:03.132Z - info: Website generation complete! Total build time: 68.016s
+2018-09-16T02:25:03.149Z - info: Generate Site durationMs=68033
+2018-09-16T02:25:03.187Z - info: Serving "C:\repos\nus-tic2002-2018\website\_site" at http://127.0.0.1:8080
+2018-09-16T02:25:03.187Z - info: Press CTRL+C to stop ...
+2018-09-16T02:26:12.656Z - info: [10:26:12] Reload for file change: C:\repos\nus-tic2002-2018\website\book\uml\classDiagrams\classes\what\q-essay-drawCarClass.md
+2018-09-16T02:26:13.658Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\uml\classDiagrams\classes\what\q-essay-drawCarClass.md
+2018-09-16T02:26:13.663Z - info: Rebuilding 2 pages
+2018-09-16T02:26:17.357Z - info: Pages rebuilt
+2018-09-16T02:26:17.363Z - info: Site data built
+2018-09-16T02:41:05.257Z - info: [10:41:05] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\index.md
+2018-09-16T02:41:06.296Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\schedule\index.md
+2018-09-16T02:41:06.304Z - info: Rebuilding 2 pages
+2018-09-16T02:41:20.632Z - info: Website generation started at 10:41:18
+2018-09-16T02:41:22.826Z - info: Building assets...
+2018-09-16T02:41:25.621Z - info: Assets built
+2018-09-16T02:41:25.622Z - info: Generating pages...
+2018-09-16T02:42:20.533Z - info: Pages built
+2018-09-16T02:42:20.598Z - info: Site data built
+2018-09-16T02:42:20.598Z - info: Website generation complete! Total build time: 62.193s
+2018-09-16T02:42:20.611Z - info: Generate Site durationMs=62206
+2018-09-16T02:42:20.631Z - info: Serving "C:\repos\nus-tic2002-2018\website\_site" at http://127.0.0.1:8080
+2018-09-16T02:42:20.631Z - info: Press CTRL+C to stop ...
+2018-09-16T02:49:48.981Z - info: [10:49:48] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\index.md
+2018-09-16T02:49:49.987Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\schedule\index.md
+2018-09-16T02:49:49.992Z - info: Rebuilding 2 pages
+2018-09-16T02:49:58.123Z - info: [10:49:58] Reload for file change: C:\repos\nus-tic2002-2018\website\book\oop\inheritance\dynamicAndStaticBinding\text.md
+2018-09-16T02:49:58.123Z - info: [10:49:58] Reload for file change: C:\repos\nus-tic2002-2018\website\book\oop\polymorphism\how\text.md
+2018-09-16T02:49:58.123Z - info: [10:49:58] Reload for file change: C:\repos\nus-tic2002-2018\website\book\oop\inheritance\what\text.md
+2018-09-16T02:49:58.133Z - info: [10:49:58] Reload for file change: C:\repos\nus-tic2002-2018\website\book\revisionControl\what\text.md
+2018-09-16T02:49:58.133Z - info: [10:49:58] Reload for file change: C:\repos\nus-tic2002-2018\website\book\oop\classes\enumerations\text.md
+2018-09-16T02:49:58.133Z - info: [10:49:58] Reload for file change: C:\repos\nus-tic2002-2018\website\book\uml\classDiagrams\enumerations\what\q-essay-defineWeekDays.md
+2018-09-16T02:49:58.133Z - info: [10:49:58] Reload for file change: C:\repos\nus-tic2002-2018\website\book\modeling\modelingStructures\objectDiagrams\text.md
+2018-09-16T02:49:58.133Z - info: [10:49:58] Reload for file change: C:\repos\nus-tic2002-2018\website\book\uml\sequenceDiagrams\introduction\text.md
+2018-09-16T02:49:58.134Z - info: [10:49:58] Reload for file change: C:\repos\nus-tic2002-2018\website\book\uml\sequenceDiagrams\basic\text.md
+2018-09-16T02:49:58.134Z - info: [10:49:58] Reload for file change: C:\repos\nus-tic2002-2018\website\book\modeling\modelingBehaviors\sequenceDiagramsBasic\text.md
+2018-09-16T02:49:58.135Z - info: [10:49:58] Reload for file change: C:\repos\nus-tic2002-2018\website\book\errorHandling\assertions\how\text.md
+2018-09-16T02:49:58.137Z - info: [10:49:58] Reload for file change: C:\repos\nus-tic2002-2018\website\book\oop\inheritance\what\q-tick-incorrectStatement.md
+2018-09-16T02:49:58.155Z - info: [10:49:58] Reload for file change: C:\repos\nus-tic2002-2018\website\book\modeling\modelingBehaviors\sequenceDiagramsBasic\q-essay-findNotationMistakes.md
+2018-09-16T02:50:01.672Z - info: [10:50:01] Reload for file change: C:\repos\nus-tic2002-2018\website\book\oop\associations\multiplicity\text.md
+2018-09-16T02:50:01.672Z - info: [10:50:01] Reload for file change: C:\repos\nus-tic2002-2018\website\book\uml\classDiagrams\associations\navigability\logic-minefield.md
+2018-09-16T02:50:01.672Z - info: [10:50:01] Reload for file change: C:\repos\nus-tic2002-2018\website\book\oop\associations\composition\text.md
+2018-09-16T02:50:01.673Z - info: [10:50:01] Reload for file change: C:\repos\nus-tic2002-2018\website\book\oop\associations\aggregation\text.md
+2018-09-16T02:50:01.673Z - info: [10:50:01] Reload for file change: C:\repos\nus-tic2002-2018\website\book\uml\classDiagrams\dependencies\what\text.md
+2018-09-16T02:50:01.673Z - info: [10:50:01] Reload for file change: C:\repos\nus-tic2002-2018\website\book\oop\associations\dependencies\text.md
+2018-09-16T02:50:01.673Z - info: [10:50:01] Reload for file change: C:\repos\nus-tic2002-2018\website\book\uml\classDiagrams\enumerations\what\text.md
+2018-09-16T02:50:01.674Z - info: [10:50:01] Reload for file change: C:\repos\nus-tic2002-2018\website\book\uml\classDiagrams\abstractClasses\what\text.md
+2018-09-16T02:50:01.687Z - info: [10:50:01] Reload for file change: C:\repos\nus-tic2002-2018\website\book\uml\classDiagrams\enumerations\what\exercises.md
+2018-09-16T02:50:03.310Z - info: Pages rebuilt
+2018-09-16T02:50:03.314Z - info: Site data built
+2018-09-16T02:50:03.432Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\oop\inheritance\dynamicAndStaticBinding\text.md,C:\repos\nus-tic2002-2018\website\book\oop\polymorphism\how\text.md,C:\repos\nus-tic2002-2018\website\book\oop\inheritance\what\text.md,C:\repos\nus-tic2002-2018\website\book\revisionControl\what\text.md,C:\repos\nus-tic2002-2018\website\book\oop\classes\enumerations\text.md,C:\repos\nus-tic2002-2018\website\book\uml\classDiagrams\enumerations\what\q-essay-defineWeekDays.md,C:\repos\nus-tic2002-2018\website\book\modeling\modelingStructures\objectDiagrams\text.md,C:\repos\nus-tic2002-2018\website\book\uml\sequenceDiagrams\introduction\text.md,C:\repos\nus-tic2002-2018\website\book\uml\sequenceDiagrams\basic\text.md,C:\repos\nus-tic2002-2018\website\book\modeling\modelingBehaviors\sequenceDiagramsBasic\text.md,C:\repos\nus-tic2002-2018\website\book\errorHandling\assertions\how\text.md,C:\repos\nus-tic2002-2018\website\book\oop\inheritance\what\q-tick-incorrectStatement.md,C:\repos\nus-tic2002-2018\website\book\modeling\modelingBehaviors\sequenceDiagramsBasic\q-essay-findNotationMistakes.md,C:\repos\nus-tic2002-2018\website\book\oop\associations\multiplicity\text.md,C:\repos\nus-tic2002-2018\website\book\uml\classDiagrams\associations\navigability\logic-minefield.md,C:\repos\nus-tic2002-2018\website\book\oop\associations\composition\text.md,C:\repos\nus-tic2002-2018\website\book\oop\associations\aggregation\text.md,C:\repos\nus-tic2002-2018\website\book\uml\classDiagrams\dependencies\what\text.md,C:\repos\nus-tic2002-2018\website\book\oop\associations\dependencies\text.md,C:\repos\nus-tic2002-2018\website\book\uml\classDiagrams\enumerations\what\text.md,C:\repos\nus-tic2002-2018\website\book\uml\classDiagrams\abstractClasses\what\text.md,C:\repos\nus-tic2002-2018\website\book\uml\classDiagrams\enumerations\what\exercises.md
+2018-09-16T02:50:03.445Z - info: Rebuilding 30 pages
+2018-09-16T02:50:37.711Z - info: Pages rebuilt
+2018-09-16T02:50:37.717Z - info: Site data built
+2018-09-16T03:20:48.228Z - info: Website generation started at 11:20:44
+2018-09-16T03:20:52.631Z - info: Building assets...
+2018-09-16T03:20:55.477Z - info: Assets built
+2018-09-16T03:20:55.477Z - info: Generating pages...
+2018-09-16T03:21:51.296Z - info: Pages built
+2018-09-16T03:21:51.405Z - info: Site data built
+2018-09-16T03:21:51.406Z - info: Website generation complete! Total build time: 67.272s
+2018-09-16T03:21:51.418Z - info: Generate Site durationMs=67284
+2018-09-16T03:21:51.444Z - info: Serving "C:\repos\nus-tic2002-2018\website\_site" at http://127.0.0.1:8080
+2018-09-16T03:21:51.444Z - info: Press CTRL+C to stop ...
+2018-09-16T03:26:56.522Z - info: Website generation started at 11:26:53
+2018-09-16T03:26:59.634Z - info: Building assets...

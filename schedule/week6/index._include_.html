@@ -1967,12 +1967,12 @@ Invalid command format: add
     <p><span class="activity-desc">Implementation</span></p>
     <div class="indented">
       <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W6.1</code> <strong>Can implement composition</strong> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
+        <span slot="header" class="card-title"><span><code>W6.1</code> <strong>Can use Java constants</strong> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
           aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
         </span>
         </span>
         <panel type="info" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W6.1a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the meaning of composition</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W6.1a</code></span></big> <span><span class="fas fa-trophy"></span> Can use Java constants</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
@@ -1980,56 +1980,28 @@ Invalid command format: add
             <div>
               <div></div>
               <p></p>
-              <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Associations →
+              <p><span class="dimmed"><strong><span>C++ to Java → Miscellaneous Topics →
 </span></strong>
                 </span>
               </p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="composition">Composition</h4>
+                  <h4 id="constants">Constants</h4>
                 </div>
                 <div id="main">
                   <div>
-                    <p><strong>A composition is an association that represents a strong <em>whole-part</em> relationship.</strong> When the <em>whole</em> is destroyed, <em>parts</em> are destroyed too.</p>
-                    <tip-box>
-                      <p><span class="fas fa-cube"></span> A <code>Board</code> (used for playing board games) consists of <code>Square</code> objects.</p>
-                    </tip-box>
-                    <p><strong>Composition also implies that there cannot be cyclical links</strong>.</p>
-                    <tip-box>
-                      <p><span class="fas fa-cube"></span> The ‘sub-folder’ association between <code>Folder</code> objects is a composition type association. That means if the <code>Folder</code> object <code>foo</code> is a sub folder of <code>Folder</code>                        object <code>bar</code>, <code>bar</code> cannot be a sub-folder of <code>foo</code>.</p>
-                    </tip-box>
-                    <h5 id="implementing-composition">Implementing composition</h5>
-                    <p><strong>Composition too is implemented using a normal variable.</strong> If correctly implemented, the ‘part’ object will be deleted when the ‘whole’ object is deleted. Ideally, the ‘part’ object may not even be visible to clients
-                      of the ‘whole’ object.</p>
-                    <tip-box>
-                      <p><span class="fas fa-cube"></span> In the code below, the <code>Email</code> has a composition type relationship with the <code>Subject</code> class, in the sense that the subject is part of the email.</p>
-                      <table>
-                        <tr>
-                        
-                          <td valign="top">
-                            <p>Java <span class="fas fa-arrow-down"></span></p>
-                            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span> </span>{
-    <span class="hljs-keyword">private</span> Subject subject;
-  ...
+                    <p>Java does not directly support constants. The convention is to use a <code>static</code> <code>final</code> variable where a constant is needed. The <code>static</code> modifier causes the variable to be available without instantiating
+                      an object. The <code>final</code> modifier causes the variable to be unchangeable. Java constants are normally declared in ALL CAPS separated by underscores.</p>
+                    <box>
+                      <p><span class="fas fa-cube"></span> Here is an example of a constant named <code>MAX_BALANCE</code> which can be accessed as <code>Account.MAX_BALANCE</code>.</p>
+                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span></span>{
+
+  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> MAX_BALANCE = <span class="hljs-number">1000000.0</span>;
+
 }
 </code></pre>
-                            <p></p>
-                          </td>
-                        
-                          <td>  <br><br></td>
-                        
-                          <td valign="top">
-                            <p>Python <span class="fas fa-arrow-down"></span></p>
-                            <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span>:</span>
-  
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
-    self.__subject = Subject()
-</code></pre>
-                            <p></p>
-                          </td>
-                        </tr>
-                      </table>
-                    </tip-box>
+                      <p><span class="fas fa-cube"></span> <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/Math.html#PI"><code>Math.PI</code></a> is an example constant that comes with Java.</p>
+                    </box>
                   </div>
                   <div></div>
                 </div>
@@ -2038,165 +2010,7 @@ Invalid command format: add
         </panel>
       </panel>
       <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W6.2</code> <strong>Can implement aggregation</strong> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
-          aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-        </span>
-        </span>
-        <panel type="info" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W6.2a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the meaning of aggregations</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          <span
-            class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-            </span>
-            </span>
-            <div>
-              <div></div>
-              <p></p>
-              <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Associations →
-</span></strong>
-                </span>
-              </p>
-              <div id="title-and-body">
-                <div>
-                  <h4 id="aggregation">Aggregation</h4>
-                </div>
-                <div id="main">
-                  <div>
-                    <p><strong><em>Aggregation</em> represents a <em>container-contained</em> relationship.</strong> It is a weaker relationship than composition.</p>
-                    <tip-box>
-                      <p><span class="fas fa-cube"></span> <code>SportsClub</code> acts as a <em>container</em> for <code>Person</code> objects. <code>Person</code> objects can survive without a <code>SportsClub</code> object.</p>
-                    </tip-box>
-                    <h5 id="implementing-aggregation">Implementing aggregation</h5>
-                    <p>Implementation is similar to that of composition except the <em>containee</em> object can exist even after the <em>container</em> object is deleted.</p>
-                    <tip-box>
-                      <p><span class="fas fa-cube"></span> In the code below, there is an aggregation association between the <code>Team</code> class and the <code>Person</code> in that a <code>Team</code> contains <code>Person</code> a object who is the
-                        leader of the team.</p>
-                      <table>
-                        <tr>
-                        
-                          <td valign="top">
-                            <p>Java <span class="fas fa-arrow-down"></span></p>
-                            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Team</span> </span>{
-    Person leader;
-    ...
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">drive</span><span class="hljs-params">(Person p)</span> </span>{
-        leader = p;
-    }
-}
-</code></pre>
-                            <p></p>
-                          </td>
-                        
-                          <td>  <br><br></td>
-                        
-                          <td valign="top">
-                            <p>Python <span class="fas fa-arrow-down"></span></p>
-                            <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Team</span>:</span>
-  
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
-    self.__leader = <span class="hljs-keyword">None</span>
-    
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">drive</span><span class="hljs-params">(self, person)</span>:</span>
-    self.__leader = person
-</code></pre>
-                            <p></p>
-                          </td>
-                        </tr>
-                      </table>
-                    </tip-box>
-                  </div>
-                  <div></div>
-                </div>
-              </div>
-            </div>
-        </panel>
-      </panel>
-      <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W6.3</code> <strong>Can implement association classes</strong> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
-          aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-        </span>
-        </span>
-        <panel type="success" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W6.3a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the meaning of association classes</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          <span
-            class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-            </span>
-            </span>
-            <div>
-              <div></div>
-              <p></p>
-              <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Associations →
-</span></strong>
-                </span>
-              </p>
-              <div id="title-and-body">
-                <div>
-                  <h4 id="association-classes">Association Classes</h4>
-                </div>
-                <div id="main">
-                  <div>
-                    <p><strong>An <em>association class</em> represents additional information about an association.</strong> It is a normal class but plays a special role from a design point of view.</p>
-                    <tip-box>
-                      <p><span class="fas fa-cube"></span> A <code>Man</code> class and a <code>Woman</code> class is linked with a ‘married to’ association and there is a need to store the date of marriage. However, that data is related to the association
-                        rather than specifically owned by either the <code>Man</code> object or the <code>Woman</code> object. In such situations, an additional association class can be introduced, e.g. a <code>Marriage</code> class, to store such information.</p>
-                    </tip-box>
-                    <h5 id="implementing-association-classes">Implementing association classes</h5>
-                    <p>There is no special way to implement an association class. It can be implemented as a normal class that has variables to represent the endpoint of the association it represents.</p>
-                    <tip-box>
-                      <p><span class="fas fa-cube"></span> In the code below, the <code>Transaction</code> class is an association class that represent a transaction between a <code>Person</code> who is the seller and another <code>Person</code> who is the
-                        buyer.</p>
-                      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Transaction</span></span>{
-    
-    <span class="hljs-comment">//all fields are compulsory</span>
-    Person seller;
-    Person buyer;
-    Date date;
-    String receiptNumber;
-    
-    Marriage (Person seller, Person buyer, Date date, String receiptNumber){
-        <span class="hljs-comment">//set fields</span>
-    }
-}
-</code></pre>
-                    </tip-box>
-                  </div>
-                  <div>
-                    <div>
-                      <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-                        <div>
-                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which are suitable as an Association Class?">
-                            <question>
-                              <p>Which one of these is the suitable as an Association Class?</p>
-                              <img src="/website/book/oop/associations/associationClasses/images/exerciseDiagram.png" width="500">
-                              <p></p>
-                              <ul class="task-list">
-                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a</li>
-                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b</li>
-                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c</li>
-                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d</li>
-                              </ul>
-                              <div slot="answer">
-                                <p>(a)(b)<s>(c)</s>(d)</p>
-                                <p>Explanation: Mileage is a property of the car, and not specifically about the association between the Driver and the Car. If Mileage was defined as the total number of miles that car was driven by that driver, then it would
-                                  be suitable as an association class.</p>
-                              </div>
-                            </question>
-                          </panel>
-                        </div>
-                      </panel>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <hr style="border-top: dashed 1px; border-color:grey">
-            <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
-            <div>
-              <p>Give more examples of association classes, preferably related to your project.</p>
-            </div>
-        </panel>
-      </panel>
-      <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W6.4</code> <strong>Can use Java enumerations</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <span slot="header" class="card-title"><span><code>W6.2</code> <strong>Can use Java enumerations</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
         <span
           class="glyphicon glyphicon-star" aria-hidden="true"></span>
           </span>
@@ -2204,7 +2018,7 @@ Invalid command format: add
           </span>
           </span>
           <panel type="warning" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W6.4a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the meaning of enumerations</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W6.2a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the meaning of enumerations</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
               </span>
@@ -2231,20 +2045,7 @@ Invalid command format: add
                         <p><code>Priority</code>: <code>HIGH</code>, <code>MEDIUM</code>, <code>LOW</code></p>
                       </tip-box>
                     </div>
-                    <div>
-                      <div>
-                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-                        
-                          <div>
-                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Define WeekDay Enum">
-                              <question has-input="true">
-                                <p>Show (in UML notation) an enumeration called <code>WeekDay</code> to use when the value can only be <code>Monday</code> ... <code>Friday</code>.</p>
-                              </question>
-                            </panel>
-                          </div>
-                        </panel>
-                      </div>
-                    </div>
+                    <div></div>
                   </div>
                 </div>
               </div>
@@ -2261,7 +2062,7 @@ Invalid command format: add
               </div>
           </panel>
           <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W6.4b</code></span></big> <span><span class="fas fa-trophy"></span> Can use Java enumerations</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W6.2b</code></span></big> <span><span class="fas fa-trophy"></span> Can use Java enumerations</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -2308,361 +2109,17 @@ Invalid command format: add
               </div>
           </panel>
       </panel>
-      <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W6.5</code> <strong>Can use Java access modifiers</strong> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
-          aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-        </span>
-        </span>
-        <panel type="info" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W6.5a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain access modifiers</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          <span
-            class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-            </span>
-            </span>
-            <div>
-              <div></div>
-              <p></p>
-              <p><span class="dimmed"><strong><span>C++ to Java → Miscellaneous Topics →
-</span></strong>
-                </span>
-              </p>
-              <div id="title-and-body">
-                <div>
-                  <h4 id="access-modifiers">Access Modifiers</h4>
-                </div>
-                <div id="main">
-                  <div>
-                    <p><strong>Access level modifiers determine whether other classes can use a particular field or invoke a particular method.</strong></p>
-                    <p>There are two levels of access control:</p>
-                    <ol>
-                      <li>
-                        <p><strong>At the class level</strong>:</p>
-                        <ul>
-                          <li><strong><code>public</code></strong>: the class is visible to all classes everywhere</li>
-                          <li><strong>no modifier (the default, also known as <em>package-private</em>)</strong>: it is visible only within its own package<br><br></li>
-                        </ul>
-                      </li>
-                      <li>
-                        <p><strong>At the member level</strong>:</p>
-                        <ul>
-                          <li><strong><code>public</code></strong> or <strong>no modifier (<em>package-private</em>)</strong>: same meaning as when used with top-level classes</li>
-                          <li><strong><code>private</code></strong>: the member can only be accessed in its own class</li>
-                          <li><strong><code>protected</code></strong>: the member can only be accessed within its own package (as with package-private) and, in addition, by a subclass of its class in another package</li>
-                        </ul>
-                      </li>
-                    </ol>
-                    <p>The following table shows the access to members permitted by each modifier.</p>
-                    <div class="indented">
-                      <div class="table-responsive">
-                        <table class="markbind-table table table-bordered table-striped">
-                          <thead>
-                            <tr>
-                              <th>Modifier</th>
-                              <th>
-                                <tooltip content="whether the class itself has access to the member defined by the access level">Class</tooltip>
-                              </th>
-                              <th>
-                                <tooltip content="whether classes in the same package as the class (regardless of their parentage) have access to the member">Package</tooltip>
-                              </th>
-                              <th>
-                                <tooltip content="whether subclasses of the class declared outside this package have access to the member">Subclass</tooltip>
-                              </th>
-                              <th>
-                                <tooltip content="whether all classes have access to the member">World</tooltip>
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td><code>public</code></td>
-                              <td><span style="color:green"><span class="fas fa-check"></span></span>
-                              </td>
-                              <td><span style="color:green"><span class="fas fa-check"></span></span>
-                              </td>
-                              <td><span style="color:green"><span class="fas fa-check"></span></span>
-                              </td>
-                              <td><span style="color:green"><span class="fas fa-check"></span></span>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><code>protected</code></td>
-                              <td><span style="color:green"><span class="fas fa-check"></span></span>
-                              </td>
-                              <td><span style="color:green"><span class="fas fa-check"></span></span>
-                              </td>
-                              <td><span style="color:green"><span class="fas fa-check"></span></span>
-                              </td>
-                              <td><span style="color:red"><span class="fas fa-times"></span></span>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>no modifier</td>
-                              <td><span style="color:green"><span class="fas fa-check"></span></span>
-                              </td>
-                              <td><span style="color:green"><span class="fas fa-check"></span></span>
-                              </td>
-                              <td><span style="color:red"><span class="fas fa-times"></span></span>
-                              </td>
-                              <td><span style="color:red"><span class="fas fa-times"></span></span>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><code>private</code></td>
-                              <td><span style="color:green"><span class="fas fa-check"></span></span>
-                              </td>
-                              <td><span style="color:red"><span class="fas fa-times"></span></span>
-                              </td>
-                              <td><span style="color:red"><span class="fas fa-times"></span></span>
-                              </td>
-                              <td><span style="color:red"><span class="fas fa-times"></span></span>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                    <p>Access levels affect you in two ways:</p>
-                    <ol>
-                      <li>When you use classes that come from another source, such as the classes in the Java platform, access levels determine which members of those classes your own classes can use.</li>
-                      <li>When you write a class, you need to decide what access level every member variable and every method in your class should have.</li>
-                    </ol>
-                  </div>
-                  <div></div>
-                </div>
-              </div>
-            </div>
-        </panel>
-      </panel>
-      <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W6.6</code> <strong>Can use Java constants</strong> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
-          aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-        </span>
-        </span>
-        <panel type="info" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W6.6a</code></span></big> <span><span class="fas fa-trophy"></span> Can use Java constants</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          <span
-            class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-            </span>
-            </span>
-            <div>
-              <div></div>
-              <p></p>
-              <p><span class="dimmed"><strong><span>C++ to Java → Miscellaneous Topics →
-</span></strong>
-                </span>
-              </p>
-              <div id="title-and-body">
-                <div>
-                  <h4 id="constants">Constants</h4>
-                </div>
-                <div id="main">
-                  <div>
-                    <p>Java does not directly support constants. The convention is to use a <code>static</code> <code>final</code> variable where a constant is needed. The <code>static</code> modifier causes the variable to be available without instantiating
-                      an object. The <code>final</code> modifier causes the variable to be unchangeable. Java constants are normally declared in ALL CAPS separated by underscores.</p>
-                    <box>
-                      <p><span class="fas fa-cube"></span> Here is an example of a constant named <code>MAX_BALANCE</code> which can be accessed as <code>Account.MAX_BALANCE</code>.</p>
-                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span></span>{
-
-  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> MAX_BALANCE = <span class="hljs-number">1000000.0</span>;
-
-}
-</code></pre>
-                      <p><span class="fas fa-cube"></span> <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/Math.html#PI"><code>Math.PI</code></a> is an example constant that comes with Java.</p>
-                    </box>
-                  </div>
-                  <div></div>
-                </div>
-              </div>
-            </div>
-        </panel>
-      </panel>
-      <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W6.7</code> <strong>Can use some common documentation tools</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-        <span
-          class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          </span>
-          </span>
-          </span>
-          </span>
-          <br>
-          <p><span class="dimmed"><strong>Javadoc</strong></span></p>
-          <panel type="warning" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W6.7a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain JavaDoc</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <span
-              class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              </span>
-              </span>
-              </span>
-              </span>
-              <div>
-                <div></div>
-                <p></p>
-                <p><span class="dimmed"><strong><span>Implementation → Documentation → Tools → JavaDoc
-</span></strong>
-                  </span>
-                </p>
-                <div id="title-and-body">
-                  <div>
-                    <h4 id="what">What</h4>
-                  </div>
-                  <div id="main">
-                    <div>
-                      <p><strong>Javadoc is a tool for generating API documentation in HTML format from doc comments in source.</strong> In addition, modern IDEs use JavaDoc comments to generate explanatory tool tips.</p>
-                      <tip-box>
-                        <p><span class="fas fa-cube"></span> An example method header comment in JavaDoc format (adapted from <a href="http://www.oracle.com/technetwork/articles/java/index-137868.html">Oracle's Java documentation</a>)</p>
-                        <pre><code class="hljs java"><span class="hljs-comment">/**
- * Returns an Image object that can then be painted on the screen. 
- * The url argument must specify an absolute {<span class="hljs-doctag">@link</span> URL}. The name
- * argument is a specifier that is relative to the url argument. 
- * &lt;p&gt;
- * This method always returns immediately, whether or not the 
- * image exists. When this applet attempts to draw the image on
- * the screen, the data will be loaded. The graphics primitives 
- * that draw the image will incrementally paint on the screen. 
- *
- * <span class="hljs-doctag">@param</span> url an absolute URL giving the base location of the image
- * <span class="hljs-doctag">@param</span> name the location of the image, relative to the url argument
- * <span class="hljs-doctag">@return</span> the image at the specified URL
- * <span class="hljs-doctag">@see</span> Image
- */</span>
- <span class="hljs-function"><span class="hljs-keyword">public</span> Image <span class="hljs-title">getImage</span><span class="hljs-params">(URL url, String name)</span> </span>{
-        <span class="hljs-keyword">try</span> {
-            <span class="hljs-keyword">return</span> getImage(<span class="hljs-keyword">new</span> URL(url, name));
-        } <span class="hljs-keyword">catch</span> (MalformedURLException e) {
-            <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
-        }
- }
-</code></pre>
-                        <p><span class="fas fa-cube"></span> Generated HTML documentation:</p>
-                        <p><a href="/website/book/documentation/tools/javaDoc/what/images/generatedHtml.png" target="_self"><img src="/website/book/documentation/tools/javaDoc/what/images/generatedHtml.png" alt="" class="img-fluid"></a></p>
-                        <p><span class="fas fa-cube"></span> Tooltip generated by Intellij IDE:</p>
-                        <p><img src="/website/book/documentation/tools/javaDoc/what/images/intellijTooltip.png">
-                          <p></p>
-                        </p>
-                      </tip-box>
-                    </div>
-                    <div></div>
-                  </div>
-                </div>
-              </div>
-          </panel>
-          <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W6.7b</code></span></big> <span><span class="fas fa-trophy"></span> Can write Javadoc comments</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <span
-              class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-              </span>
-              </span>
-              <div>
-                <div></div>
-                <p></p>
-                <p><span class="dimmed"><strong><span>Implementation → Documentation → Tools → JavaDoc
-</span></strong>
-                  </span>
-                </p>
-                <div id="title-and-body">
-                  <div>
-                    <h4 id="how">How</h4>
-                  </div>
-                  <div id="main">
-                    <div>
-                      <ul>
-                        <li><a href="https://www.tutorialspoint.com/java/java_documentation.htm">A short tutorial on writing JavaDoc comments</a> <span class="dimmed">-- from <a href="http://tutorialspoint.com">tutorialspoint.com</a></span></li>
-                        <li><a href="http://www.oracle.com/technetwork/articles/java/index-137868.html">A more detailed description</a> <span class="dimmed">--from Oracle</span></li>
-                      </ul>
-                    </div>
-                    <div></div>
-                  </div>
-                </div>
-              </div>
-          </panel>
-      </panel>
-      <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W6.8</code> <strong>Can use Java varargs feature</strong> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
-          aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-        </span>
-        </span>
-        <panel type="success" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W6.8a</code></span></big> <span><span class="fas fa-trophy"></span> Can use Java varargs feature</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          <span
-            class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-            </span>
-            </span>
-            <div>
-              <div></div>
-              <p></p>
-              <p><span class="dimmed"><strong><span>Tools → Java →
-</span></strong>
-                </span>
-              </p>
-              <div id="title-and-body">
-                <div>
-                  <h4 id="varargs">Varargs</h4>
-                </div>
-                <div id="main">
-                  <div>
-                    <p><span class="fas fa-paperclip"></span> Resources:</p>
-                    <ul>
-                      <li><a href="http://docs.oracle.com/javase/1.5.0/docs/guide/language/varargs.html">Java Varargs feature (from Oracle.com)</a></li>
-                      <li><a href="https://www.javatpoint.com/varargs">Java Varargs tutorial (for javaTpoint.com)</a></li>
-                    </ul>
-                  </div>
-                  <div></div>
-                </div>
-              </div>
-            </div>
-            <hr style="border-top: dashed 1px; border-color:grey">
-            <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
-            <div>
-              <p><strong>Acceptable</strong>: Some code that you have written that uses the varargs feature.</p>
-              <p><strong>Suggested</strong>: Do the exercise given in <a href="https://github.com/nus-tic2002-2018/addressbook-level1/blob/master/docs/LearningOutcomes.adoc#use-varargs-code-lo-varargs-code">AddressBook - Level1 : LO-Varargs</a></p>
-              <p><strong>Submission</strong>: Show your code to the tutor during the tutorial.</p>
-            </div>
-        </panel>
-      </panel>
     </div>
     <p></p>
     <p><span class="activity-desc">Design</span></p>
     <div class="indented">
       <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W6.9</code> <strong>Can use intermediate-level class diagrams</strong> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
+        <span slot="header" class="card-title"><span><code>W6.3</code> <strong>Can use intermediate-level class diagrams</strong> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
           aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
         </span>
         </span>
         <panel type="info" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W6.9a</code></span></big> <span><span class="fas fa-trophy"></span> Can use dependencies in a class diagram</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          <span
-            class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-            </span>
-            </span>
-            <div>
-              <div></div>
-              <p></p>
-              <p><span class="dimmed"><strong><span>Tools → UML → Class Diagrams → Dependencies →
-</span></strong>
-                </span>
-              </p>
-              <div id="title-and-body">
-                <div>
-                  <h4 id="dependencies">Dependencies</h4>
-                </div>
-                <div id="main">
-                  <div>
-                    <p>In a UML class diagram, a <strong>dependency is a weaker form of an association where there is an interactions between objects that do not result in a long-term relationship</strong> between the said objects.</p>
-                    <p><strong>UML uses a dashed arrow to show dependencies.</strong></p>
-                    <img src="/website/book/uml/classDiagrams/dependencies/what/images/notation.png" width="350">
-                    <tip-box>
-                      <p><span class="fas fa-cube"></span> Two examples of dependencies:</p>
-                      <img src="/website/book/uml/classDiagrams/dependencies/what/images/examples.png" width="450">
-                      <p></p>
-                    </tip-box>
-                  </div>
-                  <div></div>
-                </div>
-              </div>
-            </div>
-        </panel>
-        <panel type="info" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W6.9b</code></span></big> <span><span class="fas fa-trophy"></span> Can use UML notes</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W6.3a</code></span></big> <span><span class="fas fa-trophy"></span> Can use UML notes</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
@@ -2693,7 +2150,7 @@ Invalid command format: add
             </div>
         </panel>
         <panel type="success" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W6.9c</code></span></big> <span><span class="fas fa-trophy"></span> Can specify constraints in UML diagrams</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W6.3b</code></span></big> <span><span class="fas fa-trophy"></span> Can specify constraints in UML diagrams</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
@@ -2728,7 +2185,7 @@ Invalid command format: add
             </div>
         </panel>
         <panel type="info" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W6.9d</code></span></big> <span><span class="fas fa-trophy"></span> Can show an association as an attribute</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W6.3c</code></span></big> <span><span class="fas fa-trophy"></span> Can show an association as an attribute</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
@@ -2766,7 +2223,7 @@ Invalid command format: add
             </div>
         </panel>
         <panel type="info" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W6.9e</code></span></big> <span><span class="fas fa-trophy"></span> Can use intermediate-level class diagrams</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W6.3d</code></span></big> <span><span class="fas fa-trophy"></span> Can use intermediate-level class diagrams</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
@@ -2849,303 +2306,6 @@ Invalid command format: add
               </div>
             </div>
         </panel>
-      </panel>
-    </div>
-    <p></p>
-    <p><span class="activity-desc">Quality Assurance</span></p>
-    <div class="indented">
-      <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W6.10</code> <strong>Can use simple JUnit tests</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-        <span
-          class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          </span>
-          </span>
-          </span>
-          </span>
-          <panel type="warning" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W6.10a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain developer testing</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <span
-              class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              </span>
-              </span>
-              </span>
-              </span>
-              <div>
-                <div></div>
-                <p></p>
-                <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Developer Testing →
-</span></strong>
-                  </span>
-                </p>
-                <div id="title-and-body">
-                  <div>
-                    <h4 id="what-2">What</h4>
-                  </div>
-                  <div id="main">
-                    <div>
-                      <p><strong><em>Developer testing</em> is the testing done by the developers themselves</strong> as opposed to professional testers or end-users.</p>
-                    </div>
-                    <div></div>
-                  </div>
-                </div>
-              </div>
-          </panel>
-          <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W6.10b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the need for early developer testing</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <span
-              class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-              </span>
-              </span>
-              <div>
-                <div></div>
-                <p></p>
-                <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Developer Testing →
-</span></strong>
-                  </span>
-                </p>
-                <div id="title-and-body">
-                  <div>
-                    <h4 id="why">Why</h4>
-                  </div>
-                  <div id="main">
-                    <div>
-                      <p><strong>Delaying testing until the full product is complete has a number of disadvantages:</strong></p>
-                      <ul>
-                        <li><strong>Locating the cause of such a test case failure is difficult due to a large search space;</strong> in a large system, the search space could be millions of lines of code, written by hundreds of developers! The failure may
-                          also be due to multiple inter-related bugs.</li>
-                        <li><strong>Fixing a bug found during such testing could result in major rework</strong>, especially if the bug originated during the design or during requirements specification <span class="dimmed">i.e. a faulty design or faulty requirements</span>.</li>
-                        <li><strong>One bug might 'hide' other bugs</strong>, which could emerge only after the first bug is fixed.</li>
-                        <li><strong>The delivery may have to be delayed</strong> if too many bugs were found during testing.</li>
-                      </ul>
-                      <p><strong>Therefore, it is better to do early testing</strong>, as hinted by the popular rule of thumb given below, also illustrated by the graph below it.</p>
-                      <blockquote>
-                        <p>The earlier a bug is found, the easier and cheaper to have it fixed.</p>
-                      </blockquote>
-                      <img src="/website/book/testing/testingTypes/developerTesting/why/images/diagram.png" height="180">
-                      <p></p>
-                      <p>Such early testing of partially developed software is usually, and by necessity, done by the developers themselves i.e. developer testing.</p>
-                    </div>
-                    <div>
-                      <div>
-                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-                          <div>
-                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> implications of developers testing their own code">
-                              <question has-input="true">
-                                <p>Discuss pros and cons of developers testing their own code.</p>
-                                <div slot="answer">
-                                  <p>Pros:</p>
-                                  <ul>
-                                    <li>Can be done early (the earlier we find a bug, the cheaper it is to fix).</li>
-                                    <li>Can be done at lower levels, for examples, at operation and class level (testers usually test the system at UI level).</li>
-                                    <li>It is possible to do more thorough testing because developers know the expected external behavior as well as the internal structure of the component.</li>
-                                    <li>It forces developers to take responsibility for their own work (they cannot claim that &quot;testing is the job of the testers&quot;).</li>
-                                  </ul>
-                                  <p>Cons:</p>
-                                  <ul>
-                                    <li>A developer may unconsciously test only situations that he knows to work (i.e. test it too 'gently').</li>
-                                    <li>A developer may be blind to his own mistakes (if he did not consider a certain combination of input while writing code, it is possible for him to miss it again during testing).</li>
-                                    <li>A developer may have misunderstood what the SUT is supposed to do in the first place.</li>
-                                    <li>A developer may lack the testing expertise.</li>
-                                  </ul>
-                                </div>
-                              </question>
-                            </panel>
-                          </div>
-                          <div>
-                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Cost of bug fixing over time">
-                              <question>
-                                <p>The cost of fixing a bug goes down as we reach the product release.</p>
-                                <ul radio-group="37242" class="radio-list">
-                                  <li class="radio-list-item"><label><input class="radio-list-input" name="37242" type="radio"> True</label></li>
-                                  <li class="radio-list-item"><label><input class="radio-list-input" name="37242" type="radio"> False</label></li>
-                                </ul>
-                                <div slot="answer">
-                                  <p>False. The cost goes up over time.</p>
-                                </div>
-                              </question>
-                            </panel>
-                          </div>
-                          <div>
-                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Why early testing?">
-                              <question has-input="true">
-                                <p>Explain why early testing by developers is important.</p>
-                              </question>
-                            </panel>
-                          </div>
-                        </panel>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <hr style="border-top: dashed 1px; border-color:grey">
-              <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
-              <div>
-                <div>
-                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Why early testing?">
-                    <question has-input="true">
-                      <p>Explain why early testing by developers is important.</p>
-                    </question>
-                  </panel>
-                </div>
-              </div>
-          </panel>
-          <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W6.10c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain test drivers</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <span
-              class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-              </span>
-              </span>
-              <div>
-                <div></div>
-                <p></p>
-                <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Test Automation →
-</span></strong>
-                  </span>
-                </p>
-                <div id="title-and-body">
-                  <div>
-                    <h4 id="test-automation-using-test-drivers">Test Automation Using Test Drivers</h4>
-                  </div>
-                  <div id="main">
-                    <div>
-                      <p><strong>A test driver is the code that ‘drives’ the <tooltip content="Software Under Test">SUT</tooltip> for the purpose of testing</strong> i.e. invoking the SUT with test inputs and verifying the behavior is as expected.</p>
-                      <tip-box>
-                        <p><span class="fas fa-cube"></span> <code>PayrollTest</code> ‘drives’ the <code>PayRoll</code> class by sending it test inputs and verifies if the output is as expected.</p>
-                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PayrollTestDriver</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>{
-
-        <span class="hljs-comment">//test setup</span>
-        Payroll p = <span class="hljs-keyword">new</span> Payroll();
-
-        <span class="hljs-comment">//test case 1</span>
-        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>, <span class="hljs-string">"E002"</span>});
-        <span class="hljs-comment">// automatically verify the response</span>
-        <span class="hljs-keyword">if</span> (p.totalSalary() != <span class="hljs-number">6400</span>) {
-            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Error(<span class="hljs-string">"case 1 failed "</span>);
-        }
-
-        <span class="hljs-comment">//test case 2</span>
-        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>});
-        <span class="hljs-keyword">if</span> (p.totalSalary() != <span class="hljs-number">2300</span>) {
-            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Error(<span class="hljs-string">"case 2 failed "</span>);
-        }
-
-        <span class="hljs-comment">//more tests...</span>
-
-        System.out.println(<span class="hljs-string">"All tests passed"</span>);
-    }
-}
-</code></pre>
-                      </tip-box>
-                    </div>
-                    <div></div>
-                  </div>
-                </div>
-              </div>
-          </panel>
-          <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W6.10d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain test automation tools</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <span
-              class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-              </span>
-              </span>
-              <div>
-                <div></div>
-                <p></p>
-                <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Test Automation →
-</span></strong>
-                  </span>
-                </p>
-                <div id="title-and-body">
-                  <div>
-                    <h4 id="test-automation-tools">Test Automation Tools</h4>
-                  </div>
-                  <div id="main">
-                    <div>
-                      <p><strong>JUnit is a tool for automated testing of Java programs.</strong> Similar tools are available for other languages.</p>
-                      <tip-box>
-                        <p><span class="fas fa-cube"></span> This an automated test for a <code>Payroll</code> class, written using JUnit libraries.</p>
-                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PayrollTestJUnit</span> </span>{
-
-    <span class="hljs-meta">@Test</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">testTotalSalary</span><span class="hljs-params">()</span></span>{
-        Payroll p = <span class="hljs-keyword">new</span> Payroll();
-
-        <span class="hljs-comment">//test case 1</span>
-        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>, <span class="hljs-string">"E002"</span>});
-        assertEquals(p.totalSalary(), <span class="hljs-number">6400</span>);
-
-        <span class="hljs-comment">//test case 2</span>
-        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>});
-        assertEquals(p.totalSalary(), <span class="hljs-number">2300</span>);
-
-        <span class="hljs-comment">//more tests...</span>
-    }
-}
-</code></pre>
-                      </tip-box>
-                      <p>Most modern IDEs has integrated support for testing tools. The figure below shows the JUnit output when running some JUnit tests using the Eclipse IDE.</p>
-                      <img src="/website/book/testing/testAutomation/tools/images/junit.png" height="190">
-                      <p></p>
-                    </div>
-                    <div></div>
-                  </div>
-                </div>
-              </div>
-          </panel>
-          <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W6.10e</code></span></big> <span><span class="fas fa-trophy"></span> Can use simple JUnit tests</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <span
-              class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-              </span>
-              </span>
-              <div>
-                <div></div>
-                <p></p>
-                <p><span class="dimmed"><strong><span>Tools → JUnit →
-</span></strong>
-                  </span>
-                </p>
-                <div id="title-and-body">
-                  <div>
-                    <h4 id="junit-basic">JUnit: Basic</h4>
-                  </div>
-                  <div id="main">
-                    <div>
-                      <div v-closeable="" alt="Junit tutorial video" class="non-printable">
-                        <p>JUnit 4 with IntelliJ: A quick introduction <sub>-- by DrBFraser</sub></p>
-                        <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/Bld3644bIAo" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-                      </div>
-                    </div>
-                    <div>
-                      <div>
-                        <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
-                          <ul>
-                            <li><a href="http://junit.sourceforge.net/doc/cookbook/cookbook.htm">JUnit cookbook</a> - a short tutorial from JUnit creators</li>
-                            <li><a href="http://www.vogella.com/articles/JUnit/article.html">JUnit tutorial</a> - a more detailed tutorial from a developer Lars Vogel</li>
-                            <li>How to test private methods in Java? [ <a href="http://stackoverflow.com/questions/34571/whats-the-proper-way-to-test-a-class-with-private-methods-using-junit">short answer</a> ] [ <a href="http://www.artima.com/suiterunner/private.html">long answer</a>                              ]</li>
-                          </ul>
-                        </panel>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <hr style="border-top: dashed 1px; border-color:grey">
-              <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
-              <div>
-                <p><strong>Acceptable</strong>: Evidence of having written JUnit tests in some project.</p>
-                <p><strong>Suggested</strong>: Do the exercise in [<a href="https://github.com/nus-tic2002-2018/addressbook-level2/blob/master/docs/LearningOutcomes.adoc#use-junit-to-implement-unit-tests-code-lo-junit-code">Addressbook-Level2: LO-JUnit</a>]</p>
-                <div>
-                  <p><strong>Submission</strong>: Create a PR against <a href="https://github.com/nus-tic2002-2018/addressbook-level2">Addressbook-Level2</a>. <mark>Only clean PRs</mark> (i.e. free of unrelated code modifications) will be accepted.</p>
-                  <p>
-                    <panel src="/website\admin\appendixE-gitHub._include_.html#tutorial-pr-instructions" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Appendix E: Using GitHub Project Hosting → Submitting Pull Requests as evidence of an LO%%"
-                      fragment="tutorial-pr-instructions"></panel>
-                  </p>
-                </div>
-              </div>
-          </panel>
       </panel>
     </div>
     <p></p>
