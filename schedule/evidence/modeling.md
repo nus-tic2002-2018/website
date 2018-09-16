@@ -5,26 +5,21 @@
 <div id="modelingStructures_classDiagramsBasic">
 
 <include src="../../book/modeling/modelingStructures/classDiagramsBasic/q-essay-explainClassDiagram.md" />
+<include src="../../book/modeling/modelingStructures/classDiagramsBasic/q-essay-drawClassDiagramForBoxEtc.md" />
 
 </div>
 
 <div id="modelingStructures_objectDiagrams">
 
 <include src="../../book/uml/classDiagrams/combine/basic/q-essay-objectDiagramsForClassDiagram.md" />
-
-</div>
-
-
-<div id="modelingStructures_classDiagramsBasic">
-
-<include src="../../book/modeling/modelingStructures/classDiagramsBasic/q-essay-explainClassDiagram.md" />
+<include src="../../book/modeling/modelingStructures/objectDiagrams/q-essay-drawObjectDiagramForBoxEtc.md" />
 
 </div>
 
 
 <div id=""modelingStructures_classDiagramsIntermediate">
 
-Able to explain the class diagram of the [[AddressBook-Level2]({{module_org}}/addressbook-level2/blob/master/docs/DeveloperGuide.adoc#design)]. You may ignore the `ReadOnlyPerson` interface (we have not covered _interfaces_ yet)
+Able to explain the class diagram of the [[AddressBook-Level2]({{module_org}}/addressbook-level2/blob/master/docs/DeveloperGuide.adoc#design)].
 
 </div>
 

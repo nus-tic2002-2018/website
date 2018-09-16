@@ -6,7 +6,9 @@ Any code that you have written using the varargs feature.
 
 <div id="enums">
   
-Any code you have written using Java enumerations.
+The ability to do exercises such as,
+
+<include src="../../book/javaTools/enums/q-showPriorityColor.md" />
 
 </div>
 

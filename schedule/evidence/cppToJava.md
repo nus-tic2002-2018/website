@@ -141,3 +141,9 @@ To be able to do exercises such as these:
 
 <include src="../../book/cppToJava/collections/hashMapClass/q-weeklyRoster.md" />
 </div>
+
+<div id="misc_fileAccess">
+
+Any code that you have written to read from and write to files.
+
+</div>
