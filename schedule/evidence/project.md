@@ -6,17 +6,26 @@ We recommend you to ==do this exercise on your own computer== rather than on rep
 <include src="../../book/cppToJava/usefulClasses/scannerClass/q-taskManagerLevel1.md" />
 
 </div>
+
 <div id="week4">
 Enhance your TaskManager program as explained in the exercise below:
 
 <include src="../../book/cppToJava/inheritance/polymorphism/q-taskManagerLevel2.md" />
 
 </div>
+
 <div id="week5">
 Enhance your TaskManager program as explained in the exercise below:
 
 <include src="../../book/cppToJava/exceptions/how/q-taskManagerLevel3.md" />
 <include src="../../book/cppToJava/collections/arrayListClass/q-taskManagerLevel4.md" />
+
+</div>
+
+<div id="week6">
+Enhance your TaskManager program as explained in the exercise below:
+
+<include src="../../book/cppToJava/misc/fileAccess/q-taskManagerLevel5.md" />
 
 </div>
 <div id="1kloc">

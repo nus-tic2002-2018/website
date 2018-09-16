@@ -12,13 +12,6 @@
 </div>
 
 
-<div id="classes_enumerations">
-
-<include src="../../book/uml/classDiagrams/enumerations/what/q-essay-defineWeekDays.md" />
-
-</div>
-
-
 <div id="associations_associationClasses">
 
 Give more examples of association classes, preferably related to your project.
