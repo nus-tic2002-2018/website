@@ -118,7 +118,7 @@ This module uses Java. It assumes you are familiar with C++ basics and provides 
 
 For the project you can choose one of these options:
 
-* **Option 1:** Enhance the Task Manager app that you worked on during the preparation stage
+* **Option 1:** Enhance the Task Manager app that you worked on during the preparation stage.
 * **Option 2:** Take the code from [Addressbook-level2]({{module_org}}/addressbook-level2) and enhance it in some way.
 * **Option 3:** Propose your own project.
 
@@ -132,7 +132,16 @@ Can be done individually or in a team of two/three members.
 
 **Deliverables**:
 * Source code of the working program
-* Project documentation: more info coming soon
+* Project documentation:
+  * A brief user guide
+  * A developer guide containing
+    * A class diagram to match your code
+    * At least one object diagram illustrating the state of your program at some point
+    * At least one sequence diagram illustrating an object interaction in your product
+    * Some representative user stories
+    * At least one use case related to your product
+    * Some Non Functional Requirements for the product
+    * Instructions to test the product
 * Project demo: to be done during week 13 lecture session.
 
 More details coming soon.
