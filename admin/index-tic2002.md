@@ -110,11 +110,7 @@ This module uses Java. It assumes you are familiar with C++ basics and provides 
 # Project
 <div class="indented">
 
-<panel header="**Preparation - Week 3**" >
 
-<include src="../schedule/evidence/project.md#week3" />
-
-</panel><p/>
 
 For the project you can choose one of these options:
 
@@ -122,13 +118,54 @@ For the project you can choose one of these options:
 * **Option 2:** Take the code from [Addressbook-level2]({{module_org}}/addressbook-level2) and enhance it in some way.
 * **Option 3:** Propose your own project.
 
-Can be done individually or in a team of two/three members.
+Can be done **individually or in a team of two/three members**.
 
-**Timeline**:
-* Week 1 - 6: Preparation stage i.e., building up your coding skills for the module project
+The project is divided into two phases:
+* Week 1 - 6: Preparation stage %%i.e., building up your coding skills for the module project%%
 * Week 7 - 12: Project execution.
-* Project teams and direction should be finalized by week 7.
-* The submission deadline is Monday of week 13.
+
+### Weeks 1-6: Project preparation
+
+<panel header="**Preparation - Week 3**" >
+
+<include src="../schedule/evidence/project.md#week3" />
+
+</panel>
+<panel header="**Preparation - Week 4**" >
+
+<include src="../schedule/evidence/project.md#week4" />
+
+</panel>
+<panel header="**Preparation - Week 5**" >
+
+<include src="../schedule/evidence/project.md#week5" />
+
+</panel>
+<panel header="**Preparation - Week 6**" >
+
+<include src="../schedule/evidence/project.md#week6" />
+
+</panel><p/>
+
+### Week 7: Project kick-off
+
+1. **Show that you are ready to start the project**: %%i.e., a sanity check to ensure you have enough programming skills to start a project%%
+   * If you are new to programming, complete the _project preparation_ exercises i.e., reach _TaskManager - Level 5_. Demo your TaskManager to prof.
+   * If you have prior programming experience, show some code you have written before (at least 200 lines of code) to prove that you are ready to start the project.
+1. **Declare project direction and team**: Inform prof of the project direction and your team members and get approval to go ahead.
+
+### Week 10: mid-project check point
+
+**Deadline**: week 10 lecture<br>
+**Marks:** 10, if you show a satisfactory level in the items below
+
+1. Demo the current state of the project to prof during the week 10 lecture session. There should be some working features at this point.
+1. Submit interim project documents by week 10 lecture (more details to come)
+
+### Week 13: Submission and demo
+
+**Deadline**: Monday of week 13<br>
+**Marks**: 50 (25 for the product, 25 for the documentation)
 
 **Deliverables**:
 * Source code of the working program
