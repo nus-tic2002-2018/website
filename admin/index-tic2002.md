@@ -149,9 +149,12 @@ The project is divided into two phases:
 
 ### Week 7: Project kick-off
 
+**Deadline**: week 7 lecture<br>
+**Marks:** 5
+
 1. **Show that you are ready to start the project**: %%i.e., a sanity check to ensure you have enough programming skills to start a project%%
-   * If you are new to programming, complete the _project preparation_ exercises i.e., reach _TaskManager - Level 5_. Demo your TaskManager to prof.
-   * If you have prior programming experience, show some code you have written before (at least 200 lines of code) to prove that you are ready to start the project.
+   * If you are new to programming, complete the _project preparation_ exercises i.e., reach _TaskManager - Level 5_. Demo your TaskManager to prof or email the code to prof.
+   * If you have prior programming experience, show/email to prof some code you have written before (at least 200 lines of code) to prove that you are ready to start the project.
 1. **Declare project direction and team**: Inform prof of the project direction and your team members and get approval to go ahead.
 
 ### Week 10: mid-project check point
@@ -165,7 +168,7 @@ The project is divided into two phases:
 ### Week 13: Submission and demo
 
 **Deadline**: Monday of week 13<br>
-**Marks**: 50 (25 for the product, 25 for the documentation)
+**Marks**: 45 (25 for the product, 20 for the documentation)
 
 **Deliverables**:
 * Source code of the working program
