@@ -15,61 +15,41 @@ Have a local repo that has git-ignored files.
 
 <div id="clone">
 
-**Acceptable**: Any remote repo cloned to your Computer.
-
-**Suggested**: A clone of the [samplerepo-things]({{module_org}}/samplerepo-things) in your Computer. 
-
-**Submission**: Show the clone to the tutor during the tutorial.
+Able to clone the [samplerepo-things]({{module_org}}/samplerepo-things) in your Computer.
 
 </div>
 
 
 <div id="pull">
 
-**Acceptable**: Any evidence of pulling from a remote Git repo.
-
-**Suggested**: Follow the steps in the LO details. 
-
-**Submission**: Demo a pull operation to the tutor.
+Being able to demo pulling from a remote repo.
 
 </div>
 
 
 <div id="push">
 
-**Acceptable**: Any evidence of pushing to a remote Git repo.
-
-**Suggested**: Follow the steps in the LO details. 
-
-**Submission**: Show pushed commits in the remote repo.
+Being able to demo pushing to a remote repo.
 
 </div>
 
 <div id="checkout">
 
-**Acceptable**: Show how to traverse history using any local repo.
-
-**Suggested**: Show how to traverse history using the steps given in the LO above.
-
-**Submission**: Demo during the tutorial.
+Being able to traverse history using the steps given in the LO above.
 
 </div>
 
 
 <div id="tag">
 
-**Acceptable**: Any commit you tagged in any repo.
-
-**Suggested**: Follow steps in the LO. 
-
-**Submission**: Show the tagged commit to the tutor during the tutorial.
+Being able to tag a commit in a repo.
 
 </div>
 
 
 <div id="stash">
 
-**Submission**: Demo stashing.
+Being able to demonstrate stashing.
 
 </div>
 
