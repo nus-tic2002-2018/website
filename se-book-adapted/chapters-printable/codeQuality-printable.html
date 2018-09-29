@@ -24,28 +24,28 @@
   <div class="website-content">
     <div id="title">
       <div>
-        <h1 id="code-quality">Code Quality</h1>
+        <h1 id="code-quality">Code Quality<a class="fa fa-anchor" href="#code-quality"></a></h1>
       </div>
     </div>
     <div>
       <p><small><span class="dimmed"><span class="glyphicon glyphicon-print" aria-hidden="true"></span> This is a <strong>printer-friendly</strong> version. It omits exercises, optional topics (i.e., four-star topics), and other extra content such as learning outcomes.</span></small></p>
     </div>
     <div>
-      <h3 id="introduction">Introduction</h3>
+      <h3 id="introduction">Introduction<a class="fa fa-anchor" href="#introduction"></a></h3>
     </div>
     <div class="indented-less">
       <div class="indented-less">
-        <h4 id="basic">Basic <span class="badge badge-light"><small><small><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
-            aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-          </small>
-          </span>
-        </h4>
+        <h4 id="basic">Basic <span class="badge badge-light"><small><small>
+                <font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </small></small></span><a class="fa fa-anchor" href="#basic"></a></h4>
         <div class="indented-less">
           <div>
             <blockquote>
               <p>Always code as if the person who ends up maintaining your code will be a violent psychopath who knows where you live. <sub>-- Martin Golding</sub></p>
             </blockquote>
-            <p><strong><trigger for="pop:production-code">Production code</trigger> needs to be of high quality</strong>. Given how the world is becoming increasingly dependent of software, poor quality code is something we cannot afford to tolerate.</p>
+            <p><strong>
+                <trigger for="pop:production-code">Production code</trigger> needs to be of high quality
+              </strong>. Given how the world is becoming increasingly dependent of software, poor quality code is something we cannot afford to tolerate.</p>
             <popover id="pop:production-code" title="<span class='glyphicon glyphicon-eye-open' aria-hidden='true'></span> Production Code" placement="top">
               <div slot="content">
                 Code being used in an actual product with actual users
@@ -56,34 +56,28 @@
       </div>
     </div>
     <div>
-      <h2 id="guideline-maximise-readability">Guideline: Maximise Readability</h2>
+      <h2 id="guideline-maximise-readability">Guideline: Maximise Readability<a class="fa fa-anchor" href="#guideline-maximise-readability"></a></h2>
     </div>
     <div class="indented-less">
       <div class="indented-less">
-        <h4 id="introduction-2">Introduction <span class="badge badge-light"><small><small><font color="Crimson"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty"
-            aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-          </small>
-          </span>
-        </h4>
+        <h4 id="introduction-2">Introduction <span class="badge badge-light"><small><small>
+                <font color="Crimson"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </small></small></span><a class="fa fa-anchor" href="#introduction-2"></a></h4>
         <div class="indented-less">
           <div>
             <blockquote>
               <p>Programs should be written and polished until they acquire publication quality. <sub>--<a href="https://en.wikipedia.org/wiki/Niklaus_Wirth">Niklaus Wirth</a></sub></p>
             </blockquote>
-            <p><strong>Among various dimensions of code quality, such as run-time efficiency, security, and robustness, one of the most important is understandability.</strong> This is because in any non-trivial software project, code needs to be read, understood,
-              and modified by other developers later on. Even if we do not intend to pass the code to someone else, code quality is still important because we all become 'strangers' to our own code someday.</p>
+            <p><strong>Among various dimensions of code quality, such as run-time efficiency, security, and robustness, one of the most important is understandability.</strong> This is because in any non-trivial software project, code needs to be read, understood, and modified by other developers later on. Even if we do not intend to pass the code to someone else, code quality is still important because we all become 'strangers' to our own code someday.</p>
             <tip-box>
               <p><span class="fas fa-cube"></span> The two code samples given below achieve the same functionality, but one is easier to read.</p>
               <div class="alt-java">
                 <div>
                   <table>
                     <tr>
-                    
-                      <td>
+                        <td>
                         <p>
-                          <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
-                            </span>
-                          </font>
+                          <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong></span></font>
                         </p>
                         <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">subsidy</span><span class="hljs-params">()</span> </span>{
     <span class="hljs-keyword">int</span> subsidy;
@@ -105,14 +99,10 @@
 </code></pre>
                         <p></p>
                       </td>
-                    
-                      <td>  <br><br></td>
-                    
-                      <td valign="top">
+                        <td>  <br><br></td>
+                        <td valign="top">
                         <p>
-                          <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
-                            </span>
-                          </font>
+                          <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong></span></font>
                         </p>
                         <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculateSubsidy</span><span class="hljs-params">()</span> </span>{
     <span class="hljs-keyword">int</span> subsidy;
@@ -138,12 +128,9 @@
                 <div>
                   <table>
                     <tr>
-                    
-                      <td>
+                        <td>
                         <p>
-                          <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
-                            </span>
-                          </font>
+                          <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong></span></font>
                         </p>
                         <pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subs</span><span class="hljs-params">()</span>:</span>
     <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> age:
@@ -160,14 +147,10 @@
 </code></pre>
                         <p></p>
                       </td>
-                    
-                      <td>  <br><br></td>
-                    
-                      <td valign="top">
+                        <td>  <br><br></td>
+                        <td valign="top">
                         <p>
-                          <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
-                            </span>
-                          </font>
+                          <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong></span></font>
                         </p>
                         <pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subsidy</span><span class="hljs-params">()</span>:</span>
     <span class="hljs-keyword">if</span> is_senior:
@@ -192,14 +175,12 @@
     </div>
     <div class="indented-less">
       <div>
-        <h3 id="basic-2">Basic</h3>
+        <h3 id="basic-2">Basic<a class="fa fa-anchor" href="#basic-2"></a></h3>
       </div>
       <div class="indented-less">
-        <h4 id="avoid-long-methods">Avoid Long Methods <span class="badge badge-light"><small><small><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty"
-            aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-          </small>
-          </span>
-        </h4>
+        <h4 id="avoid-long-methods">Avoid Long Methods <span class="badge badge-light"><small><small>
+                <font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </small></small></span><a class="fa fa-anchor" href="#avoid-long-methods"></a></h4>
         <div class="indented-less">
           <div>
             <p>Be wary when a method is longer than the computer screen, and take corrective action when it goes beyond 30 LOC (lines of code). The bigger the haystack, the harder it is to find a needle.</p>
@@ -207,11 +188,9 @@
         </div>
       </div>
       <div class="indented-less">
-        <h4 id="avoid-deep-nesting">Avoid Deep Nesting <span class="badge badge-light"><small><small><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty"
-            aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-          </small>
-          </span>
-        </h4>
+        <h4 id="avoid-deep-nesting">Avoid Deep Nesting <span class="badge badge-light"><small><small>
+                <font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </small></small></span><a class="fa fa-anchor" href="#avoid-deep-nesting"></a></h4>
         <div class="indented-less">
           <div>
             <blockquote>
@@ -227,31 +206,23 @@
         </div>
       </div>
       <div class="indented-less">
-        <h4 id="avoid-complicated-expressions">Avoid Complicated Expressions <span class="badge badge-light"><small><small><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font>
-          <span
-            class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-            </small>
-            </span>
-        </h4>
+        <h4 id="avoid-complicated-expressions">Avoid Complicated Expressions <span class="badge badge-light"><small><small>
+                <font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </small></small></span><a class="fa fa-anchor" href="#avoid-complicated-expressions"></a></h4>
         <div class="indented-less">
           <div>
-            <p>Avoid complicated expressions, especially those having many negations and nested parentheses. If you must evaluate complicated expressions, have it done in steps (i.e. calculate some intermediate values first and use them to calculate the
-              final value).</p>
+            <p>Avoid complicated expressions, especially those having many negations and nested parentheses. If you must evaluate complicated expressions, have it done in steps (i.e. calculate some intermediate values first and use them to calculate the final value).</p>
             <div class="alt-java">
               <div>
                 <tip-box>
                   <p><span class="fas fa-cube"></span> Example:</p>
                   <p>
-                    <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
-                      </span>
-                    </font>
+                    <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong></span></font>
                   </p>
                   <pre><code class="hljs java"><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) || (previousSize != length)) &amp;&amp; (typeCode == URGENT);
 </code></pre>
                   <p>
-                    <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
-                      </span>
-                    </font>
+                    <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong></span></font>
                   </p>
                   <pre><code class="hljs java">
 <span class="hljs-keyword">boolean</span> isWithinSizeLimit = length &lt; MAX_LENGTH;
@@ -270,16 +241,12 @@
                 <tip-box>
                   <p><span class="fas fa-cube"></span> Example:</p>
                   <p>
-                    <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
-                      </span>
-                    </font>
+                    <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong></span></font>
                   </p>
                   <pre><code class="hljs python"><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) <span class="hljs-keyword">or</span> (previous_size != length)) <span class="hljs-keyword">and</span> (type_code == URGENT)
 </code></pre>
                   <p>
-                    <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
-                      </span>
-                    </font>
+                    <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong></span></font>
                   </p>
                   <pre><code class="hljs python">is_within_size_limit = length &lt; MAX_LENGTH
 is_same_size = previous_size != length
@@ -299,27 +266,21 @@ is_urgent = type_code == URGENT
         </div>
       </div>
       <div class="indented-less">
-        <h4 id="avoid-magic-numbers">Avoid Magic Numbers <span class="badge badge-light"><small><small><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty"
-            aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-          </small>
-          </span>
-        </h4>
+        <h4 id="avoid-magic-numbers">Avoid Magic Numbers <span class="badge badge-light"><small><small>
+                <font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </small></small></span><a class="fa fa-anchor" href="#avoid-magic-numbers"></a></h4>
         <div class="indented-less">
           <div>
-            <p>When the code has a number that does not explain the meaning of the number, we call that a magic number (as in “the number appears as if by magic”). Using a
-              <tooltip content="e.g., `PI`"><em>named constant</em></tooltip> makes the code easier to understand because the name tells us more about the meaning of the number.</p>
+            <p>When the code has a number that does not explain the meaning of the number, we call that a magic number (as in “the number appears as if by magic”). Using a <tooltip content="e.g., `PI`"><em>named constant</em></tooltip> makes the code easier to understand because the name tells us more about the meaning of the number.</p>
             <tip-box>
               <p><span class="fas fa-cube"></span> Example:</p>
               <div class="alt-java">
                 <div>
                   <table>
                     <tr>
-                    
-                      <td valign="top">
+                        <td valign="top">
                         <p>
-                          <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
-                            </span>
-                          </font>
+                          <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong></span></font>
                         </p>
                         <pre><code class="hljs java"><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span>;
 ...
@@ -327,14 +288,10 @@ is_urgent = type_code == URGENT
 </code></pre>
                         <p></p>
                       </td>
-                    
-                      <td>  <br><br></td>
-                    
-                      <td valign="top">
+                        <td>  <br><br></td>
+                        <td valign="top">
                         <p>
-                          <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
-                            </span>
-                          </font>
+                          <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong></span></font>
                         </p>
                         <pre><code class="hljs java"><span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> PI = <span class="hljs-number">3.14236</span>;
 <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> MAX_SIZE = <span class="hljs-number">10</span>;
@@ -354,12 +311,9 @@ is_urgent = type_code == URGENT
                   <p>Note: Python does not have a way to make a variable a constant. However, you can use a normal variable with an <code>ALL_CAPS</code> name to simulate a constant.</p>
                   <table>
                     <tr>
-                    
-                      <td valign="top">
+                        <td valign="top">
                         <p>
-                          <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
-                            </span>
-                          </font>
+                          <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong></span></font>
                         </p>
                         <pre><code class="hljs python"><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span>
 ...
@@ -367,14 +321,10 @@ is_urgent = type_code == URGENT
 </code></pre>
                         <p></p>
                       </td>
-                    
-                      <td>  <br><br></td>
-                    
-                      <td valign="top">
+                        <td>  <br><br></td>
+                        <td valign="top">
                         <p>
-                          <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
-                            </span>
-                          </font>
+                          <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong></span></font>
                         </p>
                         <pre><code class="hljs python">PI = <span class="hljs-number">3.14236</span>
 MAX_SIZE = <span class="hljs-number">10</span>
@@ -393,9 +343,7 @@ MAX_SIZE = <span class="hljs-number">10</span>
             <p>Similarly, we can have ‘magic’ values of other data types.</p>
             <tip-box>
               <p>
-                <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
-                  </span>
-                </font>
+                <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong></span></font>
               </p>
               <pre><code class="hljs java"><span class="hljs-string">"Error 1432"</span>  <span class="hljs-comment">// A magic string!</span>
 </code></pre>
@@ -404,20 +352,16 @@ MAX_SIZE = <span class="hljs-number">10</span>
         </div>
       </div>
       <div class="indented-less">
-        <h4 id="make-the-code-obvious">Make the Code Obvious <span class="badge badge-light"><small><small><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
-            aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-          </small>
-          </span>
-        </h4>
+        <h4 id="make-the-code-obvious">Make the Code Obvious <span class="badge badge-light"><small><small>
+                <font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </small></small></span><a class="fa fa-anchor" href="#make-the-code-obvious"></a></h4>
         <div class="indented-less">
           <div>
             <p>Make the code as explicit as possible, even if the language syntax allows them to be implicit. Here are some examples:</p>
             <ul>
               <li>[<code>Java</code>] Use explicit type conversion instead of implicit type conversion.</li>
               <li>[<code>Java</code>, <code>Python</code>] Use parentheses/braces to show grouping even when they can be skipped.</li>
-              <li>[<code>Java</code>, <code>Python</code>] Use
-                <trigger trigger="click" for="modal:obviousCode-enums">enumerations</trigger> when a certain variable can take only a small number of finite values. For example, instead of declaring the variable 'state' as an integer and using values 0,1,2 to denote the states 'starting', 'enabled', and 'disabled'
-                respectively, declare 'state' as type <code>SystemState</code> and define an enumeration <code>SystemState</code> that has values <code>'STARTING'</code>, <code>'ENABLED'</code>, and <code>'DISABLED'</code>.</li>
+              <li>[<code>Java</code>, <code>Python</code>] Use <trigger trigger="click" for="modal:obviousCode-enums">enumerations</trigger> when a certain variable can take only a small number of finite values. For example, instead of declaring the variable 'state' as an integer and using values 0,1,2 to denote the states 'starting', 'enabled', and 'disabled' respectively, declare 'state' as type <code>SystemState</code> and define an enumeration <code>SystemState</code> that has values <code>'STARTING'</code>, <code>'ENABLED'</code>, and <code>'DISABLED'</code>.</li>
             </ul>
             <modal title="More about enumerations" id="modal:obviousCode-enums">
               <ul>
@@ -431,54 +375,45 @@ MAX_SIZE = <span class="hljs-number">10</span>
     </div>
     <div class="indented-less">
       <div>
-        <h3 id="intermediate">Intermediate</h3>
+        <h3 id="intermediate">Intermediate<a class="fa fa-anchor" href="#intermediate"></a></h3>
       </div>
       <div class="indented-less">
-        <h4 id="structure-code-logically">Structure Code Logically <span class="badge badge-light"><small><small><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
-            aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-          </small>
-          </span>
-        </h4>
+        <h4 id="structure-code-logically">Structure Code Logically <span class="badge badge-light"><small><small>
+                <font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </small></small></span><a class="fa fa-anchor" href="#structure-code-logically"></a></h4>
         <div class="indented-less">
           <div>
-            <p>Lay out the code so that it adheres to the logical structure. The code should read like a story. Just like we use section breaks, chapters and paragraphs to organize a story, use classes, methods, indentation and line spacing in your code
-              to group related segments of the code. For example, you can use blank lines to group related statements together. Sometimes, the correctness of your code does not depend on the order in which you perform certain intermediary steps. Nevertheless,
-              this order may affect the clarity of the story you are trying to tell. Choose the order that makes the story most readable.</p>
+            <p>Lay out the code so that it adheres to the logical structure. The code should read like a story. Just like we use section breaks, chapters and paragraphs to organize a story, use classes, methods, indentation and line spacing in your code to group related segments of the code. For example, you can use blank lines to group related statements together.
+              Sometimes, the correctness of your code does not depend on the order in which you perform certain intermediary steps. Nevertheless, this order may affect the clarity of the story you are trying to tell. Choose the order that makes the story most readable.</p>
           </div>
         </div>
       </div>
     </div>
     <div class="indented-less">
       <div>
-        <h3 id="advanced">Advanced</h3>
+        <h3 id="advanced">Advanced<a class="fa fa-anchor" href="#advanced"></a></h3>
       </div>
     </div>
     <div>
-      <h2 id="guideline-follow-a-standard">Guideline: Follow a Standard</h2>
+      <h2 id="guideline-follow-a-standard">Guideline: Follow a Standard<a class="fa fa-anchor" href="#guideline-follow-a-standard"></a></h2>
     </div>
     <div class="indented-less">
       <div class="indented-less">
-        <h4 id="introduction-3">Introduction <span class="badge badge-light"><small><small><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty"
-            aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-          </small>
-          </span>
-        </h4>
+        <h4 id="introduction-3">Introduction <span class="badge badge-light"><small><small>
+                <font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </small></small></span><a class="fa fa-anchor" href="#introduction-3"></a></h4>
         <div class="indented-less">
           <div>
             <p><strong>One essential way to improve code quality is to follow a consistent style. That is why software engineers follow a strict coding standard (aka <em>style guide</em>).</strong></p>
-            <p><strong>The aim of a coding standard is to make the entire code base look like it was written by one person</strong>. A coding standard is usually specific to a programming language and specifies guidelines such as the location of opening
-              and closing braces, indentation styles and naming styles (e.g. whether to use <em>Hungarian style</em>, <em>Pascal casing</em>, <em>Camel casing</em>, etc.). It is important that the whole team/company use the same coding standard and that
-              standard is not generally inconsistent with typical industry practices. <span class="dimmed">If a company's coding standards is very different from what is used typically in the industry, new recruits will take longer to get used to the company's coding style.</span></p>
+            <p><strong>The aim of a coding standard is to make the entire code base look like it was written by one person</strong>. A coding standard is usually specific to a programming language and specifies guidelines such as the location of opening and closing braces, indentation styles and naming styles (e.g. whether to use <em>Hungarian style</em>, <em>Pascal casing</em>, <em>Camel casing</em>, etc.). It is important that the whole team/company use the same coding standard and that standard is not generally inconsistent with typical industry practices. <span class="dimmed">If a company's coding standards is very different from what is used typically in the industry, new recruits will take longer to get used to the company's coding style.</span></p>
             <p>💡 IDEs can help to enforce some parts of a coding standard e.g. indentation rules.</p>
           </div>
         </div>
       </div>
       <div class="indented-less">
-        <h4 id="basic-3">Basic <span class="badge badge-light"><small><small><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
-            aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-          </small>
-          </span>
-        </h4>
+        <h4 id="basic-3">Basic <span class="badge badge-light"><small><small>
+                <font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </small></small></span><a class="fa fa-anchor" href="#basic-3"></a></h4>
         <div class="indented-less">
           <div>
             <div class="alt-java">
@@ -492,15 +427,13 @@ MAX_SIZE = <span class="hljs-number">10</span>
       </div>
     </div>
     <div>
-      <h2 id="guideline-name-well">Guideline: Name Well</h2>
+      <h2 id="guideline-name-well">Guideline: Name Well<a class="fa fa-anchor" href="#guideline-name-well"></a></h2>
     </div>
     <div class="indented-less">
       <div class="indented-less">
-        <h4 id="introduction-4">Introduction <span class="badge badge-light"><small><small><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty"
-            aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-          </small>
-          </span>
-        </h4>
+        <h4 id="introduction-4">Introduction <span class="badge badge-light"><small><small>
+                <font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </small></small></span><a class="fa fa-anchor" href="#introduction-4"></a></h4>
         <div class="indented-less">
           <div>
             <p>Proper naming improves the readability. It also reduces bugs caused by ambiguities regarding the intent of a variable or a method.</p>
@@ -513,15 +446,12 @@ MAX_SIZE = <span class="hljs-number">10</span>
     </div>
     <div class="indented-less">
       <div>
-        <h3 id="basic-4">Basic</h3>
+        <h3 id="basic-4">Basic<a class="fa fa-anchor" href="#basic-4"></a></h3>
       </div>
       <div class="indented-less">
-        <h4 id="use-nouns-for-things-and-verbs-for-actions">Use Nouns for Things and Verbs for Actions <span class="badge badge-light"><small><small><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font>
-          <span
-            class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-            </small>
-            </span>
-        </h4>
+        <h4 id="use-nouns-for-things-and-verbs-for-actions">Use Nouns for Things and Verbs for Actions <span class="badge badge-light"><small><small>
+                <font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </small></small></span><a class="fa fa-anchor" href="#use-nouns-for-things-and-verbs-for-actions"></a></h4>
         <div class="indented-less">
           <div>
             <p><strong>Use nouns for classes/variables and verbs for methods/functions.</strong></p>
@@ -533,14 +463,10 @@ MAX_SIZE = <span class="hljs-number">10</span>
                     <tr>
                       <th>Name for a</th>
                       <th>
-                        <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
-                          </span>
-                        </font>
+                        <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong></span></font>
                       </th>
                       <th>
-                        <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
-                          </span>
-                        </font>
+                        <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong></span></font>
                       </th>
                     </tr>
                   </thead>
@@ -564,9 +490,7 @@ MAX_SIZE = <span class="hljs-number">10</span>
               <p><span class="fas fa-cube"></span> Examples:</p>
               <div class="alt-java">
                 <p>
-                  <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
-                    </span>
-                  </font>
+                  <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong></span></font>
                 </p>
                 <pre><code class="hljs java">Person student;
 ArrayList&lt;Person&gt; students;
@@ -574,9 +498,7 @@ ArrayList&lt;Person&gt; students;
               </div>
               <div class="alt-python">
                 <p>
-                  <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
-                    </span>
-                  </font>
+                  <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong></span></font>
                 </p>
                 <pre><code class="hljs python">student = Person(<span class="hljs-string">'Jim'</span>)
 students = [Person(<span class="hljs-string">'Jim'</span>), Person(<span class="hljs-string">'Alice'</span>)]
@@ -587,11 +509,9 @@ students = [Person(<span class="hljs-string">'Jim'</span>), Person(<span class="
         </div>
       </div>
       <div class="indented-less">
-        <h4 id="use-standard-words">Use Standard Words <span class="badge badge-light"><small><small><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
-            aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-          </small>
-          </span>
-        </h4>
+        <h4 id="use-standard-words">Use Standard Words <span class="badge badge-light"><small><small>
+                <font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </small></small></span><a class="fa fa-anchor" href="#use-standard-words"></a></h4>
         <div class="indented-less">
           <div>
             <p>Use correct spelling in names. Avoid 'texting-style' spelling. <strong>Avoid foreign language words, slang, and names that are only meaningful within specific contexts/times</strong> <span class="dimmed">e.g. terms from private jokes, a TV show currently popular in your country</span></p>
@@ -601,19 +521,17 @@ students = [Person(<span class="hljs-string">'Jim'</span>), Person(<span class="
     </div>
     <div class="indented-less">
       <div>
-        <h3 id="intermediate-2">Intermediate</h3>
+        <h3 id="intermediate-2">Intermediate<a class="fa fa-anchor" href="#intermediate-2"></a></h3>
       </div>
     </div>
     <div>
-      <h2 id="guideline-comment-minimally-but-sufficiently">Guideline: Comment Minimally, but Sufficiently</h2>
+      <h2 id="guideline-comment-minimally-but-sufficiently">Guideline: Comment Minimally, but Sufficiently<a class="fa fa-anchor" href="#guideline-comment-minimally-but-sufficiently"></a></h2>
     </div>
     <div class="indented-less">
       <div class="indented-less">
-        <h4 id="introduction-5">Introduction <span class="badge badge-light"><small><small><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty"
-            aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-          </small>
-          </span>
-        </h4>
+        <h4 id="introduction-5">Introduction <span class="badge badge-light"><small><small>
+                <font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </small></small></span><a class="fa fa-anchor" href="#introduction-5"></a></h4>
         <div class="indented-less">
           <div>
             <blockquote>
@@ -626,21 +544,17 @@ students = [Person(<span class="hljs-string">'Jim'</span>), Person(<span class="
     </div>
     <div class="indented-less">
       <div>
-        <h3 id="basic-5">Basic</h3>
+        <h3 id="basic-5">Basic<a class="fa fa-anchor" href="#basic-5"></a></h3>
       </div>
       <div class="indented-less">
-        <h4 id="do-not-repeat-the-obvious">Do Not Repeat the Obvious <span class="badge badge-light"><small><small><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty"
-            aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-          </small>
-          </span>
-        </h4>
+        <h4 id="do-not-repeat-the-obvious">Do Not Repeat the Obvious <span class="badge badge-light"><small><small>
+                <font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </small></small></span><a class="fa fa-anchor" href="#do-not-repeat-the-obvious"></a></h4>
         <div class="indented-less">
           <div>
             <p>If the code is self-explanatory, refrain from repeating the description in a comment just for the sake of 'good documentation'.</p>
             <p>
-              <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
-                </span>
-              </font>
+              <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong></span></font>
             </p>
             <pre><code class="hljs java"><span class="hljs-comment">// increment x</span>
 x++;
@@ -652,32 +566,26 @@ trimInput();
         </div>
       </div>
       <div class="indented-less">
-        <h4 id="write-to-the-reader">Write to the Reader <span class="badge badge-light"><small><small><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty"
-            aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-          </small>
-          </span>
-        </h4>
+        <h4 id="write-to-the-reader">Write to the Reader <span class="badge badge-light"><small><small>
+                <font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </small></small></span><a class="fa fa-anchor" href="#write-to-the-reader"></a></h4>
         <div class="indented-less">
           <div>
-            <p>Do not write comments as if they are private notes to self. Instead, write them well enough to be understood by another programmer. One type of comments that is almost always useful is the <em>header comment</em> that you write for a class
-              or an operation to explain its purpose.</p>
+            <p>Do not write comments as if they are private notes to self. Instead, write them well enough to be understood by another programmer. One type of comments that is almost always useful is the <em>header comment</em> that you write for a class or an operation to explain its purpose.</p>
             <tip-box>
               <p><span class="fas fa-cube"></span> Examples:</p>
               <div class="alt-java">
                 <div>
                   <p>
-                    <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
-                      </span>
-                    </font> <span class="dimmed">Reason: this comment will only make sense to the person who wrote it</span></p>
+                    <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong></span></font> <span class="dimmed">Reason: this comment will only make sense to the person who wrote it</span>
+                  </p>
                   <pre><code class="hljs java"><span class="hljs-comment">// a quick trim function used to fix bug I detected overnight</span>
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">trimInput</span><span class="hljs-params">()</span></span>{
     ....
 }
 </code></pre>
                   <p>
-                    <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
-                      </span>
-                    </font>
+                    <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong></span></font>
                   </p>
                   <pre><code class="hljs java"><span class="hljs-comment">/** Trims the input of leading and trailing spaces */</span>
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">trimInput</span><span class="hljs-params">()</span></span>{
@@ -689,17 +597,14 @@ trimInput();
               <div class="alt-python">
                 <div>
                   <p>
-                    <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
-                      </span>
-                    </font> <span class="dimmed">Reason: this comment will only make sense to the person who wrote it</span></p>
+                    <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong></span></font> <span class="dimmed">Reason: this comment will only make sense to the person who wrote it</span>
+                  </p>
                   <pre><code class="hljs python"><span class="hljs-comment"># a quick trim function used to fix bug I detected overnight</span>
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">trim_input</span><span class="hljs-params">()</span>:</span>
     ...
 </code></pre>
                   <p>
-                    <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
-                      </span>
-                    </font>
+                    <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong></span></font>
                   </p>
                   <pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">trim_input</span><span class="hljs-params">()</span>:</span>
 <span class="hljs-string">"""Trim the input of leading and trailing spaces"""</span>
@@ -714,7 +619,7 @@ trimInput();
     </div>
     <div class="indented-less">
       <div>
-        <h3 id="intermediate-3">Intermediate</h3>
+        <h3 id="intermediate-3">Intermediate<a class="fa fa-anchor" href="#intermediate-3"></a></h3>
       </div>
     </div>
   </div>
@@ -722,7 +627,7 @@ trimInput();
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Thu, 20 Sep 2018 14:21:11 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.13.0</a> at Sat, 29 Sep 2018 11:26:02 GMT</small></div>
 </footer>
 </div>
 </body>

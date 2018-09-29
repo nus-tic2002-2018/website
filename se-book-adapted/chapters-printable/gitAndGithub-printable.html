@@ -24,7 +24,7 @@
   <div class="website-content">
     <div id="title">
       <div>
-        <h1 id="git-and-github">Git and Github</h1>
+        <h1 id="git-and-github">Git and Github<a class="fa fa-anchor" href="#git-and-github"></a></h1>
       </div>
     </div>
     <div>
@@ -32,11 +32,9 @@
     </div>
     <div class="indented-less">
       <div class="indented-less">
-        <h4 id="init">Init <span class="badge badge-light"><small><small><font color="Crimson"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty"
-            aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-          </small>
-          </span>
-        </h4>
+        <h4 id="init">Init <span class="badge badge-light"><small><small>
+                <font color="Crimson"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </small></small></span><a class="fa fa-anchor" href="#init"></a></h4>
         <div class="indented-less">
           <div>
             <panel header="%%<span class='fas fa-paperclip'></span> Git Overview%%" class="non-printable">
@@ -45,12 +43,13 @@
               <p></p>
             </panel>
             <p></p>
-            <p>Install <a href="https://www.sourcetreeapp.com/">SourceTree</a> which is Git + a GUI for Git.</p>
-            <p>Suppose you want to create a repository in an empty directory <code>things</code></p>
+            <p>Install <a href="https://www.sourcetreeapp.com/">SourceTree</a> which is Git + a GUI for Git. If you prefer to use Git via the command line (i.e., without a GUI), you can <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">install Git</a> instead.</p>
+            <p>Suppose you want to create a repository in an empty directory <code>things</code>. Here are the steps:</p>
             <tabs>
               <tab header="SourceTree">
                 <div>
-                  <p>Windows: Click <code>File</code> → <code>Clone/New…</code>. Click on <code>Create</code> button.<br> Mac: <code>New...</code> → <code>Create New Repository</code>.</p>
+                  <p>Windows: Click <code>File</code> → <code>Clone/New…</code>. Click on <code>Create</code> button.<br>
+                    Mac: <code>New...</code> → <code>Create New Repository</code>.</p>
                   <p>Enter the location of the directory (Windows version shown below) and click <code>Create</code>.</p>
                   <img src="/website/book/gitAndGithub/init/images/sourcetree_1.png" height="220">
                   <p></p>
@@ -92,11 +91,9 @@ nothing to commit (create/copy files and use &quot;git add&quot; to track)
         </div>
       </div>
       <div class="indented-less">
-        <h4 id="commit">Commit <span class="badge badge-light"><small><small><font color="Crimson"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty"
-            aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-          </small>
-          </span>
-        </h4>
+        <h4 id="commit">Commit <span class="badge badge-light"><small><small>
+                <font color="Crimson"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </small></small></span><a class="fa fa-anchor" href="#commit"></a></h4>
         <div class="indented-less">
           <div>
             <p>Create an empty repo.</p>
@@ -153,7 +150,7 @@ nothing added to commit but untracked files present (use <span class="hljs-strin
                   <p>Select the <code>fruits.txt</code> and click on the <code>Stage Selected</code> button</p>
                   <img src="/website/book/gitAndGithub/commit/images/sourcetree_2.png" height="100">
                   <p></p>
-                  <p><code>fruits.txt</code> should appear in the <code>Staged files</code> panel now.’</p>
+                  <p><code>fruits.txt</code> should appear in the <code>Staged files</code> panel now.</p>
                   <img src="/website/book/gitAndGithub/commit/images/sourcetree_3.png" height="180">
                   <p></p>
                 </div>
@@ -180,7 +177,7 @@ git status
                 <hr>
               </tab>
             </tabs>
-            <p>Next, we can commit the staged version of <code>fruits.txt</code></p>
+            <p>Now, you can commit the staged version of <code>fruits.txt</code></p>
             <tabs>
               <tab header="SourceTree">
                 <div>
@@ -209,9 +206,8 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
                 <hr>
               </tab>
             </tabs>
-            <p>Note the existence of something called the <code>master</code> branch. Git allows you to have multiple branches (i.e. it is a way to evolve the content in parallel) and Git creates a default branch named <code>master</code> on which the commits
-              go on by default.</p>
-            <p>Do some changes to <code>fruits.txt</code> (e.g. add some text and delete some text). Stage the changes, and commit the changes using the same steps we followed before. You should end up with something like this.</p>
+            <p>Note the existence of something called the <code>master</code> branch. Git allows you to have multiple branches (i.e. it is a way to evolve the content in parallel) and Git creates a default branch named <code>master</code> on which the commits go on by default.</p>
+            <p>Do some changes to <code>fruits.txt</code> (e.g. add some text and delete some text). Stage the changes, and commit the changes using the same steps you followed before. You should end up with something like this.</p>
             <img src="/website/book/gitAndGithub/commit/images/sourcetree_6.png" height="180">
             <p></p>
             <p>Next, add two more files <code>colors.txt</code> and <code>shapes.txt</code> to the same working directory. Add a third commit to record the current state of the working directory.</p>
@@ -221,11 +217,9 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
         </div>
       </div>
       <div class="indented-less">
-        <h4 id="ignore">Ignore <span class="badge badge-light"><small><small><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty"
-            aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-          </small>
-          </span>
-        </h4>
+        <h4 id="ignore">Ignore <span class="badge badge-light"><small><small>
+                <font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </small></small></span><a class="fa fa-anchor" href="#ignore"></a></h4>
         <div class="indented-less">
           <div>
             <p>Add a file names <code>temp.txt</code> to the <code>things</code> repo you created. Suppose we don’t want this file to be revision controlled by Git. Let’s instruct Git to ignore <code>temp.txt</code></p>
@@ -257,11 +251,9 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
         </div>
       </div>
       <div class="indented-less">
-        <h4 id="tag">Tag <span class="badge badge-light"><small><small><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
-            aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-          </small>
-          </span>
-        </h4>
+        <h4 id="tag">Tag <span class="badge badge-light"><small><small>
+                <font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </small></small></span><a class="fa fa-anchor" href="#tag"></a></h4>
         <div class="indented-less">
           <div>
             <p>Let's tag a commit in a local repo you have (e.g. the <code>sampelrepo-things</code> repo)</p>
@@ -293,11 +285,9 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
         </div>
       </div>
       <div class="indented-less">
-        <h4 id="checkout">Checkout <span class="badge badge-light"><small><small><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty"
-            aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-          </small>
-          </span>
-        </h4>
+        <h4 id="checkout">Checkout <span class="badge badge-light"><small><small>
+                <font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </small></small></span><a class="fa fa-anchor" href="#checkout"></a></h4>
         <div class="indented-less">
           <div>
             <p>Git can show you what changed in each commit.</p>
@@ -369,35 +359,28 @@ index 15b57f7..17f4528 100644
                 <hr>
               </tab>
             </tabs>
-            <p>Git can load a specific version of the history to the working directory. Note that if you have uncommitted changes in the working directory, you need to
-              <trigger trigger="click" for="modal:checkout-stash">stash</trigger> them first to prevent them from being overwritten.</p>
+            <p>Git can load a specific version of the history to the working directory. Note that if you have uncommitted changes in the working directory, you need to <trigger trigger="click" for="modal:checkout-stash">stash</trigger> them first to prevent them from being overwritten.</p>
             <modal large="" title="%%Extract%%" id="modal:checkout-stash">
-            
-              <div>
+                <div>
                 <div></div>
                 <p></p>
                 <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
-</span></strong>
-                  </span>
-                </p>
+                      </span></strong></span></p>
                 <div id="title-and-body">
                   <div>
-                    <h4 id="stash">Stash</h4>
+                    <h4 id="stash">Stash<a class="fa fa-anchor" href="#stash"></a></h4>
                   </div>
                   <div id="main">
                     <div>
-                      <p><strong>You can use the git's <mark><em>stash</em></mark> feature to temporarily shelve (or stash) changes you've made to your working copy</strong> so that you can work on something else, and then come back and re-apply the stashed
-                        changes later on. <sub>-- adapted from <a href="https://www.atlassian.com/git/tutorials/git-stash">this</a></sub></p>
+                      <p><strong>You can use the git's <mark><em>stash</em></mark> feature to temporarily shelve (or stash) changes you've made to your working copy</strong> so that you can work on something else, and then come back and re-apply the stashed changes later on. <sub>-- adapted from <a href="https://www.atlassian.com/git/tutorials/git-stash">this</a></sub></p>
                       <tabs>
-                      
-                        <tab header="Source Tree">
+                          <tab header="Source Tree">
                           <p>Follow <a href="https://confluence.atlassian.com/sourcetreekb/stash-a-file-with-sourcetree-785332122.html">this article from SourceTree creators</a>. <span class="dimmed">Note the GUI shown in the article is slightly outdated but you should be able to map it to the current GUI.</span></p>
                           <p>
                             <hr>
                           </p>
                         </tab>
-                      
-                        <tab header="CLI">
+                          <tab header="CLI">
                           <p>Follow <a href="https://www.atlassian.com/git/tutorials/git-stash">this article from Atlassian</a>.</p>
                           <p>
                             <hr>
@@ -448,18 +431,17 @@ index 15b57f7..17f4528 100644
         </div>
       </div>
       <div class="indented-less">
-        <h4 id="clone">Clone <span class="badge badge-light"><small><small><font color="Crimson"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty"
-            aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-          </small>
-          </span>
-        </h4>
+        <h4 id="clone">Clone <span class="badge badge-light"><small><small>
+                <font color="Crimson"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </small></small></span><a class="fa fa-anchor" href="#clone"></a></h4>
         <div class="indented-less">
           <div>
             <p>Clone the sample repo <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a> to your computer.</p>
             <tip-box type="error">
-              <p>Note that the URL of the Github project is different form the URL you need to clone a repo in that Github project. e.g.
-              </p>
-              <p>Github project URL: <code>https://github.com/se-edu/samplerepo-things</code> <br> Git repo URL: <code>https://github.com/se-edu/samplerepo-things.git</code> (note the <code>.git</code> at the end)</p>
+              <p>Note that the URL of the Github project is different form the URL you need to clone a repo in that Github project.
+                e.g.</p>
+              <p>Github project URL: <code>https://github.com/se-edu/samplerepo-things</code> <br>
+                Git repo URL: <code>https://github.com/se-edu/samplerepo-things.git</code> (note the <code>.git</code> at the end)</p>
             </tip-box>
             <tabs>
               <tab header="SourceTree">
@@ -480,11 +462,9 @@ index 15b57f7..17f4528 100644
         </div>
       </div>
       <div class="indented-less">
-        <h4 id="branch">Branch <span class="badge badge-light"><small><small><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
-            aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-          </small>
-          </span>
-        </h4>
+        <h4 id="branch">Branch <span class="badge badge-light"><small><small>
+                <font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </small></small></span><a class="fa fa-anchor" href="#branch"></a></h4>
         <div class="indented-less">
           <div>
             <p><strong>0. Observe that you are normally in the branch called <code>master</code>.</strong> For this, you can take any repo you have on your computer (e.g. a clone of the <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a>).</p>
@@ -594,15 +574,13 @@ git checkout feature1
             <p><strong>10. Create a new branch called <code>add-countries</code>, switch to it, and add some commits to it</strong> <span class="dimmed">(similar to steps 1-2 above)</span>. You should have something like this now:</p>
             <img src="/website/book/gitAndGithub/branch/images/addCountriesBranchBeforeMerging.png" height="80">
             <p></p>
-            <p><strong>11. Go back to the <code>master</code> branch and merge the <code>add-countries</code> branch onto the <code>master</code> branch</strong> <span class="dimmed">(similar to steps 8-9 above)</span>. While you might expect to see something
-              like the below,</p>
+            <p><strong>11. Go back to the <code>master</code> branch and merge the <code>add-countries</code> branch onto the <code>master</code> branch</strong> <span class="dimmed">(similar to steps 8-9 above)</span>. While you might expect to see something like the below,</p>
             <img src="/website/book/gitAndGithub/branch/images/addCountriesBranchNoFastForward.png" height="100">
             <p></p>
             <p>... you are likely to see something like this instead:</p>
             <img src="/website/book/gitAndGithub/branch/images/addCountriesBranchAfterMerging.png" height="80">
             <p></p>
-            <p>That is because <strong>Git does a <mark><em>fast forward</em> merge</mark> if possible</strong>. Seeing that the <code>master</code> branch has not changed since you started the <code>add-countries</code> branch, Git has decided it is simpler
-              to just put the commits of the <code>add-countries</code> branch in front of the <code>master</code> branch, without going into the trouble of creating an extra merge commit.</p>
+            <p>That is because <strong>Git does a <mark><em>fast forward</em> merge</mark> if possible</strong>. Seeing that the <code>master</code> branch has not changed since you started the <code>add-countries</code> branch, Git has decided it is simpler to just put the commits of the <code>add-countries</code> branch in front of the <code>master</code> branch, without going into the trouble of creating an extra merge commit.</p>
             <p><strong>It is possible to force Git to create a merge commit even if fast forwarding is possible.</strong></p>
             <tabs>
               <tab header="SourceTree">
@@ -626,11 +604,9 @@ git checkout feature1
         </div>
       </div>
       <div class="indented-less">
-        <h4 id="merge-conflicts">Merge Conflicts <span class="badge badge-light"><small><small><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
-            aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-          </small>
-          </span>
-        </h4>
+        <h4 id="merge-conflicts">Merge Conflicts <span class="badge badge-light"><small><small>
+                <font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </small></small></span><a class="fa fa-anchor" href="#merge-conflicts"></a></h4>
         <div class="indented-less">
           <div>
             <p><strong>1. Start a branch named <code>fix1</code> in a local repo. Create a commit</strong> that adds a line with some text to one of the files.</p>
@@ -649,8 +625,7 @@ green
 red
 white
 </code></pre>
-            <p><strong>4. Observe how the conflicted part is marked</strong> between a line starting with <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> and a line starting with <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>, separated by another line starting with
-              <code>=======</code>.</p>
+            <p><strong>4. Observe how the conflicted part is marked</strong> between a line starting with <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> and a line starting with <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>, separated by another line starting with <code>=======</code>.</p>
             <p>This is the conflicting part that is coming from the <code>master</code> branch:</p>
             <pre class="hljs"><code>
 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
@@ -684,7 +659,7 @@ white
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Thu, 20 Sep 2018 14:21:11 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.13.0</a> at Sat, 29 Sep 2018 11:26:02 GMT</small></div>
 </footer>
 </div>
 </body>
