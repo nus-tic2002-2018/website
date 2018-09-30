@@ -147,15 +147,42 @@ The project is divided into two phases:
 
 </panel><p/>
 
-### Week 7: Project kick-off
+### Week 7-10: First stage
 
-**Deadline**: week 7 lecture<br>
+<div id="project-week7">
+
+##### Project kick-off (Week 7 Tuesday)
+
+<div class="indented">
+
+**Deadline** for project kickoff: week 7 lecture<br>
 **Marks:** 5
 
 1. **Show that you are ready to start the project**: %%i.e., a sanity check to ensure you have enough programming skills to start a project%%
    * If you are new to programming, complete the _project preparation_ exercises i.e., reach _TaskManager - Level 5_. Demo your TaskManager to prof or email the code to prof.
    * If you have prior programming experience, show/email to prof some code you have written before (at least 200 lines of code) to prove that you are ready to start the project.
 1. **Declare project direction and team**: Inform prof of the project direction and your team members and get approval to go ahead.
+
+</div>
+
+##### After the project kickoff
+
+<div class="indented">
+
+* **if you chose option 1** %%(i.e., enhancing TaskManager)%%, given below are some further improvements you are recommended to do to your code base, while you are adding other features.
+* **If you chose option 2 or 3**, you should still ensure you have similar enhancements in your code.
+
+<panel header="**Week 7: Improve OOP, add JUnit tests**" >
+
+Enhance your TaskManager program as explained in the exercise below:
+
+<include src="../book/cppToJava/project/taskManager/q-taskManagerLevel6.md" />
+<include src="../book/cppToJava/project/taskManager/q-taskManagerLevel7.md" />
+
+</panel><p/>
+
+</div>
+</div>
 
 ### Week 10: mid-project check point
 

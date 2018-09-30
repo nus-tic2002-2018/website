@@ -3,29 +3,37 @@
 
 We recommend you to ==do this exercise on your own computer== rather than on repl.it.
 
-<include src="../../book/cppToJava/usefulClasses/scannerClass/q-taskManagerLevel1.md" />
+<include src="../../book/cppToJava/project/taskManager/q-taskManagerLevel1.md" />
 
 </div>
 
 <div id="week4">
 Enhance your TaskManager program as explained in the exercise below:
 
-<include src="../../book/cppToJava/inheritance/polymorphism/q-taskManagerLevel2.md" />
+<include src="../../book/cppToJava/project/taskManager/q-taskManagerLevel2.md" />
 
 </div>
 
 <div id="week5">
 Enhance your TaskManager program as explained in the exercise below:
 
-<include src="../../book/cppToJava/exceptions/how/q-taskManagerLevel3.md" />
-<include src="../../book/cppToJava/collections/arrayListClass/q-taskManagerLevel4.md" />
+<include src="../../book/cppToJava/project/taskManager/q-taskManagerLevel3.md" />
+<include src="../../book/cppToJava/project/taskManager/q-taskManagerLevel4.md" />
 
 </div>
 
 <div id="week6">
 Enhance your TaskManager program as explained in the exercise below:
 
-<include src="../../book/cppToJava/misc/fileAccess/q-taskManagerLevel5.md" />
+<include src="../../book/cppToJava/project/taskManager/q-taskManagerLevel5.md" />
+
+</div>
+
+<div id="week7">
+
+%%**Extract from the [_Admin Info_ page](../../admin/index-tic2002.html#project):**%%
+
+<include src="../../admin/index-tic2002.md#project-week7" />
 
 </div>
 <div id="1kloc">

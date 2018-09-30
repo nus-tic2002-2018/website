@@ -91,7 +91,7 @@ To be able to do exercises such as these:
 To be able to do exercises such as these:
 
 <include src="../../book/cppToJava/usefulClasses/scannerClass/q-findTotalExpenditure.md" />
-<include src="../../book/cppToJava/usefulClasses/scannerClass/q-taskManagerLevel1.md" />
+<include src="../../book/cppToJava/project/taskManager/q-taskManagerLevel1.md" />
 </div>
 
 <div id="inheritance_basic">
