@@ -1,0 +1,109 @@
+2018-10-01T14:44:43.813Z - info: Website generation started at 22:44:40
+2018-10-01T14:44:47.749Z - info: Building assets...
+2018-10-01T14:44:50.920Z - info: Assets built
+2018-10-01T14:44:50.920Z - info: Generating pages...
+2018-10-01T14:45:42.633Z - info: Pages built
+2018-10-01T14:45:42.726Z - info: Site data built
+2018-10-01T14:45:42.726Z - info: Website generation complete! Total build time: 62.04s
+2018-10-01T14:45:42.738Z - info: Generate Site durationMs=62051
+2018-10-01T14:45:42.760Z - info: Serving "C:\repos\nus-tic2002-2018\website\_site" at http://127.0.0.1:8080
+2018-10-01T14:45:42.760Z - info: Press CTRL+C to stop ...
+2018-10-01T14:51:42.253Z - info: [22:51:42] Reload for file change: C:\repos\nus-tic2002-2018\website\book\junit\basic\text.md
+2018-10-01T14:51:43.258Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\junit\basic\text.md
+2018-10-01T14:51:43.262Z - info: Rebuilding 7 pages
+2018-10-01T14:52:00.810Z - info: Pages rebuilt
+2018-10-01T14:52:00.820Z - info: Site data built
+2018-10-01T14:53:31.428Z - info: [22:53:31] Reload for file change: C:\repos\nus-tic2002-2018\website\book\junit\basic\text.md
+2018-10-01T14:53:32.433Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\junit\basic\text.md
+2018-10-01T14:53:32.435Z - info: Rebuilding 7 pages
+2018-10-01T14:53:50.568Z - info: Pages rebuilt
+2018-10-01T14:53:50.579Z - info: Site data built
+2018-10-01T14:54:52.882Z - info: [22:54:52] Reload for file change: C:\repos\nus-tic2002-2018\website\book\junit\basic\text.md
+2018-10-01T14:54:53.885Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\junit\basic\text.md
+2018-10-01T14:54:53.892Z - info: Rebuilding 7 pages
+2018-10-01T14:55:10.798Z - info: Pages rebuilt
+2018-10-01T14:55:10.808Z - info: Site data built
+2018-10-01T14:56:41.886Z - info: [22:56:41] Reload for file change: C:\repos\nus-tic2002-2018\website\book\junit\basic\text.md
+2018-10-01T14:56:42.888Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\junit\basic\text.md
+2018-10-01T14:56:42.890Z - info: Rebuilding 7 pages
+2018-10-01T14:56:48.167Z - info: [22:56:48] Reload for file change: C:\repos\nus-tic2002-2018\website\_markbind\head\scheduleHead.md
+2018-10-01T14:56:48.265Z - info: [22:56:48] Reload for file change: C:\repos\nus-tic2002-2018\website\_markbind\head\bookHead.md
+2018-10-01T14:56:55.911Z - info: [22:56:55] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\week1\index.md
+2018-10-01T14:56:56.048Z - info: [22:56:56] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\week2\tutorial-tic2002.md
+2018-10-01T14:56:56.048Z - info: [22:56:56] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\evidence\intellij.md
+2018-10-01T14:56:56.048Z - info: [22:56:56] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\index-tic2002.md
+2018-10-01T14:56:56.061Z - info: [22:56:56] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\week1\tutorial.md
+2018-10-01T14:56:56.186Z - info: [22:56:56] Reload for file change: C:\repos\nus-tic2002-2018\website\common\header.md
+2018-10-01T14:56:56.186Z - info: [22:56:56] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\evidence\testing.md
+2018-10-01T14:56:56.187Z - info: [22:56:56] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\evidence\oop.md
+2018-10-01T14:56:56.187Z - info: [22:56:56] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\evidence\cppToJava.md
+2018-10-01T14:56:56.187Z - info: [22:56:56] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\evidence\refactoring.md
+2018-10-01T14:56:56.187Z - info: [22:56:56] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\evidence\project.md
+2018-10-01T14:56:56.187Z - info: [22:56:56] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\evidence\modeling.md
+2018-10-01T14:56:56.187Z - info: [22:56:56] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\evidence\javaTools.md
+2018-10-01T14:56:56.187Z - info: [22:56:56] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\evidence\gitAndGithub.md
+2018-10-01T14:56:56.188Z - info: [22:56:56] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\evidence\junit.md
+2018-10-01T14:57:00.830Z - info: Pages rebuilt
+2018-10-01T14:57:00.856Z - info: Site data built
+2018-10-01T14:57:01.009Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\_markbind\head\scheduleHead.md,C:\repos\nus-tic2002-2018\website\_markbind\head\bookHead.md,C:\repos\nus-tic2002-2018\website\schedule\week1\index.md,C:\repos\nus-tic2002-2018\website\schedule\week2\tutorial-tic2002.md,C:\repos\nus-tic2002-2018\website\schedule\evidence\intellij.md,C:\repos\nus-tic2002-2018\website\admin\index-tic2002.md,C:\repos\nus-tic2002-2018\website\schedule\week1\tutorial.md,C:\repos\nus-tic2002-2018\website\common\header.md,C:\repos\nus-tic2002-2018\website\schedule\evidence\testing.md,C:\repos\nus-tic2002-2018\website\schedule\evidence\oop.md,C:\repos\nus-tic2002-2018\website\schedule\evidence\cppToJava.md,C:\repos\nus-tic2002-2018\website\schedule\evidence\refactoring.md,C:\repos\nus-tic2002-2018\website\schedule\evidence\project.md,C:\repos\nus-tic2002-2018\website\schedule\evidence\modeling.md,C:\repos\nus-tic2002-2018\website\schedule\evidence\javaTools.md,C:\repos\nus-tic2002-2018\website\schedule\evidence\gitAndGithub.md,C:\repos\nus-tic2002-2018\website\schedule\evidence\junit.md
+2018-10-01T14:57:01.018Z - info: Rebuilding 65 pages
+2018-10-01T14:57:18.510Z - info: [22:57:18] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\index.md
+2018-10-01T14:57:21.249Z - info: [22:57:21] Reload for file change: C:\repos\nus-tic2002-2018\website\se-book-adapted\index.md
+2018-10-01T14:57:21.250Z - info: [22:57:21] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\moduleExpectations.md
+2018-10-01T14:57:21.252Z - info: [22:57:21] Reload for file change: C:\repos\nus-tic2002-2018\website\_markbind\navigation\adminSiteNav-tic2002.md
+2018-10-01T14:57:21.484Z - info: [22:57:21] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\usingThisWebsite.md
+2018-10-01T14:57:21.484Z - info: [22:57:21] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\exams.md
+2018-10-01T14:57:26.481Z - info: [22:57:26] Reload for file change: C:\repos\nus-tic2002-2018\website\_markbind\head\adminHead.md
+2018-10-01T14:57:40.955Z - info: Pages rebuilt
+2018-10-01T14:57:40.978Z - info: Site data built
+2018-10-01T14:57:41.183Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\schedule\index.md,C:\repos\nus-tic2002-2018\website\se-book-adapted\index.md,C:\repos\nus-tic2002-2018\website\admin\moduleExpectations.md,C:\repos\nus-tic2002-2018\website\_markbind\navigation\adminSiteNav-tic2002.md,C:\repos\nus-tic2002-2018\website\admin\usingThisWebsite.md,C:\repos\nus-tic2002-2018\website\admin\exams.md,C:\repos\nus-tic2002-2018\website\_markbind\head\adminHead.md
+2018-10-01T14:57:41.184Z - info: Rebuilding 8 pages
+2018-10-01T14:57:59.959Z - info: Pages rebuilt
+2018-10-01T14:57:59.972Z - info: Site data built
+2018-10-01T14:58:17.847Z - info: [22:58:17] Reload for file change: C:\repos\nus-tic2002-2018\website\book\junit\basic\text.md
+2018-10-01T14:58:18.849Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\junit\basic\text.md
+2018-10-01T14:58:18.855Z - info: Rebuilding 7 pages
+2018-10-01T14:58:37.034Z - info: Pages rebuilt
+2018-10-01T14:58:37.038Z - info: Site data built
+2018-10-01T14:58:57.371Z - info: [22:58:57] Reload for file change: C:\repos\nus-tic2002-2018\website\book\junit\basic\text.md
+2018-10-01T14:58:58.372Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\junit\basic\text.md
+2018-10-01T14:58:58.374Z - info: Rebuilding 7 pages
+2018-10-01T14:59:14.275Z - info: Pages rebuilt
+2018-10-01T14:59:14.285Z - info: Site data built
+2018-10-01T15:00:41.624Z - info: [23:00:41] Reload for file change: C:\repos\nus-tic2002-2018\website\book\junit\basic\text.md
+2018-10-01T15:00:42.628Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\junit\basic\text.md
+2018-10-01T15:00:42.634Z - info: Rebuilding 7 pages
+2018-10-01T15:01:00.369Z - info: Pages rebuilt
+2018-10-01T15:01:00.382Z - info: Site data built
+2018-10-01T15:02:59.421Z - info: [23:02:59] Reload for file change: C:\repos\nus-tic2002-2018\website\book\junit\basic\text.md
+2018-10-01T15:03:00.435Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\junit\basic\text.md
+2018-10-01T15:03:00.438Z - info: Rebuilding 7 pages
+2018-10-01T15:03:17.424Z - info: [23:03:17] Reload for file change: C:\repos\nus-tic2002-2018\website\book\junit\basic\text.md
+2018-10-01T15:03:21.803Z - info: Pages rebuilt
+2018-10-01T15:03:21.817Z - info: Site data built
+2018-10-01T15:03:21.985Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\junit\basic\text.md
+2018-10-01T15:03:21.986Z - info: Rebuilding 7 pages
+2018-10-01T15:03:39.152Z - info: Pages rebuilt
+2018-10-01T15:03:39.163Z - info: Site data built
+2018-10-01T15:05:01.477Z - info: [23:05:01] Reload for file change: C:\repos\nus-tic2002-2018\website\book\junit\basic\text.md
+2018-10-01T15:05:02.482Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\junit\basic\text.md
+2018-10-01T15:05:02.484Z - info: Rebuilding 7 pages
+2018-10-01T15:05:20.709Z - info: Pages rebuilt
+2018-10-01T15:05:20.722Z - info: Site data built
+2018-10-01T15:05:41.151Z - info: [23:05:41] Reload for file change: C:\repos\nus-tic2002-2018\website\book\junit\basic\text.md
+2018-10-01T15:05:42.161Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\junit\basic\text.md
+2018-10-01T15:05:42.162Z - info: Rebuilding 7 pages
+2018-10-01T15:05:58.842Z - info: Pages rebuilt
+2018-10-01T15:05:58.847Z - info: Site data built
+2018-10-01T15:06:13.768Z - info: [23:06:13] Reload for file change: C:\repos\nus-tic2002-2018\website\book\junit\basic\text.md
+2018-10-01T15:06:14.784Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\junit\basic\text.md
+2018-10-01T15:06:14.789Z - info: Rebuilding 7 pages
+2018-10-01T15:06:31.553Z - info: Pages rebuilt
+2018-10-01T15:06:31.559Z - info: Site data built
+2018-10-01T15:09:53.076Z - info: [23:09:53] Reload for file change: C:\repos\nus-tic2002-2018\website\book\junit\basic\text.md
+2018-10-01T15:09:54.080Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\junit\basic\text.md
+2018-10-01T15:09:54.089Z - info: Rebuilding 7 pages
+2018-10-01T15:10:13.591Z - info: Pages rebuilt
+2018-10-01T15:10:13.597Z - info: Site data built
+2018-10-01T15:21:33.948Z - info: Website generation started at 23:21:31
+2018-10-01T15:21:36.267Z - info: Building assets...

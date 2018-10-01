@@ -9115,3 +9115,11 @@ Missing reference in C:\repos\nus-tic2002-2018\website\admin\index-tic2002.md
 2018-09-30T07:17:21.557Z - info: Site data built
 2018-09-30T07:24:40.962Z - info: Website generation started at 15:24:38
 2018-09-30T07:24:44.067Z - info: Building assets...
+2018-09-30T07:24:47.209Z - info: Assets built
+2018-09-30T07:24:47.210Z - info: Generating pages...
+2018-09-30T07:25:39.780Z - info: Pages built
+2018-09-30T07:25:39.844Z - info: Site data built
+2018-09-30T07:25:39.844Z - info: Website generation complete! Total build time: 60.902s
+2018-09-30T07:25:39.844Z - info: Build success!
+2018-09-30T07:25:39.845Z - info: Generate Site durationMs=60902
+2018-09-30T07:26:11.268Z - info: Deployed!
