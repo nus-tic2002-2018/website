@@ -1398,11 +1398,11 @@ index 15b57f7..17f4528 100644
 
     <span class="hljs-comment">//test case 1</span>
     p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>, <span class="hljs-string">"E002"</span>});
-    assertEquals(p.totalSalary(), <span class="hljs-number">6400</span>);
+    assertEquals(<span class="hljs-number">6400</span>, p.totalSalary());
 
     <span class="hljs-comment">//test case 2</span>
     p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>});
-    assertEquals(p.totalSalary(), <span class="hljs-number">2300</span>);
+    assertEquals(<span class="hljs-number">2300</span>, p.totalSalary());
 
     <span class="hljs-comment">//more tests...</span>
 }

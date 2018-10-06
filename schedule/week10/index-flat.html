@@ -1776,7 +1776,912 @@ Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueE
               </div>
             </panel>
             <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.2a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain unit testing</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.2a</code></span></big> <span><span class="fas fa-trophy"></span> Can use Java varargs feature</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <div class="indented">
+                <panel minimized="">
+                  <span slot="header" class="card-title">Details of the LO</span>
+                  <div>
+                    <div></div>
+                    <p></p>
+                    <p><span class="dimmed"><strong><span>Tools → Java →
+                          </span></strong></span></p>
+                    <div id="title-and-body">
+                      <div>
+                        <h4 id="varargs">Varargs<a class="fa fa-anchor" href="#varargs"></a></h4>
+                      </div>
+                      <div id="main">
+                        <div>
+                          <p><span class="fas fa-paperclip"></span> Resources:</p>
+                          <ul>
+                            <li><a href="http://docs.oracle.com/javase/1.5.0/docs/guide/language/varargs.html">Java Varargs feature (from Oracle.com)</a></li>
+                            <li><a href="https://www.javatpoint.com/varargs">Java Varargs tutorial (for javaTpoint.com)</a></li>
+                          </ul>
+                        </div>
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
+                </panel><br><br>
+                <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+                <div class="indented">
+                  <div>
+                    <p>Any code that you have written using the varargs feature.</p>
+                  </div>
+                </div>
+              </div>
+            </panel>
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.3a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the meaning of association classes</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <div class="indented">
+                <panel minimized="">
+                  <span slot="header" class="card-title">Details of the LO</span>
+                  <div>
+                    <div></div>
+                    <p></p>
+                    <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Associations →
+                          </span></strong></span></p>
+                    <div id="title-and-body">
+                      <div>
+                        <h4 id="association-classes">Association Classes<a class="fa fa-anchor" href="#association-classes"></a></h4>
+                      </div>
+                      <div id="main">
+                        <div>
+                          <p><strong>An <em>association class</em> represents additional information about an association.</strong> It is a normal class but plays a special role from a design point of view.</p>
+                          <tip-box>
+                            <p><span class="fas fa-cube"></span> A <code>Man</code> class and a <code>Woman</code> class is linked with a ‘married to’ association and there is a need to store the date of marriage. However, that data is related to the association rather than specifically owned by either the <code>Man</code> object or the <code>Woman</code> object. In such situations, an additional association class can be introduced, e.g. a <code>Marriage</code> class, to store such information.</p>
+                          </tip-box>
+                          <p>
+                            <panel type="seamless" src="/website\book\uml\classDiagrams\associationClasses\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Class Diagrams → Association Classes → What" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/AssociationClasses" fragment="main"></panel>
+                          </p>
+                          <h5 id="implementing-association-classes">Implementing association classes<a class="fa fa-anchor" href="#implementing-association-classes"></a></h5>
+                          <p>There is no special way to implement an association class. It can be implemented as a normal class that has variables to represent the endpoint of the association it represents.</p>
+                          <tip-box>
+                            <p><span class="fas fa-cube"></span> In the code below, the <code>Transaction</code> class is an association class that represent a transaction between a <code>Person</code> who is the seller and another <code>Person</code> who is the buyer.</p>
+                            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Transaction</span></span>{
+    
+    <span class="hljs-comment">//all fields are compulsory</span>
+    Person seller;
+    Person buyer;
+    Date date;
+    String receiptNumber;
+    
+    Marriage (Person seller, Person buyer, Date date, String receiptNumber){
+        <span class="hljs-comment">//set fields</span>
+    }
+}
+</code></pre>
+                          </tip-box>
+                        </div>
+                        <div>
+                          <div>
+                            <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                              <div>
+                                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which are suitable as an Association Class?">
+                                  <question>
+                                    <p>Which one of these is the suitable as an Association Class?</p>
+                                    <img src="/website/book/oop/associations/associationClasses/images/exerciseDiagram.png" width="500">
+                                    <p></p>
+                                    <ul class="task-list">
+                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a</li>
+                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b</li>
+                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c</li>
+                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d</li>
+                                    </ul>
+                                    <div slot="answer">
+                                      <p>(a)(b)<s>(c)</s>(d)</p>
+                                      <p>Explanation: Mileage is a property of the car, and not specifically about the association between the Driver and the Car. If Mileage was defined as the total number of miles that car was driven by that driver, then it would be suitable as an association class.</p>
+                                    </div>
+                                  </question>
+                                </panel>
+                              </div>
+                            </panel>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </panel><br><br>
+                <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+                <div class="indented">
+                  <div>
+                    <p>Give more examples of association classes, preferably related to your project.</p>
+                  </div>
+                </div>
+              </div>
+            </panel>
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.4b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the need for following a standard</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span></span>
+              <div class="indented">
+                <panel minimized="">
+                  <span slot="header" class="card-title">Details of the LO</span>
+                  <div>
+                    <div></div>
+                    <p></p>
+                    <p><span class="dimmed"><strong><span>Implementation → Code Quality → Style →
+                          </span></strong></span></p>
+                    <div id="title-and-body">
+                      <div>
+                        <h4 id="introduction-3">Introduction<a class="fa fa-anchor" href="#introduction-3"></a></h4>
+                      </div>
+                      <div id="main">
+                        <div>
+                          <p><strong>One essential way to improve code quality is to follow a consistent style. That is why software engineers follow a strict coding standard (aka <em>style guide</em>).</strong></p>
+                          <p><strong>The aim of a coding standard is to make the entire code base look like it was written by one person</strong>. A coding standard is usually specific to a programming language and specifies guidelines such as the location of opening and closing braces, indentation styles and naming styles (e.g. whether to use <em>Hungarian style</em>, <em>Pascal casing</em>, <em>Camel casing</em>, etc.). It is important that the whole team/company use the same coding standard and that standard is not generally inconsistent with typical industry practices. <span class="dimmed">If a company's coding standards is very different from what is used typically in the industry, new recruits will take longer to get used to the company's coding style.</span></p>
+                          <p>💡 IDEs can help to enforce some parts of a coding standard e.g. indentation rules.</p>
+                        </div>
+                        <div>
+                          <div>
+                            <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                              <div>
+                                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> What is the recommended approach regarding coding standards?">
+                                  <question>
+                                    <p>What is the recommended approach regarding coding standards?</p>
+                                    <ul radio-group="5c5a1" class="radio-list">
+                                      <li class="radio-list-item"><label><input class="radio-list-input" name="5c5a1" type="radio"> a. Each developer should find a suitable coding standard and follow it in their coding.</label></li>
+                                      <li class="radio-list-item"><label><input class="radio-list-input" name="5c5a1" type="radio"> b. A developer should understand the importance of following a coding standard. However, there is no need to follow one.</label></li>
+                                      <li class="radio-list-item"><label><input class="radio-list-input" name="5c5a1" type="radio"> c. A developer should find out the coding standards currently used by the project and follow that closely.</label></li>
+                                      <li class="radio-list-item"><label><input class="radio-list-input" name="5c5a1" type="radio"> d. Coding standards are lame. Real programmers develop their own individual styles.</label></li>
+                                    </ul>
+                                    <div slot="answer">
+                                      <p>c</p>
+                                    </div>
+                                  </question>
+                                </panel>
+                              </div>
+                              <div>
+                                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> What is the aim? What is the value?">
+                                  <question has-input="">
+                                    <p>What is the aim of using a coding standard? How does it help?</p>
+                                  </question>
+                                </panel>
+                              </div>
+                            </panel>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </panel><br><br>
+                <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+                <div class="indented">
+                  <div>
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> What is the aim? What is the value?">
+                        <question has-input="">
+                          <p>What is the aim of using a coding standard? How does it help?</p>
+                        </question>
+                      </panel>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </panel>
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.4c</code></span></big> <span><span class="fas fa-trophy"></span> Can follow simple mechanical style rules</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <div class="indented">
+                <panel minimized="">
+                  <span slot="header" class="card-title">Details of the LO</span>
+                  <div>
+                    <div></div>
+                    <p></p>
+                    <p><span class="dimmed"><strong><span>Implementation → Code Quality → Style →
+                          </span></strong></span></p>
+                    <div id="title-and-body">
+                      <div>
+                        <h4 id="basic">Basic<a class="fa fa-anchor" href="#basic"></a></h4>
+                      </div>
+                      <div id="main">
+                        <div>
+                          <div class="alt-java">
+                            <p>Learn <em>basic</em> guidelines of the <a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html"><strong>Java</strong> coding standard (by OSS-Generic)</a></p>
+                          </div>
+                          <div class="alt-python">
+                            <p>Sample coding standard: <a href="https://www.python.org/dev/peps/pep-0008/">PEP 8 <strong>Python</strong> Style Guide -- by Python.org</a></p>
+                          </div>
+                        </div>
+                        <div>
+                          <div>
+                            <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                              <div>
+                                <div>
+                                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Find basic coding standard violations">
+                                    <question>
+                                      <p>Consider the code given below:</p>
+                                      <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.*;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String descriptionPrefix = <span class="hljs-string">"description: "</span>;
+    <span class="hljs-keyword">private</span> String description;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> important;
+    List&lt;String&gt; pastDescription = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(); <span class="hljs-comment">// a list of past descriptions</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String d)</span> </span>{
+      <span class="hljs-keyword">this</span>.description = d;
+      <span class="hljs-keyword">if</span> (!d.isEmpty())
+          <span class="hljs-keyword">this</span>.important = <span class="hljs-keyword">true</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getAsXML</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">"&lt;task&gt;"</span>+description+<span class="hljs-string">"&lt;/task&gt;"</span>; }
+
+    <span class="hljs-comment">/**
+     * Print the description as a string.
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printingDescription</span><span class="hljs-params">()</span></span>{ System.out.println(<span class="hljs-keyword">this</span>); }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> descriptionPrefix + description; }
+}
+</code></pre>
+                                      <p>In what ways the code violate the <em>basic</em> guidelines (i.e., those marked with one ⭐️) of the OSS-Generic Java Coding Standard given <a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html">here</a>?</p>
+                                      <div slot="hint">
+                                        <p>Here are three:</p>
+                                        <ul>
+                                          <li><code>descriptionPrefix</code> is a constant and should be named <code>DESCRIPTION_PREFIX</code></li>
+                                          <li>method name <code>printingDescription()</code> should be named as <code>printDescription()</code></li>
+                                          <li>boolean variable <code>important</code> should be named to sound boolean e.g., <code>isImportant</code></li>
+                                        </ul>
+                                        <p>There are many more.</p>
+                                      </div>
+                                    </question>
+                                  </panel>
+                                </div>
+                              </div>
+                            </panel>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </panel><br><br>
+                <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+                <div class="indented">
+                  <div>
+                    <p><strong>Acceptable</strong>: Evidence of following a coding standard in any project.</p>
+                    <p><strong>Suggested</strong>: Go through the <a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html">provided Java coding standard</a>. Identify and fix any violations of <em>basic</em> style rules in local copy of addressbook-level1 code base. Commit after each fix.</p>
+                    <p><strong>Submission</strong>: Show the relevant commits during the tutorial.</p>
+                  </div>
+                </div>
+              </div>
+            </panel>
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.4d</code></span></big> <span><span class="fas fa-trophy"></span> Can follow intermediate style rules</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <div class="indented">
+                <panel minimized="">
+                  <span slot="header" class="card-title">Details of the LO</span>
+                  <div>
+                    <div></div>
+                    <p></p>
+                    <p><span class="dimmed"><strong><span>Implementation → Code Quality → Style →
+                          </span></strong></span></p>
+                    <div id="title-and-body">
+                      <div>
+                        <h4 id="intermediate">Intermediate<a class="fa fa-anchor" href="#intermediate"></a></h4>
+                      </div>
+                      <div id="main">
+                        <div>
+                          <p>Go through the <a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html">provided Java coding standard</a> and learn the <em>intermediate</em> style rules.</p>
+                        </div>
+                        <div>
+                          <div>
+                            <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                              <div>
+                                <div>
+                                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Unsuitable variable name">
+                                    <question>
+                                      <p>According to the given Java coding standard, which one of these is not a good name?</p>
+                                      <ul radio-group="d008b" class="radio-list">
+                                        <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> a. integer variable name: <code>totalPeople</code></label></li>
+                                        <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> b. boolean variable name: <code>checkWeight</code></label></li>
+                                        <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> c. method name (returns integer): <code>getPeopleCount</code></label></li>
+                                        <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> d. method name (returns boolean): <code>isValidAddress</code></label></li>
+                                        <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> e. String variable name: <code>description</code></label></li>
+                                      </ul>
+                                      <div slot="answer">
+                                        <p>b</p>
+                                        <p>Explanation: <code>checkWeight</code> is an action. Naming variables as actions makes the code harder to follow. <code>isWeightValid</code> may be a better name.</p>
+                                      </div>
+                                    </question>
+                                  </panel>
+                                </div>
+                                <div>
+                                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Find intermediate coding standard violations">
+                                    <question>
+                                      <p>Repeat the exercise in the panel below but also find violations of <em>intermediate</em> level guidelines.</p>
+                                      <div>
+                                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Find basic coding standard violations">
+                                          <question>
+                                            <p>Consider the code given below:</p>
+                                            <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.*;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String descriptionPrefix = <span class="hljs-string">"description: "</span>;
+    <span class="hljs-keyword">private</span> String description;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> important;
+    List&lt;String&gt; pastDescription = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(); <span class="hljs-comment">// a list of past descriptions</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String d)</span> </span>{
+      <span class="hljs-keyword">this</span>.description = d;
+      <span class="hljs-keyword">if</span> (!d.isEmpty())
+          <span class="hljs-keyword">this</span>.important = <span class="hljs-keyword">true</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getAsXML</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">"&lt;task&gt;"</span>+description+<span class="hljs-string">"&lt;/task&gt;"</span>; }
+
+    <span class="hljs-comment">/**
+     * Print the description as a string.
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printingDescription</span><span class="hljs-params">()</span></span>{ System.out.println(<span class="hljs-keyword">this</span>); }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> descriptionPrefix + description; }
+}
+</code></pre>
+                                            <p>In what ways the code violate the <em>basic</em> guidelines (i.e., those marked with one ⭐️) of the OSS-Generic Java Coding Standard given <a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html">here</a>?</p>
+                                            <div slot="hint">
+                                              <p>Here are three:</p>
+                                              <ul>
+                                                <li><code>descriptionPrefix</code> is a constant and should be named <code>DESCRIPTION_PREFIX</code></li>
+                                                <li>method name <code>printingDescription()</code> should be named as <code>printDescription()</code></li>
+                                                <li>boolean variable <code>important</code> should be named to sound boolean e.g., <code>isImportant</code></li>
+                                              </ul>
+                                              <p>There are many more.</p>
+                                            </div>
+                                          </question>
+                                        </panel>
+                                      </div>
+                                      <div slot="hint">
+                                        <p>Here's one you are more likely to miss:</p>
+                                        <ul>
+                                          <li><code>* Print the description as a string.</code> → <code>* Prints the description as a string.</code></li>
+                                        </ul>
+                                        <p>There are more.</p>
+                                      </div>
+                                    </question>
+                                  </panel>
+                                </div>
+                              </div>
+                            </panel>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </panel><br><br>
+                <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+                <div class="indented">
+                  <div>
+                    <p>Similar to [Can follow simple mechanical style rules] above, but also fix violations of <em>intermediate</em> style rules.</p>
+                  </div>
+                </div>
+              </div>
+            </panel>
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.8f</code></span></big> <span><span class="fas fa-trophy"></span> Can draw intermediate-level sequence diagrams</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <div class="indented">
+                <panel minimized="">
+                  <span slot="header" class="card-title">Details of the LO</span>
+                  <div>
+                    <div></div>
+                    <p></p>
+                    <p><span class="dimmed"><strong><span>Design → Modelling → Modelling Behaviors
+                          </span></strong></span></p>
+                    <div id="title-and-body">
+                      <div>
+                        <h4 id="sequence-diagrams-intermediate-2">Sequence Diagrams - Intermediate<a class="fa fa-anchor" href="#sequence-diagrams-intermediate-2"></a></h4>
+                      </div>
+                      <div id="main">
+                        <div>
+                          <p>
+                            <panel type="seamless" src="/website\book\uml\sequenceDiagrams\objectDeletion\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Object Deletion" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Deletion" fragment="main"></panel>
+                            <panel type="seamless" src="/website\book\uml\sequenceDiagrams\selfInvocation\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Self-Invocation" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Self-Invocation" fragment="main"></panel>
+                            <panel type="seamless" src="/website\book\uml\sequenceDiagrams\alternativePaths\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Alternative Paths" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Alternative" fragment="main"></panel>
+                            <panel type="seamless" src="/website\book\uml\sequenceDiagrams\optionalPaths\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Optional Paths" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Optional" fragment="main"></panel>
+                          </p>
+                        </div>
+                        <div>
+                          <div>
+                            <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                              <div>
+                                <div>
+                                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> What’s going on here?">
+                                    <question>
+                                      <p>What’s going on here?</p>
+                                      <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/exerciseDiagram.png" height="170">
+                                      <p></p>
+                                      <ul class="task-list">
+                                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. <code>Logic</code> object is executing a parallel thread.</li>
+                                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. <code>Logic</code> object is executing a loop.</li>
+                                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. <code>Logic</code> object is creating another <code>Logic</code> instance.</li>
+                                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. One of <code>Logic</code> object’s methods is calling another of its methods.</li>
+                                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. <code>Minefield</code> object is calling a method of <code>Logic</code>.</li>
+                                      </ul>
+                                      <div slot="answer">
+                                        <p>(d)</p>
+                                      </div>
+                                    </question>
+                                  </panel>
+                                </div>
+                                <div>
+                                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain Sequence Diagram (ParserFactory)">
+                                    <question>
+                                      <p>Explain the interactions depicted in this sequence diagram.</p>
+                                      <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/parserFactory.png" height="300">
+                                      <p></p>
+                                      <div slot="hint">
+                                        <p>First, the <code>createParser()</code> method of an existing <code>ParserFactory</code> object is called. Then, ...</p>
+                                      </div>
+                                    </question>
+                                  </panel>
+                                </div>
+                                <div>
+                                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Draw Sequence Diagram for printing a quote">
+                                    <question>
+                                      <p>Draw a sequence diagram to represent this code snippet.</p>
+                                      <pre><code class="hljs java"><span class="hljs-keyword">if</span> (isFirstPage) {
+    <span class="hljs-keyword">new</span> Quote().print();
+}
+</code></pre>
+                                      <p>The <code>Quote</code> class:</p>
+                                      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Quote</span></span>{
+
+    String q;
+
+    Quote(){
+        q = generate();
+    }
+
+    <span class="hljs-function">String <span class="hljs-title">generate</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">// ...</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{
+        System.out.println(q);
+    }
+
+}
+</code></pre>
+                                      <div slot="hint">
+                                        <ul>
+                                          <li>Show <code>new Quote().print();</code> as two method calls.</li>
+                                          <li>As the created Quote object is not assigned to a variable, it can be considered as 'deleted' soon after its <code>print()</code> method is called.</li>
+                                        </ul>
+                                      </div>
+                                    </question>
+                                  </panel>
+                                </div>
+                              </div>
+                            </panel>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </panel><br><br>
+                <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+                <div class="indented">
+                  <div>
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain Sequence Diagram (ParserFactory)">
+                        <question>
+                          <p>Explain the interactions depicted in this sequence diagram.</p>
+                          <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/parserFactory.png" height="300">
+                          <p></p>
+                          <div slot="hint">
+                            <p>First, the <code>createParser()</code> method of an existing <code>ParserFactory</code> object is called. Then, ...</p>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                    <p></p>
+                    <ol>
+                      <li>Explain the sequence diagrams given [<a href="https://nus-tic2002-2018.github.io/addressbook-level4/DeveloperGuide.html">AddressBook Level4: Developer Guide</a>]</li>
+                      <li>Add more sequence diagrams to project documentation (to be done in future weeks)</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </panel>
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.9a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain milestones</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span></span>
+              <div class="indented">
+                <panel minimized="">
+                  <span slot="header" class="card-title">Details of the LO</span>
+                  <div>
+                    <div></div>
+                    <p></p>
+                    <p><span class="dimmed"><strong><span>Project Management → Project Planning →
+                          </span></strong></span></p>
+                    <div id="title-and-body">
+                      <div>
+                        <h4 id="milestones">Milestones<a class="fa fa-anchor" href="#milestones"></a></h4>
+                      </div>
+                      <div id="main">
+                        <div>
+                          <p><strong>A <em>milestone</em> is the end of a stage which indicates a significant progress.</strong> We should take into account dependencies and priorities when deciding on the features to be delivered at a certain milestone.</p>
+                          <tip-box>
+                            <p><span class="fas fa-cube"></span> Each intermediate product release is a milestone.</p>
+                          </tip-box>
+                          <p>In some projects, it is not practical to have a very detailed plan for the whole project due to the uncertainty and unavailability of required information. In such cases, we can use a high-level plan for the whole project and a detailed plan for the next few milestones.</p>
+                          <tip-box>
+                            <p><span class="fas fa-cube"></span> Milestones for the Minesweeper project, iteration 1</p>
+                            <div class="table-responsive">
+                              <table class="markbind-table table table-bordered table-striped">
+                                <thead>
+                                  <tr>
+                                    <th>Day</th>
+                                    <th>Milestones</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Day 1</td>
+                                    <td>Architecture skeleton completed</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Day 3</td>
+                                    <td>‘new game’ feature implemented</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Day 4</td>
+                                    <td>‘new game’ feature tested</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </tip-box>
+                        </div>
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
+                </panel><br><br>
+                <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+                <div class="indented">
+                  <div>
+                    <p>Identify milestones of your class project.</p>
+                  </div>
+                </div>
+              </div>
+            </panel>
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.9b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain buffers</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <div class="indented">
+                <panel minimized="">
+                  <span slot="header" class="card-title">Details of the LO</span>
+                  <div>
+                    <div></div>
+                    <p></p>
+                    <p><span class="dimmed"><strong><span>Project Management → Project Planning →
+                          </span></strong></span></p>
+                    <div id="title-and-body">
+                      <div>
+                        <h4 id="buffers">Buffers<a class="fa fa-anchor" href="#buffers"></a></h4>
+                      </div>
+                      <div id="main">
+                        <div>
+                          <p><strong>A <em>buffer</em> is a time set aside to absorb any unforeseen delays.</strong> It is very important to include buffers in a software project schedule because effort/time estimations for software development is notoriously hard. However, <strong>do not inflate task estimates to create hidden buffers</strong>; have explicit buffers instead. <span class="dimmed"> Reason: With explicit buffers it is easier to detect incorrect effort estimates which can serve as a feedback to improve future effort estimates.</span></p>
+                          <img src="/website/book/projectPlanning/buffers/images/schedule.png" height="120">
+                        </div>
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
+                </panel><br><br>
+                <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+                <div class="indented">
+                  <div>
+                    <p>Explain how buffers can be used in your class project.</p>
+                  </div>
+                </div>
+              </div>
+            </panel>
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.9c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain issue trackers</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <div class="indented">
+                <panel minimized="">
+                  <span slot="header" class="card-title">Details of the LO</span>
+                  <div>
+                    <div></div>
+                    <p></p>
+                    <p><span class="dimmed"><strong><span>Project Management → Project Planning →
+                          </span></strong></span></p>
+                    <div id="title-and-body">
+                      <div>
+                        <h4 id="issue-trackers">Issue Trackers<a class="fa fa-anchor" href="#issue-trackers"></a></h4>
+                      </div>
+                      <div id="main">
+                        <div>
+                          <p>Keeping track of project tasks <span class="dimmed">(who is doing what, which tasks are ongoing, which tasks are done etc.)</span> is an essential part of project management. In small projects it may be possible to track tasks using simple tools as online spreadsheets or general-purpose/light-weight tasks tracking tools such as Trello. Bigger projects need more sophisticated task tracking tools.</p>
+                          <p><strong>Issue trackers (sometimes called bug trackers) are commonly used to track task assignment and progress.</strong> Most online project management software such as GitHub, SourceForge, and BitBucket come with an integrated issue tracker.</p>
+                          <div v-closeable="" alt="Jira screenshot">
+                            <tip-box>
+                              <p><span class="fas fa-cube"></span> A screenshot from the Jira Issue tracker software <span class="dimmed">(Jira is part of the BitBucket project management tool suite)</span>:</p>
+                              <img src="/website/book/projectPlanning/issueTrackers/images/xjira.png" height="350">
+                              <p></p>
+                            </tip-box>
+                          </div>
+                        </div>
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
+                </panel><br><br>
+                <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+                <div class="indented">
+                  <div>
+                    <p>Explain the role of GitHub issue tracker can play in your project.</p>
+                  </div>
+                </div>
+              </div>
+            </panel>
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.9d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain work breakdown structures</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <div class="indented">
+                <panel minimized="">
+                  <span slot="header" class="card-title">Details of the LO</span>
+                  <div>
+                    <div></div>
+                    <p></p>
+                    <p><span class="dimmed"><strong><span>Project Management → Project Planning →
+                          </span></strong></span></p>
+                    <div id="title-and-body">
+                      <div>
+                        <h4 id="work-breakdown-structure">Work Breakdown Structure<a class="fa fa-anchor" href="#work-breakdown-structure"></a></h4>
+                      </div>
+                      <div id="main">
+                        <div>
+                          <p><strong>A <em>Work Breakdown Structure (WBS)</em> depicts information about tasks and their details in terms of subtasks.</strong> When managing projects it is useful to divide the total work into smaller, well-defined units. Relatively complex tasks can be further split into subtasks. In complex projects a WBS can also include prerequisite tasks and effort estimates for each task.</p>
+                          <tip-box>
+                            <p><span class="fas fa-cube"></span> The high level tasks for a single iteration of a small project could look like the following:</p>
+                            <div class="table-responsive">
+                              <table class="markbind-table table table-bordered table-striped">
+                                <thead>
+                                  <tr>
+                                    <th>Task ID</th>
+                                    <th>Task</th>
+                                    <th>Estimated Effort</th>
+                                    <th>Prerequisite Task</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>A</td>
+                                    <td>Analysis</td>
+                                    <td>1 man day</td>
+                                    <td>-</td>
+                                  </tr>
+                                  <tr>
+                                    <td>B</td>
+                                    <td>Design</td>
+                                    <td>2 man day</td>
+                                    <td>A</td>
+                                  </tr>
+                                  <tr>
+                                    <td>C</td>
+                                    <td>Implementation</td>
+                                    <td>4.5 man day</td>
+                                    <td>B</td>
+                                  </tr>
+                                  <tr>
+                                    <td>D</td>
+                                    <td>Testing</td>
+                                    <td>1 man day</td>
+                                    <td>C</td>
+                                  </tr>
+                                  <tr>
+                                    <td>E</td>
+                                    <td>Planning for next version</td>
+                                    <td>1 man day</td>
+                                    <td>D</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </tip-box>
+                          <p><strong>The effort is traditionally measured in <em>man hour/day/month</em></strong> i.e. work that can be done by one person in one hour/day/month. The <em>Task ID</em> is a label for easy reference to a task. Simple labeling is suitable for a small project, while a more informative labeling system can be adopted for bigger projects.</p>
+                          <tip-box>
+                            <p><span class="fas fa-cube"></span> An example WBS for a project for developing a game.</p>
+                            <table class="table">
+                              <tr>
+                                <th>Task ID</th>
+                                <th>Task</th>
+                                <th>Estimated Effort</th>
+                                <th>Prerequisite Task</th>
+                              </tr>
+                              <tr>
+                                <td>A</td>
+                                <td>High level design</td>
+                                <td>1 man day</td>
+                                <td>-</td>
+                              </tr>
+                              <tr>
+                                <td>B</td>
+                                <td>
+                                  Detail design
+                                  <ol>
+                                    <li>User Interface</li>
+                                    <li>Game Logic</li>
+                                    <li>Persistency Support</li>
+                                  </ol>
+                                </td>
+                                <td>
+                                  2 man day
+                                  <ul>
+                                    <li>0.5 man day</li>
+                                    <li>1 man day</li>
+                                    <li>0.5 man day</li>
+                                  </ul>
+                                </td>
+                                <td>A</td>
+                              </tr>
+                              <tr>
+                                <td>C</td>
+                                <td>
+                                  Implementation
+                                  <ol>
+                                    <li>User Interface</li>
+                                    <li>Game Logic</li>
+                                    <li>Persistency Support</li>
+                                  </ol>
+                                </td>
+                                <td>
+                                  4.5 man day
+                                  <ul>
+                                    <li>1.5 man day</li>
+                                    <li>2 man day</li>
+                                    <li>1 man day</li>
+                                  </ul>
+                                </td>
+                                <td>
+                                  <ul>
+                                    <li>B.1</li>
+                                    <li>B.2</li>
+                                    <li>B.3</li>
+                                  </ul>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>D</td>
+                                <td>System Testing</td>
+                                <td>1 man day</td>
+                                <td>C</td>
+                              </tr>
+                              <tr>
+                                <td>E</td>
+                                <td>Planning for next version</td>
+                                <td>1 man day</td>
+                                <td>D</td>
+                              </tr>
+                            </table>
+                          </tip-box>
+                          <p><strong>All tasks should be well-defined.</strong> In particular, it should be clear as to when the task will be considered <em>done</em>.</p>
+                          <tip-box>
+                            <p><span class="fas fa-cube"></span> Some examples of ill-defined tasks and their better-defined counterparts:</p>
+                            <div class="table-responsive">
+                              <table class="markbind-table table table-bordered table-striped">
+                                <thead>
+                                  <tr>
+                                    <th>
+                                      <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong></span></font>
+                                    </th>
+                                    <th><span class="text-success"><span class="fas fa-thumbs-up"></span> Better </span></th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>more coding</td>
+                                    <td>implement component X</td>
+                                  </tr>
+                                  <tr>
+                                    <td>do research on UI testing</td>
+                                    <td>find a suitable tool for testing the UI</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </tip-box>
+                        </div>
+                        <div>
+                          <div>
+                            <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                              <div>
+                                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which one is not a well-defined task?">
+                                  <question>
+                                    <p>Which one these project tasks is not well-defined?</p>
+                                    <ul radio-group="9211e" class="radio-list">
+                                      <li class="radio-list-item"><label><input class="radio-list-input" name="9211e" type="radio"> a. Implement the 'delete' feature.</label></li>
+                                      <li class="radio-list-item"><label><input class="radio-list-input" name="9211e" type="radio"> b. Fix bug #12315.</label></li>
+                                      <li class="radio-list-item"><label><input class="radio-list-input" name="9211e" type="radio"> c. Do some more testing.</label></li>
+                                      <li class="radio-list-item"><label><input class="radio-list-input" name="9211e" type="radio"> d. Choose a tool to draw UML diagrams.</label></li>
+                                      <li class="radio-list-item"><label><input class="radio-list-input" name="9211e" type="radio"> e. Clarify submission requirements with the customer.</label></li>
+                                    </ul>
+                                    <div slot="answer">
+                                      <p>(c)</p>
+                                      <p>Explanation: ‘More testing’ is not well-defined. How much is ‘more’? ‘Test the delete functionality’ is a better-defined task.</p>
+                                    </div>
+                                  </question>
+                                </panel>
+                              </div>
+                            </panel>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </panel><br><br>
+                <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+                <div class="indented">
+                  <div>
+                    <p>Break down the project into well-defined tasks and records them in the issue tracker.</p>
+                  </div>
+                </div>
+              </div>
+            </panel>
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.9g</code></span></big> <span><span class="fas fa-trophy"></span> Can explain common team structures</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <div class="indented">
+                <panel minimized="">
+                  <span slot="header" class="card-title">Details of the LO</span>
+                  <div>
+                    <div></div>
+                    <p></p>
+                    <p><span class="dimmed"><strong><span>Project Management → Teamwork →
+                          </span></strong></span></p>
+                    <div id="title-and-body">
+                      <div>
+                        <h4 id="team-structures">Team Structures<a class="fa fa-anchor" href="#team-structures"></a></h4>
+                      </div>
+                      <div id="main">
+                        <div>
+                          <p>Given below are three commonly used team structures in software development. Irrespective of the team structure, it is a good practice to assign roles and responsibilities to different team members so that someone is clearly in charge of each aspect of the project. In comparison, the ‘everybody is responsible for everything’ approach can result in more chaos and hence slower progress.</p>
+                          <img src="/website/book/teamwork/teamStructures/images/diagram.png" height="150">
+                          <p></p>
+                          <p><strong>Egoless team</strong></p>
+                          <p>In this structure, <strong>every team member is equal in terms of responsibility and accountability</strong>. When any decision is required, consensus must be reached. This team structure is also known as a <em>democratic</em> team structure. This team structure usually finds a good solution to a relatively hard problem as all team members contribute ideas.</p>
+                          <p>However, the democratic nature of the team structure bears a higher risk of falling apart due to the absence of an authority figure to manage the team and resolve conflicts.</p>
+                          <p><strong>Chief programmer team</strong></p>
+                          <p>Frederick Brooks proposed that software engineers learn from the medical surgical team in an operating room. In such a team, there is always a chief surgeon, assisted by experts in other areas. Similarly, in a chief programmer team structure, <strong>there is a single authoritative figure, the chief programmer</strong>. Major decisions, e.g. system architecture, are made solely by him/her and obeyed by all other team members. The chief programmer directs and coordinates the effort of other team members. When necessary, the chief will be assisted by domain specialists e.g. business specialists, database expert, network technology expert, etc. This allows individual group members to concentrate solely on the areas where they have sound knowledge and expertise.</p>
+                          <p>The success of such a team structure relies heavily on the chief programmer. Not only must he be a superb technical hand, he also needs good managerial skills. Under a suitably qualified leader, such a team structure is known to produce successful work. .</p>
+                          <p><strong>Strict hierarchy team</strong></p>
+                          <p>In the opposite extreme of an egoless team, a strict hierarchy team has <strong>a strictly defined organization among the team members</strong>, reminiscent of the military or bureaucratic government. Each team member only works on his assigned tasks and reports to a single “boss”.</p>
+                          <p>In a large, resource-intensive, complex project, this could be a good team structure to reduce communication overhead.</p>
+                        </div>
+                        <div>
+                          <div>
+                            <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                              <div>
+                                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which team structure is the most suitable for a school project?">
+                                  <question>
+                                    <p>Which team structure is the most suitable for a school project?</p>
+                                    <ul radio-group="8ee7d" class="radio-list">
+                                      <li class="radio-list-item"><label><input class="radio-list-input" name="8ee7d" type="radio"> a. Egoless</label></li>
+                                      <li class="radio-list-item"><label><input class="radio-list-input" name="8ee7d" type="radio"> b. Chief programmer</label></li>
+                                      <li class="radio-list-item"><label><input class="radio-list-input" name="8ee7d" type="radio"> c. Strict hierarchy</label></li>
+                                    </ul>
+                                    <div slot="answer">
+                                      <p>(a)</p>
+                                      <p>Explanation: Given that students are all peers and beginners, Egoless team structure seems most suitable for a school project. However, given school projects are low-stakes, short-lived, and small, even the other two team structures can be used for them.</p>
+                                    </div>
+                                  </question>
+                                </panel>
+                              </div>
+                            </panel>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </panel><br><br>
+                <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+                <div class="indented">
+                  <div>
+                    <p>Identify the team structure used in the class project.</p>
+                  </div>
+                </div>
+              </div>
+            </panel>
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.10a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain unit testing</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
               <div class="indented">
                 <panel minimized="">
                   <span slot="header" class="card-title">Details of the LO</span>
@@ -1881,7 +2786,7 @@ Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueE
               </div>
             </panel>
             <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.2b</code></span></big> <span><span class="fas fa-trophy"></span> Can use stubs to isolate an SUT from its dependencies</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.10b</code></span></big> <span><span class="fas fa-trophy"></span> Can use stubs to isolate an SUT from its dependencies</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
               <div class="indented">
                 <panel minimized="">
                   <span slot="header" class="card-title">Details of the LO</span>
@@ -2020,7 +2925,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
             </panel>
             <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.2c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain integration testing</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span></span>
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.10c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain integration testing</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span></span>
               <div class="indented">
                 <panel minimized="">
                   <span slot="header" class="card-title">Details of the LO</span>
@@ -2058,7 +2963,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
             </panel>
             <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.2d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain integration testing</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.10d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain integration testing</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
               <div class="indented">
                 <panel minimized="">
                   <span slot="header" class="card-title">Details of the LO</span>
@@ -2107,7 +3012,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
             </panel>
             <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.2e</code></span></big> <span><span class="fas fa-trophy"></span> Can explain system testing</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span></span>
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.10e</code></span></big> <span><span class="fas fa-trophy"></span> Can explain system testing</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span></span>
               <div class="indented">
                 <panel minimized="">
                   <span slot="header" class="card-title">Details of the LO</span>
@@ -2157,7 +3062,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
             </panel>
             <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.2f</code></span></big> <span><span class="fas fa-trophy"></span> Can explain automated GUI testing</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.10f</code></span></big> <span><span class="fas fa-trophy"></span> Can explain automated GUI testing</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
               <div class="indented">
                 <panel minimized="">
                   <span slot="header" class="card-title">Details of the LO</span>
@@ -2234,7 +3139,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
             </panel>
             <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.2g</code></span></big> <span><span class="fas fa-trophy"></span> Can explain acceptance testing</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span></span>
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.10g</code></span></big> <span><span class="fas fa-trophy"></span> Can explain acceptance testing</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span></span>
               <div class="indented">
                 <panel minimized="">
                   <span slot="header" class="card-title">Details of the LO</span>
@@ -2266,7 +3171,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
             </panel>
             <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.2h</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the differences between system testing and acceptance testing</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.10h</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the differences between system testing and acceptance testing</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
               <div class="indented">
                 <panel minimized="">
                   <span slot="header" class="card-title">Details of the LO</span>
@@ -2387,7 +3292,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
             </panel>
             <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.2i</code></span></big> <span><span class="fas fa-trophy"></span> Can explain alpha and beta testing</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.10i</code></span></big> <span><span class="fas fa-trophy"></span> Can explain alpha and beta testing</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
               <div class="indented">
                 <panel minimized="">
                   <span slot="header" class="card-title">Details of the LO</span>
@@ -2420,7 +3325,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
             </panel>
             <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.3b</code></span></big> <span><span class="fas fa-trophy"></span> Can use intermediate features of JUnit</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.11b</code></span></big> <span><span class="fas fa-trophy"></span> Can use intermediate features of JUnit</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
               <div class="indented">
                 <panel minimized="">
                   <span slot="header" class="card-title">Details of the LO</span>
@@ -2457,7 +3362,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
             </panel>
             <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.4b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain validation and verification</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.12b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain validation and verification</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
               <div class="indented">
                 <panel minimized="">
                   <span slot="header" class="card-title">Details of the LO</span>
@@ -2522,7 +3427,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
             </panel>
             <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.4c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain code reviews</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.12c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain code reviews</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
               <div class="indented">
                 <panel minimized="">
                   <span slot="header" class="card-title">Details of the LO</span>
@@ -2608,7 +3513,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
             </panel>
             <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.4d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain static analysis</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.12d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain static analysis</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
               <div class="indented">
                 <panel minimized="">
                   <span slot="header" class="card-title">Details of the LO</span>
@@ -2653,6 +3558,337 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                 </div>
               </div>
             </panel>
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.13a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain branching</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span></span>
+              <div class="indented">
+                <panel minimized="">
+                  <span slot="header" class="card-title">Details of the LO</span>
+                  <div>
+                    <div></div>
+                    <p></p>
+                    <p><span class="dimmed"><strong><span>Project Management → Revision Control →
+                          </span></strong></span></p>
+                    <div id="title-and-body">
+                      <div>
+                        <h4 id="branching">Branching<a class="fa fa-anchor" href="#branching"></a></h4>
+                      </div>
+                      <div id="main">
+                        <div>
+                          <p><strong><mark><em>Branching</em></mark> is the process of evolving multiple versions of the software in parallel.</strong> For example, one team member can create a new branch and add an experimental feature to it while the rest of the team keeps working on another branch. Branches can be given names e.g. <code>master</code>, <code>release</code>, <code>dev</code>.</p>
+                          <p><strong>A branch can be <mark><em>merged</em></mark> into another branch.</strong> Merging usually result in a new commit that represents the changes done in the branch being merged.</p>
+                          <pic src="/website/book/revisionControl/branching/images/diagram.png" height="180">
+                            <strong>Branching and merging</strong></pic>
+                          <p><strong><mark><em>Merge conflicts</em></mark> happen when you try to merge two branches that had changed the same part of the code</strong> and the RCS software cannot decide which changes to keep. In those cases we have to ‘resolve’ those conflicts manually.</p>
+                        </div>
+                        <div>
+                          <div>
+                            <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                              <div>
+                                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> What is branching?">
+                                  <question has-input="true">
+                                    <p>In the context of RCS, what is the <em>branching</em>? What is the need for branching?.</p>
+                                  </question>
+                                </panel>
+                              </div>
+                              <div>
+                                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> What is merging?">
+                                  <question has-input="true">
+                                    <p>In the context of RCS, what is the <em>merging</em> branches? How can it lead to <em>merge conflicts</em>?.</p>
+                                  </question>
+                                </panel>
+                              </div>
+                            </panel>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </panel><br><br>
+                <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+                <div class="indented">
+                  <div>
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> What is branching?">
+                        <question has-input="true">
+                          <p>In the context of RCS, what is the <em>branching</em>? What is the need for branching?.</p>
+                        </question>
+                      </panel>
+                    </div>
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> What is merging?">
+                        <question has-input="true">
+                          <p>In the context of RCS, what is the <em>merging</em> branches? How can it lead to <em>merge conflicts</em>?.</p>
+                        </question>
+                      </panel>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </panel>
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.13b</code></span></big> <span><span class="fas fa-trophy"></span> Can use Git branching</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <div class="indented">
+                <panel minimized="">
+                  <span slot="header" class="card-title">Details of the LO</span>
+                  <div>
+                    <div>
+                      <p>
+                        <panel src="/website\book\revisionControl\branching\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%Project Management → Revision Control → Branching%%"></panel>
+                      </p>
+                    </div>
+                    <p></p>
+                    <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+                          </span></strong></span></p>
+                    <div id="title-and-body">
+                      <div>
+                        <h4 id="branch">Branch<a class="fa fa-anchor" href="#branch"></a></h4>
+                      </div>
+                      <div id="main">
+                        <div>
+                          <p><strong>0. Observe that you are normally in the branch called <code>master</code>.</strong> For this, you can take any repo you have on your computer (e.g. a clone of the <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a>).</p>
+                          <tabs>
+                            <tab header="SourceTree">
+                              <div>
+                                <img src="/website/book/gitAndGithub/branch/images/onMasterBranch.png" height="120">
+                                <p></p>
+                              </div>
+                              <hr>
+                            </tab>
+                            <tab header="CLI">
+                              <div>
+                                <pre class="hljs"><code>git status
+</code></pre>
+                                <p><span class="fas fa-arrow-down"></span></p>
+                                <pre class="hljs"><code>on branch master
+</code></pre>
+                              </div>
+                              <hr>
+                            </tab>
+                          </tabs>
+                          <p><strong>1. Start a branch named <code>feature1</code> and switch to the new branch.</strong></p>
+                          <tabs>
+                            <tab header="SourceTree">
+                              <div>
+                                <p>Click on the <code>Branch</code> button on the main menu. In the next dialog, enter the branch name and click <code>Create Branch</code></p>
+                                <img src="/website/book/gitAndGithub/branch/images/sourcetree_1.png" height="150">
+                                <p></p>
+                                <p>Note how the <code>feature1</code> is indicated as the current branch.</p>
+                                <img src="/website/book/gitAndGithub/branch/images/sourcetree_2.png" height="150">
+                                <p></p>
+                              </div>
+                              <hr>
+                            </tab>
+                            <tab header="CLI">
+                              <div>
+                                <p>You can use the <code>branch</code> command to create a new branch and the <code>checkout</code> command to switch to a specific branch.</p>
+                                <pre class="hljs"><code>git branch feature1
+git checkout feature1
+</code></pre>
+                                <p>One-step shortcut to create a branch and switch to it at the same time:</p>
+                                <pre class="hljs"><code>git checkout –b feature1
+</code></pre>
+                              </div>
+                              <hr>
+                            </tab>
+                          </tabs>
+                          <p><strong>2. Create some commits in the new branch.</strong> <span class="dimmed">Just commit as per normal. Commits you add while on a certain branch will become part of that branch.</span></p>
+                          <p><strong>3. Switch to the <code>master</code> branch.</strong> Note how the changes you did in the <code>feature1</code> branch are no longer in the working directory.</p>
+                          <tabs>
+                            <tab header="SourceTree">
+                              <div>
+                                <p>Double-click the <code>master</code> branch</p>
+                                <img src="/website/book/gitAndGithub/branch/images/sourcetree_3.png" height="150">
+                                <p></p>
+                              </div>
+                              <hr>
+                            </tab>
+                            <tab header="CLI">
+                              <div>
+                                <pre class="hljs"><code>git checkout master
+</code></pre>
+                              </div>
+                              <hr>
+                            </tab>
+                          </tabs>
+                          <p><strong>4. Add a commit to the master branch.</strong> Let’s imagine it’s a bug fix.</p>
+                          <img src="/website/book/gitAndGithub/branch/images/sourcetree_4.png" height="100">
+                          <p></p>
+                          <p><strong>5. Switch back to the <code>feature1</code> branch</strong> <span class="dimmed">(similar to step 3)</span>.</p>
+                          <p><strong>6. Merge the <code>master</code> branch to the <code>feature1</code> branch</strong>, giving an end-result like the below. Also note how Git has created a <em>merge commit</em>.</p>
+                          <img src="/website/book/gitAndGithub/branch/images/sourcetree_5.png" height="120">
+                          <p></p>
+                          <tabs>
+                            <tab header="SourceTree">
+                              <div>
+                                <p>Right-click on the <code>master</code> branch and choose <code>merge master into the current branch</code>. Click <code>OK</code> in the next dialog.</p>
+                              </div>
+                              <hr>
+                            </tab>
+                            <tab header="CLI">
+                              <div>
+                                <pre class="hljs"><code>git merge master
+</code></pre>
+                              </div>
+                              <hr>
+                            </tab>
+                          </tabs>
+                          <p>Observe how the changes you did in the <code>master</code> branch (i.e. the imaginary bug fix) is now available even when you are in the <code>feature1</code> branch.</p>
+                          <p><strong>7. Add another commit to the <code>feature1</code> branch.</strong></p>
+                          <p><strong>8. Switch to the <code>master</code> branch and add one more commit.</strong></p>
+                          <p><strong>9. Merge <code>feature1</code> to the master branch</strong>, giving and end-result like this:</p>
+                          <img src="/website/book/gitAndGithub/branch/images/sourcetree_6.png" height="150">
+                          <p></p>
+                          <tabs>
+                            <tab header="SourceTree">
+                              <p>Right-click on the <code>feature1</code> branch and choose <code>Merge...</code>.</p>
+                              <hr>
+                            </tab>
+                            <tab header="CLI">
+                              <pre class="hljs"><code>git merge feature1
+</code></pre>
+                              <hr>
+                            </tab>
+                          </tabs>
+                          <p><strong>10. Create a new branch called <code>add-countries</code>, switch to it, and add some commits to it</strong> <span class="dimmed">(similar to steps 1-2 above)</span>. You should have something like this now:</p>
+                          <img src="/website/book/gitAndGithub/branch/images/addCountriesBranchBeforeMerging.png" height="80">
+                          <p></p>
+                          <p><strong>11. Go back to the <code>master</code> branch and merge the <code>add-countries</code> branch onto the <code>master</code> branch</strong> <span class="dimmed">(similar to steps 8-9 above)</span>. While you might expect to see something like the below,</p>
+                          <img src="/website/book/gitAndGithub/branch/images/addCountriesBranchNoFastForward.png" height="100">
+                          <p></p>
+                          <p>... you are likely to see something like this instead:</p>
+                          <img src="/website/book/gitAndGithub/branch/images/addCountriesBranchAfterMerging.png" height="80">
+                          <p></p>
+                          <p>That is because <strong>Git does a <mark><em>fast forward</em> merge</mark> if possible</strong>. Seeing that the <code>master</code> branch has not changed since you started the <code>add-countries</code> branch, Git has decided it is simpler to just put the commits of the <code>add-countries</code> branch in front of the <code>master</code> branch, without going into the trouble of creating an extra merge commit.</p>
+                          <p><strong>It is possible to force Git to create a merge commit even if fast forwarding is possible.</strong></p>
+                          <tabs>
+                            <tab header="SourceTree">
+                              <div>
+                                <p>Tick the box shown below when you merge a branch:</p>
+                                <img src="/website/book/gitAndGithub/branch/images/mergeBranchDialog.png" height="150">
+                                <p></p>
+                              </div>
+                              <hr>
+                            </tab>
+                            <tab header="CLI">
+                              <div>
+                                <p>Use the <code>--no-ff</code> switch (short for <em>no fast forward</em>):</p>
+                                <pre class="hljs"><code>git merge --no-ff add-countries
+</code></pre>
+                              </div>
+                              <hr>
+                            </tab>
+                          </tabs>
+                        </div>
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
+                </panel><br><br>
+                <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+                <div class="indented">
+                  <div>
+                    <p><strong>Acceptable</strong>: Git branches you have created in any repo.</p>
+                    <p><strong>Suggested</strong>: Results of following the steps in the LO.</p>
+                    <p><strong>Submission</strong>: Show your branches during the tutorial.</p>
+                  </div>
+                </div>
+              </div>
+            </panel>
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.13c</code></span></big> <span><span class="fas fa-trophy"></span> Can create PRs on GitHub</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <div class="indented">
+                <panel minimized="">
+                  <span slot="header" class="card-title">Details of the LO</span>
+                  <div>
+                    <div>
+                      <p>
+                        <panel src="/website\book\gitAndGithub\branch\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%Tools → Git & GitHub → Branching%%"></panel>
+                      </p>
+                    </div>
+                    <p></p>
+                    <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+                          </span></strong></span></p>
+                    <div id="title-and-body">
+                      <div>
+                        <h4 id="create-prs">Create PRs<a class="fa fa-anchor" href="#create-prs"></a></h4>
+                      </div>
+                      <div id="main">
+                        <div>
+                          <p><strong>1. Fork the <a href="https://github.com/se-edu/samplerepo-pr-practice">samplerepo-pr-practice</a> onto your GitHub account. Clone it onto your computer.</strong></p>
+                          <p><strong>2. Create a branch named <code>add-intro</code> in your clone. Add a couple of commits</strong> which adds/modifies an <em>Introduction</em> section to the <code>README.md</code>. Example:</p>
+                          <pre><code class="hljs md">
+<span class="hljs-section"># Introduction</span>
+Creating Pull Requsts (PRs) is needed when using RCS in a multi-person projects.
+This repo can be used to practice creating PRs.
+
+</code></pre>
+                          <p><strong>3. Push the <code>add-intro</code> branch to your fork.</strong></p>
+                          <tabs>
+                            <tab header="SourceTree">
+                              <img src="/website/book/gitAndGithub/createPRs/images/pushBranchToFork.png" height="300">
+                              <p></p>
+                              <hr>
+                            </tab>
+                            <tab header="CLI">
+                              <pre class="hljs"><code>git push origin add-intro
+</code></pre>
+                              <hr>
+                            </tab>
+                          </tabs>
+                          <p><strong>4. Create a Pull Request from the <code>add-intro</code> branch in your fork to the <code>master</code> branch of the same fork</strong> (i.e. <code>your-user-name/samplerepo-pr-practice</code>, not <code>se-edu/samplerepo-pr-practice</code>), as described below.</p>
+                          <p>4a. Go to the GitHub page of your fork (i.e. <code>https://github.com/{your_username}/samplerepo-pr-practice</code>), click on the <code>Pull Requests</code> tab, and then click on <code>New Pull Request</code> button.</p>
+                          <img src="/website/book/gitAndGithub/createPRs/images/createPrButton.png" width="800">
+                          <p></p>
+                          <p>4b. Select <code>base fork</code> and <code>head fork</code> as follows:</p>
+                          <ul>
+                            <li><code>base fork</code>: your own fork (i.e. <code>{your user name}/samplerepo-pr-practice</code>, <mark>NOT <code>se-edu/samplerepo-pr-practice</code></mark>)</li>
+                            <li><code>head fork</code>: your own fork.</li>
+                          </ul>
+                          <img src="/website/book/gitAndGithub/createPRs/images/selectBase.png" width="800">
+                          <p></p>
+                          <tip-box type="info">
+                            <p>The <em>base fork</em> is where changes should be applied. The <em>head fork</em> contains the changes you would like to be applied.</p>
+                          </tip-box>
+                          <p>4c. (1) Set the base branch to <code>master</code> and head branch to <code>add-intro</code>, (2) confirm the <em>diff</em> contains the changes you propose to merge in this PR <span class="dimmed">(i.e. confirm that you did not accidentally include extra commits in the branch)</span>, and (3) click the <code>Create pull request</code> button.</p>
+                          <img src="/website/book/gitAndGithub/createPRs/images/checkDiff.png" width="800">
+                          <p></p>
+                          <p>4d. (1) Set PR name, (2) set PR description, and (3) Click the <code>Create pull request</code> button.</p>
+                          <img src="/website/book/gitAndGithub/createPRs/images/setPrName.png" width="600">
+                          <p></p>
+                          <tip-box type="important">
+                            <p>A common newbie mistake when creating branch-based PRs is to mix commits of one PR with another. To learn how to avoid that mistake, you are encouraged to continue and create another PR as explained below.
+                               
+                            </p>
+                          </tip-box>
+                          <p><strong>5. In your local repo, create a new branch <code>add-summary</code></strong> off the <code>master</code> branch.</p>
+                          <tip-box type="warning">
+                            <p>When creating the new branch, it is very important that you switch back to the <code>master</code> branch first. If not, the new branch will be created off the current branch <code>add-intro</code>. And that is how you end up having commits of the first PR in the second PR as well.</p>
+                          </tip-box>
+                          <p><strong>6. Add a commit in the <code>add-summary</code> branch</strong> that adds a <em>Summary</em> section to the <code>README.md</code>, in exactly the same place you added the <em>Introduction</em> section earlier.</p>
+                          <img src="/website/book/gitAndGithub/createPRs/images/addSummaryBranch.png" width="400">
+                          <p></p>
+                          <p><strong>7. Push the <code>add-summary</code> to your fork and create a new PR</strong> similar to before.</p>
+                          <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                            <ul>
+                              <li><a href="https://help.github.com/articles/creating-a-pull-request/">GitHub's own documentation on creating a PR</a></li>
+                            </ul>
+                          </panel>
+                        </div>
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
+                </panel><br><br>
+                <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+                <div class="indented">
+                  <div>
+                    <p><strong>Acceptable</strong>: PRs created in any repo.</p>
+                    <p><strong>Suggested</strong>: PRs created by following the steps in the LO.</p>
+                    <p><strong>Submission</strong>: Show your PRs during the tutorial.</p>
+                  </div>
+                </div>
+              </div>
+            </panel>
           </panel>
         </div>
       </div>
@@ -2668,7 +3904,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.13.0</a> at Tue, 02 Oct 2018 05:41:11 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.13.0</a> at Sat, 06 Oct 2018 12:25:50 GMT</small></div>
 </footer>
 </div>
 </body>

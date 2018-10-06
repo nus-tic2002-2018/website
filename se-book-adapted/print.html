@@ -353,7 +353,7 @@
             <p>The concept of <strong><em>Objects</em> in OOP is an <trigger trigger="click" for="modal:objectsAsAbstractions-abstraction">abstraction</trigger> mechanism because it allows us to abstract away the lower level details and work with bigger granularity entities</strong> i.e. ignore details of data formats and the method implementation details and work at the level of objects.</p>
             <modal large="" title="Definition: Abstraction" id="modal:objectsAsAbstractions-abstraction">
                 <div>
-                <p><strong>Abstraction</strong> is a technique for dealing with complexity. It works by establishing a level of complexity (or an aspect) we are interested in, and suppressing the more complex details below that level (or irrelevant to that aspect).</p>
+                <p><strong>Abstraction</strong> is a technique for dealing with complexity. It works by establishing a level of complexity we are interested in, and suppressing the more complex details below that level.</p>
               </div>
             </modal>
             <tip-box>
@@ -1769,15 +1769,15 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
           <div>
             <tip-box type="definition">
               <div>
-                <p><strong>Abstraction</strong> is a technique for dealing with complexity. It works by establishing a level of complexity (or an aspect) we are interested in, and suppressing the more complex details below that level (or irrelevant to that aspect).</p>
+                <p><strong>Abstraction</strong> is a technique for dealing with complexity. It works by establishing a level of complexity we are interested in, and suppressing the more complex details below that level.</p>
               </div>
             </tip-box>
-            <p>Most programs are written to solve complex problems involving large amounts of intricate details. It is impossible to deal with all these details at the same time. The guiding principle of abstraction stipulates that we capture only details that are relevant to the current perspective or the task at hand.</p>
-            <p><strong>Ignoring lower level data items and thinking in terms of bigger entities is called <em>data abstraction</em>.</strong></p>
+            <p><strong>The guiding principle of abstraction is that only details that are relevant to the current perspective or the task at hand needs to be considered.</strong> As most programs are written to solve complex problems involving large amounts of intricate details, it is impossible to deal with all these details at the same time. That is where abstraction can help.</p>
+            <p><strong>Ignoring lower level data items and thinking in terms of bigger entities is called <mark><em>data abstraction</em></mark>.</strong></p>
             <tip-box>
               <p><span class="fas fa-cube"></span> Within a certain software component, we might deal with a <em>user</em> data type, while ignoring the details contained in the user data item such as <em>name</em>, and <em>date of birth</em>. These details have been ‘abstracted away’ as they do not affect the task of that software component.</p>
             </tip-box>
-            <p><strong><em>Control abstraction</em> abstracts away details of the actual control flow to focus on tasks at a simplified level.</strong></p>
+            <p><strong><mark><em>Control abstraction</em></mark> abstracts away details of the actual control flow to focus on tasks at a simplified level.</strong></p>
             <tip-box>
               <p><span class="fas fa-cube"></span> <code>print(“Hello”)</code> is an abstraction of the actual output mechanism within the computer.</p>
             </tip-box>
@@ -1830,15 +1830,15 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
                     <div>
                       <tip-box type="definition">
                         <div>
-                          <p><strong>Abstraction</strong> is a technique for dealing with complexity. It works by establishing a level of complexity (or an aspect) we are interested in, and suppressing the more complex details below that level (or irrelevant to that aspect).</p>
+                          <p><strong>Abstraction</strong> is a technique for dealing with complexity. It works by establishing a level of complexity we are interested in, and suppressing the more complex details below that level.</p>
                         </div>
                       </tip-box>
-                      <p>Most programs are written to solve complex problems involving large amounts of intricate details. It is impossible to deal with all these details at the same time. The guiding principle of abstraction stipulates that we capture only details that are relevant to the current perspective or the task at hand.</p>
-                      <p><strong>Ignoring lower level data items and thinking in terms of bigger entities is called <em>data abstraction</em>.</strong></p>
+                      <p><strong>The guiding principle of abstraction is that only details that are relevant to the current perspective or the task at hand needs to be considered.</strong> As most programs are written to solve complex problems involving large amounts of intricate details, it is impossible to deal with all these details at the same time. That is where abstraction can help.</p>
+                      <p><strong>Ignoring lower level data items and thinking in terms of bigger entities is called <mark><em>data abstraction</em></mark>.</strong></p>
                       <tip-box>
                         <p><span class="fas fa-cube"></span> Within a certain software component, we might deal with a <em>user</em> data type, while ignoring the details contained in the user data item such as <em>name</em>, and <em>date of birth</em>. These details have been ‘abstracted away’ as they do not affect the task of that software component.</p>
                       </tip-box>
-                      <p><strong><em>Control abstraction</em> abstracts away details of the actual control flow to focus on tasks at a simplified level.</strong></p>
+                      <p><strong><mark><em>Control abstraction</em></mark> abstracts away details of the actual control flow to focus on tasks at a simplified level.</strong></p>
                       <tip-box>
                         <p><span class="fas fa-cube"></span> <code>print(“Hello”)</code> is an abstraction of the actual output mechanism within the computer.</p>
                       </tip-box>
@@ -2692,6 +2692,9 @@ MAX_SIZE = <span class="hljs-number">10</span>
               </small></small></span><a class="fa fa-anchor" href="#use-nouns-for-things-and-verbs-for-actions"></a></h4>
         <div class="indented-less">
           <div>
+            <blockquote>
+              <p><span class="fas fa-quote-left"></span> Every system is built from a domain-specific language designed by the programmers to describe that system. Functions are the verbs of that language, and classes are the nouns. <sub>― Robert C. Martin, <em>Clean Code: A Handbook of Agile Software Craftsmanship</em></sub></p>
+            </blockquote>
             <p><strong>Use nouns for classes/variables and verbs for methods/functions.</strong></p>
             <tip-box>
               <p>Examples:</p>
@@ -4316,11 +4319,11 @@ Invalid command format: add
 
     <span class="hljs-comment">//test case 1</span>
     p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>, <span class="hljs-string">"E002"</span>});
-    assertEquals(p.totalSalary(), <span class="hljs-number">6400</span>);
+    assertEquals(<span class="hljs-number">6400</span>, p.totalSalary());
 
     <span class="hljs-comment">//test case 2</span>
     p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>});
-    assertEquals(p.totalSalary(), <span class="hljs-number">2300</span>);
+    assertEquals(<span class="hljs-number">2300</span>, p.totalSalary());
 
     <span class="hljs-comment">//more tests...</span>
 }
@@ -6531,6 +6534,9 @@ Day[] holidays = <span class="hljs-keyword">new</span> Day[]{Day.SATURDAY, Day.S
             <tip-box>
               <p><span class="fas fa-cube"></span> Consider a <code>TextUi</code> class that does parsing of the user commands as well as interacting with the user. That class needs to change when the formatting of the UI changes as well as when the syntax of the user command changes. Hence, such a class does not follow the SRP.</p>
             </tip-box>
+            <blockquote>
+              <p><span class="fas fa-quote-left"></span> Gather together the things that change for the same reasons. Separate those things that change for different reasons. <sub>―<em>Agile Software Development, Principles, Patterns, and Practices</em> by Robert C. Martin</sub></p>
+            </blockquote>
           </div>
         </div>
       </div>
@@ -6785,7 +6791,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
                       <p><strong><em>Cohesion</em> is a measure of how strongly-related and focused the various responsibilities of a component are.</strong> A highly-cohesive component keeps related functionalities together while keeping out all other unrelated things.</p>
                       <p><strong>Higher cohesion is better.</strong> Disadvantages of low cohesion (aka <em>weak</em> cohesion):</p>
                       <ul>
-                        <li>Impedes the understandability of modules as it is difficult to express module functionalities at a higher level.</li>
+                        <li>Lowers the understandability of modules as it is difficult to express module functionalities at a higher level.</li>
                         <li>Lowers maintainability because a module can be modified due to unrelated causes <span class="dimmed"> (reason: the module contains code unrelated to each other)</span> or many many modules may need to be modified to achieve a small change in behavior <span class="dimmed"> (reason: because the code realated to that change is not localized to a single module)</span>.</li>
                         <li>Lowers reusability of modules because they do not represent logical units of functionality.</li>
                       </ul>
@@ -6847,7 +6853,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.13.0</a> at Tue, 02 Oct 2018 05:41:11 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.13.0</a> at Sat, 06 Oct 2018 12:25:50 GMT</small></div>
 </footer>
 </div>
 </body>
