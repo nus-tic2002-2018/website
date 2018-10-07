@@ -31,9 +31,17 @@ Enhance your TaskManager program as explained in the exercise below:
 
 <div id="week7">
 
-%%**Extract from the [_Admin Info_ page](../../admin/index-tic2002.html#project):**%%
+%%**Extract from the [_Admin Info_ page](../../admin/index-tic2002.html#project-week7):**%%
 
 <include src="../../admin/index-tic2002.md#project-week7" />
+
+</div>
+
+<div id="week8">
+
+%%**Extract from the [_Admin Info_ page](../../admin/index-tic2002.html#project-week8):**%%
+
+<include src="../../admin/index-tic2002.md#project-week8" />
 
 </div>
 <div id="1kloc">

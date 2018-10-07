@@ -172,14 +172,30 @@ The project is divided into two phases:
 * **if you chose option 1** %%(i.e., enhancing TaskManager)%%, given below are some further improvements you are recommended to do to your code base, while you are adding other features.
 * **If you chose option 2 or 3**, you should still ensure you have similar enhancements in your code.
 
-<panel header="**Week 7: Improve OOP, add JUnit tests**" >
+<panel header="Improve OOP, add JUnit tests" >
 
-Enhance your TaskManager program as explained in the exercise below:
+Enhance your TaskManager program as explained in the exercises below:
 
 <include src="../book/cppToJava/project/taskManager/q-taskManagerLevel6.md" />
 <include src="../book/cppToJava/project/taskManager/q-taskManagerLevel7.md" />
 
 </panel><p/>
+
+</div>
+
+</div>
+<div id="project-week8">
+
+##### Week 8
+
+<div class="indented">
+
+As in the previous week, enhance your project (TaskManager or otherwise) as explained in the exercise below:
+
+<panel header="Use packages, javadocs" >
+  <include src="../book/cppToJava/project/taskManager/q-taskManagerLevel8.md" />
+  <include src="../book/cppToJava/project/taskManager/q-taskManagerLevel9.md" />
+</panel>
 
 </div>
 </div>
