@@ -6471,3 +6471,13 @@ Missing reference in C:\repos\nus-tic2002-2018\website\book\documentation\tools\
 2018-10-07T07:31:58.298Z - info: Press CTRL+C to stop ...
 2018-10-07T07:35:18.165Z - info: Website generation started at 15:35:15
 2018-10-07T07:35:20.436Z - info: Building assets...
+2018-10-07T07:35:24.059Z - info: Assets built
+2018-10-07T07:35:24.060Z - info: Generating pages...
+2018-10-07T07:36:30.962Z - info: Pages built
+2018-10-07T07:36:31.034Z - info: Site data built
+2018-10-07T07:36:31.034Z - info: Website generation complete! Total build time: 75.57s
+2018-10-07T07:36:31.038Z - info: Build success!
+2018-10-07T07:36:31.038Z - info: Generate Site durationMs=75574
+2018-10-07T07:37:20.300Z - info: Deployed!
+2018-10-07T13:45:24.132Z - info: Website generation started at 21:45:21
+2018-10-07T13:45:29.319Z - info: Building assets...
