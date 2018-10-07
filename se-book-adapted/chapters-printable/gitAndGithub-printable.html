@@ -432,7 +432,7 @@ index 15b57f7..17f4528 100644
       </div>
       <div class="indented-less">
         <h4 id="clone">Clone <span class="badge badge-light"><small><small>
-                <font color="Crimson"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+                <font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
               </small></small></span><a class="fa fa-anchor" href="#clone"></a></h4>
         <div class="indented-less">
           <div>
@@ -462,140 +462,96 @@ index 15b57f7..17f4528 100644
         </div>
       </div>
       <div class="indented-less">
-        <h4 id="branch">Branch <span class="badge badge-light"><small><small>
+        <h4 id="pull">Pull <span class="badge badge-light"><small><small>
                 <font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-              </small></small></span><a class="fa fa-anchor" href="#branch"></a></h4>
+              </small></small></span><a class="fa fa-anchor" href="#pull"></a></h4>
         <div class="indented-less">
           <div>
-            <p><strong>0. Observe that you are normally in the branch called <code>master</code>.</strong> For this, you can take any repo you have on your computer (e.g. a clone of the <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a>).</p>
+            <p>Clone the sample repo as explained in <trigger for="modal:clone-repository" trigger="click">[Textbook <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Tools → Git &amp; GitHub → Clone]</trigger>.</p>
+            <p>Delete the last two commits to simulate cloning the repo 2 commits ago.</p>
+            <modal title="**Clone Repository**" id="modal:clone-repository">
+              <div>
+                <panel type="seamless" expanded="">
+                  <span slot="header" class="card-title">
+                    <div>
+                      <h4 id="clone-2">Clone<a class="fa fa-anchor" href="#clone-2"></a></h4>
+                    </div>
+                  </span>
+                  <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can clone a remote repo</span></span></span></span></p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <div>
+                    <p>Clone the sample repo <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a> to your computer.</p>
+                    <tip-box type="error">
+                      <p>Note that the URL of the Github project is different form the URL you need to clone a repo in that Github project.
+                        e.g.</p>
+                      <p>Github project URL: <code>https://github.com/se-edu/samplerepo-things</code> <br>
+                        Git repo URL: <code>https://github.com/se-edu/samplerepo-things.git</code> (note the <code>.git</code> at the end)</p>
+                    </tip-box>
+                    <tabs>
+                      <tab header="SourceTree">
+                        <div>
+                          <p><code>File</code> → <code>Clone / New…</code> and provide the URL of the repo and the destination directory.</p>
+                        </div>
+                        <hr>
+                      </tab>
+                      <tab header="CLI">
+                        <div>
+                          <p>You can use the <code>clone</code> command to clone a repo.</p>
+                          <p>Follow instructions given <a href="https://help.github.com/articles/cloning-a-repository/">here</a>.</p>
+                        </div>
+                        <hr>
+                      </tab>
+                    </tabs>
+                  </div>
+                  <div></div>
+                </panel>
+              </div>
+            </modal>
             <tabs>
               <tab header="SourceTree">
                 <div>
-                  <img src="/website/book/gitAndGithub/branch/images/onMasterBranch.png" height="120">
+                  <p>Right-click the target commit (i.e. the commit that is 2 commits behind the tip) and choose <code>Reset current branch to this commit</code>.</p>
+                  <img src="/website/book/gitAndGithub/pull/images/rightClickOnTargetCommit.png" height="100">
+                  <p></p>
+                  <p>Choose the <code>Hard - …</code> option and click <code>OK</code>.</p>
+                  <img src="/website/book/gitAndGithub/pull/images/sourcetree_1.png" height="120">
+                  <p></p>
+                  <p>This is what you will see.</p>
+                  <img src="/website/book/gitAndGithub/pull/images/sourcetree_2.png" height="150">
+                  <p></p>
+                  <p>Note the following (cross refer the screenshot above):</p>
+                  <p>Arrow marked as <code>a</code>: The local repo is now at this commit, marked by the <code>master</code> label.<br>
+                    Arrow marked as <code>b</code>: <code>origin/master</code> label shows what is the latest commit in the <code>master</code> branch in the remote repo.</p>
+                </div>
+                <hr>
+              </tab>
+              <tab header="CLI">
+                <div>
+                  <p>Use the <code>reset</code> command to delete commits at the tip of the revision history.</p>
+                  <pre class="hljs"><code>git reset --hard HEAD~2
+</code></pre>
+                </div>
+                <hr>
+              </tab>
+            </tabs>
+            <p>Now, your local repo state is exactly how it would be if you had cloned the repo 2 commits ago, as if somebody has added two more commits to the remote repo since you cloned it. To get those commits to your local repo (i.e. to sync your local repo with upstream repo) you can do a pull.</p>
+            <tabs>
+              <tab header="SourceTree">
+                <div>
+                  <p>Click the <code>Pull</code> button in the main menu, choose <code>origin</code> and <code>master</code> in the next dialog, and click <code>OK</code>.</p>
+                  <img src="/website/book/gitAndGithub/pull/images/sourcetree_3.png" height="160">
+                  <p></p>
+                  <p>Now you should see something like this where <code>master</code> and <code>origin/master</code> are both pointing the same commit.</p>
+                  <img src="/website/book/gitAndGithub/pull/images/sourcetree_4.png" height="100">
                   <p></p>
                 </div>
                 <hr>
               </tab>
               <tab header="CLI">
                 <div>
-                  <pre class="hljs"><code>git status
-</code></pre>
-                  <p><span class="fas fa-arrow-down"></span></p>
-                  <pre class="hljs"><code>on branch master
-</code></pre>
-                </div>
-                <hr>
-              </tab>
-            </tabs>
-            <p><strong>1. Start a branch named <code>feature1</code> and switch to the new branch.</strong></p>
-            <tabs>
-              <tab header="SourceTree">
-                <div>
-                  <p>Click on the <code>Branch</code> button on the main menu. In the next dialog, enter the branch name and click <code>Create Branch</code></p>
-                  <img src="/website/book/gitAndGithub/branch/images/sourcetree_1.png" height="150">
-                  <p></p>
-                  <p>Note how the <code>feature1</code> is indicated as the current branch.</p>
-                  <img src="/website/book/gitAndGithub/branch/images/sourcetree_2.png" height="150">
-                  <p></p>
-                </div>
-                <hr>
-              </tab>
-              <tab header="CLI">
-                <div>
-                  <p>You can use the <code>branch</code> command to create a new branch and the <code>checkout</code> command to switch to a specific branch.</p>
-                  <pre class="hljs"><code>git branch feature1
-git checkout feature1
-</code></pre>
-                  <p>One-step shortcut to create a branch and switch to it at the same time:</p>
-                  <pre class="hljs"><code>git checkout –b feature1
-</code></pre>
-                </div>
-                <hr>
-              </tab>
-            </tabs>
-            <p><strong>2. Create some commits in the new branch.</strong> <span class="dimmed">Just commit as per normal. Commits you add while on a certain branch will become part of that branch.</span></p>
-            <p><strong>3. Switch to the <code>master</code> branch.</strong> Note how the changes you did in the <code>feature1</code> branch are no longer in the working directory.</p>
-            <tabs>
-              <tab header="SourceTree">
-                <div>
-                  <p>Double-click the <code>master</code> branch</p>
-                  <img src="/website/book/gitAndGithub/branch/images/sourcetree_3.png" height="150">
-                  <p></p>
-                </div>
-                <hr>
-              </tab>
-              <tab header="CLI">
-                <div>
-                  <pre class="hljs"><code>git checkout master
-</code></pre>
-                </div>
-                <hr>
-              </tab>
-            </tabs>
-            <p><strong>4. Add a commit to the master branch.</strong> Let’s imagine it’s a bug fix.</p>
-            <img src="/website/book/gitAndGithub/branch/images/sourcetree_4.png" height="100">
-            <p></p>
-            <p><strong>5. Switch back to the <code>feature1</code> branch</strong> <span class="dimmed">(similar to step 3)</span>.</p>
-            <p><strong>6. Merge the <code>master</code> branch to the <code>feature1</code> branch</strong>, giving an end-result like the below. Also note how Git has created a <em>merge commit</em>.</p>
-            <img src="/website/book/gitAndGithub/branch/images/sourcetree_5.png" height="120">
-            <p></p>
-            <tabs>
-              <tab header="SourceTree">
-                <div>
-                  <p>Right-click on the <code>master</code> branch and choose <code>merge master into the current branch</code>. Click <code>OK</code> in the next dialog.</p>
-                </div>
-                <hr>
-              </tab>
-              <tab header="CLI">
-                <div>
-                  <pre class="hljs"><code>git merge master
-</code></pre>
-                </div>
-                <hr>
-              </tab>
-            </tabs>
-            <p>Observe how the changes you did in the <code>master</code> branch (i.e. the imaginary bug fix) is now available even when you are in the <code>feature1</code> branch.</p>
-            <p><strong>7. Add another commit to the <code>feature1</code> branch.</strong></p>
-            <p><strong>8. Switch to the <code>master</code> branch and add one more commit.</strong></p>
-            <p><strong>9. Merge <code>feature1</code> to the master branch</strong>, giving and end-result like this:</p>
-            <img src="/website/book/gitAndGithub/branch/images/sourcetree_6.png" height="150">
-            <p></p>
-            <tabs>
-              <tab header="SourceTree">
-                <p>Right-click on the <code>feature1</code> branch and choose <code>Merge...</code>.</p>
-                <hr>
-              </tab>
-              <tab header="CLI">
-                <pre class="hljs"><code>git merge feature1
-</code></pre>
-                <hr>
-              </tab>
-            </tabs>
-            <p><strong>10. Create a new branch called <code>add-countries</code>, switch to it, and add some commits to it</strong> <span class="dimmed">(similar to steps 1-2 above)</span>. You should have something like this now:</p>
-            <img src="/website/book/gitAndGithub/branch/images/addCountriesBranchBeforeMerging.png" height="80">
-            <p></p>
-            <p><strong>11. Go back to the <code>master</code> branch and merge the <code>add-countries</code> branch onto the <code>master</code> branch</strong> <span class="dimmed">(similar to steps 8-9 above)</span>. While you might expect to see something like the below,</p>
-            <img src="/website/book/gitAndGithub/branch/images/addCountriesBranchNoFastForward.png" height="100">
-            <p></p>
-            <p>... you are likely to see something like this instead:</p>
-            <img src="/website/book/gitAndGithub/branch/images/addCountriesBranchAfterMerging.png" height="80">
-            <p></p>
-            <p>That is because <strong>Git does a <mark><em>fast forward</em> merge</mark> if possible</strong>. Seeing that the <code>master</code> branch has not changed since you started the <code>add-countries</code> branch, Git has decided it is simpler to just put the commits of the <code>add-countries</code> branch in front of the <code>master</code> branch, without going into the trouble of creating an extra merge commit.</p>
-            <p><strong>It is possible to force Git to create a merge commit even if fast forwarding is possible.</strong></p>
-            <tabs>
-              <tab header="SourceTree">
-                <div>
-                  <p>Tick the box shown below when you merge a branch:</p>
-                  <img src="/website/book/gitAndGithub/branch/images/mergeBranchDialog.png" height="150">
-                  <p></p>
-                </div>
-                <hr>
-              </tab>
-              <tab header="CLI">
-                <div>
-                  <p>Use the <code>--no-ff</code> switch (short for <em>no fast forward</em>):</p>
-                  <pre class="hljs"><code>git merge --no-ff add-countries
-</code></pre>
+                  <p><code>git pull origin</code></p>
                 </div>
                 <hr>
               </tab>
@@ -604,52 +560,49 @@ git checkout feature1
         </div>
       </div>
       <div class="indented-less">
-        <h4 id="merge-conflicts">Merge Conflicts <span class="badge badge-light"><small><small>
+        <h4 id="push">Push <span class="badge badge-light"><small><small>
                 <font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-              </small></small></span><a class="fa fa-anchor" href="#merge-conflicts"></a></h4>
+              </small></small></span><a class="fa fa-anchor" href="#push"></a></h4>
         <div class="indented-less">
           <div>
-            <p><strong>1. Start a branch named <code>fix1</code> in a local repo. Create a commit</strong> that adds a line with some text to one of the files.</p>
-            <p><strong>2. Switch back to <code>master</code> branch. Create a commit with a conflicting change</strong> i.e. it adds a line with some different text in the exact location the previous line was added.</p>
-            <img src="/website/book/gitAndGithub/mergeConflicts/images/sourcetree_1.png" height="350">
-            <p></p>
-            <p><strong>3. Try to merge the <code>fix1</code> branch onto the <code>master</code> branch.</strong> Git will pause mid-way during the merge and report a merge conflict. If you open the conflicted file, you will see something like this:</p>
-            <pre class="hljs"><code>COLORS
-------
-blue
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-black
-=======
-green
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; fix1
-red
-white
-</code></pre>
-            <p><strong>4. Observe how the conflicted part is marked</strong> between a line starting with <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> and a line starting with <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>, separated by another line starting with <code>=======</code>.</p>
-            <p>This is the conflicting part that is coming from the <code>master</code> branch:</p>
-            <pre class="hljs"><code>
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-black
-=======
-
-</code></pre>
-            <p>This is the conflicting part that is coming from the <code>fix1</code> branch:</p>
-            <pre class="hljs"><code>
-=======
-green
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; fix1
-
-</code></pre>
-            <p><strong>5. Resolve the conflict by editing the file</strong>. Let us assume you want to keep both lines in the merged version. You can modify the file to be like this:</p>
-            <pre class="hljs"><code>COLORS
-------
-blue
-black
-green
-red
-white
-</code></pre>
-            <p><strong>6. Stage the changes, and commit.</strong></p>
+            <ol>
+              <li>
+                <p>Create a GitHub account if you don't have one yet.</p>
+              </li>
+              <li>
+                <p>Fork the <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a> to your GitHub account:</p>
+                <panel type="seamless" header="%%How to fork a repo?%%">
+                  <p>Navigate to the on GitHub and click on the <img src="/website/book/gitAndGithub/push/images/fork.png" height="30"> button on the top-right corner.</p>
+                  <p></p>
+                </panel>
+                <p></p>
+              </li>
+              <li>
+                <p>Clone the fork (not the original) to your computer.</p>
+              </li>
+              <li>
+                <p>Create some commits in your repo.</p>
+              </li>
+              <li>
+                <p>Push the new commits to your fork on GitHub</p>
+              </li>
+            </ol>
+            <tabs>
+              <tab header="SourceTree">
+                <div>
+                  <p>Click the <code>Push</code> button on the main menu, ensure the settings are as follows in the next dialog, and click the <code>Push</code> button on the dialog.</p>
+                  <img src="/website/book/gitAndGithub/push/images/sourcetree_1.png" height="150">
+                  <p></p>
+                </div>
+                <hr>
+              </tab>
+              <tab header="CLI">
+                <div>
+                  <p>Use the command <code>git push origin master</code>. Enter Github username and password when prompted.</p>
+                </div>
+                <hr>
+              </tab>
+            </tabs>
           </div>
         </div>
       </div>
@@ -659,7 +612,7 @@ white
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.13.0</a> at Sat, 06 Oct 2018 12:25:50 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.13.0</a> at Sun, 07 Oct 2018 07:35:24 GMT</small></div>
 </footer>
 </div>
 </body>

@@ -1,12 +1,16 @@
-2018-10-06T11:12:17.786Z - info: Website generation started at 19:12:02
-2018-10-06T11:13:37.062Z - info: Building assets...
-2018-10-06T11:13:57.673Z - info: Assets built
-2018-10-06T11:13:57.673Z - info: Generating pages...
-2018-10-06T11:15:05.677Z - info: Pages built
-2018-10-06T11:15:06.205Z - info: Site data built
-2018-10-06T11:15:06.205Z - info: Website generation complete! Total build time: 183.614s
-2018-10-06T11:15:06.235Z - info: Generate Site durationMs=183644
-2018-10-06T11:15:06.943Z - info: Serving "C:\repos\nus-tic2002-2018\website\_site" at http://127.0.0.1:8080
-2018-10-06T11:15:06.943Z - info: Press CTRL+C to stop ...
-2018-10-06T12:24:07.910Z - info: Website generation started at 20:23:44
-2018-10-06T12:25:29.274Z - info: Building assets...
+2018-10-06T13:52:26.481Z - info: Website generation started at 21:52:22
+2018-10-06T13:52:30.871Z - info: Building assets...
+2018-10-06T13:52:33.438Z - info: Assets built
+2018-10-06T13:52:33.439Z - info: Generating pages...
+2018-10-06T13:53:35.036Z - info: Pages built
+2018-10-06T13:53:35.116Z - info: Site data built
+2018-10-06T13:53:35.116Z - info: Website generation complete! Total build time: 72.321s
+2018-10-06T13:53:35.128Z - info: Generate Site durationMs=72333
+2018-10-06T13:53:35.156Z - info: Serving "C:\repos\nus-tic2002-2018\website\_site" at http://127.0.0.1:8080
+2018-10-06T13:53:35.156Z - info: Press CTRL+C to stop ...
+2018-10-06T14:11:37.342Z - info: [22:11:37] Reload for file change: C:\repos\nus-tic2002-2018\website\book\cppToJava\objects\usingObjects\text.md
+2018-10-06T14:11:37.354Z - info: [22:11:37] Reload for file change: C:\repos\nus-tic2002-2018\website\book\cppToJava\misc\packages\text.md
+2018-10-06T14:11:38.364Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\cppToJava\objects\usingObjects\text.md,C:\repos\nus-tic2002-2018\website\book\cppToJava\misc\packages\text.md
+2018-10-06T14:11:38.376Z - info: Rebuilding 6 pages
+2018-10-06T14:11:59.077Z - info: Pages rebuilt
+2018-10-06T14:11:59.085Z - info: Site data built
