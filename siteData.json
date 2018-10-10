@@ -483,11 +483,7 @@
         "interaction-overview-diagrams": "Interaction Overview Diagrams",
         "communication-diagrams": "Communication Diagrams",
         "state-machine-diagrams": "State Machine Diagrams",
-        "linear-paths": "Linear Paths",
-        "alternate-paths": "Alternate Paths",
-        "parallel-paths": "Parallel Paths",
         "modeling-behaviors": "Modeling Behaviors",
-        "modeling-a-solution": "Modeling a Solution",
         "modeling": "Modeling"
       },
       "title": "Textbook Chapter : Modeling",

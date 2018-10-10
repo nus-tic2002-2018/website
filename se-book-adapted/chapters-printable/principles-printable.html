@@ -316,56 +316,13 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
           </div>
         </div>
       </div>
-      <div class="indented-less">
-        <h4 id="law-of-demeter">Law of Demeter <span class="badge badge-light"><small><small>
-                <font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-              </small></small></span><a class="fa fa-anchor" href="#law-of-demeter"></a></h4>
-        <div class="indented-less">
-          <div>
-            <tip-box type="definition">
-              <div>
-                <p><strong>Law of Demeter (LoD)</strong>:</p>
-                <ul>
-                  <li>An object should have limited knowledge of another object.</li>
-                  <li>An object should only interact with objects that are closely related to it.</li>
-                </ul>
-                <p>Also known as</p>
-                <ul>
-                  <li>Don’t talk to strangers.</li>
-                  <li>Principle of least knowledge</li>
-                </ul>
-              </div>
-            </tip-box>
-            <p>More concretely, a method <code>m</code> of an object <code>O</code> should invoke only the methods of the following kinds of objects:</p>
-            <ul>
-              <li>The object <code>O</code> itself</li>
-              <li>Objects passed as parameters of <code>m</code></li>
-              <li>Objects created/instantiated in <code>m</code></li>
-              <li>Objects from the <tooltip content="objects that are held by instance variables of">direct association of</tooltip> <code>O</code></li>
-            </ul>
-            <tip-box>
-              <p><span class="fas fa-cube"></span> The following code fragment violates LoD due to the reason: while <code>b</code> is a ‘friend’ of <code>foo</code> (because it receives it as a parameter), <code>g</code> is a ‘friend of a friend’ (which should be considered a ‘stranger’), and <code>g.doSomething()</code> is analogous to ‘talking to a stranger’.</p>
-              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{
-    Goo g = b.getGoo();
-    g.doSomething();
-}
-</code></pre>
-            </tip-box>
-            <p><strong>LoD aims to reduce coupling by limiting the interaction to a closely related group of classes.</strong></p>
-            <tip-box>
-              <p><span class="fas fa-cube"></span> In the example above, <code>foo</code> is already coupled to <code>Bar</code>. Upholding LoD avoids <code>foo</code> being coupled to <code>Goo</code> as well.</p>
-              <p><span class="fas fa-cube"></span> An analogy for LoD can be drawn from Facebook. If Facebook followed LoD, you would not be allowed to see posts of friends of friends, unless they are your friends as well. If Jake is your friend and Adam is Jake’s friend, you should not be allowed to see Adam’s posts unless Adam is a friend of yours as well.</p>
-            </tip-box>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </div>
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.13.0</a> at Tue, 09 Oct 2018 09:15:00 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.13.0</a> at Wed, 10 Oct 2018 15:55:04 GMT</small></div>
 </footer>
 </div>
 </body>

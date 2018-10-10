@@ -2179,10 +2179,6 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
         </div>
       </div>
     </div>
-    <div>
-      <h2 id="modeling-a-solution">Modeling a Solution<a class="fa fa-anchor" href="#modeling-a-solution"></a></h2>
-    </div>
-    <div class="indented-less"></div>
     <p style="page-break-after: always;">&nbsp;</p>
     <h1 id="section-implementation"><strong>SECTION: IMPLEMENTATION</strong><a class="fa fa-anchor" href="#section-implementation"></a></h1>
     <div id="title">
@@ -3759,90 +3755,6 @@ send()
           </div>
         </div>
       </div>
-      <div class="indented-less">
-        <h4 id="stubs">Stubs <span class="badge badge-light"><small><small>
-                <font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-              </small></small></span><a class="fa fa-anchor" href="#stubs"></a></h4>
-        <div class="indented-less">
-          <div>
-            <p><strong>A proper unit test requires the <em>unit</em> to be tested <mark>in isolation</mark></strong> so that bugs in the <tooltip content="code the unit depends on">dependencies</tooltip> cannot influence the test <span class="dimmed"> i.e. bugs outside of the unit should not affect the unit tests</span>.</p>
-            <tip-box>
-              <p><span class="fas fa-cube"></span> If a <code>Logic</code> class depends on a <code>Storage</code> class, unit testing the <code>Logic</code> class requires isolating the <code>Logic</code> class from the <code>Storage</code> class.</p>
-            </tip-box>
-            <p><strong><em>Stubs</em> can isolate the <popover content="Software Under Test (in this case, the _unit_ being tested)">SUT</popover> from its dependencies</strong>.</p>
-            <tip-box type="definition">
-              <div>
-                <p><strong>Stub</strong>: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for the a limited set of predetermined inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.</p>
-              </div>
-            </tip-box>
-            <tip-box>
-              <p><span class="fas fa-cube"></span> Consider the code below:</p>
-              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{
-    Storage s;
-
-    Logic(Storage s) {
-        <span class="hljs-keyword">this</span>.s = s;
-    }
-
-    <span class="hljs-function">String <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{
-        <span class="hljs-keyword">return</span> <span class="hljs-string">"Name: "</span> + s.getName(index);
-    }
-}
-
-<span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Storage</span> </span>{
-    <span class="hljs-function">String <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span></span>;
-}
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DatabaseStorage</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Storage</span> </span>{
-
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{
-        <span class="hljs-keyword">return</span> readValueFromDatabase(index);
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">private</span> String <span class="hljs-title">readValueFromDatabase</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{
-        <span class="hljs-comment">// retrieve name from the database</span>
-    }
-}
-</code></pre>
-              <p>Normally, you would use the <code>Logic</code> class as follows (not how the <code>Logic</code> object depends on a <code>DatabaseStorage</code> object to perform the <code>getName()</code> operation):</p>
-              <pre><code class="hljs java">Logic logic = <span class="hljs-keyword">new</span> Logic(<span class="hljs-keyword">new</span> DatabaseStorage());
-String name = logic.getName(<span class="hljs-number">23</span>);
-</code></pre>
-              <p>You can test it like this:</p>
-              <pre><code class="hljs java"><span class="hljs-meta">@Test</span>
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{
-    Logic logic = <span class="hljs-keyword">new</span> Logic(<span class="hljs-keyword">new</span> DatabaseStorage());
-    assertEquals(<span class="hljs-string">"Name: John"</span>, logic.getName(<span class="hljs-number">5</span>));
-}
-</code></pre>
-              <p>However, this <code>logic</code> object being tested is making use of a <code>DataBaseStorage</code> object which means a bug in the <code>DatabaseStorage</code> class can affect the test. Therefore, this test is not testing <code>Logic</code> <em>in isolation from its dependencies</em> and hence it is not a pure unit test.</p>
-              <p>Here is a stub class you can use in place of <code>DatabaseStorage</code>:</p>
-              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StorageStub</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Storage</span> </span>{
-
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{
-        <span class="hljs-keyword">if</span>(index == <span class="hljs-number">5</span>) {
-            <span class="hljs-keyword">return</span> <span class="hljs-string">"Adam"</span>;
-        } <span class="hljs-keyword">else</span> {
-            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> UnsupportedOperationException();
-        }
-    }
-}
-</code></pre>
-              <p>Note how the stub has the same interface as the real dependency, is so simple that it is unlikely to contain bugs, and is pre-configured to respond with a hard-coded response, presumably, the correct response <code>DatabaseStorage</code> is expected to return for the given test input.</p>
-              <p>Here is how you can use the stub to write a unit test. This test is not affected by any bugs in the <code>DatabaseStorage</code> class and hence is a pure unit test.</p>
-              <pre><code class="hljs java"><span class="hljs-meta">@Test</span>
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{
-    Logic logic = <span class="hljs-keyword">new</span> Logic(<span class="hljs-keyword">new</span> StorageStub());
-    assertEquals(<span class="hljs-string">"Name: Adam"</span>, logic.getName(<span class="hljs-number">5</span>));
-}
-</code></pre>
-            </tip-box>
-            <p>In addition to Stubs, there are other type of replacements you can use during testing. E.g. <em>Mocks</em>, <em>Fakes</em>, <em>Dummies</em>, <em>Spies</em>.</p>
-          </div>
-        </div>
-      </div>
     </div>
     <div class="indented-less">
       <div>
@@ -3857,30 +3769,6 @@ String name = logic.getName(<span class="hljs-number">23</span>);
             <p><strong><em>Integration testing</em> : testing whether different parts of the software <em>work together</em> (i.e. integrates) as expected.</strong> Integration tests aim to discover bugs in the 'glue code' related to how components interact with each other. These bugs are often the result of misunderstanding of what the parts are supposed to do vs what the parts are actually doing.</p>
             <tip-box>
               <p><span class="fas fa-cube"></span> Suppose a class <code>Car</code> users classes <code>Engine</code> and <code>Wheel</code>. If the <code>Car</code> class assumed a <code>Wheel</code> can support 200 mph speed but the actual <code>Wheel</code> can only support 150 mph, it is the integration test that is supposed to uncover this discrepancy.</p>
-            </tip-box>
-          </div>
-        </div>
-      </div>
-      <div class="indented-less">
-        <h4 id="how-6">How <span class="badge badge-light"><small><small>
-                <font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-              </small></small></span><a class="fa fa-anchor" href="#how-6"></a></h4>
-        <div class="indented-less">
-          <div>
-            <p><strong>Integration testing is not simply a repetition of the unit test cases but run using the actual dependencies</strong> (instead of the stubs used in unit testing). Instead, integration tests are additional test cases that focus on the interactions between the parts.</p>
-            <tip-box>
-              <p><span class="fas fa-cube"></span> Suppose a class <code>Car</code> uses classes <code>Engine</code> and <code>Wheel</code>. Here is how you would go about doing pure integration tests:</p>
-              <p>a) First, unit test <code>Engine</code> and <code>Wheel</code>.<br>
-                b) Next, unit test <code>Car</code> in isolation of <code>Engine</code> and <code>Wheel</code>, <mark>using stubs for <code>Engine</code> and <code>Wheel</code></mark>.<br>
-                c) After that, do an integration test for <code>Car</code> using it together with the <code>Engine</code> and <code>Wheel</code> classes to ensure the <code>Car</code> integrates properly with the <code>Engine</code> and the <code>Wheel</code>.</p>
-            </tip-box>
-            <p><strong>In practice, developers often use a hybrid of unit+integration tests to minimize the need for stubs.</strong></p>
-            <tip-box>
-              <p><span class="fas fa-cube"></span> Here's how a hybrid unit+integration approach could be applied to the same example used above:</p>
-              <p>(a) First, unit test <code>Engine</code> and <code>Wheel</code>.<br>
-                <s>(b) Next, unit test <code>Car</code> in isolation of <code>Engine</code> and <code>Wheel</code>, using stubs for <code>Engine</code> and <code>Wheel</code>.</s><br>
-                (c) After that, do an integration test for <code>Car</code> using it together with the <code>Engine</code> and <code>Wheel</code> classes to ensure the <code>Car</code> integrates properly with the <code>Engine</code> and the <code>Wheel</code>. <mark>This step should include test cases that are meant to test the unit <code>Car</code></mark> (i.e. test cases used in the step (b) of the example above) as well as test cases that are meant to test the integration of <code>Car</code> with <code>Wheel</code> and <code>Engine</code> (i.e. pure integration test cases used of the step (c) in the example above).</p>
-              <p>💡 Note that you no longer need stubs for <code>Engine</code> and <code>Wheel</code>. The downside is that <code>Car</code> is never tested in isolation of its dependencies. Given that its dependencies are already unit tested, the risk of bugs in <code>Engine</code> and <code>Wheel</code> affecting the testing of <code>Car</code> can be considered minimal.</p>
             </tip-box>
           </div>
         </div>
@@ -4520,20 +4408,6 @@ Invalid command format: add
               <p>Here is a scenario that includes all the concepts introduced above (click on the slide to advance the animation):</p>
               <div class="block-embed block-embed-service-powerpoint"><iframe type="text/html" src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212290&authkey=&em=2&action=embedview&wdAr=1.3333333333333333" frameborder="0" width="610" height="481" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="indented-less">
-        <h4 id="branching">Branching <span class="badge badge-light"><small><small>
-                <font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-              </small></small></span><a class="fa fa-anchor" href="#branching"></a></h4>
-        <div class="indented-less">
-          <div>
-            <p><strong><mark><em>Branching</em></mark> is the process of evolving multiple versions of the software in parallel.</strong> For example, one team member can create a new branch and add an experimental feature to it while the rest of the team keeps working on another branch. Branches can be given names e.g. <code>master</code>, <code>release</code>, <code>dev</code>.</p>
-            <p><strong>A branch can be <mark><em>merged</em></mark> into another branch.</strong> Merging usually result in a new commit that represents the changes done in the branch being merged.</p>
-            <pic src="/website/book/revisionControl/branching/images/diagram.png" height="180">
-              <strong>Branching and merging</strong></pic>
-            <p><strong><mark><em>Merge conflicts</em></mark> happen when you try to merge two branches that had changed the same part of the code</strong> and the RCS software cannot decide which changes to keep. In those cases we have to ‘resolve’ those conflicts manually.</p>
           </div>
         </div>
       </div>
@@ -6404,17 +6278,6 @@ Day[] holidays = <span class="hljs-keyword">new</span> Day[]{Day.SATURDAY, Day.S
           </div>
         </div>
       </div>
-      <div class="indented-less">
-        <h4 id="streams-basic">Streams: Basic <span class="badge badge-light"><small><small>
-                <font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-              </small></small></span><a class="fa fa-anchor" href="#streams-basic"></a></h4>
-        <div class="indented-less">
-          <div>
-            <p><strong>Java 8 introduced a number of new features (e.g. Lambdas, Streams)</strong> that are not trivial to learn but also extremely useful to know.</p>
-            <p><a href="http://winterbe.com/posts/2014/03/16/java-8-tutorial/">Here</a> is an overview of new Java 8 features .<span class="dimmed"> (written by Benjamin Winterberg)</span></p>
-          </div>
-        </div>
-      </div>
     </div>
     <p style="page-break-after: always;">&nbsp;</p>
     <div id="title">
@@ -6804,56 +6667,13 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
           </div>
         </div>
       </div>
-      <div class="indented-less">
-        <h4 id="law-of-demeter">Law of Demeter <span class="badge badge-light"><small><small>
-                <font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-              </small></small></span><a class="fa fa-anchor" href="#law-of-demeter"></a></h4>
-        <div class="indented-less">
-          <div>
-            <tip-box type="definition">
-              <div>
-                <p><strong>Law of Demeter (LoD)</strong>:</p>
-                <ul>
-                  <li>An object should have limited knowledge of another object.</li>
-                  <li>An object should only interact with objects that are closely related to it.</li>
-                </ul>
-                <p>Also known as</p>
-                <ul>
-                  <li>Don’t talk to strangers.</li>
-                  <li>Principle of least knowledge</li>
-                </ul>
-              </div>
-            </tip-box>
-            <p>More concretely, a method <code>m</code> of an object <code>O</code> should invoke only the methods of the following kinds of objects:</p>
-            <ul>
-              <li>The object <code>O</code> itself</li>
-              <li>Objects passed as parameters of <code>m</code></li>
-              <li>Objects created/instantiated in <code>m</code></li>
-              <li>Objects from the <tooltip content="objects that are held by instance variables of">direct association of</tooltip> <code>O</code></li>
-            </ul>
-            <tip-box>
-              <p><span class="fas fa-cube"></span> The following code fragment violates LoD due to the reason: while <code>b</code> is a ‘friend’ of <code>foo</code> (because it receives it as a parameter), <code>g</code> is a ‘friend of a friend’ (which should be considered a ‘stranger’), and <code>g.doSomething()</code> is analogous to ‘talking to a stranger’.</p>
-              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{
-    Goo g = b.getGoo();
-    g.doSomething();
-}
-</code></pre>
-            </tip-box>
-            <p><strong>LoD aims to reduce coupling by limiting the interaction to a closely related group of classes.</strong></p>
-            <tip-box>
-              <p><span class="fas fa-cube"></span> In the example above, <code>foo</code> is already coupled to <code>Bar</code>. Upholding LoD avoids <code>foo</code> being coupled to <code>Goo</code> as well.</p>
-              <p><span class="fas fa-cube"></span> An analogy for LoD can be drawn from Facebook. If Facebook followed LoD, you would not be allowed to see posts of friends of friends, unless they are your friends as well. If Jake is your friend and Adam is Jake’s friend, you should not be allowed to see Adam’s posts unless Adam is a friend of yours as well.</p>
-            </tip-box>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </div>
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.13.0</a> at Tue, 09 Oct 2018 09:15:00 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.13.0</a> at Wed, 10 Oct 2018 15:55:04 GMT</small></div>
 </footer>
 </div>
 </body>

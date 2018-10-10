@@ -6,197 +6,173 @@
       <br>
       <panel type="seamless" header="##### Evidence for weekly LOs %%(for reference)%%">
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W11.1a</code></span></big> <span><span class="fas fa-trophy"></span> Can use Git to resolve merge conflicts</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W11.3b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the costs and benefits of reuse</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
           <div class="indented">
             <panel minimized="">
               <span slot="header" class="card-title">Details of the LO</span>
               <div>
-                <div>
-                  <p>
-                    <panel src="/website\book\gitAndGithub\branch\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%Tools → Git & GitHub → Branching%%"></panel>
-                  </p>
-                </div>
+                <div></div>
                 <p></p>
-                <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+                <p><span class="dimmed"><strong><span>Implementation → Reuse → Introduction →
                       </span></strong></span></p>
                 <div id="title-and-body">
                   <div>
-                    <h4 id="merge-conflicts">Merge Conflicts</h4>
+                    <h4 id="when">When</h4>
                   </div>
                   <div id="main">
                     <div>
-                      <p><strong>1. Start a branch named <code>fix1</code> in a local repo. Create a commit</strong> that adds a line with some text to one of the files.</p>
-                      <p><strong>2. Switch back to <code>master</code> branch. Create a commit with a conflicting change</strong> i.e. it adds a line with some different text in the exact location the previous line was added.</p>
-                      <img src="/website/book/gitAndGithub/mergeConflicts/images/sourcetree_1.png" height="350">
-                      <p></p>
-                      <p><strong>3. Try to merge the <code>fix1</code> branch onto the <code>master</code> branch.</strong> Git will pause mid-way during the merge and report a merge conflict. If you open the conflicted file, you will see something like this:</p>
-                      <pre class="hljs"><code>COLORS
-------
-blue
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-black
-=======
-green
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; fix1
-red
-white
-</code></pre>
-                      <p><strong>4. Observe how the conflicted part is marked</strong> between a line starting with <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> and a line starting with <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>, separated by another line starting with <code>=======</code>.</p>
-                      <p>This is the conflicting part that is coming from the <code>master</code> branch:</p>
-                      <pre class="hljs"><code>
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-black
-=======
-
-</code></pre>
-                      <p>This is the conflicting part that is coming from the <code>fix1</code> branch:</p>
-                      <pre class="hljs"><code>
-=======
-green
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; fix1
-
-</code></pre>
-                      <p><strong>5. Resolve the conflict by editing the file</strong>. Let us assume you want to keep both lines in the merged version. You can modify the file to be like this:</p>
-                      <pre class="hljs"><code>COLORS
-------
-blue
-black
-green
-red
-white
-</code></pre>
-                      <p><strong>6. Stage the changes, and commit.</strong></p>
+                      <p>While you may be tempted to use many libraries/frameworks/platform that seem to crop up on a regular basis and promise to bring great benefits, note that <strong>there are costs associated with reuse</strong>. Here are some:</p>
+                      <ul>
+                        <li>The reused code <strong>may be an overkill</strong> (think <em>using a sledgehammer to crack a nut</em>) increasing the size of, or/and degrading the performance of, your software.</li>
+                        <li>The reused software <strong>may not be mature/stable enough</strong> to be used in an important product. That means the software can change drastically and rapidly, possibly in ways that break your software.</li>
+                        <li>Non-mature software has the <strong>risk of dying off</strong> as fast as they emerged, leaving you with a dependency that is no longer maintained.</li>
+                        <li>The license of the reused software (or its dependencies) <strong>restrict how you can use/develop your software</strong>.</li>
+                        <li>The reused software <strong>might have bugs, missing features, or security vulnerabilities</strong> that are important to your product but not so important to the maintainers of that software, which means those flaws will not get fixed as fast as you need them to.</li>
+                        <li><strong>Malicious code can sneak into your product</strong> via compromised dependencies.</li>
+                      </ul>
                     </div>
-                    <div></div>
-                  </div>
-                </div>
-              </div>
-            </panel><br><br>
-            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
-            <div class="indented">
-              <div>
-                <p><strong>Acceptable</strong>: Merge conflicts resolved in any repo.</p>
-                <p><strong>Suggested</strong>: Evidence of following the steps in the LO.</p>
-                <p><strong>Submission</strong>: Show your merge commit during the tutorial.</p>
-              </div>
-            </div>
-          </div>
-        </panel>
-        <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W11.1b</code></span></big> <span><span class="fas fa-trophy"></span> Can review and merge PRs on GitHub</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
-          <div class="indented">
-            <panel minimized="">
-              <span slot="header" class="card-title">Details of the LO</span>
-              <div>
-                <div>
-                  <p>
-                    <panel src="/website\book\gitAndGithub\branch\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%Tools → Git & GitHub → Branching%%"></panel>
-                    <panel src="/website\book\gitAndGithub\createPRs\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%Tools → Git & GitHub → Create PRs%%"></panel>
-                    <panel src="/website\book\gitAndGithub\mergeConflicts\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%Tools → Git & GitHub → Merge Conflicts%%"></panel>
-                  </p>
-                </div>
-                <p></p>
-                <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
-                      </span></strong></span></p>
-                <div id="title-and-body">
-                  <div>
-                    <h4 id="manage-prs">Manage PRs</h4>
-                  </div>
-                  <div id="main">
                     <div>
-                      <p><strong>1. Go to GitHub page of your fork and review the <code>add-intro</code> PR</strong> you created previously in [<trigger trigger="click" for="modal:managePrs-createPrs">Tools → Git &amp; GitHub → Create PRs</trigger>] to simulate the PR being reviewed by another developer, as explained below. <span class="dimmed">Note that some features available to PR reviewers will be unavailable to you because you are also the author of the PR.</span></p>
-                      <modal large="" title="Tools → Git & GitHub → Create PRs" id="modal:managePrs-createPrs">
-                          <div>
+                      <div>
+                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
                           <div>
-                            <p><strong>1. Fork the <a href="https://github.com/se-edu/samplerepo-pr-practice">samplerepo-pr-practice</a> onto your GitHub account. Clone it onto your computer.</strong></p>
-                            <p><strong>2. Create a branch named <code>add-intro</code> in your clone. Add a couple of commits</strong> which adds/modifies an <em>Introduction</em> section to the <code>README.md</code>. Example:</p>
-                            <pre><code class="hljs md">
-<span class="hljs-section"># Introduction</span>
-Creating Pull Requsts (PRs) is needed when using RCS in a multi-person projects.
-This repo can be used to practice creating PRs.
-
-</code></pre>
-                            <p><strong>3. Push the <code>add-intro</code> branch to your fork.</strong></p>
-                            <tabs>
-                              <tab header="SourceTree">
-                                <img src="/website/book/gitAndGithub/createPRs/images/pushBranchToFork.png" height="300">
-                                <p></p>
-                                <hr>
-                              </tab>
-                              <tab header="CLI">
-                                <pre class="hljs"><code>git push origin add-intro
-</code></pre>
-                                <hr>
-                              </tab>
-                            </tabs>
-                            <p><strong>4. Create a Pull Request from the <code>add-intro</code> branch in your fork to the <code>master</code> branch of the same fork</strong> (i.e. <code>your-user-name/samplerepo-pr-practice</code>, not <code>se-edu/samplerepo-pr-practice</code>), as described below.</p>
-                            <p>4a. Go to the GitHub page of your fork (i.e. <code>https://github.com/{your_username}/samplerepo-pr-practice</code>), click on the <code>Pull Requests</code> tab, and then click on <code>New Pull Request</code> button.</p>
-                            <img src="/website/book/gitAndGithub/createPRs/images/createPrButton.png" width="800">
-                            <p></p>
-                            <p>4b. Select <code>base fork</code> and <code>head fork</code> as follows:</p>
-                            <ul>
-                              <li><code>base fork</code>: your own fork (i.e. <code>{your user name}/samplerepo-pr-practice</code>, <mark>NOT <code>se-edu/samplerepo-pr-practice</code></mark>)</li>
-                              <li><code>head fork</code>: your own fork.</li>
-                            </ul>
-                            <img src="/website/book/gitAndGithub/createPRs/images/selectBase.png" width="800">
-                            <p></p>
-                            <tip-box type="info">
-                              <p>The <em>base fork</em> is where changes should be applied. The <em>head fork</em> contains the changes you would like to be applied.</p>
-                            </tip-box>
-                            <p>4c. (1) Set the base branch to <code>master</code> and head branch to <code>add-intro</code>, (2) confirm the <em>diff</em> contains the changes you propose to merge in this PR <span class="dimmed">(i.e. confirm that you did not accidentally include extra commits in the branch)</span>, and (3) click the <code>Create pull request</code> button.</p>
-                            <img src="/website/book/gitAndGithub/createPRs/images/checkDiff.png" width="800">
-                            <p></p>
-                            <p>4d. (1) Set PR name, (2) set PR description, and (3) Click the <code>Create pull request</code> button.</p>
-                            <img src="/website/book/gitAndGithub/createPRs/images/setPrName.png" width="600">
-                            <p></p>
-                            <tip-box type="important">
-                              <p>A common newbie mistake when creating branch-based PRs is to mix commits of one PR with another. To learn how to avoid that mistake, you are encouraged to continue and create another PR as explained below.
-                                 
-                              </p>
-                            </tip-box>
-                            <p><strong>5. In your local repo, create a new branch <code>add-summary</code></strong> off the <code>master</code> branch.</p>
-                            <tip-box type="warning">
-                              <p>When creating the new branch, it is very important that you switch back to the <code>master</code> branch first. If not, the new branch will be created off the current branch <code>add-intro</code>. And that is how you end up having commits of the first PR in the second PR as well.</p>
-                            </tip-box>
-                            <p><strong>6. Add a commit in the <code>add-summary</code> branch</strong> that adds a <em>Summary</em> section to the <code>README.md</code>, in exactly the same place you added the <em>Introduction</em> section earlier.</p>
-                            <img src="/website/book/gitAndGithub/createPRs/images/addSummaryBranch.png" width="400">
-                            <p></p>
-                            <p><strong>7. Push the <code>add-summary</code> to your fork and create a new PR</strong> similar to before.</p>
-                            <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
-                              <ul>
-                                <li><a href="https://help.github.com/articles/creating-a-pull-request/">GitHub's own documentation on creating a PR</a></li>
-                              </ul>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Using a cool UI framework">
+                              <question has-input="true">
+                                <p>One of your teammates is proposing to use a recently-released “cool” UI framework for your class project. List the pros and cons of this idea.</p>
+                                <div slot="answer">
+                                  <p>Pros</p>
+                                  <ul>
+                                    <li>The potential to create a much better product by reusing the framework.</li>
+                                    <li>Learning a new framework is good for the future job prospects.</li>
+                                  </ul>
+                                  <p>Cons</p>
+                                  <ul>
+                                    <li>Learning curve may be steep.</li>
+                                    <li>May not be stable (it was recently released).</li>
+                                    <li>May not allow us to do exactly what we want. While frameworks allow customization, such customization can be limited.</li>
+                                    <li>Performance penalties.</li>
+                                    <li>Might interfere with learning objectives of the module.</li>
+                                  </ul>
+                                  <p>Note that having more cons does not mean we should not use this framework. Further investigation is required before we can make a final decision.</p>
+                                </div>
+                              </question>
                             </panel>
                           </div>
-                          <div></div>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </panel><br><br>
+            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+            <div class="indented">
+              <div>
+                <p>Have reused software. Can explain general costs and benefits of the code you have reused.</p>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W11.3c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain APIs</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span></span>
+          <div class="indented">
+            <panel minimized="">
+              <span slot="header" class="card-title">Details of the LO</span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Implementation → Reuse → APIs →
+                      </span></strong></span></p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="what">What</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p><strong>An <em>Application Programming Interface (API)</em> specifies the interface through which other programs can interact with a software component.</strong> It is a contract between the component and its clients.</p>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> A class has an API (e.g., <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/String.html">API of the Java <code>String</code> class</a>, <a href="https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str">API of the Python <code>str</code> class</a>) which is a collection of public methods that you can invoke to make use of the class.</p>
+                        <p><span class="fas fa-cube"></span> The <a href="https://developer.github.com/v3/">GitHub API</a> is a collection of Web request formats GitHub server accepts and the corresponding responses. We can write a program that interacts with GitHub through that API.</p>
+                      </tip-box>
+                      <p>When developing large systems, if you define the API of each components early, the development team can develop the components in parallel <span class="dimmed"> because the future behavior of the other components are now more predictable</span>.</p>
+                    </div>
+                    <div>
+                      <div>
+                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Statements about APIs">
+                              <question>
+                                <p>Choose the correct statements</p>
+                                <ul class="task-list">
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. A software component can have an API.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Any method of a class is part of its API.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Private methods of a class are not part of its API.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. The API forms the contract between the component developer and the component user.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. Sequence diagrams can be used to show how components interact with each other via APIs.</li>
+                                </ul>
+                                <div slot="answer">
+                                  <p>(a) (c) (d) (e)</p>
+                                  <p>Explanation: (b) is incorrect because private methods cannot be a part of the API</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> True or False?">
+                              <question>
+                                <p>Defining component APIs early is useful for developing components in parallel.</p>
+                                <ul radio-group="9bd8a" class="radio-list">
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="9bd8a" type="radio"> True</label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="9bd8a" type="radio"> False</label></li>
+                                </ul>
+                                <div slot="answer">
+                                  <p>True</p>
+                                  <p>Explanation: Yes, once we know the precise behavior expected of each component, we can start developing them in parallel.</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </panel><br><br>
+            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+            <div class="indented">
+              <div>
+                <p>Know the API of the AddressBook component you are in charge of and the APIs of the other components your component depends on.</p>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W11.3d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain libraries</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+          <div class="indented">
+            <panel minimized="">
+              <span slot="header" class="card-title">Details of the LO</span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Implementation → Reuse → Libraries →
+                      </span></strong></span></p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="what-2">What</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p>A library is a collection of modular code that is general and can be used by other programs.</p>
+                      <tip-box>
+                        <div class="alt-java">
+                          <p><span class="fas fa-cube"></span> Java classes you get with the JDK (such as <code>String</code>, <code>ArrayList</code>, <code>HashMap</code>, etc.) are library classes that are provided in the default Java distribution.</p>
+                          <p><span class="fas fa-cube"></span> <a href="https://github.com/joestelmach/natty">Natty</a> is a Java library that can be used for parsing strings that represent dates e.g. <code>The 31st of April in the year 2008</code></p>
                         </div>
-                      </modal>
-                      <p>1a. Go to the respective PR page and click on the <code>Files changed</code> tab. Hover over the line you want to comment on and click on the <span style="color:#0066ff"><span class="fas fa-plus-square"></span></span> icon that appears on the left margin. That should create a text box for you to enter your comment.</p>
-                      <img src="/website/book/gitAndGithub/managePRs/images/startReview.png" width="800">
-                      <p></p>
-                      <p>1b. Enter some dummy comment and click on <code>Start a review</code> button.</p>
-                      <img src="/website/book/gitAndGithub/managePRs/images/addComment.png" width="800">
-                      <p></p>
-                      <p>1c. Add a few more comments in other places of the code.</p>
-                      <p>1d. Click on the <code>Review Changes</code> button, enter an overall comment, and click on the <code>Submit review</code> button.</p>
-                      <img src="/website/book/gitAndGithub/managePRs/images/submitReview.png" width="500">
-                      <p></p>
-                      <p><strong>2. Update the PR</strong> to simulate revising the code based on reviewer comments. Add some more commits to the <code>add-intro</code> branch and push the new commits to the fork. Observe how the PR is updated automatically to reflect the new code.</p>
-                      <p><strong>3. Merge the PR.</strong> Go to the GitHub page of the respective PR, scroll to the bottom of the <code>Conversation</code> tab, and click on the <code>Merge pull request</code> button, followed by the <code>Confirm merge</code> button. You should see a <code>Pull request successfully merged and closed</code> message after the PR is merged.</p>
-                      <img src="/website/book/gitAndGithub/managePRs/images/mergePr.png" width="800">
-                      <p></p>
-                      <p><strong>4. Sync the local repo with the remote repo.</strong> Because of the merge you did on the GitHub, the <code>master</code> branch of your fork is now ahead of your local repo by one commit. To sync the local repo with the remote repo, pull the <code>master</code> branch to the local repo.</p>
-                      <pre class="hljs"><code>git checkout master
-git pull origin master
-</code></pre>
-                      <p>Observe how the <code>add-intro</code> branch is now merged to the <code>master</code> branch in your local repo as well.</p>
-                      <p><strong>5. De-conflict the <code>add-summary</code> PR</strong>
-                        <trigger trigger="click" for="modal:managePrs-createPrs">that you created earlier</trigger>. Note that GitHub page for the <code>add-summary</code> PR is now showing a conflict <span class="dimmed">(when you scroll to the bottom of that page, you should see a message <code>This branch has conflicts that must be resolved</code>)</span>. You can resolve it locally and update the PR accordingly, as explained below.
-                      </p>
-                      <p>5a. Switch to the <code>add-summary</code> branch. To make that branch up-to-date with the <code>master</code> branch, merge the <code>master</code> branch to it, which will surface the merge conflict. Resolve it and complete the merge.</p>
-                      <p>5b. Push the updated <code>add-summary</code> branch to the fork. That will remove the 'merge conflicts' warning in the GitHub page of the PR.</p>
-                      <p><strong>6. Merge the <code>add-summary</code> PR</strong> using the GitHub interface, similar to how you merged the previous PR.</p>
-                      <p><span class="fas fa-info-circle"></span> Note that you could have merged the <code>add-summary</code> branch to the <code>master</code> branch locally before pushing it to GitHub. In that case, the PR will be merged on GitHub automatically to reflect that the branch has been merged already.</p>
+                        <div class="alt-python">
+                          <p><span class="fas fa-cube"></span> built-in modules you get with Python (such as <code>csv</code>, <code>random</code>, <code>sys</code>, etc.) are libraries that are provided in the default Python distribution. Classes such as <code>list</code>, <code>str</code>, <code>dict</code> are built-in library classes that you get with Python.</p>
+                          <p><span class="fas fa-cube"></span> <a href="https://pypi.python.org/pypi/colorama">Colorama</a> is a Python library that can be used for colorizing text in a CLI.</p>
+                        </div>
+                      </tip-box>
                     </div>
                     <div></div>
                   </div>
@@ -206,76 +182,33 @@ git pull origin master
             <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
             <div class="indented">
               <div>
-                <p><strong>Acceptable</strong>: PRs you merged in any repo.</p>
-                <p><strong>Suggested</strong>: Evidence of following the steps in the LO.</p>
-                <p><strong>Submission</strong>: Show your merged PRs during the tutorial.</p>
+                <p>Identify libraries used (or potentially usable) in your project.</p>
               </div>
             </div>
           </div>
         </panel>
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W11.2b</code></span></big> <span><span class="fas fa-trophy"></span> Can follow Forking Workflow</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W11.3e</code></span></big> <span><span class="fas fa-trophy"></span> Can make use of a library</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span></span>
           <div class="indented">
             <panel minimized="">
               <span slot="header" class="card-title">Details of the LO</span>
               <div>
-                <div>
-                  <p>
-                    <panel src="/website\book\revisionControl\forkingWorkflow\unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Revision Control → Forking Workflow%%"></panel>
-                  </p>
-                </div>
+                <div></div>
                 <p></p>
-                <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+                <p><span class="dimmed"><strong><span>Implementation → Reuse → Libraries →
                       </span></strong></span></p>
                 <div id="title-and-body">
                   <div>
-                    <h4 id="forking-workflow">Forking Workflow</h4>
+                    <h4 id="how">How</h4>
                   </div>
                   <div id="main">
                     <div>
-                      <p><span class="fas fa-info-circle"></span> This activity is best done as a team. If you are learning this alone, you can simulate a team by using two different browsers to log into GitHub using two different accounts.</p>
+                      <p>These are the typical steps required to use a library.</p>
                       <ol>
-                        <li>
-                          <p><strong>One member: set up the team org and the team repo.</strong></p>
-                          <ul>
-                            <li><strong><a href="https://help.github.com/articles/creating-a-new-organization-from-scratch/">Create a GitHub organization</a></strong> for your team. The org name is up to you. We'll refer to this organization as <em>team org</em> from now on.</li>
-                            <li><strong><a href="https://help.github.com/enterprise/2.10/admin/guides/user-management/creating-teams/">Add a team </a></strong> called <code>developers</code> to your team org.</li>
-                            <li><strong><a href="https://help.github.com/enterprise/2.0/admin/guides/user-management/adding-or-inviting-people-to-teams/">Add your team members</a></strong> to the <code>developers</code> team.</li>
-                            <li><strong>Fork <a href="https://github.com/se-edu/samplerepo-workflow-practice">se-edu/samplerepo-workflow-practice</a> to your team org</strong>. We'll refer to this as the <em>team repo</em>.</li>
-                            <li><strong><a href="https://help.github.com/articles/managing-team-access-to-an-organization-repository/">Add the forked repo</a> to the <code>developers</code> team.</strong> Give write access.</li>
-                          </ul>
-                        </li>
-                        <li>
-                          <p><strong>Each team member: create PRs via own fork</strong></p>
-                          <ul>
-                            <li><strong>Fork that repo</strong> from your team org to your own GitHub account.</li>
-                            <li><strong>Create a PR</strong> to add a file <code>yourName.md</code> <span class="dimmed"> (e.g. <code>jonhDoe.md</code>) </span> containing a brief resume of yourself <span class="dimmed"> (branch → commit → push → create PR)</span></li>
-                          </ul>
-                        </li>
-                        <li>
-                          <p><strong>For each PR: review, update, and merge.</strong></p>
-                          <ul>
-                            <li>A team member (not the PR author): Review the PR by adding comments (can be just dummy comments).</li>
-                            <li>PR author: Update the PR by pushing more commits to it, to simulate updating the PR based on review comments.</li>
-                            <li>Another team member: Merge the PR using the GitHub interface.</li>
-                            <li>All members: <a href="https://help.github.com/articles/syncing-a-fork/">Sync your local repo (and your fork) with upstream repo</a>. In this case, your <em>upstream repo</em> is the repo in your team org.</li>
-                          </ul>
-                        </li>
-                        <li>
-                          <p><strong>Create conflicting PRs.</strong></p>
-                          <ul>
-                            <li>Each team member: Create a PR to add yourself under the <code>Team Members</code> section in the <code>README.md</code>.</li>
-                            <li>One member: in the <code>master</code> branch, remove John Doe and Jane Doe from the <code>README.md</code>, commit, and push to the main repo.</li>
-                          </ul>
-                        </li>
-                        <li>
-                          <p><strong>Merge conflicting PRs one at a time.</strong> Before merging a PR, you’ll have to resolve conflicts. Steps:</p>
-                          <ul>
-                            <li>[Optional] A member can inform the PR author (by posting a comment) that there is a conflict in the PR.</li>
-                            <li>PR author: Pull the <code>master</code> branch from the repo in your team org. Merge the pulled <code>master</code> branch to your PR branch. Resolve the merge conflict that crops up during the merge. Push the updated PR branch to your fork.</li>
-                            <li>Another member or the PR author: When GitHub does not indicate a conflict anymore, you can go ahead and merge the PR.</li>
-                          </ul>
-                        </li>
+                        <li>Read the documentation to confirm that its functionality fits your needs</li>
+                        <li>Check the license to confirm that it allows reuse in the way you plan to reuse it. For example, some libraries might allow non-commercial use only.</li>
+                        <li>Download the library and make it accessible to your project. Alternatively, you can configure your <tooltip content="e.g. _Gradle_ (for Java) and _Pipenv_ (for Python)">dependency management tool</tooltip> to do it for you.</li>
+                        <li>Call the library API from your code where you need to use the library functionality.</li>
                       </ol>
                     </div>
                     <div></div>
@@ -286,9 +219,1074 @@ git pull origin master
             <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
             <div class="indented">
               <div>
-                <p><strong>Acceptable</strong>: Evidence of following the forking workflow <mark>with the current team members</mark> using <em>any</em> repo.</p>
-                <p><strong>Suggested</strong>: Evidence of following the steps in the LO with current team members.</p>
-                <p><strong>Submission</strong>: Show during the tutorial.</p>
+                <p>Have used libraries (or reused code from elsewhere) in your project.</p>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W11.3f</code></span></big> <span><span class="fas fa-trophy"></span> Can explain frameworks</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span></span>
+          <div class="indented">
+            <panel minimized="">
+              <span slot="header" class="card-title">Details of the LO</span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Implementation → Reuse → Frameworks →
+                      </span></strong></span></p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="what-3">What</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p><strong>The overall structure and execution flow of a specific category of software systems can be very similar. The similarity is an opportunity to reuse at a high scale.</strong></p>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> Running example:</p>
+                        <p>IDEs for different programming languages are similar in how they support editing code, organizing project files, debugging, etc.</p>
+                      </tip-box>
+                      <p><strong>A <em>software framework</em> is a reusable implementation of a software (or part thereof) providing <em>generic</em> functionality that can be selectively customized to produce a <em>specific</em> application.</strong></p>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> Running example:</p>
+                        <p>Eclipse is an IDE framework that can be used to create IDEs for different programming languages.</p>
+                      </tip-box>
+                      <p><strong>Some frameworks provide a complete implementation of a <em>default</em> behavior which makes them immediately usable.</strong></p>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> Running example:</p>
+                        <p>Eclipse is a fully functional Java IDE out-of-the-box.</p>
+                      </tip-box>
+                      <p><strong>A framework facilitates the adaptation and customization of some desired functionality.</strong></p>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> Running example:</p>
+                        <p>Eclipse plugin system can be used to create an IDE for different programming languages while reusing most of the existing IDE features of Eclipse. E.g. <a href="https://marketplace.eclipse.org/content/pydev-python-ide-eclipse">https://marketplace.eclipse.org/content/pydev-python-ide-eclipse</a></p>
+                      </tip-box>
+                      <p>Some frameworks cover only a specific components or an aspect.</p>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> JavaFx a framework for creating Java GUIs. TkInter is a GUI framework for Python.</p>
+                      </tip-box>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> More examples of frameworks</p>
+                        <ul>
+                          <li>Frameworks for Web-based applications: Drupal(PHP), Django(Python), Ruby on Rails (Ruby), Spring (Java)</li>
+                          <li>Frameworks for testing: JUnit (Java), unittest (Python), Jest (Java Script)</li>
+                        </ul>
+                      </tip-box>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </panel><br><br>
+            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+            <div class="indented">
+              <div>
+                <p>Identify frameworks used (or potentially usable) in your project.</p>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W11.3g</code></span></big> <span><span class="fas fa-trophy"></span> Can differentiate between frameworks and libraries</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+          <div class="indented">
+            <panel minimized="">
+              <span slot="header" class="card-title">Details of the LO</span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Implementation → Reuse → Frameworks →
+                      </span></strong></span></p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="frameworks-vs-libraries">Frameworks vs Libraries</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p>Although both frameworks and libraries are reuse mechanisms, there are notable differences:</p>
+                      <ul>
+                        <li>
+                          <p><strong>Libraries are meant to be used ‘as is’ while frameworks are meant to be customized/extended.</strong>
+                            <span class="dimmed"> e.g., writing plugins for Eclipse so that it can be used as an IDE for different languages (C++, PHP, etc.), adding modules and themes to Drupal, and adding test cases to JUnit</span>.</p>
+                        </li>
+                        <li>
+                          <p><strong>Your code calls the library code while the framework code calls your code.</strong>
+                            <strong>Frameworks use a technique called <em>inversion of control</em>, aka the “Hollywood principle”</strong> (i.e. don’t call us, we’ll call you!). That is, you write code that will be called by the framework, <span class="dimmed"> e.g. writing test methods that will be called by the JUnit framework.</span> In the case of libraries, your code calls libraries.</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div>
+                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Statement about software frameworks">
+                              <question>
+                                <p>Choose correct statements about software frameworks.</p>
+                                <ul class="task-list">
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. They follow the hollywood principle, otherwise known as ‘inversion of control’</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. They come with full or partial implementation.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. They are more concrete than patterns or principles.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. They are often configurable.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. They are reuse mechanisms.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> f. They are similar to reusable libraries but bigger.</li>
+                                </ul>
+                                <div slot="answer">
+                                  <p>(a)(b)(c)(d)(e)<s>(f)</s></p>
+                                  <p>Explanation: While both libraries and frameworks are reuse mechanisms, and both more concrete than principles and patterns, libraries differ from frameworks in some key ways. One of them is the ‘inversion of control’ used by frameworks but not libraries. Furthermore, frameworks do not have to be bigger than libraries all the time.</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which are frameworks?">
+                              <question>
+                                <p>Which one of these are frameworks ?</p>
+                                <ul radio-group="58823" class="radio-list">
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="58823" type="radio"> a. JUnit</label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="58823" type="radio"> b. Eclipse</label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="58823" type="radio"> c. Drupal</label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="58823" type="radio"> d. Ruby on Rails</label></li>
+                                </ul>
+                                <div slot="answer">
+                                  <p>(a)(b)(c)(d)</p>
+                                  <p>Explanation: These are frameworks.</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </panel><br><br>
+            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+            <div class="indented">
+              <div>
+                <p>Explain the difference between libraries and frameworks using frameworks and libraries in your project as examples.</p>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W11.3h</code></span></big> <span><span class="fas fa-trophy"></span> Can explain platforms</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+          <div class="indented">
+            <panel minimized="">
+              <span slot="header" class="card-title">Details of the LO</span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Implementation → Reuse → Platforms →
+                      </span></strong></span></p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="what-4">What</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p><strong>A <em>platform</em> provides a runtime environment for applications.</strong> A platform is often bundled with various libraries, tools, frameworks, and technologies in addition to a runtime environment but the defining characteristic of a software platform is the presence of a runtime environment.</p>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> Technically, an operating system can be called a platform. For example, Windows PC is a platform for desktop applications while iOS is a platform for mobile apps.</p>
+                      </tip-box>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> <strong>Two well-known examples of platforms are JavaEE and .NET</strong>, both of which sit above Operating systems layer, and are used to develop <trigger for="modal:enterprise-application" trigger="click">enterprise applications</trigger>. Infrastructure services such as connection pooling, load balancing, remote code execution, transaction management, authentication, security, messaging etc. are done similarly in most enterprise applications. Both JavaEE and .NET provide these services to applications in a customizable way without developers having to implement them from scratch every time.</p>
+                        <ul>
+                          <li>JavaEE (Java Enterprise Edition) is both a framework and a platform for writing enterprise applications. The runtime used by the JavaEE applications is the JVM (Java Virtual Machine) that can run on different Operating Systems.</li>
+                          <li>.NET is a similar platform and a framework. Its runtime is called CLR (Common Language Runtime) and usually used on Windows machines.</li>
+                        </ul>
+                      </tip-box>
+                      <modal title="**Enterprise Applications**" id="modal:enterprise-application">
+                        <div>
+                          <p><strong>Enterprise Application</strong>: ‘enterprise applications’ means software applications used at organizations level and therefore has to meet much higher demands (such as in scalability, security, performance, and robustness) than software meant for individual use.</p>
+                        </div>
+                      </modal>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </panel><br><br>
+            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+            <div class="indented">
+              <div>
+                <p>Identify platforms used (or potentially usable) in your project.</p>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W11.4a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain unit testing</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+          <div class="indented">
+            <panel minimized="">
+              <span slot="header" class="card-title">Details of the LO</span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Unit Testing →
+                      </span></strong></span></p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="what-5">What</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p><strong><em>Unit testing</em> : testing individual units (methods, classes, subsystems, ...) to ensure each piece works correctly.</strong></p>
+                      <p>In OOP code, it is common to write one or more unit tests for each public method of a class.</p>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> Here are the code skeletons for a <code>Foo</code> class containing two methods and a <code>FooTest</code> class that contains unit tests for those two methods.</p>
+                        <div class="alt-java">
+                          <div>
+                            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
+    <span class="hljs-function">String <span class="hljs-title">read</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//...</span>
+    }
+    
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(String input)</span></span>{
+        <span class="hljs-comment">//...</span>
+    }
+    
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FooTest</span></span>{
+    
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">read</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//a unit test for Foo#read() method</span>
+    }
+    
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write_emptyInput_exceptionThrown</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//a unit tests for Foo#write(String) method</span>
+    }  
+    
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write_normalInput_writtenCorrectly</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//another unit tests for Foo#write(String) method</span>
+    }
+}
+</code></pre>
+                          </div>
+                        </div>
+                        <div class="alt-python">
+                          <div>
+                            <pre><code class="hljs python"><span class="hljs-keyword">import</span> unittest
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">read</span><span class="hljs-params">(self)</span>:</span>
+      <span class="hljs-comment"># ...</span>
+  
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">write</span><span class="hljs-params">(self, input)</span>:</span>
+      <span class="hljs-comment"># ...</span>
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FooTest</span><span class="hljs-params">(unittest.TestCase)</span>:</span>
+  
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_read</span><span class="hljs-params">(sefl)</span>:</span>
+      <span class="hljs-comment"># a unit test for read() method</span>
+  
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_write_emptyIntput_ignored</span><span class="hljs-params">(self)</span>:</span>
+      <span class="hljs-comment"># a unit tests for write(string) method</span>
+  
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_write_normalInput_writtenCorrectly</span><span class="hljs-params">(self)</span>:</span>
+      <span class="hljs-comment"># another unit tests for write(string) method</span>
+</code></pre>
+                          </div>
+                        </div>
+                      </tip-box>
+                    </div>
+                    <div>
+                      <div>
+                        <panel header="<span class='fas fa-paperclip'></span> Resources">
+                          <p><strong>Side readings:</strong></p>
+                          <ul>
+                            <li>[Web article] <a href="http://blog.goyello.com/2011/10/06/three-pillars-of-unit-tests">The three pillars of unit testing</a> -
+                              A short article about what makes a good unit test.</li>
+                            <li><a href="http://avandeursen.com/2014/02/22/gotofail-security/">Learning from Apple’s #gotofail Security Bug</a> -
+                              How unit testing (and other good coding practices) could have prevented a major security bug.</li>
+                          </ul>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </panel><br><br>
+            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+            <div class="indented">
+              <div>
+                <p>Identify some unit tests in AddressBook-Level4 (or your own project).</p>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W11.4b</code></span></big> <span><span class="fas fa-trophy"></span> Can use stubs to isolate an SUT from its dependencies</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+          <div class="indented">
+            <panel minimized="">
+              <span slot="header" class="card-title">Details of the LO</span>
+              <div>
+                <div>
+                  <p>
+                    <panel src="/website\book\testing\testingTypes\unitTesting\what\unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Quality Assurance → Testing → Unit Testing → What →%%"></panel>
+                  </p>
+                </div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Unit Testing →
+                      </span></strong></span></p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="stubs">Stubs</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p><strong>A proper unit test requires the <em>unit</em> to be tested <mark>in isolation</mark></strong> so that bugs in the <tooltip content="code the unit depends on">dependencies</tooltip> cannot influence the test <span class="dimmed"> i.e. bugs outside of the unit should not affect the unit tests</span>.</p>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> If a <code>Logic</code> class depends on a <code>Storage</code> class, unit testing the <code>Logic</code> class requires isolating the <code>Logic</code> class from the <code>Storage</code> class.</p>
+                      </tip-box>
+                      <p><strong><em>Stubs</em> can isolate the <popover content="Software Under Test (in this case, the _unit_ being tested)">SUT</popover> from its dependencies</strong>.</p>
+                      <tip-box type="definition">
+                        <div>
+                          <p><strong>Stub</strong>: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for the a limited set of predetermined inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.</p>
+                        </div>
+                      </tip-box>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> Consider the code below:</p>
+                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{
+    Storage s;
+
+    Logic(Storage s) {
+        <span class="hljs-keyword">this</span>.s = s;
+    }
+
+    <span class="hljs-function">String <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"Name: "</span> + s.getName(index);
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Storage</span> </span>{
+    <span class="hljs-function">String <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span></span>;
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DatabaseStorage</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Storage</span> </span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{
+        <span class="hljs-keyword">return</span> readValueFromDatabase(index);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> String <span class="hljs-title">readValueFromDatabase</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{
+        <span class="hljs-comment">// retrieve name from the database</span>
+    }
+}
+</code></pre>
+                        <p>Normally, you would use the <code>Logic</code> class as follows (not how the <code>Logic</code> object depends on a <code>DatabaseStorage</code> object to perform the <code>getName()</code> operation):</p>
+                        <pre><code class="hljs java">Logic logic = <span class="hljs-keyword">new</span> Logic(<span class="hljs-keyword">new</span> DatabaseStorage());
+String name = logic.getName(<span class="hljs-number">23</span>);
+</code></pre>
+                        <p>You can test it like this:</p>
+                        <pre><code class="hljs java"><span class="hljs-meta">@Test</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{
+    Logic logic = <span class="hljs-keyword">new</span> Logic(<span class="hljs-keyword">new</span> DatabaseStorage());
+    assertEquals(<span class="hljs-string">"Name: John"</span>, logic.getName(<span class="hljs-number">5</span>));
+}
+</code></pre>
+                        <p>However, this <code>logic</code> object being tested is making use of a <code>DataBaseStorage</code> object which means a bug in the <code>DatabaseStorage</code> class can affect the test. Therefore, this test is not testing <code>Logic</code> <em>in isolation from its dependencies</em> and hence it is not a pure unit test.</p>
+                        <p>Here is a stub class you can use in place of <code>DatabaseStorage</code>:</p>
+                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StorageStub</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Storage</span> </span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{
+        <span class="hljs-keyword">if</span>(index == <span class="hljs-number">5</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"Adam"</span>;
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> UnsupportedOperationException();
+        }
+    }
+}
+</code></pre>
+                        <p>Note how the stub has the same interface as the real dependency, is so simple that it is unlikely to contain bugs, and is pre-configured to respond with a hard-coded response, presumably, the correct response <code>DatabaseStorage</code> is expected to return for the given test input.</p>
+                        <p>Here is how you can use the stub to write a unit test. This test is not affected by any bugs in the <code>DatabaseStorage</code> class and hence is a pure unit test.</p>
+                        <pre><code class="hljs java"><span class="hljs-meta">@Test</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{
+    Logic logic = <span class="hljs-keyword">new</span> Logic(<span class="hljs-keyword">new</span> StorageStub());
+    assertEquals(<span class="hljs-string">"Name: Adam"</span>, logic.getName(<span class="hljs-number">5</span>));
+}
+</code></pre>
+                      </tip-box>
+                      <p>In addition to Stubs, there are other type of replacements you can use during testing. E.g. <em>Mocks</em>, <em>Fakes</em>, <em>Dummies</em>, <em>Spies</em>.</p>
+                    </div>
+                    <div>
+                      <div>
+                        <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                          <ul>
+                            <li><a href="https://martinfowler.com/articles/mocksArentStubs.html"><strong>Mocks Aren't Stubs</strong></a> by Martin Fowler -- An in-depth article about how Stubs differ from other types of test helpers.</li>
+                          </ul>
+                        </panel>
+                      </div>
+                      <div>
+                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Purpose of stubs">
+                              <question>
+                                <p>Stubs help us to test a component in isolation from its dependencies.</p>
+                                <ul radio-group="a0303" class="radio-list">
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="a0303" type="radio"> True</label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="a0303" type="radio"> False</label></li>
+                                </ul>
+                                <div slot="answer">
+                                  <p>True</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </panel><br><br>
+            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+            <div class="indented">
+              <div>
+                <p>Identify some tests in AddressBook-Level4,</p>
+                <ol>
+                  <li>that can be made pure unit tests by introducing stubs</li>
+                  <li>that are using stubs to isolate the SUT from its dependencies</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W11.4c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain integration testing</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span></span>
+          <div class="indented">
+            <panel minimized="">
+              <span slot="header" class="card-title">Details of the LO</span>
+              <div>
+                <div>
+                  <p>
+                    <panel src="/website\book\testing\testingTypes\unitTesting\what\unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Quality Assurance → Testing → Unit Testing → What →%%"></panel>
+                  </p>
+                </div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Integration Testing →
+                      </span></strong></span></p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="what-6">What</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p><strong><em>Integration testing</em> : testing whether different parts of the software <em>work together</em> (i.e. integrates) as expected.</strong> Integration tests aim to discover bugs in the 'glue code' related to how components interact with each other. These bugs are often the result of misunderstanding of what the parts are supposed to do vs what the parts are actually doing.</p>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> Suppose a class <code>Car</code> users classes <code>Engine</code> and <code>Wheel</code>. If the <code>Car</code> class assumed a <code>Wheel</code> can support 200 mph speed but the actual <code>Wheel</code> can only support 150 mph, it is the integration test that is supposed to uncover this discrepancy.</p>
+                      </tip-box>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </panel><br><br>
+            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+            <div class="indented">
+              <div>
+                <p>Explain the difference between unit tests and integration tests.</p>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W11.4d</code></span></big> <span><span class="fas fa-trophy"></span> Can use integration testing</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+          <div class="indented">
+            <panel minimized="">
+              <span slot="header" class="card-title">Details of the LO</span>
+              <div>
+                <div>
+                  <p>
+                    <panel src="/website\book\testing\testingTypes\integrationTesting\what\unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Quality Assurance → Testing → Integration Testing → What →%%"></panel>
+                  </p>
+                </div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Integration Testing →
+                      </span></strong></span></p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="how-2">How</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p><strong>Integration testing is not simply a repetition of the unit test cases but run using the actual dependencies</strong> (instead of the stubs used in unit testing). Instead, integration tests are additional test cases that focus on the interactions between the parts.</p>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> Suppose a class <code>Car</code> uses classes <code>Engine</code> and <code>Wheel</code>. Here is how you would go about doing pure integration tests:</p>
+                        <p>a) First, unit test <code>Engine</code> and <code>Wheel</code>.<br>
+                          b) Next, unit test <code>Car</code> in isolation of <code>Engine</code> and <code>Wheel</code>, <mark>using stubs for <code>Engine</code> and <code>Wheel</code></mark>.<br>
+                          c) After that, do an integration test for <code>Car</code> using it together with the <code>Engine</code> and <code>Wheel</code> classes to ensure the <code>Car</code> integrates properly with the <code>Engine</code> and the <code>Wheel</code>.</p>
+                      </tip-box>
+                      <p><strong>In practice, developers often use a hybrid of unit+integration tests to minimize the need for stubs.</strong></p>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> Here's how a hybrid unit+integration approach could be applied to the same example used above:</p>
+                        <p>(a) First, unit test <code>Engine</code> and <code>Wheel</code>.<br>
+                          <s>(b) Next, unit test <code>Car</code> in isolation of <code>Engine</code> and <code>Wheel</code>, using stubs for <code>Engine</code> and <code>Wheel</code>.</s><br>
+                          (c) After that, do an integration test for <code>Car</code> using it together with the <code>Engine</code> and <code>Wheel</code> classes to ensure the <code>Car</code> integrates properly with the <code>Engine</code> and the <code>Wheel</code>. <mark>This step should include test cases that are meant to test the unit <code>Car</code></mark> (i.e. test cases used in the step (b) of the example above) as well as test cases that are meant to test the integration of <code>Car</code> with <code>Wheel</code> and <code>Engine</code> (i.e. pure integration test cases used of the step (c) in the example above).</p>
+                        <p>💡 Note that you no longer need stubs for <code>Engine</code> and <code>Wheel</code>. The downside is that <code>Car</code> is never tested in isolation of its dependencies. Given that its dependencies are already unit tested, the risk of bugs in <code>Engine</code> and <code>Wheel</code> affecting the testing of <code>Car</code> can be considered minimal.</p>
+                      </tip-box>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </panel><br><br>
+            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+            <div class="indented">
+              <div>
+                <p>Use tests from AddressBook-Level4 to illustrate the difference between unit testings and integration testing. Hint: good examples <a href="https://github.com/nus-tic2002-2018/addressbook-level4/blob/master/src/test/java/seedu/address/storage/StorageManagerTest.java"><code>seedu.address.storage.StorageManagerTest</code></a>,<a href="https://github.com/nus-tic2002-2018/addressbook-level4/blob/master/src/test/java/seedu/address/logic/commands/AddCommandTest.java"><code>seedu.address.logic.commands.AddCommandTest</code></a>,<a href="https://github.com/nus-tic2002-2018/addressbook-level4/blob/master/src/test/java/seedu/address/logic/commands/AddCommandIntegrationTest.java"><code>seedu.address.logic.commands.AddCommandIntegrationTest</code></a></p>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W11.4e</code></span></big> <span><span class="fas fa-trophy"></span> Can explain system testing</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span></span>
+          <div class="indented">
+            <panel minimized="">
+              <span slot="header" class="card-title">Details of the LO</span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Quality Assurance → Testing → System Testing →
+                      </span></strong></span></p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="what-7">What</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p><strong><em>System testing</em>: take the <em>whole system</em> and test it <em>against the system specification</em>.</strong></p>
+                      <p>System testing is typically done by a testing team (also called a QA team).</p>
+                      <p><strong>System test cases are based on the specified external behavior of the system.</strong> Sometimes, system tests go beyond the bounds defined in the specification. This is useful when testing that the system fails 'gracefully' having pushed beyond its limits.</p>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> Suppose the SUT is a browser supposedly capable of handling web pages containing up to 5000 characters. Given below is a test case to test if the SUT fails gracefully if pushed beyond its limits.</p>
+                        <pre class="hljs"><code>Test case: load a web page that is too big
+* Input: load a web page containing more than 5000 characters. 
+* Expected behavior: abort the loading of the page and show a meaningful error message. 
+</code></pre>
+                        <p>This test case would fail if the browser attempted to load the large file anyway and crashed.</p>
+                      </tip-box>
+                      <p><strong>System testing includes testing against non-functional requirements too.</strong> Here are some examples.</p>
+                      <ul>
+                        <li><em>Performance testing</em> – to ensure the system responds quickly.</li>
+                        <li><em>Load testing</em> (also called <em>stress testing</em> or <em>scalability testing</em>) – to ensure the system can work under heavy load.</li>
+                        <li><em>Security testing</em> – to test how secure the system is.</li>
+                        <li><em>Compatibility testing, interoperability testing</em> – to check whether the system can work with other systems.</li>
+                        <li><em>Usability testing</em> – to test how easy it is to use the system.</li>
+                        <li><em>Portability testing</em> – to test whether the system works on different platforms.</li>
+                      </ul>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </panel><br><br>
+            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+            <div class="indented">
+              <div>
+                <p>Explain what system tests are. Give examples from your own project.</p>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W11.4f</code></span></big> <span><span class="fas fa-trophy"></span> Can explain automated GUI testing</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+          <div class="indented">
+            <panel minimized="">
+              <span slot="header" class="card-title">Details of the LO</span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Test Automation →
+                      </span></strong></span></p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="automated-testing-of-guis">Automated Testing of GUIs</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p>If a software product has a GUI component, all product-level testing (i.e. the types of testing mentioned above) need to be done using the GUI. However, <strong>testing the GUI is much harder than testing the CLI (command line interface) or API</strong>, for the following reasons:</p>
+                      <ul>
+                        <li>Most GUIs can support a large number of different operations, many of which can be performed in any arbitrary order.</li>
+                        <li>GUI operations are more difficult to automate than API testing. Reliably automating GUI operations and automatically verifying whether the GUI behaves as expected is harder than calling an operation and comparing its return value with an expected value. Therefore, automated regression testing of GUIs is rather difficult.</li>
+                        <li>The appearance of a GUI (and sometimes even behavior) can be different across platforms and even environments. For example, a GUI can behave differently based on whether it is minimized or maximized, in focus or out of focus, and in a high resolution display or a low resolution display.</li>
+                      </ul>
+                      <img src="/website/book/testing/testAutomation/testingGuis/images/diagram.png" height="120">
+                      <p></p>
+                      <p><strong>One approach to overcome the challenges of testing GUIs is to minimize logic aspects in the GUI.</strong> Then, bypass the GUI to test the rest of the system using automated API testing. While this still requires the GUI to be tested manually, the number of such manual test cases can be reduced as most of the system has been tested using automated API testing.</p>
+                      <p><strong>There are testing tools that can automate GUI testing.</strong></p>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> Some tools used for automated GUI testing:</p>
+                        <ul>
+                          <li>
+                            <p><strong>TestFx</strong> can do automated testing of JavaFX GUIs<br></p>
+                          </li>
+                          <li>
+                            <p><strong>VisualStudio</strong> supports ‘record replay’ type of GUI test automation.</p>
+                          </li>
+                          <li>
+                            <p><a href="http://seleniumhq.org/"><strong>Selenium</strong></a> can be used to automate testing of Web application UIs<br></p>
+                            <panel type="seamless" header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span> demo video of automated testing of a Web application" class="non-printable">
+                              <p>This video shows automated testing of the <a href="http://github.com/teammates/teammates">TEAMMATES</a> Web app using Selenium</p>
+                              <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/ihst69Zq1xM" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                            </panel>
+                          </li>
+                        </ul>
+                      </tip-box>
+                    </div>
+                    <div>
+                      <div>
+                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> API testing vs GUI testing">
+                              <question>
+                                <p>GUI testing is usually easier than API testing because it doesn’t require any extra coding.</p>
+                                <ul radio-group="dc574" class="radio-list">
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="dc574" type="radio"> True</label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="dc574" type="radio"> False</label></li>
+                                </ul>
+                                <div slot="answer">
+                                  <p>False</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </panel><br><br>
+            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+            <div class="indented">
+              <div>
+                <p>Why is automated testing of GUIs is hard? What can we do about it?</p>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W11.4g</code></span></big> <span><span class="fas fa-trophy"></span> Can explain acceptance testing</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span></span>
+          <div class="indented">
+            <panel minimized="">
+              <span slot="header" class="card-title">Details of the LO</span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Acceptance Testing →
+                      </span></strong></span></p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="what-8">What</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p><strong><em>Acceptance testing</em> (aka <em>User Acceptance Testing (UAT)</em>): test the delivered system to ensure it meets the user requirements.</strong></p>
+                      <p>Acceptance tests give an assurance to the customer that the system does what it is intended to do. Acceptance test cases are often defined at the beginning of the project, usually based on the use case specification. Successful completion of UAT is often a prerequisite to the project sign-off.</p>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </panel><br><br>
+            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+            <div class="indented">
+              <div>
+                <p>Explain what acceptance tests are. Explain how acceptance testing of your project will be done.</p>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W11.4h</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the differences between system testing and acceptance testing</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+          <div class="indented">
+            <panel minimized="">
+              <span slot="header" class="card-title">Details of the LO</span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Acceptance Testing →
+                      </span></strong></span></p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="acceptance-vs-system-testing">Acceptance vs System Testing</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p>Acceptance testing comes after system testing. Similar to system testing, acceptance testing involves testing the whole system.</p>
+                      <p>Some differences between system testing and acceptance testing:</p>
+                      <div class="table-responsive">
+                        <table class="markbind-table table table-bordered table-striped">
+                          <thead>
+                            <tr>
+                              <th style="text-align:left">System Testing</th>
+                              <th style="text-align:left">Acceptance Testing</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td style="text-align:left">Done against the system specification</td>
+                              <td style="text-align:left">Done against the requirements specification</td>
+                            </tr>
+                            <tr>
+                              <td style="text-align:left">Done by testers of the project team</td>
+                              <td style="text-align:left">Done by a team that represents the customer</td>
+                            </tr>
+                            <tr>
+                              <td style="text-align:left">Done on the development environment or a test bed</td>
+                              <td style="text-align:left">Done on the deployment site or on a close simulation of the deployment site</td>
+                            </tr>
+                            <tr>
+                              <td style="text-align:left">Both negative and positive test cases</td>
+                              <td style="text-align:left">More focus on positive test cases</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <p><span class="dimmed">Note: <em>negative</em> test cases: cases where the SUT is not expected to work normally e.g. incorrect inputs; <em>positive</em> test cases: cases where the SUT is expected to work normally</span></p>
+                      <tip-box>
+                        <p><strong>Requirement Specification vs System Specification</strong></p>
+                        <p>The requirement specification need not be the same as the system specification. Some example differences:</p>
+                        <div class="table-responsive">
+                          <table class="markbind-table table table-bordered table-striped">
+                            <thead>
+                              <tr>
+                                <th style="text-align:left">Requirements Specification</th>
+                                <th style="text-align:left">System Specification</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td style="text-align:left">limited to how the system behaves in normal working conditions</td>
+                                <td style="text-align:left">can also include details on how it will fail gracefully when pushed beyond limits, how to recover, etc. specification</td>
+                              </tr>
+                              <tr>
+                                <td style="text-align:left">written in terms of problems that need to be solved (e.g. provide a method to locate an email quickly)</td>
+                                <td style="text-align:left">written in terms of how the system solve those problems (e.g. explain the email search feature)</td>
+                              </tr>
+                              <tr>
+                                <td style="text-align:left">specifies the interface available for intended end-users</td>
+                                <td style="text-align:left">could contain additional APIs not available for end-users (for the use of developers/testers)</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <p>However, <strong>in many cases one document serves as both a requirement specification and a system specification.</strong></p>
+                      </tip-box>
+                      <p><strong>Passing system tests does not necessarily mean passing acceptance testing.</strong> Some examples:</p>
+                      <ul>
+                        <li>The system might work on the testbed environments but might not work the same way in the deployment environment, due to subtle differences between the two environments.</li>
+                        <li>The system might conform to the system specification but could fail to solve the problem it was supposed to solve for the user, due to flaws in the system design.</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div>
+                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Statements about system testing and acceptance testing.">
+                              <question>
+                                <p>Choose the correct statements about system testing and acceptance testing.</p>
+                                <ul class="task-list">
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Both system testing and acceptance testing typically involve the whole system.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. System testing is typically more extensive than acceptance testing.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. System testing can include testing for non-functional qualities.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Acceptance testing typically has more user involvement than system testing.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. In smaller projects, the developers may do system testing as well, in addition to developer testing.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> f. If system testing is adequately done, we need not do acceptance testing.</li>
+                                </ul>
+                                <div slot="answer">
+                                  <p>(a)(b)(c)(d)(e)<s>(f)</s></p>
+                                  <p>Explanation:</p>
+                                  <p>(b) is correct because system testing can aim to cover all specified behaviors and can even go beyond the system specification. Therefore, system testing is typically more extensive than acceptance testing.</p>
+                                  <p>(f) is incorrect because it is possible for a system to pass system tests but fail acceptance tests.</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </panel><br><br>
+            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+            <div class="indented">
+              <div>
+                <p>Explain the difference between system tests and acceptance tests. Explain why both are needed.</p>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W11.4i</code></span></big> <span><span class="fas fa-trophy"></span> Can explain alpha and beta testing</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+          <div class="indented">
+            <panel minimized="">
+              <span slot="header" class="card-title">Details of the LO</span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Alpha/Beta Testing →
+                      </span></strong></span></p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="what-9">What</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p><strong><em>Alpha testing</em> is performed by the users, under controlled conditions set by the software development team.</strong></p>
+                      <p><strong><em>Beta testing</em> is performed by a selected subset of target users of the system in their natural work setting.</strong></p>
+                      <p>An <em>open beta release</em> is the release of not-yet-production-quality-but-almost-there software to the general population. For example, Google’s Gmail was in 'beta' for many years before the label was finally removed.</p>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </panel><br><br>
+            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+            <div class="indented">
+              <div>
+                <p>Explain alpha and beta testing. How can you do alpha and beta testing in your project?</p>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W11.5b</code></span></big> <span><span class="fas fa-trophy"></span> Can use intermediate features of JUnit</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+          <div class="indented">
+            <panel minimized="">
+              <span slot="header" class="card-title">Details of the LO</span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Tools → JUnit →
+                      </span></strong></span></p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="junit-intermediate">JUnit: Intermediate</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p>Some intermediate JUnit techniques that may be useful:</p>
+                      <ul>
+                        <li><strong>It is possible for a <a href="https://github.com/junit-team/junit4/wiki/Exception-testing">JUnit test case to verify if the SUT throws the right exception</a></strong>.</li>
+                        <li><strong><a href="https://github.com/junit-team/junit4/wiki/Rules">JUnit <em>Rules</em></a> are a way to add additional behavior to a test.</strong> e.g. to make a test case use a temporary folder for storing files needed for (or generated by) the test.</li>
+                        <li><strong>It is possible to <a href="https://www.mkyong.com/unittest/junit-4-tutorial-1-basic-usage/">write methods thar are automatically run before/after a test method/class</a></strong>. These are useful to do pre/post cleanups for example.</li>
+                        <li><strong><a href="http://www.artima.com/suiterunner/private.html">Testing private methods is possible, although not always necessray</a></strong></li>
+                      </ul>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </panel><br><br>
+            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+            <div class="indented">
+              <div>
+                <p>Use the mentioned features in the project.</p>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W11.6b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain validation and verification</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+          <div class="indented">
+            <panel minimized="">
+              <span slot="header" class="card-title">Details of the LO</span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Quality Assurance → Quality Assurance → Introduction →
+                      </span></strong></span></p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="validation-vs-verification">Validation vs Verification</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p><strong>Quality Assurance = Validation + Verification</strong></p>
+                      <p>QA involves checking two aspects:</p>
+                      <ol>
+                        <li>Validation: are we <em>building the right system</em> i.e., are the requirements correct?</li>
+                        <li>Verification: are we <em>building the system right</em> i.e., are the requirements implemented correctly?</li>
+                      </ol>
+                      <p>Whether something belongs under validation or verification is not that important. What is more important is both are done, instead of limiting to verification (i.e., remember that the requirements can be wrong too).</p>
+                    </div>
+                    <div>
+                      <div>
+                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> statements about validation and verification.">
+                              <question>
+                                <p>Choose the correct statements about validation and verification.</p>
+                                <ul class="task-list">
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Validation: Are we building the right product?, Verification: Are we building the product right?</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. It is very important to clearly distinguish between validation and verification.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. The important thing about validation and verification is to remember to pay adequate attention to both.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Developer-testing is more about verification than validation.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. QA covers both validation and verification.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> f. A system crash is more likely to be a verification failure than a validation failure.</li>
+                                </ul>
+                                <div slot="answer">
+                                  <p>(a)<s>(b)</s>(c)(d)(e)(f)</p>
+                                  <p>Explanation:</p>
+                                  <p>Whether something belongs under validation or verification is not that important. What is more important is that we do both.</p>
+                                  <p>Developer testing is more about bugs in code, rather than bugs in the requirements.</p>
+                                  <p>In QA, system testing is more about verification (does the system follow the specification?) and acceptance testings is more about validation (does the system solve the user’s problem?).</p>
+                                  <p>A system crash is more likely to be a bug in the code, not in the requirements.</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </panel><br><br>
+            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+            <div class="indented">
+              <div>
+                <p>Explain validations and verification with concrete examples from the project.</p>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W11.6c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain code reviews</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+          <div class="indented">
+            <panel minimized="">
+              <span slot="header" class="card-title">Details of the LO</span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Quality Assurance → Quality Assurance → Code Reviews →
+                      </span></strong></span></p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="what-10">What</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p><strong>Code review is the systematic examination code with the intention of finding where the code can be improved.</strong></p>
+                      <p>Reviews can be done in various forms. Some examples below:</p>
+                      <ul>
+                        <li>
+                          <p><strong>In <trigger trigger="click" for="modal:codeReview-pairProgramming">pair programming</trigger></strong></p>
+                          <ul>
+                            <li>As pair programming involves two programmers working on the same code at the same time, there is an implicit review of the code by the other member of the pair.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <modal large="" title="Pair Programming" id="modal:codeReview-pairProgramming">
+                        <tip-box type="definition">
+                          <div>
+                            <p><strong>Pair Programming</strong>:</p>
+                            <blockquote>
+                              <p>Pair programming is an agile software development technique in which two programmers work together at one workstation. One, the driver, writes code while the other, the observer or navigator, reviews each line of code as it is typed in. The two programmers switch roles frequently. <sub>[<a href="https://en.wikipedia.org/wiki/Pair_programming">source: Wikipedia</a>]</sub></p>
+                            </blockquote>
+                          </div>
+                        </tip-box>
+                        <p><img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Pair_programming_1.jpg" width="400"><br>
+                          <sub>[<a href="https://en.wikipedia.org/wiki/Pair_programming">image credit: Wikipedia</a>]</sub></p>
+                        <p><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> A good introduction to pair programming:</p>
+                        <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/ET3Q6zNK3Io" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                      </modal>
+                      <ul>
+                        <li>
+                          <p><strong>Pull Request reviews</strong></p>
+                          <ul>
+                            <li>Project Management Platforms such as GitHub and BitBucket allows the new code to be proposed as Pull Requests and provides the ability for others to review the code in the PR.</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <p><strong>Formal inspections</strong></p>
+                          <ul>
+                            <li>
+                              <p>Inspections involve a group of people systematically examining a project artifacts to discover defects. Members of the inspection team play various roles during the process, such as:</p>
+                              <ul>
+                                <li>the author - the creator of the artifact</li>
+                                <li>the moderator - the planner and executor of the inspection meeting</li>
+                                <li>the secretary - the recorder of the findings of the inspection</li>
+                                <li>the inspector/reviewer - the one who inspects/reviews the artifact.</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <p>Advantages of code reviews over testing:</p>
+                      <ul>
+                        <li>It can detect functionality defects as well as other problems such as coding standard violations.</li>
+                        <li>Can verify non-code artifacts and incomplete code</li>
+                        <li>Do not require test drivers or stubs.</li>
+                      </ul>
+                      <p>Disadvantages:</p>
+                      <ul>
+                        <li>It is a manual process and therefore, error prone.</li>
+                      </ul>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </panel><br><br>
+            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+            <div class="indented">
+              <div>
+                <p>Review PRs in the project.</p>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W11.6d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain static analysis</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+          <div class="indented">
+            <panel minimized="">
+              <span slot="header" class="card-title">Details of the LO</span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Quality Assurance → Quality Assurance → Static Analysis →
+                      </span></strong></span></p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="what-11">What</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <tip-box type="definition">
+                        <div>
+                          <p><strong>Static analysis</strong>: Static analysis is the analysis of code without actually executing the code.</p>
+                        </div>
+                      </tip-box>
+                      <p>Static analysis of code can find useful information such unused variables, unhandled exceptions, style errors, and statistics. Most modern IDEs come with some inbuilt static analysis capabilities. For example, an IDE can highlight unused variables as you type the code into the editor.</p>
+                      <p>Higher-end static analyzer tools can perform for more complex analysis such as locating potential bugs, memory leaks, inefficient code structures etc.</p>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> Some example static analyzer for Java:</p>
+                        <ul>
+                          <li><a href="http://checkstyle.sourceforge.net/">CheckStyle</a></li>
+                          <li><a href="http://findbugs.sourceforge.net/">PMD</a></li>
+                          <li><a href="https://pmd.github.io/">FindBugs</a></li>
+                        </ul>
+                      </tip-box>
+                      <p><em>Linters</em> are a subset of static analyzers that specifically aim to locate areas where the code can be made 'cleaner'.</p>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </panel><br><br>
+            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span></p>
+            <div class="indented">
+              <div>
+                <p>Explain how static analysis is used in the project.</p>
               </div>
             </div>
           </div>
@@ -303,56 +1301,9 @@ git pull origin master
     <p><span class="activity-desc">🅿️ Project</span></p>
     <div class="indented">
       <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W12.1</code> <strong>Can work with a 2KLoC code base</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+        <span slot="header" class="card-title"><span><code>W12.1</code> <strong>Can build a 1-2 KLoC program</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
         <div>
-          <tip-box type="important">
-              This LO requires coordination and cooperation among team members. It also requires a few days to complete; we recommend that you start it early in the week rather than just before the tutorial day.
-          </tip-box>
-          <p>This LO can earn you 2 participation marks, 1 mark for the individual component and 1 for the team component. You can omit either one of them.</p>
-          <p>💡 When working with existing code, a safe approach is to <strong>change the code in very small steps, each resulting in a verifiable change</strong> without breaking the app. For example, when adding a new <code>sort</code> command, the first few steps can be,</p>
-          <ol>
-            <li>Teach the app to accept a <code>sort</code> command but ignore it.</li>
-            <li>Next, teach the app to direct the <code>sort</code> command to an existing command e.g. <code>sort</code> command simply invokes the <code>list</code> command internally.</li>
-            <li>Add a <code>SortCommand</code> class but make it simply a copy of the the existing <code>ListCommand</code>. Direct the <code>sort</code> command to the new <code>SortCommand</code>.</li>
-            <li>...</li>
-          </ol>
-          <p>💡 Note that you can reuse the code you write here in your final project, if applicable.</p>
-          <h4 id="individual-component">Individual component:</h4>
-          <p><strong>Requirements</strong>: Do an enhancement to [<a href="https://github.com/nus-tic2002-2018/addressbook-level2">AddressBook - Level2</a>] <span class="dimmed">e.g. add a new command</span>. It can be the same enhancement you did to AddressBook Level1 (at the 1KLoC milestone in week 3). The size of the enhancement does not matter but you must,</p>
-          <ul>
-            <li>update the User Guide</li>
-            <li>update existing tests and add new tests if necessary, for both JUnit tests and I/O tests</li>
-            <li>follow the coding standard</li>
-            <li>follow the OOP style</li>
-          </ul>
-          <p>Optional but encouraged:</p>
-          <ul>
-            <li>Update the Developer Guide</li>
-          </ul>
-          <div>
-            <p><strong>Submission</strong>:</p>
-            <ul>
-              <li>Options 1 (discouraged): Show the relevant code during the tutorial.</li>
-              <li>Options 2 (preferred): Create a pull request by following the instructions below.</li>
-            </ul>
-            <p>
-              <panel src="/website\admin\appendixE-gitHub._include_.html#tutorial-pr-instructions" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Appendix E: Using GitHub Project Hosting → Submitting Pull Requests as evidence of an LO%%" fragment="tutorial-pr-instructions"></panel>
-            </p>
-            <p>If you choose option 2, we recommend that you complete this week's <em>Project Management</em> LOs first; there are many ways to create PRs but we expect you to create PRs in a specific way, as specified in the LOs.</p>
-          </div>
-          <h4 id="team-component">Team component:</h4>
-          <p>The team component is <mark>to be done by all members</mark>, including those who didn't do the individual component.</p>
-          <ul>
-            <li>
-              <p>Review PRs created by team members in the <em>Individual Component</em> above <span class="dimmed">i.e. add review comments in the PR created against module repo</span>. You can either give suggestions to improve, or ask questions to understand, the code written by the team member.</p>
-            </li>
-            <li>
-              <p><strong>Requirements</strong>: Try to ensure that each PR reviewed by <em>at least</em> one team member and each team member's PR is reviewed by at least one other team member.</p>
-            </li>
-            <li>
-              <p><strong>Submission</strong>: Just update PR created in the individual component by adding comments/commits to it.</p>
-            </li>
-          </ul>
+          <p>Complete the project as specified.</p>
         </div>
       </panel>
     </div>
