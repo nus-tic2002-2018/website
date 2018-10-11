@@ -155,7 +155,7 @@ head: scheduleHead.md
       {location: ["cppToJava", "misc", "constants"], omit_evidence: true},
     {heading: "Can use Java enumerations"},
       {location: ["oop", "classes", "enumerations"], omit_evidence: true},
-      {location: ["javaTools", "enums"]},
+      {location: ["cppToJava", "misc", "enums"]},
   {heading: "Can read/write files using Java"},
       {location: ["cppToJava", "misc", "fileAccess"]},
   {name: "Design"},
