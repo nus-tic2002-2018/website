@@ -1,4 +1,4 @@
-<panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> TaskManager Level 6">
+<panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> TaskManager Level 6 - **Make the codoe more OOP**">
   <div id="body">
     <p>
       <panel type="seamless" src="/website\book\cppToJava\project\taskManager\q-taskManagerLevel1._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L1" minimized="" fragment="main"></panel>
@@ -34,7 +34,7 @@ storage.save(tasks);
 ...
 ui.showWelcomeMessage();
 ...
-Sting fullCommand = ui.readUserCommand();
+String fullCommand = ui.readUserCommand();
 </code></pre>
           <p>Note: The <code>Scanner</code> object should be inside the <code>Ui</code> class.</p>
         </li>
@@ -45,7 +45,7 @@ Sting fullCommand = ui.readUserCommand();
 t = Parser.createTodo(fullCommand);
 tasks.addTask(t);
 ...
-Sting taskListDescription = tasks.getDescription();
+String taskListDescription = tasks.getDescription();
 ui.showToUser(taskListDescription);
 </code></pre>
         </li>
