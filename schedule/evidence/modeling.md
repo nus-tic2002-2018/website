@@ -28,8 +28,6 @@ Able to explain the class diagram of the [[AddressBook-Level2]({{module_org}}/ad
 
 <include src="../../book/modeling/modelingBehaviors/sequenceDiagramsBasic/q-essay-drawSequenceDiagramForPerson.md" />
 
-**Submission**: Show during tutorial.
-
 </div>
 
 
