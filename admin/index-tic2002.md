@@ -147,11 +147,11 @@ The project is divided into two phases:
 
 </panel><p/>
 
-### Week 7-10: First stage
+### Week 7-9: First stage
 
 <div id="project-week7">
 
-##### Project kick-off (Week 7 Tuesday)
+#### Week 7: Project kick-off
 
 <div class="indented">
 
@@ -167,46 +167,61 @@ The project is divided into two phases:
 
 ##### After the project kickoff
 
-<div class="indented">
+* **if you chose option 1** %%(i.e., enhancing TaskManager)%%, given below are some further improvements you are recommended to do to your code base, while you are adding other features.<br>
+  **If you chose option 2 or 3**, you should still ensure you have similar enhancements in your code.
 
-* **if you chose option 1** %%(i.e., enhancing TaskManager)%%, given below are some further improvements you are recommended to do to your code base, while you are adding other features.
-* **If you chose option 2 or 3**, you should still ensure you have similar enhancements in your code.
-
-<panel header="Improve OOP, add JUnit tests" >
-
-Enhance your TaskManager program as explained in the exercises below:
-
-<include src="../book/cppToJava/project/taskManager/q-taskManagerLevel6.md" />
-<include src="../book/cppToJava/project/taskManager/q-taskManagerLevel7.md" />
-
-</panel><p/>
-
+<div class="indented-level2">
+  <include src="../book/cppToJava/project/taskManager/q-taskManagerLevel6.md" />
+  <include src="../book/cppToJava/project/taskManager/q-taskManagerLevel7.md" />
 </div>
+<br>
 
 </div>
 <div id="project-week8">
 
-##### Week 8
+#### Week 8
 
-<div class="indented">
+* As in the previous week, enhance your project (TaskManager or otherwise) as explained in the exercises below:
 
-As in the previous week, enhance your project (TaskManager or otherwise) as explained in the exercise below:
-
-<panel header="Use packages, javadocs" >
+<div class="indented-level2">
   <include src="../book/cppToJava/project/taskManager/q-taskManagerLevel8.md" />
   <include src="../book/cppToJava/project/taskManager/q-taskManagerLevel9.md" />
-</panel>
+</div>
+<br>
 
 </div>
+<div id="project-week9">
+
+#### Week 9
+
+* Enhance your project (TaskManager or otherwise) as explained in the exercise below:
+
+<div class="indented-level2">
+  <include src="../book/cppToJava/project/taskManager/q-taskManagerLevel10.md" />
+</div>
+<br>
+
+* Recommended (but not required): **Improve the code quality** of your code by applying the practices taught in the module.
+
+
 </div>
 
-### Week 10: mid-project check point
+<div id="project-week10">
+
+#### Week 10: mid-project check point
 
 **Deadline**: week 10 lecture<br>
 **Marks:** 10, if you show a satisfactory level in the items below
 
+1. Create a GitHub account. Create a repository under your account and push our code to it.
 1. Demo the current state of the project to prof during the week 10 lecture session. There should be some working features at this point.
-1. Submit interim project documents by week 10 lecture (more details to come)
+1. Submit interim project documents (handover a hard copy during lecture 10 or upload to IVLE before lecture 10). The document should contain,
+   * URL of your GitHub repo
+   * Some representative user stories for the product
+   * A class diagram to match your code %%(scans of hand-drawn diagrams are acceptable too)%%
+   * At least one object diagram illustrating the state of your program at some point<br><br>
+
+</div>
 
 ### Week 13: Submission and demo
 
@@ -222,9 +237,7 @@ As in the previous week, enhance your project (TaskManager or otherwise) as expl
     * At least one object diagram illustrating the state of your program at some point
     * At least one sequence diagram illustrating an object interaction in your product
     * Some representative user stories
-    * At least one use case related to your product
-    * Some Non Functional Requirements for the product
-    * Instructions to test the product
+    * Instructions for testing the product
 * Project demo: to be done during week 13 lecture session.
 
 More details coming soon.
