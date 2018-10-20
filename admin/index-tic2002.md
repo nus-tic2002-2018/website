@@ -206,9 +206,9 @@ The project is divided into two phases:
 
 </div>
 
-<div id="project-week10">
+<div id="project-midProjectCheckPoint">
 
-#### Week 10: mid-project check point
+#### Week 10: mid-project checkpoint
 
 **Deadline**: week 10 lecture<br>
 **Marks:** 10, if you show a satisfactory level in the items below
@@ -220,6 +220,17 @@ The project is divided into two phases:
    * Some representative user stories for the product
    * A class diagram to match your code %%(scans of hand-drawn diagrams are acceptable too)%%
    * At least one object diagram illustrating the state of your program at some point<br><br>
+</div>
+
+<div id="project-week10">
+
+**After the mid-project checkpoint,**
+* Enhance your project (TaskManager or otherwise) as explained in the exercise below:
+
+<div class="indented-level2">
+  <include src="../book/cppToJava/project/taskManager/q-taskManagerLevel11.md" />
+</div>
+<br>
 
 </div>
 
@@ -229,18 +240,19 @@ The project is divided into two phases:
 **Marks**: 45 (25 for the product, 20 for the documentation)
 
 **Deliverables**:
-* Source code of the working program
-* Project documentation:
-  * A brief user guide
-  * A developer guide containing
+* **Source code** of the working program
+  * Submission: zip up the source code and upload to IVLE. The file name should be your name. e.g., `JunHao.zip`
+* **Project documentation**: a single pdf or a Word file containing,
+  * A **Cover Page** containing your details and the link to your GitHub repository
+  * A **User Guide**: explain how to start and use your product ([example](https://se-edu.github.io/addressbook-level2/UserGuide.html)).
+  * A **Developer Guide** containing
     * A class diagram to match your code
     * At least one object diagram illustrating the state of your program at some point
     * At least one sequence diagram illustrating an object interaction in your product
     * Some representative user stories
-    * Instructions for testing the product
-* Project demo: to be done during week 13 lecture session.
-
-More details coming soon.
+    * Additional instructions for testing the product (if any) %%i.e., is there any additional steps (such as putting a specific file in a specific location) that one needs to do when testing your product manually?%%
+    * Submission: Upload to IVLE. The file name should be your name e.g., `JunHao.pdf`
+* **Project demo**: to be done during week 13 lecture session. More details will be given closer to the date.
 
 </div>
 

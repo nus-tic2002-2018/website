@@ -53,6 +53,14 @@ Enhance your TaskManager program as explained in the exercise below:
 
 </div>
 
+<div id="midProjectCheckPoint">
+
+%%**Extract from the [_Admin Info_ page](../../admin/index-tic2002.html#project-midProjectCheckPoint):**%%
+
+<include src="../../admin/index-tic2002.md#project-midProjectCheckPoint" />
+
+</div>
+
 <div id="week10">
 
 %%**Extract from the [_Admin Info_ page](../../admin/index-tic2002.html#project-week10):**%%
