@@ -38,6 +38,7 @@
         "week-8": "Week 8",
         "week-9": "Week 9",
         "week-10-mid-project-checkpoint": "Week 10: mid-project checkpoint",
+        "week-11": "Week 11",
         "week-13-submission-and-demo": "Week 13: Submission and demo",
         "tools": "Tools",
         "assessment": "Assessment",
@@ -224,6 +225,7 @@
         "constants": "Constants",
         "casting": "Casting",
         "file-access": "File Access",
+        "using-jar-files": "Using JAR Files",
         "miscellaneous-topics": "Miscellaneous Topics",
         "c-to-java": "C++ to Java"
       },

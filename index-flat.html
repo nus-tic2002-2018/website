@@ -742,7 +742,7 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
                           <ul>
                             <li>The object <code>O</code> itself</li>
                             <li>Objects passed as parameters of <code>m</code></li>
-                            <li>Objects created/instantiated in <code>m</code></li>
+                            <li>Objects created/instantiated in <code>m</code> (directly or indirectly)</li>
                             <li>Objects from the <tooltip content="objects that are held by instance variables of">direct association of</tooltip> <code>O</code></li>
                           </ul>
                           <tip-box>
@@ -753,9 +753,8 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
 }
 </code></pre>
                           </tip-box>
-                          <p><strong>LoD aims to reduce coupling by limiting the interaction to a closely related group of classes.</strong></p>
+                          <p><strong>LoD aims to prevent objects navigating internal structures of other objects.</strong></p>
                           <tip-box>
-                            <p><span class="fas fa-cube"></span> In the example above, <code>foo</code> is already coupled to <code>Bar</code>. Upholding LoD avoids <code>foo</code> being coupled to <code>Goo</code> as well.</p>
                             <p><span class="fas fa-cube"></span> An analogy for LoD can be drawn from Facebook. If Facebook followed LoD, you would not be allowed to see posts of friends of friends, unless they are your friends as well. If Jake is your friend and Adam is Jake’s friend, you should not be allowed to see Adam’s posts unless Adam is a friend of yours as well.</p>
                           </tip-box>
                         </div>
@@ -2349,7 +2348,7 @@ Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueE
                               <panel type="seamless" src="/website\book\cppToJava\project\taskManager\q-taskManagerLevel7._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L7" minimized="" fragment="main"></panel>
                               <panel type="seamless" src="/website\book\cppToJava\project\taskManager\q-taskManagerLevel8._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L8" minimized="" fragment="main"></panel>
                               <panel type="seamless" src="/website\book\cppToJava\project\taskManager\q-taskManagerLevel9._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L9" minimized="" fragment="main"></panel>
-                              <panel type="seamless" src="/website\book\cppToJava\project\taskManager\q-taskManagerLevel10._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L9" minimized="" fragment="main"></panel>
+                              <panel type="seamless" src="/website\book\cppToJava\project\taskManager\q-taskManagerLevel10._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L10" minimized="" fragment="main"></panel>
                             </p>
                             <p><span class="dimmed">This exercise continues from the <code>TaskManager Level 1-10</code> exercises quoted above.</span></p>
                             <div id="main">
@@ -3262,7 +3261,7 @@ What%%"></panel>
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.13.0</a> at Wed, 24 Oct 2018 08:23:56 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.13.0</a> at Sun, 28 Oct 2018 14:53:32 GMT</small></div>
 </footer>
 </div>
 </body>
