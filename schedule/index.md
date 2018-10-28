@@ -373,6 +373,8 @@ head: scheduleHead.md
       {location: ["qualityAssurance", "codeReviews", "what"]},
       {location: ["qualityAssurance", "staticAnalysis", "what"]},
       {location: ["qualityAssurance", "formalVerification", "what"], omit_evidence: true},
+  {name: ":parking: Project"},
+    {heading: "Package the app as a JAR file", priority: "3", file: "project.md#week11"},
 {week: "12"},
   {name: ":parking: Project"},
     {heading: "Can build a 1-2 KLoC program", priority: "1", file: "project.md#week12"},

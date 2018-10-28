@@ -233,6 +233,18 @@ The project is divided into two phases:
 <br>
 
 </div>
+<div id="project-week11">
+
+#### Week 11
+
+* Enhance your project (TaskManager or otherwise) as explained in the exercise below:
+
+<div class="indented-level2">
+  <include src="../book/cppToJava/project/taskManager/q-taskManagerLevel12.md" />
+</div>
+
+</div>
+<br>
 
 ### Week 13: Submission and demo
 
@@ -241,7 +253,7 @@ The project is divided into two phases:
 
 **Deliverables**:
 * **Source code** of the working program
-  * Submission: zip up the source code and upload to IVLE. The file name should be your name. e.g., `JunHao.zip`
+  * Submission: zip up the source code and upload to IVLE. The file name should be your name. e.g., `JunHao.zip` If you manage to create a JAR file, upload it as a separate file, named similarly e.g., `JunHao.jar`
 * **Project documentation**: a single pdf or a Word file containing,
   * A **Cover Page** containing your details and the link to your GitHub repository
   * A **User Guide**: explain how to start and use your product ([example](https://se-edu.github.io/addressbook-level2/UserGuide.html)).
@@ -252,7 +264,10 @@ The project is divided into two phases:
     * Some representative user stories
     * Additional instructions for testing the product (if any) %%i.e., is there any additional steps (such as putting a specific file in a specific location) that one needs to do when testing your product manually?%%
     * Submission: Upload to IVLE. The file name should be your name e.g., `JunHao.pdf`
-* **Project demo**: to be done during week 13 lecture session. More details will be given closer to the date.
+* **Project demo**: to be done during week 13 lecture session.
+  * Demo schedule will be given closer to the date.
+  * When it is your turn, demo the features of your product using the jar file (preferred) or the IDE.
+  * The demo should take no more than 8 minutes.
 
 </div>
 
