@@ -1,0 +1,42 @@
+2018-10-30T05:12:09.329Z - info: Website generation started at 13:11:55
+2018-10-30T05:13:07.163Z - info: Building assets...
+2018-10-30T05:13:26.640Z - info: Assets built
+2018-10-30T05:13:26.640Z - info: Generating pages...
+2018-10-30T05:14:36.184Z - info: Pages built
+2018-10-30T05:14:37.185Z - info: Site data built
+2018-10-30T05:14:37.185Z - info: Website generation complete! Total build time: 161.498s
+2018-10-30T05:14:37.216Z - info: Generate Site durationMs=161529
+2018-10-30T05:14:37.812Z - info: Serving "C:\repos\nus-tic2002-2018\website\_site" at http://127.0.0.1:8080
+2018-10-30T05:14:37.812Z - info: Press CTRL+C to stop ...
+2018-10-30T05:46:23.251Z - info: [13:46:23] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\index.md
+2018-10-30T05:46:24.313Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\schedule\index.md
+2018-10-30T05:46:24.329Z - info: Rebuilding 2 pages
+2018-10-30T05:47:04.058Z - info: Website generation started at 13:46:59
+2018-10-30T05:47:50.828Z - info: Building assets...
+2018-10-30T05:48:04.549Z - info: Assets built
+2018-10-30T05:48:04.550Z - info: Generating pages...
+2018-10-30T05:49:22.338Z - info: Pages built
+2018-10-30T05:49:23.489Z - info: Site data built
+2018-10-30T05:49:23.505Z - info: Website generation complete! Total build time: 144.241s
+2018-10-30T05:49:23.505Z - info: Generate Site durationMs=144241
+2018-10-30T05:49:24.083Z - info: Serving "C:\repos\nus-tic2002-2018\website\_site" at http://127.0.0.1:8080
+2018-10-30T05:49:24.083Z - info: Press CTRL+C to stop ...
+2018-10-30T05:52:55.342Z - info: [13:52:55] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\index.md
+2018-10-30T05:52:55.358Z - info: [13:52:55] Reload for file change: C:\repos\nus-tic2002-2018\website\se-book-adapted\config.njk
+2018-10-30T05:52:56.360Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\schedule\index.md
+2018-10-30T05:52:56.360Z - info: Rebuilding 2 pages
+2018-10-30T05:52:56.585Z - info: Assets built
+2018-10-30T05:53:07.390Z - info: Pages rebuilt
+2018-10-30T05:53:07.408Z - info: Site data built
+2018-10-30T05:53:28.012Z - info: Website generation started at 13:53:25
+2018-10-30T05:53:31.315Z - info: Building assets...
+2018-10-30T05:53:36.359Z - info: Assets built
+2018-10-30T05:53:36.360Z - info: Generating pages...
+2018-10-30T05:54:32.508Z - info: Pages built
+2018-10-30T05:54:32.722Z - info: Site data built
+2018-10-30T05:54:32.723Z - info: Website generation complete! Total build time: 67.346s
+2018-10-30T05:54:32.733Z - info: Generate Site durationMs=67356
+2018-10-30T05:54:33.128Z - info: Serving "C:\repos\nus-tic2002-2018\website\_site" at http://127.0.0.1:8080
+2018-10-30T05:54:33.128Z - info: Press CTRL+C to stop ...
+2018-10-30T05:57:57.994Z - info: Website generation started at 13:57:55
+2018-10-30T05:58:01.284Z - info: Building assets...

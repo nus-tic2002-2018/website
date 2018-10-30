@@ -7,7 +7,8 @@
       "title": "Home",
       "footer": "footer.md",
       "head": "scheduleHead.md",
-      "src": "index.md"
+      "src": "index.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -50,7 +51,8 @@
       "footer": "footer.md",
       "head": "adminHead.md",
       "siteNav": "adminSiteNav-tic2002.md",
-      "src": "admin/index-tic2002.md"
+      "src": "admin/index-tic2002.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -58,7 +60,8 @@
       },
       "title": "About: Acknowledgements",
       "footer": "footer.md",
-      "src": "book/about/acknowledgements.md"
+      "src": "book/about/acknowledgements.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -67,7 +70,8 @@
       "title": "Software Engineering for Self-Directed Learners [TIC2002 Version]",
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
-      "src": "se-book-adapted/index.md"
+      "src": "se-book-adapted/index.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -92,7 +96,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/architecture.md"
+      "src": "se-book-adapted/chapters/architecture.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -133,7 +138,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/codeQuality.md"
+      "src": "se-book-adapted/chapters/codeQuality.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -233,7 +239,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/cppToJava.md"
+      "src": "se-book-adapted/chapters/cppToJava.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -245,7 +252,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/design.md"
+      "src": "se-book-adapted/chapters/design.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -258,7 +266,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/designApproaches.md"
+      "src": "se-book-adapted/chapters/designApproaches.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -270,7 +279,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/designFundamentals.md"
+      "src": "se-book-adapted/chapters/designFundamentals.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -297,7 +307,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/designPatterns.md"
+      "src": "se-book-adapted/chapters/designPatterns.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -319,7 +330,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/documentation.md"
+      "src": "se-book-adapted/chapters/documentation.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -336,7 +348,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/errorHandling.md"
+      "src": "se-book-adapted/chapters/errorHandling.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -353,7 +366,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/gatheringRequirements.md"
+      "src": "se-book-adapted/chapters/gatheringRequirements.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -377,7 +391,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/gitAndGithub.md"
+      "src": "se-book-adapted/chapters/gitAndGithub.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -390,7 +405,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/ides.md"
+      "src": "se-book-adapted/chapters/ides.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -409,7 +425,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/integration.md"
+      "src": "se-book-adapted/chapters/integration.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -426,7 +443,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/intellij.md"
+      "src": "se-book-adapted/chapters/intellij.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -439,7 +457,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/javaTools.md"
+      "src": "se-book-adapted/chapters/javaTools.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -451,7 +470,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/junit.md"
+      "src": "se-book-adapted/chapters/junit.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -492,7 +512,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/modeling.md"
+      "src": "se-book-adapted/chapters/modeling.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -535,7 +556,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/oop.md"
+      "src": "se-book-adapted/chapters/oop.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -553,7 +575,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/principles.md"
+      "src": "se-book-adapted/chapters/principles.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -576,7 +599,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/processModels.md"
+      "src": "se-book-adapted/chapters/processModels.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -592,7 +616,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/projectPlanning.md"
+      "src": "se-book-adapted/chapters/projectPlanning.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -608,7 +633,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/qualityAssurance.md"
+      "src": "se-book-adapted/chapters/qualityAssurance.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -621,7 +647,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/refactoring.md"
+      "src": "se-book-adapted/chapters/refactoring.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -635,7 +662,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/requirements.md"
+      "src": "se-book-adapted/chapters/requirements.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -655,7 +683,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/reuse.md"
+      "src": "se-book-adapted/chapters/reuse.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -678,7 +707,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/revisionControl.md"
+      "src": "se-book-adapted/chapters/revisionControl.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -690,7 +720,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/softwareEngineering.md"
+      "src": "se-book-adapted/chapters/softwareEngineering.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -710,7 +741,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/specifyingRequirements.md"
+      "src": "se-book-adapted/chapters/specifyingRequirements.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -721,12 +753,14 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/teamwork.md"
+      "src": "se-book-adapted/chapters/teamwork.md",
+      "layout": "default"
     },
     {
       "headings": {},
       "src": "se-book-adapted/chapters/test.md",
-      "title": ""
+      "title": "",
+      "layout": "default"
     },
     {
       "headings": {
@@ -755,7 +789,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/testCaseDesign.md"
+      "src": "se-book-adapted/chapters/testCaseDesign.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -780,7 +815,6 @@
         "automated-testing-of-cli-apps": "Automated Testing of CLI Apps",
         "test-automation-using-test-drivers": "Test Automation Using Test Drivers",
         "test-automation-tools": "Test Automation Tools",
-        "automated-testing-of-guis": "Automated Testing of GUIs",
         "test-automation": "Test Automation",
         "testing": "Testing"
       },
@@ -788,7 +822,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/testing.md"
+      "src": "se-book-adapted/chapters/testing.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -836,7 +871,8 @@
       "footer": "footer.md",
       "siteNav": "se-book-adapted-sitenav.md",
       "head": "bookHead.md",
-      "src": "se-book-adapted/chapters/uml.md"
+      "src": "se-book-adapted/chapters/uml.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -861,7 +897,8 @@
       },
       "title": "Definitions",
       "siteNav": "se-book-adapted-sitenav.md",
-      "src": "se-book-adapted/common/definitions.md"
+      "src": "se-book-adapted/common/definitions.md",
+      "layout": "default"
     },
     {
       "headings": {
@@ -869,14 +906,16 @@
       },
       "title": "Combined Exercises",
       "siteNav": "se-book-adapted-sitenav.md",
-      "src": "se-book-adapted/common/exercises.md"
+      "src": "se-book-adapted/common/exercises.md",
+      "layout": "default"
     },
     {
       "headings": {
         "combined-exercises": "Combined Exercises"
       },
       "src": "book/combined/exercises.md",
-      "title": ""
+      "title": "",
+      "layout": "default"
     }
   ]
 }

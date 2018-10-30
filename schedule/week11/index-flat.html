@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="..\..\markbind\css\bootstrap-glyphicons.min.css" >
     <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="..\..\markbind\layouts\default\styles.css">
     
     <link rel="stylesheet" href="/website/css/main.css">
     <link rel="stylesheet" href="/website/css/schedule.css">
@@ -1061,7 +1062,7 @@ java -jar Collate-TUI.jar collate from unused to collated/unused include java, f
         <p><span class="activity-desc">Implementation</span></p>
         <div class="indented">
           <panel no-close="" expanded="" no-switch="" expandable="false">
-            <span slot="header" class="card-title"><span><code>W11.3</code> <strong>Can get reuse benefits from frameworks, libraries, and platforms</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+            <span slot="header" class="card-title"><span><code>W11.3</code> <strong>Can explain frameworks, libraries, and platforms</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
             <br>
             <p><span class="dimmed"><strong>Reuse</strong></span></p>
             <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
@@ -1459,16 +1460,86 @@ java -jar Collate-TUI.jar collate from unused to collated/unused include java, f
               </div>
             </panel>
           </panel>
+          <panel no-close="" expanded="" no-switch="" expandable="false">
+            <span slot="header" class="card-title"><span><code>W11.4</code> <strong>Can use JAR files</strong> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+            <panel type="info" expanded="" no-close="" no-switch="" epxandable="false">
+              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.4a</code></span></big> <span><span class="fas fa-trophy"></span> Can use JAR files</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>C++ to Java → Miscellaneous Topics →
+                      </span></strong></span></p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="using-jar-files">Using JAR Files<a class="fa fa-anchor" href="#using-jar-files"></a></h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p><strong>Java applications are typically delivered as JAR (short for <em>Java Archive</em>) files.</strong> A JAR contains Java classes and other resources (icons, media files, etc.).</p>
+                      <p>An executable JAR file can be launched using the <code>java -jar</code> command.</p>
+                      <box>
+                        <p><span class="fas fa-cube"></span> <code>java -jar foo.jar</code> launches the <code>foo.jar</code> file.</p>
+                        <p><span class="fas fa-cube"></span> You can delete the Collate-GUI.jar from <a href="https://se-edu.github.io/collate/">https://se-edu.github.io/collate/</a> and run it using the command<code>java -jar Collate-GUI.jar</code> command.</p>
+                      </box>
+                      <p>The IDE can help you to package your application as a JAR file.</p>
+                    </div>
+                    <div>
+                      <div>
+                        <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                          <div>
+                            <ul>
+                              <li><a href="https://docs.oracle.com/javase/tutorial/deployment/jar/basicsindex.html">Oracle's tutorial on JAR files</a></li>
+                            </ul>
+                            <p><strong><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> Creating a JAR file in Intellij</strong> - A video by Artur Spirin:</p>
+                            <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/3Xo6zSBgdgk" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                          </div>
+                        </panel>
+                      </div>
+                      <div>
+                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                          <div>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> TaskManager Level 12 - **Package as a JAR file**">
+                                <div id="body">
+                                  <p>
+                                    <panel type="seamless" src="/website\book\cppToJava\project\taskManager\q-taskManagerLevel1._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L1" minimized="" fragment="main"></panel>
+                                    <panel type="seamless" src="/website\book\cppToJava\project\taskManager\q-taskManagerLevel2._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L2" minimized="" fragment="main"></panel>
+                                    <panel type="seamless" src="/website\book\cppToJava\project\taskManager\q-taskManagerLevel3._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L3" minimized="" fragment="main"></panel>
+                                    <panel type="seamless" src="/website\book\cppToJava\project\taskManager\q-taskManagerLevel4._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L4" minimized="" fragment="main"></panel>
+                                    <panel type="seamless" src="/website\book\cppToJava\project\taskManager\q-taskManagerLevel5._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L5" minimized="" fragment="main"></panel>
+                                    <panel type="seamless" src="/website\book\cppToJava\project\taskManager\q-taskManagerLevel6._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L6" minimized="" fragment="main"></panel>
+                                    <panel type="seamless" src="/website\book\cppToJava\project\taskManager\q-taskManagerLevel7._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L7" minimized="" fragment="main"></panel>
+                                    <panel type="seamless" src="/website\book\cppToJava\project\taskManager\q-taskManagerLevel8._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L8" minimized="" fragment="main"></panel>
+                                    <panel type="seamless" src="/website\book\cppToJava\project\taskManager\q-taskManagerLevel9._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L9" minimized="" fragment="main"></panel>
+                                    <panel type="seamless" src="/website\book\cppToJava\project\taskManager\q-taskManagerLevel10._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L10" minimized="" fragment="main"></panel>
+                                    <panel type="seamless" src="/website\book\cppToJava\project\taskManager\q-taskManagerLevel11._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L11" minimized="" fragment="main"></panel>
+                                  </p>
+                                  <p><span class="dimmed">This exercise continues from the <code>TaskManager Level 1-11</code> exercises quoted above.</span></p>
+                                  <div id="main">
+                                    <p>Package your TaskManager as a JAR file.</p>
+                                  </div>
+                                </div>
+                              </panel>
+                            </div>
+                          </div>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </panel>
+          </panel>
         </div>
         <p></p>
         <p><span class="activity-desc">Quality Assurance</span></p>
         <div class="indented">
           <panel no-close="" expanded="" no-switch="" expandable="false">
-            <span slot="header" class="card-title"><span><code>W11.4</code> <strong>Can explain different types of testing</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+            <span slot="header" class="card-title"><span><code>W11.5</code> <strong>Can explain different types of testing</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
             <br>
             <p><span class="dimmed"><strong>Unit Testing</strong></span></p>
             <panel type="danger" expanded="" no-close="" no-switch="" epxandable="false">
-              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.4a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain unit testing</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.5a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain unit testing</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
               <div>
                 <div></div>
                 <p></p>
@@ -1567,7 +1638,7 @@ java -jar Collate-TUI.jar collate from unused to collated/unused include java, f
               </div>
             </panel>
             <panel type="success" expanded="" no-close="" no-switch="" epxandable="false">
-              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.4b</code></span></big> <span><span class="fas fa-trophy"></span> Can use stubs to isolate an SUT from its dependencies</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.5b</code></span></big> <span><span class="fas fa-trophy"></span> Can use stubs to isolate an SUT from its dependencies</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
               <div>
                 <div>
                   <p>
@@ -1702,7 +1773,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
             <br>
             <p><span class="dimmed"><strong>Integration Testing</strong></span></p>
             <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
-              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.4c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain integration testing</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span></span>
+              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.5c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain integration testing</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span></span>
               <div>
                 <div>
                   <p>
@@ -1734,7 +1805,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
             </panel>
             <panel type="success" expanded="" no-close="" no-switch="" epxandable="false">
-              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.4d</code></span></big> <span><span class="fas fa-trophy"></span> Can use integration testing</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.5d</code></span></big> <span><span class="fas fa-trophy"></span> Can use integration testing</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
               <div>
                 <div>
                   <p>
@@ -1779,7 +1850,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
             <br>
             <p><span class="dimmed"><strong>System Testing</strong></span></p>
             <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
-              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.4e</code></span></big> <span><span class="fas fa-trophy"></span> Can explain system testing</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span></span>
+              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.5e</code></span></big> <span><span class="fas fa-trophy"></span> Can explain system testing</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span></span>
               <div>
                 <div></div>
                 <p></p>
@@ -1822,81 +1893,10 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                 <p>Explain what system tests are. Give examples from your own project.</p>
               </div>
             </panel>
-            <panel type="info" expanded="" no-close="" no-switch="" epxandable="false">
-              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.4f</code></span></big> <span><span class="fas fa-trophy"></span> Can explain automated GUI testing</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
-              <div>
-                <div></div>
-                <p></p>
-                <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Test Automation →
-                      </span></strong></span></p>
-                <div id="title-and-body">
-                  <div>
-                    <h4 id="automated-testing-of-guis">Automated Testing of GUIs<a class="fa fa-anchor" href="#automated-testing-of-guis"></a></h4>
-                  </div>
-                  <div id="main">
-                    <div>
-                      <p>If a software product has a GUI component, all product-level testing (i.e. the types of testing mentioned above) need to be done using the GUI. However, <strong>testing the GUI is much harder than testing the CLI (command line interface) or API</strong>, for the following reasons:</p>
-                      <ul>
-                        <li>Most GUIs can support a large number of different operations, many of which can be performed in any arbitrary order.</li>
-                        <li>GUI operations are more difficult to automate than API testing. Reliably automating GUI operations and automatically verifying whether the GUI behaves as expected is harder than calling an operation and comparing its return value with an expected value. Therefore, automated regression testing of GUIs is rather difficult.</li>
-                        <li>The appearance of a GUI (and sometimes even behavior) can be different across platforms and even environments. For example, a GUI can behave differently based on whether it is minimized or maximized, in focus or out of focus, and in a high resolution display or a low resolution display.</li>
-                      </ul>
-                      <img src="/website/book/testing/testAutomation/testingGuis/images/diagram.png" height="120">
-                      <p></p>
-                      <p><strong>One approach to overcome the challenges of testing GUIs is to minimize logic aspects in the GUI.</strong> Then, bypass the GUI to test the rest of the system using automated API testing. While this still requires the GUI to be tested manually, the number of such manual test cases can be reduced as most of the system has been tested using automated API testing.</p>
-                      <p><strong>There are testing tools that can automate GUI testing.</strong></p>
-                      <tip-box>
-                        <p><span class="fas fa-cube"></span> Some tools used for automated GUI testing:</p>
-                        <ul>
-                          <li>
-                            <p><strong>TestFx</strong> can do automated testing of JavaFX GUIs<br></p>
-                          </li>
-                          <li>
-                            <p><strong>VisualStudio</strong> supports ‘record replay’ type of GUI test automation.</p>
-                          </li>
-                          <li>
-                            <p><a href="http://seleniumhq.org/"><strong>Selenium</strong></a> can be used to automate testing of Web application UIs<br></p>
-                            <panel type="seamless" header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span> demo video of automated testing of a Web application" class="non-printable">
-                              <p>This video shows automated testing of the <a href="http://github.com/teammates/teammates">TEAMMATES</a> Web app using Selenium</p>
-                              <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/ihst69Zq1xM" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-                            </panel>
-                          </li>
-                        </ul>
-                      </tip-box>
-                    </div>
-                    <div>
-                      <div>
-                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-                          <div>
-                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> API testing vs GUI testing">
-                              <question>
-                                <p>GUI testing is usually easier than API testing because it doesn’t require any extra coding.</p>
-                                <ul radio-group="dc574" class="radio-list">
-                                  <li class="radio-list-item"><label><input class="radio-list-input" name="dc574" type="radio"> True</label></li>
-                                  <li class="radio-list-item"><label><input class="radio-list-input" name="dc574" type="radio"> False</label></li>
-                                </ul>
-                                <div slot="answer">
-                                  <p>False</p>
-                                </div>
-                              </question>
-                            </panel>
-                          </div>
-                        </panel>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <hr style="border-top: dashed 1px; border-color:grey">
-              <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
-              <div>
-                <p>Why is automated testing of GUIs is hard? What can we do about it?</p>
-              </div>
-            </panel>
             <br>
             <p><span class="dimmed"><strong>Acceptance Testing</strong></span></p>
             <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
-              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.4g</code></span></big> <span><span class="fas fa-trophy"></span> Can explain acceptance testing</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span></span>
+              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.5f</code></span></big> <span><span class="fas fa-trophy"></span> Can explain acceptance testing</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span></span>
               <div>
                 <div></div>
                 <p></p>
@@ -1922,7 +1922,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
             </panel>
             <panel type="info" expanded="" no-close="" no-switch="" epxandable="false">
-              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.4h</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the differences between system testing and acceptance testing</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.5g</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the differences between system testing and acceptance testing</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
               <div>
                 <div></div>
                 <p></p>
@@ -2039,7 +2039,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
             <br>
             <p><span class="dimmed"><strong>Alpha/Beta Testing</strong></span></p>
             <panel type="info" expanded="" no-close="" no-switch="" epxandable="false">
-              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.4i</code></span></big> <span><span class="fas fa-trophy"></span> Can explain alpha and beta testing</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.5h</code></span></big> <span><span class="fas fa-trophy"></span> Can explain alpha and beta testing</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
               <div>
                 <div></div>
                 <p></p>
@@ -2067,9 +2067,9 @@ String name = logic.getName(<span class="hljs-number">23</span>);
             </panel>
           </panel>
           <panel no-close="" expanded="" no-switch="" expandable="false">
-            <span slot="header" class="card-title"><span><code>W11.5</code> <strong>Can use intermediate-level testing techniques</strong> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+            <span slot="header" class="card-title"><span><code>W11.6</code> <strong>Can use intermediate-level testing techniques</strong> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
             <panel type="info" expanded="" no-close="" no-switch="" epxandable="false">
-              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.5a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain testability</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.6a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain testability</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
               <div>
                 <div></div>
                 <p></p>
@@ -2089,7 +2089,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
             </panel>
             <panel type="success" expanded="" no-close="" no-switch="" epxandable="false">
-              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.5b</code></span></big> <span><span class="fas fa-trophy"></span> Can use intermediate features of JUnit</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.6b</code></span></big> <span><span class="fas fa-trophy"></span> Can use intermediate features of JUnit</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
               <div>
                 <div></div>
                 <p></p>
@@ -2121,9 +2121,9 @@ String name = logic.getName(<span class="hljs-number">23</span>);
             </panel>
           </panel>
           <panel no-close="" expanded="" no-switch="" expandable="false">
-            <span slot="header" class="card-title"><span><code>W11.6</code> <strong>Can explain some QA techniques complementary to testing</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span></span>
+            <span slot="header" class="card-title"><span><code>W11.7</code> <strong>Can explain some QA techniques complementary to testing</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span></span>
             <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
-              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.6a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain software quality assurance</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span></span>
+              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.7a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain software quality assurance</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span></span>
               <div>
                 <div></div>
                 <p></p>
@@ -2144,7 +2144,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
             </panel>
             <panel type="info" expanded="" no-close="" no-switch="" epxandable="false">
-              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.6b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain validation and verification</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.7b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain validation and verification</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
               <div>
                 <div></div>
                 <p></p>
@@ -2203,7 +2203,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
             </panel>
             <panel type="info" expanded="" no-close="" no-switch="" epxandable="false">
-              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.6c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain code reviews</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.7c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain code reviews</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
               <div>
                 <div></div>
                 <p></p>
@@ -2283,7 +2283,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
             </panel>
             <panel type="info" expanded="" no-close="" no-switch="" epxandable="false">
-              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.6d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain static analysis</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.7d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain static analysis</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
               <div>
                 <div></div>
                 <p></p>
@@ -2323,7 +2323,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
             </panel>
             <panel type="info" expanded="" no-close="" no-switch="" epxandable="false">
-              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.6e</code></span></big> <span><span class="fas fa-trophy"></span> Can explain formal verification</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W11.7e</code></span></big> <span><span class="fas fa-trophy"></span> Can explain formal verification</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
               <div>
                 <div></div>
                 <p></p>
@@ -2383,7 +2383,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         <p><span class="activity-desc">🅿️ Project</span></p>
         <div class="indented">
           <panel no-close="" expanded="" no-switch="" expandable="false">
-            <span slot="header" class="card-title"><span><code>W11.7</code> <strong>Package the app as a JAR file</strong> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
+            <span slot="header" class="card-title"><span><code>W11.8</code> <strong>Package the app as a JAR file</strong> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span></span>
             <div>
               <p><span class="dimmed"><strong>Extract from the <a href="../../admin/index-tic2002.html#project-week11"><em>Admin Info</em> page</a>:</strong></span></p>
               <div>
@@ -4584,7 +4584,7 @@ Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueE
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.13.0</a> at Sun, 28 Oct 2018 14:53:32 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.14.0</a> at Tue, 30 Oct 2018 05:58:06 GMT</small></div>
 </footer>
 </div>
 </body>
@@ -4596,4 +4596,5 @@ Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueE
     const baseUrl = '/website'
 </script>
 <script src="..\..\markbind\js\setup.js"></script>
+<script src="..\..\markbind\layouts\default\scripts.js"></script>
 </html>
