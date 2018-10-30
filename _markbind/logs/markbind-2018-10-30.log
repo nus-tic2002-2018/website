@@ -40,3 +40,23 @@
 2018-10-30T05:54:33.128Z - info: Press CTRL+C to stop ...
 2018-10-30T05:57:57.994Z - info: Website generation started at 13:57:55
 2018-10-30T05:58:01.284Z - info: Building assets...
+2018-10-30T05:58:06.384Z - info: Assets built
+2018-10-30T05:58:06.385Z - info: Generating pages...
+2018-10-30T05:58:59.402Z - info: Pages built
+2018-10-30T05:58:59.582Z - info: Site data built
+2018-10-30T05:58:59.583Z - info: Website generation complete! Total build time: 64.411s
+2018-10-30T05:58:59.583Z - info: Build success!
+2018-10-30T05:58:59.583Z - info: Generate Site durationMs=64411
+2018-10-30T06:00:28.604Z - info: Deployed!
+2018-10-30T06:52:28.668Z - info: Website generation started at 14:52:23
+2018-10-30T06:52:31.186Z - info: Building assets...
+2018-10-30T06:52:38.758Z - info: Assets built
+2018-10-30T06:52:38.759Z - info: Generating pages...
+2018-10-30T06:53:45.607Z - info: Pages built
+2018-10-30T06:53:46.613Z - info: Site data built
+2018-10-30T06:53:46.613Z - info: Website generation complete! Total build time: 82.965s
+2018-10-30T06:53:46.645Z - info: Generate Site durationMs=82997
+2018-10-30T06:53:47.278Z - info: Serving "C:\repos\nus-tic2002-2018\website\_site" at http://127.0.0.1:8080
+2018-10-30T06:53:47.278Z - info: Press CTRL+C to stop ...
+2018-10-30T06:58:49.047Z - info: Website generation started at 14:58:42
+2018-10-30T06:58:51.785Z - info: Building assets...
