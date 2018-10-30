@@ -23,7 +23,7 @@ head: scheduleHead.md
 ] %}
 
 
-{% set current_weeks = ["10"] %}
+{% set current_weeks = ["11"] %}
 
 
 {% set all_outcomes = [
@@ -334,7 +334,7 @@ head: scheduleHead.md
       {location: ["modeling", "modelingBehaviors", "communicationDiagrams"], omit_evidence: true},
       {location: ["modeling", "modelingBehaviors", "stateMachineDiagrams"], omit_evidence: true},
   {name: "Implementation"},
-    {heading: "Can get reuse benefits from frameworks, libraries, and platforms"},
+    {heading: "Can explain frameworks, libraries, and platforms"},
       {subheading: "Reuse"},
         {location: ["reuse", "introduction", "what"], omit_evidence: true},
         {location: ["reuse", "introduction", "when"]},
@@ -348,6 +348,8 @@ head: scheduleHead.md
         {location: ["reuse", "frameworks", "frameworksVsLibraries"]},
       {subheading: "Platforms"},
         {location: ["reuse", "platforms", "what"]},
+    {heading: "Can use JAR files"},
+      {location: ["cppToJava", "misc", "jar"], omit_evidence: true},
   {name: "Quality Assurance"},
     {heading: "Can explain different types of testing"},
       {subheading: "Unit Testing"},
@@ -358,7 +360,6 @@ head: scheduleHead.md
         {location: ["testing", "testingTypes", "integrationTesting", "how"]},
       {subheading: "System Testing"},
         {location: ["testing", "testingTypes", "systemTesting", "what"]},
-        {location: ["testing", "testAutomation", "testingGuis"]},
       {subheading: "Acceptance Testing"},
         {location: ["testing", "testingTypes", "acceptanceTesting", "what"]},
         {location: ["testing", "testingTypes", "acceptanceTesting", "acceptanceVsSystemTesting"]},
