@@ -321,8 +321,6 @@
         "guideline-document-minimally-but-sufficiently": "Guideline: Document Minimally, but Sufficiently",
         "guidelines": "Guidelines",
         "javadoc": "JavaDoc",
-        "markdown": "Markdown",
-        "asciidoc": "AsciiDoc",
         "tools": "Tools",
         "documentation": "Documentation"
       },
@@ -418,7 +416,7 @@
         "approaches": "Approaches",
         "continuous-integration-and-continuous-deployment": "Continuous Integration and Continuous Deployment",
         "build-automation": "Build Automation",
-        "approaches-2": "Approaches",
+        "review": "Review",
         "integration": "Integration"
       },
       "title": "Textbook Chapter : Integration",
@@ -841,7 +839,6 @@
         "association-classes": "Association Classes",
         "composition": "Composition",
         "aggregation": "Aggregation",
-        "inheritance": "Inheritance",
         "class-inheritance": "Class Inheritance",
         "interfaces": "Interfaces",
         "abstract-classes": "Abstract Classes",
