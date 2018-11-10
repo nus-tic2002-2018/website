@@ -446,7 +446,7 @@
     },
     {
       "headings": {
-        "varargs": "Varargs",
+        "varargs": "Varargs ",
         "javafx-basic": "JavaFX: Basic",
         "streams-basic": "Streams: Basic",
         "java": "Java"

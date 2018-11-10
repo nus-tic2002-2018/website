@@ -1,0 +1,100 @@
+2018-10-20T14:00:49.263Z - info: Website generation started at 22:00:45
+2018-10-20T14:00:53.448Z - info: Building assets...
+2018-10-20T14:00:57.005Z - info: Assets built
+2018-10-20T14:00:57.005Z - info: Generating pages...
+2018-10-20T14:01:56.506Z - info: Pages built
+2018-10-20T14:01:56.578Z - info: Site data built
+2018-10-20T14:01:56.578Z - info: Website generation complete! Total build time: 71.501s
+2018-10-20T14:01:56.594Z - info: Generate Site durationMs=71517
+2018-10-20T14:01:56.626Z - info: Serving "C:\repos\nus-tic2002-2018\website\_site" at http://127.0.0.1:8080
+2018-10-20T14:01:56.626Z - info: Press CTRL+C to stop ...
+2018-10-20T14:05:19.092Z - info: [22:05:19] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\index-tic2002.md
+2018-10-20T14:05:19.112Z - info: [22:05:19] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\evidence\project.md
+2018-10-20T14:05:19.120Z - info: [22:05:19] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\index.md
+2018-10-20T14:05:20.113Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\admin\index-tic2002.md,C:\repos\nus-tic2002-2018\website\schedule\evidence\project.md,C:\repos\nus-tic2002-2018\website\schedule\index.md
+2018-10-20T14:05:20.141Z - info: Rebuilding 26 pages
+2018-10-20T14:05:57.343Z - info: Pages rebuilt
+2018-10-20T14:05:57.382Z - info: Site data built
+2018-10-20T14:06:36.601Z - info: Website generation started at 22:06:34
+2018-10-20T14:06:41.710Z - info: Building assets...
+2018-10-20T14:06:45.662Z - info: Assets built
+2018-10-20T14:06:45.662Z - info: Generating pages...
+2018-10-20T14:08:00.710Z - info: Pages built
+2018-10-20T14:08:00.790Z - info: Site data built
+2018-10-20T14:08:00.790Z - info: Website generation complete! Total build time: 86.586s
+2018-10-20T14:08:00.802Z - info: Generate Site durationMs=86598
+2018-10-20T14:08:00.818Z - info: Serving "C:\repos\nus-tic2002-2018\website\_site" at http://127.0.0.1:8080
+2018-10-20T14:08:00.818Z - info: Press CTRL+C to stop ...
+2018-10-20T14:10:12.696Z - info: [22:10:12] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\evidence\project.md
+2018-10-20T14:10:13.709Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\schedule\evidence\project.md
+2018-10-20T14:10:13.741Z - info: Rebuilding 25 pages
+2018-10-20T14:10:47.814Z - info: Pages rebuilt
+2018-10-20T14:10:47.830Z - info: Site data built
+2018-10-20T14:18:25.537Z - info: [22:18:25] Reload for file change: C:\repos\nus-tic2002-2018\website\schedule\evidence\project.md
+2018-10-20T14:18:26.541Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\schedule\evidence\project.md
+2018-10-20T14:18:26.545Z - info: Rebuilding 25 pages
+2018-10-20T14:18:59.158Z - info: Pages rebuilt
+2018-10-20T14:18:59.166Z - info: Site data built
+2018-10-20T14:25:29.885Z - info: [22:25:29] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\index-tic2002.md
+2018-10-20T14:25:30.894Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\admin\index-tic2002.md
+2018-10-20T14:25:30.898Z - info: Rebuilding 13 pages
+2018-10-20T14:25:55.631Z - info: Pages rebuilt
+2018-10-20T14:25:55.639Z - info: Site data built
+2018-10-20T14:27:21.356Z - info: [22:27:21] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\index-tic2002.md
+2018-10-20T14:27:22.368Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\admin\index-tic2002.md
+2018-10-20T14:27:22.376Z - info: Rebuilding 13 pages
+2018-10-20T14:27:44.928Z - info: Pages rebuilt
+2018-10-20T14:27:44.940Z - info: Site data built
+2018-10-20T14:28:05.407Z - info: [22:28:05] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\index-tic2002.md
+2018-10-20T14:28:06.412Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\admin\index-tic2002.md
+2018-10-20T14:28:06.412Z - info: Rebuilding 13 pages
+2018-10-20T14:28:25.413Z - info: [22:28:25] Reload for file change: C:\repos\nus-tic2002-2018\website\book\cppToJava\project\taskManager\q-taskManagerLevel11.md
+2018-10-20T14:28:28.847Z - info: Pages rebuilt
+2018-10-20T14:28:28.863Z - info: Site data built
+2018-10-20T14:28:29.055Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\book\cppToJava\project\taskManager\q-taskManagerLevel11.md
+2018-10-20T14:28:29.055Z - info: Rebuilding 5 pages
+2018-10-20T14:28:43.741Z - info: Pages rebuilt
+2018-10-20T14:28:43.757Z - info: Site data built
+2018-10-20T14:30:56.253Z - info: [22:30:56] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\index-tic2002.md
+2018-10-20T14:30:57.262Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\admin\index-tic2002.md
+2018-10-20T14:30:57.270Z - info: Rebuilding 13 pages
+2018-10-20T14:31:20.641Z - info: Pages rebuilt
+2018-10-20T14:31:20.657Z - info: Site data built
+2018-10-20T14:35:01.347Z - info: [22:35:01] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\index-tic2002.md
+2018-10-20T14:35:02.355Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\admin\index-tic2002.md
+2018-10-20T14:35:02.367Z - info: Rebuilding 13 pages
+2018-10-20T14:35:25.403Z - info: Pages rebuilt
+2018-10-20T14:35:25.419Z - info: Site data built
+2018-10-20T14:35:37.491Z - info: [22:35:37] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\index-tic2002.md
+2018-10-20T14:35:38.499Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\admin\index-tic2002.md
+2018-10-20T14:35:38.499Z - info: Rebuilding 13 pages
+2018-10-20T14:36:01.843Z - info: Pages rebuilt
+2018-10-20T14:36:01.892Z - info: Site data built
+2018-10-20T14:36:15.147Z - info: [22:36:15] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\index-tic2002.md
+2018-10-20T14:36:16.155Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\admin\index-tic2002.md
+2018-10-20T14:36:16.167Z - info: Rebuilding 13 pages
+2018-10-20T14:36:40.475Z - info: Pages rebuilt
+2018-10-20T14:36:40.491Z - info: Site data built
+2018-10-20T14:42:30.239Z - info: [22:42:30] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\index-tic2002.md
+2018-10-20T14:42:31.256Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\admin\index-tic2002.md
+2018-10-20T14:42:31.284Z - info: Rebuilding 13 pages
+2018-10-20T14:42:58.233Z - info: Pages rebuilt
+2018-10-20T14:42:58.249Z - info: Site data built
+2018-10-20T14:43:18.617Z - info: [22:43:18] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\index-tic2002.md
+2018-10-20T14:43:19.625Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\admin\index-tic2002.md
+2018-10-20T14:43:19.625Z - info: Rebuilding 13 pages
+2018-10-20T14:43:44.429Z - info: Pages rebuilt
+2018-10-20T14:43:44.441Z - info: Site data built
+2018-10-20T14:48:31.164Z - info: [22:48:31] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\index-tic2002.md
+2018-10-20T14:48:32.173Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\admin\index-tic2002.md
+2018-10-20T14:48:32.185Z - info: Rebuilding 13 pages
+2018-10-20T14:53:26.309Z - info: Website generation started at 22:53:23
+2018-10-20T14:53:30.117Z - info: Building assets...
+2018-10-20T14:53:33.586Z - info: Assets built
+2018-10-20T14:53:33.587Z - info: Generating pages...
+2018-10-20T14:54:54.471Z - info: Pages built
+2018-10-20T14:54:54.539Z - info: Site data built
+2018-10-20T14:54:54.539Z - info: Website generation complete! Total build time: 91.02s
+2018-10-20T14:54:54.539Z - info: Build success!
+2018-10-20T14:54:54.543Z - info: Generate Site durationMs=91020
+2018-10-20T14:55:46.284Z - info: Deployed!
