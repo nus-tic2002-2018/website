@@ -1,0 +1,32 @@
+2018-11-25T05:55:22.367Z - info: Website generation started at 13:55:06
+2018-11-25T05:56:00.568Z - info: Building assets...
+2018-11-25T05:56:18.011Z - info: Assets built
+2018-11-25T05:56:18.012Z - info: Generating pages...
+2018-11-25T05:57:37.279Z - info: Pages built
+2018-11-25T05:57:38.005Z - info: Site data built
+2018-11-25T05:57:38.006Z - info: Website generation complete! Total build time: 151.128s
+2018-11-25T05:57:38.015Z - info: Generate Site durationMs=151138
+2018-11-25T05:57:38.771Z - info: Serving "C:\repos\nus-tic2002-2018\website\_site" at http://127.0.0.1:8080
+2018-11-25T05:57:38.771Z - info: Press CTRL+C to stop ...
+2018-11-25T05:58:44.289Z - info: [13:58:44] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\exams.md
+2018-11-25T05:58:45.316Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\admin\exams.md
+2018-11-25T05:58:45.316Z - info: Rebuilding 3 pages
+2018-11-25T05:58:51.479Z - info: Pages rebuilt
+2018-11-25T05:58:51.494Z - info: Site data built
+2018-11-25T05:59:33.918Z - info: [13:59:33] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\exams.md
+2018-11-25T05:59:34.947Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\admin\exams.md
+2018-11-25T05:59:34.947Z - info: Rebuilding 3 pages
+2018-11-25T05:59:40.630Z - info: Pages rebuilt
+2018-11-25T05:59:40.644Z - info: Site data built
+2018-11-25T06:00:13.697Z - info: [14:00:13] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\exams.md
+2018-11-25T06:00:14.714Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\admin\exams.md
+2018-11-25T06:00:14.714Z - info: Rebuilding 3 pages
+2018-11-25T06:00:20.510Z - info: Pages rebuilt
+2018-11-25T06:00:20.522Z - info: Site data built
+2018-11-25T06:00:38.602Z - info: [14:00:38] Reload for file change: C:\repos\nus-tic2002-2018\website\admin\exams.md
+2018-11-25T06:00:39.604Z - verbose: Rebuild affected paths: C:\repos\nus-tic2002-2018\website\admin\exams.md
+2018-11-25T06:00:39.605Z - info: Rebuilding 3 pages
+2018-11-25T06:00:45.005Z - info: Pages rebuilt
+2018-11-25T06:00:45.017Z - info: Site data built
+2018-11-25T06:06:51.628Z - info: Website generation started at 14:06:48
+2018-11-25T06:06:55.606Z - info: Building assets...
